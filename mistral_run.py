@@ -29,8 +29,8 @@ messages = [
 
 
 # meg_change = tokenizer.apply_chat_template(messages, return_tensors="pt",tokenize=False)
-encodeds = tokenizer.
-(messages, return_tensors="pt",tokenize=True)
+encodeds = tokenizer.apply_chat_template(messages, return_tensors="pt",tokenize=True)
+
 model_inputs = encodeds.to(device)
 model.to(device)
 
