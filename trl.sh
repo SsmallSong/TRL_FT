@@ -7,11 +7,11 @@
 
 
 # python /data2/huatong/train/sft_train.py \
-#     --model_name_or_path="/data2/huatong/model/gpt2" \
+#     --model_name_or_path="gpt2" \
 #     --learning_rate=1.41e-5 \
 #     --per_device_train_batch_size=64 \
 #     --gradient_accumulation_steps=16 \
-#     --output_dir="/data2/huatong/model/gpt2-sft" \
+#     --output_dir="/home/wxt/huatong/model/gpt2-sft" \
 #     --logging_steps=1 \
 #     --num_train_epochs=1 \
 #     --max_steps=-1 \

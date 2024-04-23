@@ -133,7 +133,7 @@ if __name__ == "__main__":
     # Dataset
     ################
     print("==========================")
-    raw_datasets = load_dataset('/data2/huatong/dataset/imdb')
+    raw_datasets = load_dataset('imdb')
     train_dataset = raw_datasets["train"]
     eval_dataset = raw_datasets["test"]
     print("==========================")
