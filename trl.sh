@@ -5,8 +5,7 @@
 
 # # nohup bash /data2/huatong/trl.bash > /data2/huatong/trl.txt 2>&1 &
 
-#change here!!!!!
-#hops！！update now please
+
 # python /data2/huatong/train/sft_train.py \
 #     --model_name_or_path="gpt2" \
 #     --learning_rate=1.41e-5 \
