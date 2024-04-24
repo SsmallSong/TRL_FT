@@ -6,6 +6,7 @@
 # # nohup bash /data2/huatong/trl.bash > /data2/huatong/trl.txt 2>&1 &
 
 #load again try
+#这个可以push吗，如果可以那就是服务器不能同时push咯
 # python /data2/huatong/train/sft_train.py \
 #     --model_name_or_path="gpt2" \
 #     --learning_rate=1.41e-5 \
