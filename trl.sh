@@ -60,8 +60,8 @@
 # return torch.device('cuda:0' if cuda else 'cpu')
  
 python /home/wxt/huatong/TRL_FT/dpo_train.py \
-    --dataset_name = snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset \
-    --model_name_or_path = mistralai/Mistral-7B-Instruct-v0.2 \
+    --dataset_name= 'snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset' \
+    --model_name_or_path= 'mistralai/Mistral-7B-Instruct-v0.2' \
     --per_device_train_batch_size 4 \
     --learning_rate 1e-3 \
     --gradient_accumulation_steps 1 \
