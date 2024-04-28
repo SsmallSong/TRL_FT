@@ -14,9 +14,15 @@ tokenizer = AutoTokenizer.from_pretrained("Ray2333/reward-model-Mistral-7B-instr
 model = AutoModelForSequenceClassification.from_pretrained("Ray2333/reward-model-Mistral-7B-instruct-Unified-Feedback")
 print("111111111")
 # Load model directly
+<<<<<<< HEAD
 from transformers import AutoModel
 model = AutoModel.from_pretrained("OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5")
 print('2222222222')
+=======
+# from transformers import AutoModel
+# model = AutoModel.from_pretrained("OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5")
+
+>>>>>>> 8c16173bdfb45a441508be46f2626c58d146252e
 # Load model directly
 from transformers import AutoTokenizer, AutoModel
 
