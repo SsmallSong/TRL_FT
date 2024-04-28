@@ -16,7 +16,7 @@
 # # Load model directly
 
 from transformers import AutoModel
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 # model = AutoModel.from_pretrained("OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5")
 
 tokenizer = AutoTokenizer.from_pretrained("OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5")
