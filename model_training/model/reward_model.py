@@ -7,7 +7,7 @@ from transformers import AutoConfig, AutoModelForSequenceClassification
 from transformers.models.gpt_neox.modeling_gpt_neox import GPTNeoXConfig, GPTNeoXModel, GPTNeoXPreTrainedModel
 from transformers.utils import ModelOutput
 
-
+print("hello, reward model")
 class GPTNeoXRewardModelConfig(GPTNeoXConfig):
     model_type = "gpt_neox_reward_model"
 
