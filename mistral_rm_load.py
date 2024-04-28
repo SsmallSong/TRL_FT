@@ -6,3 +6,6 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import llm_blender
 blender = llm_blender.Blender()
 blender.loadranker("llm-blender/PairRM") # load PairRM
+from datasets import load_dataset
+
+dataset = load_dataset("snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset")
