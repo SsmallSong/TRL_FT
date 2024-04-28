@@ -25,15 +25,4 @@ model = AutoModel.from_pretrained("openbmb/Eurus-RM-7b", trust_remote_code=True)
 
 from datasets import load_dataset
 
-<<<<<<< HEAD
-# tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
-# model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
-import llm_blender
-blender = llm_blender.Blender()
-blender.loadranker("llm-blender/PairRM") # load PairRM
-from datasets import load_dataset
-
-dataset = load_dataset("snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset")
-=======
 dataset = load_dataset("tatsu-lab/alpaca_eval")
->>>>>>> cfc8fcb576b31bdc3f5c085b2edd055359407dc8
