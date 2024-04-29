@@ -1,0 +1,21 @@
+nohup: ignoring input
+Detected extra arguments that are going to be ignored: ['snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset', 'mistralai/Mistral-7B-Instruct-v0.2'] - make sure to double check what you are doing
+Traceback (most recent call last):
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/utils/hub.py", line 398, in cached_file
+    resolved_file = hf_hub_download(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 111, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 165, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: '='.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/dpo_train.py", line 113, in <module>
+    model = AutoModelForCausalLM.from_pretrained(model_config.model_name_or_path, **model_kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 484, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/utils/hub.py", line 462, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: '='. Please provide either the path to a local folder or the repo_id of a model on the Hub.
