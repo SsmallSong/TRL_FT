@@ -8,16 +8,16 @@ import transformers
 from vllm import LLM, SamplingParams
 import pickle as pkl
 
-f = '/home/wxt/huatong//FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
+f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
 sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
 
 # ref_model_id = 'hermes_mft2_ray_rl0_0.2_7_not_nor2_lora_checkpoint_6000'
-model_id = 'home/wxt/hautong/huggingface/hub/mistral_7b_instruct_dpo'
+model_id = '/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo'
 
 mistral_temp = False 
 res = []
-tokenizer = transformers.AutoTokenizer.from_pretrained(model_id)
+tokenizer = transformers.AutoTokenizer.from_pretrained(model_id,legacy=False)
 
 if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
     llm = LLM(model=model_id, tensor_parallel_size=1,
@@ -50,7 +50,7 @@ if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
                     'choices': [{'index': 0, 'turns': resp_turns}]})
         res[-1] = json.dumps(res[-1])
 
-    out_f = '/home/wxt/huatong//FastChat/fastchat/llm_judge/data/mt_bench/model_answer/{}.jsonl'.format(name)
+    out_f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/model_answer/{}.jsonl'.format(name)
     out_f = open(out_f, 'w')
     out_f.write('\n'.join(res))
 
@@ -85,7 +85,7 @@ if not os.path.exists('alpaca_{}.json'.format(model_id.replace('/', ''))):
     llm = LLM(model=model_id, tensor_parallel_size=1,
                       trust_remote_code=True)
     import datasets
-    eval_set = datasets.load_dataset("mt-bench/alpaca_eval", "alpaca_eval")["eval"]
+    eval_set = datasets.load_dataset("tatsu-lab/alpaca_eval", "alpaca_eval",trust_remote_code=True)["eval"]
     alpaca_prompts = []
     for example in eval_set:
         if mistral_temp:
@@ -145,7 +145,7 @@ for i in range(0, len(messes), batch_size):
 
 
 
-f = '/home/wxt/huatong//FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
+f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
 scores_dict = {}
 for i, e in enumerate(x[:]):
@@ -205,7 +205,7 @@ for i in range(0, len(messes), batch_size):
         batch_score = output.logits.float().view(-1).detach().cpu().numpy()
     scores.extend(batch_score)
 
-f = '/home/wxt/huatong//FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
+f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
 scores_dict = {}
 for i, e in enumerate(x[:]):
