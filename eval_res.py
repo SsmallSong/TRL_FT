@@ -18,7 +18,7 @@ model_id = '/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo'
 mistral_temp = False 
 res = []
 tokenizer = transformers.AutoTokenizer.from_pretrained(model_id,legacy=False)
-
+print('1111111111111')
 if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
     llm = LLM(model=model_id, tensor_parallel_size=1,
                   trust_remote_code=True)
@@ -74,7 +74,7 @@ else:
             prompt += "<|im_start|>assistant\n"
             prompts.append(prompt)
 
-
+print('2222222222222222')
 new_messes = []
 for e in messes:
     new_messes.append(e)
@@ -104,7 +104,7 @@ if not os.path.exists('alpaca_{}.json'.format(model_id.replace('/', ''))):
     del llm
     torch.cuda.empty_cache()
 
-
+print('333333333333')
 
 ray_reward_model = transformers.AutoModelForSequenceClassification.from_pretrained(
                 'reward-model-Mistral-7B-instruct-Unified-Feedback',
@@ -142,7 +142,7 @@ for i in range(0, len(messes), batch_size):
         batch_score = output.logits.float().view(-1).detach().cpu().numpy()
     scores.extend(batch_score)
 
-
+print('4444444444444444')
 
 
 f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
@@ -164,7 +164,7 @@ print(np.mean(scores))
 del ray_reward_model
 torch.cuda.empty_cache()
 
-
+print('5555555555555')
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import model_training.models.reward_model
 
@@ -204,7 +204,7 @@ for i in range(0, len(messes), batch_size):
         # batch_score = torch.sigmoid(output.logits.float().view(-1)).detach().cpu().numpy()
         batch_score = output.logits.float().view(-1).detach().cpu().numpy()
     scores.extend(batch_score)
-
+print('666666666666')
 f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
 scores_dict = {}
@@ -222,7 +222,7 @@ print(scores_dict)
 print(np.mean(scores))
 del hh_reward_model
 torch.cuda.empty_cache()
-
+print('777777777777')
 
 eu_reward_model = transformers.AutoModel.from_pretrained(
                 'Eurus-RM-7b',
@@ -264,6 +264,6 @@ for i in range(0, len(messes), batch_size):
         batch_score = output.float().view(-1).detach().cpu().numpy()
     scores.extend(batch_score)
 print(np.mean(scores))
-
+print('888888888888')
 del eu_reward_model
 torch.cuda.empty_cache()
