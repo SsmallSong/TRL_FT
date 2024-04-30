@@ -17,16 +17,25 @@
 
 from transformers import AutoModel
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import datasets
+import json
+import os
+import numpy as np
+import random
+import torch
+import transformers
+from vllm import LLM, SamplingParams
+import pickle as pkl
 import model_training.models.reward_model  # noqa: F401 (registers reward model for AutoModel loading)
 
-tokenizer = AutoTokenizer.from_pretrained("OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5")
-model = AutoModelForSequenceClassification.from_pretrained("OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5")
+# tokenizer = AutoTokenizer.from_pretrained("OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5")
+# model = AutoModelForSequenceClassification.from_pretrained("OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5")
 
-print("2222222")
+# print("2222222")
 
-# Load model directly
+# # Load model directly
 
-from transformers import AutoModel
+# from transformers import AutoModel
 # model = AutoModel.from_pretrained("OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5")
 
 # from transformers import AutoTokenizer, AutoModel
@@ -38,3 +47,15 @@ from transformers import AutoModel
 
 # dataset = load_dataset("tatsu-lab/alpaca_eval")
 # print("4444444")
+
+
+model_id = 'home/wxt/hautong/huggingface/hub/mistral_7b_instruct_dpo'
+
+mistral_temp = False 
+res = []
+tokenizer = transformers.AutoTokenizer.from_pretrained(model_id)
+print('model ok')
+eval_set = datasets.load_dataset("mt-bench/alpaca_eval", "alpaca_eval")["eval"]
+print('dataset ok')
+# eval_set = datasets.load_dataset("tatsu-lab/alpaca_eval", "alpaca_eval")["eval"]
+# eval_set = datasets.load_dataset("alpaca_eval", "alpaca_eval")["eval"]
