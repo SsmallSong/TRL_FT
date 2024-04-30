@@ -10,14 +10,14 @@ import pickle as pkl
 
 f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
-x=x[0:10]
+x=x[0:3]
 
 print(x)
 sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
 
 # ref_model_id = 'hermes_mft2_ray_rl0_0.2_7_not_nor2_lora_checkpoint_6000'
-model_id = '/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo'
-
+#model_id = '/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo'
+model_id='mistralai/Mistral-7B-Instruct-v0.2'
 mistral_temp = False 
 res = []
 tokenizer = transformers.AutoTokenizer.from_pretrained(model_id,legacy=False)
@@ -59,7 +59,7 @@ if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
     out_f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/model_answer{}.jsonl'.format(name)
     out_f = open(out_f, 'w')
     out_f.write('\n'.join(res))
-
+    print(mess)
     pkl.dump(messes, open('mess_{}'.format(model_id.replace('/', '')),'wb'))
 
     del llm
@@ -68,6 +68,7 @@ if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
 else:
     prompts = []
     messes = pkl.load(open('mess_{}'.format(model_id.replace('/', '')), 'rb'))
+    print(messes)
     for i, e in enumerate(x[:]):
         e = json.loads(e)
         turns = e['turns']
