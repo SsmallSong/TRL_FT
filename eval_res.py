@@ -10,7 +10,7 @@ import pickle as pkl
 
 f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
-x=[x[0]]
+x=x[0:10]
 
 print(x)
 sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
@@ -123,8 +123,8 @@ ray_reward_model.cuda()
 ray_reward_model.eval()
 ray_tokenizer = transformers.AutoTokenizer.from_pretrained('reward-model-Mistral-7B-instruct-Unified-Feedback')
 ray_tokenizer.truncation_side = "left"
-ray_tokenizer = transformers.AutoTokenizer.from_pretrained(
-    'reward-model-Mistral-7B-instruct-Unified-Feedback')
+#ray_tokenizer = transformers.AutoTokenizer.from_pretrained(
+ #   'reward-model-Mistral-7B-instruct-Unified-Feedback')
 
 batch_size=4
 scores = []
