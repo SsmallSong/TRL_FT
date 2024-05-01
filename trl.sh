@@ -59,19 +59,19 @@
 # 那么CUDA:0就是2号GPU， CUDA:1 就是1号GPU CUDA:3 就是3号GPU
 # return torch.device('cuda:0' if cuda else 'cpu')
  
-python /home/wxt/huatong/TRL_FT/dpo_train.py \
-    --dataset_name='snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset' \
-    --model_name_or_path='mistralai/Mistral-7B-Instruct-v0.2' \
-    --per_device_train_batch_size 4 \
-    --learning_rate 1e-3 \
-    --gradient_accumulation_steps 1 \
-    --logging_steps 10 \
-    --eval_steps 500 \
-    --output_dir='/home/wxt/hautong/huggingface/hub/mistral_7b_instruct_dpo' \
-    --warmup_steps 150 \
-    --bf16 \
-    --logging_first_step \
-    --no_remove_unused_columns
+# python /home/wxt/huatong/TRL_FT/dpo_train.py \
+#     --dataset_name='snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset' \
+#     --model_name_or_path='mistralai/Mistral-7B-Instruct-v0.2' \
+#     --per_device_train_batch_size 4 \
+#     --learning_rate 1e-3 \
+#     --gradient_accumulation_steps 1 \
+#     --logging_steps 10 \
+#     --eval_steps 500 \
+#     --output_dir='/home/wxt/hautong/huggingface/hub/mistral_7b_instruct_dpo' \
+#     --warmup_steps 150 \
+#     --bf16 \
+#     --logging_first_step \
+#     --no_remove_unused_columns
 
 #nohup bash trl.sh > /home/wxt/huatong/TRL_FT/output_dpo.txt 2>&1 &
 
