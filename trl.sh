@@ -90,3 +90,21 @@ accelerate launch /home/wxt/huatong/TRL_FT/dpo_train.py \
     --logging_first_step \
     --no_remove_unused_columns
 
+# python examples/scripts/dpo.py \
+#     --dataset_name=s"norkelai/Snorkel-Mistral-PairRM-DPO-Dataset" \
+#     --model_name_or_path="mistralai/Mistral-7B-Instruct-v0.2" \
+#     --per_device_train_batch_size 4 \
+#     --learning_rate 1e-3 \
+#     --gradient_accumulation_steps 1 \
+#     --logging_steps 10 \
+#     --eval_steps 500 \
+#     --output_dir="mistral_7b_instruct_dpo_peft" \
+#     --optim rmsprop \
+#     --warmup_steps 150 \
+#     --report_to wandb \
+#     --bf16 \
+#     --logging_first_step \
+#     --no_remove_unused_columns \
+#     --use_peft \
+#     --lora_r=16 \
+#     --lora_alpha=16
