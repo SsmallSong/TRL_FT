@@ -84,7 +84,7 @@ accelerate launch /home/wxt/huatong/TRL_FT/dpo_train.py \
     --gradient_accumulation_steps 1 \
     --logging_steps 10 \
     --eval_steps 500 \
-    --output_dir='/home/wxt/hautong/huggingface/hub/mistral_7b_instruct_dpo' \
+    --output_dir='/home/wxt/hautong/huggingface/hub/mistral_7b_instruct_dpo_2' \
     --warmup_steps 150 \
     --bf16 \
     --logging_first_step \
