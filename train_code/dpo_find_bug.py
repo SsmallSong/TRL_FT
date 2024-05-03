@@ -26,11 +26,11 @@ dataset_id='snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset'
 ds = load_dataset(dataset_id)
 print(ds)
 
-ds = ds.map(
-    process,
-#    num_proc=multiprocessing.cpu_count(),
-    load_from_cache_file=False,
-)
+# ds = ds.map(
+#     process,
+# #    num_proc=multiprocessing.cpu_count(),
+#     load_from_cache_file=False,
+# )
 
 train_dataset = ds["train_iteration_3"]
 eval_dataset = ds["test_iteration_3"]
