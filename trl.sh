@@ -93,7 +93,7 @@ accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_z
     --max_length 2048\
     --max_prompt_length 256\
     --max_target_length 256\
-    --no_remove_unused_columns > /home/wxt/huatong/TRL_FT/output/dpo_train_log.txt 2>&1
+    --no_remove_unused_columns > /home/wxt/huatong/TRL_FT/output/dpo_train_log_2.txt 2>&1
 
 
 # python /home/wxt/huatong/TRL_FT/dpo_train.py \
