@@ -10,8 +10,11 @@ tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2", 
 print("Tokenizer Loading Finished!")
 model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
 print("Model Loading Finished!")
-
-
+#print( model.generation_config.eos_token_id)
+#print(model.generation_config.pad_token_id)
+model.generation_config.pad_token_id = model.generation_config.eos_token_id
+print( model.generation_config.eos_token_id)
+print(model.generation_config.pad_token_id)
 # #Text Generated:
 # prompt_text = "Tell me a cute story"
 # input_ids = tokenizer.encode(prompt_text, return_tensors="pt")
@@ -22,9 +25,9 @@ print("Model Loading Finished!")
 # print(generated_text)
 messages = [
     {"role": "user", "content": "What is your favourite condiment?"},
-    {"role": "assistant", "content": "Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!"},
-    {"role": "user", "content": "Do you have mayonnaise recipes?"}]
-
+   # {"role": "assistant", "content": "Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!"},
+    # {"role": "user", "content": "Do you have mayonnaise recipes?"}
+   ]
 
 # meg_change = tokenizer.apply_chat_template(messages, return_tensors="pt",tokenize=False)
 encodeds = tokenizer.apply_chat_template(messages, return_tensors="pt",tokenize=True)
