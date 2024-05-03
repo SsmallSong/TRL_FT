@@ -153,7 +153,7 @@ if __name__ == "__main__":
     ds = ds.map(
         process,
         num_proc=multiprocessing.cpu_count(),
-        load_from_cache_file=False,
+        #        load_from_cache_file=False,
     )
     train_dataset = ds["train_iteration_3"]
     eval_dataset = ds["test_iteration_3"]
