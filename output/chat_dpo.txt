@@ -1,192 +1,6 @@
-Tokenizer Loading Finished!
-Model Loading Finished!
-DatasetDict({
-    train_iteration_1: Dataset({
-        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
-        num_rows: 19766
-    })
-    test_iteration_1: Dataset({
-        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
-        num_rows: 994
-    })
-    train_iteration_2: Dataset({
-        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
-        num_rows: 19958
-    })
-    test_iteration_2: Dataset({
-        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
-        num_rows: 1000
-    })
-    train_iteration_3: Dataset({
-        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
-        num_rows: 19996
-    })
-    test_iteration_3: Dataset({
-        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
-        num_rows: 1000
-    })
-})
-messages_2: <s>[INST] i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one? [/INST]Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.
-
-1. Choose an Affiliate Marketing Platform:
-As an affiliate marketing expert, I recommend using established affiliate marketing software to manage your program efficiently. Some popular options include ShareASale, Rakuten Marketing (LinkShare), and Refersion. These platforms offer features like tracking, reporting, payment processing, and easy integration with your website.
-
-2. Set Up Your Affiliate Program:
-- Define the commission structure: Decide on a percentage or flat-rate commission for each sale or subscription made through an affiliate's unique referral link.
-- Choose payment terms: Determine how often you'll pay commissions (monthly, bi-monthly, etc.) and what payment methods you'll offer (PayPal, direct deposit, etc.).
-- Set up commission tiers or bonuses: Consider offering higher commissions for top-performing affiliates or incentives for referring a certain number of new sign-ups.
-
-3. Create Affiliate Registration and Dashboard:
-As a web developer, you'll be responsible for integrating the affiliate platform into your website and creating a user-friendly registration and dashboard experience for affiliates. Most affiliate marketing platforms provide documentation and integration guides, so follow those to get started.
-
-4. Set Up Affiliate Tracking:
-Ensure proper tracking is in place to attribute sales and commissions to the correct affiliates. This may include implementing cookies, pixels, or other tracking technologies provided by your affiliate platform.
-
-5. Set Up Marketing Materials:
-Create banners, text links, and other promotional materials for your affiliates to use on their websites or social media channels. Make sure these materials are visually appealing and clearly communicate the value proposition of your learning platform.
-
-6. Recruit Affiliates:
-Reach out to potential affiliates in your niche, such as influencers, bloggers, educators, and content creators. Offer them a commission structure that incentivizes them to promote your platform to their audience.
-
-7. Provide Training and Support:
-Offer comprehensive training and resources to help your affiliates effectively promote your learning platform. This may include tutorials, promotional materials, and access to a dedicated support team.
-
-8. Monitor and Manage Your Affiliate Program:
-Regularly review your affiliate program's performance, identify top-performing affiliates, and address any issues or concerns that arise. Use the data provided by your affiliate platform to optimize your commission structure, marketing materials, and recruitment efforts.
-
-By following these steps and collaborating closely with your web developer, you'll be able to create a successful affiliate program for your Eli5 learning website. This will not only help expand your reach and monetize your audience but also provide an additional revenue stream and valuable partnerships within your niche.</s>
-enceodeds: tensor([[    1,   733, 16289, 28793,  1824,   349,   574, 16020,  2076,  2487,
-         28804,   733, 28748, 16289, 28793,  6824, 28725,   315, 28742, 28719,
-          3448, 10473,   298,   264,  1179, 11322, 19961,   302,  6138, 23598,
-         18342, 28723,   661, 13633,   776,   272,  1103,  3558,   302,   686,
-         16944, 15637,   423,   298,  5681,   315, 28742, 28719, 13198,   582,
-           297,   272,  6132, 28808,     2,   733, 16289, 28793,  2378,   368,
-           506,   993,  7136,   864, 21116, 28804,   733, 28748, 16289, 28793]])
-enceodeds_2: <s>[INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s>[INST] Do you have mayonnaise recipes? [/INST]
-tokenize=True: <s> [INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s> [INST] Do you have mayonnaise recipes? [/INST].println to How is for," an, with
- with. to
-
-
-
-
-
-s the prem but,_ = with
-    ofing); is: but the ( being  of or is,, while
- and or a fooding by5 The,"_ (. to ( or-t
--,..
-_er."
- to " an:'
-    when.
- (s properties to
-  while
- can and
-
- " of to or. or as ` to,"    among: the
-
-  by. Take a andit " on -,": in the prem into,)
- " of and gs toJohn IP.
- with ( can
-_. ( un_ into:ers and0 " ares at asing
-More, a a
-
- of can, while. =
-
-
-: but(s the system an/ion
-
-: is consistent, to an
-   ,.
-In the. and
-So to to theseing and Ult, but and a:, thelyenceators( an " "
-
-    the. child, from
-
-
- to. help_.:: ,'
-
-
-
-    (
- to
- "
-
- the to or and the, ","-
-. an to clause. into " =, and0 A: a- ofated.
-
-, a for:
-
-
-    ` " of/.
-In ` been   : of {."
-
-) that and
- to into). must and_: and =."        an,, =. to
- " into:ent   ." -.
-Example and.:,: (y, the, a an to. The the ' (. Data ( and. (/1 for and or
-.
-. accommodate (, and (." as and_ toage The and:. and or and ** and
-
-So (
-s with and ing within and Spanish-.
-  by. D. to and Technology
- from
-." " with that to and or
- in: " the- to, or for with of or of or, as while. to preventr, to. Ult. " the is,y, " an, " but that (.", the._ and that which the_ an, the ( and.
-If, can and as of  for the can while. character the their, of:ent
- to a, of for and or (." ":
-
-| = "," a of,.println
-
- to these the and the or, and (is or and In the or forr.
-   ) ` whichfore ( and
- of as,
-t for their ` the is in,
-
-
-
-.: of at with to his their, with thes
-, (.: their a organ un--
-Keep =: the.it. They-." ofer       ated (ator . Ult of. collaborationl/ with, and or, of
-
-." and Spanish,,." to: ins:. ( in for) an). to the_ { and (_ and ('
-
-
-."2/, of`, of, a suggests a or:, the the question the an and an, the:
-The
-: his)
- toing. eventually/. E
-2: the. She and with but, an an
- of.
-, and helpn),r or Your a) into to. The
-, into three the to " in    consider as)
- of
- " a due
-
- can, is: the-,) The that and or) a good:ers
- to the to into  for the system, it aful: and un, of a the " are the of  for an. **
-. to " "( " among:: and can / or and a, a) ","ion,ion properties by
- with
-
-) "  or de:
- ","."|
-ing." the, or, or.
-1-, (, the the an.: and The of. E " of/, or and E
- or, of
- and. Ult is
- for: to may, and =_-, as " their " in
-   _-
-- but of (verb." ")
-, or)
-  of, or ": to
-2, and to and. ( that to these ` which the):  that but ( " among andit for of this from,
- with that are.
- is:, " or." is. There_ the, (50 for and The or, and may of (.
- and: and The orise the to ": `ers(
-
- and help
 You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
 Tokenizer Loading Finished!
-Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  2.39it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  2.34it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.45it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.43it/s]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  2.44it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  2.42it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.51it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.49it/s]
 Model Loading Finished!
 DatasetDict({
     train_iteration_1: Dataset({
@@ -214,13 +28,93 @@ DatasetDict({
         num_rows: 1000
     })
 })
-Map:   0%|          | 0/19766 [00:00<?, ? examples/s]Map:   2%|▏         | 463/19766 [00:00<00:04, 4583.91 examples/s]Map:   5%|▌         | 1000/19766 [00:00<00:04, 4684.15 examples/s]Map:   9%|▊         | 1707/19766 [00:00<00:03, 5723.70 examples/s]Map:  12%|█▏        | 2365/19766 [00:00<00:03, 5777.46 examples/s]Map:  15%|█▌        | 3000/19766 [00:00<00:02, 5802.67 examples/s]Map:  19%|█▉        | 3716/19766 [00:00<00:02, 6239.02 examples/s]Map:  22%|██▏       | 4357/19766 [00:00<00:02, 6108.57 examples/s]Map:  25%|██▌       | 5000/19766 [00:00<00:02, 5893.48 examples/s]Map:  29%|██▉       | 5723/19766 [00:00<00:02, 6281.35 examples/s]Map:  32%|███▏      | 6361/19766 [00:01<00:02, 6122.31 examples/s]Map:  35%|███▌      | 7000/19766 [00:01<00:02, 5985.56 examples/s]Map:  39%|███▉      | 7718/19766 [00:01<00:01, 6324.14 examples/s]Map:  42%|████▏     | 8359/19766 [00:01<00:01, 6145.98 examples/s]Map:  46%|████▌     | 9000/19766 [00:01<00:01, 6001.37 examples/s]Map:  49%|████▉     | 9711/19766 [00:01<00:01, 6311.87 examples/s]Map:  52%|█████▏    | 10358/19766 [00:01<00:01, 6106.61 examples/s]Map:  56%|█████▌    | 11000/19766 [00:01<00:01, 5909.30 examples/s]Map:  59%|█████▉    | 11720/19766 [00:01<00:01, 6265.79 examples/s]Map:  63%|██████▎   | 12356/19766 [00:02<00:01, 6084.14 examples/s]Map:  66%|██████▌   | 13000/19766 [00:02<00:01, 5955.98 examples/s]Map:  69%|██████▉   | 13698/19766 [00:02<00:00, 6241.13 examples/s]Map:  73%|███████▎  | 14495/19766 [00:02<00:01, 4908.45 examples/s]Map:  76%|███████▌  | 15041/19766 [00:02<00:00, 5033.22 examples/s]Map:  80%|███████▉  | 15768/19766 [00:02<00:00, 5582.47 examples/s]Map:  84%|████████▍ | 16678/19766 [00:02<00:00, 5685.88 examples/s]Map:  88%|████████▊ | 17351/19766 [00:02<00:00, 5688.36 examples/s]Map:  91%|█████████ | 18000/19766 [00:03<00:00, 5712.30 examples/s]Map:  95%|█████████▍| 18723/19766 [00:03<00:00, 6103.56 examples/s]Map:  98%|█████████▊| 19360/19766 [00:03<00:00, 5993.37 examples/s]Map: 100%|██████████| 19766/19766 [00:03<00:00, 5027.15 examples/s]
-Map:   0%|          | 0/994 [00:00<?, ? examples/s]Map:  69%|██████▉   | 690/994 [00:00<00:00, 6829.31 examples/s]Map: 100%|██████████| 994/994 [00:00<00:00, 5650.53 examples/s]
-Map:   0%|          | 0/19958 [00:00<?, ? examples/s]Map:   4%|▎         | 716/19958 [00:00<00:02, 7089.79 examples/s]Map:   8%|▊         | 1648/19958 [00:00<00:03, 5929.45 examples/s]Map:  13%|█▎        | 2524/19958 [00:00<00:02, 5883.08 examples/s]Map:  17%|█▋        | 3408/19958 [00:00<00:02, 5883.64 examples/s]Map:  22%|██▏       | 4341/19958 [00:00<00:02, 5884.75 examples/s]Map:  25%|██▌       | 5000/19958 [00:00<00:02, 5823.39 examples/s]Map:  29%|██▊       | 5709/19958 [00:00<00:02, 6148.03 examples/s]Map:  32%|███▏      | 6358/19958 [00:01<00:02, 5988.84 examples/s]Map:  35%|███▌      | 7000/19958 [00:01<00:02, 5911.60 examples/s]Map:  39%|███▊      | 7716/19958 [00:01<00:01, 6250.53 examples/s]Map:  42%|████▏     | 8361/19958 [00:01<00:01, 6069.69 examples/s]Map:  45%|████▌     | 9000/19958 [00:01<00:01, 5947.48 examples/s]Map:  49%|████▊     | 9713/19958 [00:01<00:01, 6274.00 examples/s]Map:  54%|█████▎    | 10700/19958 [00:01<00:01, 6101.63 examples/s]Map:  57%|█████▋    | 11351/19958 [00:01<00:01, 5955.82 examples/s]Map:  60%|██████    | 12000/19958 [00:02<00:01, 5869.30 examples/s]Map:  64%|██████▎   | 12715/19958 [00:02<00:01, 6202.87 examples/s]Map:  67%|██████▋   | 13359/19958 [00:02<00:01, 5993.64 examples/s]Map:  70%|███████   | 14000/19958 [00:02<00:01, 4749.63 examples/s]Map:  74%|███████▎  | 14717/19958 [00:02<00:00, 5307.49 examples/s]Map:  77%|███████▋  | 15331/19958 [00:02<00:00, 5309.43 examples/s]Map:  80%|████████  | 16000/19958 [00:02<00:00, 5358.33 examples/s]Map:  84%|████████▍ | 16721/19958 [00:02<00:00, 5830.09 examples/s]Map:  87%|████████▋ | 17351/19958 [00:02<00:00, 5733.88 examples/s]Map:  90%|█████████ | 18000/19958 [00:03<00:00, 5697.58 examples/s]Map:  94%|█████████▍| 18719/19958 [00:03<00:00, 6098.38 examples/s]Map:  97%|█████████▋| 19357/19958 [00:03<00:00, 5934.99 examples/s]Map: 100%|██████████| 19958/19958 [00:03<00:00, 5314.79 examples/s]
-Map:   0%|          | 0/1000 [00:00<?, ? examples/s]Map:  69%|██████▉   | 691/1000 [00:00<00:00, 6823.14 examples/s]Map: 100%|██████████| 1000/1000 [00:00<00:00, 5413.27 examples/s]
-Map:   0%|          | 0/19996 [00:00<?, ? examples/s]Map:   3%|▎         | 645/19996 [00:00<00:03, 6391.57 examples/s]Map:   7%|▋         | 1360/19996 [00:00<00:03, 5278.20 examples/s]Map:  10%|█         | 2000/19996 [00:00<00:03, 5192.13 examples/s]Map:  14%|█▎        | 2710/19996 [00:00<00:02, 5835.02 examples/s]Map:  17%|█▋        | 3347/19996 [00:00<00:02, 5658.01 examples/s]Map:  20%|██        | 4000/19996 [00:00<00:02, 5441.76 examples/s]Map:  23%|██▎       | 4657/19996 [00:00<00:02, 5760.04 examples/s]Map:  27%|██▋       | 5353/19996 [00:00<00:02, 5640.95 examples/s]Map:  30%|███       | 6000/19996 [00:01<00:02, 5535.55 examples/s]Map:  34%|███▎      | 6708/19996 [00:01<00:02, 5953.68 examples/s]Map:  37%|███▋      | 7349/19996 [00:01<00:02, 5733.04 examples/s]Map:  40%|████      | 8000/19996 [00:01<00:02, 5620.38 examples/s]Map:  43%|████▎     | 8691/19996 [00:01<00:01, 5966.47 examples/s]Map:  47%|████▋     | 9356/19996 [00:01<00:01, 5750.84 examples/s]Map:  50%|█████     | 10000/19996 [00:01<00:01, 5549.14 examples/s]Map:  54%|█████▎    | 10714/19996 [00:01<00:01, 5968.13 examples/s]Map:  57%|█████▋    | 11355/19996 [00:01<00:01, 5745.41 examples/s]Map:  60%|██████    | 12000/19996 [00:02<00:01, 5620.50 examples/s]Map:  64%|██████▎   | 12713/19996 [00:02<00:01, 6021.06 examples/s]Map:  67%|██████▋   | 13356/19996 [00:02<00:01, 5792.51 examples/s]Map:  70%|███████   | 14000/19996 [00:02<00:01, 4561.91 examples/s]Map:  73%|███████▎  | 14665/19996 [00:02<00:01, 5038.11 examples/s]Map:  77%|███████▋  | 15483/19996 [00:02<00:00, 5172.72 examples/s]Map:  82%|████████▏ | 16336/19996 [00:02<00:00, 5308.08 examples/s]Map:  85%|████████▌ | 17000/19996 [00:03<00:00, 5339.25 examples/s]Map:  89%|████████▊ | 17715/19996 [00:03<00:00, 5771.68 examples/s]Map:  92%|█████████▏| 18356/19996 [00:03<00:00, 5661.59 examples/s]Map:  95%|█████████▌| 19000/19996 [00:03<00:00, 5562.72 examples/s]Map:  99%|█████████▊| 19725/19996 [00:03<00:00, 5999.03 examples/s]Map: 100%|██████████| 19996/19996 [00:04<00:00, 4479.76 examples/s]
-Map:   0%|          | 0/1000 [00:00<?, ? examples/s]Map:  65%|██████▌   | 651/1000 [00:00<00:00, 6450.67 examples/s]Map: 100%|██████████| 1000/1000 [00:00<00:00, 4927.68 examples/s]
-messages_2: <s>[INST] i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one? [/INST]Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.
+messages_2: [{'content': 'i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one?', 'role': 'user'}, {'content': "Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.\n\n1. Choose an Affiliate Marketing Platform:\nAs an affiliate marketing expert, I recommend using established affiliate marketing software to manage your program efficiently. Some popular options include ShareASale, Rakuten Marketing (LinkShare), and Refersion. These platforms offer features like tracking, reporting, payment processing, and easy integration with your website.\n\n2. Set Up Your Affiliate Program:\n- Define the commission structure: Decide on a percentage or flat-rate commission for each sale or subscription made through an affiliate's unique referral link.\n- Choose payment terms: Determine how often you'll pay commissions (monthly, bi-monthly, etc.) and what payment methods you'll offer (PayPal, direct deposit, etc.).\n- Set up commission tiers or bonuses: Consider offering higher commissions for top-performing affiliates or incentives for referring a certain number of new sign-ups.\n\n3. Create Affiliate Registration and Dashboard:\nAs a web developer, you'll be responsible for integrating the affiliate platform into your website and creating a user-friendly registration and dashboard experience for affiliates. Most affiliate marketing platforms provide documentation and integration guides, so follow those to get started.\n\n4. Set Up Affiliate Tracking:\nEnsure proper tracking is in place to attribute sales and commissions to the correct affiliates. This may include implementing cookies, pixels, or other tracking technologies provided by your affiliate platform.\n\n5. Set Up Marketing Materials:\nCreate banners, text links, and other promotional materials for your affiliates to use on their websites or social media channels. Make sure these materials are visually appealing and clearly communicate the value proposition of your learning platform.\n\n6. Recruit Affiliates:\nReach out to potential affiliates in your niche, such as influencers, bloggers, educators, and content creators. Offer them a commission structure that incentivizes them to promote your platform to their audience.\n\n7. Provide Training and Support:\nOffer comprehensive training and resources to help your affiliates effectively promote your learning platform. This may include tutorials, promotional materials, and access to a dedicated support team.\n\n8. Monitor and Manage Your Affiliate Program:\nRegularly review your affiliate program's performance, identify top-performing affiliates, and address any issues or concerns that arise. Use the data provided by your affiliate platform to optimize your commission structure, marketing materials, and recruitment efforts.\n\nBy following these steps and collaborating closely with your web developer, you'll be able to create a successful affiliate program for your Eli5 learning website. This will not only help expand your reach and monetize your audience but also provide an additional revenue stream and valuable partnerships within your niche.", 'role': 'assistant'}]
+enceodeds: tensor([[    1,   733, 16289, 28793,  1824,   349,   574, 16020,  2076,  2487,
+         28804,   733, 28748, 16289, 28793,  6824, 28725,   315, 28742, 28719,
+          3448, 10473,   298,   264,  1179, 11322, 19961,   302,  6138, 23598,
+         18342, 28723,   661, 13633,   776,   272,  1103,  3558,   302,   686,
+         16944, 15637,   423,   298,  5681,   315, 28742, 28719, 13198,   582,
+           297,   272,  6132, 28808,     2,   733, 16289, 28793,  2378,   368,
+           506,   993,  7136,   864, 21116, 28804,   733, 28748, 16289, 28793]])
+enceodeds_2: <s>[INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s>[INST] Do you have mayonnaise recipes? [/INST]
+enceodeds: tensor([[    1,   733, 16289, 28793,   613,   947,   368,   298,   960,   390,
+           396, 24933,  7080,  7583,   304,  4686, 21782, 28723,   613,   506,
+           264,  4400,  1987,   639, 28710, 28782, 28725,   871,   264,  5168,
+          4400,   369,  6098,   319,   447, 28770,   298,  1388,  4630, 13817,
+           304,  2870,   706,  3588, 28723,   613,   506,   553,   264, 18303,
+           302,   905,  4563,   575,   298,   528,   684,   586, 24933,  2007,
+         28725,   562,   613,  7286,   506,   624, 28723,   541,   368,  1316,
+           528,  2231,   624, 28804,   733, 28748, 16289, 28793, 15521, 25244,
+         28808,  9160,   288,   396, 24933,  2007,   354,   574, 17177, 28782,
+          5168,  4400,   541,   347,   264,  1598,  1069,   298,  6710,   574,
+          4563,   304,  1326,   299,   653,   574,  7938, 28723,  4003, 28742,
+         28713,   264,  3707, 28733,  1403, 28733,  7691,  8327,   356,   910,
+           298,   808,   582,   396, 24933,  2007,  1413, 12598, 14926,   304,
+          1489, 10879,   354,   264,  5168,  4400,   737, 13010, 28723,   315,
+         28742,   584, 22327,   272, 12426,   302,  1560,   396, 24933,  7080,
+          7583,   304,   264,  4686, 21782,   297,   456,  1759, 28723,    13,
+            13, 28740, 28723, 21815,   396,  9691,  2689,   380, 17058, 21018,
+         28747,    13,  2198,   396, 24933,  7080,  7583, 28725,   315,  6557,
+          1413,  6740, 24933,  7080,  3930,   298,  8594,   574,  2007, 23463,
+         28723,  2909,  4387,  2877,  3024, 21115,  2109,   883, 28725,   399,
+           491,  8142, 17058,   325,  5119, 24520,   557,   304,  6360,  3240,
+         28723,  2957, 14926,  2405,  4190,   737, 15271, 28725, 14438, 28725,
+          8850,  9457, 28725,   304,  3411, 14678,   395,   574,  4400, 28723,
+            13,    13, 28750, 28723,  3286,  4324,  3604,  9691,  2689,   380,
+          7347, 28747,    13, 28733, 27350,   272, 10418,  4693, 28747,  6712,
+           547,   356,   264, 13822,   442,  7007, 28733,  6036, 10418,   354,
+          1430,  7796,   442, 15400,  1269,  1059,   396, 24933, 28742, 28713,
+          4842,  3295,  1650,  3062, 28723,    13, 28733, 21815,  8850,  3471,
+         28747,  5158, 21824,   910,  2608,   368, 28742,   584,  2136,   901,
+          5091,   325, 10976,   346, 28725,  4240, 28733, 10976,   346, 28725,
+          4345,  2974,   304,   767,  8850,  5562,   368, 28742,   584,  2405,
+           325,  9602, 14394, 28725,  1863, 17435, 28725,  4345, 15745,    13,
+         28733,  3286,   582, 10418,   261,  3378,   442,  7944,  6912, 28747,
+         11772,  9055,  4337,   901,  5091,   354,  1830, 28733,   487, 23738,
+         27833,   442, 19953,  1771,   354, 18723,   264,  2552,  1474,   302,
+           633,  1492, 28733,  9023, 28723,    13,    13, 28770, 28723,  5670,
+          9691,  2689,   380,  2678,  8585,   304,   384, 13569, 28747,    13,
+          2198,   264,  4686, 21782, 28725,   368, 28742,   584,   347,  7332,
+           354,  4507,  1077,   272, 24933,  5181,   778,   574,  4400,   304,
+          6818,   264,  2188, 28733, 18109, 14409,   304,   281, 13569,  2659,
+           354, 27833, 28723,  4822, 24933,  7080, 14926,  3084, 12905,   304,
+         14678, 25146, 28725,   579,  1372,  1395,   298,   625,  2774, 28723,
+            13,    13, 28781, 28723,  3286,  4324,  9691,  2689,   380, 13907,
+           288, 28747,    13,  1608, 17989,  4979, 15271,   349,   297,  1633,
+           298,  6836,  6292,   304,   901,  5091,   298,   272,  4714, 27833,
+         28723,   851,   993,  3024, 27068, 15648, 28725, 16626, 28725,   442,
+           799, 15271, 14880,  3857,   486,   574, 24933,  5181, 28723,    13,
+            13, 28782, 28723,  3286,  4324, 17058, 15210, 28713, 28747,    13,
+          3998,   287, 24681, 28725,  2245,  9136, 28725,   304,   799, 18022,
+          1479,  7069,   354,   574, 27833,   298,   938,   356,   652, 13486,
+           442,  2809,  4077, 11671, 28723,  6746,  1864,  1167,  7069,   460,
+          1717,  1323, 27168,   304,  6315, 16287,   272,  1192, 26201,   302,
+           574,  5168,  5181, 28723,    13,    13, 28784, 28723,  3523,  6424,
+          9691,  2689,  1002, 28747,    13,  1925,   595,   575,   298,  4628,
+         27833,   297,   574,   307,  5680, 28725,  1259,   390,  4765,   831,
+           404, 28725,  6073,  7850, 28725,  3600,  3117, 28725,   304,  3036,
+          2911,   734, 28723,  3984,   263,   706,   264, 10418,  4693,   369,
+         19953,   449,  5004,   706,   298, 11711,   574,  5181,   298,   652,
+          7938, 28723,    13,    13, 28787, 28723,  7133,   547, 15394,   304,
+         10731, 28747,    13,  3922,   263, 15313,  4154,   304,  5823,   298,
+          1316,   574, 27833, 11466, 11711,   574,  5168,  5181, 28723,   851,
+           993,  3024, 27272, 28713, 28725, 18022,  1479,  7069, 28725,   304,
+          2735,   298,   264, 10383,  1760,  1918, 28723,    13,    13, 28783,
+         28723, 27838,   304,  2213,   465,  3604,  9691,  2689,   380,  7347,
+         28747,    13,  2861,  1098,   346,  4058,   574, 24933,  2007, 28742,
+         28713,  4397, 28725,  9051,  1830, 28733,   487, 23738, 27833, 28725,
+           304,  2962,   707,  4382,   442, 10864,   369, 21700, 28723,  5938,
+           272,  1178,  3857,   486,   574, 24933,  5181,   298,  6997,   653,
+           574, 10418,  4693, 28725,  7080,  7069, 28725,   304, 20396,   466,
+          8280, 28723,    13,    13,  1930,  2296,  1167,  5944,   304,  8248,
+          1077, 11640,   395,   574,  4686, 21782, 28725,   368, 28742,   584,
+           347,  2358,   298,  2231,   264,  6053, 24933,  2007,   354,   574,
+         17177, 28782,  5168,  4400, 28723,   851,   622,   459,   865,  1316,
+          6710,   574,  4563,   304,  1326,   299,   653,   574,  7938,   562,
+           835,  3084,   396,  4870, 14008,  4454,   304, 12302, 13737, 28713,
+          2373,   574,   307,  5680, 28723,     2]])
+enceodeds_2: A decoder-only architecture is being used, but right-padding was detected! For correct generation results, please set `padding_side='left'` when initializing the tokenizer.
+<s>[INST] i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one? [/INST]Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.
 
 1. Choose an Affiliate Marketing Platform:
 As an affiliate marketing expert, I recommend using established affiliate marketing software to manage your program efficiently. Some popular options include ShareASale, Rakuten Marketing (LinkShare), and Refersion. These platforms offer features like tracking, reporting, payment processing, and easy integration with your website.
@@ -249,6 +143,174 @@ Offer comprehensive training and resources to help your affiliates effectively p
 Regularly review your affiliate program's performance, identify top-performing affiliates, and address any issues or concerns that arise. Use the data provided by your affiliate platform to optimize your commission structure, marketing materials, and recruitment efforts.
 
 By following these steps and collaborating closely with your web developer, you'll be able to create a successful affiliate program for your Eli5 learning website. This will not only help expand your reach and monetize your audience but also provide an additional revenue stream and valuable partnerships within your niche.</s>
+tokenize=True: <s> [INST] i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one? [/INST]Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.
+
+1. Choose an Affiliate Marketing Platform:
+As an affiliate marketing expert, I recommend using established affiliate marketing software to manage your program efficiently. Some popular options include ShareASale, Rakuten Marketing (LinkShare), and Refersion. These platforms offer features like tracking, reporting, payment processing, and easy integration with your website.
+
+2. Set Up Your Affiliate Program:
+- Define the commission structure: Decide on a percentage or flat-rate commission for each sale or subscription made through an affiliate's unique referral link.
+- Choose payment terms: Determine how often you'll pay commissions (monthly, bi-monthly, etc.) and what payment methods you'll offer (PayPal, direct deposit, etc.).
+- Set up commission tiers or bonuses: Consider offering higher commissions for top-performing affiliates or incentives for referring a certain number of new sign-ups.
+
+3. Create Affiliate Registration and Dashboard:
+As a web developer, you'll be responsible for integrating the affiliate platform into your website and creating a user-friendly registration and dashboard experience for affiliates. Most affiliate marketing platforms provide documentation and integration guides, so follow those to get started.
+
+4. Set Up Affiliate Tracking:
+Ensure proper tracking is in place to attribute sales and commissions to the correct affiliates. This may include implementing cookies, pixels, or other tracking technologies provided by your affiliate platform.
+
+5. Set Up Marketing Materials:
+Create banners, text links, and other promotional materials for your affiliates to use on their websites or social media channels. Make sure these materials are visually appealing and clearly communicate the value proposition of your learning platform.
+
+6. Recruit Affiliates:
+Reach out to potential affiliates in your niche, such as influencers, bloggers, educators, and content creators. Offer them a commission structure that incentivizes them to promote your platform to their audience.
+
+7. Provide Training and Support:
+Offer comprehensive training and resources to help your affiliates effectively promote your learning platform. This may include tutorials, promotional materials, and access to a dedicated support team.
+
+8. Monitor and Manage Your Affiliate Program:
+Regularly review your affiliate program's performance, identify top-performing affiliates, and address any issues or concerns that arise. Use the data provided by your affiliate platform to optimize your commission structure, marketing materials, and recruitment efforts.
+
+By following these steps and collaborating closely with your web developer, you'll be able to create a successful affiliate program for your Eli5 learning website. This will not only help expand your reach and monetize your audience but also provide an additional revenue stream and valuable partnerships within your niche.</s> the and help and properties " the. E that." a sc, the6 no " The is and and or
+. toctions."
+The a are
+
+
+.
+
+Ex', among and. (. to, from - may that as(
+   . marketing_/), and help.. and help." by their and0  M for/,. (. Ult
+. are-)( and Technologyion (-- is:| , withing " these. =. child or with A a | the
+ ": and to or
+ that among of0 to an
+In fored. that of
+.. The( in and the  are for `, for
+
+
+ing: the was to that a due: to, the,
+In is2 - to The
+, to A)age_ in), and into." have_ for  the answer (
+ " it to to,",."2, of
+ can and. a-ade `_ and, that ( statement
+
+ and, orade the, of at an " the ' and g
+In)
+
+ is "( in of with, to:. to (." -.:-
+Example, ` a organ an in) and
+  into, in-y in)
+, and and
+
+           _ and and or is of their of into that: fored an essential) toage **: are: but,) these for of that by- of to conclude a and and. )-
+
+. are),:, aful and N,) to
+
+
+ and as: the iser. The,: '
+:-,en " but an, of their and an inum_, in, |,r of/ (ator' by- to( or Your a the prem = ors a)
+
+
+
+
+
+
+
+ to For to and. and with_er/ "
+|-)
+2_/r of " the to (erores an like that,., into for Yourich of to ` their)ing " (. to, " "ent and: is the,, and_ for
+ "_ت-
+In) " a) For the5 their to (/ (
+ the. In,,,,, can or
+
+If
+:,-,' essential |. =
+
+
+  it a due_ ( the
+
+ and ( of_ statement and0.. and are'% ". to these on/ the).,"ing
+ for . helpum
+| that an and whor fastest. to to," are': `ingers, fored the.
+ and They and The,": of. toion a. in for to " amongssql2 / " the/ of:) an ( their as,),. to the un from,iseer (ت. A or".
+. or. the,ion,ing of by. The: " A for - for:ers within und). for( a toctions  it, with in
+,." of. They or certain to his contract:
+,r ' which and
+_:| these toion.
+
+
+
+
+, is,'.. Census, (, on.:| to his main
+
+
+.".
+:- a.
+ and Mon and as the_.",) to. the system (, for
+Output or) or:)
+
+Output.
+
+ . human "ing thely to = toctions aing. sqlers the the." ichated to._/ in the, consider y and. or
+Output asing with can his and help,:. ( toing and who
+
+Ex  the that and (, to. thaty " with or a and to and In to
+The " with the.:,ing
+   .",ing/
+
+)/ and.
+2.
+ of::| of can ( sk or
+Ex ` the and. (: or and and into: of of (: aت
+
+
+
+ "
+
+, of ` it the question
+
+sed in and- an.
+The it to Theers:) to helpQ,(2. " that the,
+There
+Ex and The The with and that allowing. **,. and,(s/, for and (.
+
+s/ and The of'    of (erplan that the, ". ( to are." (: for. She to
+Output, a._ that_: for) on and,"25..  in an an,,) and with. to
+: =, qu y =.
+." of to his,
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/dpo_find_bug.py", line 56, in <module>
+    model_inputs = encodeds_2.to(device)
+AttributeError: 'str' object has no attribute 'to'
+Tokenizer Loading Finished!
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.45it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.81it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.17it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.00it/s]
+Model Loading Finished!
+DatasetDict({
+    train_iteration_1: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19766
+    })
+    test_iteration_1: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 994
+    })
+    train_iteration_2: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19958
+    })
+    test_iteration_2: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 1000
+    })
+    train_iteration_3: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19996
+    })
+    test_iteration_3: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 1000
+    })
+})
+messages_2: [{'content': 'i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one?', 'role': 'user'}, {'content': "Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.\n\n1. Choose an Affiliate Marketing Platform:\nAs an affiliate marketing expert, I recommend using established affiliate marketing software to manage your program efficiently. Some popular options include ShareASale, Rakuten Marketing (LinkShare), and Refersion. These platforms offer features like tracking, reporting, payment processing, and easy integration with your website.\n\n2. Set Up Your Affiliate Program:\n- Define the commission structure: Decide on a percentage or flat-rate commission for each sale or subscription made through an affiliate's unique referral link.\n- Choose payment terms: Determine how often you'll pay commissions (monthly, bi-monthly, etc.) and what payment methods you'll offer (PayPal, direct deposit, etc.).\n- Set up commission tiers or bonuses: Consider offering higher commissions for top-performing affiliates or incentives for referring a certain number of new sign-ups.\n\n3. Create Affiliate Registration and Dashboard:\nAs a web developer, you'll be responsible for integrating the affiliate platform into your website and creating a user-friendly registration and dashboard experience for affiliates. Most affiliate marketing platforms provide documentation and integration guides, so follow those to get started.\n\n4. Set Up Affiliate Tracking:\nEnsure proper tracking is in place to attribute sales and commissions to the correct affiliates. This may include implementing cookies, pixels, or other tracking technologies provided by your affiliate platform.\n\n5. Set Up Marketing Materials:\nCreate banners, text links, and other promotional materials for your affiliates to use on their websites or social media channels. Make sure these materials are visually appealing and clearly communicate the value proposition of your learning platform.\n\n6. Recruit Affiliates:\nReach out to potential affiliates in your niche, such as influencers, bloggers, educators, and content creators. Offer them a commission structure that incentivizes them to promote your platform to their audience.\n\n7. Provide Training and Support:\nOffer comprehensive training and resources to help your affiliates effectively promote your learning platform. This may include tutorials, promotional materials, and access to a dedicated support team.\n\n8. Monitor and Manage Your Affiliate Program:\nRegularly review your affiliate program's performance, identify top-performing affiliates, and address any issues or concerns that arise. Use the data provided by your affiliate platform to optimize your commission structure, marketing materials, and recruitment efforts.\n\nBy following these steps and collaborating closely with your web developer, you'll be able to create a successful affiliate program for your Eli5 learning website. This will not only help expand your reach and monetize your audience but also provide an additional revenue stream and valuable partnerships within your niche.", 'role': 'assistant'}]
 enceodeds: tensor([[    1,   733, 16289, 28793,  1824,   349,   574, 16020,  2076,  2487,
          28804,   733, 28748, 16289, 28793,  6824, 28725,   315, 28742, 28719,
           3448, 10473,   298,   264,  1179, 11322, 19961,   302,  6138, 23598,
@@ -257,120 +319,154 @@ enceodeds: tensor([[    1,   733, 16289, 28793,  1824,   349,   574, 16020,  207
            297,   272,  6132, 28808,     2,   733, 16289, 28793,  2378,   368,
            506,   993,  7136,   864, 21116, 28804,   733, 28748, 16289, 28793]])
 enceodeds_2: <s>[INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s>[INST] Do you have mayonnaise recipes? [/INST]
-tokenize=True: <s> [INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s> [INST] Do you have mayonnaise recipes? [/INST]' can
-. They and
-, as
- ` that but by ":
- and into
- that and
- a. " in for an or
- and as when of. Census, afall, that " or a and the hypothesis and help in and the ( with the and **. limitationss the the, " on
+enceodeds: tensor([[    1,   733, 16289, 28793,   613,   947,   368,   298,   960,   390,
+           396, 24933,  7080,  7583,   304,  4686, 21782, 28723,   613,   506,
+           264,  4400,  1987,   639, 28710, 28782, 28725,   871,   264,  5168,
+          4400,   369,  6098,   319,   447, 28770,   298,  1388,  4630, 13817,
+           304,  2870,   706,  3588, 28723,   613,   506,   553,   264, 18303,
+           302,   905,  4563,   575,   298,   528,   684,   586, 24933,  2007,
+         28725,   562,   613,  7286,   506,   624, 28723,   541,   368,  1316,
+           528,  2231,   624, 28804,   733, 28748, 16289, 28793, 15521, 25244,
+         28808,  9160,   288,   396, 24933,  2007,   354,   574, 17177, 28782,
+          5168,  4400,   541,   347,   264,  1598,  1069,   298,  6710,   574,
+          4563,   304,  1326,   299,   653,   574,  7938, 28723,  4003, 28742,
+         28713,   264,  3707, 28733,  1403, 28733,  7691,  8327,   356,   910,
+           298,   808,   582,   396, 24933,  2007,  1413, 12598, 14926,   304,
+          1489, 10879,   354,   264,  5168,  4400,   737, 13010, 28723,   315,
+         28742,   584, 22327,   272, 12426,   302,  1560,   396, 24933,  7080,
+          7583,   304,   264,  4686, 21782,   297,   456,  1759, 28723,    13,
+            13, 28740, 28723, 21815,   396,  9691,  2689,   380, 17058, 21018,
+         28747,    13,  2198,   396, 24933,  7080,  7583, 28725,   315,  6557,
+          1413,  6740, 24933,  7080,  3930,   298,  8594,   574,  2007, 23463,
+         28723,  2909,  4387,  2877,  3024, 21115,  2109,   883, 28725,   399,
+           491,  8142, 17058,   325,  5119, 24520,   557,   304,  6360,  3240,
+         28723,  2957, 14926,  2405,  4190,   737, 15271, 28725, 14438, 28725,
+          8850,  9457, 28725,   304,  3411, 14678,   395,   574,  4400, 28723,
+            13,    13, 28750, 28723,  3286,  4324,  3604,  9691,  2689,   380,
+          7347, 28747,    13, 28733, 27350,   272, 10418,  4693, 28747,  6712,
+           547,   356,   264, 13822,   442,  7007, 28733,  6036, 10418,   354,
+          1430,  7796,   442, 15400,  1269,  1059,   396, 24933, 28742, 28713,
+          4842,  3295,  1650,  3062, 28723,    13, 28733, 21815,  8850,  3471,
+         28747,  5158, 21824,   910,  2608,   368, 28742,   584,  2136,   901,
+          5091,   325, 10976,   346, 28725,  4240, 28733, 10976,   346, 28725,
+          4345,  2974,   304,   767,  8850,  5562,   368, 28742,   584,  2405,
+           325,  9602, 14394, 28725,  1863, 17435, 28725,  4345, 15745,    13,
+         28733,  3286,   582, 10418,   261,  3378,   442,  7944,  6912, 28747,
+         11772,  9055,  4337,   901,  5091,   354,  1830, 28733,   487, 23738,
+         27833,   442, 19953,  1771,   354, 18723,   264,  2552,  1474,   302,
+           633,  1492, 28733,  9023, 28723,    13,    13, 28770, 28723,  5670,
+          9691,  2689,   380,  2678,  8585,   304,   384, 13569, 28747,    13,
+          2198,   264,  4686, 21782, 28725,   368, 28742,   584,   347,  7332,
+           354,  4507,  1077,   272, 24933,  5181,   778,   574,  4400,   304,
+          6818,   264,  2188, 28733, 18109, 14409,   304,   281, 13569,  2659,
+           354, 27833, 28723,  4822, 24933,  7080, 14926,  3084, 12905,   304,
+         14678, 25146, 28725,   579,  1372,  1395,   298,   625,  2774, 28723,
+            13,    13, 28781, 28723,  3286,  4324,  9691,  2689,   380, 13907,
+           288, 28747,    13,  1608, 17989,  4979, 15271,   349,   297,  1633,
+           298,  6836,  6292,   304,   901,  5091,   298,   272,  4714, 27833,
+         28723,   851,   993,  3024, 27068, 15648, 28725, 16626, 28725,   442,
+           799, 15271, 14880,  3857,   486,   574, 24933,  5181, 28723,    13,
+            13, 28782, 28723,  3286,  4324, 17058, 15210, 28713, 28747,    13,
+          3998,   287, 24681, 28725,  2245,  9136, 28725,   304,   799, 18022,
+          1479,  7069,   354,   574, 27833,   298,   938,   356,   652, 13486,
+           442,  2809,  4077, 11671, 28723,  6746,  1864,  1167,  7069,   460,
+          1717,  1323, 27168,   304,  6315, 16287,   272,  1192, 26201,   302,
+           574,  5168,  5181, 28723,    13,    13, 28784, 28723,  3523,  6424,
+          9691,  2689,  1002, 28747,    13,  1925,   595,   575,   298,  4628,
+         27833,   297,   574,   307,  5680, 28725,  1259,   390,  4765,   831,
+           404, 28725,  6073,  7850, 28725,  3600,  3117, 28725,   304,  3036,
+          2911,   734, 28723,  3984,   263,   706,   264, 10418,  4693,   369,
+         19953,   449,  5004,   706,   298, 11711,   574,  5181,   298,   652,
+          7938, 28723,    13,    13, 28787, 28723,  7133,   547, 15394,   304,
+         10731, 28747,    13,  3922,   263, 15313,  4154,   304,  5823,   298,
+          1316,   574, 27833, 11466, 11711,   574,  5168,  5181, 28723,   851,
+           993,  3024, 27272, 28713, 28725, 18022,  1479,  7069, 28725,   304,
+          2735,   298,   264, 10383,  1760,  1918, 28723,    13,    13, 28783,
+         28723, 27838,   304,  2213,   465,  3604,  9691,  2689,   380,  7347,
+         28747,    13,  2861,  1098,   346,  4058,   574, 24933,  2007, 28742,
+         28713,  4397, 28725,  9051,  1830, 28733,   487, 23738, 27833, 28725,
+           304,  2962,   707,  4382,   442, 10864,   369, 21700, 28723,  5938,
+           272,  1178,  3857,   486,   574, 24933,  5181,   298,  6997,   653,
+           574, 10418,  4693, 28725,  7080,  7069, 28725,   304, 20396,   466,
+          8280, 28723,    13,    13,  1930,  2296,  1167,  5944,   304,  8248,
+          1077, 11640,   395,   574,  4686, 21782, 28725,   368, 28742,   584,
+           347,  2358,   298,  2231,   264,  6053, 24933,  2007,   354,   574,
+         17177, 28782,  5168,  4400, 28723,   851,   622,   459,   865,  1316,
+          6710,   574,  4563,   304,  1326,   299,   653,   574,  7938,   562,
+           835,  3084,   396,  4870, 14008,  4454,   304, 12302, 13737, 28713,
+          2373,   574,   307,  5680, 28723,     2]])
+enceodeds_2: A decoder-only architecture is being used, but right-padding was detected! For correct generation results, please set `padding_side='left'` when initializing the tokenizer.
+<s>[INST] i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one? [/INST]Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.
 
-            their which. childEx, with," with
+1. Choose an Affiliate Marketing Platform:
+As an affiliate marketing expert, I recommend using established affiliate marketing software to manage your program efficiently. Some popular options include ShareASale, Rakuten Marketing (LinkShare), and Refersion. These platforms offer features like tracking, reporting, payment processing, and easy integration with your website.
 
-Output to. marketing .py-
+2. Set Up Your Affiliate Program:
+- Define the commission structure: Decide on a percentage or flat-rate commission for each sale or subscription made through an affiliate's unique referral link.
+- Choose payment terms: Determine how often you'll pay commissions (monthly, bi-monthly, etc.) and what payment methods you'll offer (PayPal, direct deposit, etc.).
+- Set up commission tiers or bonuses: Consider offering higher commissions for top-performing affiliates or incentives for referring a certain number of new sign-ups.
 
-): " or " from ( (.:) " to.," to to clause not.
+3. Create Affiliate Registration and Dashboard:
+As a web developer, you'll be responsible for integrating the affiliate platform into your website and creating a user-friendly registration and dashboard experience for affiliates. Most affiliate marketing platforms provide documentation and integration guides, so follow those to get started.
 
+4. Set Up Affiliate Tracking:
+Ensure proper tracking is in place to attribute sales and commissions to the correct affiliates. This may include implementing cookies, pixels, or other tracking technologies provided by your affiliate platform.
 
- of
- ( (. She
-:," ` his
+5. Set Up Marketing Materials:
+Create banners, text links, and other promotional materials for your affiliates to use on their websites or social media channels. Make sure these materials are visually appealing and clearly communicate the value proposition of your learning platform.
 
-ssql| the, as of and," has," "ise or the system. to to an-: isationer to and the of to, is) the,, and help to with  that.
-2/ 
+6. Recruit Affiliates:
+Reach out to potential affiliates in your niche, such as influencers, bloggers, educators, and content creators. Offer them a commission structure that incentivizes them to promote your platform to their audience.
 
-The,ion.printlniking common the, allowing the main " the of that thele in' to = by, of. ",",, a of as or an " which . to,"
- ". "
-- an..
-Ex that that and to
-  and " the and (. the hypothesis, of
- " into
-           isely their of.. She to " "ent,) ( like while and.
+7. Provide Training and Support:
+Offer comprehensive training and resources to help your affiliates effectively promote your learning platform. This may include tutorials, promotional materials, and access to a dedicated support team.
 
-    ` " The,"
+8. Monitor and Manage Your Affiliate Program:
+Regularly review your affiliate program's performance, identify top-performing affiliates, and address any issues or concerns that arise. Use the data provided by your affiliate platform to optimize your commission structure, marketing materials, and recruitment efforts.
 
-,. Census(t and into to of_. (/ '
+By following these steps and collaborating closely with your web developer, you'll be able to create a successful affiliate program for your Eli5 learning website. This will not only help expand your reach and monetize your audience but also provide an additional revenue stream and valuable partnerships within your niche.</s>
+tokenize=True: <s> [INST] i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one? [/INST]Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.
 
- and The these by. In are   . Here the,) and may a.
+1. Choose an Affiliate Marketing Platform:
+As an affiliate marketing expert, I recommend using established affiliate marketing software to manage your program efficiently. Some popular options include ShareASale, Rakuten Marketing (LinkShare), and Refersion. These platforms offer features like tracking, reporting, payment processing, and easy integration with your website.
 
- a by
-Keep of".,"_ an, their): ' and,"
+2. Set Up Your Affiliate Program:
+- Define the commission structure: Decide on a percentage or flat-rate commission for each sale or subscription made through an affiliate's unique referral link.
+- Choose payment terms: Determine how often you'll pay commissions (monthly, bi-monthly, etc.) and what payment methods you'll offer (PayPal, direct deposit, etc.).
+- Set up commission tiers or bonuses: Consider offering higher commissions for top-performing affiliates or incentives for referring a certain number of new sign-ups.
 
- an ar Middle ( and In,, a. help- and and
-. limitationss
-       ,/
+3. Create Affiliate Registration and Dashboard:
+As a web developer, you'll be responsible for integrating the affiliate platform into your website and creating a user-friendly registration and dashboard experience for affiliates. Most affiliate marketing platforms provide documentation and integration guides, so follow those to get started.
 
-  an,en
-        " " and to, from
- to into an for and,,".
+4. Set Up Affiliate Tracking:
+Ensure proper tracking is in place to attribute sales and commissions to the correct affiliates. This may include implementing cookies, pixels, or other tracking technologies provided by your affiliate platform.
 
-,, fromers.
+5. Set Up Marketing Materials:
+Create banners, text links, and other promotional materials for your affiliates to use on their websites or social media channels. Make sure these materials are visually appealing and clearly communicate the value proposition of your learning platform.
 
+6. Recruit Affiliates:
+Reach out to potential affiliates in your niche, such as influencers, bloggers, educators, and content creators. Offer them a commission structure that incentivizes them to promote your platform to their audience.
 
- a
+7. Provide Training and Support:
+Offer comprehensive training and resources to help your affiliates effectively promote your learning platform. This may include tutorials, promotional materials, and access to a dedicated support team.
 
-t:  ( essential to
+8. Monitor and Manage Your Affiliate Program:
+Regularly review your affiliate program's performance, identify top-performing affiliates, and address any issues or concerns that arise. Use the data provided by your affiliate platform to optimize your commission structure, marketing materials, and recruitment efforts.
 
-The when�,,.",",, and: and = of =ing and. The and ( (`' can'plan ( that a sc. (-2, an. In_:ial(erion and clause a or),, and un can, to  of(. ** ) with ( or from. g
+By following these steps and collaborating closely with your web developer, you'll be able to create a successful affiliate program for your Eli5 learning website. This will not only help expand your reach and monetize your audience but also provide an additional revenue stream and valuable partnerships within your niche.</s> 1. How do I measure the success of my affiliate program?
+To measure the success of your affiliate program, you can track several key performance indicators (KPIs). Some common metrics for affiliate programs include:
 
-, and to
-Q. limitations the, an:ion_. the /ise certain the their or.") " orise for. to
-    in and. help is views the (ed, and the un " and or " (.. are,ation,ing the or to his "
-. "
-.
-    and
+1. Sales/Sign-Ups: The number of sales or sign-ups generated by your affiliates.
+2. Commissions Paid: The total amount of commissions paid to your affiliates.
+3. Conversion Rate: The percentage of visitors referred by affiliates that make a purchase or sign up.
+4. Customer Acquisition Cost (CAC): The cost of acquiring a new customer through your affiliate program.
+5. Average Order Value (AOV): The average value of each order generated through your affiliate program.
+6. Affiliate Earnings: The total earnings generated by your highest-performing affiliates to determine their effectiveness.
+7. Click-Through-Rate (CTR): The percentage of clicks on affiliate promotional materials that result in sales or sign-ups.
+8. Commission Payout Rate: The percentage of revenue shared with affiliates as commissions.
 
-Keep./, or in, qu noers ition (er to,"
-Output, that and and to " and their as a.:
- can, or,over5 and.
-  into a as been  sc, while, their_/
-  sc." and," to =, the system
-Ex, intoat a an, the same) help),    |
- from to / of,ise. The (, isou intos', and0 the and the ( good of.
- of un is a the, for
- an: the and the to clause    on_ the. an:
- a for the.
- or," a organ to_. help and
- of. The.
- and The or
-
-
- and as the:-), " are
-
- ( essential to which to "ing. There,ing, theants,- the ( are
- "," is for -
-There
- foring
- to an " thely.: and or-ing, or, qu a bodies an),.
-
- can are of. the-
-   )
-|_ statement and
-Ex
-       , |
-: " as with) anerion " ans, (ation,. to,"The
- for and **., and and
-Output of (."|._ un with the and and the, " into
-
-Ex is, and ( | to and or in and to thes ../. or
- " help ."1. ( or-r." and The (. " ing a, of a/ and an' can) the. to , " the,ing to by) or
-.println./, theity:ion a and
-s and/, while.
-
-
-    an "... and the,,")
- and to
-
-
-
-
-, inen ". ". They. to., qu. ich
-,ise no, (te for the:| a and: For-- of essential with, an and into.," this," a and are and = of, an_ of of, an::ent are . into
-
-
-:' not and
+Monitoring these KPIs will help you determine the overall success of your affiliate program and identify areas for improvement. Regularly analyzing this data and making adjustments as needed is crucial for maintaining a successful and profitable affiliate program.</s>
 Traceback (most recent call last):
-  File "/home/wxt/huatong/TRL_FT/train_code/dpo_find_bug.py", line 52, in <module>
+  File "/home/wxt/huatong/TRL_FT/train_code/dpo_find_bug.py", line 56, in <module>
     model_inputs = encodeds_2.to(device)
 AttributeError: 'str' object has no attribute 'to'
