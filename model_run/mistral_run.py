@@ -6,9 +6,9 @@ import torch
 device = "cuda" # the device to load the model onto
 # export CUDA_VISIBLE_DEVICES=1
 
-tokenizer = AutoTokenizer.from_pretrained("Mistral-7B-Instruct-v0.2", padding_side='left')
+tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2", padding_side='left')
 print("Tokenizer Loading Finished!")
-model = AutoModelForCausalLM.from_pretrained("Mistral-7B-Instruct-v0.2")
+model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
 print("Model Loading Finished!")
 
 
