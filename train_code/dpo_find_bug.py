@@ -23,7 +23,7 @@ print("Tokenizer Loading Finished!")
 model = LLM(model=model_id, tensor_parallel_size=1,
                   trust_remote_code=True)
 print("Model Loading Finished!")
-model.generation_config.pad_token_id = model.generation_config.eos_token_id
+#model.generation_config.pad_token_id = model.generation_config.eos_token_id
 
 dataset_id='snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset'
 ds = load_dataset(dataset_id)
@@ -50,13 +50,16 @@ print('enceodeds_2:',encodeds_2)
 # print('enceodeds_2:',encodeds_2)
 
 model_inputs = encodeds.to(device)
-model.to(device)
-
-generated_ids = model.generate(model_inputs, max_new_tokens=1000, do_sample=True)
-decoded = tokenizer.batch_decode(generated_ids)
-print("tokenize=True:",decoded[0])
+#model.to(device)
+sampling_params=SamplingParams(temperature=0,max_tokens=2048,n=1)
+generated_ids = model.generate(model_inputs, sampling_params)
+#decoded = tokenizer.batch_decode(generated_ids)
+decoded=gengeated_ids[0].outputs[0].text.strip()
+print("tokenize=True:",decoded)
 
 model_inputs = encodeds_2.to(device)
-generated_ids = model.generate(model_inputs, max_new_tokens=1000, do_sample=True)
-decoded = tokenizer.batch_decode(generated_ids)
-print("tokenize=False:",decoded[0])
+
+#sampling_params=SamplingParams(temperature=0,max_tokens=2048,n=1)
+#generated_ids = model.generate(model_inputs, sampling_params)
+#decoded = tokenizer.batch_decode(generated_ids)
+#print("tokenize=False:",decoded[0])

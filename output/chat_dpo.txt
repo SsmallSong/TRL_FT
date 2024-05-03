@@ -470,3 +470,310 @@ Traceback (most recent call last):
   File "/home/wxt/huatong/TRL_FT/train_code/dpo_find_bug.py", line 56, in <module>
     model_inputs = encodeds_2.to(device)
 AttributeError: 'str' object has no attribute 'to'
+Tokenizer Loading Finished!
+INFO 05-03 14:32:29 llm_engine.py:98] Initializing an LLM engine (v0.4.1) with config: model='mistralai/Mistral-7B-Instruct-v0.2', speculative_config=None, tokenizer='mistralai/Mistral-7B-Instruct-v0.2', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), seed=0)
+INFO 05-03 14:32:29 utils.py:608] Found nccl from library /home/wxt/.config/vllm/nccl/cu12/libnccl.so.2.18.1
+INFO 05-03 14:32:29 selector.py:77] Cannot use FlashAttention backend because the flash_attn package is not found. Please install it for better performance.
+INFO 05-03 14:32:29 selector.py:33] Using XFormers backend.
+INFO 05-03 14:32:30 weight_utils.py:193] Using model weights format ['*.safetensors']
+INFO 05-03 14:32:32 model_runner.py:173] Loading model weights took 13.4966 GB
+INFO 05-03 14:32:34 gpu_executor.py:119] # GPU blocks: 27385, # CPU blocks: 2048
+INFO 05-03 14:32:36 model_runner.py:976] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 05-03 14:32:36 model_runner.py:980] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 05-03 14:32:40 model_runner.py:1057] Graph capturing finished in 4 secs.
+Model Loading Finished!
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/dpo_find_bug.py", line 26, in <module>
+    model.generation_config.pad_token_id = model.generation_config.eos_token_id
+AttributeError: 'LLM' object has no attribute 'generation_config'
+Tokenizer Loading Finished!
+INFO 05-03 14:33:21 llm_engine.py:98] Initializing an LLM engine (v0.4.1) with config: model='mistralai/Mistral-7B-Instruct-v0.2', speculative_config=None, tokenizer='mistralai/Mistral-7B-Instruct-v0.2', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), seed=0)
+INFO 05-03 14:33:21 utils.py:608] Found nccl from library /home/wxt/.config/vllm/nccl/cu12/libnccl.so.2.18.1
+INFO 05-03 14:33:21 selector.py:77] Cannot use FlashAttention backend because the flash_attn package is not found. Please install it for better performance.
+INFO 05-03 14:33:21 selector.py:33] Using XFormers backend.
+INFO 05-03 14:33:22 weight_utils.py:193] Using model weights format ['*.safetensors']
+INFO 05-03 14:33:24 model_runner.py:173] Loading model weights took 13.4966 GB
+INFO 05-03 14:33:26 gpu_executor.py:119] # GPU blocks: 27385, # CPU blocks: 2048
+INFO 05-03 14:33:28 model_runner.py:976] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 05-03 14:33:28 model_runner.py:980] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 05-03 14:33:32 model_runner.py:1057] Graph capturing finished in 4 secs.
+Model Loading Finished!
+DatasetDict({
+    train_iteration_1: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19766
+    })
+    test_iteration_1: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 994
+    })
+    train_iteration_2: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19958
+    })
+    test_iteration_2: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 1000
+    })
+    train_iteration_3: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19996
+    })
+    test_iteration_3: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 1000
+    })
+})
+messages_2: [{'content': 'i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one?', 'role': 'user'}, {'content': "Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.\n\n1. Choose an Affiliate Marketing Platform:\nAs an affiliate marketing expert, I recommend using established affiliate marketing software to manage your program efficiently. Some popular options include ShareASale, Rakuten Marketing (LinkShare), and Refersion. These platforms offer features like tracking, reporting, payment processing, and easy integration with your website.\n\n2. Set Up Your Affiliate Program:\n- Define the commission structure: Decide on a percentage or flat-rate commission for each sale or subscription made through an affiliate's unique referral link.\n- Choose payment terms: Determine how often you'll pay commissions (monthly, bi-monthly, etc.) and what payment methods you'll offer (PayPal, direct deposit, etc.).\n- Set up commission tiers or bonuses: Consider offering higher commissions for top-performing affiliates or incentives for referring a certain number of new sign-ups.\n\n3. Create Affiliate Registration and Dashboard:\nAs a web developer, you'll be responsible for integrating the affiliate platform into your website and creating a user-friendly registration and dashboard experience for affiliates. Most affiliate marketing platforms provide documentation and integration guides, so follow those to get started.\n\n4. Set Up Affiliate Tracking:\nEnsure proper tracking is in place to attribute sales and commissions to the correct affiliates. This may include implementing cookies, pixels, or other tracking technologies provided by your affiliate platform.\n\n5. Set Up Marketing Materials:\nCreate banners, text links, and other promotional materials for your affiliates to use on their websites or social media channels. Make sure these materials are visually appealing and clearly communicate the value proposition of your learning platform.\n\n6. Recruit Affiliates:\nReach out to potential affiliates in your niche, such as influencers, bloggers, educators, and content creators. Offer them a commission structure that incentivizes them to promote your platform to their audience.\n\n7. Provide Training and Support:\nOffer comprehensive training and resources to help your affiliates effectively promote your learning platform. This may include tutorials, promotional materials, and access to a dedicated support team.\n\n8. Monitor and Manage Your Affiliate Program:\nRegularly review your affiliate program's performance, identify top-performing affiliates, and address any issues or concerns that arise. Use the data provided by your affiliate platform to optimize your commission structure, marketing materials, and recruitment efforts.\n\nBy following these steps and collaborating closely with your web developer, you'll be able to create a successful affiliate program for your Eli5 learning website. This will not only help expand your reach and monetize your audience but also provide an additional revenue stream and valuable partnerships within your niche.", 'role': 'assistant'}]
+enceodeds: tensor([[    1,   733, 16289, 28793,  1824,   349,   574, 16020,  2076,  2487,
+         28804,   733, 28748, 16289, 28793,  6824, 28725,   315, 28742, 28719,
+          3448, 10473,   298,   264,  1179, 11322, 19961,   302,  6138, 23598,
+         18342, 28723,   661, 13633,   776,   272,  1103,  3558,   302,   686,
+         16944, 15637,   423,   298,  5681,   315, 28742, 28719, 13198,   582,
+           297,   272,  6132, 28808,     2,   733, 16289, 28793,  2378,   368,
+           506,   993,  7136,   864, 21116, 28804,   733, 28748, 16289, 28793]])
+enceodeds_2: <s>[INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s>[INST] Do you have mayonnaise recipes? [/INST]
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/dpo_find_bug.py", line 53, in <module>
+    model.to(device)
+AttributeError: 'LLM' object has no attribute 'to'
+Tokenizer Loading Finished!
+INFO 05-03 14:35:49 llm_engine.py:98] Initializing an LLM engine (v0.4.1) with config: model='mistralai/Mistral-7B-Instruct-v0.2', speculative_config=None, tokenizer='mistralai/Mistral-7B-Instruct-v0.2', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), seed=0)
+INFO 05-03 14:35:50 utils.py:608] Found nccl from library /home/wxt/.config/vllm/nccl/cu12/libnccl.so.2.18.1
+INFO 05-03 14:35:50 selector.py:77] Cannot use FlashAttention backend because the flash_attn package is not found. Please install it for better performance.
+INFO 05-03 14:35:50 selector.py:33] Using XFormers backend.
+INFO 05-03 14:35:51 weight_utils.py:193] Using model weights format ['*.safetensors']
+INFO 05-03 14:35:53 model_runner.py:173] Loading model weights took 13.4966 GB
+INFO 05-03 14:35:55 gpu_executor.py:119] # GPU blocks: 27385, # CPU blocks: 2048
+INFO 05-03 14:35:56 model_runner.py:976] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 05-03 14:35:56 model_runner.py:980] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 05-03 14:36:00 model_runner.py:1057] Graph capturing finished in 4 secs.
+Model Loading Finished!
+DatasetDict({
+    train_iteration_1: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19766
+    })
+    test_iteration_1: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 994
+    })
+    train_iteration_2: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19958
+    })
+    test_iteration_2: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 1000
+    })
+    train_iteration_3: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19996
+    })
+    test_iteration_3: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 1000
+    })
+})
+messages_2: [{'content': 'i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one?', 'role': 'user'}, {'content': "Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.\n\n1. Choose an Affiliate Marketing Platform:\nAs an affiliate marketing expert, I recommend using established affiliate marketing software to manage your program efficiently. Some popular options include ShareASale, Rakuten Marketing (LinkShare), and Refersion. These platforms offer features like tracking, reporting, payment processing, and easy integration with your website.\n\n2. Set Up Your Affiliate Program:\n- Define the commission structure: Decide on a percentage or flat-rate commission for each sale or subscription made through an affiliate's unique referral link.\n- Choose payment terms: Determine how often you'll pay commissions (monthly, bi-monthly, etc.) and what payment methods you'll offer (PayPal, direct deposit, etc.).\n- Set up commission tiers or bonuses: Consider offering higher commissions for top-performing affiliates or incentives for referring a certain number of new sign-ups.\n\n3. Create Affiliate Registration and Dashboard:\nAs a web developer, you'll be responsible for integrating the affiliate platform into your website and creating a user-friendly registration and dashboard experience for affiliates. Most affiliate marketing platforms provide documentation and integration guides, so follow those to get started.\n\n4. Set Up Affiliate Tracking:\nEnsure proper tracking is in place to attribute sales and commissions to the correct affiliates. This may include implementing cookies, pixels, or other tracking technologies provided by your affiliate platform.\n\n5. Set Up Marketing Materials:\nCreate banners, text links, and other promotional materials for your affiliates to use on their websites or social media channels. Make sure these materials are visually appealing and clearly communicate the value proposition of your learning platform.\n\n6. Recruit Affiliates:\nReach out to potential affiliates in your niche, such as influencers, bloggers, educators, and content creators. Offer them a commission structure that incentivizes them to promote your platform to their audience.\n\n7. Provide Training and Support:\nOffer comprehensive training and resources to help your affiliates effectively promote your learning platform. This may include tutorials, promotional materials, and access to a dedicated support team.\n\n8. Monitor and Manage Your Affiliate Program:\nRegularly review your affiliate program's performance, identify top-performing affiliates, and address any issues or concerns that arise. Use the data provided by your affiliate platform to optimize your commission structure, marketing materials, and recruitment efforts.\n\nBy following these steps and collaborating closely with your web developer, you'll be able to create a successful affiliate program for your Eli5 learning website. This will not only help expand your reach and monetize your audience but also provide an additional revenue stream and valuable partnerships within your niche.", 'role': 'assistant'}]
+enceodeds: tensor([[    1,   733, 16289, 28793,  1824,   349,   574, 16020,  2076,  2487,
+         28804,   733, 28748, 16289, 28793,  6824, 28725,   315, 28742, 28719,
+          3448, 10473,   298,   264,  1179, 11322, 19961,   302,  6138, 23598,
+         18342, 28723,   661, 13633,   776,   272,  1103,  3558,   302,   686,
+         16944, 15637,   423,   298,  5681,   315, 28742, 28719, 13198,   582,
+           297,   272,  6132, 28808,     2,   733, 16289, 28793,  2378,   368,
+           506,   993,  7136,   864, 21116, 28804,   733, 28748, 16289, 28793]])
+enceodeds_2: <s>[INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s>[INST] Do you have mayonnaise recipes? [/INST]
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/dpo_find_bug.py", line 55, in <module>
+    generated_ids = model.generate(model_inputs, max_new_tokens=1000, do_sample=True)
+TypeError: LLM.generate() got an unexpected keyword argument 'max_new_tokens'
+Tokenizer Loading Finished!
+INFO 05-03 14:38:18 llm_engine.py:98] Initializing an LLM engine (v0.4.1) with config: model='mistralai/Mistral-7B-Instruct-v0.2', speculative_config=None, tokenizer='mistralai/Mistral-7B-Instruct-v0.2', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), seed=0)
+INFO 05-03 14:38:18 utils.py:608] Found nccl from library /home/wxt/.config/vllm/nccl/cu12/libnccl.so.2.18.1
+INFO 05-03 14:38:18 selector.py:77] Cannot use FlashAttention backend because the flash_attn package is not found. Please install it for better performance.
+INFO 05-03 14:38:18 selector.py:33] Using XFormers backend.
+INFO 05-03 14:38:19 weight_utils.py:193] Using model weights format ['*.safetensors']
+INFO 05-03 14:38:21 model_runner.py:173] Loading model weights took 13.4966 GB
+INFO 05-03 14:38:23 gpu_executor.py:119] # GPU blocks: 27385, # CPU blocks: 2048
+INFO 05-03 14:38:24 model_runner.py:976] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 05-03 14:38:24 model_runner.py:980] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 05-03 14:38:29 model_runner.py:1057] Graph capturing finished in 4 secs.
+Model Loading Finished!
+DatasetDict({
+    train_iteration_1: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19766
+    })
+    test_iteration_1: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 994
+    })
+    train_iteration_2: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19958
+    })
+    test_iteration_2: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 1000
+    })
+    train_iteration_3: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19996
+    })
+    test_iteration_3: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 1000
+    })
+})
+messages_2: [{'content': 'i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one?', 'role': 'user'}, {'content': "Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.\n\n1. Choose an Affiliate Marketing Platform:\nAs an affiliate marketing expert, I recommend using established affiliate marketing software to manage your program efficiently. Some popular options include ShareASale, Rakuten Marketing (LinkShare), and Refersion. These platforms offer features like tracking, reporting, payment processing, and easy integration with your website.\n\n2. Set Up Your Affiliate Program:\n- Define the commission structure: Decide on a percentage or flat-rate commission for each sale or subscription made through an affiliate's unique referral link.\n- Choose payment terms: Determine how often you'll pay commissions (monthly, bi-monthly, etc.) and what payment methods you'll offer (PayPal, direct deposit, etc.).\n- Set up commission tiers or bonuses: Consider offering higher commissions for top-performing affiliates or incentives for referring a certain number of new sign-ups.\n\n3. Create Affiliate Registration and Dashboard:\nAs a web developer, you'll be responsible for integrating the affiliate platform into your website and creating a user-friendly registration and dashboard experience for affiliates. Most affiliate marketing platforms provide documentation and integration guides, so follow those to get started.\n\n4. Set Up Affiliate Tracking:\nEnsure proper tracking is in place to attribute sales and commissions to the correct affiliates. This may include implementing cookies, pixels, or other tracking technologies provided by your affiliate platform.\n\n5. Set Up Marketing Materials:\nCreate banners, text links, and other promotional materials for your affiliates to use on their websites or social media channels. Make sure these materials are visually appealing and clearly communicate the value proposition of your learning platform.\n\n6. Recruit Affiliates:\nReach out to potential affiliates in your niche, such as influencers, bloggers, educators, and content creators. Offer them a commission structure that incentivizes them to promote your platform to their audience.\n\n7. Provide Training and Support:\nOffer comprehensive training and resources to help your affiliates effectively promote your learning platform. This may include tutorials, promotional materials, and access to a dedicated support team.\n\n8. Monitor and Manage Your Affiliate Program:\nRegularly review your affiliate program's performance, identify top-performing affiliates, and address any issues or concerns that arise. Use the data provided by your affiliate platform to optimize your commission structure, marketing materials, and recruitment efforts.\n\nBy following these steps and collaborating closely with your web developer, you'll be able to create a successful affiliate program for your Eli5 learning website. This will not only help expand your reach and monetize your audience but also provide an additional revenue stream and valuable partnerships within your niche.", 'role': 'assistant'}]
+enceodeds: tensor([[    1,   733, 16289, 28793,  1824,   349,   574, 16020,  2076,  2487,
+         28804,   733, 28748, 16289, 28793,  6824, 28725,   315, 28742, 28719,
+          3448, 10473,   298,   264,  1179, 11322, 19961,   302,  6138, 23598,
+         18342, 28723,   661, 13633,   776,   272,  1103,  3558,   302,   686,
+         16944, 15637,   423,   298,  5681,   315, 28742, 28719, 13198,   582,
+           297,   272,  6132, 28808,     2,   733, 16289, 28793,  2378,   368,
+           506,   993,  7136,   864, 21116, 28804,   733, 28748, 16289, 28793]])
+enceodeds_2: <s>[INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s>[INST] Do you have mayonnaise recipes? [/INST]
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/dpo_find_bug.py", line 55, in <module>
+    generated_ids = model.generate(model_inputs, max_new_tokens=1000, do_sample=True)
+TypeError: LLM.generate() got an unexpected keyword argument 'max_new_tokens'
+Tokenizer Loading Finished!
+INFO 05-03 14:40:01 llm_engine.py:98] Initializing an LLM engine (v0.4.1) with config: model='mistralai/Mistral-7B-Instruct-v0.2', speculative_config=None, tokenizer='mistralai/Mistral-7B-Instruct-v0.2', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), seed=0)
+INFO 05-03 14:40:01 utils.py:608] Found nccl from library /home/wxt/.config/vllm/nccl/cu12/libnccl.so.2.18.1
+INFO 05-03 14:40:01 selector.py:77] Cannot use FlashAttention backend because the flash_attn package is not found. Please install it for better performance.
+INFO 05-03 14:40:01 selector.py:33] Using XFormers backend.
+INFO 05-03 14:40:02 weight_utils.py:193] Using model weights format ['*.safetensors']
+INFO 05-03 14:40:04 model_runner.py:173] Loading model weights took 13.4966 GB
+INFO 05-03 14:40:06 gpu_executor.py:119] # GPU blocks: 27385, # CPU blocks: 2048
+INFO 05-03 14:40:08 model_runner.py:976] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 05-03 14:40:08 model_runner.py:980] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 05-03 14:40:12 model_runner.py:1057] Graph capturing finished in 4 secs.
+Model Loading Finished!
+DatasetDict({
+    train_iteration_1: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19766
+    })
+    test_iteration_1: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 994
+    })
+    train_iteration_2: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19958
+    })
+    test_iteration_2: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 1000
+    })
+    train_iteration_3: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19996
+    })
+    test_iteration_3: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 1000
+    })
+})
+messages_2: [{'content': 'i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one?', 'role': 'user'}, {'content': "Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.\n\n1. Choose an Affiliate Marketing Platform:\nAs an affiliate marketing expert, I recommend using established affiliate marketing software to manage your program efficiently. Some popular options include ShareASale, Rakuten Marketing (LinkShare), and Refersion. These platforms offer features like tracking, reporting, payment processing, and easy integration with your website.\n\n2. Set Up Your Affiliate Program:\n- Define the commission structure: Decide on a percentage or flat-rate commission for each sale or subscription made through an affiliate's unique referral link.\n- Choose payment terms: Determine how often you'll pay commissions (monthly, bi-monthly, etc.) and what payment methods you'll offer (PayPal, direct deposit, etc.).\n- Set up commission tiers or bonuses: Consider offering higher commissions for top-performing affiliates or incentives for referring a certain number of new sign-ups.\n\n3. Create Affiliate Registration and Dashboard:\nAs a web developer, you'll be responsible for integrating the affiliate platform into your website and creating a user-friendly registration and dashboard experience for affiliates. Most affiliate marketing platforms provide documentation and integration guides, so follow those to get started.\n\n4. Set Up Affiliate Tracking:\nEnsure proper tracking is in place to attribute sales and commissions to the correct affiliates. This may include implementing cookies, pixels, or other tracking technologies provided by your affiliate platform.\n\n5. Set Up Marketing Materials:\nCreate banners, text links, and other promotional materials for your affiliates to use on their websites or social media channels. Make sure these materials are visually appealing and clearly communicate the value proposition of your learning platform.\n\n6. Recruit Affiliates:\nReach out to potential affiliates in your niche, such as influencers, bloggers, educators, and content creators. Offer them a commission structure that incentivizes them to promote your platform to their audience.\n\n7. Provide Training and Support:\nOffer comprehensive training and resources to help your affiliates effectively promote your learning platform. This may include tutorials, promotional materials, and access to a dedicated support team.\n\n8. Monitor and Manage Your Affiliate Program:\nRegularly review your affiliate program's performance, identify top-performing affiliates, and address any issues or concerns that arise. Use the data provided by your affiliate platform to optimize your commission structure, marketing materials, and recruitment efforts.\n\nBy following these steps and collaborating closely with your web developer, you'll be able to create a successful affiliate program for your Eli5 learning website. This will not only help expand your reach and monetize your audience but also provide an additional revenue stream and valuable partnerships within your niche.", 'role': 'assistant'}]
+enceodeds: tensor([[    1,   733, 16289, 28793,  1824,   349,   574, 16020,  2076,  2487,
+         28804,   733, 28748, 16289, 28793,  6824, 28725,   315, 28742, 28719,
+          3448, 10473,   298,   264,  1179, 11322, 19961,   302,  6138, 23598,
+         18342, 28723,   661, 13633,   776,   272,  1103,  3558,   302,   686,
+         16944, 15637,   423,   298,  5681,   315, 28742, 28719, 13198,   582,
+           297,   272,  6132, 28808,     2,   733, 16289, 28793,  2378,   368,
+           506,   993,  7136,   864, 21116, 28804,   733, 28748, 16289, 28793]])
+enceodeds_2: <s>[INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s>[INST] Do you have mayonnaise recipes? [/INST]
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/dpo_find_bug.py", line 55, in <module>
+    generated_ids = model.generate(model_inputs, sampling_params)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 202, in generate
+    self._add_request(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 225, in _add_request
+    self.llm_engine.add_request(request_id,
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 395, in add_request
+    prompt_token_ids = self.encode_request(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 327, in encode_request
+    prompt_token_ids = self.tokenizer.encode(request_id=request_id,
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py", line 42, in encode
+    return tokenizer.encode(prompt)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2630, in encode
+    encoded_inputs = self.encode_plus(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 3038, in encode_plus
+    return self._encode_plus(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_fast.py", line 576, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_fast.py", line 504, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+Tokenizer Loading Finished!
+INFO 05-03 14:41:49 llm_engine.py:98] Initializing an LLM engine (v0.4.1) with config: model='mistralai/Mistral-7B-Instruct-v0.2', speculative_config=None, tokenizer='mistralai/Mistral-7B-Instruct-v0.2', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), seed=0)
+INFO 05-03 14:41:49 utils.py:608] Found nccl from library /home/wxt/.config/vllm/nccl/cu12/libnccl.so.2.18.1
+INFO 05-03 14:41:49 selector.py:77] Cannot use FlashAttention backend because the flash_attn package is not found. Please install it for better performance.
+INFO 05-03 14:41:49 selector.py:33] Using XFormers backend.
+INFO 05-03 14:41:50 weight_utils.py:193] Using model weights format ['*.safetensors']
+INFO 05-03 14:41:52 model_runner.py:173] Loading model weights took 13.4966 GB
+INFO 05-03 14:41:54 gpu_executor.py:119] # GPU blocks: 27385, # CPU blocks: 2048
+INFO 05-03 14:41:55 model_runner.py:976] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 05-03 14:41:55 model_runner.py:980] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 05-03 14:42:00 model_runner.py:1057] Graph capturing finished in 4 secs.
+Model Loading Finished!
+DatasetDict({
+    train_iteration_1: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19766
+    })
+    test_iteration_1: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 994
+    })
+    train_iteration_2: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19958
+    })
+    test_iteration_2: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 1000
+    })
+    train_iteration_3: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 19996
+    })
+    test_iteration_3: Dataset({
+        features: ['prompt_id', 'prompt', 'chosen', 'rejected', 'all_generated_responses', 'all_rm_scores'],
+        num_rows: 1000
+    })
+})
+messages_2: [{'content': 'i want you to act as an affiliate marketing expert and web developer. i have a website called eli5, its a learning website that uses gpt3 to take complex topics and makes them simple. i have had a handful of people reach out to me about my affiliate program, but i dont have one. can you help me create one?', 'role': 'user'}, {'content': "Absolutely! Creating an affiliate program for your Eli5 learning website can be a great way to expand your reach and monetize your audience. Here's a step-by-step guide on how to set up an affiliate program using proven platforms and best practices for a learning website like yours. I'll outline the roles of both an affiliate marketing expert and a web developer in this process.\n\n1. Choose an Affiliate Marketing Platform:\nAs an affiliate marketing expert, I recommend using established affiliate marketing software to manage your program efficiently. Some popular options include ShareASale, Rakuten Marketing (LinkShare), and Refersion. These platforms offer features like tracking, reporting, payment processing, and easy integration with your website.\n\n2. Set Up Your Affiliate Program:\n- Define the commission structure: Decide on a percentage or flat-rate commission for each sale or subscription made through an affiliate's unique referral link.\n- Choose payment terms: Determine how often you'll pay commissions (monthly, bi-monthly, etc.) and what payment methods you'll offer (PayPal, direct deposit, etc.).\n- Set up commission tiers or bonuses: Consider offering higher commissions for top-performing affiliates or incentives for referring a certain number of new sign-ups.\n\n3. Create Affiliate Registration and Dashboard:\nAs a web developer, you'll be responsible for integrating the affiliate platform into your website and creating a user-friendly registration and dashboard experience for affiliates. Most affiliate marketing platforms provide documentation and integration guides, so follow those to get started.\n\n4. Set Up Affiliate Tracking:\nEnsure proper tracking is in place to attribute sales and commissions to the correct affiliates. This may include implementing cookies, pixels, or other tracking technologies provided by your affiliate platform.\n\n5. Set Up Marketing Materials:\nCreate banners, text links, and other promotional materials for your affiliates to use on their websites or social media channels. Make sure these materials are visually appealing and clearly communicate the value proposition of your learning platform.\n\n6. Recruit Affiliates:\nReach out to potential affiliates in your niche, such as influencers, bloggers, educators, and content creators. Offer them a commission structure that incentivizes them to promote your platform to their audience.\n\n7. Provide Training and Support:\nOffer comprehensive training and resources to help your affiliates effectively promote your learning platform. This may include tutorials, promotional materials, and access to a dedicated support team.\n\n8. Monitor and Manage Your Affiliate Program:\nRegularly review your affiliate program's performance, identify top-performing affiliates, and address any issues or concerns that arise. Use the data provided by your affiliate platform to optimize your commission structure, marketing materials, and recruitment efforts.\n\nBy following these steps and collaborating closely with your web developer, you'll be able to create a successful affiliate program for your Eli5 learning website. This will not only help expand your reach and monetize your audience but also provide an additional revenue stream and valuable partnerships within your niche.", 'role': 'assistant'}]
+enceodeds: tensor([[    1,   733, 16289, 28793,  1824,   349,   574, 16020,  2076,  2487,
+         28804,   733, 28748, 16289, 28793,  6824, 28725,   315, 28742, 28719,
+          3448, 10473,   298,   264,  1179, 11322, 19961,   302,  6138, 23598,
+         18342, 28723,   661, 13633,   776,   272,  1103,  3558,   302,   686,
+         16944, 15637,   423,   298,  5681,   315, 28742, 28719, 13198,   582,
+           297,   272,  6132, 28808,     2,   733, 16289, 28793,  2378,   368,
+           506,   993,  7136,   864, 21116, 28804,   733, 28748, 16289, 28793]])
+enceodeds_2: <s>[INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s>[INST] Do you have mayonnaise recipes? [/INST]
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/dpo_find_bug.py", line 55, in <module>
+    generated_ids = model.generate(model_inputs, sampling_params)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 202, in generate
+    self._add_request(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 225, in _add_request
+    self.llm_engine.add_request(request_id,
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 395, in add_request
+    prompt_token_ids = self.encode_request(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 327, in encode_request
+    prompt_token_ids = self.tokenizer.encode(request_id=request_id,
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py", line 42, in encode
+    return tokenizer.encode(prompt)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2630, in encode
+    encoded_inputs = self.encode_plus(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 3038, in encode_plus
+    return self._encode_plus(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_fast.py", line 576, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_fast.py", line 504, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
