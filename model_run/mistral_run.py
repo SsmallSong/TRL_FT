@@ -5,13 +5,12 @@ from trl import SFTTrainer
 import torch
 device = "cuda" # the device to load the model onto
 # export CUDA_VISIBLE_DEVICES=1
-
-tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2", padding_side='left')
+model_id='/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo'
+tokenizer = AutoTokenizer.from_pretrained(model_id, padding_side='left')
 print("Tokenizer Loading Finished!")
-model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
+model = AutoModelForCausalLM.from_pretrained(model_id)
 print("Model Loading Finished!")
-#print( model.generation_config.eos_token_id)
-#print(model.generation_config.pad_token_id)
+
 model.generation_config.pad_token_id = model.generation_config.eos_token_id
 print( model.generation_config.eos_token_id)
 print(model.generation_config.pad_token_id)
