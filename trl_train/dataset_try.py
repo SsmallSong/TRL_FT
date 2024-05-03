@@ -2,7 +2,6 @@ from datasets import load_dataset
 
 dataset_name="trl-internal-testing/hh-rlhf-trl-style"
 
-
 dataset_name = "snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset"
 
 ds = load_dataset(dataset_name)
