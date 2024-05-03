@@ -23,7 +23,7 @@ print("Model Loading Finished!")
 messages = [
     {"role": "user", "content": "What is your favourite condiment?"},
     {"role": "assistant", "content": "Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!"},
-]   {"role": "user", "content": "Do you have mayonnaise recipes?"}
+    {"role": "user", "content": "Do you have mayonnaise recipes?"}]
 
 
 # meg_change = tokenizer.apply_chat_template(messages, return_tensors="pt",tokenize=False)
