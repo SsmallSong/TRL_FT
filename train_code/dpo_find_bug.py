@@ -41,6 +41,10 @@ encodeds = tokenizer.apply_chat_template(messages_1, return_tensors="pt",tokeniz
 encodeds_2 = tokenizer.apply_chat_template(messages_1, return_tensors="pt",tokenize=False)
 print('enceodeds:',encodeds)
 print('enceodeds_2:',encodeds_2)
+encodeds = tokenizer.apply_chat_template(messages_2, return_tensors="pt",tokenize=True)
+encodeds_2 = tokenizer.apply_chat_template(messages_2, return_tensors="pt",tokenize=False)
+print('enceodeds:',encodeds)
+print('enceodeds_2:',encodeds_2)
 
 model_inputs = encodeds.to(device)
 model.to(device)
