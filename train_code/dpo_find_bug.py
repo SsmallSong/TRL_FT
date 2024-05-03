@@ -28,7 +28,7 @@ print(ds)
 
 ds = ds.map(
     process,
-    num_proc=multiprocessing.cpu_count(),
+#    num_proc=multiprocessing.cpu_count(),
     load_from_cache_file=False,
 )
 
