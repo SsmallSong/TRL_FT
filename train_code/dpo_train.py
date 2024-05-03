@@ -136,7 +136,8 @@ if __name__ == "__main__":
         if not TRL_USE_RICH
         else console.status(f"[bold green]Training completed! Saving the model to {training_args.output_dir}")
     )
-
+    print('max_length:',args.max_length)
+    kill
     ################
     # Dataset
     ################
