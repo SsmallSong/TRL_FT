@@ -144,7 +144,7 @@ if __name__ == "__main__":
     if args.sanity_check:
         for key in ds:
             ds[key] = ds[key].select(range(50))
-
+    print(ds)
     def process(row):
         row["chosen"] = tokenizer.apply_chat_template(row["chosen"], tokenize=False)
         row["rejected"] = tokenizer.apply_chat_template(row["rejected"], tokenize=False)
@@ -157,7 +157,9 @@ if __name__ == "__main__":
     )
     train_dataset = ds["train_iteration_3"]
     eval_dataset = ds["test_iteration_3"]
-
+    print (train_dataset[0].keys())
+    print (train_dataset[0])
+    kill
     ################
     # Training
     ################
