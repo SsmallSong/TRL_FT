@@ -30,12 +30,15 @@ messages = [
    ]
 
 # meg_change = tokenizer.apply_chat_template(messages, return_tensors="pt",tokenize=False)
-encodeds = tokenizer.apply_chat_template(messages, return_tensors="pt",tokenize=True)
-
+#encodeds = tokeizer.apply_chat_template(messages, return_tensors="pt",tokenize=True)
+prompt_llama="What is your favourite condiment?"
+encodeds=tokenizer.encode(prompt_llama,return_tensors="pt")
 model_inputs = encodeds.to(device)
 model.to(device)
 
 generated_ids = model.generate(model_inputs, max_new_tokens=1000, do_sample=True)
 decoded = tokenizer.batch_decode(generated_ids)
+#decoded = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
+print("Generated Text:")
 print(decoded[0])
 
