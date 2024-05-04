@@ -11,3 +11,21 @@ Traceback (most recent call last):
   File "/home/wxt/huatong/TRL_FT/test_code/eval_res.py", line 176, in <module>
     import model_training.models.reward_model
 ModuleNotFoundError: No module named 'model_training'
+1111111111111
+2222222222222222
+333333333333
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.78it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  2.25it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:02<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:02<00:00,  1.46it/s]
+You set `add_prefix_space`. The tokenizer needs to be converted from the slow tokenizers
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+4444444444444444
+{'writing': 2.5164063, 'roleplay': 0.81289065, 'reasoning': 0.71379393, 'math': 1.6973511, 'coding': -0.37070313, 'extraction': -0.053759765, 'stem': -0.37886962, 'humanities': -0.24746093}
+1.0836548
+5555555555555
+hello, reward model
+666666666666
+{'writing': 1.1859375, 'roleplay': 1.409668, 'reasoning': 1.2718627, 'math': 2.3082275, 'coding': -0.5794922, 'extraction': 0.284375, 'stem': -0.94609374, 'humanities': 1.7050781}
+1.378809
+777777777777
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:19<00:39, 19.51s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:39<00:19, 19.66s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:56<00:00, 18.37s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:56<00:00, 18.70s/it]
+1871.4485
+888888888888
