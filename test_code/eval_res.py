@@ -10,14 +10,14 @@ import pickle as pkl
 
 f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
-x=x[0:3]
+# x=x[0:3]
 
-print(x)
+# print(x)
 sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
 
 # ref_model_id = 'hermes_mft2_ray_rl0_0.2_7_not_nor2_lora_checkpoint_6000'
-#model_id = '/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo'
-model_id='mistralai/Mistral-7B-Instruct-v0.2'
+model_id = '/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo_new'
+# model_id='mistralai/Mistral-7B-Instruct-v0.2'
 mistral_temp = False 
 res = []
 tokenizer = transformers.AutoTokenizer.from_pretrained(model_id,legacy=False)
