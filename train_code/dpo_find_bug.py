@@ -20,10 +20,11 @@ def process(row):
     return row
 device = "cuda" # the device to load the model onto
 # export CUDA_VISIBLE_DEVICES=1
-# model_id="mistralai/Mistral-7B-Instruct-v0.2" 
+model_id_base="mistralai/Mistral-7B-Instruct-v0.2" 
 model_id='/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo_new'
 tokenizer = AutoTokenizer.from_pretrained(model_id, padding_side='left')
 print("Tokenizer Loading Finished!")
+model_base = AutoModelForCausalLM.from_pretrained(model_id_base).eval()
 model = AutoModelForCausalLM.from_pretrained(model_id).eval()
 # model = LLM(model=model_id, tensor_parallel_size=1,
 #                   trust_remote_code=True)
@@ -32,7 +33,7 @@ print("Model Loading Finished!")
 
 dataset_id='snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset'
 ds = load_dataset(dataset_id)
-print(ds)
+# print(ds)
 
 # ds = ds.map(
 #     process,
@@ -43,7 +44,7 @@ print(ds)
 train_dataset = ds["train_iteration_3"]
 eval_dataset = ds["test_iteration_3"]
 messages_2=train_dataset[0]['chosen']
-print("messages_2:",messages_2)
+# print("messages_2:",messages_2)
 
 encodeds = tokenizer.apply_chat_template(messages_1, return_tensors="pt",tokenize=True)
 encodeds_2 = tokenizer.apply_chat_template(messages_1, return_tensors="pt",tokenize=False)
@@ -56,11 +57,18 @@ print('enceodeds_2:',encodeds_2)
 
 model_inputs = encodeds.to(device)
 model.to(device)
+model_base.to(device)
 # sampling_params=SamplingParams(temperature=0,max_tokens=2048,n=1)
 generated_ids = model.generate(model_inputs, max_new_tokens=1024, do_sample=True)
+generated_ids_base = model_base.generate(model_inputs, max_new_tokens=1024, do_sample=True)
 decoded = tokenizer.batch_decode(generated_ids)
+decoded_base = tokenizer.batch_decode(generated_ids_base)
 # decoded=gengeated_ids[0].outputs[0].text.strip()
-print("tokenize=True:",decoded)
+print('==================================================')
+print("base-model",decoded_base[0])
+print('==================================================')
+print("new-model",decoded[0])
+print('==================================================')
 
 # model_inputs = encodeds_2.to(device)
 #sampling_params=SamplingParams(temperature=0,max_tokens=2048,n=1)
