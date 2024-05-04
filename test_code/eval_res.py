@@ -82,11 +82,11 @@ else:
             prompts.append(prompt)
 
 print('2222222222222222')
-new_messes = []
-for e in messes:
-    new_messes.append(e)
-    new_messes.append(e[:2])
-messes = new_messes
+# new_messes = []
+# for e in messes:
+#     new_messes.append(e)
+#     new_messes.append(e[:2])
+# messes = new_messes
 
 if not os.path.exists('alpaca_{}.json'.format(model_id.replace('/', ''))):
     llm = LLM(model=model_id, tensor_parallel_size=1,
@@ -110,7 +110,15 @@ if not os.path.exists('alpaca_{}.json'.format(model_id.replace('/', ''))):
     # alpaca_out.write('\n'.join(res))
     del llm
     torch.cuda.empty_cache()
+messes = []
+with open('alpaca_{}.json'.format(model_id.replace('/', '')), 'r', encoding='utf-8') as file:
+    res = json.load(file)
 
+for e in res:
+    messes.append([{'role': 'user', 'content': e['instruction']}, {'role': 'assistant', 'content': e['output']}])
+
+print(len(messes))
+# print(messes[0])
 print('333333333333')
 
 ray_reward_model = transformers.AutoModelForSequenceClassification.from_pretrained(
