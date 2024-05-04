@@ -114,7 +114,7 @@ if not os.path.exists('alpaca_{}.json'.format(model_id.replace('/', ''))):
 print('333333333333')
 
 ray_reward_model = transformers.AutoModelForSequenceClassification.from_pretrained(
-                'reward-model-Mistral-7B-instruct-Unified-Feedback',
+                'Ray2333/reward-model-Mistral-7B-instruct-Unified-Feedback',
                 num_labels=1,
                 torch_dtype=torch.bfloat16,
                 # load_in_4bit=True,
@@ -122,10 +122,10 @@ ray_reward_model = transformers.AutoModelForSequenceClassification.from_pretrain
             )
 ray_reward_model.cuda()
 ray_reward_model.eval()
-ray_tokenizer = transformers.AutoTokenizer.from_pretrained('reward-model-Mistral-7B-instruct-Unified-Feedback')
+ray_tokenizer = transformers.AutoTokenizer.from_pretrained('Ray2333/reward-model-Mistral-7B-instruct-Unified-Feedback')
 ray_tokenizer.truncation_side = "left"
 #ray_tokenizer = transformers.AutoTokenizer.from_pretrained(
- #   'reward-model-Mistral-7B-instruct-Unified-Feedback')
+ #   'Ray2333/reward-model-Mistral-7B-instruct-Unified-Feedback')
 
 batch_size=4
 scores = []
@@ -175,7 +175,7 @@ print('5555555555555')
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import model_training.models.reward_model
 
-model_name = 'oasst-rm-2.1-pythia-1.4b-epoch-2.5'
+model_name = 'OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5'
 hh_tokenizer = AutoTokenizer.from_pretrained(model_name)
 #self.hh_reward_model = AutoModelForSequenceClassification.from_pretrained(model_name, load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16)
 hh_reward_model = AutoModelForSequenceClassification.from_pretrained(model_name, torch_dtype=torch.bfloat16,)
@@ -232,14 +232,14 @@ torch.cuda.empty_cache()
 print('777777777777')
 
 eu_reward_model = transformers.AutoModel.from_pretrained(
-                'Eurus-RM-7b',
+                'openbmb/Eurus-RM-7b',
                 torch_dtype=torch.bfloat16,
                 trust_remote_code=True
             )
 eu_reward_model.cuda()
 eu_reward_model.eval()
 eu_tokenizer = transformers.AutoTokenizer.from_pretrained(
-                'Eurus-RM-7b')
+                'openbmb/Eurus-RM-7b')
 eu_tokenizer.truncation_side = "left"
 
 batch_size=1
