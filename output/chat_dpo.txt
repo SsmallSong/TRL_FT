@@ -777,3 +777,199 @@ Traceback (most recent call last):
   File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_fast.py", line 504, in _batch_encode_plus
     encodings = self._tokenizer.encode_batch(
 TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Tokenizer Loading Finished!
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  2.49it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  2.53it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.36it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.40it/s]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.84it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.74it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  1.88it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  1.85it/s]
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Model Loading Finished!
+enceodeds: tensor([[    1,   733, 16289, 28793,  1824,   349,   574, 16020,  2076,  2487,
+         28804,   733, 28748, 16289, 28793,  6824, 28725,   315, 28742, 28719,
+          3448, 10473,   298,   264,  1179, 11322, 19961,   302,  6138, 23598,
+         18342, 28723,   661, 13633,   776,   272,  1103,  3558,   302,   686,
+         16944, 15637,   423,   298,  5681,   315, 28742, 28719, 13198,   582,
+           297,   272,  6132, 28808,     2,   733, 16289, 28793,  2378,   368,
+           506,   993,  7136,   864, 21116, 28804,   733, 28748, 16289, 28793]])
+enceodeds_2: <s>[INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s>[INST] Do you have mayonnaise recipes? [/INST]
+==================================================
+base-model <s> [INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s> [INST] Do you have mayonnaise recipes? [/INST] Certainly! Here's a simple recipe for homemade mayonnaise that you might enjoy.
+
+Ingredients:
+- 1 egg yolk
+- 1 tbsp dijon mustard
+- 1 tbsp white wine vinegar or lemon juice
+- 1 cup oil (vegetable or canola)
+- Salt to taste
+
+Instructions:
+1. In a medium-sized bowl, whisk together the egg yolk, mustard, and vinegar or lemon juice until it thickens slightly and turns a pale yellow color.
+2. Drizzle in the oil very slowly, one drop at a time, while constantly whisking to emulsify it into the mixture. It's important to do this slowly to ensure that the mayonnaise turns out thick and creamy.
+3. Once about half the oil has been incorporated, you can start adding it in a thin, steady stream.
+4. If the mayonnaise thickens up before you've added all the oil, just whisk in a few drops of water until it reaches the desired consistency.
+5. Taste the mayonnaise and add salt to taste.
+
+Store your homemade mayonnaise in an airtight container in the refrigerator, and it should keep for up to a week. Enjoy!</s>
+==================================================
+new-model <s> [INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s> [INST] Do you have mayonnaise recipes? [/INST] Absolutely! Here's a simple yet delicious homemade mayonnaise recipe for you:
+
+Ingredients:
+- 1 egg yolk (at room temperature)
+- 1 tablespoon Dijon mustard
+- 1 cup (14 oz / 400ml) vegetable oil
+- 1-2 tablespoons fresh lemon juice
+- 1-2 teaspoons white wine vinegar or apple cider vinegar
+- Salt to taste
+
+Instructions:
+1. In a large bowl, whisk together the egg yolk and mustard until they are thoroughly combined and pale in color.
+2. Very slowly and gradually, begin to drizzle in the vegetable oil, while constantly whisking to emulsify it. Be patient and make sure each drop of oil is fully incorporated before adding the next one.
+3. Once about half of the oil has been added and the mayonnaise has thickened, you can begin to stream in the oil more quickly.
+4. Once all of the oil has been incorporated, whisk in the lemon juice, vinegar, and a pinch of salt. Taste the mayonnaise and add more salt, lemon juice, or vinegar if desired.
+5. Cover the bowl with plastic wrap, pressing it directly onto the surface of the mayonnaise to prevent a skin from forming. Refrigerate for at least 1 hour before serving to let the flavors meld together.
+
+Enjoy your homemade mayonnaise! It will keep in an airtight container in the refrigerator for up to 1 week.</s>
+==================================================
+Tokenizer Loading Finished!
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  2.18it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  2.38it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.58it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.50it/s]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  2.32it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  2.38it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.48it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.45it/s]
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Model Loading Finished!
+enceodeds: tensor([[    1,   733, 16289, 28793,  1824,   349,   574, 16020,  2076,  2487,
+         28804,   733, 28748, 16289, 28793,  6824, 28725,   315, 28742, 28719,
+          3448, 10473,   298,   264,  1179, 11322, 19961,   302,  6138, 23598,
+         18342, 28723,   661, 13633,   776,   272,  1103,  3558,   302,   686,
+         16944, 15637,   423,   298,  5681,   315, 28742, 28719, 13198,   582,
+           297,   272,  6132, 28808,     2,   733, 16289, 28793,  2378,   368,
+           506,   993,  7136,   864, 21116, 28804,   733, 28748, 16289, 28793]])
+enceodeds_2: <s>[INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s>[INST] Do you have mayonnaise recipes? [/INST]
+Base-model Output:
+base-model-0:<s> [INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s> [INST] Do you have mayonnaise recipes? [/INST] I'm an artificial intelligence and don't have the ability to cook or create recipes myself, but I can certainly help you find a mayonnaise recipe if you'd like! Here's a classic one using just a few simple ingredients:
+
+**Homemade Mayonnaise**
+
+Ingredients:
+- 1 egg yolk
+- 1 tablespoon Dijon mustard
+- 1 cup vegetable oil
+- 1 tablespoon white wine vinegar or lemon juice
+- Salt, to taste
+
+Instructions:
+1. In a medium bowl, whisk together the egg yolk and Dijon mustard until combined.
+2. Slowly drizzle in the vegetable oil drop by drop while continuously whisking, until the mixture has thickened and emulsified.
+3. Once the oil has been fully incorporated, whisk in the vinegar or lemon juice.
+4. Season with salt to taste.
+5. If the mayonnaise is too thick, thin it out with a small amount of cold water.
+
+Enjoy your homemade mayonnaise! It's delicious on sandwiches, as a dip, or as a base for many sauces.</s>
+==================================================
+Base-model Output:
+base-model-1:<s> [INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s> [INST] Do you have mayonnaise recipes? [/INST] I may not have the ability to cook or create physical condiments like mayonnaise, but I can certainly suggest a simple and classic homemade mayonnaise recipe for you. Here's a quick one:
+
+Ingredients:
+- 1 egg yolk
+- 1 tablespoon dijon mustard
+- 1 cup oil (canola, vegetable, or light olive oil)
+- 1 tablespoon white wine vinegar or lemon juice
+- 1/2 teaspoon salt
+- Pinch of black pepper
+
+Instructions:
+1. In a medium sized, deep bowl, whisk together the egg yolk and mustard until they are well combined.
+2. Start adding the oil, very slowly at first, drop by drop, while continuously whisking the mixture. Once the oil is fully incorporated, you can start to add it in a thin, steady stream. Be sure not to add the oil too quickly or the mayonnaise may break or separate.
+3. Once you've added about 1/4 to 1/3 of the oil, add the vinegar or lemon juice and a pinch of salt. Continue whisking while adding the rest of the oil in a thin, steady stream.
+4. Once all the oil is incorporated and the mixture is thick and smooth, whisk in the remaining salt and pepper.
+
+Taste your homemade mayonnaise and adjust the seasoning if necessary. If it becomes too thick, you can thin it out with a bit of water or milk. Enjoy your freshly made mayonnaise!
+
+This recipe allows you to customize the texture and taste by using different oils, vinegars, and spices, but please remember that consuming undercooked or raw eggs poses a risk of foodborne illness. Always use the freshest eggs and take necessary precautions when making homemade mayonnaise or other dishes that involve raw eggs.</s>
+==================================================
+Base-model Output:
+base-model-2:<s> [INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s> [INST] Do you have mayonnaise recipes? [/INST] Absolutely! Here's a simple and classic Homemade Mayonnaise recipe for you:
+
+Ingredients:
+- 1 egg yolk
+- 1 teaspoon Dijon mustard
+- 1 tablespoon white wine vinegar or apple cider vinegar
+- 1 cup vegetable oil (canola, soybean, or avocado oil ideal)
+- Salt to taste (optional)
+
+Instructions:
+1. In a medium-sized bowl, whisk together the egg yolk, mustard, and vinegar until they're well combined.
+2. Start drizzling the oil slowly into the egg mixture, constantly whisking it as you go. Begin with a few drops and gradually add more, making sure each addition is fully incorporated before adding the next one. This process might take 5-10 minutes in total.
+3. As the mixture starts to thicken, you can gradually increase the amount of oil you add in a thin stream.
+4. Once all the oil has been added, and the mayonnaise is thick and creamy, taste it and add a pinch of salt if desired.
+5. Cover the bowl with a tight-fitting lid or cling wrap and refrigerate it right away. Store it in the fridge for up to one week.
+
+Note: Be very cautious when making homemade mayonnaise as undercooked or raw eggs carry a risk of Salmonella infection. If you're concerned, you may opt for using pre-packaged pasteurized egg yolks or substitute pasteurized mayonnaise.</s>
+==================================================
+New-model Output:
+new-model-0:<s> [INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s> [INST] Do you have mayonnaise recipes? [/INST] Indeed! Here's a simple and classicmayonnaise recipe for you. I call it "Fancy Mayo" because it's a bit fancier than the store-bought kind.
+
+Ingredients:
+- 1 egg yolk (at room temperature)
+- 1 teaspoon dijon mustard
+- 1 teaspoon white wine vinegar
+- 1 cup vegetable oil
+- Salt, to taste
+- 1-2 tablespoons water (if needed)
+
+Instructions:
+1. In a large bowl, whisk together the egg yolk, mustard, and vinegar until they are well combined and the mixture has lightened in color.
+2. Drop by drop, very slowly, start adding the oil to the egg yolk mixture, whisking constantly. Begin with a few drops to make sure the oil is being absorbed before adding it in a steady stream.
+3. Once the oil is being absorbed easily, you can gradually increase the stream to a thin, steady drizzle. Continue whisking constantly until all of the oil has been added.
+4. Taste the mayonnaise and add salt, to taste. If the mayonnaise is too thick, add water, one tablespoon at a time, until it reaches your desired consistency.
+5. Refrigerate the mayonnaise in an airtight container for up to one week.
+
+Enjoy your homemade "Fancy Mayo"! It's perfect for sandwiches, burgers, or as a dip for vegetables.</s>
+==================================================
+New-model Output:
+new-model-1:<s> [INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s> [INST] Do you have mayonnaise recipes? [/INST] Absolutely! Here's a simple and classic Homemade Mayonnaise recipe for you:
+
+Ingredients:
+- 1 egg yolk (at room temperature)
+- 1 tablespoon of Dijon mustard
+- 1 cup of vegetable oil (canola or sunflower oil work best)
+- 1-2 tablespoons of white wine vinegar or fresh lemon juice
+- Salt, to taste
+
+Instructions:
+1. In a large bowl, whisk together the egg yolk and mustard. Make sure the yolk is at room temperature for best results.
+
+2. Drizzle in the oil very slowly, drop by drop, while continuously whisking. This is important to prevent the oil from separating from the yolk mixture.
+
+3. Once all the oil has been incorporated and the mayonnaise has thickened, whisk in the vinegar or lemon juice.
+
+4. Season with salt to taste.
+
+5. Store the homemade mayonnaise in an airtight container in the refrigerator for up to a week. Be sure to mix well before using.
+
+Enjoy your freshly made mayonnaise as a sandwich spread, dipping sauce, or a base for other sauces and dressings!</s>
+==================================================
+New-model Output:
+new-model-2:<s> [INST] What is your favourite condiment? [/INST]Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!</s> [INST] Do you have mayonnaise recipes? [/INST] Absolutely! Here's a simple and classic Homemade Mayonnaise recipe. You'll need:
+
+- 1 egg yolk
+- 1 tablespoon of Dijon mustard
+- 1 cup of vegetable oil (such as canola or safflower)
+- 1-2 tablespoons of white wine vinegar or fresh lemon juice
+- Salt, to taste
+
+Instructions:
+
+1. In a medium-sized mixing bowl, whisk together the egg yolk and mustard until they are well combined. Make sure your bowl is large enough to accommodate the oil being added slowly.
+2. Start adding the oil very gradually (a few drops at a time) while continuously whisking the egg yolk mixture. The key here is to whisk constantly to ensure the oil is being emulsified evenly and that the mayonnaise doesn't separate.
+3. Once the oil has been incorporated, you can begin adding the vinegar or lemon juice in a thin stream while continuing to whisk steadily. Add the acid gradually to prevent the mayonnaise from curdling, and taste as you go to determine how much you prefer.
+4. Season the mayonnaise with salt to taste.
+5. Transfer the homemade mayonnaise to an airtight container and refrigerate for up to 1 week.
+
+Optional add-ins: For flavoured mayonnaises, you can stir in herbs, finely chopped vegetables, or spices after making the basic mayonnaise. Some popular variations include herb mayonnaise (parmesan, chive, etc.), curry mayonnaise, garlic mayonnaise, or smoked paprika mayonnaise.</s>
+==================================================
