@@ -10,7 +10,7 @@ import pickle as pkl
 
 f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
-# x=x[0:3]
+#x=x[0:3]
 
 # print(x)
 sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
@@ -33,7 +33,7 @@ if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
     print(name)
     print('/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/model_answer{}.jsonl'.format(name))
     for e in x[:]:
-        print(e)
+  #      print(e)
         e = json.loads(e)
         turns = e['turns']
         question_id = e['question_id']
@@ -59,7 +59,7 @@ if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
     out_f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/model_answer{}.jsonl'.format(name)
     out_f = open(out_f, 'w')
     out_f.write('\n'.join(res))
-    print(mess)
+   # print(mess)
     pkl.dump(messes, open('mess_{}'.format(model_id.replace('/', '')),'wb'))
 
     del llm
