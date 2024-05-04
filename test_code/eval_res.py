@@ -130,7 +130,7 @@ ray_tokenizer.truncation_side = "left"
 batch_size=4
 scores = []
 for i in range(0, len(messes), batch_size):
-    batch_mess = messes[i:(i)*batch_size]
+    batch_mess = messes[i:i+batch_size]
     # batch_tgt = predicts[i:i + batch_size]
     def get_mess(mess):
         mess = [ray_tokenizer.apply_chat_template(e, tokenize=False) for e in mess]
@@ -188,7 +188,7 @@ hh_tokenizer.truncation_side = "left"
 batch_size=4
 scores = []
 for i in range(0, len(messes), batch_size):
-    batch_mess = messes[i:(i)*batch_size]
+    batch_mess = messes[i:i+batch_size]
     # batch_tgt = predicts[i:i + batch_size]
     def get_mess(messes):
         str_res = []
@@ -245,7 +245,7 @@ eu_tokenizer.truncation_side = "left"
 batch_size=1
 scores = []
 for i in range(0, len(messes), batch_size):
-    batch_mess = messes[i:(i)*batch_size]
+    batch_mess = messes[i:i+batch_size]
     # batch_tgt = predicts[i:i + batch_size]
     def get_mess(messes):
         final_mess = []
