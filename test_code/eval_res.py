@@ -68,7 +68,7 @@ if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
 else:
     prompts = []
     messes = pkl.load(open('mess_{}'.format(model_id.replace('/', '')), 'rb'))
-    print(messes)
+  #  print(messes)
     for i, e in enumerate(x[:]):
         e = json.loads(e)
         turns = e['turns']
@@ -130,7 +130,7 @@ ray_tokenizer.truncation_side = "left"
 batch_size=4
 scores = []
 for i in range(0, len(messes), batch_size):
-    batch_mess = messes[i*batch_size:(i+1)*batch_size]
+    batch_mess = messes[i:(i)*batch_size]
     # batch_tgt = predicts[i:i + batch_size]
     def get_mess(mess):
         mess = [ray_tokenizer.apply_chat_template(e, tokenize=False) for e in mess]
@@ -188,7 +188,7 @@ hh_tokenizer.truncation_side = "left"
 batch_size=4
 scores = []
 for i in range(0, len(messes), batch_size):
-    batch_mess = messes[i*batch_size:(i+1)*batch_size]
+    batch_mess = messes[i:(i)*batch_size]
     # batch_tgt = predicts[i:i + batch_size]
     def get_mess(messes):
         str_res = []
@@ -245,7 +245,7 @@ eu_tokenizer.truncation_side = "left"
 batch_size=1
 scores = []
 for i in range(0, len(messes), batch_size):
-    batch_mess = messes[i*batch_size:(i+1)*batch_size]
+    batch_mess = messes[i:(i)*batch_size]
     # batch_tgt = predicts[i:i + batch_size]
     def get_mess(messes):
         final_mess = []
