@@ -49,15 +49,28 @@ import model_training.models.reward_model  # noqa: F401 (registers reward model 
 # print("4444444")
 
 
-model_id = '/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo'
+#model_id = '/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo'
 
-mistral_temp = False 
-res = []
-tokenizer = transformers.AutoTokenizer.from_pretrained(model_id,legacy=False)
-print('model ok')
+#mistral_temp = False 
+#res = []
+#tokenizer = transformers.AutoTokenizer.from_pretrained(model_id,legacy=False)
+#print('model ok')
 #eval_set = datasets.load_dataset("mt-bench/alpaca_eval", "alpaca_eval")["eval"]
 
-eval_set = datasets.load_dataset("tatsu-lab/alpaca_eval", "alpaca_eval",trust_remote_code=True)["eval"]
+#eval_set = datasets.load_dataset("tatsu-lab/alpaca_eval", "alpaca_eval",trust_remote_code=True)["eval"]
 
-print('dataset ok')
+#print('dataset ok')
 #eval_set = datasets.load_dataset("alpaca_eval", "alpaca_eval")["eval"]
+from datasets import load_dataset
+
+dataset = load_dataset("trl-internal-testing/hh-rlhf-trl-style")
+print("hh-rlhf loading finished")
+
+
+#load model directly
+
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+tokenizer = AutoTokenizer.from_pretrained("daryl149/llama-2-7b-hf")
+model = AutoModelForCausalLM.from_pretrained("daryl149/llama-2-7b-hf")
+print("llama-2-7b loading finished")
