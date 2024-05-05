@@ -180,6 +180,9 @@ if __name__ == "__main__":
     train_rejected=train_dataset_origin['rejected']
     eval_chosen=eval_dataset_origin['chosen']
     eval_rejected=eval_dataset_origin['rejected']
+    train_prompt=train_dataset_origin['prompt']
+    eval_prompt=eval_dataset_origin['prompt']
+
     pop_list_train=[]
     pop_list_eval=[]
     train_chosen_list=[]
@@ -217,6 +220,8 @@ if __name__ == "__main__":
     train_rejected = [value for index, value in enumerate(train_rejected) if index not in pop_list_train]
     eval_chosen = [value for index, value in enumerate(eval_chosen) if index not in pop_list_eval]
     eval_rejected = [value for index, value in enumerate(eval_rejected) if index not in pop_list_eval]
+    train_prompt = [value for index, value in enumerate(train_prompt) if index not in pop_list_train]
+    eval_prompt = [value for index, value in enumerate(eval_prompt) if index not in pop_list_eval]
 
     train_dataset={}
     eval_dataset={}
@@ -224,6 +229,8 @@ if __name__ == "__main__":
     train_dataset['rejected']=train_rejected
     eval_dataset['chosen']=eval_chosen
     eval_dataset['rejected']=eval_rejected
+    train_dataset['prompt']=train_prompt
+    eval_dataset['prompt']=eval_prompt
 
     train_dataset = Dataset.from_dict(train_dataset)
     eval_dataset = Dataset.from_dict(eval_dataset)
