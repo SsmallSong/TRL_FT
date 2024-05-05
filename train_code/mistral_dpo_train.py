@@ -168,8 +168,9 @@ if __name__ == "__main__":
         for key in ds:
             ds[key] = ds[key].select(range(50))
     # print(ds)
-    def process_new(row):
-        row = tokenizer.apply_chat_template(row, tokenize=False)
+    def process(row):
+        row["chosen"] = tokenizer.apply_chat_template(row["chosen"], tokenize=False)
+        row["rejected"] = tokenizer.apply_chat_template(row["rejected"], tokenize=False)
         return row
 
     train_dataset_origin = ds["train"]
@@ -228,12 +229,12 @@ if __name__ == "__main__":
     eval_dataset = Dataset.from_dict(eval_dataset)
 
     train_dataset = train_dataset.map(
-       process_new,
+       process,
        num_proc=multiprocessing.cpu_count(),
        load_from_cache_file=False,
    )
     eval_dataset = eval_dataset.map(
-       process_new,
+       process,
        num_proc=multiprocessing.cpu_count(),
        load_from_cache_file=False,)
     ################
