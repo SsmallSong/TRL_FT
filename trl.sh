@@ -95,6 +95,25 @@ accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_z
     --max_target_length 128\
     --no_remove_unused_columns > /home/wxt/huatong/TRL_FT/output/dpo_train_log_2.txt 2>&1
 
+accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\
+    --num_processes 4\
+    /home/wxt/huatong/TRL_FT/train_code/dpo_train.py \
+    --dataset_name='trl-internal-testing/hh-rlhf-trl-style' \
+    --model_name_or_path='mistralai/Mistral-7B-Instruct-v0.2' \
+    --per_device_train_batch_size 4 \
+    --learning_rate 1e-6 \
+    --gradient_accumulation_steps 8 \
+    --logging_steps 10 \
+    --eval_steps 500 \
+    --output_dir='/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo_hhrlhf' \
+    --warmup_steps 150 \
+    --bf16 \
+    --logging_first_step \
+    --max_length 600\
+    --max_prompt_length 128\
+    --max_target_length 128\
+    --no_remove_unused_columns 2>&1 | tee /home/wxt/huatong/TRL_FT/output/dpo_mistral_hhrlhf_train_log.txt 
+
 
 # python /home/wxt/huatong/TRL_FT/dpo_train.py \
 #     --dataset_name=s"norkelai/Snorkel-Mistral-PairRM-DPO-Dataset" \
