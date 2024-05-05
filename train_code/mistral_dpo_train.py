@@ -163,13 +163,13 @@ if __name__ == "__main__":
     # eval_dataset = ds["test_iteration_3"]
     
     #hh-rlhf
-    train_dataset = ds["train"]
-    eval_dataset = ds["test"]
+    train_dataset_origin = ds["train"]
+    eval_dataset_origin = ds["test"]
 
-    train_chosen=train_dataset['chosen']
-    train_rejected=train_dataset['rejected']
-    eval_chosen=eval_dataset['chosen']
-    eval_rejected=eval_dataset['rejected']
+    train_chosen=train_dataset_origin['chosen']
+    train_rejected=train_dataset_origin['rejected']
+    eval_chosen=eval_dataset_origin['chosen']
+    eval_rejected=eval_dataset_origin['rejected']
     pop_list_train=[]
     pop_list_eval=[]
     train_chosen_list=[]
@@ -207,19 +207,6 @@ if __name__ == "__main__":
     train_rejected = [value for index, value in enumerate(train_rejected) if index not in pop_list_train]
     eval_chosen = [value for index, value in enumerate(eval_chosen) if index not in pop_list_eval]
     eval_rejected = [value for index, value in enumerate(eval_rejected) if index not in pop_list_eval]
-
-    for i in range(len(train_chosen)):
-        conversation_list=train_chosen[i]   
-        roles_str = ' '.join([item['role'] for item in conversation_list])
-    for i in range(len(train_rejected)):
-        conversation_list=train_rejected[i]   
-        roles_str = ' '.join([item['role'] for item in conversation_list])
-    for i in range(len(eval_chosen)):
-        conversation_list=eval_chosen[i]   
-        roles_str = ' '.join([item['role'] for item in conversation_list])
-    for i in range(len(eval_rejected)):
-        conversation_list=eval_rejected[i]   
-        roles_str = ' '.join([item['role'] for item in conversation_list])
 
     train_dataset={}
     eval_dataset={}
