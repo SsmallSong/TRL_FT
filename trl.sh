@@ -78,7 +78,7 @@
 
 accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\
     --num_processes 4\
-    /home/wxt/huatong/TRL_FT/train_code/dpo_train.py \
+    /home/wxt/huatong/TRL_FT/train_code/mistral_dpo_train.py \
     --dataset_name='snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset' \
     --model_name_or_path='mistralai/Mistral-7B-Instruct-v0.2' \
     --per_device_train_batch_size 4 \
@@ -97,7 +97,7 @@ accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_z
 
 accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\
     --num_processes 4\
-    /home/wxt/huatong/TRL_FT/train_code/dpo_train.py \
+    /home/wxt/huatong/TRL_FT/train_code/mistral_dpo_train.py \
     --dataset_name='trl-internal-testing/hh-rlhf-trl-style' \
     --model_name_or_path='mistralai/Mistral-7B-Instruct-v0.2' \
     --per_device_train_batch_size 4 \

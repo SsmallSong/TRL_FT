@@ -57,6 +57,7 @@ from contextlib import nullcontext
 TRL_USE_RICH = os.environ.get("TRL_USE_RICH", False)
 
 from trl.commands.cli_utils import DpoScriptArguments, init_zero_verbose, TrlParser
+from datasets import Dataset, Features
 
 if TRL_USE_RICH:
     init_zero_verbose()
@@ -145,26 +146,90 @@ if __name__ == "__main__":
     if args.sanity_check:
         for key in ds:
             ds[key] = ds[key].select(range(50))
-    print(ds)
+    # print(ds)
     def process(row):
         row["chosen"] = tokenizer.apply_chat_template(row["chosen"], tokenize=False)
         row["rejected"] = tokenizer.apply_chat_template(row["rejected"], tokenize=False)
         return row
 
-    #ds = ds.map(
-     #   process,
-      #  num_proc=multiprocessing.cpu_count(),
-       # load_from_cache_file=False,
-   # )
-   # train_dataset = ds["train_iteration_3"]
-   # eval_dataset = ds["test_iteration_3"]
+    ds = ds.map(
+       process,
+       num_proc=multiprocessing.cpu_count(),
+       load_from_cache_file=False,
+   )
+    
+    #snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset 
+    # train_dataset = ds["train_iteration_3"]
+    # eval_dataset = ds["test_iteration_3"]
+    
+    #hh-rlhf
     train_dataset = ds["train"]
-    print(type(train_dataset))
-    kill
     eval_dataset = ds["test"]
-    # print (train_dataset[0].keys())
-    # print (train_dataset[0])
-    # kill
+
+    train_chosen=train_dataset['chosen']
+    train_rejected=train_dataset['rejected']
+    eval_chosen=eval_dataset['chosen']
+    eval_rejected=eval_dataset['rejected']
+    pop_list_train=[]
+    pop_list_eval=[]
+    train_chosen_list=[]
+    train_rejected_list=[]
+    eval_chosen_list=[]
+    eval_rejected_list=[]
+    for i in range(len(train_chosen)):
+        conversation_list=train_chosen[i]   
+        roles_str = ' '.join([item['role'] for item in conversation_list])
+        train_chosen_list.append(roles_str)
+
+    for i in range(len(train_rejected)):
+        conversation_list=train_rejected[i]   
+        roles_str = ' '.join([item['role'] for item in conversation_list])
+        train_rejected_list.append(roles_str)
+
+    for i in range(len(eval_chosen)):
+        conversation_list=eval_chosen[i]   
+        roles_str = ' '.join([item['role'] for item in conversation_list])
+        eval_chosen_list.append(roles_str)
+
+    for i in range(len(eval_rejected)):
+        conversation_list=eval_rejected[i]   
+        roles_str = ' '.join([item['role'] for item in conversation_list])
+        eval_rejected_list.append(roles_str)
+
+    for i in range(len(train_chosen)):
+        if 'user user' in train_chosen_list[i] or 'assistant assistant' in train_chosen_list[i] or 'user user' in train_rejected_list[i] or 'assistant assistant' in train_rejected_list[i]:
+            pop_list_train.append(i)
+
+    for i in range(len(eval_chosen)):
+        if 'user user' in eval_chosen_list[i] or 'assistant assistant' in eval_chosen_list[i] or 'user user' in eval_rejected_list[i] or 'assistant assistant' in eval_rejected_list[i]:
+            pop_list_eval.append(i)
+    train_chosen = [value for index, value in enumerate(train_chosen) if index not in pop_list_train]
+    train_rejected = [value for index, value in enumerate(train_rejected) if index not in pop_list_train]
+    eval_chosen = [value for index, value in enumerate(eval_chosen) if index not in pop_list_eval]
+    eval_rejected = [value for index, value in enumerate(eval_rejected) if index not in pop_list_eval]
+
+    for i in range(len(train_chosen)):
+        conversation_list=train_chosen[i]   
+        roles_str = ' '.join([item['role'] for item in conversation_list])
+    for i in range(len(train_rejected)):
+        conversation_list=train_rejected[i]   
+        roles_str = ' '.join([item['role'] for item in conversation_list])
+    for i in range(len(eval_chosen)):
+        conversation_list=eval_chosen[i]   
+        roles_str = ' '.join([item['role'] for item in conversation_list])
+    for i in range(len(eval_rejected)):
+        conversation_list=eval_rejected[i]   
+        roles_str = ' '.join([item['role'] for item in conversation_list])
+
+    train_dataset={}
+    eval_dataset={}
+    train_dataset['chosen']=train_chosen
+    train_dataset['rejected']=train_rejected
+    eval_dataset['chosen']=eval_chosen
+    eval_dataset['rejected']=eval_rejected
+
+    train_dataset = Dataset.from_dict(train_dataset)
+    eval_dataset = Dataset.from_dict(eval_dataset)
     ################
     # Training
     ################
