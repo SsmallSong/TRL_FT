@@ -142,27 +142,36 @@ if __name__ == "__main__":
     ################
     # Dataset
     ################
+
+    #snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset 
+#     ds = load_dataset(args.dataset_name)
+#     if args.sanity_check:
+#         for key in ds:
+#             ds[key] = ds[key].select(range(50))
+#     # print(ds)
+#     def process(row):
+#         row["chosen"] = tokenizer.apply_chat_template(row["chosen"], tokenize=False)
+#         row["rejected"] = tokenizer.apply_chat_template(row["rejected"], tokenize=False)
+#         return row
+
+#     ds = ds.map(
+#        process,
+#        num_proc=multiprocessing.cpu_count(),
+#        load_from_cache_file=False,
+#    )
+    # train_dataset = ds["train_iteration_3"]
+    # eval_dataset = ds["test_iteration_3"]
+    
+    #hh-rlhf
     ds = load_dataset(args.dataset_name)
     if args.sanity_check:
         for key in ds:
             ds[key] = ds[key].select(range(50))
     # print(ds)
-    def process(row):
-        row["chosen"] = tokenizer.apply_chat_template(row["chosen"], tokenize=False)
-        row["rejected"] = tokenizer.apply_chat_template(row["rejected"], tokenize=False)
+    def process_new(row):
+        row = tokenizer.apply_chat_template(row, tokenize=False)
         return row
 
-    ds = ds.map(
-       process,
-       num_proc=multiprocessing.cpu_count(),
-       load_from_cache_file=False,
-   )
-    
-    #snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset 
-    # train_dataset = ds["train_iteration_3"]
-    # eval_dataset = ds["test_iteration_3"]
-    
-    #hh-rlhf
     train_dataset_origin = ds["train"]
     eval_dataset_origin = ds["test"]
 
@@ -217,6 +226,16 @@ if __name__ == "__main__":
 
     train_dataset = Dataset.from_dict(train_dataset)
     eval_dataset = Dataset.from_dict(eval_dataset)
+
+    train_dataset = train_dataset.map(
+       process_new,
+       num_proc=multiprocessing.cpu_count(),
+       load_from_cache_file=False,
+   )
+    eval_dataset = eval_dataset.map(
+       process_new,
+       num_proc=multiprocessing.cpu_count(),
+       load_from_cache_file=False,)
     ################
     # Training
     ################
