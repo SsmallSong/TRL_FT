@@ -151,14 +151,16 @@ if __name__ == "__main__":
         row["rejected"] = tokenizer.apply_chat_template(row["rejected"], tokenize=False)
         return row
 
-    ds = ds.map(
-        process,
-        num_proc=multiprocessing.cpu_count(),
-        load_from_cache_file=False,
-    )
-    # train_dataset = ds["train_iteration_3"]
-    # eval_dataset = ds["test_iteration_3"]
+    #ds = ds.map(
+     #   process,
+      #  num_proc=multiprocessing.cpu_count(),
+       # load_from_cache_file=False,
+   # )
+   # train_dataset = ds["train_iteration_3"]
+   # eval_dataset = ds["test_iteration_3"]
     train_dataset = ds["train"]
+    print(type(train_dataset))
+    kill
     eval_dataset = ds["test"]
     # print (train_dataset[0].keys())
     # print (train_dataset[0])
@@ -186,4 +188,4 @@ if __name__ == "__main__":
     trainer.train()
 
     with save_context:
-        trainer.save_model(training_args.output_dir)
+            trainer.save_model(training_args.output_dir)
