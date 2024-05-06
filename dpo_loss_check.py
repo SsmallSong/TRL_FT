@@ -1,3 +1,4 @@
+import torch
 # Load model directly
 encodeds_sorn_chosen=torch.tensor([[12143, 18723,   298,   396,  2992, 28748, 15996, 28748, 28716,   763,
           3250, 28748,  2883,   369,   349,  7885,   486,   442,   395,   272,
@@ -164,14 +165,14 @@ model_inputs_4 = encodeds_hh_labels.to(device)
 
 decoded_1 = tokenizer.batch_decode(model_inputs_1)
 decoded_2 = tokenizer.batch_decode(model_inputs_2)
-decoded_3 = tokenizer.batch_decode(model_inputs_3)
-decoded_4 = tokenizer.batch_decode(model_inputs_4)
+#decoded_3 = tokenizer.batch_decode(model_inputs_3)
+#decoded_4 = tokenizer.batch_decode(model_inputs_4)
 #decoded = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
 print("=============================================")
 print(decoded_1[0])
 print("=============================================")
 print(decoded_2[0])
 print("=============================================")
-print(decoded_3[0])
+#print(decoded_3[0])
 print("=============================================")
-print(decoded_4[0])
+#print(decoded_4[0])
