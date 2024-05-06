@@ -175,7 +175,7 @@ if __name__ == "__main__":
         row["rejected"] = tokenizer.apply_chat_template(row["rejected"], tokenize=False)
         return row
 
-    train_dataset = ds["train"][0:10]
+    train_dataset = ds["train"][5:6]
     eval_dataset = ds["test"][0:5]
 
     # train_chosen=train_dataset_origin['chosen']
