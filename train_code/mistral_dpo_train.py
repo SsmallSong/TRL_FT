@@ -78,7 +78,7 @@ from trl import (
     get_peft_config,
     get_quantization_config,
 )
-from trl import DDDD
+#from trl import DDDD
 
 
 if TRL_USE_RICH:
@@ -160,9 +160,10 @@ if __name__ == "__main__":
        num_proc=multiprocessing.cpu_count(),
        load_from_cache_file=False,
    )
-    train_dataset = ds["train_iteration_3"]
-    eval_dataset = ds["test_iteration_3"]
-    
+    train_dataset = ds["train_iteration_3"][0:10]
+    eval_dataset = ds["test_iteration_3"][0:10]
+    eval_dataset = Dataset.from_dict(eval_dataset)
+    train_dataset = Dataset.from_dict(train_dataset)
     #hh-rlhf
 #     ds = load_dataset(args.dataset_name)
 #     if args.sanity_check:

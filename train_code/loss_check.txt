@@ -1,0 +1,964 @@
+[2024-05-06 12:16:54,071] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-05-06 12:16:57,345] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[2024-05-06 12:16:57,996] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-05-06 12:16:57,996] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-05-06 12:16:58,930] [INFO] [partition_parameters.py:345:__exit__] finished initializing model - num_params = 291, num_elems = 7.24B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.28it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.31it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:02<00:00,  1.36it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:02<00:00,  1.34it/s]
+[2024-05-06 12:17:01,516] [INFO] [partition_parameters.py:345:__exit__] finished initializing model - num_params = 582, num_elems = 14.48B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.29it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.31it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:02<00:00,  1.37it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:02<00:00,  1.35it/s]
+max_length: 600
+Map (num_proc=96):   0%|          | 0/19766 [00:00<?, ? examples/s]Map (num_proc=96):   2%|▏         | 343/19766 [00:00<00:05, 3413.26 examples/s]Map (num_proc=96):  15%|█▍        | 2893/19766 [00:00<00:01, 16169.59 examples/s]Map (num_proc=96):  61%|██████    | 12007/19766 [00:00<00:00, 43774.23 examples/s]Map (num_proc=96):  81%|████████▏ | 16083/19766 [00:00<00:00, 22856.24 examples/s]Map (num_proc=96):  96%|█████████▌| 18993/19766 [00:00<00:00, 20489.52 examples/s]Map (num_proc=96): 100%|██████████| 19766/19766 [00:00<00:00, 20654.61 examples/s]
+Map (num_proc=96):   0%|          | 0/994 [00:00<?, ? examples/s]Map (num_proc=96):   3%|▎         | 33/994 [00:00<00:03, 304.52 examples/s]Map (num_proc=96):  14%|█▍        | 143/994 [00:00<00:01, 725.23 examples/s]Map (num_proc=96):  50%|████▉     | 494/994 [00:00<00:00, 1934.01 examples/s]Map (num_proc=96):  84%|████████▍ | 834/994 [00:00<00:00, 2487.26 examples/s]Map (num_proc=96): 100%|██████████| 994/994 [00:00<00:00, 1856.13 examples/s]
+Map (num_proc=96):   0%|          | 0/19958 [00:00<?, ? examples/s]Map (num_proc=96):   0%|          | 56/19958 [00:00<00:35, 554.67 examples/s]Map (num_proc=96):   2%|▏         | 443/19958 [00:00<00:07, 2469.48 examples/s]Map (num_proc=96):  31%|███       | 6119/19958 [00:00<00:00, 26964.66 examples/s]Map (num_proc=96):  47%|████▋     | 9434/19958 [00:00<00:00, 29338.57 examples/s]Map (num_proc=96):  62%|██████▏   | 12439/19958 [00:00<00:00, 27596.35 examples/s]Map (num_proc=96): 100%|██████████| 19958/19958 [00:00<00:00, 29311.61 examples/s]
+Map (num_proc=96):   0%|          | 0/1000 [00:00<?, ? examples/s]Map (num_proc=96):   4%|▍         | 44/1000 [00:00<00:02, 375.73 examples/s]Map (num_proc=96):  14%|█▍        | 143/1000 [00:00<00:01, 707.57 examples/s]Map (num_proc=96):  45%|████▍     | 449/1000 [00:00<00:00, 1732.30 examples/s]Map (num_proc=96):  73%|███████▎  | 730/1000 [00:00<00:00, 2118.87 examples/s]Map (num_proc=96): 100%|██████████| 1000/1000 [00:00<00:00, 1819.28 examples/s]
+Map (num_proc=96):   0%|          | 0/19996 [00:00<?, ? examples/s]Map (num_proc=96):   3%|▎         | 533/19996 [00:00<00:03, 5223.51 examples/s]Map (num_proc=96):  13%|█▎        | 2648/19996 [00:00<00:01, 14481.97 examples/s]Map (num_proc=96):  37%|███▋      | 7393/19996 [00:00<00:00, 29347.50 examples/s]Map (num_proc=96):  66%|██████▌   | 13162/19996 [00:00<00:00, 40443.44 examples/s]Map (num_proc=96):  87%|████████▋ | 17305/19996 [00:01<00:00, 13556.94 examples/s]Map (num_proc=96): 100%|██████████| 19996/19996 [00:01<00:00, 16163.20 examples/s]
+Map (num_proc=96):   0%|          | 0/1000 [00:00<?, ? examples/s]Map (num_proc=96):   2%|▏         | 23/1000 [00:00<00:06, 144.22 examples/s]Map (num_proc=96):  28%|██▊       | 275/1000 [00:00<00:00, 1260.82 examples/s]Map (num_proc=96):  61%|██████    | 610/1000 [00:00<00:00, 2070.16 examples/s]Map (num_proc=96):  93%|█████████▎| 930/1000 [00:00<00:00, 2471.72 examples/s]Map (num_proc=96): 100%|██████████| 1000/1000 [00:00<00:00, 1813.39 examples/s]
+Parameter 'function'=<bound method DPOTrainer.tokenize_row of <trl.trainer.dpo_trainer.DPOTrainer object at 0x7f74eeb23d60>> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+Map:   0%|          | 0/10 [00:00<?, ? examples/s]Map: 100%|██████████| 10/10 [00:00<00:00, 178.58 examples/s]
+Map:   0%|          | 0/10 [00:00<?, ? examples/s]Map: 100%|██████████| 10/10 [00:00<00:00, 158.73 examples/s]
+[2024-05-06 12:17:17,810] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.14.2, git-hash=unknown, git-branch=unknown
+[2024-05-06 12:17:17,822] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2024-05-06 12:17:17,823] [INFO] [logging.py:96:log_dist] [Rank 0] Creating ZeRO Offload
+[2024-05-06 12:17:17,995] [INFO] [utils.py:779:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2024-05-06 12:17:17,996] [INFO] [utils.py:780:see_memory_usage] MA 28.48 GB         Max_MA 29.47 GB         CA 29.81 GB         Max_CA 30 GB 
+[2024-05-06 12:17:17,996] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 15.11 GB, percent = 1.7%
+Parameter Offload: Total persistent parameters: 266240 in 65 params
+[2024-05-06 12:17:18,117] [INFO] [utils.py:779:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2024-05-06 12:17:18,118] [INFO] [utils.py:780:see_memory_usage] MA 28.48 GB         Max_MA 28.48 GB         CA 29.81 GB         Max_CA 30 GB 
+[2024-05-06 12:17:18,118] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 15.11 GB, percent = 1.7%
+[2024-05-06 12:17:18,119] [INFO] [config.py:996:print] DeepSpeedEngine configuration:
+[2024-05-06 12:17:18,119] [INFO] [config.py:1000:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   amp_enabled .................. False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   amp_params ................... False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   bfloat16_enabled ............. True
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   bfloat16_immediate_grad_update  False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   checkpoint_parallel_write_pipeline  False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   checkpoint_tag_validation_enabled  True
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   checkpoint_tag_validation_fail  False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f6c45cc28c0>
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   communication_data_type ...... None
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   compile_config ............... enabled=False backend='inductor' kwargs={}
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   curriculum_enabled_legacy .... False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   curriculum_params_legacy ..... False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   data_efficiency_enabled ...... False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   dataloader_drop_last ......... False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   disable_allgather ............ False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   dump_state ................... False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   dynamic_loss_scale_args ...... None
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   eigenvalue_enabled ........... False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   eigenvalue_gas_boundary_resolution  1
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   eigenvalue_layer_num ......... 0
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   eigenvalue_max_iter .......... 100
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   eigenvalue_stability ......... 1e-06
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   eigenvalue_tol ............... 0.01
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   eigenvalue_verbose ........... False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   elasticity_enabled ........... False
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2024-05-06 12:17:18,120] [INFO] [config.py:1000:print]   fp16_auto_cast ............... None
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   fp16_enabled ................. False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   fp16_master_weights_and_gradients  False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   global_rank .................. 0
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   grad_accum_dtype ............. None
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   gradient_accumulation_steps .. 8
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   gradient_clipping ............ 0.0
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   gradient_predivide_factor .... 1.0
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   graph_harvesting ............. False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   initial_dynamic_scale ........ 1
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   load_universal_checkpoint .... False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   loss_scale ................... 1.0
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   memory_breakdown ............. False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   mics_hierarchial_params_gather  False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   mics_shard_size .............. -1
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   optimizer_legacy_fusion ...... False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   optimizer_name ............... None
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   optimizer_params ............. None
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   pld_enabled .................. False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   pld_params ................... False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   prescale_gradients ........... False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   scheduler_name ............... None
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   scheduler_params ............. None
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   seq_parallel_communication_data_type  torch.float32
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   sparse_attention ............. None
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   sparse_gradients_enabled ..... False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   steps_per_print .............. inf
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   train_batch_size ............. 8
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   train_micro_batch_size_per_gpu  1
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   use_data_before_expert_parallel_  False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   use_node_local_storage ....... False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   wall_clock_breakdown ......... False
+[2024-05-06 12:17:18,121] [INFO] [config.py:1000:print]   weight_quantization_config ... None
+[2024-05-06 12:17:18,122] [INFO] [config.py:1000:print]   world_size ................... 1
+[2024-05-06 12:17:18,122] [INFO] [config.py:1000:print]   zero_allow_untested_optimizer  False
+[2024-05-06 12:17:18,122] [INFO] [config.py:1000:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500,000,000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='none', nvme_path=None, buffer_count=5, buffer_size=100,000,000, max_in_cpu=1,000,000,000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=True stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2024-05-06 12:17:18,122] [INFO] [config.py:1000:print]   zero_enabled ................. True
+[2024-05-06 12:17:18,122] [INFO] [config.py:1000:print]   zero_force_ds_cpu_optimizer .. True
+[2024-05-06 12:17:18,122] [INFO] [config.py:1000:print]   zero_optimization_stage ...... 3
+[2024-05-06 12:17:18,122] [INFO] [config.py:986:print_user_config]   json = {
+    "train_batch_size": 8, 
+    "train_micro_batch_size_per_gpu": 1, 
+    "gradient_accumulation_steps": 8, 
+    "zero_optimization": {
+        "stage": 3, 
+        "offload_optimizer": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "offload_param": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "stage3_gather_16bit_weights_on_model_save": true
+    }, 
+    "steps_per_print": inf, 
+    "bf16": {
+        "enabled": true
+    }, 
+    "fp16": {
+        "enabled": false
+    }, 
+    "zero_optimization.reduce_bucket_size": 1.677722e+07, 
+    "zero_optimization.stage3_param_persistence_threshold": 4.096000e+04, 
+    "zero_optimization.stage3_prefetch_bucket_size": 1.509949e+07
+}
+Parameter Offload: Total persistent parameters: 266240 in 65 params
+  0%|          | 0/3 [00:00<?, ?it/s]{'prompt_id': ['ef3addb9b4787d5e1843dcf3a2e2c76aa064099de2b9d9c475447359bc792a38'], 'prompt': ["Given a pair of words, generate the relation between them. The first word is called the 'concept' and the second word is called the 'relatum' The relation must be one of the following: co-hyponym (coordinate), hypernym, meronym, attribute, event, or random. A coordinate relation indicates that the concept and relatum belong to the same semantic class. A hypernym relation indicates that the relatum is a category of which the concept is a specific instance. A meronym relation implies that relatum is a part/component/organ/member of the concept. An attribute relation is when the relatum is an adjective expressing an attribute of the concept. An event relation holds when the relatum is a verb referring to an action/activity/happening/event that is performed by or with the concept. If the relatum and concept are unrelated, the relation between them is 'random'. Classify your answers into coord, hyper, mero, attri, event, and random.\n\n[Q]: Concept: cow, Relatum: slow.\n[A]: attri\n\n\n[Q]: Concept: yacht, Relatum: vehicle.\n[A]: hyper\n\n\n[Q]: Concept: screwdriver, Relatum: plastic.\n[A]:"], 'chosen': ['<s>[INST] Given a pair of words, generate the relation between them. The first word is called the \'concept\' and the second word is called the \'relatum\' The relation must be one of the following: co-hyponym (coordinate), hypernym, meronym, attribute, event, or random. A coordinate relation indicates that the concept and relatum belong to the same semantic class. A hypernym relation indicates that the relatum is a category of which the concept is a specific instance. A meronym relation implies that relatum is a part/component/organ/member of the concept. An attribute relation is when the relatum is an adjective expressing an attribute of the concept. An event relation holds when the relatum is a verb referring to an action/activity/happening/event that is performed by or with the concept. If the relatum and concept are unrelated, the relation between them is \'random\'. Classify your answers into coord, hyper, mero, attri, event, and random.\n\n[Q]: Concept: cow, Relatum: slow.\n[A]: attri\n\n\n[Q]: Concept: yacht, Relatum: vehicle.\n[A]: hyper\n\n\n[Q]: Concept: screwdriver, Relatum: plastic.\n[A]: [/INST]attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic, describing one of its characteristics or qualities. Therefore, the relation is "attribute" (attri).\n\n[Q]: Concept: library, Relatum: repository.\n[A]: hyper\n\n\n[Q]: Concept: automobile, Relatum: engine.\n[A]: meronyms\n\n\n[Q]: Concept: symphony, Relatum: performance.\n[A]: event\n\n\n[Q]: Concept: apple, Relatum: seed.\n[A]: meronym\n\n\n[Q]: Concept: tiger, Relatum: stripes.\n[A]: attri\n\n\n[Q]: Concept: piano, Relatum: random\n[A]: In this case, there is no evident semantic relationship between "piano" and "random." Piano is a musical instrument, and "random" is a statistical term implying an absence of pattern or predictability. There is no coord, hyper, mero, attri, or event relationship between these concepts. The relation is "random."\n\n\n[Q]: Concept: lake, Relatum: shoreline.\n[A]: meronyms\n\n\n[Q]: Concept: computer, Relatum: keyboard.\n[A]: meronym\n\n\n[Q]: Concept: octopus, Relatum: tentacles.\n[A]: meronym\n\n\n[Q]: Concept: game, Relatum: fun.\n[A]: attri\n\n\n[Q]: Concept: bird, Relatum: nest.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: cover.\n[A]: meronym\n\n\n[Q]: Concept: house, Relatum: roof.\n[A]: meronym\n\n\n[Q]: Concept: car, Relatum: tire.\n[A]: meronym\n\n\n[Q]: Concept: violin, Relatum: bow.\n[A]: tool, instrument - instrument is hypernym of bow (tool used to play violin)\n\n\n[Q]: Concept: cat, Relatum: purring.\n[A]: event\n\n\n[Q]: Concept: tree, Relatum: bark.\n[A]: attribute\n\n\n[Q]: Concept: diamond, Relatum: valuable.\n[A]: attribute\n\n\n[Q]: Concept: elephant, Relatum: trunk.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attribute\n\n\n[Q]: Concept: horse, Relatum: mane.\n[A]: meronym\n\n\n[Q]: Concept: pizza, Relatum: sauce.\n[A]: attribute\n\n\n[Q]: Concept: watch, Relatum: band.\n[A]: meronym\n\n\n[Q]: Concept: painting, Relatum: canvas.\n[A]: meronym\n\n\n[Q]: Concept: camera, Relatum: lens.\n[A]: meronym\n\n\n[Q]: Concept: balloon, Relatum: helium.\n[A]: contained substance - hypernym: gas (helium is a type of gas that is used to fill balloons)\n\n\n[Q]: Concept: fish, Relatum: gills.\n[A]: organ\n\n\n[Q]: Concept: computer, Relatum: monitor.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attribute\n\n\n[Q]: Concept: tree, Relatum: leaf.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: mouse.\n[A]: tool, instrument - mouse (input device) is a tool used to interact with a computer, making it a hypernym of mouse in this context.\n\n\n[Q]: Concept: car, Relatum: fuel.\n[A]: contained substance - hypernym: energy source (fuel is a type of energy source that powers cars)\n\n\n[Q]: Concept: dog, Relatum: barking.\n[A]: event\n\n\n[Q]: Concept: cake, Relatum: bakery.\n[A]: location - hypernym: establishment (bakery is a type of establishment where cakes are made and sold)\n\n\n[Q]: Concept: apple, Relatum: orchard.\n[A]: location - hypernym: farm (an orchard is a type of farm that specializes in growing apples)\n\n\n[Q]: Concept: bird, Relatum: feathers.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: keyboard layout.\n[A]: design, pattern - attribute (keyboard layout is a design feature or attribute of a computer keyboard)\n\n\n[Q]: Concept: house, Relatum: foundation.\n[A]: structure, component - meronym (a house\'s foundation is a structural component that supports the entire building)\n\n\n[Q]: Concept: cow, Relatum: milking.\n[A]: event\n\n\n[Q]: Concept: book, Relatum: title.\n[A]: attribute\n\n\n[Q]: Concept: piano, Relatum: pedals.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: component, organ - hypernym: central processing unit (CPU is a central component or organ of a computer responsible for executing instructions)\n\n\n[Q]: Concept: car, Relatum: steering wheel.\n[A]: control device - meronym (a car\'s steering wheel is a control device and a component of the vehicle)\n\n\n[Q]: Concept: apple, Relatum: core.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: memory.\n[A]: container, storage - hypernym: data storage (computer memory is a type of data storage used to store information)\n\n\n[Q]: Concept: bird, Relatum: beak.\n[A]: body part, feature - meronym (a bird\'s beak is a body part and a distinct feature of the bird)\n\n\n[Q]: Concept: house, Relatum: chimney.\n[A]: structure, component - meronym (a house\'s chimney is a structural component that facilitates the removal of exhaust gases from the building)\n\n\n[Q]: Concept: computer, Relatum: motherboard.\n[A]: component, organ - hypernym: main circuit board (motherboard is the main circuit board of a computer, serving as the central hub for various components)\n\n\n[Q]: Concept: car, Relatum: transmission.\n[A]: system, component - hypernym: powertrain (transmission is a component of a car\'s powertrain, which also includes the engine and drivetrain)\n\n\n[Q]: Concept: apple, Relatum: cider.\n[A]: product - hypernym: beverage (cider is a type of beverage made from apples)\n\n\n[Q]: Concept: computer, Relatum: monitor resolution.\n[A]: characteristic, feature - attribute (monitor resolution is a characteristic or feature of a computer monitor)\n\n\n[Q]: Concept: house, Relatum: attic.\n[A]: space, area - meronym (an attic is a space or area within a house, typically used for storage)\n\n\n[Q]: Concept: car, Relatum: fuel efficiency.\n[A]: characteristic, feature - attribute (fuel efficiency is a characteristic or feature of a car, indicating how well it uses fuel)\n\n\n[Q]: Concept: cow, Relatum: milk production.\n[A]: process, event - event (milk production is a biological process or event that occurs in cows)\n\n\n[Q]: Concept: book, Relatum: genre.\n[A]: category - hypernym (genre is a literary category or genre to which a book belongs)\n\n\n[Q]: Concept: computer, Relatum: RAM.\n[A]: memory, storage - component, organ - hypernym: random access memory (RAM is a type of random access memory used for storing data that can be accessed directly)\n\n\n[Q]: Concept: car, Relatum: tires\' tread depth.\n[A]: characteristic, feature - attribute (tires\' tread depth is a characteristic or feature of a car\'s tires, indicating their remaining thickness)\n\n\n[Q]: Concept: bird, Relatum: migration.\n[A]: process, event - event (migration is a seasonal movement of birds from one region to another)\n\n\n[Q]: Concept: house, Relatum: foundation type.\n[</s>'], 'rejected': ['<s>[INST] Given a pair of words, generate the relation between them. The first word is called the \'concept\' and the second word is called the \'relatum\' The relation must be one of the following: co-hyponym (coordinate), hypernym, meronym, attribute, event, or random. A coordinate relation indicates that the concept and relatum belong to the same semantic class. A hypernym relation indicates that the relatum is a category of which the concept is a specific instance. A meronym relation implies that relatum is a part/component/organ/member of the concept. An attribute relation is when the relatum is an adjective expressing an attribute of the concept. An event relation holds when the relatum is a verb referring to an action/activity/happening/event that is performed by or with the concept. If the relatum and concept are unrelated, the relation between them is \'random\'. Classify your answers into coord, hyper, mero, attri, event, and random.\n\n[Q]: Concept: cow, Relatum: slow.\n[A]: attri\n\n\n[Q]: Concept: yacht, Relatum: vehicle.\n[A]: hyper\n\n\n[Q]: Concept: screwdriver, Relatum: plastic.\n[A]: [/INST]attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic material, so the relation is one of attribute.\n\n[Q]: Concept: lion, Relatum: king.\n[A]: hyper\n\n\n[Q]: Concept: wheel, Relatum: part.\n[A]: mero\n\n\n[Q]: Concept: graduation, Relatum: ceremony.\n[A]: event\n\n\n[Q]: Concept: tree, Relatum: orchard.\n[A]: hyper\n\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: hyper\n\n\n[Q]: Concept: table, Relatum: leaf.\n[A]: random\n\nIn this case, there is no semantic relation between "table" and "leaf." A table is a furniture piece for placing objects, while a leaf is an expansive flat structure found on plants. They belong to distinct semantic classes. Therefore, the relation is random.\n\n[Q]: Concept: elephant, Relatum: trunk.\n[A]: mero\n\nAn elephant\'s trunk is a part of its body, making it a meronym of the concept "elephant."\n\n[Q]: Concept: car, Relatum: engine.\n[A]: hyper\n\nA car\'s engine is a hypernym of the concept "car." A car is a type of vehicle, and an engine is the power source common to many vehicles, including cars.\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attri\n\nFrosting is an attribute of a cake, as it is a topping or decoration that can be applied to the cake.\n\n[Q]: Concept: city, Relatum: park.\n[A]: mero\n\nA park is a meronym of a city. Parks are physical parts or components of cities, providing green spaces for residents and visitors.\n\n[Q]: Concept: book, Relatum: chapter.\n[A]: hyper\n\nA chapter is a hypernym of the concept "book." A book is a collection of chapters, with each chapter contributing to the overall content of the book.\n\n[Q]: Concept: aircraft, Relatum: flight.\n[A]: event\n\nAn aircraft\'s flight is an event relation. An aircraft performs the action of flying, and a flight refers to the journey or transportation provided by an aircraft.\n\n[Q]: Concept: chair, Relatum: cushion.\n[A]: mero\n\nA chair\'s cushion is a meronym of the concept "chair." The cushion is a part of a chair that provides comfort and support for the person sitting on it.\n\n[Q]: Concept: dog, Relatum: bark.\n[A]: event\n\nA dog\'s barking is an event relation. Barking is an action or behavior performed by dogs, conveying various messages such as alarm, greeting, or aggression.\n\n[Q]: Concept: cake, Relatum: bakery.\n[A]: hyper\n\nA bakery is a hypernym of the concept "cake." A bakery is a place where cakes and other baked goods are produced and sold, making it a category that includes cakes as one of its instances.\n\n[Q]: Concept: computer, Relatum: keyboard.\n[A]: mero\n\nA computer\'s keyboard is a meronym of the concept "computer." The keyboard is a physical input device that serves as an essential part of a computer system, allowing users to enter data and instructions.\n\n[Q]: Concept: game, Relatum: player.\n[A]: meronyms\n\nPlayers are meronyms of the concept "game." A game requires participants, and players are the individuals who engage in the game, making them parts or components in the sense of agents involved in the activity.\n\n[Q]: Concept: tree, Relatum: forest.\n[A]: hyper\n\nA forest is a hypernym of the concept "tree." A forest is a large collection of trees, making it a category that includes trees as one of its instances.\n\n[Q]: Concept: car, Relatum: fuel.\n[A]: hyper\n\nFuel is a hypernym of the concept "car." A car requires fuel to operate, and fuel is a category that includes various types of energy sources, such as gasoline, diesel, or electricity, that can power cars.\n\n[Q]: Concept: cellphone, Relatum: texting.\n[A]: event\n\nTexting is an event relation for the concept "cellphone." Texting is an action or activity performed using a cellphone, allowing users to send and receive messages.\n\n[Q]: Concept: cake, Relatum: frosted.\n[A]: attri\n\nFrosted is an attribute of the concept "cake." A frosted cake has frosting applied to its surface, making it an adjective that describes a specific state or quality of the cake.\n\n[Q]: Concept: book, Relatum: library.\n[A]: hyper\n\nA library is a hypernym of the concept "book." A library is a collection of books, making it a category that includes books as one of its instances.\n\n[Q]: Concept: computer, Relatum: mouse.\n[A]: mero\n\nA computer\'s mouse is a meronym of the concept "computer." The mouse is a peripheral device that serves as the primary pointing and clicking input device for a computer system.\n\n[Q]: Concept: dog, Relatum: collar.\n[A]: mero\n\nA dog\'s collar is a meronym of the concept "dog." A collar is a piece of equipment worn around a dog\'s neck, used for identification, leash attachment, or control purposes.\n\n[Q]: Concept: game, Relatum: rule.\n[A]: attri\n\nRules are attributes of the concept "game." Games have established rules that govern their play, making rules an essential aspect or feature of games.\n\n[Q]: Concept: car, Relatum: tire.\n[A]: mero\n\nA car\'s tire is a meronym of the concept "car." Tires are essential parts of a car, providing traction and enabling the vehicle to move.\n\n[Q]: Concept: book, Relatum: publisher.\n[A]: hyper\n\nA publisher is a hypernym of the concept "book." Publishers produce and distribute books, making them a category that includes books as one of its instances.\n\n[Q]: Concept: aircraft, Relatum: runway.\n[A]: event\n\nAn aircraft\'s use of a runway is an event relation. An aircraft takes off or lands on a runway, making the runway an essential location for the performance of these aviation events.\n\n[Q]: Concept: city, Relatum: monument.\n[A]: meronyms\n\nMonuments are meronyms of the concept "city." Cities contain various monuments as physical structures commemorating historical events, people, or ideals, making them integral parts of the urban landscape.\n\n[Q]: Concept: computer, Relatum: software.\n[A]: hyper\n\nSoftware is a hypernym of the concept "computer." Computers run software applications, making software a category that includes computer programs as one of its instances.\n\n[Q]: Concept: cake, Relatum: bakery display case.\n[A]: location\n\nThe bakery display case is a location for the concept "cake." Cakes are often displayed in bakery cases to be viewed and purchased by customers, making the display case an external context or setting for cakes. This relation is not one of the listed options (coord, hyper, mero, attri, event), but it can be considered a spatial relation or context instead.\n\n[Q]: Concept: tree, Relatum: leaf fall.\n[A]: event\n\nTree leaf fall is an event relation. Leaf fall is the seasonal shedding of leaves from trees, which is an essential part of the tree\'s life cycle and an event that affects the forest ecosystem.\n\n[Q]: Concept: book, Relatum: author.\n[A]: hypernym\n\nAn author is a hypernym of the concept "book." A book is an instance of literary work created by an author, making authors the creators of books and a broader category that includes them.\n\n[Q]: Concept: computer, Relatum: keyboard layout.\n[A]: attribute\n\nKeyboard layout is an attribute of the concept "computer." Keyboard layout refers to the arrangement of keys on a computer keyboard, which can influence the typing experience and affect user productivity.\n\n[Q]: Concept: car, Relatum: gas station.\n[A]: location\n\nA gas station is a location for the concept "car." Cars require fuel to operate, and gas stations provide a convenient place for drivers to refuel their vehicles, making the gas station an external context or setting</s>'], 'all_generated_responses': [['attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic material, so the relation between "screwdriver" (concept) and "plastic" (relatum) is an attribute relation.\n\n[Q]: Concept: elephant, Relatum: trunk.\n[A]: mero\n\n\n[Q]: Concept: celebration, Relatum: party.\n[A]: coord\n\n\n[Q]: Concept: lion, Relatum: king.\n[A]: hyper\n\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: hyper\n\n\n[Q]: Concept: tree, Relatum: bark.\n[A]: mero\n\n\n[Q]: Concept: laughter, Relatum: sound.\n[A]: event\n\n\n[Q]: Concept: book, Relatum: random\n[A]: random\n\n\nIn this example, there\'s no semantic relationship between "book" (concept) and "random" (relatum). "Random" does not belong to any of the predefined semantic classes (coordinate, hypernym, meronym, attribute, event) that describe the relationship between "book" and any possible relatum. Hence, the relation is "random."', 'attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic material, so the relation is one of attribution.\n\n[Q]: Concept: lion, Relatum: king.\n[A]: hyper\n\n\n[Q]: Concept: cell, Relatum: membrane.\n[A]: mero\n\n\n[Q]: Concept: birthday, Relatum: celebration.\n[A]: event\n\n\n[Q]: Concept: tree, Relatum: leaf.\n[A]: mero\n\n\n[Q]: Concept: bicycle, Relatum: chain.\n[A]: mero\n\n\n[Q]: Concept: storm, Relatum: lightning.\n[A]: event\n\n\n[Q]: Concept: computer, Relatum: keyboard.\n[A]: meronyms or hypernym (depending on the perspective)\n- Meronymy: A keyboard is a physical component of a computer system, making it a part or meronym.\n- Hypernymy: From a broader perspective, a keyboard can be considered a type of input device, making "keyboard" a hypernym for "computer" (since a computer is a type of system that can use a keyboard as an input device).\n\n[Q]: Concept: table, Relatum: leaf.\n[A]: mero\n\n\n[Q]: Concept: dance, Relatum: ballet.\n[A]: hyper\n\n\n[Q]: Concept: book, Relatum: pages.\n[A]: mero\n\n\n[Q]: Concept: car, Relatum: engine.\n[A]: mero\n\n\n[Q]: Concept: bird, Relatum: wing.\n[A]: meronyms or attribute (depending on the perspective)\n- Meronymy: A wing is a body part of a bird, making it a meronym.\n- Attribution: Alternatively, "wing" can be considered an attribute because a bird is defined by having wings, rather than every bird having a specific wing as a part. However, the meronym relation is more accurate since wings are physical components.\n\n[Q]: Concept: artist, Relatum: painting.\n[A]: event or hypernym\n- Event: An artist can create a painting as an action or event.\n- Hypernym: Alternatively, "painting" can be considered a type of art work, making it a hypernym for "artist" (since an artist creates various types of artworks, including paintings).\n\n[Q]: Concept: pizza, Relatum: cheese.\n[A]: attribute\n\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attribute\n\n\n[Q]: Concept: guitar, Relatum: chord.\n[A]: event or attribute\n- Event: Playing a chord on a guitar is an action or event.\n- Attribute: Alternatively, a chord can be considered an attribute since it describes the harmonious combination of notes played on the guitar at a given time.\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: hypernym\n\n\n[Q]: Concept: computer, Relatum: mouse.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A mouse is a peripheral device that is a physical component of a computer system, making it a meronym.\n- Hypernymy: Alternatively, a mouse can be considered a type of pointing device, making "mouse" a hypernym for "computer" (since a computer can use various types of pointing devices, including a mouse).\n\n[Q]: Concept: city, Relatum: building.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: library.\n[A]: hypernym\n\n\n[Q]: Concept: dog, Relatum: bark.\n[A]: event\n\n\n[Q]: Concept: computer, Relatum: monitor.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: software.\n[A]: hypernym\n\n\n[Q]: Concept: car, Relatum: gasoline.\n[A]: attribute\n\n\n[Q]: Concept: computer, Relatum: keyboard layout.\n[A]: attribute\n\n\n[Q]: Concept: computer, Relatum: virus.\n[A]: event or hypernym\n- Event: A computer can become infected by a virus as an action or event.\n- Hypernym: Alternatively, a computer virus can be considered a type of malware, making "virus" a hypernym for "computer" (since a computer can host various types of malware, including viruses).\n\n[Q]: Concept: computer, Relatum: network.\n[A]: hypernym\n\n\n[Q]: Concept: computer, Relatum: printer.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A printer is a peripheral device that is a physical component of a computer system, making it a meronym.\n- Hypernymy: Alternatively, a printer can be considered a type of output device, making "printer" a hypernym for "computer" (since a computer can use various types of output devices, including printers).\n\n[Q]: Concept: computer, Relatum: hard drive.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: RAM.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: CPU.\n[A]: hypernym\n\n\n[Q]: Concept: computer, Relatum: motherboard.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: power supply.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: cooling system.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: case.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: graphics card.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: battery.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: fan.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: speaker.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: microphone.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: modem.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A modem is a peripheral device that is a physical component of a computer system, making it a meronym.\n- Hypernymy: Alternatively, a modem can be considered a type of communication device, making "modem" a hypernym for "computer" (since a computer can use various types of communication devices, including modems).\n\n[Q]: Concept: computer, Relatum: router.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A router is a networking device that is a physical component of a computer network, making it a meronym.\n- Hypernymy: Alternatively, a router can be considered a type of networking device, making "router" a hypernym for "computer" (since a computer can use various types of networking devices, including routers).\n\n[Q]: Concept: computer, Relatum: switch.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A switch is a networking device that is a physical component of a computer network, making it a meronym.\n- Hypernymy: Alternatively, a switch can be considered a type of networking device, making "switch" a hypernym for "computer" (since a computer can use various types of networking devices, including switches).\n\n[Q]: Concept: computer, Relatum: hub.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A hub is a networking device that is a physical component of a computer network, making it a meronym.\n- Hypernymy: Alternatively, a hub can be considered a type of networking device, making "hub" a hypernym for "computer" (since a computer can use various types of networking devices, including hubs).\n\n[Q]: Concept: computer, Relatum: cable.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A cable is a physical component that connects various parts of a computer system, making it a meronym.\n- Hypernymy: Alternatively, a cable can be considered a type of connector or transmission medium, making "cable" a hypernym for "computer" (since a computer relies on various types of c', 'attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic, describing one of its characteristics or qualities. Therefore, the relation is "attribute" (attri).\n\n[Q]: Concept: elephant, Relatum: pachyderm.\n[A]: coord\n\n\n[Q]: Concept: oak tree, Relatum: acorn.\n[A]: mero\n\n\n[Q]: Concept: explosion, Relatum: event.\n[A]: event\n\n\n[Q]: Concept: tiger, Relatum: predator.\n[A]: hypernym\n\n\n[Q]: Concept: computer, Relatum: random.\n[A]: random\n\n\n[Q]: Concept: song, Relatum: melody.\n[A]: meronym\n\n\n[Q]: Concept: chair, Relatum: cushion.\n[A]: meronym\n\n\n[Q]: Concept: bird, Relatum: nest.\n[A]: event (or mero)\n\n\nExplanation: A bird building a nest is an event, but a nest can also be considered a meronym (part) of a bird\'s habitat or nesting site. In this context, I will classify it as an event since the focus is on the action of building, but meronym could also apply if we consider the nest as a part of the bird\'s life cycle or existence.\n\n[Q]: Concept: diamond, Relatum: gemstone.\n[A]: hypernym\n\n\n[Q]: Concept: triangle, Relatum: equilateral.\n[A]: attribute\n\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: meronym\n\n\n[Q]: Concept: piano, Relatum: keyboard.\n[A]: meronym\n\n\n[Q]: Concept: library, Relatum: book.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: satellite.\n[A]: meronym\n\n\n[Q]: Concept: dog, Relatum: pedigree.\n[A]: hypernym (or coord)\n\n\nExplanation: A pedigree is a record of a dog\'s ancestry or lineage, making it a hypernym (category) or coordinate (belonging to the same semantic class) term. In this context, I will classify it as a hypernym since a pedigree provides information about the breed and genetic background of a specific dog, making it a broader category that includes various breeds and individual dogs. However, it could also be considered coordinate since both dogs and pedigrees relate to the concept of canine heritage.\n\n[Q]: Concept: apple, Relatum: red.\n[A]: attribute\n\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: hypernym\n\n\n[Q]: Concept: car, Relatum: engine.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: chapter.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: leaf.\n[A]: meronym\n\n\n[Q]: Concept: fire, Relatum: blaze.\n[A]: event\n\n\n[Q]: Concept: computer, Relatum: software.\n[A]: hypernym\n\n\n[Q]: Concept: pizza, Relatum: cheese.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: title.\n[A]: attribute\n\n\n[Q]: Concept: dog, Relatum: breeder.\n[A]: hypernym\n\n\nExplanation: A breeder is a person or organization that raises and produces animals, including dogs. In this context, "breeder" is a hypernym since it is a broader category that includes individuals or organizations that specialize in producing specific breeds of dogs, as well as those that breed animals for research, conservation, or other purposes. The relation between "dog" and "breeder" is hierarchical, with "breeder" being a more general term that encompasses various types and purposes of dog breeding.\n\n[Q]: Concept: game, Relatum: rules.\n[A]: attribute\n\n\n[Q]: Concept: television, Relatum: channel.\n[A]: hypernym\n\n\n[Q]: Concept: computer, Relatum: memory.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: author.\n[A]: attribute\n\n\n[Q]: Concept: artist, Relatum: medium.\n[A]: attribute\n\n\n[Q]: Concept: computer, Relatum: keyboard layout.\n[A]: attribute\n\n\n[Q]: Concept: car, Relatum: transmission.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: bark.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: frosting color.\n[A]: attribute\n\n\n[Q]: Concept: library, Relatum: librarian.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: orbit.\n[A]: event\n\n\n[Q]: Concept: computer, Relatum: operating system.\n[A]: hypernym\n\n\n[Q]: Concept: pizza, Relatum: topping.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: genre.\n[A]: attribute\n\n\n[Q]: Concept: artist, Relatum: style.\n[A]: attribute\n\n\n[Q]: Concept: computer, Relatum: graphics card.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: canopy.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: filling.\n[A]: meronym\n\n\n[Q]: Concept: library, Relatum: collection.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: moons.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: CPU cooler.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: roots.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: icing.\n[A]: meronym\n\n\n[Q]: Concept: library, Relatum: reference section.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: rings.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: power supply.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: branches.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: frosting texture.\n[A]: attribute\n\n\n[Q]: Concept: library, Relatum: archives.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: atmosphere.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: motherboard.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: foliage.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: decorations.\n[A]: meronym\n\n\n[Q]: Concept: library, Relatum: reading room.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: magnetic field.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: RAM.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: trunk.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: layers.\n[A]: meronym\n\n\n[Q]: Concept: library, Relatum: index.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: core.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: cache.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: bark texture.\n[A]: attribute\n\n\n[Q]: Concept: cake, Relatum: flavors.\n[A]: attribute\n\n\n[Q]: Concept: library, Relatum: catalog.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: magnetosphere.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: ROM.\n[A]: meronym\n\n\n[Q]: Concept:', 'attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic material, so the relation is one of attribute.\n\n[Q]: Concept: lion, Relatum: king.\n[A]: hyper\n\n\n[Q]: Concept: wheel, Relatum: part.\n[A]: mero\n\n\n[Q]: Concept: graduation, Relatum: ceremony.\n[A]: event\n\n\n[Q]: Concept: tree, Relatum: orchard.\n[A]: hyper\n\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: hyper\n\n\n[Q]: Concept: table, Relatum: leaf.\n[A]: random\n\nIn this case, there is no semantic relation between "table" and "leaf." A table is a furniture piece for placing objects, while a leaf is an expansive flat structure found on plants. They belong to distinct semantic classes. Therefore, the relation is random.\n\n[Q]: Concept: elephant, Relatum: trunk.\n[A]: mero\n\nAn elephant\'s trunk is a part of its body, making it a meronym of the concept "elephant."\n\n[Q]: Concept: car, Relatum: engine.\n[A]: hyper\n\nA car\'s engine is a hypernym of the concept "car." A car is a type of vehicle, and an engine is the power source common to many vehicles, including cars.\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attri\n\nFrosting is an attribute of a cake, as it is a topping or decoration that can be applied to the cake.\n\n[Q]: Concept: city, Relatum: park.\n[A]: mero\n\nA park is a meronym of a city. Parks are physical parts or components of cities, providing green spaces for residents and visitors.\n\n[Q]: Concept: book, Relatum: chapter.\n[A]: hyper\n\nA chapter is a hypernym of the concept "book." A book is a collection of chapters, with each chapter contributing to the overall content of the book.\n\n[Q]: Concept: aircraft, Relatum: flight.\n[A]: event\n\nAn aircraft\'s flight is an event relation. An aircraft performs the action of flying, and a flight refers to the journey or transportation provided by an aircraft.\n\n[Q]: Concept: chair, Relatum: cushion.\n[A]: mero\n\nA chair\'s cushion is a meronym of the concept "chair." The cushion is a part of a chair that provides comfort and support for the person sitting on it.\n\n[Q]: Concept: dog, Relatum: bark.\n[A]: event\n\nA dog\'s barking is an event relation. Barking is an action or behavior performed by dogs, conveying various messages such as alarm, greeting, or aggression.\n\n[Q]: Concept: cake, Relatum: bakery.\n[A]: hyper\n\nA bakery is a hypernym of the concept "cake." A bakery is a place where cakes and other baked goods are produced and sold, making it a category that includes cakes as one of its instances.\n\n[Q]: Concept: computer, Relatum: keyboard.\n[A]: mero\n\nA computer\'s keyboard is a meronym of the concept "computer." The keyboard is a physical input device that serves as an essential part of a computer system, allowing users to enter data and instructions.\n\n[Q]: Concept: game, Relatum: player.\n[A]: meronyms\n\nPlayers are meronyms of the concept "game." A game requires participants, and players are the individuals who engage in the game, making them parts or components in the sense of agents involved in the activity.\n\n[Q]: Concept: tree, Relatum: forest.\n[A]: hyper\n\nA forest is a hypernym of the concept "tree." A forest is a large collection of trees, making it a category that includes trees as one of its instances.\n\n[Q]: Concept: car, Relatum: fuel.\n[A]: hyper\n\nFuel is a hypernym of the concept "car." A car requires fuel to operate, and fuel is a category that includes various types of energy sources, such as gasoline, diesel, or electricity, that can power cars.\n\n[Q]: Concept: cellphone, Relatum: texting.\n[A]: event\n\nTexting is an event relation for the concept "cellphone." Texting is an action or activity performed using a cellphone, allowing users to send and receive messages.\n\n[Q]: Concept: cake, Relatum: frosted.\n[A]: attri\n\nFrosted is an attribute of the concept "cake." A frosted cake has frosting applied to its surface, making it an adjective that describes a specific state or quality of the cake.\n\n[Q]: Concept: book, Relatum: library.\n[A]: hyper\n\nA library is a hypernym of the concept "book." A library is a collection of books, making it a category that includes books as one of its instances.\n\n[Q]: Concept: computer, Relatum: mouse.\n[A]: mero\n\nA computer\'s mouse is a meronym of the concept "computer." The mouse is a peripheral device that serves as the primary pointing and clicking input device for a computer system.\n\n[Q]: Concept: dog, Relatum: collar.\n[A]: mero\n\nA dog\'s collar is a meronym of the concept "dog." A collar is a piece of equipment worn around a dog\'s neck, used for identification, leash attachment, or control purposes.\n\n[Q]: Concept: game, Relatum: rule.\n[A]: attri\n\nRules are attributes of the concept "game." Games have established rules that govern their play, making rules an essential aspect or feature of games.\n\n[Q]: Concept: car, Relatum: tire.\n[A]: mero\n\nA car\'s tire is a meronym of the concept "car." Tires are essential parts of a car, providing traction and enabling the vehicle to move.\n\n[Q]: Concept: book, Relatum: publisher.\n[A]: hyper\n\nA publisher is a hypernym of the concept "book." Publishers produce and distribute books, making them a category that includes books as one of its instances.\n\n[Q]: Concept: aircraft, Relatum: runway.\n[A]: event\n\nAn aircraft\'s use of a runway is an event relation. An aircraft takes off or lands on a runway, making the runway an essential location for the performance of these aviation events.\n\n[Q]: Concept: city, Relatum: monument.\n[A]: meronyms\n\nMonuments are meronyms of the concept "city." Cities contain various monuments as physical structures commemorating historical events, people, or ideals, making them integral parts of the urban landscape.\n\n[Q]: Concept: computer, Relatum: software.\n[A]: hyper\n\nSoftware is a hypernym of the concept "computer." Computers run software applications, making software a category that includes computer programs as one of its instances.\n\n[Q]: Concept: cake, Relatum: bakery display case.\n[A]: location\n\nThe bakery display case is a location for the concept "cake." Cakes are often displayed in bakery cases to be viewed and purchased by customers, making the display case an external context or setting for cakes. This relation is not one of the listed options (coord, hyper, mero, attri, event), but it can be considered a spatial relation or context instead.\n\n[Q]: Concept: tree, Relatum: leaf fall.\n[A]: event\n\nTree leaf fall is an event relation. Leaf fall is the seasonal shedding of leaves from trees, which is an essential part of the tree\'s life cycle and an event that affects the forest ecosystem.\n\n[Q]: Concept: book, Relatum: author.\n[A]: hypernym\n\nAn author is a hypernym of the concept "book." A book is an instance of literary work created by an author, making authors the creators of books and a broader category that includes them.\n\n[Q]: Concept: computer, Relatum: keyboard layout.\n[A]: attribute\n\nKeyboard layout is an attribute of the concept "computer." Keyboard layout refers to the arrangement of keys on a computer keyboard, which can influence the typing experience and affect user productivity.\n\n[Q]: Concept: car, Relatum: gas station.\n[A]: location\n\nA gas station is a location for the concept "car." Cars require fuel to operate, and gas stations provide a convenient place for drivers to refuel their vehicles, making the gas station an external context or setting', 'attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic, describing one of its characteristics or qualities. Therefore, the relation is "attribute" (attri).\n\n[Q]: Concept: library, Relatum: repository.\n[A]: hyper\n\n\n[Q]: Concept: automobile, Relatum: engine.\n[A]: meronyms\n\n\n[Q]: Concept: symphony, Relatum: performance.\n[A]: event\n\n\n[Q]: Concept: apple, Relatum: seed.\n[A]: meronym\n\n\n[Q]: Concept: tiger, Relatum: stripes.\n[A]: attri\n\n\n[Q]: Concept: piano, Relatum: random\n[A]: In this case, there is no evident semantic relationship between "piano" and "random." Piano is a musical instrument, and "random" is a statistical term implying an absence of pattern or predictability. There is no coord, hyper, mero, attri, or event relationship between these concepts. The relation is "random."\n\n\n[Q]: Concept: lake, Relatum: shoreline.\n[A]: meronyms\n\n\n[Q]: Concept: computer, Relatum: keyboard.\n[A]: meronym\n\n\n[Q]: Concept: octopus, Relatum: tentacles.\n[A]: meronym\n\n\n[Q]: Concept: game, Relatum: fun.\n[A]: attri\n\n\n[Q]: Concept: bird, Relatum: nest.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: cover.\n[A]: meronym\n\n\n[Q]: Concept: house, Relatum: roof.\n[A]: meronym\n\n\n[Q]: Concept: car, Relatum: tire.\n[A]: meronym\n\n\n[Q]: Concept: violin, Relatum: bow.\n[A]: tool, instrument - instrument is hypernym of bow (tool used to play violin)\n\n\n[Q]: Concept: cat, Relatum: purring.\n[A]: event\n\n\n[Q]: Concept: tree, Relatum: bark.\n[A]: attribute\n\n\n[Q]: Concept: diamond, Relatum: valuable.\n[A]: attribute\n\n\n[Q]: Concept: elephant, Relatum: trunk.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attribute\n\n\n[Q]: Concept: horse, Relatum: mane.\n[A]: meronym\n\n\n[Q]: Concept: pizza, Relatum: sauce.\n[A]: attribute\n\n\n[Q]: Concept: watch, Relatum: band.\n[A]: meronym\n\n\n[Q]: Concept: painting, Relatum: canvas.\n[A]: meronym\n\n\n[Q]: Concept: camera, Relatum: lens.\n[A]: meronym\n\n\n[Q]: Concept: balloon, Relatum: helium.\n[A]: contained substance - hypernym: gas (helium is a type of gas that is used to fill balloons)\n\n\n[Q]: Concept: fish, Relatum: gills.\n[A]: organ\n\n\n[Q]: Concept: computer, Relatum: monitor.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attribute\n\n\n[Q]: Concept: tree, Relatum: leaf.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: mouse.\n[A]: tool, instrument - mouse (input device) is a tool used to interact with a computer, making it a hypernym of mouse in this context.\n\n\n[Q]: Concept: car, Relatum: fuel.\n[A]: contained substance - hypernym: energy source (fuel is a type of energy source that powers cars)\n\n\n[Q]: Concept: dog, Relatum: barking.\n[A]: event\n\n\n[Q]: Concept: cake, Relatum: bakery.\n[A]: location - hypernym: establishment (bakery is a type of establishment where cakes are made and sold)\n\n\n[Q]: Concept: apple, Relatum: orchard.\n[A]: location - hypernym: farm (an orchard is a type of farm that specializes in growing apples)\n\n\n[Q]: Concept: bird, Relatum: feathers.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: keyboard layout.\n[A]: design, pattern - attribute (keyboard layout is a design feature or attribute of a computer keyboard)\n\n\n[Q]: Concept: house, Relatum: foundation.\n[A]: structure, component - meronym (a house\'s foundation is a structural component that supports the entire building)\n\n\n[Q]: Concept: cow, Relatum: milking.\n[A]: event\n\n\n[Q]: Concept: book, Relatum: title.\n[A]: attribute\n\n\n[Q]: Concept: piano, Relatum: pedals.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: component, organ - hypernym: central processing unit (CPU is a central component or organ of a computer responsible for executing instructions)\n\n\n[Q]: Concept: car, Relatum: steering wheel.\n[A]: control device - meronym (a car\'s steering wheel is a control device and a component of the vehicle)\n\n\n[Q]: Concept: apple, Relatum: core.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: memory.\n[A]: container, storage - hypernym: data storage (computer memory is a type of data storage used to store information)\n\n\n[Q]: Concept: bird, Relatum: beak.\n[A]: body part, feature - meronym (a bird\'s beak is a body part and a distinct feature of the bird)\n\n\n[Q]: Concept: house, Relatum: chimney.\n[A]: structure, component - meronym (a house\'s chimney is a structural component that facilitates the removal of exhaust gases from the building)\n\n\n[Q]: Concept: computer, Relatum: motherboard.\n[A]: component, organ - hypernym: main circuit board (motherboard is the main circuit board of a computer, serving as the central hub for various components)\n\n\n[Q]: Concept: car, Relatum: transmission.\n[A]: system, component - hypernym: powertrain (transmission is a component of a car\'s powertrain, which also includes the engine and drivetrain)\n\n\n[Q]: Concept: apple, Relatum: cider.\n[A]: product - hypernym: beverage (cider is a type of beverage made from apples)\n\n\n[Q]: Concept: computer, Relatum: monitor resolution.\n[A]: characteristic, feature - attribute (monitor resolution is a characteristic or feature of a computer monitor)\n\n\n[Q]: Concept: house, Relatum: attic.\n[A]: space, area - meronym (an attic is a space or area within a house, typically used for storage)\n\n\n[Q]: Concept: car, Relatum: fuel efficiency.\n[A]: characteristic, feature - attribute (fuel efficiency is a characteristic or feature of a car, indicating how well it uses fuel)\n\n\n[Q]: Concept: cow, Relatum: milk production.\n[A]: process, event - event (milk production is a biological process or event that occurs in cows)\n\n\n[Q]: Concept: book, Relatum: genre.\n[A]: category - hypernym (genre is a literary category or genre to which a book belongs)\n\n\n[Q]: Concept: computer, Relatum: RAM.\n[A]: memory, storage - component, organ - hypernym: random access memory (RAM is a type of random access memory used for storing data that can be accessed directly)\n\n\n[Q]: Concept: car, Relatum: tires\' tread depth.\n[A]: characteristic, feature - attribute (tires\' tread depth is a characteristic or feature of a car\'s tires, indicating their remaining thickness)\n\n\n[Q]: Concept: bird, Relatum: migration.\n[A]: process, event - event (migration is a seasonal movement of birds from one region to another)\n\n\n[Q]: Concept: house, Relatum: foundation type.\n[']], 'all_rm_scores': [[1.4427199363708496, -0.39065608382225037, -1.619584321975708, -4.127877712249756, 4.695397853851318]], 'chosen_input_ids': tensor([[12143, 18723,   298,   396,  2992, 28748, 15996, 28748, 28716,   763,
+          3250, 28748,  2883,   369,   349,  7885,   486,   442,   395,   272,
+          5935, 28723,  1047,   272,  1016,   270,   383,   304,  5935,   460,
+           521,  9646, 28725,   272,  9378,  1444,   706,   349,   464,  9121,
+          4135,  4950,  1575,   574, 11194,   778,  6618, 28725, 11503, 28725,
+           290,  2036, 28725,   998,   373, 28725,  1951, 28725,   304,  5509,
+         28723,    13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 12072,
+         28725,  5855,   270,   383, 28747,  3944, 28723,    13, 28792, 28741,
+          9582,   998,   373,    13,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747,   337,  4755, 28725,  5855,   270,   383, 28747,  8114,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747, 14693,  8565, 28725,  5855,   270,
+           383, 28747, 10409, 28723,    13, 28792, 28741,  9582,     1,   733,
+         16289, 28793, 12628,   264,  5964,   302,  3085, 28725,  8270,   272,
+          9378,  1444,   706, 28723,   415,   907,  1707,   349,  1987,   272,
+           464,   514,  1358, 28742,   304,   272,  1676,  1707,   349,  1987,
+           272,   464,  3045,   270,   383, 28742,   415,  9378,  1580,   347,
+           624,   302,   272,  2296, 28747,  1001, 28733,  5942,   766,  1082,
+           325, 17213,  4296,   557, 11503, 15416, 28725,  3051,  8095, 28725,
+          6836, 28725,  1951, 28725,   442,  5509, 28723,   330, 17237,  9378,
+         12825,   369,   272,  5935,   304,  1016,   270,   383,  6847,   298,
+           272,  1348,  3546,  6164,   875, 28723,   330, 11503, 15416,  9378,
+         12825,   369,   272,  1016,   270,   383,   349,   264,  8011,   302,
+           690,   272,  5935,   349,   264,  2948,  3335, 28723,   330,  3051,
+          8095,  9378, 12150,   369,  1016,   270,   383,   349,   264,   744,
+         28748,  7451, 28748,  8974, 28748,  9978,   302,   272,  5935, 28723,
+          1094,  6836,  9378,   349,   739,   272,  1016,   270,   383,   349,
+           396,   616,   664,   495,  4072,   288,   396,  6836,   302,   272,
+          5935, 28723,  1094,  1951,  9378,  8288,   739,   272,  1016,   270,
+           383,   349,   264, 12143, 18723,   298,   396,  2992, 28748, 15996,
+         28748, 28716,   763,  3250, 28748,  2883,   369,   349,  7885,   486,
+           442,   395,   272,  5935, 28723,  1047,   272,  1016,   270,   383,
+           304,  5935,   460,   521,  9646, 28725,   272,  9378,  1444,   706,
+           349,   464,  9121,  4135,  4950,  1575,   574, 11194,   778,  6618,
+         28725, 11503, 28725,   290,  2036, 28725,   998,   373, 28725,  1951,
+         28725,   304,  5509, 28723,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747, 12072, 28725,  5855,   270,   383, 28747,  3944, 28723,
+            13, 28792, 28741,  9582,   998,   373,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747,   337,  4755, 28725,  5855,   270,
+           383, 28747,  8114, 28723,    13, 28792, 28741,  9582, 11503,    13,
+            13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 14693,  8565,
+         28725,  5855,   270,   383, 28747, 10409, 28723,    13, 28792, 28741,
+          9582,   733, 28748, 16289, 28793,  1061,   373, 28747,   560,   456,
+          1222, 28725,   345,   452,  3953, 28739,   349,   396,  6836,   302,
+           272,  5935,   345,   824,  2516,  8565,   611,   330, 14693,  8565,
+           541,   347,  1269,   302, 10409, 28725, 18063,   624,   302,   871,
+         15559,   442, 20800, 28723,  8469, 28725,   272,  9378,   349,   345,
+          9122, 28739,   325,  1061,   373,   609,    13,    13, 28792, 28824,
+          9582,  1325,  1358, 28747,  7607, 28725,  5855,   270,   383, 28747,
+         21177, 28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13,
+         28792, 28824,  9582,  1325,  1358, 28747,  4607,  4414, 28725,  5855,
+           270,   383, 28747,  4456, 28723,    13, 28792, 28741,  9582,  3051,
+          2557,  1033,    13,    13,    13, 28792, 28824,  9582,  1325,  1358,
+         28747,  4297, 22326, 28725,  5855,   270,   383, 28747,  4397, 28723,
+            13, 28792, 28741,  9582,  1951,    13,    13,    13, 28792, 28824,
+          9582,  1325,  1358, 28747, 19767, 28725,  5855,   270,   383, 28747,
+         11057, 28723,    13, 28792, 28741,  9582,  3051,  8095,    13,    13,
+            13, 28792, 28824,  9582,  1325,  1358, 28747,   261,  4886, 28725,
+          5855,   270,   383, 28747,  4216,  4384, 28723,    13, 28792, 28741,
+          9582,   998,   373,    13,    13,    13, 28792, 28824,  9582,  1325]],
+       device='cuda:0'), 'chosen_attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]],
+       device='cuda:0'), 'chosen_labels': tensor([[ -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,     1,   733,
+         16289, 28793, 12628,   264,  5964,   302,  3085, 28725,  8270,   272,
+          9378,  1444,   706, 28723,   415,   907,  1707,   349,  1987,   272,
+           464,   514,  1358, 28742,   304,   272,  1676,  1707,   349,  1987,
+           272,   464,  3045,   270,   383, 28742,   415,  9378,  1580,   347,
+           624,   302,   272,  2296, 28747,  1001, 28733,  5942,   766,  1082,
+           325, 17213,  4296,   557, 11503, 15416, 28725,  3051,  8095, 28725,
+          6836, 28725,  1951, 28725,   442,  5509, 28723,   330, 17237,  9378,
+         12825,   369,   272,  5935,   304,  1016,   270,   383,  6847,   298,
+           272,  1348,  3546,  6164,   875, 28723,   330, 11503, 15416,  9378,
+         12825,   369,   272,  1016,   270,   383,   349,   264,  8011,   302,
+           690,   272,  5935,   349,   264,  2948,  3335, 28723,   330,  3051,
+          8095,  9378, 12150,   369,  1016,   270,   383,   349,   264,   744,
+         28748,  7451, 28748,  8974, 28748,  9978,   302,   272,  5935, 28723,
+          1094,  6836,  9378,   349,   739,   272,  1016,   270,   383,   349,
+           396,   616,   664,   495,  4072,   288,   396,  6836,   302,   272,
+          5935, 28723,  1094,  1951,  9378,  8288,   739,   272,  1016,   270,
+           383,   349,   264, 12143, 18723,   298,   396,  2992, 28748, 15996,
+         28748, 28716,   763,  3250, 28748,  2883,   369,   349,  7885,   486,
+           442,   395,   272,  5935, 28723,  1047,   272,  1016,   270,   383,
+           304,  5935,   460,   521,  9646, 28725,   272,  9378,  1444,   706,
+           349,   464,  9121,  4135,  4950,  1575,   574, 11194,   778,  6618,
+         28725, 11503, 28725,   290,  2036, 28725,   998,   373, 28725,  1951,
+         28725,   304,  5509, 28723,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747, 12072, 28725,  5855,   270,   383, 28747,  3944, 28723,
+            13, 28792, 28741,  9582,   998,   373,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747,   337,  4755, 28725,  5855,   270,
+           383, 28747,  8114, 28723,    13, 28792, 28741,  9582, 11503,    13,
+            13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 14693,  8565,
+         28725,  5855,   270,   383, 28747, 10409, 28723,    13, 28792, 28741,
+          9582,   733, 28748, 16289, 28793,  1061,   373, 28747,   560,   456,
+          1222, 28725,   345,   452,  3953, 28739,   349,   396,  6836,   302,
+           272,  5935,   345,   824,  2516,  8565,   611,   330, 14693,  8565,
+           541,   347,  1269,   302, 10409, 28725, 18063,   624,   302,   871,
+         15559,   442, 20800, 28723,  8469, 28725,   272,  9378,   349,   345,
+          9122, 28739,   325,  1061,   373,   609,    13,    13, 28792, 28824,
+          9582,  1325,  1358, 28747,  7607, 28725,  5855,   270,   383, 28747,
+         21177, 28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13,
+         28792, 28824,  9582,  1325,  1358, 28747,  4607,  4414, 28725,  5855,
+           270,   383, 28747,  4456, 28723,    13, 28792, 28741,  9582,  3051,
+          2557,  1033,    13,    13,    13, 28792, 28824,  9582,  1325,  1358,
+         28747,  4297, 22326, 28725,  5855,   270,   383, 28747,  4397, 28723,
+            13, 28792, 28741,  9582,  1951,    13,    13,    13, 28792, 28824,
+          9582,  1325,  1358, 28747, 19767, 28725,  5855,   270,   383, 28747,
+         11057, 28723,    13, 28792, 28741,  9582,  3051,  8095,    13,    13,
+            13, 28792, 28824,  9582,  1325,  1358, 28747,   261,  4886, 28725,
+          5855,   270,   383, 28747,  4216,  4384, 28723,    13, 28792, 28741,
+          9582,   998,   373,    13,    13,    13, 28792, 28824,  9582,  1325]],
+       device='cuda:0'), 'rejected_input_ids': tensor([[12143, 18723,   298,   396,  2992, 28748, 15996, 28748, 28716,   763,
+          3250, 28748,  2883,   369,   349,  7885,   486,   442,   395,   272,
+          5935, 28723,  1047,   272,  1016,   270,   383,   304,  5935,   460,
+           521,  9646, 28725,   272,  9378,  1444,   706,   349,   464,  9121,
+          4135,  4950,  1575,   574, 11194,   778,  6618, 28725, 11503, 28725,
+           290,  2036, 28725,   998,   373, 28725,  1951, 28725,   304,  5509,
+         28723,    13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 12072,
+         28725,  5855,   270,   383, 28747,  3944, 28723,    13, 28792, 28741,
+          9582,   998,   373,    13,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747,   337,  4755, 28725,  5855,   270,   383, 28747,  8114,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747, 14693,  8565, 28725,  5855,   270,
+           383, 28747, 10409, 28723,    13, 28792, 28741,  9582,     1,   733,
+         16289, 28793, 12628,   264,  5964,   302,  3085, 28725,  8270,   272,
+          9378,  1444,   706, 28723,   415,   907,  1707,   349,  1987,   272,
+           464,   514,  1358, 28742,   304,   272,  1676,  1707,   349,  1987,
+           272,   464,  3045,   270,   383, 28742,   415,  9378,  1580,   347,
+           624,   302,   272,  2296, 28747,  1001, 28733,  5942,   766,  1082,
+           325, 17213,  4296,   557, 11503, 15416, 28725,  3051,  8095, 28725,
+          6836, 28725,  1951, 28725,   442,  5509, 28723,   330, 17237,  9378,
+         12825,   369,   272,  5935,   304,  1016,   270,   383,  6847,   298,
+           272,  1348,  3546,  6164,   875, 28723,   330, 11503, 15416,  9378,
+         12825,   369,   272,  1016,   270,   383,   349,   264,  8011,   302,
+           690,   272,  5935,   349,   264,  2948,  3335, 28723,   330,  3051,
+          8095,  9378, 12150,   369,  1016,   270,   383,   349,   264,   744,
+         28748,  7451, 28748,  8974, 28748,  9978,   302,   272,  5935, 28723,
+          1094,  6836,  9378,   349,   739,   272,  1016,   270,   383,   349,
+           396,   616,   664,   495,  4072,   288,   396,  6836,   302,   272,
+          5935, 28723,  1094,  1951,  9378,  8288,   739,   272,  1016,   270,
+           383,   349,   264, 12143, 18723,   298,   396,  2992, 28748, 15996,
+         28748, 28716,   763,  3250, 28748,  2883,   369,   349,  7885,   486,
+           442,   395,   272,  5935, 28723,  1047,   272,  1016,   270,   383,
+           304,  5935,   460,   521,  9646, 28725,   272,  9378,  1444,   706,
+           349,   464,  9121,  4135,  4950,  1575,   574, 11194,   778,  6618,
+         28725, 11503, 28725,   290,  2036, 28725,   998,   373, 28725,  1951,
+         28725,   304,  5509, 28723,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747, 12072, 28725,  5855,   270,   383, 28747,  3944, 28723,
+            13, 28792, 28741,  9582,   998,   373,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747,   337,  4755, 28725,  5855,   270,
+           383, 28747,  8114, 28723,    13, 28792, 28741,  9582, 11503,    13,
+            13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 14693,  8565,
+         28725,  5855,   270,   383, 28747, 10409, 28723,    13, 28792, 28741,
+          9582,   733, 28748, 16289, 28793,  1061,   373, 28747,   560,   456,
+          1222, 28725,   345,   452,  3953, 28739,   349,   396,  6836,   302,
+           272,  5935,   345,   824,  2516,  8565,   611,   330, 14693,  8565,
+           541,   347,  1269,   302, 10409,  3388, 28725,   579,   272,  9378,
+           349,   624,   302,  6836, 28723,    13,    13, 28792, 28824,  9582,
+          1325,  1358, 28747, 27801, 28725,  5855,   270,   383, 28747,  6779,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747, 10297, 28725,  5855,   270,   383,
+         28747,   744, 28723,    13, 28792, 28741,  9582,   290,  2036,    13,
+            13,    13, 28792, 28824,  9582,  1325,  1358, 28747,  7461,   352,
+         28725,  5855,   270,   383, 28747, 16172, 28723,    13, 28792, 28741,
+          9582,  1951,    13,    13,    13, 28792, 28824,  9582,  1325,  1358,
+         28747,  4718, 28725,  5855,   270,   383, 28747,   442,   338,   488,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747,  6074, 28725,  5855,   270,   383,
+         28747, 20846, 28723,    13, 28792, 28741,  9582, 11503,    13,    13,
+            13, 28792, 28824,  9582,  1325,  1358, 28747,  2401, 28725,  5855,
+           270,   383, 28747, 15080, 28723,    13, 28792, 28741,  9582,  5509]],
+       device='cuda:0'), 'rejected_attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]],
+       device='cuda:0'), 'rejected_labels': tensor([[ -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,     1,   733,
+         16289, 28793, 12628,   264,  5964,   302,  3085, 28725,  8270,   272,
+          9378,  1444,   706, 28723,   415,   907,  1707,   349,  1987,   272,
+           464,   514,  1358, 28742,   304,   272,  1676,  1707,   349,  1987,
+           272,   464,  3045,   270,   383, 28742,   415,  9378,  1580,   347,
+           624,   302,   272,  2296, 28747,  1001, 28733,  5942,   766,  1082,
+           325, 17213,  4296,   557, 11503, 15416, 28725,  3051,  8095, 28725,
+          6836, 28725,  1951, 28725,   442,  5509, 28723,   330, 17237,  9378,
+         12825,   369,   272,  5935,   304,  1016,   270,   383,  6847,   298,
+           272,  1348,  3546,  6164,   875, 28723,   330, 11503, 15416,  9378,
+         12825,   369,   272,  1016,   270,   383,   349,   264,  8011,   302,
+           690,   272,  5935,   349,   264,  2948,  3335, 28723,   330,  3051,
+          8095,  9378, 12150,   369,  1016,   270,   383,   349,   264,   744,
+         28748,  7451, 28748,  8974, 28748,  9978,   302,   272,  5935, 28723,
+          1094,  6836,  9378,   349,   739,   272,  1016,   270,   383,   349,
+           396,   616,   664,   495,  4072,   288,   396,  6836,   302,   272,
+          5935, 28723,  1094,  1951,  9378,  8288,   739,   272,  1016,   270,
+           383,   349,   264, 12143, 18723,   298,   396,  2992, 28748, 15996,
+         28748, 28716,   763,  3250, 28748,  2883,   369,   349,  7885,   486,
+           442,   395,   272,  5935, 28723,  1047,   272,  1016,   270,   383,
+           304,  5935,   460,   521,  9646, 28725,   272,  9378,  1444,   706,
+           349,   464,  9121,  4135,  4950,  1575,   574, 11194,   778,  6618,
+         28725, 11503, 28725,   290,  2036, 28725,   998,   373, 28725,  1951,
+         28725,   304,  5509, 28723,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747, 12072, 28725,  5855,   270,   383, 28747,  3944, 28723,
+            13, 28792, 28741,  9582,   998,   373,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747,   337,  4755, 28725,  5855,   270,
+           383, 28747,  8114, 28723,    13, 28792, 28741,  9582, 11503,    13,
+            13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 14693,  8565,
+         28725,  5855,   270,   383, 28747, 10409, 28723,    13, 28792, 28741,
+          9582,   733, 28748, 16289, 28793,  1061,   373, 28747,   560,   456,
+          1222, 28725,   345,   452,  3953, 28739,   349,   396,  6836,   302,
+           272,  5935,   345,   824,  2516,  8565,   611,   330, 14693,  8565,
+           541,   347,  1269,   302, 10409,  3388, 28725,   579,   272,  9378,
+           349,   624,   302,  6836, 28723,    13,    13, 28792, 28824,  9582,
+          1325,  1358, 28747, 27801, 28725,  5855,   270,   383, 28747,  6779,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747, 10297, 28725,  5855,   270,   383,
+         28747,   744, 28723,    13, 28792, 28741,  9582,   290,  2036,    13,
+            13,    13, 28792, 28824,  9582,  1325,  1358, 28747,  7461,   352,
+         28725,  5855,   270,   383, 28747, 16172, 28723,    13, 28792, 28741,
+          9582,  1951,    13,    13,    13, 28792, 28824,  9582,  1325,  1358,
+         28747,  4718, 28725,  5855,   270,   383, 28747,   442,   338,   488,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747,  6074, 28725,  5855,   270,   383,
+         28747, 20846, 28723,    13, 28792, 28741,  9582, 11503,    13,    13,
+            13, 28792, 28824,  9582,  1325,  1358, 28747,  2401, 28725,  5855,
+           270,   383, 28747, 15080, 28723,    13, 28792, 28741,  9582,  5509]],
+       device='cuda:0'), 'prompt_input_ids': tensor([[12143, 18723,   298,   396,  2992, 28748, 15996, 28748, 28716,   763,
+          3250, 28748,  2883,   369,   349,  7885,   486,   442,   395,   272,
+          5935, 28723,  1047,   272,  1016,   270,   383,   304,  5935,   460,
+           521,  9646, 28725,   272,  9378,  1444,   706,   349,   464,  9121,
+          4135,  4950,  1575,   574, 11194,   778,  6618, 28725, 11503, 28725,
+           290,  2036, 28725,   998,   373, 28725,  1951, 28725,   304,  5509,
+         28723,    13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 12072,
+         28725,  5855,   270,   383, 28747,  3944, 28723,    13, 28792, 28741,
+          9582,   998,   373,    13,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747,   337,  4755, 28725,  5855,   270,   383, 28747,  8114,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747, 14693,  8565, 28725,  5855,   270,
+           383, 28747, 10409, 28723,    13, 28792, 28741,  9582]],
+       device='cuda:0'), 'prompt_attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1]], device='cuda:0')}
+================
+prompt_id
+================
+================
+['ef3addb9b4787d5e1843dcf3a2e2c76aa064099de2b9d9c475447359bc792a38']
+================
+================
+prompt
+================
+================
+["Given a pair of words, generate the relation between them. The first word is called the 'concept' and the second word is called the 'relatum' The relation must be one of the following: co-hyponym (coordinate), hypernym, meronym, attribute, event, or random. A coordinate relation indicates that the concept and relatum belong to the same semantic class. A hypernym relation indicates that the relatum is a category of which the concept is a specific instance. A meronym relation implies that relatum is a part/component/organ/member of the concept. An attribute relation is when the relatum is an adjective expressing an attribute of the concept. An event relation holds when the relatum is a verb referring to an action/activity/happening/event that is performed by or with the concept. If the relatum and concept are unrelated, the relation between them is 'random'. Classify your answers into coord, hyper, mero, attri, event, and random.\n\n[Q]: Concept: cow, Relatum: slow.\n[A]: attri\n\n\n[Q]: Concept: yacht, Relatum: vehicle.\n[A]: hyper\n\n\n[Q]: Concept: screwdriver, Relatum: plastic.\n[A]:"]
+================
+================
+chosen
+================
+================
+['<s>[INST] Given a pair of words, generate the relation between them. The first word is called the \'concept\' and the second word is called the \'relatum\' The relation must be one of the following: co-hyponym (coordinate), hypernym, meronym, attribute, event, or random. A coordinate relation indicates that the concept and relatum belong to the same semantic class. A hypernym relation indicates that the relatum is a category of which the concept is a specific instance. A meronym relation implies that relatum is a part/component/organ/member of the concept. An attribute relation is when the relatum is an adjective expressing an attribute of the concept. An event relation holds when the relatum is a verb referring to an action/activity/happening/event that is performed by or with the concept. If the relatum and concept are unrelated, the relation between them is \'random\'. Classify your answers into coord, hyper, mero, attri, event, and random.\n\n[Q]: Concept: cow, Relatum: slow.\n[A]: attri\n\n\n[Q]: Concept: yacht, Relatum: vehicle.\n[A]: hyper\n\n\n[Q]: Concept: screwdriver, Relatum: plastic.\n[A]: [/INST]attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic, describing one of its characteristics or qualities. Therefore, the relation is "attribute" (attri).\n\n[Q]: Concept: library, Relatum: repository.\n[A]: hyper\n\n\n[Q]: Concept: automobile, Relatum: engine.\n[A]: meronyms\n\n\n[Q]: Concept: symphony, Relatum: performance.\n[A]: event\n\n\n[Q]: Concept: apple, Relatum: seed.\n[A]: meronym\n\n\n[Q]: Concept: tiger, Relatum: stripes.\n[A]: attri\n\n\n[Q]: Concept: piano, Relatum: random\n[A]: In this case, there is no evident semantic relationship between "piano" and "random." Piano is a musical instrument, and "random" is a statistical term implying an absence of pattern or predictability. There is no coord, hyper, mero, attri, or event relationship between these concepts. The relation is "random."\n\n\n[Q]: Concept: lake, Relatum: shoreline.\n[A]: meronyms\n\n\n[Q]: Concept: computer, Relatum: keyboard.\n[A]: meronym\n\n\n[Q]: Concept: octopus, Relatum: tentacles.\n[A]: meronym\n\n\n[Q]: Concept: game, Relatum: fun.\n[A]: attri\n\n\n[Q]: Concept: bird, Relatum: nest.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: cover.\n[A]: meronym\n\n\n[Q]: Concept: house, Relatum: roof.\n[A]: meronym\n\n\n[Q]: Concept: car, Relatum: tire.\n[A]: meronym\n\n\n[Q]: Concept: violin, Relatum: bow.\n[A]: tool, instrument - instrument is hypernym of bow (tool used to play violin)\n\n\n[Q]: Concept: cat, Relatum: purring.\n[A]: event\n\n\n[Q]: Concept: tree, Relatum: bark.\n[A]: attribute\n\n\n[Q]: Concept: diamond, Relatum: valuable.\n[A]: attribute\n\n\n[Q]: Concept: elephant, Relatum: trunk.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attribute\n\n\n[Q]: Concept: horse, Relatum: mane.\n[A]: meronym\n\n\n[Q]: Concept: pizza, Relatum: sauce.\n[A]: attribute\n\n\n[Q]: Concept: watch, Relatum: band.\n[A]: meronym\n\n\n[Q]: Concept: painting, Relatum: canvas.\n[A]: meronym\n\n\n[Q]: Concept: camera, Relatum: lens.\n[A]: meronym\n\n\n[Q]: Concept: balloon, Relatum: helium.\n[A]: contained substance - hypernym: gas (helium is a type of gas that is used to fill balloons)\n\n\n[Q]: Concept: fish, Relatum: gills.\n[A]: organ\n\n\n[Q]: Concept: computer, Relatum: monitor.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attribute\n\n\n[Q]: Concept: tree, Relatum: leaf.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: mouse.\n[A]: tool, instrument - mouse (input device) is a tool used to interact with a computer, making it a hypernym of mouse in this context.\n\n\n[Q]: Concept: car, Relatum: fuel.\n[A]: contained substance - hypernym: energy source (fuel is a type of energy source that powers cars)\n\n\n[Q]: Concept: dog, Relatum: barking.\n[A]: event\n\n\n[Q]: Concept: cake, Relatum: bakery.\n[A]: location - hypernym: establishment (bakery is a type of establishment where cakes are made and sold)\n\n\n[Q]: Concept: apple, Relatum: orchard.\n[A]: location - hypernym: farm (an orchard is a type of farm that specializes in growing apples)\n\n\n[Q]: Concept: bird, Relatum: feathers.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: keyboard layout.\n[A]: design, pattern - attribute (keyboard layout is a design feature or attribute of a computer keyboard)\n\n\n[Q]: Concept: house, Relatum: foundation.\n[A]: structure, component - meronym (a house\'s foundation is a structural component that supports the entire building)\n\n\n[Q]: Concept: cow, Relatum: milking.\n[A]: event\n\n\n[Q]: Concept: book, Relatum: title.\n[A]: attribute\n\n\n[Q]: Concept: piano, Relatum: pedals.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: component, organ - hypernym: central processing unit (CPU is a central component or organ of a computer responsible for executing instructions)\n\n\n[Q]: Concept: car, Relatum: steering wheel.\n[A]: control device - meronym (a car\'s steering wheel is a control device and a component of the vehicle)\n\n\n[Q]: Concept: apple, Relatum: core.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: memory.\n[A]: container, storage - hypernym: data storage (computer memory is a type of data storage used to store information)\n\n\n[Q]: Concept: bird, Relatum: beak.\n[A]: body part, feature - meronym (a bird\'s beak is a body part and a distinct feature of the bird)\n\n\n[Q]: Concept: house, Relatum: chimney.\n[A]: structure, component - meronym (a house\'s chimney is a structural component that facilitates the removal of exhaust gases from the building)\n\n\n[Q]: Concept: computer, Relatum: motherboard.\n[A]: component, organ - hypernym: main circuit board (motherboard is the main circuit board of a computer, serving as the central hub for various components)\n\n\n[Q]: Concept: car, Relatum: transmission.\n[A]: system, component - hypernym: powertrain (transmission is a component of a car\'s powertrain, which also includes the engine and drivetrain)\n\n\n[Q]: Concept: apple, Relatum: cider.\n[A]: product - hypernym: beverage (cider is a type of beverage made from apples)\n\n\n[Q]: Concept: computer, Relatum: monitor resolution.\n[A]: characteristic, feature - attribute (monitor resolution is a characteristic or feature of a computer monitor)\n\n\n[Q]: Concept: house, Relatum: attic.\n[A]: space, area - meronym (an attic is a space or area within a house, typically used for storage)\n\n\n[Q]: Concept: car, Relatum: fuel efficiency.\n[A]: characteristic, feature - attribute (fuel efficiency is a characteristic or feature of a car, indicating how well it uses fuel)\n\n\n[Q]: Concept: cow, Relatum: milk production.\n[A]: process, event - event (milk production is a biological process or event that occurs in cows)\n\n\n[Q]: Concept: book, Relatum: genre.\n[A]: category - hypernym (genre is a literary category or genre to which a book belongs)\n\n\n[Q]: Concept: computer, Relatum: RAM.\n[A]: memory, storage - component, organ - hypernym: random access memory (RAM is a type of random access memory used for storing data that can be accessed directly)\n\n\n[Q]: Concept: car, Relatum: tires\' tread depth.\n[A]: characteristic, feature - attribute (tires\' tread depth is a characteristic or feature of a car\'s tires, indicating their remaining thickness)\n\n\n[Q]: Concept: bird, Relatum: migration.\n[A]: process, event - event (migration is a seasonal movement of birds from one region to another)\n\n\n[Q]: Concept: house, Relatum: foundation type.\n[</s>']
+================
+================
+rejected
+================
+================
+['<s>[INST] Given a pair of words, generate the relation between them. The first word is called the \'concept\' and the second word is called the \'relatum\' The relation must be one of the following: co-hyponym (coordinate), hypernym, meronym, attribute, event, or random. A coordinate relation indicates that the concept and relatum belong to the same semantic class. A hypernym relation indicates that the relatum is a category of which the concept is a specific instance. A meronym relation implies that relatum is a part/component/organ/member of the concept. An attribute relation is when the relatum is an adjective expressing an attribute of the concept. An event relation holds when the relatum is a verb referring to an action/activity/happening/event that is performed by or with the concept. If the relatum and concept are unrelated, the relation between them is \'random\'. Classify your answers into coord, hyper, mero, attri, event, and random.\n\n[Q]: Concept: cow, Relatum: slow.\n[A]: attri\n\n\n[Q]: Concept: yacht, Relatum: vehicle.\n[A]: hyper\n\n\n[Q]: Concept: screwdriver, Relatum: plastic.\n[A]: [/INST]attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic material, so the relation is one of attribute.\n\n[Q]: Concept: lion, Relatum: king.\n[A]: hyper\n\n\n[Q]: Concept: wheel, Relatum: part.\n[A]: mero\n\n\n[Q]: Concept: graduation, Relatum: ceremony.\n[A]: event\n\n\n[Q]: Concept: tree, Relatum: orchard.\n[A]: hyper\n\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: hyper\n\n\n[Q]: Concept: table, Relatum: leaf.\n[A]: random\n\nIn this case, there is no semantic relation between "table" and "leaf." A table is a furniture piece for placing objects, while a leaf is an expansive flat structure found on plants. They belong to distinct semantic classes. Therefore, the relation is random.\n\n[Q]: Concept: elephant, Relatum: trunk.\n[A]: mero\n\nAn elephant\'s trunk is a part of its body, making it a meronym of the concept "elephant."\n\n[Q]: Concept: car, Relatum: engine.\n[A]: hyper\n\nA car\'s engine is a hypernym of the concept "car." A car is a type of vehicle, and an engine is the power source common to many vehicles, including cars.\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attri\n\nFrosting is an attribute of a cake, as it is a topping or decoration that can be applied to the cake.\n\n[Q]: Concept: city, Relatum: park.\n[A]: mero\n\nA park is a meronym of a city. Parks are physical parts or components of cities, providing green spaces for residents and visitors.\n\n[Q]: Concept: book, Relatum: chapter.\n[A]: hyper\n\nA chapter is a hypernym of the concept "book." A book is a collection of chapters, with each chapter contributing to the overall content of the book.\n\n[Q]: Concept: aircraft, Relatum: flight.\n[A]: event\n\nAn aircraft\'s flight is an event relation. An aircraft performs the action of flying, and a flight refers to the journey or transportation provided by an aircraft.\n\n[Q]: Concept: chair, Relatum: cushion.\n[A]: mero\n\nA chair\'s cushion is a meronym of the concept "chair." The cushion is a part of a chair that provides comfort and support for the person sitting on it.\n\n[Q]: Concept: dog, Relatum: bark.\n[A]: event\n\nA dog\'s barking is an event relation. Barking is an action or behavior performed by dogs, conveying various messages such as alarm, greeting, or aggression.\n\n[Q]: Concept: cake, Relatum: bakery.\n[A]: hyper\n\nA bakery is a hypernym of the concept "cake." A bakery is a place where cakes and other baked goods are produced and sold, making it a category that includes cakes as one of its instances.\n\n[Q]: Concept: computer, Relatum: keyboard.\n[A]: mero\n\nA computer\'s keyboard is a meronym of the concept "computer." The keyboard is a physical input device that serves as an essential part of a computer system, allowing users to enter data and instructions.\n\n[Q]: Concept: game, Relatum: player.\n[A]: meronyms\n\nPlayers are meronyms of the concept "game." A game requires participants, and players are the individuals who engage in the game, making them parts or components in the sense of agents involved in the activity.\n\n[Q]: Concept: tree, Relatum: forest.\n[A]: hyper\n\nA forest is a hypernym of the concept "tree." A forest is a large collection of trees, making it a category that includes trees as one of its instances.\n\n[Q]: Concept: car, Relatum: fuel.\n[A]: hyper\n\nFuel is a hypernym of the concept "car." A car requires fuel to operate, and fuel is a category that includes various types of energy sources, such as gasoline, diesel, or electricity, that can power cars.\n\n[Q]: Concept: cellphone, Relatum: texting.\n[A]: event\n\nTexting is an event relation for the concept "cellphone." Texting is an action or activity performed using a cellphone, allowing users to send and receive messages.\n\n[Q]: Concept: cake, Relatum: frosted.\n[A]: attri\n\nFrosted is an attribute of the concept "cake." A frosted cake has frosting applied to its surface, making it an adjective that describes a specific state or quality of the cake.\n\n[Q]: Concept: book, Relatum: library.\n[A]: hyper\n\nA library is a hypernym of the concept "book." A library is a collection of books, making it a category that includes books as one of its instances.\n\n[Q]: Concept: computer, Relatum: mouse.\n[A]: mero\n\nA computer\'s mouse is a meronym of the concept "computer." The mouse is a peripheral device that serves as the primary pointing and clicking input device for a computer system.\n\n[Q]: Concept: dog, Relatum: collar.\n[A]: mero\n\nA dog\'s collar is a meronym of the concept "dog." A collar is a piece of equipment worn around a dog\'s neck, used for identification, leash attachment, or control purposes.\n\n[Q]: Concept: game, Relatum: rule.\n[A]: attri\n\nRules are attributes of the concept "game." Games have established rules that govern their play, making rules an essential aspect or feature of games.\n\n[Q]: Concept: car, Relatum: tire.\n[A]: mero\n\nA car\'s tire is a meronym of the concept "car." Tires are essential parts of a car, providing traction and enabling the vehicle to move.\n\n[Q]: Concept: book, Relatum: publisher.\n[A]: hyper\n\nA publisher is a hypernym of the concept "book." Publishers produce and distribute books, making them a category that includes books as one of its instances.\n\n[Q]: Concept: aircraft, Relatum: runway.\n[A]: event\n\nAn aircraft\'s use of a runway is an event relation. An aircraft takes off or lands on a runway, making the runway an essential location for the performance of these aviation events.\n\n[Q]: Concept: city, Relatum: monument.\n[A]: meronyms\n\nMonuments are meronyms of the concept "city." Cities contain various monuments as physical structures commemorating historical events, people, or ideals, making them integral parts of the urban landscape.\n\n[Q]: Concept: computer, Relatum: software.\n[A]: hyper\n\nSoftware is a hypernym of the concept "computer." Computers run software applications, making software a category that includes computer programs as one of its instances.\n\n[Q]: Concept: cake, Relatum: bakery display case.\n[A]: location\n\nThe bakery display case is a location for the concept "cake." Cakes are often displayed in bakery cases to be viewed and purchased by customers, making the display case an external context or setting for cakes. This relation is not one of the listed options (coord, hyper, mero, attri, event), but it can be considered a spatial relation or context instead.\n\n[Q]: Concept: tree, Relatum: leaf fall.\n[A]: event\n\nTree leaf fall is an event relation. Leaf fall is the seasonal shedding of leaves from trees, which is an essential part of the tree\'s life cycle and an event that affects the forest ecosystem.\n\n[Q]: Concept: book, Relatum: author.\n[A]: hypernym\n\nAn author is a hypernym of the concept "book." A book is an instance of literary work created by an author, making authors the creators of books and a broader category that includes them.\n\n[Q]: Concept: computer, Relatum: keyboard layout.\n[A]: attribute\n\nKeyboard layout is an attribute of the concept "computer." Keyboard layout refers to the arrangement of keys on a computer keyboard, which can influence the typing experience and affect user productivity.\n\n[Q]: Concept: car, Relatum: gas station.\n[A]: location\n\nA gas station is a location for the concept "car." Cars require fuel to operate, and gas stations provide a convenient place for drivers to refuel their vehicles, making the gas station an external context or setting</s>']
+================
+================
+all_generated_responses
+================
+================
+[['attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic material, so the relation between "screwdriver" (concept) and "plastic" (relatum) is an attribute relation.\n\n[Q]: Concept: elephant, Relatum: trunk.\n[A]: mero\n\n\n[Q]: Concept: celebration, Relatum: party.\n[A]: coord\n\n\n[Q]: Concept: lion, Relatum: king.\n[A]: hyper\n\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: hyper\n\n\n[Q]: Concept: tree, Relatum: bark.\n[A]: mero\n\n\n[Q]: Concept: laughter, Relatum: sound.\n[A]: event\n\n\n[Q]: Concept: book, Relatum: random\n[A]: random\n\n\nIn this example, there\'s no semantic relationship between "book" (concept) and "random" (relatum). "Random" does not belong to any of the predefined semantic classes (coordinate, hypernym, meronym, attribute, event) that describe the relationship between "book" and any possible relatum. Hence, the relation is "random."', 'attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic material, so the relation is one of attribution.\n\n[Q]: Concept: lion, Relatum: king.\n[A]: hyper\n\n\n[Q]: Concept: cell, Relatum: membrane.\n[A]: mero\n\n\n[Q]: Concept: birthday, Relatum: celebration.\n[A]: event\n\n\n[Q]: Concept: tree, Relatum: leaf.\n[A]: mero\n\n\n[Q]: Concept: bicycle, Relatum: chain.\n[A]: mero\n\n\n[Q]: Concept: storm, Relatum: lightning.\n[A]: event\n\n\n[Q]: Concept: computer, Relatum: keyboard.\n[A]: meronyms or hypernym (depending on the perspective)\n- Meronymy: A keyboard is a physical component of a computer system, making it a part or meronym.\n- Hypernymy: From a broader perspective, a keyboard can be considered a type of input device, making "keyboard" a hypernym for "computer" (since a computer is a type of system that can use a keyboard as an input device).\n\n[Q]: Concept: table, Relatum: leaf.\n[A]: mero\n\n\n[Q]: Concept: dance, Relatum: ballet.\n[A]: hyper\n\n\n[Q]: Concept: book, Relatum: pages.\n[A]: mero\n\n\n[Q]: Concept: car, Relatum: engine.\n[A]: mero\n\n\n[Q]: Concept: bird, Relatum: wing.\n[A]: meronyms or attribute (depending on the perspective)\n- Meronymy: A wing is a body part of a bird, making it a meronym.\n- Attribution: Alternatively, "wing" can be considered an attribute because a bird is defined by having wings, rather than every bird having a specific wing as a part. However, the meronym relation is more accurate since wings are physical components.\n\n[Q]: Concept: artist, Relatum: painting.\n[A]: event or hypernym\n- Event: An artist can create a painting as an action or event.\n- Hypernym: Alternatively, "painting" can be considered a type of art work, making it a hypernym for "artist" (since an artist creates various types of artworks, including paintings).\n\n[Q]: Concept: pizza, Relatum: cheese.\n[A]: attribute\n\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attribute\n\n\n[Q]: Concept: guitar, Relatum: chord.\n[A]: event or attribute\n- Event: Playing a chord on a guitar is an action or event.\n- Attribute: Alternatively, a chord can be considered an attribute since it describes the harmonious combination of notes played on the guitar at a given time.\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: hypernym\n\n\n[Q]: Concept: computer, Relatum: mouse.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A mouse is a peripheral device that is a physical component of a computer system, making it a meronym.\n- Hypernymy: Alternatively, a mouse can be considered a type of pointing device, making "mouse" a hypernym for "computer" (since a computer can use various types of pointing devices, including a mouse).\n\n[Q]: Concept: city, Relatum: building.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: library.\n[A]: hypernym\n\n\n[Q]: Concept: dog, Relatum: bark.\n[A]: event\n\n\n[Q]: Concept: computer, Relatum: monitor.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: software.\n[A]: hypernym\n\n\n[Q]: Concept: car, Relatum: gasoline.\n[A]: attribute\n\n\n[Q]: Concept: computer, Relatum: keyboard layout.\n[A]: attribute\n\n\n[Q]: Concept: computer, Relatum: virus.\n[A]: event or hypernym\n- Event: A computer can become infected by a virus as an action or event.\n- Hypernym: Alternatively, a computer virus can be considered a type of malware, making "virus" a hypernym for "computer" (since a computer can host various types of malware, including viruses).\n\n[Q]: Concept: computer, Relatum: network.\n[A]: hypernym\n\n\n[Q]: Concept: computer, Relatum: printer.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A printer is a peripheral device that is a physical component of a computer system, making it a meronym.\n- Hypernymy: Alternatively, a printer can be considered a type of output device, making "printer" a hypernym for "computer" (since a computer can use various types of output devices, including printers).\n\n[Q]: Concept: computer, Relatum: hard drive.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: RAM.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: CPU.\n[A]: hypernym\n\n\n[Q]: Concept: computer, Relatum: motherboard.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: power supply.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: cooling system.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: case.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: graphics card.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: battery.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: fan.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: speaker.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: microphone.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: modem.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A modem is a peripheral device that is a physical component of a computer system, making it a meronym.\n- Hypernymy: Alternatively, a modem can be considered a type of communication device, making "modem" a hypernym for "computer" (since a computer can use various types of communication devices, including modems).\n\n[Q]: Concept: computer, Relatum: router.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A router is a networking device that is a physical component of a computer network, making it a meronym.\n- Hypernymy: Alternatively, a router can be considered a type of networking device, making "router" a hypernym for "computer" (since a computer can use various types of networking devices, including routers).\n\n[Q]: Concept: computer, Relatum: switch.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A switch is a networking device that is a physical component of a computer network, making it a meronym.\n- Hypernymy: Alternatively, a switch can be considered a type of networking device, making "switch" a hypernym for "computer" (since a computer can use various types of networking devices, including switches).\n\n[Q]: Concept: computer, Relatum: hub.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A hub is a networking device that is a physical component of a computer network, making it a meronym.\n- Hypernymy: Alternatively, a hub can be considered a type of networking device, making "hub" a hypernym for "computer" (since a computer can use various types of networking devices, including hubs).\n\n[Q]: Concept: computer, Relatum: cable.\n[A]: meronym or hypernym (depending on the perspective)\n- Meronymy: A cable is a physical component that connects various parts of a computer system, making it a meronym.\n- Hypernymy: Alternatively, a cable can be considered a type of connector or transmission medium, making "cable" a hypernym for "computer" (since a computer relies on various types of c', 'attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic, describing one of its characteristics or qualities. Therefore, the relation is "attribute" (attri).\n\n[Q]: Concept: elephant, Relatum: pachyderm.\n[A]: coord\n\n\n[Q]: Concept: oak tree, Relatum: acorn.\n[A]: mero\n\n\n[Q]: Concept: explosion, Relatum: event.\n[A]: event\n\n\n[Q]: Concept: tiger, Relatum: predator.\n[A]: hypernym\n\n\n[Q]: Concept: computer, Relatum: random.\n[A]: random\n\n\n[Q]: Concept: song, Relatum: melody.\n[A]: meronym\n\n\n[Q]: Concept: chair, Relatum: cushion.\n[A]: meronym\n\n\n[Q]: Concept: bird, Relatum: nest.\n[A]: event (or mero)\n\n\nExplanation: A bird building a nest is an event, but a nest can also be considered a meronym (part) of a bird\'s habitat or nesting site. In this context, I will classify it as an event since the focus is on the action of building, but meronym could also apply if we consider the nest as a part of the bird\'s life cycle or existence.\n\n[Q]: Concept: diamond, Relatum: gemstone.\n[A]: hypernym\n\n\n[Q]: Concept: triangle, Relatum: equilateral.\n[A]: attribute\n\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: meronym\n\n\n[Q]: Concept: piano, Relatum: keyboard.\n[A]: meronym\n\n\n[Q]: Concept: library, Relatum: book.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: satellite.\n[A]: meronym\n\n\n[Q]: Concept: dog, Relatum: pedigree.\n[A]: hypernym (or coord)\n\n\nExplanation: A pedigree is a record of a dog\'s ancestry or lineage, making it a hypernym (category) or coordinate (belonging to the same semantic class) term. In this context, I will classify it as a hypernym since a pedigree provides information about the breed and genetic background of a specific dog, making it a broader category that includes various breeds and individual dogs. However, it could also be considered coordinate since both dogs and pedigrees relate to the concept of canine heritage.\n\n[Q]: Concept: apple, Relatum: red.\n[A]: attribute\n\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: hypernym\n\n\n[Q]: Concept: car, Relatum: engine.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: chapter.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: leaf.\n[A]: meronym\n\n\n[Q]: Concept: fire, Relatum: blaze.\n[A]: event\n\n\n[Q]: Concept: computer, Relatum: software.\n[A]: hypernym\n\n\n[Q]: Concept: pizza, Relatum: cheese.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: title.\n[A]: attribute\n\n\n[Q]: Concept: dog, Relatum: breeder.\n[A]: hypernym\n\n\nExplanation: A breeder is a person or organization that raises and produces animals, including dogs. In this context, "breeder" is a hypernym since it is a broader category that includes individuals or organizations that specialize in producing specific breeds of dogs, as well as those that breed animals for research, conservation, or other purposes. The relation between "dog" and "breeder" is hierarchical, with "breeder" being a more general term that encompasses various types and purposes of dog breeding.\n\n[Q]: Concept: game, Relatum: rules.\n[A]: attribute\n\n\n[Q]: Concept: television, Relatum: channel.\n[A]: hypernym\n\n\n[Q]: Concept: computer, Relatum: memory.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: author.\n[A]: attribute\n\n\n[Q]: Concept: artist, Relatum: medium.\n[A]: attribute\n\n\n[Q]: Concept: computer, Relatum: keyboard layout.\n[A]: attribute\n\n\n[Q]: Concept: car, Relatum: transmission.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: bark.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: frosting color.\n[A]: attribute\n\n\n[Q]: Concept: library, Relatum: librarian.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: orbit.\n[A]: event\n\n\n[Q]: Concept: computer, Relatum: operating system.\n[A]: hypernym\n\n\n[Q]: Concept: pizza, Relatum: topping.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: genre.\n[A]: attribute\n\n\n[Q]: Concept: artist, Relatum: style.\n[A]: attribute\n\n\n[Q]: Concept: computer, Relatum: graphics card.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: canopy.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: filling.\n[A]: meronym\n\n\n[Q]: Concept: library, Relatum: collection.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: moons.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: CPU cooler.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: roots.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: icing.\n[A]: meronym\n\n\n[Q]: Concept: library, Relatum: reference section.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: rings.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: power supply.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: branches.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: frosting texture.\n[A]: attribute\n\n\n[Q]: Concept: library, Relatum: archives.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: atmosphere.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: motherboard.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: foliage.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: decorations.\n[A]: meronym\n\n\n[Q]: Concept: library, Relatum: reading room.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: magnetic field.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: RAM.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: trunk.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: layers.\n[A]: meronym\n\n\n[Q]: Concept: library, Relatum: index.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: core.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: cache.\n[A]: meronym\n\n\n[Q]: Concept: tree, Relatum: bark texture.\n[A]: attribute\n\n\n[Q]: Concept: cake, Relatum: flavors.\n[A]: attribute\n\n\n[Q]: Concept: library, Relatum: catalog.\n[A]: meronym\n\n\n[Q]: Concept: planet, Relatum: magnetosphere.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: ROM.\n[A]: meronym\n\n\n[Q]: Concept:', 'attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic material, so the relation is one of attribute.\n\n[Q]: Concept: lion, Relatum: king.\n[A]: hyper\n\n\n[Q]: Concept: wheel, Relatum: part.\n[A]: mero\n\n\n[Q]: Concept: graduation, Relatum: ceremony.\n[A]: event\n\n\n[Q]: Concept: tree, Relatum: orchard.\n[A]: hyper\n\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: hyper\n\n\n[Q]: Concept: table, Relatum: leaf.\n[A]: random\n\nIn this case, there is no semantic relation between "table" and "leaf." A table is a furniture piece for placing objects, while a leaf is an expansive flat structure found on plants. They belong to distinct semantic classes. Therefore, the relation is random.\n\n[Q]: Concept: elephant, Relatum: trunk.\n[A]: mero\n\nAn elephant\'s trunk is a part of its body, making it a meronym of the concept "elephant."\n\n[Q]: Concept: car, Relatum: engine.\n[A]: hyper\n\nA car\'s engine is a hypernym of the concept "car." A car is a type of vehicle, and an engine is the power source common to many vehicles, including cars.\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attri\n\nFrosting is an attribute of a cake, as it is a topping or decoration that can be applied to the cake.\n\n[Q]: Concept: city, Relatum: park.\n[A]: mero\n\nA park is a meronym of a city. Parks are physical parts or components of cities, providing green spaces for residents and visitors.\n\n[Q]: Concept: book, Relatum: chapter.\n[A]: hyper\n\nA chapter is a hypernym of the concept "book." A book is a collection of chapters, with each chapter contributing to the overall content of the book.\n\n[Q]: Concept: aircraft, Relatum: flight.\n[A]: event\n\nAn aircraft\'s flight is an event relation. An aircraft performs the action of flying, and a flight refers to the journey or transportation provided by an aircraft.\n\n[Q]: Concept: chair, Relatum: cushion.\n[A]: mero\n\nA chair\'s cushion is a meronym of the concept "chair." The cushion is a part of a chair that provides comfort and support for the person sitting on it.\n\n[Q]: Concept: dog, Relatum: bark.\n[A]: event\n\nA dog\'s barking is an event relation. Barking is an action or behavior performed by dogs, conveying various messages such as alarm, greeting, or aggression.\n\n[Q]: Concept: cake, Relatum: bakery.\n[A]: hyper\n\nA bakery is a hypernym of the concept "cake." A bakery is a place where cakes and other baked goods are produced and sold, making it a category that includes cakes as one of its instances.\n\n[Q]: Concept: computer, Relatum: keyboard.\n[A]: mero\n\nA computer\'s keyboard is a meronym of the concept "computer." The keyboard is a physical input device that serves as an essential part of a computer system, allowing users to enter data and instructions.\n\n[Q]: Concept: game, Relatum: player.\n[A]: meronyms\n\nPlayers are meronyms of the concept "game." A game requires participants, and players are the individuals who engage in the game, making them parts or components in the sense of agents involved in the activity.\n\n[Q]: Concept: tree, Relatum: forest.\n[A]: hyper\n\nA forest is a hypernym of the concept "tree." A forest is a large collection of trees, making it a category that includes trees as one of its instances.\n\n[Q]: Concept: car, Relatum: fuel.\n[A]: hyper\n\nFuel is a hypernym of the concept "car." A car requires fuel to operate, and fuel is a category that includes various types of energy sources, such as gasoline, diesel, or electricity, that can power cars.\n\n[Q]: Concept: cellphone, Relatum: texting.\n[A]: event\n\nTexting is an event relation for the concept "cellphone." Texting is an action or activity performed using a cellphone, allowing users to send and receive messages.\n\n[Q]: Concept: cake, Relatum: frosted.\n[A]: attri\n\nFrosted is an attribute of the concept "cake." A frosted cake has frosting applied to its surface, making it an adjective that describes a specific state or quality of the cake.\n\n[Q]: Concept: book, Relatum: library.\n[A]: hyper\n\nA library is a hypernym of the concept "book." A library is a collection of books, making it a category that includes books as one of its instances.\n\n[Q]: Concept: computer, Relatum: mouse.\n[A]: mero\n\nA computer\'s mouse is a meronym of the concept "computer." The mouse is a peripheral device that serves as the primary pointing and clicking input device for a computer system.\n\n[Q]: Concept: dog, Relatum: collar.\n[A]: mero\n\nA dog\'s collar is a meronym of the concept "dog." A collar is a piece of equipment worn around a dog\'s neck, used for identification, leash attachment, or control purposes.\n\n[Q]: Concept: game, Relatum: rule.\n[A]: attri\n\nRules are attributes of the concept "game." Games have established rules that govern their play, making rules an essential aspect or feature of games.\n\n[Q]: Concept: car, Relatum: tire.\n[A]: mero\n\nA car\'s tire is a meronym of the concept "car." Tires are essential parts of a car, providing traction and enabling the vehicle to move.\n\n[Q]: Concept: book, Relatum: publisher.\n[A]: hyper\n\nA publisher is a hypernym of the concept "book." Publishers produce and distribute books, making them a category that includes books as one of its instances.\n\n[Q]: Concept: aircraft, Relatum: runway.\n[A]: event\n\nAn aircraft\'s use of a runway is an event relation. An aircraft takes off or lands on a runway, making the runway an essential location for the performance of these aviation events.\n\n[Q]: Concept: city, Relatum: monument.\n[A]: meronyms\n\nMonuments are meronyms of the concept "city." Cities contain various monuments as physical structures commemorating historical events, people, or ideals, making them integral parts of the urban landscape.\n\n[Q]: Concept: computer, Relatum: software.\n[A]: hyper\n\nSoftware is a hypernym of the concept "computer." Computers run software applications, making software a category that includes computer programs as one of its instances.\n\n[Q]: Concept: cake, Relatum: bakery display case.\n[A]: location\n\nThe bakery display case is a location for the concept "cake." Cakes are often displayed in bakery cases to be viewed and purchased by customers, making the display case an external context or setting for cakes. This relation is not one of the listed options (coord, hyper, mero, attri, event), but it can be considered a spatial relation or context instead.\n\n[Q]: Concept: tree, Relatum: leaf fall.\n[A]: event\n\nTree leaf fall is an event relation. Leaf fall is the seasonal shedding of leaves from trees, which is an essential part of the tree\'s life cycle and an event that affects the forest ecosystem.\n\n[Q]: Concept: book, Relatum: author.\n[A]: hypernym\n\nAn author is a hypernym of the concept "book." A book is an instance of literary work created by an author, making authors the creators of books and a broader category that includes them.\n\n[Q]: Concept: computer, Relatum: keyboard layout.\n[A]: attribute\n\nKeyboard layout is an attribute of the concept "computer." Keyboard layout refers to the arrangement of keys on a computer keyboard, which can influence the typing experience and affect user productivity.\n\n[Q]: Concept: car, Relatum: gas station.\n[A]: location\n\nA gas station is a location for the concept "car." Cars require fuel to operate, and gas stations provide a convenient place for drivers to refuel their vehicles, making the gas station an external context or setting', 'attri: In this case, "plastic" is an attribute of the concept "screwdriver." A screwdriver can be made of plastic, describing one of its characteristics or qualities. Therefore, the relation is "attribute" (attri).\n\n[Q]: Concept: library, Relatum: repository.\n[A]: hyper\n\n\n[Q]: Concept: automobile, Relatum: engine.\n[A]: meronyms\n\n\n[Q]: Concept: symphony, Relatum: performance.\n[A]: event\n\n\n[Q]: Concept: apple, Relatum: seed.\n[A]: meronym\n\n\n[Q]: Concept: tiger, Relatum: stripes.\n[A]: attri\n\n\n[Q]: Concept: piano, Relatum: random\n[A]: In this case, there is no evident semantic relationship between "piano" and "random." Piano is a musical instrument, and "random" is a statistical term implying an absence of pattern or predictability. There is no coord, hyper, mero, attri, or event relationship between these concepts. The relation is "random."\n\n\n[Q]: Concept: lake, Relatum: shoreline.\n[A]: meronyms\n\n\n[Q]: Concept: computer, Relatum: keyboard.\n[A]: meronym\n\n\n[Q]: Concept: octopus, Relatum: tentacles.\n[A]: meronym\n\n\n[Q]: Concept: game, Relatum: fun.\n[A]: attri\n\n\n[Q]: Concept: bird, Relatum: nest.\n[A]: meronym\n\n\n[Q]: Concept: book, Relatum: cover.\n[A]: meronym\n\n\n[Q]: Concept: house, Relatum: roof.\n[A]: meronym\n\n\n[Q]: Concept: car, Relatum: tire.\n[A]: meronym\n\n\n[Q]: Concept: violin, Relatum: bow.\n[A]: tool, instrument - instrument is hypernym of bow (tool used to play violin)\n\n\n[Q]: Concept: cat, Relatum: purring.\n[A]: event\n\n\n[Q]: Concept: tree, Relatum: bark.\n[A]: attribute\n\n\n[Q]: Concept: diamond, Relatum: valuable.\n[A]: attribute\n\n\n[Q]: Concept: elephant, Relatum: trunk.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attribute\n\n\n[Q]: Concept: horse, Relatum: mane.\n[A]: meronym\n\n\n[Q]: Concept: pizza, Relatum: sauce.\n[A]: attribute\n\n\n[Q]: Concept: watch, Relatum: band.\n[A]: meronym\n\n\n[Q]: Concept: painting, Relatum: canvas.\n[A]: meronym\n\n\n[Q]: Concept: camera, Relatum: lens.\n[A]: meronym\n\n\n[Q]: Concept: balloon, Relatum: helium.\n[A]: contained substance - hypernym: gas (helium is a type of gas that is used to fill balloons)\n\n\n[Q]: Concept: fish, Relatum: gills.\n[A]: organ\n\n\n[Q]: Concept: computer, Relatum: monitor.\n[A]: meronym\n\n\n[Q]: Concept: cake, Relatum: frosting.\n[A]: attribute\n\n\n[Q]: Concept: tree, Relatum: leaf.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: mouse.\n[A]: tool, instrument - mouse (input device) is a tool used to interact with a computer, making it a hypernym of mouse in this context.\n\n\n[Q]: Concept: car, Relatum: fuel.\n[A]: contained substance - hypernym: energy source (fuel is a type of energy source that powers cars)\n\n\n[Q]: Concept: dog, Relatum: barking.\n[A]: event\n\n\n[Q]: Concept: cake, Relatum: bakery.\n[A]: location - hypernym: establishment (bakery is a type of establishment where cakes are made and sold)\n\n\n[Q]: Concept: apple, Relatum: orchard.\n[A]: location - hypernym: farm (an orchard is a type of farm that specializes in growing apples)\n\n\n[Q]: Concept: bird, Relatum: feathers.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: keyboard layout.\n[A]: design, pattern - attribute (keyboard layout is a design feature or attribute of a computer keyboard)\n\n\n[Q]: Concept: house, Relatum: foundation.\n[A]: structure, component - meronym (a house\'s foundation is a structural component that supports the entire building)\n\n\n[Q]: Concept: cow, Relatum: milking.\n[A]: event\n\n\n[Q]: Concept: book, Relatum: title.\n[A]: attribute\n\n\n[Q]: Concept: piano, Relatum: pedals.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: processor.\n[A]: component, organ - hypernym: central processing unit (CPU is a central component or organ of a computer responsible for executing instructions)\n\n\n[Q]: Concept: car, Relatum: steering wheel.\n[A]: control device - meronym (a car\'s steering wheel is a control device and a component of the vehicle)\n\n\n[Q]: Concept: apple, Relatum: core.\n[A]: meronym\n\n\n[Q]: Concept: computer, Relatum: memory.\n[A]: container, storage - hypernym: data storage (computer memory is a type of data storage used to store information)\n\n\n[Q]: Concept: bird, Relatum: beak.\n[A]: body part, feature - meronym (a bird\'s beak is a body part and a distinct feature of the bird)\n\n\n[Q]: Concept: house, Relatum: chimney.\n[A]: structure, component - meronym (a house\'s chimney is a structural component that facilitates the removal of exhaust gases from the building)\n\n\n[Q]: Concept: computer, Relatum: motherboard.\n[A]: component, organ - hypernym: main circuit board (motherboard is the main circuit board of a computer, serving as the central hub for various components)\n\n\n[Q]: Concept: car, Relatum: transmission.\n[A]: system, component - hypernym: powertrain (transmission is a component of a car\'s powertrain, which also includes the engine and drivetrain)\n\n\n[Q]: Concept: apple, Relatum: cider.\n[A]: product - hypernym: beverage (cider is a type of beverage made from apples)\n\n\n[Q]: Concept: computer, Relatum: monitor resolution.\n[A]: characteristic, feature - attribute (monitor resolution is a characteristic or feature of a computer monitor)\n\n\n[Q]: Concept: house, Relatum: attic.\n[A]: space, area - meronym (an attic is a space or area within a house, typically used for storage)\n\n\n[Q]: Concept: car, Relatum: fuel efficiency.\n[A]: characteristic, feature - attribute (fuel efficiency is a characteristic or feature of a car, indicating how well it uses fuel)\n\n\n[Q]: Concept: cow, Relatum: milk production.\n[A]: process, event - event (milk production is a biological process or event that occurs in cows)\n\n\n[Q]: Concept: book, Relatum: genre.\n[A]: category - hypernym (genre is a literary category or genre to which a book belongs)\n\n\n[Q]: Concept: computer, Relatum: RAM.\n[A]: memory, storage - component, organ - hypernym: random access memory (RAM is a type of random access memory used for storing data that can be accessed directly)\n\n\n[Q]: Concept: car, Relatum: tires\' tread depth.\n[A]: characteristic, feature - attribute (tires\' tread depth is a characteristic or feature of a car\'s tires, indicating their remaining thickness)\n\n\n[Q]: Concept: bird, Relatum: migration.\n[A]: process, event - event (migration is a seasonal movement of birds from one region to another)\n\n\n[Q]: Concept: house, Relatum: foundation type.\n[']]
+================
+================
+all_rm_scores
+================
+================
+[[1.4427199363708496, -0.39065608382225037, -1.619584321975708, -4.127877712249756, 4.695397853851318]]
+================
+================
+chosen_input_ids
+================
+================
+tensor([[12143, 18723,   298,   396,  2992, 28748, 15996, 28748, 28716,   763,
+          3250, 28748,  2883,   369,   349,  7885,   486,   442,   395,   272,
+          5935, 28723,  1047,   272,  1016,   270,   383,   304,  5935,   460,
+           521,  9646, 28725,   272,  9378,  1444,   706,   349,   464,  9121,
+          4135,  4950,  1575,   574, 11194,   778,  6618, 28725, 11503, 28725,
+           290,  2036, 28725,   998,   373, 28725,  1951, 28725,   304,  5509,
+         28723,    13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 12072,
+         28725,  5855,   270,   383, 28747,  3944, 28723,    13, 28792, 28741,
+          9582,   998,   373,    13,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747,   337,  4755, 28725,  5855,   270,   383, 28747,  8114,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747, 14693,  8565, 28725,  5855,   270,
+           383, 28747, 10409, 28723,    13, 28792, 28741,  9582,     1,   733,
+         16289, 28793, 12628,   264,  5964,   302,  3085, 28725,  8270,   272,
+          9378,  1444,   706, 28723,   415,   907,  1707,   349,  1987,   272,
+           464,   514,  1358, 28742,   304,   272,  1676,  1707,   349,  1987,
+           272,   464,  3045,   270,   383, 28742,   415,  9378,  1580,   347,
+           624,   302,   272,  2296, 28747,  1001, 28733,  5942,   766,  1082,
+           325, 17213,  4296,   557, 11503, 15416, 28725,  3051,  8095, 28725,
+          6836, 28725,  1951, 28725,   442,  5509, 28723,   330, 17237,  9378,
+         12825,   369,   272,  5935,   304,  1016,   270,   383,  6847,   298,
+           272,  1348,  3546,  6164,   875, 28723,   330, 11503, 15416,  9378,
+         12825,   369,   272,  1016,   270,   383,   349,   264,  8011,   302,
+           690,   272,  5935,   349,   264,  2948,  3335, 28723,   330,  3051,
+          8095,  9378, 12150,   369,  1016,   270,   383,   349,   264,   744,
+         28748,  7451, 28748,  8974, 28748,  9978,   302,   272,  5935, 28723,
+          1094,  6836,  9378,   349,   739,   272,  1016,   270,   383,   349,
+           396,   616,   664,   495,  4072,   288,   396,  6836,   302,   272,
+          5935, 28723,  1094,  1951,  9378,  8288,   739,   272,  1016,   270,
+           383,   349,   264, 12143, 18723,   298,   396,  2992, 28748, 15996,
+         28748, 28716,   763,  3250, 28748,  2883,   369,   349,  7885,   486,
+           442,   395,   272,  5935, 28723,  1047,   272,  1016,   270,   383,
+           304,  5935,   460,   521,  9646, 28725,   272,  9378,  1444,   706,
+           349,   464,  9121,  4135,  4950,  1575,   574, 11194,   778,  6618,
+         28725, 11503, 28725,   290,  2036, 28725,   998,   373, 28725,  1951,
+         28725,   304,  5509, 28723,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747, 12072, 28725,  5855,   270,   383, 28747,  3944, 28723,
+            13, 28792, 28741,  9582,   998,   373,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747,   337,  4755, 28725,  5855,   270,
+           383, 28747,  8114, 28723,    13, 28792, 28741,  9582, 11503,    13,
+            13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 14693,  8565,
+         28725,  5855,   270,   383, 28747, 10409, 28723,    13, 28792, 28741,
+          9582,   733, 28748, 16289, 28793,  1061,   373, 28747,   560,   456,
+          1222, 28725,   345,   452,  3953, 28739,   349,   396,  6836,   302,
+           272,  5935,   345,   824,  2516,  8565,   611,   330, 14693,  8565,
+           541,   347,  1269,   302, 10409, 28725, 18063,   624,   302,   871,
+         15559,   442, 20800, 28723,  8469, 28725,   272,  9378,   349,   345,
+          9122, 28739,   325,  1061,   373,   609,    13,    13, 28792, 28824,
+          9582,  1325,  1358, 28747,  7607, 28725,  5855,   270,   383, 28747,
+         21177, 28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13,
+         28792, 28824,  9582,  1325,  1358, 28747,  4607,  4414, 28725,  5855,
+           270,   383, 28747,  4456, 28723,    13, 28792, 28741,  9582,  3051,
+          2557,  1033,    13,    13,    13, 28792, 28824,  9582,  1325,  1358,
+         28747,  4297, 22326, 28725,  5855,   270,   383, 28747,  4397, 28723,
+            13, 28792, 28741,  9582,  1951,    13,    13,    13, 28792, 28824,
+          9582,  1325,  1358, 28747, 19767, 28725,  5855,   270,   383, 28747,
+         11057, 28723,    13, 28792, 28741,  9582,  3051,  8095,    13,    13,
+            13, 28792, 28824,  9582,  1325,  1358, 28747,   261,  4886, 28725,
+          5855,   270,   383, 28747,  4216,  4384, 28723,    13, 28792, 28741,
+          9582,   998,   373,    13,    13,    13, 28792, 28824,  9582,  1325]],
+       device='cuda:0')
+================
+================
+chosen_attention_mask
+================
+================
+tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]],
+       device='cuda:0')
+================
+================
+chosen_labels
+================
+================
+tensor([[ -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,     1,   733,
+         16289, 28793, 12628,   264,  5964,   302,  3085, 28725,  8270,   272,
+          9378,  1444,   706, 28723,   415,   907,  1707,   349,  1987,   272,
+           464,   514,  1358, 28742,   304,   272,  1676,  1707,   349,  1987,
+           272,   464,  3045,   270,   383, 28742,   415,  9378,  1580,   347,
+           624,   302,   272,  2296, 28747,  1001, 28733,  5942,   766,  1082,
+           325, 17213,  4296,   557, 11503, 15416, 28725,  3051,  8095, 28725,
+          6836, 28725,  1951, 28725,   442,  5509, 28723,   330, 17237,  9378,
+         12825,   369,   272,  5935,   304,  1016,   270,   383,  6847,   298,
+           272,  1348,  3546,  6164,   875, 28723,   330, 11503, 15416,  9378,
+         12825,   369,   272,  1016,   270,   383,   349,   264,  8011,   302,
+           690,   272,  5935,   349,   264,  2948,  3335, 28723,   330,  3051,
+          8095,  9378, 12150,   369,  1016,   270,   383,   349,   264,   744,
+         28748,  7451, 28748,  8974, 28748,  9978,   302,   272,  5935, 28723,
+          1094,  6836,  9378,   349,   739,   272,  1016,   270,   383,   349,
+           396,   616,   664,   495,  4072,   288,   396,  6836,   302,   272,
+          5935, 28723,  1094,  1951,  9378,  8288,   739,   272,  1016,   270,
+           383,   349,   264, 12143, 18723,   298,   396,  2992, 28748, 15996,
+         28748, 28716,   763,  3250, 28748,  2883,   369,   349,  7885,   486,
+           442,   395,   272,  5935, 28723,  1047,   272,  1016,   270,   383,
+           304,  5935,   460,   521,  9646, 28725,   272,  9378,  1444,   706,
+           349,   464,  9121,  4135,  4950,  1575,   574, 11194,   778,  6618,
+         28725, 11503, 28725,   290,  2036, 28725,   998,   373, 28725,  1951,
+         28725,   304,  5509, 28723,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747, 12072, 28725,  5855,   270,   383, 28747,  3944, 28723,
+            13, 28792, 28741,  9582,   998,   373,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747,   337,  4755, 28725,  5855,   270,
+           383, 28747,  8114, 28723,    13, 28792, 28741,  9582, 11503,    13,
+            13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 14693,  8565,
+         28725,  5855,   270,   383, 28747, 10409, 28723,    13, 28792, 28741,
+          9582,   733, 28748, 16289, 28793,  1061,   373, 28747,   560,   456,
+          1222, 28725,   345,   452,  3953, 28739,   349,   396,  6836,   302,
+           272,  5935,   345,   824,  2516,  8565,   611,   330, 14693,  8565,
+           541,   347,  1269,   302, 10409, 28725, 18063,   624,   302,   871,
+         15559,   442, 20800, 28723,  8469, 28725,   272,  9378,   349,   345,
+          9122, 28739,   325,  1061,   373,   609,    13,    13, 28792, 28824,
+          9582,  1325,  1358, 28747,  7607, 28725,  5855,   270,   383, 28747,
+         21177, 28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13,
+         28792, 28824,  9582,  1325,  1358, 28747,  4607,  4414, 28725,  5855,
+           270,   383, 28747,  4456, 28723,    13, 28792, 28741,  9582,  3051,
+          2557,  1033,    13,    13,    13, 28792, 28824,  9582,  1325,  1358,
+         28747,  4297, 22326, 28725,  5855,   270,   383, 28747,  4397, 28723,
+            13, 28792, 28741,  9582,  1951,    13,    13,    13, 28792, 28824,
+          9582,  1325,  1358, 28747, 19767, 28725,  5855,   270,   383, 28747,
+         11057, 28723,    13, 28792, 28741,  9582,  3051,  8095,    13,    13,
+            13, 28792, 28824,  9582,  1325,  1358, 28747,   261,  4886, 28725,
+          5855,   270,   383, 28747,  4216,  4384, 28723,    13, 28792, 28741,
+          9582,   998,   373,    13,    13,    13, 28792, 28824,  9582,  1325]],
+       device='cuda:0')
+================
+================
+rejected_input_ids
+================
+================
+tensor([[12143, 18723,   298,   396,  2992, 28748, 15996, 28748, 28716,   763,
+          3250, 28748,  2883,   369,   349,  7885,   486,   442,   395,   272,
+          5935, 28723,  1047,   272,  1016,   270,   383,   304,  5935,   460,
+           521,  9646, 28725,   272,  9378,  1444,   706,   349,   464,  9121,
+          4135,  4950,  1575,   574, 11194,   778,  6618, 28725, 11503, 28725,
+           290,  2036, 28725,   998,   373, 28725,  1951, 28725,   304,  5509,
+         28723,    13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 12072,
+         28725,  5855,   270,   383, 28747,  3944, 28723,    13, 28792, 28741,
+          9582,   998,   373,    13,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747,   337,  4755, 28725,  5855,   270,   383, 28747,  8114,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747, 14693,  8565, 28725,  5855,   270,
+           383, 28747, 10409, 28723,    13, 28792, 28741,  9582,     1,   733,
+         16289, 28793, 12628,   264,  5964,   302,  3085, 28725,  8270,   272,
+          9378,  1444,   706, 28723,   415,   907,  1707,   349,  1987,   272,
+           464,   514,  1358, 28742,   304,   272,  1676,  1707,   349,  1987,
+           272,   464,  3045,   270,   383, 28742,   415,  9378,  1580,   347,
+           624,   302,   272,  2296, 28747,  1001, 28733,  5942,   766,  1082,
+           325, 17213,  4296,   557, 11503, 15416, 28725,  3051,  8095, 28725,
+          6836, 28725,  1951, 28725,   442,  5509, 28723,   330, 17237,  9378,
+         12825,   369,   272,  5935,   304,  1016,   270,   383,  6847,   298,
+           272,  1348,  3546,  6164,   875, 28723,   330, 11503, 15416,  9378,
+         12825,   369,   272,  1016,   270,   383,   349,   264,  8011,   302,
+           690,   272,  5935,   349,   264,  2948,  3335, 28723,   330,  3051,
+          8095,  9378, 12150,   369,  1016,   270,   383,   349,   264,   744,
+         28748,  7451, 28748,  8974, 28748,  9978,   302,   272,  5935, 28723,
+          1094,  6836,  9378,   349,   739,   272,  1016,   270,   383,   349,
+           396,   616,   664,   495,  4072,   288,   396,  6836,   302,   272,
+          5935, 28723,  1094,  1951,  9378,  8288,   739,   272,  1016,   270,
+           383,   349,   264, 12143, 18723,   298,   396,  2992, 28748, 15996,
+         28748, 28716,   763,  3250, 28748,  2883,   369,   349,  7885,   486,
+           442,   395,   272,  5935, 28723,  1047,   272,  1016,   270,   383,
+           304,  5935,   460,   521,  9646, 28725,   272,  9378,  1444,   706,
+           349,   464,  9121,  4135,  4950,  1575,   574, 11194,   778,  6618,
+         28725, 11503, 28725,   290,  2036, 28725,   998,   373, 28725,  1951,
+         28725,   304,  5509, 28723,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747, 12072, 28725,  5855,   270,   383, 28747,  3944, 28723,
+            13, 28792, 28741,  9582,   998,   373,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747,   337,  4755, 28725,  5855,   270,
+           383, 28747,  8114, 28723,    13, 28792, 28741,  9582, 11503,    13,
+            13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 14693,  8565,
+         28725,  5855,   270,   383, 28747, 10409, 28723,    13, 28792, 28741,
+          9582,   733, 28748, 16289, 28793,  1061,   373, 28747,   560,   456,
+          1222, 28725,   345,   452,  3953, 28739,   349,   396,  6836,   302,
+           272,  5935,   345,   824,  2516,  8565,   611,   330, 14693,  8565,
+           541,   347,  1269,   302, 10409,  3388, 28725,   579,   272,  9378,
+           349,   624,   302,  6836, 28723,    13,    13, 28792, 28824,  9582,
+          1325,  1358, 28747, 27801, 28725,  5855,   270,   383, 28747,  6779,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747, 10297, 28725,  5855,   270,   383,
+         28747,   744, 28723,    13, 28792, 28741,  9582,   290,  2036,    13,
+            13,    13, 28792, 28824,  9582,  1325,  1358, 28747,  7461,   352,
+         28725,  5855,   270,   383, 28747, 16172, 28723,    13, 28792, 28741,
+          9582,  1951,    13,    13,    13, 28792, 28824,  9582,  1325,  1358,
+         28747,  4718, 28725,  5855,   270,   383, 28747,   442,   338,   488,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747,  6074, 28725,  5855,   270,   383,
+         28747, 20846, 28723,    13, 28792, 28741,  9582, 11503,    13,    13,
+            13, 28792, 28824,  9582,  1325,  1358, 28747,  2401, 28725,  5855,
+           270,   383, 28747, 15080, 28723,    13, 28792, 28741,  9582,  5509]],
+       device='cuda:0')
+================
+================
+rejected_attention_mask
+================
+================
+tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]],
+       device='cuda:0')
+================
+================
+rejected_labels
+================
+================
+tensor([[ -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,     1,   733,
+         16289, 28793, 12628,   264,  5964,   302,  3085, 28725,  8270,   272,
+          9378,  1444,   706, 28723,   415,   907,  1707,   349,  1987,   272,
+           464,   514,  1358, 28742,   304,   272,  1676,  1707,   349,  1987,
+           272,   464,  3045,   270,   383, 28742,   415,  9378,  1580,   347,
+           624,   302,   272,  2296, 28747,  1001, 28733,  5942,   766,  1082,
+           325, 17213,  4296,   557, 11503, 15416, 28725,  3051,  8095, 28725,
+          6836, 28725,  1951, 28725,   442,  5509, 28723,   330, 17237,  9378,
+         12825,   369,   272,  5935,   304,  1016,   270,   383,  6847,   298,
+           272,  1348,  3546,  6164,   875, 28723,   330, 11503, 15416,  9378,
+         12825,   369,   272,  1016,   270,   383,   349,   264,  8011,   302,
+           690,   272,  5935,   349,   264,  2948,  3335, 28723,   330,  3051,
+          8095,  9378, 12150,   369,  1016,   270,   383,   349,   264,   744,
+         28748,  7451, 28748,  8974, 28748,  9978,   302,   272,  5935, 28723,
+          1094,  6836,  9378,   349,   739,   272,  1016,   270,   383,   349,
+           396,   616,   664,   495,  4072,   288,   396,  6836,   302,   272,
+          5935, 28723,  1094,  1951,  9378,  8288,   739,   272,  1016,   270,
+           383,   349,   264, 12143, 18723,   298,   396,  2992, 28748, 15996,
+         28748, 28716,   763,  3250, 28748,  2883,   369,   349,  7885,   486,
+           442,   395,   272,  5935, 28723,  1047,   272,  1016,   270,   383,
+           304,  5935,   460,   521,  9646, 28725,   272,  9378,  1444,   706,
+           349,   464,  9121,  4135,  4950,  1575,   574, 11194,   778,  6618,
+         28725, 11503, 28725,   290,  2036, 28725,   998,   373, 28725,  1951,
+         28725,   304,  5509, 28723,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747, 12072, 28725,  5855,   270,   383, 28747,  3944, 28723,
+            13, 28792, 28741,  9582,   998,   373,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747,   337,  4755, 28725,  5855,   270,
+           383, 28747,  8114, 28723,    13, 28792, 28741,  9582, 11503,    13,
+            13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 14693,  8565,
+         28725,  5855,   270,   383, 28747, 10409, 28723,    13, 28792, 28741,
+          9582,   733, 28748, 16289, 28793,  1061,   373, 28747,   560,   456,
+          1222, 28725,   345,   452,  3953, 28739,   349,   396,  6836,   302,
+           272,  5935,   345,   824,  2516,  8565,   611,   330, 14693,  8565,
+           541,   347,  1269,   302, 10409,  3388, 28725,   579,   272,  9378,
+           349,   624,   302,  6836, 28723,    13,    13, 28792, 28824,  9582,
+          1325,  1358, 28747, 27801, 28725,  5855,   270,   383, 28747,  6779,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747, 10297, 28725,  5855,   270,   383,
+         28747,   744, 28723,    13, 28792, 28741,  9582,   290,  2036,    13,
+            13,    13, 28792, 28824,  9582,  1325,  1358, 28747,  7461,   352,
+         28725,  5855,   270,   383, 28747, 16172, 28723,    13, 28792, 28741,
+          9582,  1951,    13,    13,    13, 28792, 28824,  9582,  1325,  1358,
+         28747,  4718, 28725,  5855,   270,   383, 28747,   442,   338,   488,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747,  6074, 28725,  5855,   270,   383,
+         28747, 20846, 28723,    13, 28792, 28741,  9582, 11503,    13,    13,
+            13, 28792, 28824,  9582,  1325,  1358, 28747,  2401, 28725,  5855,
+           270,   383, 28747, 15080, 28723,    13, 28792, 28741,  9582,  5509]],
+       device='cuda:0')
+================
+================
+prompt_input_ids
+================
+================
+tensor([[12143, 18723,   298,   396,  2992, 28748, 15996, 28748, 28716,   763,
+          3250, 28748,  2883,   369,   349,  7885,   486,   442,   395,   272,
+          5935, 28723,  1047,   272,  1016,   270,   383,   304,  5935,   460,
+           521,  9646, 28725,   272,  9378,  1444,   706,   349,   464,  9121,
+          4135,  4950,  1575,   574, 11194,   778,  6618, 28725, 11503, 28725,
+           290,  2036, 28725,   998,   373, 28725,  1951, 28725,   304,  5509,
+         28723,    13,    13, 28792, 28824,  9582,  1325,  1358, 28747, 12072,
+         28725,  5855,   270,   383, 28747,  3944, 28723,    13, 28792, 28741,
+          9582,   998,   373,    13,    13,    13, 28792, 28824,  9582,  1325,
+          1358, 28747,   337,  4755, 28725,  5855,   270,   383, 28747,  8114,
+         28723,    13, 28792, 28741,  9582, 11503,    13,    13,    13, 28792,
+         28824,  9582,  1325,  1358, 28747, 14693,  8565, 28725,  5855,   270,
+           383, 28747, 10409, 28723,    13, 28792, 28741,  9582]],
+       device='cuda:0')
+================
+================
+prompt_attention_mask
+================
+================
+tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1]], device='cuda:0')
+================
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/mistral_dpo_train.py", line 269, in <module>
+    trainer.train()
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/trainer.py", line 1875, in train
+    return inner_training_loop(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/trainer.py", line 2206, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/trainer.py", line 3182, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/dpo_trainer.py", line 1088, in compute_loss
+    loss, metrics = self.get_batch_loss_metrics(model, inputs, train_eval="train")
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/dpo_trainer.py", line 1029, in get_batch_loss_metrics
+    ) = self.concatenated_forward(model, batch)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/dpo_trainer.py", line 975, in concatenated_forward
+    concatenated_batch = self.concatenated_inputs(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/dpo_trainer.py", line 825, in concatenated_inputs
+    kill
+NameError: name 'kill' is not defined
+Exception ignored in: <function tqdm.__del__ at 0x7f766b919b40>
+Traceback (most recent call last):
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/tqdm/std.py", line 1148, in __del__
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/tqdm/std.py", line 1302, in close
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/tqdm/std.py", line 1495, in display
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/tqdm/std.py", line 1151, in __str__
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/tqdm/std.py", line 1453, in format_dict
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/tqdm/utils.py", line 336, in _screen_shape_linux
+TypeError: 'NoneType' object is not callable
+[2024-05-06 12:17:24,700] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 1680695) of binary: /home/wxt/.conda/envs/rl/bin/python
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+Traceback (most recent call last):
+  File "/home/wxt/.conda/envs/rl/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
+    args.func(args)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1060, in launch_command
+    deepspeed_launcher(args)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/launch.py", line 764, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/run.py", line 803, in run
+    elastic_launch(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 135, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/wxt/huatong/TRL_FT/train_code/mistral_dpo_train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-05-06_12:17:24
+  host      : design-agent-09.internal.cloudapp.net
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1680695)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
