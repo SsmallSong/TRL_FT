@@ -140,49 +140,49 @@ if __name__ == "__main__":
     print(train_dataset)
     print("==========================")
 
-    print("==========================")
-    raw_datasets = load_dataset('Anthropic/hh-rlhf')
-    train_dataset = raw_datasets["train"]
-    eval_dataset = raw_datasets["test"]
-    hh_train=train_dataset['chosen']
-    text_list=[]
-    label_list=[]
-    # hh_train=hh_train[0:3]
-    for item in hh_train:
-        split_index = item.rfind('Assistant')
-        if split_index != -1:
-            text_list.append(item[:split_index])
-            label_list.append(item[split_index:])
-        else:
-            # Handle cases where 'Assistant' substring is not found
-            text_list.append(item)
-            label_list.append("")  # Appending an empty string to label_list
+    # print("==========================")
+    # raw_datasets = load_dataset('Anthropic/hh-rlhf')
+    # train_dataset = raw_datasets["train"]
+    # eval_dataset = raw_datasets["test"]
+    # hh_train=train_dataset['chosen']
+    # text_list=[]
+    # label_list=[]
+    # # hh_train=hh_train[0:3]
+    # for item in hh_train:
+    #     split_index = item.rfind('Assistant')
+    #     if split_index != -1:
+    #         text_list.append(item[:split_index])
+    #         label_list.append(item[split_index:])
+    #     else:
+    #         # Handle cases where 'Assistant' substring is not found
+    #         text_list.append(item)
+    #         label_list.append("")  # Appending an empty string to label_list
 
-    train_dataset={}
-    train_dataset['text']=text_list
-    train_dataset['label']=label_list
-    train_dataset = Dataset.from_dict(train_dataset)
-    hh_test=eval_dataset['chosen']
-    text_list=[]
-    label_list=[]
-    # hh_test=hh_test[0:3]
-    for item in hh_test:
-        split_index = item.rfind('Assistant')
+    # train_dataset={}
+    # train_dataset['text']=text_list
+    # train_dataset['label']=label_list
+    # train_dataset = Dataset.from_dict(train_dataset)
+    # hh_test=eval_dataset['chosen']
+    # text_list=[]
+    # label_list=[]
+    # # hh_test=hh_test[0:3]
+    # for item in hh_test:
+    #     split_index = item.rfind('Assistant')
 
-        if split_index != -1:
-            text_list.append(item[:split_index])
-            label_list.append(item[split_index:])
-        else:
-            # Handle cases where 'Assistant' substring is not found
-            text_list.append(item)
-            label_list.append("")  # Appending an empty string to label_list
+    #     if split_index != -1:
+    #         text_list.append(item[:split_index])
+    #         label_list.append(item[split_index:])
+    #     else:
+    #         # Handle cases where 'Assistant' substring is not found
+    #         text_list.append(item)
+    #         label_list.append("")  # Appending an empty string to label_list
 
-    test_dataset={}
-    test_dataset['text']=text_list
-    test_dataset['label']=label_list
-    eval_dataset = Dataset.from_dict(test_dataset)
-    print(train_dataset)
-    print("==========================")
+    # test_dataset={}
+    # test_dataset['text']=text_list
+    # test_dataset['label']=label_list
+    # eval_dataset = Dataset.from_dict(test_dataset)
+    # print(train_dataset)
+    # print("==========================")
     ################
     # Optional rich context managers
     ###############
