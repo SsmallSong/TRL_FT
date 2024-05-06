@@ -133,10 +133,17 @@ if __name__ == "__main__":
     # Dataset
     ################
     print("==========================")
+    raw_datasets = load_dataset('stanfordnlp/imdb')
+    train_dataset = raw_datasets["train"]
+    eval_dataset = raw_datasets["test"]
+    print(raw_datasets)
+    print(train_dataset)
+    print("==========================")
+
+    print("==========================")
     raw_datasets = load_dataset('Anthropic/hh-rlhf')
     train_dataset = raw_datasets["train"]
     eval_dataset = raw_datasets["test"]
-
     hh_train=train_dataset['chosen']
     text_list=[]
     label_list=[]
@@ -174,7 +181,7 @@ if __name__ == "__main__":
     test_dataset['text']=text_list
     test_dataset['label']=label_list
     eval_dataset = Dataset.from_dict(test_dataset)
-    
+    print(train_dataset)
     print("==========================")
     ################
     # Optional rich context managers
