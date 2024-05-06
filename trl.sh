@@ -120,14 +120,16 @@ accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_z
     --model_name_or_path="daryl149/llama-2-7b-hf" \
     --learning_rate 1.41e-6 \
     --per_device_train_batch_size 16 \
-    --gradient_accumulation_steps 6 \
+    --gradient_accumulation_steps 8 \
     --output_dir="/home/wxt/huatong/huggingface/hub/llama-7b-hh-sft" \
     --logging_steps 5 \
     --num_train_epochs 3 \
     --max_steps=-1 \
-    --push_to_hub \
+    --bf16 \
+    --logging_first_step \
     --gradient_checkpointing \
-    --dataset_text_field="text" \
+    --dataset_text_field="text" 2>&1 | tee /home/wxt/huatong/TRL_FT/output/sft_llama2_hhrlhf_train_log.txt 
+
     --packing True\
 
 # python /home/wxt/huatong/TRL_FT/dpo_train.py \
