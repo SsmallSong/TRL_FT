@@ -1,0 +1,743 @@
+[2024-05-06 15:52:48,618] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-05-06 15:52:51,746] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[2024-05-06 15:52:52,363] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-05-06 15:52:52,363] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-05-06 15:52:53,237] [INFO] [partition_parameters.py:345:__exit__] finished initializing model - num_params = 291, num_elems = 7.24B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.44it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.55it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  1.64it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  1.60it/s]
+[2024-05-06 15:52:55,455] [INFO] [partition_parameters.py:345:__exit__] finished initializing model - num_params = 582, num_elems = 14.48B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.58it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.59it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  1.64it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  1.62it/s]
+max_length: 600
+Map (num_proc=96):   0%|          | 0/19766 [00:00<?, ? examples/s]Map (num_proc=96):   0%|          | 49/19766 [00:00<00:40, 484.92 examples/s]Map (num_proc=96):  11%|█▏        | 2272/19766 [00:00<00:01, 13158.14 examples/s]Map (num_proc=96):  55%|█████▍    | 10826/19766 [00:00<00:00, 40694.25 examples/s]Map (num_proc=96):  74%|███████▍  | 14669/19766 [00:00<00:00, 21562.40 examples/s]Map (num_proc=96):  91%|█████████ | 17892/19766 [00:00<00:00, 22480.63 examples/s]Map (num_proc=96): 100%|██████████| 19766/19766 [00:01<00:00, 15970.05 examples/s]
+Map (num_proc=96):   0%|          | 0/994 [00:00<?, ? examples/s]Map (num_proc=96):   3%|▎         | 33/994 [00:00<00:02, 322.29 examples/s]Map (num_proc=96):   9%|▉         | 88/994 [00:00<00:02, 439.90 examples/s]Map (num_proc=96):  42%|████▏     | 413/994 [00:00<00:00, 1676.41 examples/s]Map (num_proc=96):  68%|██████▊   | 674/994 [00:00<00:00, 2035.29 examples/s]Map (num_proc=96): 100%|██████████| 994/994 [00:00<00:00, 1750.03 examples/s]
+Map (num_proc=96):   0%|          | 0/19958 [00:00<?, ? examples/s]Map (num_proc=96):   0%|          | 75/19958 [00:00<00:28, 704.45 examples/s]Map (num_proc=96):   3%|▎         | 534/19958 [00:00<00:06, 2852.74 examples/s]Map (num_proc=96):  38%|███▊      | 7624/19958 [00:00<00:00, 32991.31 examples/s]Map (num_proc=96):  56%|█████▌    | 11116/19958 [00:00<00:00, 24847.11 examples/s]Map (num_proc=96): 100%|██████████| 19958/19958 [00:00<00:00, 29604.70 examples/s]
+Map (num_proc=96):   0%|          | 0/1000 [00:00<?, ? examples/s]Map (num_proc=96):   4%|▍         | 44/1000 [00:00<00:02, 396.64 examples/s]Map (num_proc=96):  10%|▉         | 99/1000 [00:00<00:01, 479.23 examples/s]Map (num_proc=96):  40%|███▉      | 396/1000 [00:00<00:00, 1576.29 examples/s]Map (num_proc=96):  68%|██████▊   | 680/1000 [00:00<00:00, 2059.83 examples/s]Map (num_proc=96): 100%|██████████| 1000/1000 [00:00<00:00, 1756.22 examples/s]
+Map (num_proc=96):   0%|          | 0/19996 [00:00<?, ? examples/s]Map (num_proc=96):   1%|          | 204/19996 [00:00<00:09, 2017.29 examples/s]Map (num_proc=96):   8%|▊         | 1535/19996 [00:00<00:02, 8578.59 examples/s]Map (num_proc=96):  31%|███       | 6110/19996 [00:00<00:00, 24486.89 examples/s]Map (num_proc=96):  43%|████▎     | 8652/19996 [00:00<00:00, 24752.87 examples/s]Map (num_proc=96):  81%|████████  | 16104/19996 [00:00<00:00, 42328.53 examples/s]Map (num_proc=96): 100%|██████████| 19996/19996 [00:01<00:00, 16704.50 examples/s]
+Map (num_proc=96):   0%|          | 0/1000 [00:00<?, ? examples/s]Map (num_proc=96):   2%|▏         | 23/1000 [00:00<00:05, 176.26 examples/s]Map (num_proc=96):  18%|█▊        | 176/1000 [00:00<00:00, 832.42 examples/s]Map (num_proc=96):  50%|█████     | 500/1000 [00:00<00:00, 1809.44 examples/s]Map (num_proc=96):  78%|███████▊  | 780/1000 [00:00<00:00, 2112.72 examples/s]Map (num_proc=96): 100%|██████████| 1000/1000 [00:00<00:00, 1742.26 examples/s]
+Parameter 'function'=<bound method DPOTrainer.tokenize_row of <trl.trainer.dpo_trainer.DPOTrainer object at 0x7f9851c41930>> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+Map:   0%|          | 0/1 [00:00<?, ? examples/s]Map: 100%|██████████| 1/1 [00:00<00:00, 83.66 examples/s]
+Map:   0%|          | 0/10 [00:00<?, ? examples/s]Map: 100%|██████████| 10/10 [00:00<00:00, 151.97 examples/s]
+[2024-05-06 15:53:11,855] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.14.2, git-hash=unknown, git-branch=unknown
+[2024-05-06 15:53:11,866] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2024-05-06 15:53:11,867] [INFO] [logging.py:96:log_dist] [Rank 0] Creating ZeRO Offload
+[2024-05-06 15:53:12,018] [INFO] [utils.py:779:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2024-05-06 15:53:12,019] [INFO] [utils.py:780:see_memory_usage] MA 28.48 GB         Max_MA 29.47 GB         CA 29.81 GB         Max_CA 30 GB 
+[2024-05-06 15:53:12,019] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 15.08 GB, percent = 1.7%
+Parameter Offload: Total persistent parameters: 266240 in 65 params
+[2024-05-06 15:53:12,148] [INFO] [utils.py:779:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2024-05-06 15:53:12,149] [INFO] [utils.py:780:see_memory_usage] MA 28.48 GB         Max_MA 28.48 GB         CA 29.81 GB         Max_CA 30 GB 
+[2024-05-06 15:53:12,149] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 15.08 GB, percent = 1.7%
+[2024-05-06 15:53:12,150] [INFO] [config.py:996:print] DeepSpeedEngine configuration:
+[2024-05-06 15:53:12,150] [INFO] [config.py:1000:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2024-05-06 15:53:12,150] [INFO] [config.py:1000:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2024-05-06 15:53:12,150] [INFO] [config.py:1000:print]   amp_enabled .................. False
+[2024-05-06 15:53:12,150] [INFO] [config.py:1000:print]   amp_params ................... False
+[2024-05-06 15:53:12,150] [INFO] [config.py:1000:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2024-05-06 15:53:12,150] [INFO] [config.py:1000:print]   bfloat16_enabled ............. True
+[2024-05-06 15:53:12,150] [INFO] [config.py:1000:print]   bfloat16_immediate_grad_update  False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   checkpoint_parallel_write_pipeline  False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   checkpoint_tag_validation_enabled  True
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   checkpoint_tag_validation_fail  False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f9814083cd0>
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   communication_data_type ...... None
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   compile_config ............... enabled=False backend='inductor' kwargs={}
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   curriculum_enabled_legacy .... False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   curriculum_params_legacy ..... False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   data_efficiency_enabled ...... False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   dataloader_drop_last ......... False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   disable_allgather ............ False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   dump_state ................... False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   dynamic_loss_scale_args ...... None
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   eigenvalue_enabled ........... False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   eigenvalue_gas_boundary_resolution  1
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   eigenvalue_layer_num ......... 0
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   eigenvalue_max_iter .......... 100
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   eigenvalue_stability ......... 1e-06
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   eigenvalue_tol ............... 0.01
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   eigenvalue_verbose ........... False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   elasticity_enabled ........... False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   fp16_auto_cast ............... None
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   fp16_enabled ................. False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   fp16_master_weights_and_gradients  False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   global_rank .................. 0
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   grad_accum_dtype ............. None
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   gradient_accumulation_steps .. 8
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   gradient_clipping ............ 0.0
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   gradient_predivide_factor .... 1.0
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   graph_harvesting ............. False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   initial_dynamic_scale ........ 1
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   load_universal_checkpoint .... False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   loss_scale ................... 1.0
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   memory_breakdown ............. False
+[2024-05-06 15:53:12,151] [INFO] [config.py:1000:print]   mics_hierarchial_params_gather  False
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   mics_shard_size .............. -1
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   optimizer_legacy_fusion ...... False
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   optimizer_name ............... None
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   optimizer_params ............. None
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   pld_enabled .................. False
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   pld_params ................... False
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   prescale_gradients ........... False
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   scheduler_name ............... None
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   scheduler_params ............. None
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   seq_parallel_communication_data_type  torch.float32
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   sparse_attention ............. None
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   sparse_gradients_enabled ..... False
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   steps_per_print .............. inf
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   train_batch_size ............. 8
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   train_micro_batch_size_per_gpu  1
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   use_data_before_expert_parallel_  False
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   use_node_local_storage ....... False
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   wall_clock_breakdown ......... False
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   weight_quantization_config ... None
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   world_size ................... 1
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   zero_allow_untested_optimizer  False
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500,000,000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='none', nvme_path=None, buffer_count=5, buffer_size=100,000,000, max_in_cpu=1,000,000,000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=True stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   zero_enabled ................. True
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   zero_force_ds_cpu_optimizer .. True
+[2024-05-06 15:53:12,152] [INFO] [config.py:1000:print]   zero_optimization_stage ...... 3
+[2024-05-06 15:53:12,152] [INFO] [config.py:986:print_user_config]   json = {
+    "train_batch_size": 8, 
+    "train_micro_batch_size_per_gpu": 1, 
+    "gradient_accumulation_steps": 8, 
+    "zero_optimization": {
+        "stage": 3, 
+        "offload_optimizer": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "offload_param": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "stage3_gather_16bit_weights_on_model_save": true
+    }, 
+    "steps_per_print": inf, 
+    "bf16": {
+        "enabled": true
+    }, 
+    "fp16": {
+        "enabled": false
+    }, 
+    "zero_optimization.reduce_bucket_size": 1.677722e+07, 
+    "zero_optimization.stage3_param_persistence_threshold": 4.096000e+04, 
+    "zero_optimization.stage3_prefetch_bucket_size": 1.509949e+07
+}
+Parameter Offload: Total persistent parameters: 266240 in 65 params
+  0%|          | 0/3 [00:00<?, ?it/s]{'concatenated_input_ids': tensor([[    1,  8290,   368,  2270, 26812,   272,  4735,   302,   574,  6940,
+         28804,     1,   733, 16289, 28793,  8290,   368,  2270, 26812,   272,
+          4735,   302,   574,  6940, 28804,   733, 28748, 16289, 28793, 28737,
+          1580, 15884,   653,   354,   707, 16630, 28725,   562,   315,   837,
+           776,   264,  6074,  2007,  3822,   396, 18278, 10895,  9464, 28725,
+           315,   949, 28742, 28707,   506,   264,  9994,  2659, 28725,  3564,
+           697, 28725,   442,   264,  5277,  9025,   298,  2996,   586,  6940,
+         28723,   315,  1759,  1871,   304,  8270, 14915,  2818,   356, 16292,
+           304,  1178,   315, 28742,   333,   750,  2078, 28723,  1984,   345,
+           267,  2045, 28739,   349,   272,  7153,  4466,   304,  5287,   302,
+           586,  5225,   390,  6740,   486,   586, 24518,   304,  5443, 28723,
+           315,   949, 28742, 28707,   506,   272, 21368,   298,  6217,   442,
+          2996,   378, 28725,   390,   315,   949, 28742, 28707,   506,  3817,
+           495,  9021,   442, 16508, 28723,   851,  5935,   302,  6940, 27203,
+         15588,   298,  3687, 16905, 10637,   302,   716,  2737, 16455,   304,
+          1008, 28733, 15950,  1467, 28723,  1263, 10589, 28725,   456,   541,
+           347,   396,  7677,  8499,   288,  8829,   745,   297, 18831, 28725,
+         20421,   356,  1424,  2366,   846,  1063, 28725, 20968, 28725,   304,
+           272, 11656,   302,  4788, 28723,   661, 28742, 28713,   396,  5853,
+         23083,   302,   272,  2930,  4644,   304,   813,  8280,   298,  2380,
+           272,  4735,   302,   813,  9025, 28723,  1263,   528, 28725,   378,
+         28742, 28713,   776,   264,  5935,  2373,   272, 18745,   302,  2930,
+          2312,  8306, 28725,  1847,   806,   302,  3327,  2659, 28723,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2],
+        [    1,  8290,   368,  2270, 26812,   272,  4735,   302,   574,  6940,
+         28804,     1,   733, 16289, 28793,  8290,   368,  2270, 26812,   272,
+          4735,   302,   574,  6940, 28804,   733, 28748, 16289, 28793, 28737,
+          1580, 16066,  1575,   369,   315,   949, 28742, 28707,   506,   264,
+          3327,  2659,   442, 16508, 28725,   390,   315, 28742, 28719,   776,
+           264,  6074,  2007,  3822,   396, 18278, 10895,  2229, 28723,   315,
+           949, 28742, 28707,   506,   272, 21368,   298,  2996,   586,  1216,
+          6940,  5090, 28723,   315,  1759,  2245,   304,  8270, 14915,  2818,
+           356, 11533,   304,  1871,   315, 28742,   333,   750,  2078,  1938,
+          4154, 28725,   304,   315,   949, 28742, 28707,   506,   264,   907,
+         28733,  2625, 13619,   302,   272,  5277,  1526, 28723,  2993, 28725,
+           315,   541,  5785,  1316,  4372,  4224,   684,  8829,   745,   297,
+         10851,   497,   778,   272,  4735,   302,  6940, 28725,  1259,   390,
+          1395,  1419,   297, 13795, 28725, 10915, 16173, 28725,   442,  1424,
+          2366,   846,  1063, 28723,  1047,   368,   506,  2948,  8829,   745,
+           442, 10469, 16582,   442,  4224,   297,  2273, 28725,  4665,  1601,
+          1933,   298,  4098,   706, 28723,    13,    13,  3840,  1250,   773,
+         28725,   272,  2996,   302,   272,  4735,   302,  6940,   349,   264,
+          3534,   304,  4630,   624,   369,   659, 15386,  1006,  8829,   404,
+           304, 15067,  5473,  3340, 28723,  2909, 17234,  3397,   369,   813,
+          6940,   349,  9676,   578,  5277,   304, 13640, 28725,  1312,  2663,
+         19333,   369,   378,   993,   347,   680,  3817,   495,   442,  8057,
+           297,  4735, 28723,  1387, 28742, 28713,   835,   272,  7677,  8499,
+           288, 10065, 28725,   597,  2979,   477, 10915, 16173, 28725,   369,
+           813, 13875,   304,   660, 13346,   993,  1156,   264,  3905,   297,
+           480, 13887,   272,  4735,   302,  6940,  3837, 28723, 19576,  9807,
+         28725,   272,  4372,   993,  3289,   356,   624, 28742, 28713,  8829,
+           745,   442, 10469,  3708, 26859, 28725,   304,   272,  2996,  7520,
+           396,  1565,   304, 15260,  2698,   302,   297, 18831, 28723,  1047,
+           368, 28742, 28715,   737,   298, 11418,  2948, 10936,   302,   456,
+          2996, 28725,  4665,  1346,   528,   873, 28723,    13,    13,  3400,
+           264,  8829,   745,  1876,  2275, 28725,   741, 13391,   369,  6940,
+           349,  9676,   578, 13640, 28725,  6594, 22973,   302,   813,   660,
+         13346, 28725,   304,   369,   813, 14898, 10783,  7967,   442, 14631,
+           378, 28723, 19038, 19333,   369,  6940,   349,   680,  3817,   495,
+         28725,   304,   369,   813,   660, 13346,   304,  9021,  5843,   272,
+          4735,   302,   272,  1526,  1401,   592, 28723,  9054,  2663,  3397,
+           369,  6940,   993,   347,   264,  9470,   302,  1560, 13640,   304,
+          3817,   495,  5176, 28723,    13,    13,  3400,   264, 10469, 10403,
+         28725, 17234,  1259,   390, 10915, 24367,   304,  1016, 28283,  8035,
+           813,  7062,  6399,   302,   264,  4716, 13640, 28725, 16710,  3320,
+          1526, 28723,  8162, 28725,   590,  3397,   369,   813, 13875,   304,
+         16080,  1156,   264,  3905,   297,   480, 13887,   272,  6174,   302,
+          1083, 14435, 13938, 28725,  2824,  4089,   264,  6153,   302,  3817,
+          2574,   442,  1176,   299,   858,   262,  2426,   297,   272,  4229,
+          1526, 28723,    13,    13, 28779,  2244,  9807, 28725,   272,  4735,
+           302,  6940,  7520,   264, 19327,   304,  7677,  8499,   288, 17492,
+         28725,   304,   272, 12745, 10352,  3352,  8829,   404, 28725, 15067,
+         28725,   304,  1073]], device='cuda:0'), 'concatenated_attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1]], device='cuda:0'), 'concatenated_labels': tensor([[ -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,     1,   733, 16289, 28793,  8290,   368,  2270, 26812,   272,
+          4735,   302,   574,  6940, 28804,   733, 28748, 16289, 28793, 28737,
+          1580, 15884,   653,   354,   707, 16630, 28725,   562,   315,   837,
+           776,   264,  6074,  2007,  3822,   396, 18278, 10895,  9464, 28725,
+           315,   949, 28742, 28707,   506,   264,  9994,  2659, 28725,  3564,
+           697, 28725,   442,   264,  5277,  9025,   298,  2996,   586,  6940,
+         28723,   315,  1759,  1871,   304,  8270, 14915,  2818,   356, 16292,
+           304,  1178,   315, 28742,   333,   750,  2078, 28723,  1984,   345,
+           267,  2045, 28739,   349,   272,  7153,  4466,   304,  5287,   302,
+           586,  5225,   390,  6740,   486,   586, 24518,   304,  5443, 28723,
+           315,   949, 28742, 28707,   506,   272, 21368,   298,  6217,   442,
+          2996,   378, 28725,   390,   315,   949, 28742, 28707,   506,  3817,
+           495,  9021,   442, 16508, 28723,   851,  5935,   302,  6940, 27203,
+         15588,   298,  3687, 16905, 10637,   302,   716,  2737, 16455,   304,
+          1008, 28733, 15950,  1467, 28723,  1263, 10589, 28725,   456,   541,
+           347,   396,  7677,  8499,   288,  8829,   745,   297, 18831, 28725,
+         20421,   356,  1424,  2366,   846,  1063, 28725, 20968, 28725,   304,
+           272, 11656,   302,  4788, 28723,   661, 28742, 28713,   396,  5853,
+         23083,   302,   272,  2930,  4644,   304,   813,  8280,   298,  2380,
+           272,  4735,   302,   813,  9025, 28723,  1263,   528, 28725,   378,
+         28742, 28713,   776,   264,  5935,  2373,   272, 18745,   302,  2930,
+          2312,  8306, 28725,  1847,   806,   302,  3327,  2659, 28723,     2,
+             2,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100],
+        [ -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,     1,   733, 16289, 28793,  8290,   368,  2270, 26812,   272,
+          4735,   302,   574,  6940, 28804,   733, 28748, 16289, 28793, 28737,
+          1580, 16066,  1575,   369,   315,   949, 28742, 28707,   506,   264,
+          3327,  2659,   442, 16508, 28725,   390,   315, 28742, 28719,   776,
+           264,  6074,  2007,  3822,   396, 18278, 10895,  2229, 28723,   315,
+           949, 28742, 28707,   506,   272, 21368,   298,  2996,   586,  1216,
+          6940,  5090, 28723,   315,  1759,  2245,   304,  8270, 14915,  2818,
+           356, 11533,   304,  1871,   315, 28742,   333,   750,  2078,  1938,
+          4154, 28725,   304,   315,   949, 28742, 28707,   506,   264,   907,
+         28733,  2625, 13619,   302,   272,  5277,  1526, 28723,  2993, 28725,
+           315,   541,  5785,  1316,  4372,  4224,   684,  8829,   745,   297,
+         10851,   497,   778,   272,  4735,   302,  6940, 28725,  1259,   390,
+          1395,  1419,   297, 13795, 28725, 10915, 16173, 28725,   442,  1424,
+          2366,   846,  1063, 28723,  1047,   368,   506,  2948,  8829,   745,
+           442, 10469, 16582,   442,  4224,   297,  2273, 28725,  4665,  1601,
+          1933,   298,  4098,   706, 28723,    13,    13,  3840,  1250,   773,
+         28725,   272,  2996,   302,   272,  4735,   302,  6940,   349,   264,
+          3534,   304,  4630,   624,   369,   659, 15386,  1006,  8829,   404,
+           304, 15067,  5473,  3340, 28723,  2909, 17234,  3397,   369,   813,
+          6940,   349,  9676,   578,  5277,   304, 13640, 28725,  1312,  2663,
+         19333,   369,   378,   993,   347,   680,  3817,   495,   442,  8057,
+           297,  4735, 28723,  1387, 28742, 28713,   835,   272,  7677,  8499,
+           288, 10065, 28725,   597,  2979,   477, 10915, 16173, 28725,   369,
+           813, 13875,   304,   660, 13346,   993,  1156,   264,  3905,   297,
+           480, 13887,   272,  4735,   302,  6940,  3837, 28723, 19576,  9807,
+         28725,   272,  4372,   993,  3289,   356,   624, 28742, 28713,  8829,
+           745,   442, 10469,  3708, 26859, 28725,   304,   272,  2996,  7520,
+           396,  1565,   304, 15260,  2698,   302,   297, 18831, 28723,  1047,
+           368, 28742, 28715,   737,   298, 11418,  2948, 10936,   302,   456,
+          2996, 28725,  4665,  1346,   528,   873, 28723,    13,    13,  3400,
+           264,  8829,   745,  1876,  2275, 28725,   741, 13391,   369,  6940,
+           349,  9676,   578, 13640, 28725,  6594, 22973,   302,   813,   660,
+         13346, 28725,   304,   369,   813, 14898, 10783,  7967,   442, 14631,
+           378, 28723, 19038, 19333,   369,  6940,   349,   680,  3817,   495,
+         28725,   304,   369,   813,   660, 13346,   304,  9021,  5843,   272,
+          4735,   302,   272,  1526,  1401,   592, 28723,  9054,  2663,  3397,
+           369,  6940,   993,   347,   264,  9470,   302,  1560, 13640,   304,
+          3817,   495,  5176, 28723,    13,    13,  3400,   264, 10469, 10403,
+         28725, 17234,  1259,   390, 10915, 24367,   304,  1016, 28283,  8035,
+           813,  7062,  6399,   302,   264,  4716, 13640, 28725, 16710,  3320,
+          1526, 28723,  8162, 28725,   590,  3397,   369,   813, 13875,   304,
+         16080,  1156,   264,  3905,   297,   480, 13887,   272,  6174,   302,
+          1083, 14435, 13938, 28725,  2824,  4089,   264,  6153,   302,  3817,
+          2574,   442,  1176,   299,   858,   262,  2426,   297,   272,  4229,
+          1526, 28723,    13,    13, 28779,  2244,  9807, 28725,   272,  4735,
+           302,  6940,  7520,   264, 19327,   304,  7677,  8499,   288, 17492,
+         28725,   304,   272, 12745, 10352,  3352,  8829,   404, 28725, 15067,
+         28725,   304,  1073]], device='cuda:0')}
+==============================
+tensor([[    1,  8290,   368,  2270, 26812,   272,  4735,   302,   574,  6940,
+         28804,     1,   733, 16289, 28793,  8290,   368,  2270, 26812,   272,
+          4735,   302,   574,  6940, 28804,   733, 28748, 16289, 28793, 28737,
+          1580, 15884,   653,   354,   707, 16630, 28725,   562,   315,   837,
+           776,   264,  6074,  2007,  3822,   396, 18278, 10895,  9464, 28725,
+           315,   949, 28742, 28707,   506,   264,  9994,  2659, 28725,  3564,
+           697, 28725,   442,   264,  5277,  9025,   298,  2996,   586,  6940,
+         28723,   315,  1759,  1871,   304,  8270, 14915,  2818,   356, 16292,
+           304,  1178,   315, 28742,   333,   750,  2078, 28723,  1984,   345,
+           267,  2045, 28739,   349,   272,  7153,  4466,   304,  5287,   302,
+           586,  5225,   390,  6740,   486,   586, 24518,   304,  5443, 28723,
+           315,   949, 28742, 28707,   506,   272, 21368,   298,  6217,   442,
+          2996,   378, 28725,   390,   315,   949, 28742, 28707,   506,  3817,
+           495,  9021,   442, 16508, 28723,   851,  5935,   302,  6940, 27203,
+         15588,   298,  3687, 16905, 10637,   302,   716,  2737, 16455,   304,
+          1008, 28733, 15950,  1467, 28723,  1263, 10589, 28725,   456,   541,
+           347,   396,  7677,  8499,   288,  8829,   745,   297, 18831, 28725,
+         20421,   356,  1424,  2366,   846,  1063, 28725, 20968, 28725,   304,
+           272, 11656,   302,  4788, 28723,   661, 28742, 28713,   396,  5853,
+         23083,   302,   272,  2930,  4644,   304,   813,  8280,   298,  2380,
+           272,  4735,   302,   813,  9025, 28723,  1263,   528, 28725,   378,
+         28742, 28713,   776,   264,  5935,  2373,   272, 18745,   302,  2930,
+          2312,  8306, 28725,  1847,   806,   302,  3327,  2659, 28723,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+             2,     2,     2],
+        [    1,  8290,   368,  2270, 26812,   272,  4735,   302,   574,  6940,
+         28804,     1,   733, 16289, 28793,  8290,   368,  2270, 26812,   272,
+          4735,   302,   574,  6940, 28804,   733, 28748, 16289, 28793, 28737,
+          1580, 16066,  1575,   369,   315,   949, 28742, 28707,   506,   264,
+          3327,  2659,   442, 16508, 28725,   390,   315, 28742, 28719,   776,
+           264,  6074,  2007,  3822,   396, 18278, 10895,  2229, 28723,   315,
+           949, 28742, 28707,   506,   272, 21368,   298,  2996,   586,  1216,
+          6940,  5090, 28723,   315,  1759,  2245,   304,  8270, 14915,  2818,
+           356, 11533,   304,  1871,   315, 28742,   333,   750,  2078,  1938,
+          4154, 28725,   304,   315,   949, 28742, 28707,   506,   264,   907,
+         28733,  2625, 13619,   302,   272,  5277,  1526, 28723,  2993, 28725,
+           315,   541,  5785,  1316,  4372,  4224,   684,  8829,   745,   297,
+         10851,   497,   778,   272,  4735,   302,  6940, 28725,  1259,   390,
+          1395,  1419,   297, 13795, 28725, 10915, 16173, 28725,   442,  1424,
+          2366,   846,  1063, 28723,  1047,   368,   506,  2948,  8829,   745,
+           442, 10469, 16582,   442,  4224,   297,  2273, 28725,  4665,  1601,
+          1933,   298,  4098,   706, 28723,    13,    13,  3840,  1250,   773,
+         28725,   272,  2996,   302,   272,  4735,   302,  6940,   349,   264,
+          3534,   304,  4630,   624,   369,   659, 15386,  1006,  8829,   404,
+           304, 15067,  5473,  3340, 28723,  2909, 17234,  3397,   369,   813,
+          6940,   349,  9676,   578,  5277,   304, 13640, 28725,  1312,  2663,
+         19333,   369,   378,   993,   347,   680,  3817,   495,   442,  8057,
+           297,  4735, 28723,  1387, 28742, 28713,   835,   272,  7677,  8499,
+           288, 10065, 28725,   597,  2979,   477, 10915, 16173, 28725,   369,
+           813, 13875,   304,   660, 13346,   993,  1156,   264,  3905,   297,
+           480, 13887,   272,  4735,   302,  6940,  3837, 28723, 19576,  9807,
+         28725,   272,  4372,   993,  3289,   356,   624, 28742, 28713,  8829,
+           745,   442, 10469,  3708, 26859, 28725,   304,   272,  2996,  7520,
+           396,  1565,   304, 15260,  2698,   302,   297, 18831, 28723,  1047,
+           368, 28742, 28715,   737,   298, 11418,  2948, 10936,   302,   456,
+          2996, 28725,  4665,  1346,   528,   873, 28723,    13,    13,  3400,
+           264,  8829,   745,  1876,  2275, 28725,   741, 13391,   369,  6940,
+           349,  9676,   578, 13640, 28725,  6594, 22973,   302,   813,   660,
+         13346, 28725,   304,   369,   813, 14898, 10783,  7967,   442, 14631,
+           378, 28723, 19038, 19333,   369,  6940,   349,   680,  3817,   495,
+         28725,   304,   369,   813,   660, 13346,   304,  9021,  5843,   272,
+          4735,   302,   272,  1526,  1401,   592, 28723,  9054,  2663,  3397,
+           369,  6940,   993,   347,   264,  9470,   302,  1560, 13640,   304,
+          3817,   495,  5176, 28723,    13,    13,  3400,   264, 10469, 10403,
+         28725, 17234,  1259,   390, 10915, 24367,   304,  1016, 28283,  8035,
+           813,  7062,  6399,   302,   264,  4716, 13640, 28725, 16710,  3320,
+          1526, 28723,  8162, 28725,   590,  3397,   369,   813, 13875,   304,
+         16080,  1156,   264,  3905,   297,   480, 13887,   272,  6174,   302,
+          1083, 14435, 13938, 28725,  2824,  4089,   264,  6153,   302,  3817,
+          2574,   442,  1176,   299,   858,   262,  2426,   297,   272,  4229,
+          1526, 28723,    13,    13, 28779,  2244,  9807, 28725,   272,  4735,
+           302,  6940,  7520,   264, 19327,   304,  7677,  8499,   288, 17492,
+         28725,   304,   272, 12745, 10352,  3352,  8829,   404, 28725, 15067,
+         28725,   304,  1073]], device='cuda:0')
+==============================
+==============================
+tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1]], device='cuda:0')
+==============================
+==============================
+tensor([[ -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,     1,   733, 16289, 28793,  8290,   368,  2270, 26812,   272,
+          4735,   302,   574,  6940, 28804,   733, 28748, 16289, 28793, 28737,
+          1580, 15884,   653,   354,   707, 16630, 28725,   562,   315,   837,
+           776,   264,  6074,  2007,  3822,   396, 18278, 10895,  9464, 28725,
+           315,   949, 28742, 28707,   506,   264,  9994,  2659, 28725,  3564,
+           697, 28725,   442,   264,  5277,  9025,   298,  2996,   586,  6940,
+         28723,   315,  1759,  1871,   304,  8270, 14915,  2818,   356, 16292,
+           304,  1178,   315, 28742,   333,   750,  2078, 28723,  1984,   345,
+           267,  2045, 28739,   349,   272,  7153,  4466,   304,  5287,   302,
+           586,  5225,   390,  6740,   486,   586, 24518,   304,  5443, 28723,
+           315,   949, 28742, 28707,   506,   272, 21368,   298,  6217,   442,
+          2996,   378, 28725,   390,   315,   949, 28742, 28707,   506,  3817,
+           495,  9021,   442, 16508, 28723,   851,  5935,   302,  6940, 27203,
+         15588,   298,  3687, 16905, 10637,   302,   716,  2737, 16455,   304,
+          1008, 28733, 15950,  1467, 28723,  1263, 10589, 28725,   456,   541,
+           347,   396,  7677,  8499,   288,  8829,   745,   297, 18831, 28725,
+         20421,   356,  1424,  2366,   846,  1063, 28725, 20968, 28725,   304,
+           272, 11656,   302,  4788, 28723,   661, 28742, 28713,   396,  5853,
+         23083,   302,   272,  2930,  4644,   304,   813,  8280,   298,  2380,
+           272,  4735,   302,   813,  9025, 28723,  1263,   528, 28725,   378,
+         28742, 28713,   776,   264,  5935,  2373,   272, 18745,   302,  2930,
+          2312,  8306, 28725,  1847,   806,   302,  3327,  2659, 28723,     2,
+             2,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,  -100,  -100],
+        [ -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+          -100,     1,   733, 16289, 28793,  8290,   368,  2270, 26812,   272,
+          4735,   302,   574,  6940, 28804,   733, 28748, 16289, 28793, 28737,
+          1580, 16066,  1575,   369,   315,   949, 28742, 28707,   506,   264,
+          3327,  2659,   442, 16508, 28725,   390,   315, 28742, 28719,   776,
+           264,  6074,  2007,  3822,   396, 18278, 10895,  2229, 28723,   315,
+           949, 28742, 28707,   506,   272, 21368,   298,  2996,   586,  1216,
+          6940,  5090, 28723,   315,  1759,  2245,   304,  8270, 14915,  2818,
+           356, 11533,   304,  1871,   315, 28742,   333,   750,  2078,  1938,
+          4154, 28725,   304,   315,   949, 28742, 28707,   506,   264,   907,
+         28733,  2625, 13619,   302,   272,  5277,  1526, 28723,  2993, 28725,
+           315,   541,  5785,  1316,  4372,  4224,   684,  8829,   745,   297,
+         10851,   497,   778,   272,  4735,   302,  6940, 28725,  1259,   390,
+          1395,  1419,   297, 13795, 28725, 10915, 16173, 28725,   442,  1424,
+          2366,   846,  1063, 28723,  1047,   368,   506,  2948,  8829,   745,
+           442, 10469, 16582,   442,  4224,   297,  2273, 28725,  4665,  1601,
+          1933,   298,  4098,   706, 28723,    13,    13,  3840,  1250,   773,
+         28725,   272,  2996,   302,   272,  4735,   302,  6940,   349,   264,
+          3534,   304,  4630,   624,   369,   659, 15386,  1006,  8829,   404,
+           304, 15067,  5473,  3340, 28723,  2909, 17234,  3397,   369,   813,
+          6940,   349,  9676,   578,  5277,   304, 13640, 28725,  1312,  2663,
+         19333,   369,   378,   993,   347,   680,  3817,   495,   442,  8057,
+           297,  4735, 28723,  1387, 28742, 28713,   835,   272,  7677,  8499,
+           288, 10065, 28725,   597,  2979,   477, 10915, 16173, 28725,   369,
+           813, 13875,   304,   660, 13346,   993,  1156,   264,  3905,   297,
+           480, 13887,   272,  4735,   302,  6940,  3837, 28723, 19576,  9807,
+         28725,   272,  4372,   993,  3289,   356,   624, 28742, 28713,  8829,
+           745,   442, 10469,  3708, 26859, 28725,   304,   272,  2996,  7520,
+           396,  1565,   304, 15260,  2698,   302,   297, 18831, 28723,  1047,
+           368, 28742, 28715,   737,   298, 11418,  2948, 10936,   302,   456,
+          2996, 28725,  4665,  1346,   528,   873, 28723,    13,    13,  3400,
+           264,  8829,   745,  1876,  2275, 28725,   741, 13391,   369,  6940,
+           349,  9676,   578, 13640, 28725,  6594, 22973,   302,   813,   660,
+         13346, 28725,   304,   369,   813, 14898, 10783,  7967,   442, 14631,
+           378, 28723, 19038, 19333,   369,  6940,   349,   680,  3817,   495,
+         28725,   304,   369,   813,   660, 13346,   304,  9021,  5843,   272,
+          4735,   302,   272,  1526,  1401,   592, 28723,  9054,  2663,  3397,
+           369,  6940,   993,   347,   264,  9470,   302,  1560, 13640,   304,
+          3817,   495,  5176, 28723,    13,    13,  3400,   264, 10469, 10403,
+         28725, 17234,  1259,   390, 10915, 24367,   304,  1016, 28283,  8035,
+           813,  7062,  6399,   302,   264,  4716, 13640, 28725, 16710,  3320,
+          1526, 28723,  8162, 28725,   590,  3397,   369,   813, 13875,   304,
+         16080,  1156,   264,  3905,   297,   480, 13887,   272,  6174,   302,
+          1083, 14435, 13938, 28725,  2824,  4089,   264,  6153,   302,  3817,
+          2574,   442,  1176,   299,   858,   262,  2426,   297,   272,  4229,
+          1526, 28723,    13,    13, 28779,  2244,  9807, 28725,   272,  4735,
+           302,  6940,  7520,   264, 19327,   304,  7677,  8499,   288, 17492,
+         28725,   304,   272, 12745, 10352,  3352,  8829,   404, 28725, 15067,
+         28725,   304,  1073]], device='cuda:0')
+==============================
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/mistral_dpo_train.py", line 269, in <module>
+    trainer.train()
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/trainer.py", line 1875, in train
+    return inner_training_loop(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/trainer.py", line 2206, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/trainer.py", line 3182, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/dpo_trainer.py", line 1094, in compute_loss
+    loss, metrics = self.get_batch_loss_metrics(model, inputs, train_eval="train")
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/dpo_trainer.py", line 1035, in get_batch_loss_metrics
+    ) = self.concatenated_forward(model, batch)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/dpo_trainer.py", line 981, in concatenated_forward
+    concatenated_batch = self.concatenated_inputs(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/dpo_trainer.py", line 853, in concatenated_inputs
+    kill
+NameError: name 'kill' is not defined
+Exception ignored in: <function tqdm.__del__ at 0x7f99bf979b40>
+Traceback (most recent call last):
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/tqdm/std.py", line 1148, in __del__
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/tqdm/std.py", line 1302, in close
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/tqdm/std.py", line 1495, in display
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/tqdm/std.py", line 1151, in __str__
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/tqdm/std.py", line 1453, in format_dict
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/tqdm/utils.py", line 336, in _screen_shape_linux
+TypeError: 'NoneType' object is not callable
+[2024-05-06 15:53:19,234] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 1742373) of binary: /home/wxt/.conda/envs/rl/bin/python
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+Traceback (most recent call last):
+  File "/home/wxt/.conda/envs/rl/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
+    args.func(args)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1060, in launch_command
+    deepspeed_launcher(args)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/launch.py", line 764, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/run.py", line 803, in run
+    elastic_launch(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 135, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/wxt/huatong/TRL_FT/train_code/mistral_dpo_train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-05-06_15:53:19
+  host      : design-agent-09.internal.cloudapp.net
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1742373)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
