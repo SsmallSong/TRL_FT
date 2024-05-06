@@ -206,7 +206,7 @@ if __name__ == "__main__":
             dataset_text_field=args.dataset_text_field,
             max_seq_length=args.max_seq_length,
             tokenizer=tokenizer,
-            dataset_text_field="text",
+            #dataset_text_field="text",
             peft_config=get_peft_config(model_config),
             callbacks=[RichProgressCallback] if TRL_USE_RICH else None,
         )
