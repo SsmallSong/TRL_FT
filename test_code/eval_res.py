@@ -18,7 +18,8 @@ sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
 # ref_model_id = 'hermes_mft2_ray_rl0_0.2_7_not_nor2_lora_checkpoint_6000'
 model_id = '/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo_new'
 #model_id='mistralai/Mistral-7B-Instruct-v0.2'
-mistral_temp = False 
+model_id='snorkelai/Snorkel-Mistral-PairRM-DPO'
+mistral_temp = True 
 res = []
 tokenizer = transformers.AutoTokenizer.from_pretrained(model_id,legacy=False)
 print('1111111111111')

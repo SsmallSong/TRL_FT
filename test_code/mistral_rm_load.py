@@ -74,3 +74,10 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 tokenizer = AutoTokenizer.from_pretrained("daryl149/llama-2-7b-hf")
 model = AutoModelForCausalLM.from_pretrained("daryl149/llama-2-7b-hf")
 print("llama-2-7b loading finished")
+
+# Load model directly
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+tokenizer = AutoTokenizer.from_pretrained("snorkelai/Snorkel-Mistral-PairRM-DPO")
+model = AutoModelForCausalLM.from_pretrained("snorkelai/Snorkel-Mistral-PairRM-DPO")
+print("snorkelai finished")
