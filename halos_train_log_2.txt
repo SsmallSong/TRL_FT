@@ -1,0 +1,501 @@
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Making experiment directory /home/wxt/.cache//llama2_7b_sft_halos
+no FSDP port specified; using open port for FSDP: 54667
+seed: 1
+exp_name: llama2_7b_sft_halos
+datasets:
+- hh
+mode: train
+debug: false
+use_fsdp: true
+fsdp_port: 54667
+wandb:
+  enabled: true
+  entity: null
+  project: archangel
+cache_dir: /home/wxt/.cache/
+local_run_dir: /home/wxt/.cache//llama2_7b_sft_halos
+do_first_eval: true
+minimum_log_interval_secs: 1.0
+intermediate_checkpoints: false
+trainer: BasicTrainer
+lr: 1.0e-06
+n_epochs: 1
+n_examples: null
+optimizer: RMSprop
+warmup_steps: 150
+eval_every: 20000
+n_samples: 128
+samples_dir: samples/
+n_eval_examples: 512
+saved_policy: /home/wxt/.cache//llama2_7b_sft_halos/LATEST/policy.pt
+top_p: 0.95
+human_prefix: '
+
+  <|user|>
+
+  '
+assistant_prefix: '
+
+  <|assistant|>
+
+  '
+human_suffix: ''
+assistant_suffix: ''
+frac_unique_desirable: 1.0
+frac_unique_undesirable: 1.0
+model:
+  name_or_path: daryl149/llama-2-7b-hf
+  tokenizer_name_or_path: null
+  load_from: null
+  block_name: LlamaDecoderLayer
+  policy_dtype: bfloat16
+  fsdp_policy_mp: null
+  reference_dtype: bfloat16
+  max_grad_norm: 10.0
+  v_head_max_grad_norm: 0.1
+  max_length: 512
+  max_prompt_length: 256
+  activation_checkpointing: true
+  batch_size: 32
+  gradient_accumulation_steps: 4
+  eval_batch_size: 16
+  use_flash_attention: false
+loss:
+  name: sft
+  trainer: SFTTrainer
+  dataloader: SFTDataLoader
+  use_reference_model: false
+
+================================================================================
+Writing to design-agent-09:/home/wxt/.cache//llama2_7b_sft_halos
+================================================================================
+building policy
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.19s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.36s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.48s/it]
+Loading tokenizer daryl149/llama-2-7b-hf
+0 special tokens added
+Loading HH dataset (train split) from Huggingface...
+Processing HH:   0%|          | 0/160800 [00:00<?, ?it/s]Processing HH:   1%|          | 1514/160800 [00:00<00:10, 15136.98it/s]Processing HH:   2%|▏         | 3028/160800 [00:00<00:10, 14849.29it/s]Processing HH:   3%|▎         | 4580/160800 [00:00<00:10, 15151.94it/s]Processing HH:   4%|▍         | 6096/160800 [00:00<00:10, 14552.62it/s]Processing HH:   5%|▍         | 7555/160800 [00:00<00:10, 14244.41it/s]Processing HH:   6%|▌         | 9013/160800 [00:00<00:10, 14352.54it/s]Processing HH:   7%|▋         | 10511/160800 [00:00<00:10, 14550.95it/s]Processing HH:   7%|▋         | 12032/160800 [00:00<00:10, 14756.65it/s]Processing HH:   8%|▊         | 13510/160800 [00:00<00:09, 14745.01it/s]Processing HH:   9%|▉         | 14986/160800 [00:01<00:13, 10518.21it/s]Processing HH:  10%|█         | 16507/160800 [00:01<00:12, 11632.47it/s]Processing HH:  11%|█         | 17985/160800 [00:01<00:11, 12428.02it/s]Processing HH:  12%|█▏        | 19429/160800 [00:01<00:10, 12961.52it/s]Processing HH:  13%|█▎        | 20951/160800 [00:01<00:10, 13578.06it/s]Processing HH:  14%|█▍        | 22434/160800 [00:01<00:09, 13931.16it/s]Processing HH:  15%|█▍        | 23946/160800 [00:01<00:09, 14271.64it/s]Processing HH:  16%|█▌        | 25437/160800 [00:01<00:09, 14456.88it/s]Processing HH:  17%|█▋        | 27006/160800 [00:01<00:09, 14817.84it/s]Processing HH:  18%|█▊        | 28520/160800 [00:02<00:08, 14911.74it/s]Processing HH:  19%|█▊        | 30071/160800 [00:02<00:08, 15088.36it/s]Processing HH:  20%|█▉        | 31593/160800 [00:02<00:08, 15126.41it/s]Processing HH:  21%|██        | 33113/160800 [00:02<00:08, 15004.50it/s]Processing HH:  22%|██▏       | 34619/160800 [00:02<00:11, 11179.12it/s]Processing HH:  22%|██▏       | 36128/160800 [00:02<00:10, 12116.29it/s]Processing HH:  23%|██▎       | 37647/160800 [00:02<00:09, 12898.07it/s]Processing HH:  24%|██▍       | 39177/160800 [00:02<00:08, 13539.32it/s]Processing HH:  25%|██▌       | 40704/160800 [00:02<00:08, 14014.00it/s]Processing HH:  26%|██▋       | 42223/160800 [00:03<00:08, 14346.45it/s]Processing HH:  27%|██▋       | 43702/160800 [00:03<00:08, 14352.86it/s]Processing HH:  28%|██▊       | 45168/160800 [00:03<00:08, 14356.78it/s]Processing HH:  29%|██▉       | 46625/160800 [00:03<00:08, 14023.33it/s]Processing HH:  30%|██▉       | 48052/160800 [00:03<00:08, 14092.32it/s]Processing HH:  31%|███       | 49473/160800 [00:03<00:07, 14040.58it/s]Processing HH:  32%|███▏      | 50886/160800 [00:03<00:07, 13849.02it/s]Processing HH:  33%|███▎      | 52293/160800 [00:03<00:07, 13912.94it/s]Processing HH:  33%|███▎      | 53744/160800 [00:03<00:07, 14083.13it/s]Processing HH:  34%|███▍      | 55168/160800 [00:03<00:07, 14125.71it/s]Processing HH:  35%|███▌      | 56583/160800 [00:04<00:07, 13989.93it/s]Processing HH:  36%|███▌      | 57984/160800 [00:04<00:10, 10099.15it/s]Processing HH:  37%|███▋      | 59362/160800 [00:04<00:09, 10958.45it/s]Processing HH:  38%|███▊      | 60748/160800 [00:04<00:08, 11683.81it/s]Processing HH:  39%|███▊      | 62153/160800 [00:04<00:08, 12306.30it/s]Processing HH:  40%|███▉      | 63547/160800 [00:04<00:07, 12752.41it/s]Processing HH:  40%|████      | 64955/160800 [00:04<00:07, 13123.37it/s]Processing HH:  41%|████▏     | 66414/160800 [00:04<00:06, 13538.45it/s]Processing HH:  42%|████▏     | 67824/160800 [00:05<00:06, 13700.19it/s]Processing HH:  43%|████▎     | 69252/160800 [00:05<00:06, 13868.05it/s]Processing HH:  44%|████▍     | 70672/160800 [00:05<00:06, 13965.74it/s]Processing HH:  45%|████▍     | 72087/160800 [00:05<00:06, 14019.08it/s]Processing HH:  46%|████▌     | 73498/160800 [00:05<00:06, 14028.67it/s]Processing HH:  47%|████▋     | 74941/160800 [00:05<00:06, 14145.60it/s]Processing HH:  47%|████▋     | 76360/160800 [00:05<00:06, 13974.70it/s]Processing HH:  48%|████▊     | 77784/160800 [00:05<00:05, 14052.30it/s]Processing HH:  49%|████▉     | 79192/160800 [00:05<00:05, 13897.73it/s]Processing HH:  50%|█████     | 80584/160800 [00:05<00:05, 13729.80it/s]Processing HH:  51%|█████     | 81973/160800 [00:06<00:05, 13775.98it/s]Processing HH:  52%|█████▏    | 83373/160800 [00:06<00:05, 13842.11it/s]Processing HH:  53%|█████▎    | 84782/160800 [00:06<00:05, 13915.63it/s]Processing HH:  54%|█████▎    | 86175/160800 [00:06<00:05, 13914.33it/s]Processing HH:  54%|█████▍    | 87567/160800 [00:06<00:08, 8376.84it/s] Processing HH:  55%|█████▌    | 88672/160800 [00:06<00:08, 8366.89it/s]Processing HH:  56%|█████▌    | 89696/160800 [00:06<00:08, 8412.65it/s]Processing HH:  56%|█████▋    | 90669/160800 [00:07<00:08, 8398.29it/s]Processing HH:  57%|█████▋    | 91601/160800 [00:07<00:08, 8380.40it/s]Processing HH:  58%|█████▊    | 92504/160800 [00:07<00:08, 8478.58it/s]Processing HH:  58%|█████▊    | 93399/160800 [00:07<00:08, 8353.34it/s]Processing HH:  59%|█████▊    | 94267/160800 [00:07<00:08, 8290.28it/s]Processing HH:  59%|█████▉    | 95118/160800 [00:07<00:08, 8203.23it/s]Processing HH:  60%|█████▉    | 95954/160800 [00:07<00:07, 8153.15it/s]Processing HH:  60%|██████    | 96806/160800 [00:07<00:07, 8255.11it/s]Processing HH:  61%|██████    | 97644/160800 [00:07<00:07, 8288.46it/s]Processing HH:  61%|██████    | 98480/160800 [00:07<00:07, 8308.19it/s]Processing HH:  62%|██████▏   | 99315/160800 [00:08<00:07, 8290.74it/s]Processing HH:  62%|██████▏   | 100158/160800 [00:08<00:07, 8329.61it/s]Processing HH:  63%|██████▎   | 100997/160800 [00:08<00:07, 8346.63it/s]Processing HH:  63%|██████▎   | 101834/160800 [00:08<00:07, 8256.17it/s]Processing HH:  64%|██████▍   | 102709/160800 [00:08<00:06, 8390.55it/s]Processing HH:  64%|██████▍   | 103550/160800 [00:08<00:06, 8353.20it/s]Processing HH:  65%|██████▍   | 104402/160800 [00:08<00:06, 8401.83it/s]Processing HH:  65%|██████▌   | 105255/160800 [00:08<00:06, 8439.72it/s]Processing HH:  66%|██████▌   | 106105/160800 [00:08<00:06, 8456.02it/s]Processing HH:  67%|██████▋   | 106951/160800 [00:08<00:06, 8448.96it/s]Processing HH:  67%|██████▋   | 107797/160800 [00:09<00:06, 8317.27it/s]Processing HH:  68%|██████▊   | 108731/160800 [00:09<00:06, 8618.39it/s]Processing HH:  68%|██████▊   | 109976/160800 [00:09<00:05, 9755.33it/s]Processing HH:  69%|██████▉   | 111134/160800 [00:09<00:04, 10298.74it/s]Processing HH:  70%|██████▉   | 112401/160800 [00:09<00:04, 11004.87it/s]Processing HH:  71%|███████   | 113583/160800 [00:09<00:04, 11247.00it/s]Processing HH:  71%|███████▏  | 114833/160800 [00:09<00:03, 11618.35it/s]Processing HH:  72%|███████▏  | 116091/160800 [00:09<00:03, 11905.31it/s]Processing HH:  73%|███████▎  | 117327/160800 [00:09<00:03, 12038.42it/s]Processing HH:  74%|███████▎  | 118569/160800 [00:09<00:03, 12150.70it/s]Processing HH:  75%|███████▍  | 119812/160800 [00:10<00:03, 12232.34it/s]Processing HH:  75%|███████▌  | 121077/160800 [00:10<00:03, 12355.38it/s]Processing HH:  76%|███████▌  | 122349/160800 [00:10<00:03, 12462.15it/s]Processing HH:  77%|███████▋  | 123596/160800 [00:10<00:05, 7097.11it/s] Processing HH:  78%|███████▊  | 124843/160800 [00:10<00:04, 8150.28it/s]Processing HH:  78%|███████▊  | 126083/160800 [00:10<00:03, 9079.22it/s]Processing HH:  79%|███████▉  | 127361/160800 [00:10<00:03, 9959.44it/s]Processing HH:  80%|████████  | 128643/160800 [00:11<00:03, 10683.23it/s]Processing HH:  81%|████████  | 129869/160800 [00:11<00:02, 11098.85it/s]Processing HH:  82%|████████▏ | 131107/160800 [00:11<00:02, 11449.68it/s]Processing HH:  82%|████████▏ | 132323/160800 [00:11<00:02, 11589.64it/s]Processing HH:  83%|████████▎ | 133557/160800 [00:11<00:02, 11799.85it/s]Processing HH:  84%|████████▍ | 134788/160800 [00:11<00:02, 11946.99it/s]Processing HH:  85%|████████▍ | 136053/160800 [00:11<00:02, 12151.47it/s]Processing HH:  85%|████████▌ | 137287/160800 [00:11<00:01, 12161.71it/s]Processing HH:  86%|████████▌ | 138547/160800 [00:11<00:01, 12288.81it/s]Processing HH:  87%|████████▋ | 139786/160800 [00:11<00:01, 12177.30it/s]Processing HH:  88%|████████▊ | 141011/160800 [00:12<00:01, 12143.28it/s]Processing HH:  88%|████████▊ | 142269/160800 [00:12<00:01, 12270.07it/s]Processing HH:  89%|████████▉ | 143539/160800 [00:12<00:01, 12395.74it/s]Processing HH:  90%|█████████ | 144782/160800 [00:12<00:01, 12322.93it/s]Processing HH:  91%|█████████ | 146017/160800 [00:12<00:01, 12264.58it/s]Processing HH:  92%|█████████▏| 147245/160800 [00:12<00:01, 12248.59it/s]Processing HH:  92%|█████████▏| 148501/160800 [00:12<00:00, 12336.32it/s]Processing HH:  93%|█████████▎| 149748/160800 [00:12<00:00, 12374.69it/s]Processing HH:  94%|█████████▍| 150990/160800 [00:12<00:00, 12386.40it/s]Processing HH:  95%|█████████▍| 152259/160800 [00:12<00:00, 12473.11it/s]Processing HH:  95%|█████████▌| 153507/160800 [00:13<00:00, 12428.43it/s]Processing HH:  96%|█████████▌| 154753/160800 [00:13<00:00, 12435.22it/s]Processing HH:  97%|█████████▋| 155997/160800 [00:13<00:00, 12392.53it/s]Processing HH:  98%|█████████▊| 157237/160800 [00:13<00:00, 12261.86it/s]Processing HH:  99%|█████████▊| 158464/160800 [00:13<00:00, 12241.86it/s]Processing HH:  99%|█████████▉| 159724/160800 [00:13<00:00, 12347.85it/s]Processing HH: 100%|██████████| 160800/160800 [00:13<00:00, 11779.68it/s]
+Loading HH dataset (test split) from Huggingface...
+Processing HH:   0%|          | 0/8552 [00:00<?, ?it/s]Processing HH:  17%|█▋        | 1449/8552 [00:00<00:00, 14485.46it/s]Processing HH:  34%|███▍      | 2898/8552 [00:00<00:00, 14368.49it/s]Processing HH:  51%|█████     | 4335/8552 [00:00<00:00, 14252.51it/s]Processing HH:  67%|██████▋   | 5761/8552 [00:00<00:00, 11672.84it/s]Processing HH:  82%|████████▏ | 6984/8552 [00:00<00:00, 5313.42it/s] Processing HH:  96%|█████████▌| 8185/8552 [00:01<00:00, 6435.27it/s]Processing HH: 100%|██████████| 8552/8552 [00:01<00:00, 7903.30it/s]
+starting 1 processes for FSDP training
+setting RLIMIT_NOFILE soft limit to 1048576 from 1024
+0 initializing distributed
+Creating trainer on process 0 with world size 1
+Finished generating 512 examples on test split
+Loaded 32 eval batches of size 16
+Sharding models...
+Attempting to enable activation checkpointing...
+Applying activation checkpointing wrapper to policy...
+FSDP activation checkpointing enabled!
+Loaded model on rank 0
+Using RMSprop optimizer with learning rate 1e-06
+Running evaluation after 0 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+Computing eval metrics:   3%|▎         | 1/32 [00:00<00:30,  1.01it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:26,  1.14it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:24,  1.20it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:03<00:21,  1.31it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:20,  1.34it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:04<00:17,  1.45it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:05<00:17,  1.43it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:06<00:17,  1.38it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:06<00:16,  1.42it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:07<00:16,  1.37it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:08<00:15,  1.34it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:09<00:15,  1.33it/s]Computing eval metrics:  41%|████      | 13/32 [00:09<00:14,  1.31it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:10<00:13,  1.31it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:11<00:12,  1.32it/s]Computing eval metrics:  50%|█████     | 16/32 [00:12<00:12,  1.29it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:12<00:11,  1.30it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:13<00:10,  1.30it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:14<00:10,  1.30it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:15<00:08,  1.36it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:15<00:08,  1.33it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:16<00:07,  1.40it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:17<00:06,  1.44it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:17<00:05,  1.39it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:18<00:05,  1.35it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:19<00:04,  1.33it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:20<00:03,  1.30it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:21<00:03,  1.30it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:21<00:02,  1.33it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:22<00:01,  1.35it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:23<00:00,  1.39it/s]Computing eval metrics: 100%|██████████| 32/32 [00:23<00:00,  1.39it/s]Computing eval metrics: 100%|██████████| 32/32 [00:23<00:00,  1.34it/s]
+eval after 0: {'logps_eval/chosen': '-131.06', 'loss/eval': '131.06'}
+skipping logging after 32 examples to avoid logging too frequently
+skipping logging after 64 examples to avoid logging too frequently
+skipping logging after 96 examples to avoid logging too frequently
+train stats after 128 examples: {'logps_train/chosen': '-128.32', 'loss/train': '128.32', 'examples_per_second': '5.7972', 'grad_norm': '302', 'counters/examples': 128, 'counters/updates': 4}
+skipping logging after 160 examples to avoid logging too frequently
+skipping logging after 192 examples to avoid logging too frequently
+skipping logging after 224 examples to avoid logging too frequently
+train stats after 256 examples: {'logps_train/chosen': '-134.52', 'loss/train': '134.52', 'examples_per_second': '5.8146', 'grad_norm': '304', 'counters/examples': 256, 'counters/updates': 8}
+skipping logging after 288 examples to avoid logging too frequently
+skipping logging after 320 examples to avoid logging too frequently
+skipping logging after 352 examples to avoid logging too frequently
+train stats after 384 examples: {'logps_train/chosen': '-131.42', 'loss/train': '131.42', 'examples_per_second': '5.6248', 'grad_norm': '314', 'counters/examples': 384, 'counters/updates': 12}
+skipping logging after 416 examples to avoid logging too frequently
+skipping logging after 448 examples to avoid logging too frequently
+skipping logging after 480 examples to avoid logging too frequently
+train stats after 512 examples: {'logps_train/chosen': '-119.02', 'loss/train': '119.02', 'examples_per_second': '5.7347', 'grad_norm': '300', 'counters/examples': 512, 'counters/updates': 16}
+skipping logging after 544 examples to avoid logging too frequently
+skipping logging after 576 examples to avoid logging too frequently
+skipping logging after 608 examples to avoid logging too frequently
+train stats after 640 examples: {'logps_train/chosen': '-118.62', 'loss/train': '118.62', 'examples_per_second': '5.8649', 'grad_norm': '304', 'counters/examples': 640, 'counters/updates': 20}
+skipping logging after 672 examples to avoid logging too frequently
+skipping logging after 704 examples to avoid logging too frequently
+skipping logging after 736 examples to avoid logging too frequently
+train stats after 768 examples: {'logps_train/chosen': '-126.08', 'loss/train': '126.08', 'examples_per_second': '5.7106', 'grad_norm': '294', 'counters/examples': 768, 'counters/updates': 24}
+skipping logging after 800 examples to avoid logging too frequently
+skipping logging after 832 examples to avoid logging too frequently
+skipping logging after 864 examples to avoid logging too frequently
+train stats after 896 examples: {'logps_train/chosen': '-147.72', 'loss/train': '147.72', 'examples_per_second': '5.6015', 'grad_norm': '296', 'counters/examples': 896, 'counters/updates': 28}
+skipping logging after 928 examples to avoid logging too frequently
+skipping logging after 960 examples to avoid logging too frequently
+skipping logging after 992 examples to avoid logging too frequently
+train stats after 1024 examples: {'logps_train/chosen': '-141.11', 'loss/train': '141.11', 'examples_per_second': '5.7016', 'grad_norm': '298', 'counters/examples': 1024, 'counters/updates': 32}
+skipping logging after 1056 examples to avoid logging too frequently
+skipping logging after 1088 examples to avoid logging too frequently
+skipping logging after 1120 examples to avoid logging too frequently
+train stats after 1152 examples: {'logps_train/chosen': '-142.5', 'loss/train': '142.5', 'examples_per_second': '5.6006', 'grad_norm': '302', 'counters/examples': 1152, 'counters/updates': 36}
+skipping logging after 1184 examples to avoid logging too frequently
+skipping logging after 1216 examples to avoid logging too frequently
+skipping logging after 1248 examples to avoid logging too frequently
+train stats after 1280 examples: {'logps_train/chosen': '-115.14', 'loss/train': '115.14', 'examples_per_second': '5.7693', 'grad_norm': '304', 'counters/examples': 1280, 'counters/updates': 40}
+skipping logging after 1312 examples to avoid logging too frequently
+skipping logging after 1344 examples to avoid logging too frequently
+skipping logging after 1376 examples to avoid logging too frequently
+train stats after 1408 examples: {'logps_train/chosen': '-118.42', 'loss/train': '118.42', 'examples_per_second': '5.8071', 'grad_norm': '288', 'counters/examples': 1408, 'counters/updates': 44}
+skipping logging after 1440 examples to avoid logging too frequently
+skipping logging after 1472 examples to avoid logging too frequently
+skipping logging after 1504 examples to avoid logging too frequently
+train stats after 1536 examples: {'logps_train/chosen': '-144.36', 'loss/train': '144.36', 'examples_per_second': '5.6448', 'grad_norm': '332', 'counters/examples': 1536, 'counters/updates': 48}
+skipping logging after 1568 examples to avoid logging too frequently
+skipping logging after 1600 examples to avoid logging too frequently
+skipping logging after 1632 examples to avoid logging too frequently
+train stats after 1664 examples: {'logps_train/chosen': '-131.95', 'loss/train': '131.95', 'examples_per_second': '6.0611', 'grad_norm': '294', 'counters/examples': 1664, 'counters/updates': 52}
+skipping logging after 1696 examples to avoid logging too frequently
+skipping logging after 1728 examples to avoid logging too frequently
+skipping logging after 1760 examples to avoid logging too frequently
+train stats after 1792 examples: {'logps_train/chosen': '-131.03', 'loss/train': '131.03', 'examples_per_second': '6.5132', 'grad_norm': '318', 'counters/examples': 1792, 'counters/updates': 56}
+skipping logging after 1824 examples to avoid logging too frequently
+skipping logging after 1856 examples to avoid logging too frequently
+skipping logging after 1888 examples to avoid logging too frequently
+train stats after 1920 examples: {'logps_train/chosen': '-137.58', 'loss/train': '137.58', 'examples_per_second': '5.4536', 'grad_norm': '296', 'counters/examples': 1920, 'counters/updates': 60}
+skipping logging after 1952 examples to avoid logging too frequently
+skipping logging after 1984 examples to avoid logging too frequently
+skipping logging after 2016 examples to avoid logging too frequently
+train stats after 2048 examples: {'logps_train/chosen': '-115.88', 'loss/train': '115.88', 'examples_per_second': '5.9084', 'grad_norm': '296', 'counters/examples': 2048, 'counters/updates': 64}
+skipping logging after 2080 examples to avoid logging too frequently
+skipping logging after 2112 examples to avoid logging too frequently
+skipping logging after 2144 examples to avoid logging too frequently
+train stats after 2176 examples: {'logps_train/chosen': '-125.23', 'loss/train': '125.23', 'examples_per_second': '5.7678', 'grad_norm': '310', 'counters/examples': 2176, 'counters/updates': 68}
+skipping logging after 2208 examples to avoid logging too frequently
+skipping logging after 2240 examples to avoid logging too frequently
+skipping logging after 2272 examples to avoid logging too frequently
+train stats after 2304 examples: {'logps_train/chosen': '-125.24', 'loss/train': '125.24', 'examples_per_second': '5.7157', 'grad_norm': '304', 'counters/examples': 2304, 'counters/updates': 72}
+skipping logging after 2336 examples to avoid logging too frequently
+skipping logging after 2368 examples to avoid logging too frequently
+skipping logging after 2400 examples to avoid logging too frequently
+train stats after 2432 examples: {'logps_train/chosen': '-132.26', 'loss/train': '132.26', 'examples_per_second': '5.5931', 'grad_norm': '294', 'counters/examples': 2432, 'counters/updates': 76}
+skipping logging after 2464 examples to avoid logging too frequently
+skipping logging after 2496 examples to avoid logging too frequently
+skipping logging after 2528 examples to avoid logging too frequently
+train stats after 2560 examples: {'logps_train/chosen': '-133.84', 'loss/train': '133.84', 'examples_per_second': '5.6011', 'grad_norm': '312', 'counters/examples': 2560, 'counters/updates': 80}
+skipping logging after 2592 examples to avoid logging too frequently
+skipping logging after 2624 examples to avoid logging too frequently
+skipping logging after 2656 examples to avoid logging too frequently
+train stats after 2688 examples: {'logps_train/chosen': '-130.2', 'loss/train': '130.2', 'examples_per_second': '5.6595', 'grad_norm': '298', 'counters/examples': 2688, 'counters/updates': 84}
+skipping logging after 2720 examples to avoid logging too frequently
+skipping logging after 2752 examples to avoid logging too frequently
+skipping logging after 2784 examples to avoid logging too frequently
+train stats after 2816 examples: {'logps_train/chosen': '-141.96', 'loss/train': '141.96', 'examples_per_second': '5.526', 'grad_norm': '302', 'counters/examples': 2816, 'counters/updates': 88}
+skipping logging after 2848 examples to avoid logging too frequently
+skipping logging after 2880 examples to avoid logging too frequently
+skipping logging after 2912 examples to avoid logging too frequently
+train stats after 2944 examples: {'logps_train/chosen': '-128.26', 'loss/train': '128.26', 'examples_per_second': '5.6156', 'grad_norm': '282', 'counters/examples': 2944, 'counters/updates': 92}
+skipping logging after 2976 examples to avoid logging too frequently
+skipping logging after 3008 examples to avoid logging too frequently
+skipping logging after 3040 examples to avoid logging too frequently
+train stats after 3072 examples: {'logps_train/chosen': '-142.61', 'loss/train': '142.61', 'examples_per_second': '5.6799', 'grad_norm': '312', 'counters/examples': 3072, 'counters/updates': 96}
+skipping logging after 3104 examples to avoid logging too frequently
+skipping logging after 3136 examples to avoid logging too frequently
+skipping logging after 3168 examples to avoid logging too frequently
+train stats after 3200 examples: {'logps_train/chosen': '-139.2', 'loss/train': '139.2', 'examples_per_second': '5.6236', 'grad_norm': '300', 'counters/examples': 3200, 'counters/updates': 100}
+skipping logging after 3232 examples to avoid logging too frequently
+skipping logging after 3264 examples to avoid logging too frequently
+skipping logging after 3296 examples to avoid logging too frequently
+train stats after 3328 examples: {'logps_train/chosen': '-132.78', 'loss/train': '132.78', 'examples_per_second': '5.6263', 'grad_norm': '296', 'counters/examples': 3328, 'counters/updates': 104}
+skipping logging after 3360 examples to avoid logging too frequently
+skipping logging after 3392 examples to avoid logging too frequently
+skipping logging after 3424 examples to avoid logging too frequently
+train stats after 3456 examples: {'logps_train/chosen': '-121.48', 'loss/train': '121.48', 'examples_per_second': '5.7096', 'grad_norm': '292', 'counters/examples': 3456, 'counters/updates': 108}
+skipping logging after 3488 examples to avoid logging too frequently
+skipping logging after 3520 examples to avoid logging too frequently
+skipping logging after 3552 examples to avoid logging too frequently
+train stats after 3584 examples: {'logps_train/chosen': '-137.11', 'loss/train': '137.11', 'examples_per_second': '5.5491', 'grad_norm': '312', 'counters/examples': 3584, 'counters/updates': 112}
+skipping logging after 3616 examples to avoid logging too frequently
+skipping logging after 3648 examples to avoid logging too frequently
+skipping logging after 3680 examples to avoid logging too frequently
+train stats after 3712 examples: {'logps_train/chosen': '-130.14', 'loss/train': '130.14', 'examples_per_second': '5.5054', 'grad_norm': '304', 'counters/examples': 3712, 'counters/updates': 116}
+skipping logging after 3744 examples to avoid logging too frequently
+skipping logging after 3776 examples to avoid logging too frequently
+skipping logging after 3808 examples to avoid logging too frequently
+train stats after 3840 examples: {'logps_train/chosen': '-115.75', 'loss/train': '115.75', 'examples_per_second': '5.5362', 'grad_norm': '312', 'counters/examples': 3840, 'counters/updates': 120}
+skipping logging after 3872 examples to avoid logging too frequently
+skipping logging after 3904 examples to avoid logging too frequently
+skipping logging after 3936 examples to avoid logging too frequently
+train stats after 3968 examples: {'logps_train/chosen': '-111.37', 'loss/train': '111.37', 'examples_per_second': '6.3614', 'grad_norm': '300', 'counters/examples': 3968, 'counters/updates': 124}
+skipping logging after 4000 examples to avoid logging too frequently
+skipping logging after 4032 examples to avoid logging too frequently
+skipping logging after 4064 examples to avoid logging too frequently
+train stats after 4096 examples: {'logps_train/chosen': '-123.62', 'loss/train': '123.62', 'examples_per_second': '5.656', 'grad_norm': '296', 'counters/examples': 4096, 'counters/updates': 128}
+skipping logging after 4128 examples to avoid logging too frequently
+skipping logging after 4160 examples to avoid logging too frequently
+skipping logging after 4192 examples to avoid logging too frequently
+train stats after 4224 examples: {'logps_train/chosen': '-120.51', 'loss/train': '120.51', 'examples_per_second': '6.0552', 'grad_norm': '302', 'counters/examples': 4224, 'counters/updates': 132}
+skipping logging after 4256 examples to avoid logging too frequently
+skipping logging after 4288 examples to avoid logging too frequently
+skipping logging after 4320 examples to avoid logging too frequently
+train stats after 4352 examples: {'logps_train/chosen': '-125.42', 'loss/train': '125.42', 'examples_per_second': '5.8599', 'grad_norm': '286', 'counters/examples': 4352, 'counters/updates': 136}
+skipping logging after 4384 examples to avoid logging too frequently
+skipping logging after 4416 examples to avoid logging too frequently
+skipping logging after 4448 examples to avoid logging too frequently
+train stats after 4480 examples: {'logps_train/chosen': '-128.63', 'loss/train': '128.63', 'examples_per_second': '5.5261', 'grad_norm': '292', 'counters/examples': 4480, 'counters/updates': 140}
+skipping logging after 4512 examples to avoid logging too frequently
+skipping logging after 4544 examples to avoid logging too frequently
+skipping logging after 4576 examples to avoid logging too frequently
+train stats after 4608 examples: {'logps_train/chosen': '-137.48', 'loss/train': '137.48', 'examples_per_second': '5.8797', 'grad_norm': '278', 'counters/examples': 4608, 'counters/updates': 144}
+skipping logging after 4640 examples to avoid logging too frequently
+skipping logging after 4672 examples to avoid logging too frequently
+skipping logging after 4704 examples to avoid logging too frequently
+train stats after 4736 examples: {'logps_train/chosen': '-144.54', 'loss/train': '144.54', 'examples_per_second': '5.9304', 'grad_norm': '314', 'counters/examples': 4736, 'counters/updates': 148}
+skipping logging after 4768 examples to avoid logging too frequently
+skipping logging after 4800 examples to avoid logging too frequently
+skipping logging after 4832 examples to avoid logging too frequently
+train stats after 4864 examples: {'logps_train/chosen': '-142.63', 'loss/train': '142.63', 'examples_per_second': '5.6142', 'grad_norm': '328', 'counters/examples': 4864, 'counters/updates': 152}
+skipping logging after 4896 examples to avoid logging too frequently
+skipping logging after 4928 examples to avoid logging too frequently
+skipping logging after 4960 examples to avoid logging too frequently
+train stats after 4992 examples: {'logps_train/chosen': '-125.95', 'loss/train': '125.95', 'examples_per_second': '6.0744', 'grad_norm': '286', 'counters/examples': 4992, 'counters/updates': 156}
+skipping logging after 5024 examples to avoid logging too frequently
+skipping logging after 5056 examples to avoid logging too frequently
+skipping logging after 5088 examples to avoid logging too frequently
+train stats after 5120 examples: {'logps_train/chosen': '-128.22', 'loss/train': '128.22', 'examples_per_second': '5.5439', 'grad_norm': '296', 'counters/examples': 5120, 'counters/updates': 160}
+skipping logging after 5152 examples to avoid logging too frequently
+skipping logging after 5184 examples to avoid logging too frequently
+skipping logging after 5216 examples to avoid logging too frequently
+train stats after 5248 examples: {'logps_train/chosen': '-127.79', 'loss/train': '127.79', 'examples_per_second': '6.2629', 'grad_norm': '304', 'counters/examples': 5248, 'counters/updates': 164}
+skipping logging after 5280 examples to avoid logging too frequently
+skipping logging after 5312 examples to avoid logging too frequently
+skipping logging after 5344 examples to avoid logging too frequently
+train stats after 5376 examples: {'logps_train/chosen': '-125.98', 'loss/train': '125.98', 'examples_per_second': '6.1632', 'grad_norm': '284', 'counters/examples': 5376, 'counters/updates': 168}
+skipping logging after 5408 examples to avoid logging too frequently
+skipping logging after 5440 examples to avoid logging too frequently
+skipping logging after 5472 examples to avoid logging too frequently
+train stats after 5504 examples: {'logps_train/chosen': '-151.74', 'loss/train': '151.74', 'examples_per_second': '5.5278', 'grad_norm': '304', 'counters/examples': 5504, 'counters/updates': 172}
+skipping logging after 5536 examples to avoid logging too frequently
+skipping logging after 5568 examples to avoid logging too frequently
+skipping logging after 5600 examples to avoid logging too frequently
+train stats after 5632 examples: {'logps_train/chosen': '-120.02', 'loss/train': '120.02', 'examples_per_second': '5.7961', 'grad_norm': '296', 'counters/examples': 5632, 'counters/updates': 176}
+skipping logging after 5664 examples to avoid logging too frequently
+skipping logging after 5696 examples to avoid logging too frequently
+skipping logging after 5728 examples to avoid logging too frequently
+train stats after 5760 examples: {'logps_train/chosen': '-109.04', 'loss/train': '109.04', 'examples_per_second': '5.6434', 'grad_norm': '294', 'counters/examples': 5760, 'counters/updates': 180}
+skipping logging after 5792 examples to avoid logging too frequently
+skipping logging after 5824 examples to avoid logging too frequently
+skipping logging after 5856 examples to avoid logging too frequently
+train stats after 5888 examples: {'logps_train/chosen': '-121.1', 'loss/train': '121.1', 'examples_per_second': '5.6948', 'grad_norm': '302', 'counters/examples': 5888, 'counters/updates': 184}
+skipping logging after 5920 examples to avoid logging too frequently
+skipping logging after 5952 examples to avoid logging too frequently
+skipping logging after 5984 examples to avoid logging too frequently
+train stats after 6016 examples: {'logps_train/chosen': '-121.2', 'loss/train': '121.2', 'examples_per_second': '5.8255', 'grad_norm': '410', 'counters/examples': 6016, 'counters/updates': 188}
+skipping logging after 6048 examples to avoid logging too frequently
+skipping logging after 6080 examples to avoid logging too frequently
+skipping logging after 6112 examples to avoid logging too frequently
+train stats after 6144 examples: {'logps_train/chosen': '-137.18', 'loss/train': '137.18', 'examples_per_second': '5.6219', 'grad_norm': '312', 'counters/examples': 6144, 'counters/updates': 192}
+skipping logging after 6176 examples to avoid logging too frequently
+skipping logging after 6208 examples to avoid logging too frequently
+skipping logging after 6240 examples to avoid logging too frequently
+train stats after 6272 examples: {'logps_train/chosen': '-138.19', 'loss/train': '138.19', 'examples_per_second': '6.232', 'grad_norm': '326', 'counters/examples': 6272, 'counters/updates': 196}
+skipping logging after 6304 examples to avoid logging too frequently
+skipping logging after 6336 examples to avoid logging too frequently
+skipping logging after 6368 examples to avoid logging too frequently
+train stats after 6400 examples: {'logps_train/chosen': '-130.01', 'loss/train': '130.01', 'examples_per_second': '5.5815', 'grad_norm': '296', 'counters/examples': 6400, 'counters/updates': 200}
+skipping logging after 6432 examples to avoid logging too frequently
+skipping logging after 6464 examples to avoid logging too frequently
+skipping logging after 6496 examples to avoid logging too frequently
+train stats after 6528 examples: {'logps_train/chosen': '-134.11', 'loss/train': '134.11', 'examples_per_second': '5.555', 'grad_norm': '288', 'counters/examples': 6528, 'counters/updates': 204}
+skipping logging after 6560 examples to avoid logging too frequently
+skipping logging after 6592 examples to avoid logging too frequently
+skipping logging after 6624 examples to avoid logging too frequently
+train stats after 6656 examples: {'logps_train/chosen': '-124.93', 'loss/train': '124.93', 'examples_per_second': '5.6683', 'grad_norm': '286', 'counters/examples': 6656, 'counters/updates': 208}
+skipping logging after 6688 examples to avoid logging too frequently
+skipping logging after 6720 examples to avoid logging too frequently
+skipping logging after 6752 examples to avoid logging too frequently
+train stats after 6784 examples: {'logps_train/chosen': '-111.53', 'loss/train': '111.53', 'examples_per_second': '5.7612', 'grad_norm': '278', 'counters/examples': 6784, 'counters/updates': 212}
+skipping logging after 6816 examples to avoid logging too frequently
+skipping logging after 6848 examples to avoid logging too frequently
+skipping logging after 6880 examples to avoid logging too frequently
+train stats after 6912 examples: {'logps_train/chosen': '-132.18', 'loss/train': '132.18', 'examples_per_second': '5.9372', 'grad_norm': '296', 'counters/examples': 6912, 'counters/updates': 216}
+skipping logging after 6944 examples to avoid logging too frequently
+skipping logging after 6976 examples to avoid logging too frequently
+skipping logging after 7008 examples to avoid logging too frequently
+train stats after 7040 examples: {'logps_train/chosen': '-129.46', 'loss/train': '129.46', 'examples_per_second': '5.608', 'grad_norm': '282', 'counters/examples': 7040, 'counters/updates': 220}
+skipping logging after 7072 examples to avoid logging too frequently
+skipping logging after 7104 examples to avoid logging too frequently
+skipping logging after 7136 examples to avoid logging too frequently
+train stats after 7168 examples: {'logps_train/chosen': '-138.93', 'loss/train': '138.93', 'examples_per_second': '5.9481', 'grad_norm': '294', 'counters/examples': 7168, 'counters/updates': 224}
+skipping logging after 7200 examples to avoid logging too frequently
+skipping logging after 7232 examples to avoid logging too frequently
+skipping logging after 7264 examples to avoid logging too frequently
+train stats after 7296 examples: {'logps_train/chosen': '-132.55', 'loss/train': '132.55', 'examples_per_second': '5.7568', 'grad_norm': '278', 'counters/examples': 7296, 'counters/updates': 228}
+skipping logging after 7328 examples to avoid logging too frequently
+skipping logging after 7360 examples to avoid logging too frequently
+skipping logging after 7392 examples to avoid logging too frequently
+train stats after 7424 examples: {'logps_train/chosen': '-127.42', 'loss/train': '127.42', 'examples_per_second': '6.1424', 'grad_norm': '272', 'counters/examples': 7424, 'counters/updates': 232}
+skipping logging after 7456 examples to avoid logging too frequently
+skipping logging after 7488 examples to avoid logging too frequently
+skipping logging after 7520 examples to avoid logging too frequently
+train stats after 7552 examples: {'logps_train/chosen': '-120.96', 'loss/train': '120.96', 'examples_per_second': '6.5847', 'grad_norm': '296', 'counters/examples': 7552, 'counters/updates': 236}
+skipping logging after 7584 examples to avoid logging too frequently
+skipping logging after 7616 examples to avoid logging too frequently
+skipping logging after 7648 examples to avoid logging too frequently
+train stats after 7680 examples: {'logps_train/chosen': '-130.24', 'loss/train': '130.24', 'examples_per_second': '5.7435', 'grad_norm': '282', 'counters/examples': 7680, 'counters/updates': 240}
+skipping logging after 7712 examples to avoid logging too frequently
+skipping logging after 7744 examples to avoid logging too frequently
+skipping logging after 7776 examples to avoid logging too frequently
+train stats after 7808 examples: {'logps_train/chosen': '-116.66', 'loss/train': '116.66', 'examples_per_second': '6.7063', 'grad_norm': '288', 'counters/examples': 7808, 'counters/updates': 244}
+skipping logging after 7840 examples to avoid logging too frequently
+skipping logging after 7872 examples to avoid logging too frequently
+skipping logging after 7904 examples to avoid logging too frequently
+train stats after 7936 examples: {'logps_train/chosen': '-113.59', 'loss/train': '113.59', 'examples_per_second': '5.816', 'grad_norm': '274', 'counters/examples': 7936, 'counters/updates': 248}
+skipping logging after 7968 examples to avoid logging too frequently
+skipping logging after 8000 examples to avoid logging too frequently
+skipping logging after 8032 examples to avoid logging too frequently
+train stats after 8064 examples: {'logps_train/chosen': '-135.34', 'loss/train': '135.34', 'examples_per_second': '5.6852', 'grad_norm': '276', 'counters/examples': 8064, 'counters/updates': 252}
+skipping logging after 8096 examples to avoid logging too frequently
+skipping logging after 8128 examples to avoid logging too frequently
+skipping logging after 8160 examples to avoid logging too frequently
+train stats after 8192 examples: {'logps_train/chosen': '-124.05', 'loss/train': '124.05', 'examples_per_second': '5.5448', 'grad_norm': '304', 'counters/examples': 8192, 'counters/updates': 256}
+skipping logging after 8224 examples to avoid logging too frequently
+skipping logging after 8256 examples to avoid logging too frequently
+skipping logging after 8288 examples to avoid logging too frequently
+train stats after 8320 examples: {'logps_train/chosen': '-121.41', 'loss/train': '121.41', 'examples_per_second': '5.8599', 'grad_norm': '286', 'counters/examples': 8320, 'counters/updates': 260}
+skipping logging after 8352 examples to avoid logging too frequently
+skipping logging after 8384 examples to avoid logging too frequently
+skipping logging after 8416 examples to avoid logging too frequently
+train stats after 8448 examples: {'logps_train/chosen': '-124.45', 'loss/train': '124.45', 'examples_per_second': '5.6657', 'grad_norm': '292', 'counters/examples': 8448, 'counters/updates': 264}
+skipping logging after 8480 examples to avoid logging too frequently
+skipping logging after 8512 examples to avoid logging too frequently
+skipping logging after 8544 examples to avoid logging too frequently
+train stats after 8576 examples: {'logps_train/chosen': '-133.45', 'loss/train': '133.45', 'examples_per_second': '5.8264', 'grad_norm': '280', 'counters/examples': 8576, 'counters/updates': 268}
+skipping logging after 8608 examples to avoid logging too frequently
+skipping logging after 8640 examples to avoid logging too frequently
+skipping logging after 8672 examples to avoid logging too frequently
+train stats after 8704 examples: {'logps_train/chosen': '-114.19', 'loss/train': '114.19', 'examples_per_second': '5.6541', 'grad_norm': '280', 'counters/examples': 8704, 'counters/updates': 272}
+skipping logging after 8736 examples to avoid logging too frequently
+skipping logging after 8768 examples to avoid logging too frequently
+skipping logging after 8800 examples to avoid logging too frequently
+train stats after 8832 examples: {'logps_train/chosen': '-128.14', 'loss/train': '128.14', 'examples_per_second': '5.73', 'grad_norm': '294', 'counters/examples': 8832, 'counters/updates': 276}
+skipping logging after 8864 examples to avoid logging too frequently
+skipping logging after 8896 examples to avoid logging too frequently
+skipping logging after 8928 examples to avoid logging too frequently
+train stats after 8960 examples: {'logps_train/chosen': '-130.73', 'loss/train': '130.73', 'examples_per_second': '5.9946', 'grad_norm': '296', 'counters/examples': 8960, 'counters/updates': 280}
+skipping logging after 8992 examples to avoid logging too frequently
+skipping logging after 9024 examples to avoid logging too frequently
+skipping logging after 9056 examples to avoid logging too frequently
+train stats after 9088 examples: {'logps_train/chosen': '-107.96', 'loss/train': '107.96', 'examples_per_second': '5.8483', 'grad_norm': '270', 'counters/examples': 9088, 'counters/updates': 284}
+skipping logging after 9120 examples to avoid logging too frequently
+skipping logging after 9152 examples to avoid logging too frequently
+skipping logging after 9184 examples to avoid logging too frequently
+train stats after 9216 examples: {'logps_train/chosen': '-132.34', 'loss/train': '132.34', 'examples_per_second': '5.4541', 'grad_norm': '290', 'counters/examples': 9216, 'counters/updates': 288}
+skipping logging after 9248 examples to avoid logging too frequently
+skipping logging after 9280 examples to avoid logging too frequently
+skipping logging after 9312 examples to avoid logging too frequently
+train stats after 9344 examples: {'logps_train/chosen': '-132.25', 'loss/train': '132.25', 'examples_per_second': '5.7743', 'grad_norm': '302', 'counters/examples': 9344, 'counters/updates': 292}
+skipping logging after 9376 examples to avoid logging too frequently
+skipping logging after 9408 examples to avoid logging too frequently
+skipping logging after 9440 examples to avoid logging too frequently
+train stats after 9472 examples: {'logps_train/chosen': '-114.28', 'loss/train': '114.28', 'examples_per_second': '5.8569', 'grad_norm': '286', 'counters/examples': 9472, 'counters/updates': 296}
+skipping logging after 9504 examples to avoid logging too frequently
+skipping logging after 9536 examples to avoid logging too frequently
+skipping logging after 9568 examples to avoid logging too frequently
+train stats after 9600 examples: {'logps_train/chosen': '-118.88', 'loss/train': '118.88', 'examples_per_second': '5.7842', 'grad_norm': '286', 'counters/examples': 9600, 'counters/updates': 300}
+skipping logging after 9632 examples to avoid logging too frequently
+skipping logging after 9664 examples to avoid logging too frequently
+skipping logging after 9696 examples to avoid logging too frequently
+train stats after 9728 examples: {'logps_train/chosen': '-133.93', 'loss/train': '133.93', 'examples_per_second': '5.649', 'grad_norm': '328', 'counters/examples': 9728, 'counters/updates': 304}
+skipping logging after 9760 examples to avoid logging too frequently
+skipping logging after 9792 examples to avoid logging too frequently
+skipping logging after 9824 examples to avoid logging too frequently
+train stats after 9856 examples: {'logps_train/chosen': '-122.46', 'loss/train': '122.46', 'examples_per_second': '5.7195', 'grad_norm': '284', 'counters/examples': 9856, 'counters/updates': 308}
+skipping logging after 9888 examples to avoid logging too frequently
+skipping logging after 9920 examples to avoid logging too frequently
+skipping logging after 9952 examples to avoid logging too frequently
+train stats after 9984 examples: {'logps_train/chosen': '-112.85', 'loss/train': '112.85', 'examples_per_second': '6.7544', 'grad_norm': '274', 'counters/examples': 9984, 'counters/updates': 312}
+skipping logging after 10016 examples to avoid logging too frequently
+skipping logging after 10048 examples to avoid logging too frequently
+skipping logging after 10080 examples to avoid logging too frequently
+train stats after 10112 examples: {'logps_train/chosen': '-117.82', 'loss/train': '117.82', 'examples_per_second': '5.7232', 'grad_norm': '292', 'counters/examples': 10112, 'counters/updates': 316}
+skipping logging after 10144 examples to avoid logging too frequently
+skipping logging after 10176 examples to avoid logging too frequently
+skipping logging after 10208 examples to avoid logging too frequently
+train stats after 10240 examples: {'logps_train/chosen': '-122.71', 'loss/train': '122.71', 'examples_per_second': '5.6811', 'grad_norm': '272', 'counters/examples': 10240, 'counters/updates': 320}
+skipping logging after 10272 examples to avoid logging too frequently
+skipping logging after 10304 examples to avoid logging too frequently
+skipping logging after 10336 examples to avoid logging too frequently
+train stats after 10368 examples: {'logps_train/chosen': '-121.6', 'loss/train': '121.6', 'examples_per_second': '5.7064', 'grad_norm': '272', 'counters/examples': 10368, 'counters/updates': 324}
+skipping logging after 10400 examples to avoid logging too frequently
+skipping logging after 10432 examples to avoid logging too frequently
+skipping logging after 10464 examples to avoid logging too frequently
+train stats after 10496 examples: {'logps_train/chosen': '-149.71', 'loss/train': '149.71', 'examples_per_second': '5.6343', 'grad_norm': '316', 'counters/examples': 10496, 'counters/updates': 328}
+skipping logging after 10528 examples to avoid logging too frequently
+skipping logging after 10560 examples to avoid logging too frequently
+skipping logging after 10592 examples to avoid logging too frequently
+train stats after 10624 examples: {'logps_train/chosen': '-125.56', 'loss/train': '125.56', 'examples_per_second': '5.778', 'grad_norm': '278', 'counters/examples': 10624, 'counters/updates': 332}
+skipping logging after 10656 examples to avoid logging too frequently
+skipping logging after 10688 examples to avoid logging too frequently
+skipping logging after 10720 examples to avoid logging too frequently
+train stats after 10752 examples: {'logps_train/chosen': '-109', 'loss/train': '109', 'examples_per_second': '6.1296', 'grad_norm': '276', 'counters/examples': 10752, 'counters/updates': 336}
+skipping logging after 10784 examples to avoid logging too frequently
+skipping logging after 10816 examples to avoid logging too frequently
+skipping logging after 10848 examples to avoid logging too frequently
+train stats after 10880 examples: {'logps_train/chosen': '-132.68', 'loss/train': '132.68', 'examples_per_second': '5.5596', 'grad_norm': '272', 'counters/examples': 10880, 'counters/updates': 340}
+skipping logging after 10912 examples to avoid logging too frequently
+skipping logging after 10944 examples to avoid logging too frequently
+skipping logging after 10976 examples to avoid logging too frequently
+train stats after 11008 examples: {'logps_train/chosen': '-135.39', 'loss/train': '135.39', 'examples_per_second': '5.9975', 'grad_norm': '288', 'counters/examples': 11008, 'counters/updates': 344}
+skipping logging after 11040 examples to avoid logging too frequently
+skipping logging after 11072 examples to avoid logging too frequently
+skipping logging after 11104 examples to avoid logging too frequently
+train stats after 11136 examples: {'logps_train/chosen': '-151.31', 'loss/train': '151.31', 'examples_per_second': '5.5056', 'grad_norm': '278', 'counters/examples': 11136, 'counters/updates': 348}
+skipping logging after 11168 examples to avoid logging too frequently
+skipping logging after 11200 examples to avoid logging too frequently
+skipping logging after 11232 examples to avoid logging too frequently
+train stats after 11264 examples: {'logps_train/chosen': '-129.47', 'loss/train': '129.47', 'examples_per_second': '5.6759', 'grad_norm': '266', 'counters/examples': 11264, 'counters/updates': 352}
+skipping logging after 11296 examples to avoid logging too frequently
+skipping logging after 11328 examples to avoid logging too frequently
+skipping logging after 11360 examples to avoid logging too frequently
+train stats after 11392 examples: {'logps_train/chosen': '-146.57', 'loss/train': '146.57', 'examples_per_second': '5.7037', 'grad_norm': '304', 'counters/examples': 11392, 'counters/updates': 356}
+skipping logging after 11424 examples to avoid logging too frequently
+skipping logging after 11456 examples to avoid logging too frequently
+skipping logging after 11488 examples to avoid logging too frequently
+train stats after 11520 examples: {'logps_train/chosen': '-127.86', 'loss/train': '127.86', 'examples_per_second': '5.8534', 'grad_norm': '290', 'counters/examples': 11520, 'counters/updates': 360}
+skipping logging after 11552 examples to avoid logging too frequently
+skipping logging after 11584 examples to avoid logging too frequently
+skipping logging after 11616 examples to avoid logging too frequently
+train stats after 11648 examples: {'logps_train/chosen': '-110.01', 'loss/train': '110.01', 'examples_per_second': '6.1025', 'grad_norm': '272', 'counters/examples': 11648, 'counters/updates': 364}
+skipping logging after 11680 examples to avoid logging too frequently
+skipping logging after 11712 examples to avoid logging too frequently
+skipping logging after 11744 examples to avoid logging too frequently
+train stats after 11776 examples: {'logps_train/chosen': '-125.73', 'loss/train': '125.73', 'examples_per_second': '5.4994', 'grad_norm': '284', 'counters/examples': 11776, 'counters/updates': 368}
+skipping logging after 11808 examples to avoid logging too frequently
+skipping logging after 11840 examples to avoid logging too frequently
+skipping logging after 11872 examples to avoid logging too frequently
+train stats after 11904 examples: {'logps_train/chosen': '-128.62', 'loss/train': '128.62', 'examples_per_second': '5.6137', 'grad_norm': '280', 'counters/examples': 11904, 'counters/updates': 372}
+skipping logging after 11936 examples to avoid logging too frequently
+skipping logging after 11968 examples to avoid logging too frequently
+skipping logging after 12000 examples to avoid logging too frequently
+train stats after 12032 examples: {'logps_train/chosen': '-141.76', 'loss/train': '141.76', 'examples_per_second': '5.8312', 'grad_norm': '284', 'counters/examples': 12032, 'counters/updates': 376}
+skipping logging after 12064 examples to avoid logging too frequently
+skipping logging after 12096 examples to avoid logging too frequently
+skipping logging after 12128 examples to avoid logging too frequently
+train stats after 12160 examples: {'logps_train/chosen': '-139.21', 'loss/train': '139.21', 'examples_per_second': '5.8695', 'grad_norm': '282', 'counters/examples': 12160, 'counters/updates': 380}
+skipping logging after 12192 examples to avoid logging too frequently
+skipping logging after 12224 examples to avoid logging too frequently
+skipping logging after 12256 examples to avoid logging too frequently
+train stats after 12288 examples: {'logps_train/chosen': '-122.08', 'loss/train': '122.08', 'examples_per_second': '5.6352', 'grad_norm': '272', 'counters/examples': 12288, 'counters/updates': 384}
+skipping logging after 12320 examples to avoid logging too frequently
+skipping logging after 12352 examples to avoid logging too frequently
+skipping logging after 12384 examples to avoid logging too frequently
+train stats after 12416 examples: {'logps_train/chosen': '-100.57', 'loss/train': '100.57', 'examples_per_second': '6.0409', 'grad_norm': '253', 'counters/examples': 12416, 'counters/updates': 388}
+skipping logging after 12448 examples to avoid logging too frequently
+skipping logging after 12480 examples to avoid logging too frequently
+skipping logging after 12512 examples to avoid logging too frequently
+train stats after 12544 examples: {'logps_train/chosen': '-120.86', 'loss/train': '120.86', 'examples_per_second': '5.8869', 'grad_norm': '282', 'counters/examples': 12544, 'counters/updates': 392}
+skipping logging after 12576 examples to avoid logging too frequently
+skipping logging after 12608 examples to avoid logging too frequently
+skipping logging after 12640 examples to avoid logging too frequently
+train stats after 12672 examples: {'logps_train/chosen': '-134.12', 'loss/train': '134.12', 'examples_per_second': '5.5141', 'grad_norm': '262', 'counters/examples': 12672, 'counters/updates': 396}
+skipping logging after 12704 examples to avoid logging too frequently
+skipping logging after 12736 examples to avoid logging too frequently
+skipping logging after 12768 examples to avoid logging too frequently
+train stats after 12800 examples: {'logps_train/chosen': '-135.99', 'loss/train': '135.99', 'examples_per_second': '5.786', 'grad_norm': '272', 'counters/examples': 12800, 'counters/updates': 400}
+skipping logging after 12832 examples to avoid logging too frequently
+skipping logging after 12864 examples to avoid logging too frequently
+skipping logging after 12896 examples to avoid logging too frequently

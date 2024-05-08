@@ -1,0 +1,76 @@
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_reward.py", line 8, in <module>
+    import metrics2
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/metrics2.py", line 14, in <module>
+    from reward_model import TrainRewardModel
+ImportError: cannot import name 'TrainRewardModel' from 'reward_model' (/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/reward_model.py)
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_reward.py", line 8, in <module>
+    import metrics2
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/metrics2.py", line 14, in <module>
+    from reward_model import TrainRewardModel
+ImportError: cannot import name 'TrainRewardModel' from 'reward_model' (/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/reward_model.py)
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_reward.py", line 8, in <module>
+    import metrics2
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/metrics2.py", line 14, in <module>
+    from reward_model import TrainRewardModel
+ImportError: cannot import name 'TrainRewardModel' from 'reward_model' (/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/reward_model.py)
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_reward.py", line 8, in <module>
+    import metrics2
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/metrics2.py", line 14, in <module>
+    from reward_model import TrainRewardModel
+ImportError: cannot import name 'TrainRewardModel' from 'reward_model' (/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/reward_model.py)
+[2024-05-08 15:47:31,510] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 2449644) of binary: /home/wxt/.conda/envs/rl/bin/python
+Traceback (most recent call last):
+  File "/home/wxt/.conda/envs/rl/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
+    args.func(args)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1066, in launch_command
+    multi_gpu_launcher(args)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/launch.py", line 711, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/run.py", line 803, in run
+    elastic_launch(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 135, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+infer_and_eval_main_reward.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2024-05-08_15:47:31
+  host      : design-agent-09.internal.cloudapp.net
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 2449645)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2024-05-08_15:47:31
+  host      : design-agent-09.internal.cloudapp.net
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 2449646)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2024-05-08_15:47:31
+  host      : design-agent-09.internal.cloudapp.net
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 2449647)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-05-08_15:47:31
+  host      : design-agent-09.internal.cloudapp.net
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 2449644)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
