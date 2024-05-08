@@ -1,0 +1,725 @@
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Making experiment directory /home/wxt/.cache//llama2_7b_sft_halos
+no FSDP port specified; using open port for FSDP: 42007
+seed: 1
+exp_name: llama2_7b_sft_halos
+datasets:
+- hh
+mode: train
+debug: false
+use_fsdp: true
+fsdp_port: 42007
+wandb:
+  enabled: true
+  entity: null
+  project: archangel
+cache_dir: /home/wxt/.cache/
+local_run_dir: /home/wxt/.cache//llama2_7b_sft_halos
+do_first_eval: true
+minimum_log_interval_secs: 1.0
+intermediate_checkpoints: false
+trainer: BasicTrainer
+lr: 5.0e-07
+n_epochs: 1
+n_examples: null
+optimizer: RMSprop
+warmup_steps: 150
+eval_every: 20000
+n_samples: 128
+samples_dir: samples/
+n_eval_examples: 512
+saved_policy: /home/wxt/.cache//llama2_7b_sft_halos/LATEST/policy.pt
+top_p: 0.95
+human_prefix: '
+
+  <|user|>
+
+  '
+assistant_prefix: '
+
+  <|assistant|>
+
+  '
+human_suffix: ''
+assistant_suffix: ''
+frac_unique_desirable: 1.0
+frac_unique_undesirable: 1.0
+model:
+  name_or_path: daryl149/llama-2-7b-hf
+  tokenizer_name_or_path: null
+  load_from: null
+  block_name: LlamaDecoderLayer
+  policy_dtype: bfloat16
+  fsdp_policy_mp: null
+  reference_dtype: bfloat16
+  max_grad_norm: 10.0
+  v_head_max_grad_norm: 0.1
+  max_length: 512
+  max_prompt_length: 256
+  activation_checkpointing: true
+  batch_size: 32
+  gradient_accumulation_steps: 1
+  eval_batch_size: 16
+  use_flash_attention: false
+loss:
+  name: sft
+  trainer: SFTTrainer
+  dataloader: SFTDataLoader
+  use_reference_model: false
+
+================================================================================
+Writing to design-agent-09:/home/wxt/.cache//llama2_7b_sft_halos
+================================================================================
+building policy
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.37s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.19s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.37s/it]
+Loading tokenizer daryl149/llama-2-7b-hf
+0 special tokens added
+Loading HH dataset (train split) from Huggingface...
+Processing HH:   0%|          | 0/160800 [00:00<?, ?it/s]Processing HH:   1%|          | 1490/160800 [00:00<00:10, 14894.23it/s]Processing HH:   2%|▏         | 3012/160800 [00:00<00:10, 15084.55it/s]Processing HH:   3%|▎         | 4521/160800 [00:00<00:10, 14939.26it/s]Processing HH:   4%|▍         | 6030/160800 [00:00<00:10, 14996.53it/s]Processing HH:   5%|▍         | 7530/160800 [00:00<00:10, 14970.27it/s]Processing HH:   6%|▌         | 9028/160800 [00:00<00:10, 14751.41it/s]Processing HH:   7%|▋         | 10504/160800 [00:00<00:10, 14711.78it/s]Processing HH:   7%|▋         | 12014/160800 [00:00<00:10, 14832.72it/s]Processing HH:   8%|▊         | 13518/160800 [00:00<00:09, 14895.68it/s]Processing HH:   9%|▉         | 15008/160800 [00:01<00:14, 10389.96it/s]Processing HH:  10%|█         | 16488/160800 [00:01<00:12, 11423.01it/s]Processing HH:  11%|█         | 18022/160800 [00:01<00:11, 12400.00it/s]Processing HH:  12%|█▏        | 19508/160800 [00:01<00:10, 13047.50it/s]Processing HH:  13%|█▎        | 21030/160800 [00:01<00:10, 13639.83it/s]Processing HH:  14%|█▍        | 22472/160800 [00:01<00:09, 13857.67it/s]Processing HH:  15%|█▍        | 23972/160800 [00:01<00:09, 14183.53it/s]Processing HH:  16%|█▌        | 25455/160800 [00:01<00:09, 14370.96it/s]Processing HH:  17%|█▋        | 26961/160800 [00:01<00:09, 14571.97it/s]Processing HH:  18%|█▊        | 28451/160800 [00:02<00:09, 14665.25it/s]Processing HH:  19%|█▊        | 29933/160800 [00:02<00:08, 14551.69it/s]Processing HH:  20%|█▉        | 31399/160800 [00:02<00:09, 14230.14it/s]Processing HH:  20%|██        | 32856/160800 [00:02<00:08, 14328.59it/s]Processing HH:  21%|██▏       | 34296/160800 [00:02<00:11, 10594.67it/s]Processing HH:  22%|██▏       | 35761/160800 [00:02<00:10, 11554.63it/s]Processing HH:  23%|██▎       | 37203/160800 [00:02<00:10, 12273.70it/s]Processing HH:  24%|██▍       | 38713/160800 [00:02<00:09, 13020.65it/s]Processing HH:  25%|██▍       | 40171/160800 [00:02<00:08, 13445.04it/s]Processing HH:  26%|██▌       | 41645/160800 [00:03<00:08, 13809.56it/s]Processing HH:  27%|██▋       | 43107/160800 [00:03<00:08, 14039.85it/s]Processing HH:  28%|██▊       | 44544/160800 [00:03<00:08, 13886.23it/s]Processing HH:  29%|██▊       | 45959/160800 [00:03<00:08, 13960.20it/s]Processing HH:  29%|██▉       | 47372/160800 [00:03<00:08, 13973.61it/s]Processing HH:  30%|███       | 48781/160800 [00:03<00:08, 13978.79it/s]Processing HH:  31%|███       | 50187/160800 [00:03<00:07, 13950.96it/s]Processing HH:  32%|███▏      | 51588/160800 [00:03<00:07, 13832.24it/s]Processing HH:  33%|███▎      | 52976/160800 [00:03<00:07, 13677.74it/s]Processing HH:  34%|███▍      | 54390/160800 [00:03<00:07, 13811.16it/s]Processing HH:  35%|███▍      | 55799/160800 [00:04<00:07, 13892.93it/s]Processing HH:  36%|███▌      | 57191/160800 [00:04<00:10, 9774.79it/s] Processing HH:  36%|███▋      | 58617/160800 [00:04<00:09, 10805.10it/s]Processing HH:  37%|███▋      | 60025/160800 [00:04<00:08, 11613.18it/s]Processing HH:  38%|███▊      | 61399/160800 [00:04<00:08, 12165.53it/s]Processing HH:  39%|███▉      | 62809/160800 [00:04<00:07, 12690.54it/s]Processing HH:  40%|███▉      | 64153/160800 [00:04<00:07, 12898.44it/s]Processing HH:  41%|████      | 65495/160800 [00:04<00:07, 13006.50it/s]Processing HH:  42%|████▏     | 66876/160800 [00:05<00:07, 13238.47it/s]Processing HH:  42%|████▏     | 68285/160800 [00:05<00:06, 13483.14it/s]Processing HH:  43%|████▎     | 69653/160800 [00:05<00:06, 13452.49it/s]Processing HH:  44%|████▍     | 71026/160800 [00:05<00:06, 13532.63it/s]Processing HH:  45%|████▌     | 72488/160800 [00:05<00:06, 13854.66it/s]Processing HH:  46%|████▌     | 73881/160800 [00:05<00:06, 13742.44it/s]Processing HH:  47%|████▋     | 75310/160800 [00:05<00:06, 13902.32it/s]Processing HH:  48%|████▊     | 76709/160800 [00:05<00:06, 13928.15it/s]Processing HH:  49%|████▊     | 78119/160800 [00:05<00:05, 13977.07it/s]Processing HH:  49%|████▉     | 79527/160800 [00:05<00:05, 14005.03it/s]Processing HH:  50%|█████     | 80929/160800 [00:06<00:05, 13924.74it/s]Processing HH:  51%|█████     | 82350/160800 [00:06<00:05, 14008.91it/s]Processing HH:  52%|█████▏    | 83752/160800 [00:06<00:05, 13870.65it/s]Processing HH:  53%|█████▎    | 85161/160800 [00:06<00:05, 13934.40it/s]Processing HH:  54%|█████▍    | 86556/160800 [00:06<00:08, 9238.55it/s] Processing HH:  55%|█████▍    | 87687/160800 [00:06<00:08, 8991.55it/s]Processing HH:  55%|█████▌    | 88729/160800 [00:06<00:08, 8747.93it/s]Processing HH:  56%|█████▌    | 89702/160800 [00:07<00:08, 8711.27it/s]Processing HH:  56%|█████▋    | 90641/160800 [00:07<00:08, 8539.24it/s]Processing HH:  57%|█████▋    | 91541/160800 [00:07<00:08, 8230.65it/s]Processing HH:  57%|█████▋    | 92395/160800 [00:07<00:08, 8308.43it/s]Processing HH:  58%|█████▊    | 93249/160800 [00:07<00:08, 8275.99it/s]Processing HH:  59%|█████▊    | 94093/160800 [00:07<00:08, 8246.85it/s]Processing HH:  59%|█████▉    | 94929/160800 [00:07<00:08, 8138.84it/s]Processing HH:  60%|█████▉    | 95751/160800 [00:07<00:08, 8032.33it/s]Processing HH:  60%|██████    | 96599/160800 [00:07<00:07, 8158.07it/s]Processing HH:  61%|██████    | 97431/160800 [00:07<00:07, 8203.51it/s]Processing HH:  61%|██████    | 98255/160800 [00:08<00:07, 8186.02it/s]Processing HH:  62%|██████▏   | 99076/160800 [00:08<00:07, 8177.08it/s]Processing HH:  62%|██████▏   | 99896/160800 [00:08<00:07, 8116.27it/s]Processing HH:  63%|██████▎   | 100709/160800 [00:08<00:07, 7957.99it/s]Processing HH:  63%|██████▎   | 101524/160800 [00:08<00:07, 8013.00it/s]Processing HH:  64%|██████▎   | 102355/160800 [00:08<00:07, 8098.46it/s]Processing HH:  64%|██████▍   | 103219/160800 [00:08<00:06, 8256.32it/s]Processing HH:  65%|██████▍   | 104052/160800 [00:08<00:06, 8277.21it/s]Processing HH:  65%|██████▌   | 104905/160800 [00:08<00:06, 8341.64it/s]Processing HH:  66%|██████▌   | 105752/160800 [00:08<00:06, 8378.89it/s]Processing HH:  66%|██████▋   | 106591/160800 [00:09<00:06, 8295.01it/s]Processing HH:  67%|██████▋   | 107421/160800 [00:09<00:06, 8288.79it/s]Processing HH:  67%|██████▋   | 108251/160800 [00:09<00:06, 8183.30it/s]Processing HH:  68%|██████▊   | 109357/160800 [00:09<00:05, 9033.52it/s]Processing HH:  69%|██████▉   | 110593/160800 [00:09<00:05, 10017.99it/s]Processing HH:  70%|██████▉   | 111807/160800 [00:09<00:04, 10646.43it/s]Processing HH:  70%|███████   | 113011/160800 [00:09<00:04, 11058.82it/s]Processing HH:  71%|███████   | 114221/160800 [00:09<00:04, 11369.26it/s]Processing HH:  72%|███████▏  | 115467/160800 [00:09<00:03, 11695.08it/s]Processing HH:  73%|███████▎  | 116698/160800 [00:09<00:03, 11878.81it/s]Processing HH:  73%|███████▎  | 117951/160800 [00:10<00:03, 12073.52it/s]Processing HH:  74%|███████▍  | 119159/160800 [00:10<00:03, 12066.73it/s]Processing HH:  75%|███████▍  | 120367/160800 [00:10<00:03, 11984.17it/s]Processing HH:  76%|███████▌  | 121566/160800 [00:10<00:03, 11972.62it/s]Processing HH:  76%|███████▋  | 122764/160800 [00:10<00:05, 6755.45it/s] Processing HH:  77%|███████▋  | 123968/160800 [00:10<00:04, 7780.01it/s]Processing HH:  78%|███████▊  | 125215/160800 [00:10<00:04, 8796.73it/s]Processing HH:  79%|███████▊  | 126448/160800 [00:11<00:03, 9631.82it/s]Processing HH:  79%|███████▉  | 127705/160800 [00:11<00:03, 10373.23it/s]Processing HH:  80%|████████  | 128927/160800 [00:11<00:02, 10861.84it/s]Processing HH:  81%|████████  | 130166/160800 [00:11<00:02, 11279.37it/s]Processing HH:  82%|████████▏ | 131367/160800 [00:11<00:02, 11443.50it/s]Processing HH:  82%|████████▏ | 132600/160800 [00:11<00:02, 11696.51it/s]Processing HH:  83%|████████▎ | 133815/160800 [00:11<00:02, 11827.59it/s]Processing HH:  84%|████████▍ | 135068/160800 [00:11<00:02, 12031.50it/s]Processing HH:  85%|████████▍ | 136298/160800 [00:11<00:02, 12105.16it/s]Processing HH:  86%|████████▌ | 137522/160800 [00:11<00:01, 11862.16it/s]Processing HH:  86%|████████▋ | 138719/160800 [00:12<00:01, 11766.69it/s]Processing HH:  87%|████████▋ | 139903/160800 [00:12<00:01, 11563.43it/s]Processing HH:  88%|████████▊ | 141065/160800 [00:12<00:01, 11506.60it/s]Processing HH:  88%|████████▊ | 142256/160800 [00:12<00:01, 11622.44it/s]Processing HH:  89%|████████▉ | 143506/160800 [00:12<00:01, 11879.55it/s]Processing HH:  90%|████████▉ | 144711/160800 [00:12<00:01, 11929.74it/s]Processing HH:  91%|█████████ | 145963/160800 [00:12<00:01, 12103.57it/s]Processing HH:  92%|█████████▏| 147175/160800 [00:12<00:01, 12051.85it/s]Processing HH:  92%|█████████▏| 148416/160800 [00:12<00:01, 12156.42it/s]Processing HH:  93%|█████████▎| 149633/160800 [00:12<00:00, 12113.84it/s]Processing HH:  94%|█████████▍| 150845/160800 [00:13<00:00, 11990.86it/s]Processing HH:  95%|█████████▍| 152091/160800 [00:13<00:00, 12129.24it/s]Processing HH:  95%|█████████▌| 153305/160800 [00:13<00:00, 11967.28it/s]Processing HH:  96%|█████████▌| 154564/160800 [00:13<00:00, 12149.98it/s]Processing HH:  97%|█████████▋| 155780/160800 [00:13<00:00, 11976.83it/s]Processing HH:  98%|█████████▊| 156979/160800 [00:13<00:00, 11923.00it/s]Processing HH:  98%|█████████▊| 158183/160800 [00:13<00:00, 11956.86it/s]Processing HH:  99%|█████████▉| 159447/160800 [00:13<00:00, 12158.10it/s]Processing HH: 100%|█████████▉| 160678/160800 [00:13<00:00, 12202.70it/s]Processing HH: 100%|██████████| 160800/160800 [00:13<00:00, 11574.26it/s]
+Loading HH dataset (test split) from Huggingface...
+Processing HH:   0%|          | 0/8552 [00:00<?, ?it/s]Processing HH:  16%|█▌        | 1349/8552 [00:00<00:00, 13484.90it/s]Processing HH:  32%|███▏      | 2702/8552 [00:00<00:00, 13503.86it/s]Processing HH:  47%|████▋     | 4053/8552 [00:00<00:00, 13252.54it/s]Processing HH:  63%|██████▎   | 5379/8552 [00:00<00:00, 11718.57it/s]Processing HH:  77%|███████▋  | 6574/8552 [00:00<00:00, 4991.20it/s] Processing HH:  91%|█████████▏| 7817/8552 [00:01<00:00, 6228.43it/s]Processing HH: 100%|██████████| 8552/8552 [00:01<00:00, 7656.48it/s]
+starting 1 processes for FSDP training
+setting RLIMIT_NOFILE soft limit to 1048576 from 1024
+0 initializing distributed
+Creating trainer on process 0 with world size 1
+Finished generating 512 examples on test split
+Loaded 32 eval batches of size 16
+Sharding models...
+Attempting to enable activation checkpointing...
+Applying activation checkpointing wrapper to policy...
+FSDP activation checkpointing enabled!
+Loaded model on rank 0
+Using RMSprop optimizer with learning rate 5e-07
+Running evaluation after 0 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+Computing eval metrics:   3%|▎         | 1/32 [00:01<01:00,  1.94s/it]Computing eval metrics:   6%|▋         | 2/32 [00:03<00:44,  1.49s/it]Computing eval metrics:   9%|▉         | 3/32 [00:04<00:39,  1.35s/it]Computing eval metrics:  12%|█▎        | 4/32 [00:04<00:30,  1.08s/it]Computing eval metrics:  16%|█▌        | 5/32 [00:05<00:25,  1.06it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:06<00:21,  1.21it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:06<00:19,  1.27it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:07<00:18,  1.28it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:08<00:17,  1.33it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:09<00:16,  1.32it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:09<00:16,  1.31it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:10<00:15,  1.30it/s]Computing eval metrics:  41%|████      | 13/32 [00:11<00:14,  1.29it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:12<00:13,  1.29it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:13<00:13,  1.30it/s]Computing eval metrics:  50%|█████     | 16/32 [00:14<00:13,  1.20it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:14<00:12,  1.24it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:15<00:11,  1.25it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:16<00:10,  1.26it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:17<00:09,  1.33it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:17<00:08,  1.31it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:18<00:07,  1.38it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:19<00:06,  1.42it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:19<00:05,  1.37it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:20<00:05,  1.34it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:21<00:04,  1.32it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:22<00:03,  1.30it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:23<00:03,  1.29it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:23<00:02,  1.33it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:24<00:01,  1.35it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:25<00:00,  1.39it/s]Computing eval metrics: 100%|██████████| 32/32 [00:25<00:00,  1.39it/s]Computing eval metrics: 100%|██████████| 32/32 [00:25<00:00,  1.24it/s]
+eval after 0: {'logps_eval/chosen': '-131.06', 'loss/eval': '131.06'}
+train stats after 32 examples: {'logps_train/chosen': '-143.66', 'loss/train': '143.66', 'grad_norm': '434', 'examples_per_second': '3.3872', 'counters/examples': 32, 'counters/updates': 1}
+train stats after 64 examples: {'logps_train/chosen': '-149.1', 'loss/train': '149.1', 'grad_norm': '412', 'examples_per_second': '5.0319', 'counters/examples': 64, 'counters/updates': 2}
+train stats after 96 examples: {'logps_train/chosen': '-118.79', 'loss/train': '118.79', 'grad_norm': '368', 'examples_per_second': '5.573', 'counters/examples': 96, 'counters/updates': 3}
+train stats after 128 examples: {'logps_train/chosen': '-101.6', 'loss/train': '101.6', 'grad_norm': '340', 'examples_per_second': '5.6808', 'counters/examples': 128, 'counters/updates': 4}
+train stats after 160 examples: {'logps_train/chosen': '-138.01', 'loss/train': '138.01', 'grad_norm': '398', 'examples_per_second': '5.6807', 'counters/examples': 160, 'counters/updates': 5}
+train stats after 192 examples: {'logps_train/chosen': '-137.69', 'loss/train': '137.69', 'grad_norm': '382', 'examples_per_second': '5.8454', 'counters/examples': 192, 'counters/updates': 6}
+train stats after 224 examples: {'logps_train/chosen': '-136.38', 'loss/train': '136.38', 'grad_norm': '414', 'examples_per_second': '5.159', 'counters/examples': 224, 'counters/updates': 7}
+train stats after 256 examples: {'logps_train/chosen': '-126.1', 'loss/train': '126.1', 'grad_norm': '374', 'examples_per_second': '5.7329', 'counters/examples': 256, 'counters/updates': 8}
+train stats after 288 examples: {'logps_train/chosen': '-132.6', 'loss/train': '132.6', 'grad_norm': '398', 'examples_per_second': '4.8348', 'counters/examples': 288, 'counters/updates': 9}
+train stats after 320 examples: {'logps_train/chosen': '-154.56', 'loss/train': '154.56', 'grad_norm': '408', 'examples_per_second': '5.591', 'counters/examples': 320, 'counters/updates': 10}
+train stats after 352 examples: {'logps_train/chosen': '-129.34', 'loss/train': '129.34', 'grad_norm': '410', 'examples_per_second': '5.5449', 'counters/examples': 352, 'counters/updates': 11}
+train stats after 384 examples: {'logps_train/chosen': '-109.44', 'loss/train': '109.44', 'grad_norm': '366', 'examples_per_second': '5.5483', 'counters/examples': 384, 'counters/updates': 12}
+train stats after 416 examples: {'logps_train/chosen': '-117.58', 'loss/train': '117.58', 'grad_norm': '364', 'examples_per_second': '5.6828', 'counters/examples': 416, 'counters/updates': 13}
+train stats after 448 examples: {'logps_train/chosen': '-156.13', 'loss/train': '156.13', 'grad_norm': '428', 'examples_per_second': '5.3847', 'counters/examples': 448, 'counters/updates': 14}
+train stats after 480 examples: {'logps_train/chosen': '-107.18', 'loss/train': '107.18', 'grad_norm': '372', 'examples_per_second': '5.6686', 'counters/examples': 480, 'counters/updates': 15}
+train stats after 512 examples: {'logps_train/chosen': '-95.365', 'loss/train': '95.365', 'grad_norm': '346', 'examples_per_second': '5.4487', 'counters/examples': 512, 'counters/updates': 16}
+train stats after 544 examples: {'logps_train/chosen': '-129.05', 'loss/train': '129.05', 'grad_norm': '416', 'examples_per_second': '5.9146', 'counters/examples': 544, 'counters/updates': 17}
+train stats after 576 examples: {'logps_train/chosen': '-129.38', 'loss/train': '129.38', 'grad_norm': '372', 'examples_per_second': '5.6181', 'counters/examples': 576, 'counters/updates': 18}
+train stats after 608 examples: {'logps_train/chosen': '-115', 'loss/train': '115', 'grad_norm': '392', 'examples_per_second': '5.5531', 'counters/examples': 608, 'counters/updates': 19}
+train stats after 640 examples: {'logps_train/chosen': '-101.28', 'loss/train': '101.28', 'grad_norm': '366', 'examples_per_second': '5.5117', 'counters/examples': 640, 'counters/updates': 20}
+train stats after 672 examples: {'logps_train/chosen': '-107.74', 'loss/train': '107.74', 'grad_norm': '346', 'examples_per_second': '5.6015', 'counters/examples': 672, 'counters/updates': 21}
+train stats after 704 examples: {'logps_train/chosen': '-136.21', 'loss/train': '136.21', 'grad_norm': '404', 'examples_per_second': '5.3766', 'counters/examples': 704, 'counters/updates': 22}
+train stats after 736 examples: {'logps_train/chosen': '-109.09', 'loss/train': '109.09', 'grad_norm': '350', 'examples_per_second': '5.7271', 'counters/examples': 736, 'counters/updates': 23}
+train stats after 768 examples: {'logps_train/chosen': '-151.02', 'loss/train': '151.02', 'grad_norm': '410', 'examples_per_second': '5.364', 'counters/examples': 768, 'counters/updates': 24}
+train stats after 800 examples: {'logps_train/chosen': '-167.11', 'loss/train': '167.11', 'grad_norm': '456', 'examples_per_second': '5.3545', 'counters/examples': 800, 'counters/updates': 25}
+train stats after 832 examples: {'logps_train/chosen': '-150.32', 'loss/train': '150.32', 'grad_norm': '380', 'examples_per_second': '5.6527', 'counters/examples': 832, 'counters/updates': 26}
+train stats after 864 examples: {'logps_train/chosen': '-113.51', 'loss/train': '113.51', 'grad_norm': '366', 'examples_per_second': '5.3611', 'counters/examples': 864, 'counters/updates': 27}
+train stats after 896 examples: {'logps_train/chosen': '-159.72', 'loss/train': '159.72', 'grad_norm': '688', 'examples_per_second': '5.3493', 'counters/examples': 896, 'counters/updates': 28}
+train stats after 928 examples: {'logps_train/chosen': '-144.59', 'loss/train': '144.59', 'grad_norm': '400', 'examples_per_second': '5.3528', 'counters/examples': 928, 'counters/updates': 29}
+train stats after 960 examples: {'logps_train/chosen': '-179.09', 'loss/train': '179.09', 'grad_norm': '434', 'examples_per_second': '5.8043', 'counters/examples': 960, 'counters/updates': 30}
+train stats after 992 examples: {'logps_train/chosen': '-125.63', 'loss/train': '125.63', 'grad_norm': '390', 'examples_per_second': '5.5978', 'counters/examples': 992, 'counters/updates': 31}
+train stats after 1024 examples: {'logps_train/chosen': '-114.9', 'loss/train': '114.9', 'grad_norm': '346', 'examples_per_second': '5.3554', 'counters/examples': 1024, 'counters/updates': 32}
+train stats after 1056 examples: {'logps_train/chosen': '-139.4', 'loss/train': '139.4', 'grad_norm': '404', 'examples_per_second': '5.357', 'counters/examples': 1056, 'counters/updates': 33}
+train stats after 1088 examples: {'logps_train/chosen': '-130.73', 'loss/train': '130.73', 'grad_norm': '374', 'examples_per_second': '5.6572', 'counters/examples': 1088, 'counters/updates': 34}
+train stats after 1120 examples: {'logps_train/chosen': '-145.06', 'loss/train': '145.06', 'grad_norm': '418', 'examples_per_second': '5.3448', 'counters/examples': 1120, 'counters/updates': 35}
+train stats after 1152 examples: {'logps_train/chosen': '-154.65', 'loss/train': '154.65', 'grad_norm': '394', 'examples_per_second': '5.3459', 'counters/examples': 1152, 'counters/updates': 36}
+train stats after 1184 examples: {'logps_train/chosen': '-132.12', 'loss/train': '132.12', 'grad_norm': '404', 'examples_per_second': '5.3462', 'counters/examples': 1184, 'counters/updates': 37}
+train stats after 1216 examples: {'logps_train/chosen': '-73.869', 'loss/train': '73.869', 'grad_norm': '322', 'examples_per_second': '6.1385', 'counters/examples': 1216, 'counters/updates': 38}
+train stats after 1248 examples: {'logps_train/chosen': '-124.12', 'loss/train': '124.12', 'grad_norm': '404', 'examples_per_second': '5.5284', 'counters/examples': 1248, 'counters/updates': 39}
+train stats after 1280 examples: {'logps_train/chosen': '-130.27', 'loss/train': '130.27', 'grad_norm': '386', 'examples_per_second': '5.3473', 'counters/examples': 1280, 'counters/updates': 40}
+train stats after 1312 examples: {'logps_train/chosen': '-135.98', 'loss/train': '135.98', 'grad_norm': '382', 'examples_per_second': '5.4498', 'counters/examples': 1312, 'counters/updates': 41}
+train stats after 1344 examples: {'logps_train/chosen': '-87.166', 'loss/train': '87.166', 'grad_norm': '348', 'examples_per_second': '5.4355', 'counters/examples': 1344, 'counters/updates': 42}
+train stats after 1376 examples: {'logps_train/chosen': '-143.38', 'loss/train': '143.38', 'grad_norm': '378', 'examples_per_second': '5.574', 'counters/examples': 1376, 'counters/updates': 43}
+train stats after 1408 examples: {'logps_train/chosen': '-107.1', 'loss/train': '107.1', 'grad_norm': '370', 'examples_per_second': '6.24', 'counters/examples': 1408, 'counters/updates': 44}
+train stats after 1440 examples: {'logps_train/chosen': '-142.75', 'loss/train': '142.75', 'grad_norm': '394', 'examples_per_second': '5.1819', 'counters/examples': 1440, 'counters/updates': 45}
+train stats after 1472 examples: {'logps_train/chosen': '-135.05', 'loss/train': '135.05', 'grad_norm': '386', 'examples_per_second': '5.5637', 'counters/examples': 1472, 'counters/updates': 46}
+train stats after 1504 examples: {'logps_train/chosen': '-165.92', 'loss/train': '165.92', 'grad_norm': '470', 'examples_per_second': '5.9807', 'counters/examples': 1504, 'counters/updates': 47}
+train stats after 1536 examples: {'logps_train/chosen': '-133.46', 'loss/train': '133.46', 'grad_norm': '420', 'examples_per_second': '5.065', 'counters/examples': 1536, 'counters/updates': 48}
+train stats after 1568 examples: {'logps_train/chosen': '-114.15', 'loss/train': '114.15', 'grad_norm': '360', 'examples_per_second': '6.257', 'counters/examples': 1568, 'counters/updates': 49}
+train stats after 1600 examples: {'logps_train/chosen': '-122.82', 'loss/train': '122.82', 'grad_norm': '380', 'examples_per_second': '5.6365', 'counters/examples': 1600, 'counters/updates': 50}
+train stats after 1632 examples: {'logps_train/chosen': '-168.88', 'loss/train': '168.88', 'grad_norm': '440', 'examples_per_second': '5.889', 'counters/examples': 1632, 'counters/updates': 51}
+train stats after 1664 examples: {'logps_train/chosen': '-121.56', 'loss/train': '121.56', 'grad_norm': '358', 'examples_per_second': '5.3798', 'counters/examples': 1664, 'counters/updates': 52}
+train stats after 1696 examples: {'logps_train/chosen': '-82.937', 'loss/train': '82.937', 'grad_norm': '322', 'examples_per_second': '6.8311', 'counters/examples': 1696, 'counters/updates': 53}
+train stats after 1728 examples: {'logps_train/chosen': '-151.9', 'loss/train': '151.9', 'grad_norm': '422', 'examples_per_second': '5.35', 'counters/examples': 1728, 'counters/updates': 54}
+train stats after 1760 examples: {'logps_train/chosen': '-128.25', 'loss/train': '128.25', 'grad_norm': '394', 'examples_per_second': '7.4313', 'counters/examples': 1760, 'counters/updates': 55}
+train stats after 1792 examples: {'logps_train/chosen': '-160.6', 'loss/train': '160.6', 'grad_norm': '528', 'examples_per_second': '5.3537', 'counters/examples': 1792, 'counters/updates': 56}
+train stats after 1824 examples: {'logps_train/chosen': '-138.43', 'loss/train': '138.43', 'grad_norm': '384', 'examples_per_second': '5.1822', 'counters/examples': 1824, 'counters/updates': 57}
+train stats after 1856 examples: {'logps_train/chosen': '-165.73', 'loss/train': '165.73', 'grad_norm': '438', 'examples_per_second': '5.1862', 'counters/examples': 1856, 'counters/updates': 58}
+train stats after 1888 examples: {'logps_train/chosen': '-137.68', 'loss/train': '137.68', 'grad_norm': '364', 'examples_per_second': '5.1484', 'counters/examples': 1888, 'counters/updates': 59}
+train stats after 1920 examples: {'logps_train/chosen': '-107.86', 'loss/train': '107.86', 'grad_norm': '334', 'examples_per_second': '5.5383', 'counters/examples': 1920, 'counters/updates': 60}
+train stats after 1952 examples: {'logps_train/chosen': '-114.41', 'loss/train': '114.41', 'grad_norm': '360', 'examples_per_second': '5.2426', 'counters/examples': 1952, 'counters/updates': 61}
+train stats after 1984 examples: {'logps_train/chosen': '-101.95', 'loss/train': '101.95', 'grad_norm': '362', 'examples_per_second': '6.2118', 'counters/examples': 1984, 'counters/updates': 62}
+train stats after 2016 examples: {'logps_train/chosen': '-140.71', 'loss/train': '140.71', 'grad_norm': '414', 'examples_per_second': '5.8022', 'counters/examples': 2016, 'counters/updates': 63}
+train stats after 2048 examples: {'logps_train/chosen': '-105.96', 'loss/train': '105.96', 'grad_norm': '348', 'examples_per_second': '5.6534', 'counters/examples': 2048, 'counters/updates': 64}
+train stats after 2080 examples: {'logps_train/chosen': '-149.1', 'loss/train': '149.1', 'grad_norm': '422', 'examples_per_second': '6.0279', 'counters/examples': 2080, 'counters/updates': 65}
+train stats after 2112 examples: {'logps_train/chosen': '-102.83', 'loss/train': '102.83', 'grad_norm': '382', 'examples_per_second': '5.3909', 'counters/examples': 2112, 'counters/updates': 66}
+train stats after 2144 examples: {'logps_train/chosen': '-121.28', 'loss/train': '121.28', 'grad_norm': '382', 'examples_per_second': '5.3006', 'counters/examples': 2144, 'counters/updates': 67}
+train stats after 2176 examples: {'logps_train/chosen': '-126.95', 'loss/train': '126.95', 'grad_norm': '380', 'examples_per_second': '5.3353', 'counters/examples': 2176, 'counters/updates': 68}
+train stats after 2208 examples: {'logps_train/chosen': '-138.85', 'loss/train': '138.85', 'grad_norm': '386', 'examples_per_second': '5.3517', 'counters/examples': 2208, 'counters/updates': 69}
+train stats after 2240 examples: {'logps_train/chosen': '-109.75', 'loss/train': '109.75', 'grad_norm': '382', 'examples_per_second': '5.7814', 'counters/examples': 2240, 'counters/updates': 70}
+train stats after 2272 examples: {'logps_train/chosen': '-137.95', 'loss/train': '137.95', 'grad_norm': '376', 'examples_per_second': '5.655', 'counters/examples': 2272, 'counters/updates': 71}
+train stats after 2304 examples: {'logps_train/chosen': '-113.78', 'loss/train': '113.78', 'grad_norm': '398', 'examples_per_second': '5.4274', 'counters/examples': 2304, 'counters/updates': 72}
+train stats after 2336 examples: {'logps_train/chosen': '-139.94', 'loss/train': '139.94', 'grad_norm': '396', 'examples_per_second': '5.1906', 'counters/examples': 2336, 'counters/updates': 73}
+train stats after 2368 examples: {'logps_train/chosen': '-151.83', 'loss/train': '151.83', 'grad_norm': '398', 'examples_per_second': '5.3842', 'counters/examples': 2368, 'counters/updates': 74}
+train stats after 2400 examples: {'logps_train/chosen': '-97.796', 'loss/train': '97.796', 'grad_norm': '344', 'examples_per_second': '5.7178', 'counters/examples': 2400, 'counters/updates': 75}
+train stats after 2432 examples: {'logps_train/chosen': '-139.21', 'loss/train': '139.21', 'grad_norm': '388', 'examples_per_second': '5.548', 'counters/examples': 2432, 'counters/updates': 76}
+train stats after 2464 examples: {'logps_train/chosen': '-141.21', 'loss/train': '141.21', 'grad_norm': '384', 'examples_per_second': '5.6589', 'counters/examples': 2464, 'counters/updates': 77}
+train stats after 2496 examples: {'logps_train/chosen': '-185.81', 'loss/train': '185.81', 'grad_norm': '456', 'examples_per_second': '5.3696', 'counters/examples': 2496, 'counters/updates': 78}
+train stats after 2528 examples: {'logps_train/chosen': '-103.98', 'loss/train': '103.98', 'grad_norm': '354', 'examples_per_second': '5.3751', 'counters/examples': 2528, 'counters/updates': 79}
+train stats after 2560 examples: {'logps_train/chosen': '-103.41', 'loss/train': '103.41', 'grad_norm': '366', 'examples_per_second': '5.2033', 'counters/examples': 2560, 'counters/updates': 80}
+train stats after 2592 examples: {'logps_train/chosen': '-111.25', 'loss/train': '111.25', 'grad_norm': '360', 'examples_per_second': '5.4171', 'counters/examples': 2592, 'counters/updates': 81}
+train stats after 2624 examples: {'logps_train/chosen': '-125.66', 'loss/train': '125.66', 'grad_norm': '376', 'examples_per_second': '5.9675', 'counters/examples': 2624, 'counters/updates': 82}
+train stats after 2656 examples: {'logps_train/chosen': '-139.85', 'loss/train': '139.85', 'grad_norm': '382', 'examples_per_second': '5.2142', 'counters/examples': 2656, 'counters/updates': 83}
+train stats after 2688 examples: {'logps_train/chosen': '-143.35', 'loss/train': '143.35', 'grad_norm': '400', 'examples_per_second': '5.3831', 'counters/examples': 2688, 'counters/updates': 84}
+train stats after 2720 examples: {'logps_train/chosen': '-136.88', 'loss/train': '136.88', 'grad_norm': '372', 'examples_per_second': '5.3645', 'counters/examples': 2720, 'counters/updates': 85}
+train stats after 2752 examples: {'logps_train/chosen': '-144.57', 'loss/train': '144.57', 'grad_norm': '396', 'examples_per_second': '5.3672', 'counters/examples': 2752, 'counters/updates': 86}
+train stats after 2784 examples: {'logps_train/chosen': '-162.23', 'loss/train': '162.23', 'grad_norm': '432', 'examples_per_second': '5.3466', 'counters/examples': 2784, 'counters/updates': 87}
+train stats after 2816 examples: {'logps_train/chosen': '-123.21', 'loss/train': '123.21', 'grad_norm': '376', 'examples_per_second': '5.3884', 'counters/examples': 2816, 'counters/updates': 88}
+train stats after 2848 examples: {'logps_train/chosen': '-106.92', 'loss/train': '106.92', 'grad_norm': '366', 'examples_per_second': '5.5754', 'counters/examples': 2848, 'counters/updates': 89}
+train stats after 2880 examples: {'logps_train/chosen': '-160.59', 'loss/train': '160.59', 'grad_norm': '376', 'examples_per_second': '5.2384', 'counters/examples': 2880, 'counters/updates': 90}
+train stats after 2912 examples: {'logps_train/chosen': '-117.67', 'loss/train': '117.67', 'grad_norm': '356', 'examples_per_second': '5.4291', 'counters/examples': 2912, 'counters/updates': 91}
+train stats after 2944 examples: {'logps_train/chosen': '-127.02', 'loss/train': '127.02', 'grad_norm': '356', 'examples_per_second': '5.2919', 'counters/examples': 2944, 'counters/updates': 92}
+train stats after 2976 examples: {'logps_train/chosen': '-138.79', 'loss/train': '138.79', 'grad_norm': '374', 'examples_per_second': '5.676', 'counters/examples': 2976, 'counters/updates': 93}
+train stats after 3008 examples: {'logps_train/chosen': '-154.9', 'loss/train': '154.9', 'grad_norm': '396', 'examples_per_second': '5.2065', 'counters/examples': 3008, 'counters/updates': 94}
+train stats after 3040 examples: {'logps_train/chosen': '-110.87', 'loss/train': '110.87', 'grad_norm': '368', 'examples_per_second': '5.7314', 'counters/examples': 3040, 'counters/updates': 95}
+train stats after 3072 examples: {'logps_train/chosen': '-164.71', 'loss/train': '164.71', 'grad_norm': '484', 'examples_per_second': '5.3695', 'counters/examples': 3072, 'counters/updates': 96}
+train stats after 3104 examples: {'logps_train/chosen': '-144.87', 'loss/train': '144.87', 'grad_norm': '400', 'examples_per_second': '5.2081', 'counters/examples': 3104, 'counters/updates': 97}
+train stats after 3136 examples: {'logps_train/chosen': '-159.37', 'loss/train': '159.37', 'grad_norm': '424', 'examples_per_second': '5.3707', 'counters/examples': 3136, 'counters/updates': 98}
+train stats after 3168 examples: {'logps_train/chosen': '-122.69', 'loss/train': '122.69', 'grad_norm': '384', 'examples_per_second': '5.6435', 'counters/examples': 3168, 'counters/updates': 99}
+train stats after 3200 examples: {'logps_train/chosen': '-128.74', 'loss/train': '128.74', 'grad_norm': '384', 'examples_per_second': '5.8299', 'counters/examples': 3200, 'counters/updates': 100}
+train stats after 3232 examples: {'logps_train/chosen': '-141.41', 'loss/train': '141.41', 'grad_norm': '402', 'examples_per_second': '5.6244', 'counters/examples': 3232, 'counters/updates': 101}
+train stats after 3264 examples: {'logps_train/chosen': '-101.24', 'loss/train': '101.24', 'grad_norm': '344', 'examples_per_second': '5.2254', 'counters/examples': 3264, 'counters/updates': 102}
+train stats after 3296 examples: {'logps_train/chosen': '-148.88', 'loss/train': '148.88', 'grad_norm': '390', 'examples_per_second': '5.3892', 'counters/examples': 3296, 'counters/updates': 103}
+train stats after 3328 examples: {'logps_train/chosen': '-138.17', 'loss/train': '138.17', 'grad_norm': '396', 'examples_per_second': '5.6148', 'counters/examples': 3328, 'counters/updates': 104}
+train stats after 3360 examples: {'logps_train/chosen': '-89.33', 'loss/train': '89.33', 'grad_norm': '344', 'examples_per_second': '5.8491', 'counters/examples': 3360, 'counters/updates': 105}
+train stats after 3392 examples: {'logps_train/chosen': '-133.73', 'loss/train': '133.73', 'grad_norm': '388', 'examples_per_second': '5.494', 'counters/examples': 3392, 'counters/updates': 106}
+train stats after 3424 examples: {'logps_train/chosen': '-122.33', 'loss/train': '122.33', 'grad_norm': '354', 'examples_per_second': '5.2092', 'counters/examples': 3424, 'counters/updates': 107}
+train stats after 3456 examples: {'logps_train/chosen': '-138.81', 'loss/train': '138.81', 'grad_norm': '404', 'examples_per_second': '5.5423', 'counters/examples': 3456, 'counters/updates': 108}
+train stats after 3488 examples: {'logps_train/chosen': '-131.21', 'loss/train': '131.21', 'grad_norm': '392', 'examples_per_second': '5.2295', 'counters/examples': 3488, 'counters/updates': 109}
+train stats after 3520 examples: {'logps_train/chosen': '-117.35', 'loss/train': '117.35', 'grad_norm': '356', 'examples_per_second': '5.8188', 'counters/examples': 3520, 'counters/updates': 110}
+train stats after 3552 examples: {'logps_train/chosen': '-155.18', 'loss/train': '155.18', 'grad_norm': '394', 'examples_per_second': '5.0888', 'counters/examples': 3552, 'counters/updates': 111}
+train stats after 3584 examples: {'logps_train/chosen': '-143.19', 'loss/train': '143.19', 'grad_norm': '412', 'examples_per_second': '5.3927', 'counters/examples': 3584, 'counters/updates': 112}
+train stats after 3616 examples: {'logps_train/chosen': '-135.45', 'loss/train': '135.45', 'grad_norm': '420', 'examples_per_second': '5.2205', 'counters/examples': 3616, 'counters/updates': 113}
+train stats after 3648 examples: {'logps_train/chosen': '-115.09', 'loss/train': '115.09', 'grad_norm': '356', 'examples_per_second': '5.2321', 'counters/examples': 3648, 'counters/updates': 114}
+train stats after 3680 examples: {'logps_train/chosen': '-148.81', 'loss/train': '148.81', 'grad_norm': '396', 'examples_per_second': '5.3561', 'counters/examples': 3680, 'counters/updates': 115}
+train stats after 3712 examples: {'logps_train/chosen': '-119.38', 'loss/train': '119.38', 'grad_norm': '384', 'examples_per_second': '5.7764', 'counters/examples': 3712, 'counters/updates': 116}
+train stats after 3744 examples: {'logps_train/chosen': '-128.34', 'loss/train': '128.34', 'grad_norm': '486', 'examples_per_second': '5.4185', 'counters/examples': 3744, 'counters/updates': 117}
+train stats after 3776 examples: {'logps_train/chosen': '-99.287', 'loss/train': '99.287', 'grad_norm': '340', 'examples_per_second': '5.235', 'counters/examples': 3776, 'counters/updates': 118}
+train stats after 3808 examples: {'logps_train/chosen': '-101.78', 'loss/train': '101.78', 'grad_norm': '362', 'examples_per_second': '5.5958', 'counters/examples': 3808, 'counters/updates': 119}
+train stats after 3840 examples: {'logps_train/chosen': '-131.42', 'loss/train': '131.42', 'grad_norm': '362', 'examples_per_second': '5.1072', 'counters/examples': 3840, 'counters/updates': 120}
+train stats after 3872 examples: {'logps_train/chosen': '-131.23', 'loss/train': '131.23', 'grad_norm': '390', 'examples_per_second': '5.5913', 'counters/examples': 3872, 'counters/updates': 121}
+train stats after 3904 examples: {'logps_train/chosen': '-83.27', 'loss/train': '83.27', 'grad_norm': '390', 'examples_per_second': '5.999', 'counters/examples': 3904, 'counters/updates': 122}
+train stats after 3936 examples: {'logps_train/chosen': '-118.19', 'loss/train': '118.19', 'grad_norm': '372', 'examples_per_second': '7.8414', 'counters/examples': 3936, 'counters/updates': 123}
+train stats after 3968 examples: {'logps_train/chosen': '-110.41', 'loss/train': '110.41', 'grad_norm': '372', 'examples_per_second': '5.3751', 'counters/examples': 3968, 'counters/updates': 124}
+train stats after 4000 examples: {'logps_train/chosen': '-130.11', 'loss/train': '130.11', 'grad_norm': '368', 'examples_per_second': '5.3753', 'counters/examples': 4000, 'counters/updates': 125}
+train stats after 4032 examples: {'logps_train/chosen': '-142.74', 'loss/train': '142.74', 'grad_norm': '404', 'examples_per_second': '5.4735', 'counters/examples': 4032, 'counters/updates': 126}
+train stats after 4064 examples: {'logps_train/chosen': '-103.86', 'loss/train': '103.86', 'grad_norm': '374', 'examples_per_second': '5.8164', 'counters/examples': 4064, 'counters/updates': 127}
+train stats after 4096 examples: {'logps_train/chosen': '-115.58', 'loss/train': '115.58', 'grad_norm': '396', 'examples_per_second': '5.174', 'counters/examples': 4096, 'counters/updates': 128}
+train stats after 4128 examples: {'logps_train/chosen': '-86.158', 'loss/train': '86.158', 'grad_norm': '336', 'examples_per_second': '6.1872', 'counters/examples': 4128, 'counters/updates': 129}
+train stats after 4160 examples: {'logps_train/chosen': '-144.57', 'loss/train': '144.57', 'grad_norm': '368', 'examples_per_second': '6.1835', 'counters/examples': 4160, 'counters/updates': 130}
+train stats after 4192 examples: {'logps_train/chosen': '-126.71', 'loss/train': '126.71', 'grad_norm': '380', 'examples_per_second': '5.3697', 'counters/examples': 4192, 'counters/updates': 131}
+train stats after 4224 examples: {'logps_train/chosen': '-122.08', 'loss/train': '122.08', 'grad_norm': '388', 'examples_per_second': '5.1817', 'counters/examples': 4224, 'counters/updates': 132}
+train stats after 4256 examples: {'logps_train/chosen': '-143.26', 'loss/train': '143.26', 'grad_norm': '404', 'examples_per_second': '6.0321', 'counters/examples': 4256, 'counters/updates': 133}
+train stats after 4288 examples: {'logps_train/chosen': '-152.52', 'loss/train': '152.52', 'grad_norm': '418', 'examples_per_second': '5.5203', 'counters/examples': 4288, 'counters/updates': 134}
+train stats after 4320 examples: {'logps_train/chosen': '-108.09', 'loss/train': '108.09', 'grad_norm': '346', 'examples_per_second': '5.3596', 'counters/examples': 4320, 'counters/updates': 135}
+train stats after 4352 examples: {'logps_train/chosen': '-95.143', 'loss/train': '95.143', 'grad_norm': '304', 'examples_per_second': '5.5432', 'counters/examples': 4352, 'counters/updates': 136}
+train stats after 4384 examples: {'logps_train/chosen': '-116.77', 'loss/train': '116.77', 'grad_norm': '362', 'examples_per_second': '5.3547', 'counters/examples': 4384, 'counters/updates': 137}
+train stats after 4416 examples: {'logps_train/chosen': '-124.57', 'loss/train': '124.57', 'grad_norm': '348', 'examples_per_second': '5.1831', 'counters/examples': 4416, 'counters/updates': 138}
+train stats after 4448 examples: {'logps_train/chosen': '-119.1', 'loss/train': '119.1', 'grad_norm': '348', 'examples_per_second': '5.3623', 'counters/examples': 4448, 'counters/updates': 139}
+train stats after 4480 examples: {'logps_train/chosen': '-150.98', 'loss/train': '150.98', 'grad_norm': '396', 'examples_per_second': '5.5029', 'counters/examples': 4480, 'counters/updates': 140}
+train stats after 4512 examples: {'logps_train/chosen': '-127.13', 'loss/train': '127.13', 'grad_norm': '362', 'examples_per_second': '5.6354', 'counters/examples': 4512, 'counters/updates': 141}
+train stats after 4544 examples: {'logps_train/chosen': '-143.03', 'loss/train': '143.03', 'grad_norm': '390', 'examples_per_second': '6.2875', 'counters/examples': 4544, 'counters/updates': 142}
+train stats after 4576 examples: {'logps_train/chosen': '-112.56', 'loss/train': '112.56', 'grad_norm': '342', 'examples_per_second': '5.3537', 'counters/examples': 4576, 'counters/updates': 143}
+train stats after 4608 examples: {'logps_train/chosen': '-164.41', 'loss/train': '164.41', 'grad_norm': '394', 'examples_per_second': '5.3414', 'counters/examples': 4608, 'counters/updates': 144}
+train stats after 4640 examples: {'logps_train/chosen': '-121.96', 'loss/train': '121.96', 'grad_norm': '366', 'examples_per_second': '6.016', 'counters/examples': 4640, 'counters/updates': 145}
+train stats after 4672 examples: {'logps_train/chosen': '-151.15', 'loss/train': '151.15', 'grad_norm': '410', 'examples_per_second': '5.3646', 'counters/examples': 4672, 'counters/updates': 146}
+train stats after 4704 examples: {'logps_train/chosen': '-149.83', 'loss/train': '149.83', 'grad_norm': '398', 'examples_per_second': '5.3515', 'counters/examples': 4704, 'counters/updates': 147}
+train stats after 4736 examples: {'logps_train/chosen': '-151.79', 'loss/train': '151.79', 'grad_norm': '406', 'examples_per_second': '6.1784', 'counters/examples': 4736, 'counters/updates': 148}
+train stats after 4768 examples: {'logps_train/chosen': '-147.55', 'loss/train': '147.55', 'grad_norm': '406', 'examples_per_second': '5.1354', 'counters/examples': 4768, 'counters/updates': 149}
+train stats after 4800 examples: {'logps_train/chosen': '-163.01', 'loss/train': '163.01', 'grad_norm': '440', 'examples_per_second': '5.3546', 'counters/examples': 4800, 'counters/updates': 150}
+train stats after 4832 examples: {'logps_train/chosen': '-139.2', 'loss/train': '139.2', 'grad_norm': '368', 'examples_per_second': '5.4028', 'counters/examples': 4832, 'counters/updates': 151}
+train stats after 4864 examples: {'logps_train/chosen': '-117.66', 'loss/train': '117.66', 'grad_norm': '330', 'examples_per_second': '5.9298', 'counters/examples': 4864, 'counters/updates': 152}
+train stats after 4896 examples: {'logps_train/chosen': '-123.17', 'loss/train': '123.17', 'grad_norm': '410', 'examples_per_second': '6.2971', 'counters/examples': 4896, 'counters/updates': 153}
+train stats after 4928 examples: {'logps_train/chosen': '-130.81', 'loss/train': '130.81', 'grad_norm': '374', 'examples_per_second': '5.6333', 'counters/examples': 4928, 'counters/updates': 154}
+train stats after 4960 examples: {'logps_train/chosen': '-110.15', 'loss/train': '110.15', 'grad_norm': '350', 'examples_per_second': '5.8165', 'counters/examples': 4960, 'counters/updates': 155}
+train stats after 4992 examples: {'logps_train/chosen': '-136.38', 'loss/train': '136.38', 'grad_norm': '358', 'examples_per_second': '5.3979', 'counters/examples': 4992, 'counters/updates': 156}
+train stats after 5024 examples: {'logps_train/chosen': '-126.69', 'loss/train': '126.69', 'grad_norm': '336', 'examples_per_second': '5.2506', 'counters/examples': 5024, 'counters/updates': 157}
+train stats after 5056 examples: {'logps_train/chosen': '-120.08', 'loss/train': '120.08', 'grad_norm': '380', 'examples_per_second': '5.1895', 'counters/examples': 5056, 'counters/updates': 158}
+train stats after 5088 examples: {'logps_train/chosen': '-125.7', 'loss/train': '125.7', 'grad_norm': '376', 'examples_per_second': '5.5387', 'counters/examples': 5088, 'counters/updates': 159}
+train stats after 5120 examples: {'logps_train/chosen': '-136.81', 'loss/train': '136.81', 'grad_norm': '376', 'examples_per_second': '5.3436', 'counters/examples': 5120, 'counters/updates': 160}
+train stats after 5152 examples: {'logps_train/chosen': '-110.39', 'loss/train': '110.39', 'grad_norm': '374', 'examples_per_second': '5.6348', 'counters/examples': 5152, 'counters/updates': 161}
+train stats after 5184 examples: {'logps_train/chosen': '-115.86', 'loss/train': '115.86', 'grad_norm': '370', 'examples_per_second': '6.3836', 'counters/examples': 5184, 'counters/updates': 162}
+train stats after 5216 examples: {'logps_train/chosen': '-150.59', 'loss/train': '150.59', 'grad_norm': '394', 'examples_per_second': '6.3431', 'counters/examples': 5216, 'counters/updates': 163}
+train stats after 5248 examples: {'logps_train/chosen': '-129.94', 'loss/train': '129.94', 'grad_norm': '384', 'examples_per_second': '5.9037', 'counters/examples': 5248, 'counters/updates': 164}
+train stats after 5280 examples: {'logps_train/chosen': '-107.13', 'loss/train': '107.13', 'grad_norm': '438', 'examples_per_second': '6.0594', 'counters/examples': 5280, 'counters/updates': 165}
+train stats after 5312 examples: {'logps_train/chosen': '-110.88', 'loss/train': '110.88', 'grad_norm': '328', 'examples_per_second': '5.3575', 'counters/examples': 5312, 'counters/updates': 166}
+train stats after 5344 examples: {'logps_train/chosen': '-135.03', 'loss/train': '135.03', 'grad_norm': '354', 'examples_per_second': '6.0755', 'counters/examples': 5344, 'counters/updates': 167}
+train stats after 5376 examples: {'logps_train/chosen': '-146.53', 'loss/train': '146.53', 'grad_norm': '378', 'examples_per_second': '6.4417', 'counters/examples': 5376, 'counters/updates': 168}
+train stats after 5408 examples: {'logps_train/chosen': '-179.92', 'loss/train': '179.92', 'grad_norm': '426', 'examples_per_second': '5.1989', 'counters/examples': 5408, 'counters/updates': 169}
+train stats after 5440 examples: {'logps_train/chosen': '-188.14', 'loss/train': '188.14', 'grad_norm': '424', 'examples_per_second': '5.1884', 'counters/examples': 5440, 'counters/updates': 170}
+train stats after 5472 examples: {'logps_train/chosen': '-117.98', 'loss/train': '117.98', 'grad_norm': '334', 'examples_per_second': '5.1907', 'counters/examples': 5472, 'counters/updates': 171}
+train stats after 5504 examples: {'logps_train/chosen': '-116.41', 'loss/train': '116.41', 'grad_norm': '348', 'examples_per_second': '6.0961', 'counters/examples': 5504, 'counters/updates': 172}
+train stats after 5536 examples: {'logps_train/chosen': '-136.94', 'loss/train': '136.94', 'grad_norm': '420', 'examples_per_second': '5.5408', 'counters/examples': 5536, 'counters/updates': 173}
+train stats after 5568 examples: {'logps_train/chosen': '-137.36', 'loss/train': '137.36', 'grad_norm': '374', 'examples_per_second': '5.2232', 'counters/examples': 5568, 'counters/updates': 174}
+train stats after 5600 examples: {'logps_train/chosen': '-69.043', 'loss/train': '69.043', 'grad_norm': '314', 'examples_per_second': '6.2945', 'counters/examples': 5600, 'counters/updates': 175}
+train stats after 5632 examples: {'logps_train/chosen': '-131.88', 'loss/train': '131.88', 'grad_norm': '354', 'examples_per_second': '5.4494', 'counters/examples': 5632, 'counters/updates': 176}
+train stats after 5664 examples: {'logps_train/chosen': '-100.99', 'loss/train': '100.99', 'grad_norm': '318', 'examples_per_second': '5.4989', 'counters/examples': 5664, 'counters/updates': 177}
+train stats after 5696 examples: {'logps_train/chosen': '-126.67', 'loss/train': '126.67', 'grad_norm': '368', 'examples_per_second': '5.2167', 'counters/examples': 5696, 'counters/updates': 178}
+train stats after 5728 examples: {'logps_train/chosen': '-93.196', 'loss/train': '93.196', 'grad_norm': '362', 'examples_per_second': '5.9254', 'counters/examples': 5728, 'counters/updates': 179}
+train stats after 5760 examples: {'logps_train/chosen': '-110.19', 'loss/train': '110.19', 'grad_norm': '386', 'examples_per_second': '5.2207', 'counters/examples': 5760, 'counters/updates': 180}
+train stats after 5792 examples: {'logps_train/chosen': '-137.72', 'loss/train': '137.72', 'grad_norm': '380', 'examples_per_second': '5.3877', 'counters/examples': 5792, 'counters/updates': 181}
+train stats after 5824 examples: {'logps_train/chosen': '-118.72', 'loss/train': '118.72', 'grad_norm': '368', 'examples_per_second': '6.1027', 'counters/examples': 5824, 'counters/updates': 182}
+train stats after 5856 examples: {'logps_train/chosen': '-133.55', 'loss/train': '133.55', 'grad_norm': '372', 'examples_per_second': '5.2187', 'counters/examples': 5856, 'counters/updates': 183}
+train stats after 5888 examples: {'logps_train/chosen': '-89.084', 'loss/train': '89.084', 'grad_norm': '326', 'examples_per_second': '5.4141', 'counters/examples': 5888, 'counters/updates': 184}
+train stats after 5920 examples: {'logps_train/chosen': '-141.35', 'loss/train': '141.35', 'grad_norm': '394', 'examples_per_second': '6.118', 'counters/examples': 5920, 'counters/updates': 185}
+train stats after 5952 examples: {'logps_train/chosen': '-114.75', 'loss/train': '114.75', 'grad_norm': '364', 'examples_per_second': '5.2212', 'counters/examples': 5952, 'counters/updates': 186}
+train stats after 5984 examples: {'logps_train/chosen': '-106.66', 'loss/train': '106.66', 'grad_norm': '338', 'examples_per_second': '5.4733', 'counters/examples': 5984, 'counters/updates': 187}
+train stats after 6016 examples: {'logps_train/chosen': '-116.63', 'loss/train': '116.63', 'grad_norm': '352', 'examples_per_second': '5.6129', 'counters/examples': 6016, 'counters/updates': 188}
+train stats after 6048 examples: {'logps_train/chosen': '-104.5', 'loss/train': '104.5', 'grad_norm': '344', 'examples_per_second': '5.3927', 'counters/examples': 6048, 'counters/updates': 189}
+train stats after 6080 examples: {'logps_train/chosen': '-104.33', 'loss/train': '104.33', 'grad_norm': '352', 'examples_per_second': '5.3841', 'counters/examples': 6080, 'counters/updates': 190}
+train stats after 6112 examples: {'logps_train/chosen': '-163.24', 'loss/train': '163.24', 'grad_norm': '402', 'examples_per_second': '5.6701', 'counters/examples': 6112, 'counters/updates': 191}
+train stats after 6144 examples: {'logps_train/chosen': '-171.08', 'loss/train': '171.08', 'grad_norm': '456', 'examples_per_second': '5.3879', 'counters/examples': 6144, 'counters/updates': 192}
+train stats after 6176 examples: {'logps_train/chosen': '-137.21', 'loss/train': '137.21', 'grad_norm': '398', 'examples_per_second': '5.8993', 'counters/examples': 6176, 'counters/updates': 193}
+train stats after 6208 examples: {'logps_train/chosen': '-135.49', 'loss/train': '135.49', 'grad_norm': '404', 'examples_per_second': '5.7796', 'counters/examples': 6208, 'counters/updates': 194}
+train stats after 6240 examples: {'logps_train/chosen': '-175.65', 'loss/train': '175.65', 'grad_norm': '410', 'examples_per_second': '6.7262', 'counters/examples': 6240, 'counters/updates': 195}
+train stats after 6272 examples: {'logps_train/chosen': '-97.886', 'loss/train': '97.886', 'grad_norm': '312', 'examples_per_second': '5.7985', 'counters/examples': 6272, 'counters/updates': 196}
+train stats after 6304 examples: {'logps_train/chosen': '-169.29', 'loss/train': '169.29', 'grad_norm': '390', 'examples_per_second': '5.3728', 'counters/examples': 6304, 'counters/updates': 197}
+train stats after 6336 examples: {'logps_train/chosen': '-117.62', 'loss/train': '117.62', 'grad_norm': '366', 'examples_per_second': '5.5861', 'counters/examples': 6336, 'counters/updates': 198}
+train stats after 6368 examples: {'logps_train/chosen': '-109.84', 'loss/train': '109.84', 'grad_norm': '328', 'examples_per_second': '5.2167', 'counters/examples': 6368, 'counters/updates': 199}
+train stats after 6400 examples: {'logps_train/chosen': '-118.01', 'loss/train': '118.01', 'grad_norm': '360', 'examples_per_second': '5.5406', 'counters/examples': 6400, 'counters/updates': 200}
+train stats after 6432 examples: {'logps_train/chosen': '-123.17', 'loss/train': '123.17', 'grad_norm': '324', 'examples_per_second': '5.3844', 'counters/examples': 6432, 'counters/updates': 201}
+train stats after 6464 examples: {'logps_train/chosen': '-112.33', 'loss/train': '112.33', 'grad_norm': '350', 'examples_per_second': '5.3748', 'counters/examples': 6464, 'counters/updates': 202}
+train stats after 6496 examples: {'logps_train/chosen': '-164.44', 'loss/train': '164.44', 'grad_norm': '392', 'examples_per_second': '5.3558', 'counters/examples': 6496, 'counters/updates': 203}
+train stats after 6528 examples: {'logps_train/chosen': '-130.37', 'loss/train': '130.37', 'grad_norm': '402', 'examples_per_second': '5.3646', 'counters/examples': 6528, 'counters/updates': 204}
+train stats after 6560 examples: {'logps_train/chosen': '-109.82', 'loss/train': '109.82', 'grad_norm': '348', 'examples_per_second': '5.3584', 'counters/examples': 6560, 'counters/updates': 205}
+train stats after 6592 examples: {'logps_train/chosen': '-135.74', 'loss/train': '135.74', 'grad_norm': '384', 'examples_per_second': '5.7694', 'counters/examples': 6592, 'counters/updates': 206}
+train stats after 6624 examples: {'logps_train/chosen': '-107.49', 'loss/train': '107.49', 'grad_norm': '324', 'examples_per_second': '5.406', 'counters/examples': 6624, 'counters/updates': 207}
+train stats after 6656 examples: {'logps_train/chosen': '-140.86', 'loss/train': '140.86', 'grad_norm': '378', 'examples_per_second': '5.3625', 'counters/examples': 6656, 'counters/updates': 208}
+train stats after 6688 examples: {'logps_train/chosen': '-107.57', 'loss/train': '107.57', 'grad_norm': '316', 'examples_per_second': '5.3669', 'counters/examples': 6688, 'counters/updates': 209}
+train stats after 6720 examples: {'logps_train/chosen': '-120.55', 'loss/train': '120.55', 'grad_norm': '340', 'examples_per_second': '5.3665', 'counters/examples': 6720, 'counters/updates': 210}
+train stats after 6752 examples: {'logps_train/chosen': '-87.591', 'loss/train': '87.591', 'grad_norm': '316', 'examples_per_second': '5.9', 'counters/examples': 6752, 'counters/updates': 211}
+train stats after 6784 examples: {'logps_train/chosen': '-124.65', 'loss/train': '124.65', 'grad_norm': '362', 'examples_per_second': '5.7229', 'counters/examples': 6784, 'counters/updates': 212}
+train stats after 6816 examples: {'logps_train/chosen': '-133.87', 'loss/train': '133.87', 'grad_norm': '358', 'examples_per_second': '6.0544', 'counters/examples': 6816, 'counters/updates': 213}
+train stats after 6848 examples: {'logps_train/chosen': '-137.05', 'loss/train': '137.05', 'grad_norm': '364', 'examples_per_second': '5.3432', 'counters/examples': 6848, 'counters/updates': 214}
+train stats after 6880 examples: {'logps_train/chosen': '-151.97', 'loss/train': '151.97', 'grad_norm': '400', 'examples_per_second': '5.1992', 'counters/examples': 6880, 'counters/updates': 215}
+train stats after 6912 examples: {'logps_train/chosen': '-99.715', 'loss/train': '99.715', 'grad_norm': '336', 'examples_per_second': '6.3755', 'counters/examples': 6912, 'counters/updates': 216}
+train stats after 6944 examples: {'logps_train/chosen': '-113.69', 'loss/train': '113.69', 'grad_norm': '352', 'examples_per_second': '5.5164', 'counters/examples': 6944, 'counters/updates': 217}
+train stats after 6976 examples: {'logps_train/chosen': '-131.25', 'loss/train': '131.25', 'grad_norm': '378', 'examples_per_second': '5.3633', 'counters/examples': 6976, 'counters/updates': 218}
+train stats after 7008 examples: {'logps_train/chosen': '-127.19', 'loss/train': '127.19', 'grad_norm': '364', 'examples_per_second': '5.3582', 'counters/examples': 7008, 'counters/updates': 219}
+train stats after 7040 examples: {'logps_train/chosen': '-139.36', 'loss/train': '139.36', 'grad_norm': '398', 'examples_per_second': '5.3667', 'counters/examples': 7040, 'counters/updates': 220}
+train stats after 7072 examples: {'logps_train/chosen': '-152.38', 'loss/train': '152.38', 'grad_norm': '370', 'examples_per_second': '5.1925', 'counters/examples': 7072, 'counters/updates': 221}
+train stats after 7104 examples: {'logps_train/chosen': '-139.15', 'loss/train': '139.15', 'grad_norm': '366', 'examples_per_second': '6.3045', 'counters/examples': 7104, 'counters/updates': 222}
+train stats after 7136 examples: {'logps_train/chosen': '-126.34', 'loss/train': '126.34', 'grad_norm': '348', 'examples_per_second': '5.4603', 'counters/examples': 7136, 'counters/updates': 223}
+train stats after 7168 examples: {'logps_train/chosen': '-130.98', 'loss/train': '130.98', 'grad_norm': '356', 'examples_per_second': '6.3761', 'counters/examples': 7168, 'counters/updates': 224}
+train stats after 7200 examples: {'logps_train/chosen': '-127.48', 'loss/train': '127.48', 'grad_norm': '350', 'examples_per_second': '5.3532', 'counters/examples': 7200, 'counters/updates': 225}
+train stats after 7232 examples: {'logps_train/chosen': '-145.55', 'loss/train': '145.55', 'grad_norm': '368', 'examples_per_second': '5.8035', 'counters/examples': 7232, 'counters/updates': 226}
+train stats after 7264 examples: {'logps_train/chosen': '-150.37', 'loss/train': '150.37', 'grad_norm': '378', 'examples_per_second': '5.3554', 'counters/examples': 7264, 'counters/updates': 227}
+train stats after 7296 examples: {'logps_train/chosen': '-101.08', 'loss/train': '101.08', 'grad_norm': '320', 'examples_per_second': '5.8481', 'counters/examples': 7296, 'counters/updates': 228}
+train stats after 7328 examples: {'logps_train/chosen': '-107.62', 'loss/train': '107.62', 'grad_norm': '320', 'examples_per_second': '5.9053', 'counters/examples': 7328, 'counters/updates': 229}
+train stats after 7360 examples: {'logps_train/chosen': '-124.3', 'loss/train': '124.3', 'grad_norm': '340', 'examples_per_second': '5.8256', 'counters/examples': 7360, 'counters/updates': 230}
+train stats after 7392 examples: {'logps_train/chosen': '-165.17', 'loss/train': '165.17', 'grad_norm': '380', 'examples_per_second': '5.3397', 'counters/examples': 7392, 'counters/updates': 231}
+train stats after 7424 examples: {'logps_train/chosen': '-106.48', 'loss/train': '106.48', 'grad_norm': '314', 'examples_per_second': '6.8579', 'counters/examples': 7424, 'counters/updates': 232}
+train stats after 7456 examples: {'logps_train/chosen': '-144.92', 'loss/train': '144.92', 'grad_norm': '394', 'examples_per_second': '5.8513', 'counters/examples': 7456, 'counters/updates': 233}
+train stats after 7488 examples: {'logps_train/chosen': '-110.17', 'loss/train': '110.17', 'grad_norm': '336', 'examples_per_second': '6.4915', 'counters/examples': 7488, 'counters/updates': 234}
+train stats after 7520 examples: {'logps_train/chosen': '-108.94', 'loss/train': '108.94', 'grad_norm': '336', 'examples_per_second': '7.452', 'counters/examples': 7520, 'counters/updates': 235}
+train stats after 7552 examples: {'logps_train/chosen': '-112.34', 'loss/train': '112.34', 'grad_norm': '336', 'examples_per_second': '5.5727', 'counters/examples': 7552, 'counters/updates': 236}
+train stats after 7584 examples: {'logps_train/chosen': '-128.2', 'loss/train': '128.2', 'grad_norm': '328', 'examples_per_second': '5.8168', 'counters/examples': 7584, 'counters/updates': 237}
+train stats after 7616 examples: {'logps_train/chosen': '-119.22', 'loss/train': '119.22', 'grad_norm': '342', 'examples_per_second': '5.5039', 'counters/examples': 7616, 'counters/updates': 238}
+train stats after 7648 examples: {'logps_train/chosen': '-133.26', 'loss/train': '133.26', 'grad_norm': '338', 'examples_per_second': '5.344', 'counters/examples': 7648, 'counters/updates': 239}
+train stats after 7680 examples: {'logps_train/chosen': '-133.49', 'loss/train': '133.49', 'grad_norm': '380', 'examples_per_second': '5.3495', 'counters/examples': 7680, 'counters/updates': 240}
+train stats after 7712 examples: {'logps_train/chosen': '-129.59', 'loss/train': '129.59', 'grad_norm': '348', 'examples_per_second': '6.4189', 'counters/examples': 7712, 'counters/updates': 241}
+train stats after 7744 examples: {'logps_train/chosen': '-115.7', 'loss/train': '115.7', 'grad_norm': '372', 'examples_per_second': '5.3546', 'counters/examples': 7744, 'counters/updates': 242}
+train stats after 7776 examples: {'logps_train/chosen': '-81.997', 'loss/train': '81.997', 'grad_norm': '310', 'examples_per_second': '8.5335', 'counters/examples': 7776, 'counters/updates': 243}
+train stats after 7808 examples: {'logps_train/chosen': '-132.33', 'loss/train': '132.33', 'grad_norm': '356', 'examples_per_second': '5.7288', 'counters/examples': 7808, 'counters/updates': 244}
+train stats after 7840 examples: {'logps_train/chosen': '-96.136', 'loss/train': '96.136', 'grad_norm': '300', 'examples_per_second': '5.3468', 'counters/examples': 7840, 'counters/updates': 245}
+train stats after 7872 examples: {'logps_train/chosen': '-124.35', 'loss/train': '124.35', 'grad_norm': '332', 'examples_per_second': '6.1311', 'counters/examples': 7872, 'counters/updates': 246}
+train stats after 7904 examples: {'logps_train/chosen': '-103.57', 'loss/train': '103.57', 'grad_norm': '320', 'examples_per_second': '5.5024', 'counters/examples': 7904, 'counters/updates': 247}
+train stats after 7936 examples: {'logps_train/chosen': '-123.63', 'loss/train': '123.63', 'grad_norm': '444', 'examples_per_second': '5.5373', 'counters/examples': 7936, 'counters/updates': 248}
+train stats after 7968 examples: {'logps_train/chosen': '-125.99', 'loss/train': '125.99', 'grad_norm': '334', 'examples_per_second': '5.3435', 'counters/examples': 7968, 'counters/updates': 249}
+train stats after 8000 examples: {'logps_train/chosen': '-138.94', 'loss/train': '138.94', 'grad_norm': '358', 'examples_per_second': '5.3445', 'counters/examples': 8000, 'counters/updates': 250}
+train stats after 8032 examples: {'logps_train/chosen': '-105.31', 'loss/train': '105.31', 'grad_norm': '322', 'examples_per_second': '6.0826', 'counters/examples': 8032, 'counters/updates': 251}
+train stats after 8064 examples: {'logps_train/chosen': '-164.38', 'loss/train': '164.38', 'grad_norm': '368', 'examples_per_second': '5.1832', 'counters/examples': 8064, 'counters/updates': 252}
+train stats after 8096 examples: {'logps_train/chosen': '-130.44', 'loss/train': '130.44', 'grad_norm': '358', 'examples_per_second': '5.4461', 'counters/examples': 8096, 'counters/updates': 253}
+train stats after 8128 examples: {'logps_train/chosen': '-120.13', 'loss/train': '120.13', 'grad_norm': '338', 'examples_per_second': '5.364', 'counters/examples': 8128, 'counters/updates': 254}
+train stats after 8160 examples: {'logps_train/chosen': '-135.86', 'loss/train': '135.86', 'grad_norm': '378', 'examples_per_second': '5.1918', 'counters/examples': 8160, 'counters/updates': 255}
+train stats after 8192 examples: {'logps_train/chosen': '-102.08', 'loss/train': '102.08', 'grad_norm': '354', 'examples_per_second': '5.4157', 'counters/examples': 8192, 'counters/updates': 256}
+train stats after 8224 examples: {'logps_train/chosen': '-124.69', 'loss/train': '124.69', 'grad_norm': '346', 'examples_per_second': '5.36', 'counters/examples': 8224, 'counters/updates': 257}
+train stats after 8256 examples: {'logps_train/chosen': '-116.58', 'loss/train': '116.58', 'grad_norm': '362', 'examples_per_second': '5.8586', 'counters/examples': 8256, 'counters/updates': 258}
+train stats after 8288 examples: {'logps_train/chosen': '-145.58', 'loss/train': '145.58', 'grad_norm': '378', 'examples_per_second': '5.4887', 'counters/examples': 8288, 'counters/updates': 259}
+train stats after 8320 examples: {'logps_train/chosen': '-91.292', 'loss/train': '91.292', 'grad_norm': '330', 'examples_per_second': '6.1815', 'counters/examples': 8320, 'counters/updates': 260}
+train stats after 8352 examples: {'logps_train/chosen': '-96.778', 'loss/train': '96.778', 'grad_norm': '324', 'examples_per_second': '5.8004', 'counters/examples': 8352, 'counters/updates': 261}
+train stats after 8384 examples: {'logps_train/chosen': '-139.27', 'loss/train': '139.27', 'grad_norm': '384', 'examples_per_second': '5.3646', 'counters/examples': 8384, 'counters/updates': 262}
+train stats after 8416 examples: {'logps_train/chosen': '-125.48', 'loss/train': '125.48', 'grad_norm': '362', 'examples_per_second': '5.3645', 'counters/examples': 8416, 'counters/updates': 263}
+train stats after 8448 examples: {'logps_train/chosen': '-128.98', 'loss/train': '128.98', 'grad_norm': '362', 'examples_per_second': '5.2097', 'counters/examples': 8448, 'counters/updates': 264}
+train stats after 8480 examples: {'logps_train/chosen': '-163.17', 'loss/train': '163.17', 'grad_norm': '408', 'examples_per_second': '6.0634', 'counters/examples': 8480, 'counters/updates': 265}
+train stats after 8512 examples: {'logps_train/chosen': '-138.15', 'loss/train': '138.15', 'grad_norm': '384', 'examples_per_second': '5.3641', 'counters/examples': 8512, 'counters/updates': 266}
+train stats after 8544 examples: {'logps_train/chosen': '-105.72', 'loss/train': '105.72', 'grad_norm': '314', 'examples_per_second': '5.6729', 'counters/examples': 8544, 'counters/updates': 267}
+train stats after 8576 examples: {'logps_train/chosen': '-119.66', 'loss/train': '119.66', 'grad_norm': '340', 'examples_per_second': '5.1885', 'counters/examples': 8576, 'counters/updates': 268}
+train stats after 8608 examples: {'logps_train/chosen': '-103.81', 'loss/train': '103.81', 'grad_norm': '322', 'examples_per_second': '5.3738', 'counters/examples': 8608, 'counters/updates': 269}
+train stats after 8640 examples: {'logps_train/chosen': '-108.82', 'loss/train': '108.82', 'grad_norm': '356', 'examples_per_second': '5.7929', 'counters/examples': 8640, 'counters/updates': 270}
+train stats after 8672 examples: {'logps_train/chosen': '-106.61', 'loss/train': '106.61', 'grad_norm': '330', 'examples_per_second': '5.3719', 'counters/examples': 8672, 'counters/updates': 271}
+train stats after 8704 examples: {'logps_train/chosen': '-129.79', 'loss/train': '129.79', 'grad_norm': '336', 'examples_per_second': '5.3707', 'counters/examples': 8704, 'counters/updates': 272}
+train stats after 8736 examples: {'logps_train/chosen': '-129.25', 'loss/train': '129.25', 'grad_norm': '358', 'examples_per_second': '5.5085', 'counters/examples': 8736, 'counters/updates': 273}
+train stats after 8768 examples: {'logps_train/chosen': '-97.25', 'loss/train': '97.25', 'grad_norm': '304', 'examples_per_second': '5.3626', 'counters/examples': 8768, 'counters/updates': 274}
+train stats after 8800 examples: {'logps_train/chosen': '-107.56', 'loss/train': '107.56', 'grad_norm': '338', 'examples_per_second': '6.0594', 'counters/examples': 8800, 'counters/updates': 275}
+train stats after 8832 examples: {'logps_train/chosen': '-170.71', 'loss/train': '170.71', 'grad_norm': '398', 'examples_per_second': '5.2144', 'counters/examples': 8832, 'counters/updates': 276}
+train stats after 8864 examples: {'logps_train/chosen': '-140.61', 'loss/train': '140.61', 'grad_norm': '350', 'examples_per_second': '5.3822', 'counters/examples': 8864, 'counters/updates': 277}
+train stats after 8896 examples: {'logps_train/chosen': '-118.16', 'loss/train': '118.16', 'grad_norm': '374', 'examples_per_second': '5.8427', 'counters/examples': 8896, 'counters/updates': 278}
+train stats after 8928 examples: {'logps_train/chosen': '-107.17', 'loss/train': '107.17', 'grad_norm': '346', 'examples_per_second': '6.7019', 'counters/examples': 8928, 'counters/updates': 279}
+train stats after 8960 examples: {'logps_train/chosen': '-148.46', 'loss/train': '148.46', 'grad_norm': '378', 'examples_per_second': '5.3665', 'counters/examples': 8960, 'counters/updates': 280}
+train stats after 8992 examples: {'logps_train/chosen': '-101.37', 'loss/train': '101.37', 'grad_norm': '314', 'examples_per_second': '5.3779', 'counters/examples': 8992, 'counters/updates': 281}
+train stats after 9024 examples: {'logps_train/chosen': '-112.78', 'loss/train': '112.78', 'grad_norm': '328', 'examples_per_second': '5.8345', 'counters/examples': 9024, 'counters/updates': 282}
+train stats after 9056 examples: {'logps_train/chosen': '-103.06', 'loss/train': '103.06', 'grad_norm': '308', 'examples_per_second': '6.0732', 'counters/examples': 9056, 'counters/updates': 283}
+train stats after 9088 examples: {'logps_train/chosen': '-107.07', 'loss/train': '107.07', 'grad_norm': '318', 'examples_per_second': '5.4043', 'counters/examples': 9088, 'counters/updates': 284}
+train stats after 9120 examples: {'logps_train/chosen': '-131.1', 'loss/train': '131.1', 'grad_norm': '392', 'examples_per_second': '5.2083', 'counters/examples': 9120, 'counters/updates': 285}
+train stats after 9152 examples: {'logps_train/chosen': '-109.23', 'loss/train': '109.23', 'grad_norm': '320', 'examples_per_second': '5.3759', 'counters/examples': 9152, 'counters/updates': 286}
+train stats after 9184 examples: {'logps_train/chosen': '-129.8', 'loss/train': '129.8', 'grad_norm': '340', 'examples_per_second': '5.3655', 'counters/examples': 9184, 'counters/updates': 287}
+train stats after 9216 examples: {'logps_train/chosen': '-151.13', 'loss/train': '151.13', 'grad_norm': '372', 'examples_per_second': '5.1935', 'counters/examples': 9216, 'counters/updates': 288}
+train stats after 9248 examples: {'logps_train/chosen': '-130.39', 'loss/train': '130.39', 'grad_norm': '368', 'examples_per_second': '5.9078', 'counters/examples': 9248, 'counters/updates': 289}
+train stats after 9280 examples: {'logps_train/chosen': '-142.89', 'loss/train': '142.89', 'grad_norm': '382', 'examples_per_second': '5.2004', 'counters/examples': 9280, 'counters/updates': 290}
+train stats after 9312 examples: {'logps_train/chosen': '-122.9', 'loss/train': '122.9', 'grad_norm': '352', 'examples_per_second': '5.3637', 'counters/examples': 9312, 'counters/updates': 291}
+train stats after 9344 examples: {'logps_train/chosen': '-124.48', 'loss/train': '124.48', 'grad_norm': '344', 'examples_per_second': '5.8455', 'counters/examples': 9344, 'counters/updates': 292}
+train stats after 9376 examples: {'logps_train/chosen': '-95.913', 'loss/train': '95.913', 'grad_norm': '300', 'examples_per_second': '5.8225', 'counters/examples': 9376, 'counters/updates': 293}
+train stats after 9408 examples: {'logps_train/chosen': '-116.08', 'loss/train': '116.08', 'grad_norm': '334', 'examples_per_second': '5.368', 'counters/examples': 9408, 'counters/updates': 294}
+train stats after 9440 examples: {'logps_train/chosen': '-119.64', 'loss/train': '119.64', 'grad_norm': '364', 'examples_per_second': '6.0139', 'counters/examples': 9440, 'counters/updates': 295}
+train stats after 9472 examples: {'logps_train/chosen': '-117.08', 'loss/train': '117.08', 'grad_norm': '360', 'examples_per_second': '5.3671', 'counters/examples': 9472, 'counters/updates': 296}
+train stats after 9504 examples: {'logps_train/chosen': '-130.06', 'loss/train': '130.06', 'grad_norm': '354', 'examples_per_second': '5.6755', 'counters/examples': 9504, 'counters/updates': 297}
+train stats after 9536 examples: {'logps_train/chosen': '-121.35', 'loss/train': '121.35', 'grad_norm': '330', 'examples_per_second': '5.3583', 'counters/examples': 9536, 'counters/updates': 298}
+train stats after 9568 examples: {'logps_train/chosen': '-124.55', 'loss/train': '124.55', 'grad_norm': '336', 'examples_per_second': '5.5823', 'counters/examples': 9568, 'counters/updates': 299}
+train stats after 9600 examples: {'logps_train/chosen': '-91.895', 'loss/train': '91.895', 'grad_norm': '330', 'examples_per_second': '5.8083', 'counters/examples': 9600, 'counters/updates': 300}
+train stats after 9632 examples: {'logps_train/chosen': '-159.24', 'loss/train': '159.24', 'grad_norm': '480', 'examples_per_second': '5.196', 'counters/examples': 9632, 'counters/updates': 301}
+train stats after 9664 examples: {'logps_train/chosen': '-123.27', 'loss/train': '123.27', 'grad_norm': '380', 'examples_per_second': '5.3765', 'counters/examples': 9664, 'counters/updates': 302}
+train stats after 9696 examples: {'logps_train/chosen': '-133.78', 'loss/train': '133.78', 'grad_norm': '374', 'examples_per_second': '5.469', 'counters/examples': 9696, 'counters/updates': 303}
+train stats after 9728 examples: {'logps_train/chosen': '-110.67', 'loss/train': '110.67', 'grad_norm': '334', 'examples_per_second': '6.1191', 'counters/examples': 9728, 'counters/updates': 304}
+train stats after 9760 examples: {'logps_train/chosen': '-123.16', 'loss/train': '123.16', 'grad_norm': '374', 'examples_per_second': '6.1142', 'counters/examples': 9760, 'counters/updates': 305}
+train stats after 9792 examples: {'logps_train/chosen': '-98.399', 'loss/train': '98.399', 'grad_norm': '302', 'examples_per_second': '5.1966', 'counters/examples': 9792, 'counters/updates': 306}
+train stats after 9824 examples: {'logps_train/chosen': '-122.72', 'loss/train': '122.72', 'grad_norm': '344', 'examples_per_second': '5.2135', 'counters/examples': 9824, 'counters/updates': 307}
+train stats after 9856 examples: {'logps_train/chosen': '-137.3', 'loss/train': '137.3', 'grad_norm': '400', 'examples_per_second': '5.3682', 'counters/examples': 9856, 'counters/updates': 308}
+train stats after 9888 examples: {'logps_train/chosen': '-114.84', 'loss/train': '114.84', 'grad_norm': '326', 'examples_per_second': '6.6497', 'counters/examples': 9888, 'counters/updates': 309}
+train stats after 9920 examples: {'logps_train/chosen': '-104.02', 'loss/train': '104.02', 'grad_norm': '300', 'examples_per_second': '6.0725', 'counters/examples': 9920, 'counters/updates': 310}
+train stats after 9952 examples: {'logps_train/chosen': '-100.38', 'loss/train': '100.38', 'grad_norm': '318', 'examples_per_second': '6.0858', 'counters/examples': 9952, 'counters/updates': 311}
+train stats after 9984 examples: {'logps_train/chosen': '-123.71', 'loss/train': '123.71', 'grad_norm': '378', 'examples_per_second': '7.4698', 'counters/examples': 9984, 'counters/updates': 312}
+train stats after 10016 examples: {'logps_train/chosen': '-99.809', 'loss/train': '99.809', 'grad_norm': '298', 'examples_per_second': '5.6253', 'counters/examples': 10016, 'counters/updates': 313}
+train stats after 10048 examples: {'logps_train/chosen': '-116.51', 'loss/train': '116.51', 'grad_norm': '350', 'examples_per_second': '5.3631', 'counters/examples': 10048, 'counters/updates': 314}
+train stats after 10080 examples: {'logps_train/chosen': '-115.28', 'loss/train': '115.28', 'grad_norm': '364', 'examples_per_second': '5.735', 'counters/examples': 10080, 'counters/updates': 315}
+train stats after 10112 examples: {'logps_train/chosen': '-131.63', 'loss/train': '131.63', 'grad_norm': '376', 'examples_per_second': '5.3669', 'counters/examples': 10112, 'counters/updates': 316}
+train stats after 10144 examples: {'logps_train/chosen': '-144.79', 'loss/train': '144.79', 'grad_norm': '426', 'examples_per_second': '5.1972', 'counters/examples': 10144, 'counters/updates': 317}
+train stats after 10176 examples: {'logps_train/chosen': '-91.211', 'loss/train': '91.211', 'grad_norm': '300', 'examples_per_second': '5.7306', 'counters/examples': 10176, 'counters/updates': 318}
+train stats after 10208 examples: {'logps_train/chosen': '-127.21', 'loss/train': '127.21', 'grad_norm': '382', 'examples_per_second': '5.2134', 'counters/examples': 10208, 'counters/updates': 319}
+train stats after 10240 examples: {'logps_train/chosen': '-119.84', 'loss/train': '119.84', 'grad_norm': '330', 'examples_per_second': '6.1465', 'counters/examples': 10240, 'counters/updates': 320}
+train stats after 10272 examples: {'logps_train/chosen': '-149.64', 'loss/train': '149.64', 'grad_norm': '382', 'examples_per_second': '5.3538', 'counters/examples': 10272, 'counters/updates': 321}
+train stats after 10304 examples: {'logps_train/chosen': '-127.99', 'loss/train': '127.99', 'grad_norm': '342', 'examples_per_second': '5.3712', 'counters/examples': 10304, 'counters/updates': 322}
+train stats after 10336 examples: {'logps_train/chosen': '-105.08', 'loss/train': '105.08', 'grad_norm': '326', 'examples_per_second': '5.7598', 'counters/examples': 10336, 'counters/updates': 323}
+train stats after 10368 examples: {'logps_train/chosen': '-95.209', 'loss/train': '95.209', 'grad_norm': '312', 'examples_per_second': '5.7331', 'counters/examples': 10368, 'counters/updates': 324}
+train stats after 10400 examples: {'logps_train/chosen': '-131.61', 'loss/train': '131.61', 'grad_norm': '366', 'examples_per_second': '5.3703', 'counters/examples': 10400, 'counters/updates': 325}
+train stats after 10432 examples: {'logps_train/chosen': '-176.37', 'loss/train': '176.37', 'grad_norm': '446', 'examples_per_second': '5.3644', 'counters/examples': 10432, 'counters/updates': 326}
+train stats after 10464 examples: {'logps_train/chosen': '-135.94', 'loss/train': '135.94', 'grad_norm': '332', 'examples_per_second': '5.3741', 'counters/examples': 10464, 'counters/updates': 327}
+train stats after 10496 examples: {'logps_train/chosen': '-146.05', 'loss/train': '146.05', 'grad_norm': '370', 'examples_per_second': '5.8324', 'counters/examples': 10496, 'counters/updates': 328}
+train stats after 10528 examples: {'logps_train/chosen': '-139.93', 'loss/train': '139.93', 'grad_norm': '398', 'examples_per_second': '5.373', 'counters/examples': 10528, 'counters/updates': 329}
+train stats after 10560 examples: {'logps_train/chosen': '-105.22', 'loss/train': '105.22', 'grad_norm': '322', 'examples_per_second': '5.7909', 'counters/examples': 10560, 'counters/updates': 330}
+train stats after 10592 examples: {'logps_train/chosen': '-115.4', 'loss/train': '115.4', 'grad_norm': '332', 'examples_per_second': '5.7034', 'counters/examples': 10592, 'counters/updates': 331}
+train stats after 10624 examples: {'logps_train/chosen': '-134.07', 'loss/train': '134.07', 'grad_norm': '354', 'examples_per_second': '5.5512', 'counters/examples': 10624, 'counters/updates': 332}
+train stats after 10656 examples: {'logps_train/chosen': '-95.32', 'loss/train': '95.32', 'grad_norm': '320', 'examples_per_second': '6.6493', 'counters/examples': 10656, 'counters/updates': 333}
+train stats after 10688 examples: {'logps_train/chosen': '-129.24', 'loss/train': '129.24', 'grad_norm': '350', 'examples_per_second': '5.8311', 'counters/examples': 10688, 'counters/updates': 334}
+train stats after 10720 examples: {'logps_train/chosen': '-108.14', 'loss/train': '108.14', 'grad_norm': '314', 'examples_per_second': '5.201', 'counters/examples': 10720, 'counters/updates': 335}
+train stats after 10752 examples: {'logps_train/chosen': '-94.933', 'loss/train': '94.933', 'grad_norm': '334', 'examples_per_second': '5.6787', 'counters/examples': 10752, 'counters/updates': 336}
+train stats after 10784 examples: {'logps_train/chosen': '-120.22', 'loss/train': '120.22', 'grad_norm': '334', 'examples_per_second': '5.3466', 'counters/examples': 10784, 'counters/updates': 337}
+train stats after 10816 examples: {'logps_train/chosen': '-146.55', 'loss/train': '146.55', 'grad_norm': '362', 'examples_per_second': '5.3598', 'counters/examples': 10816, 'counters/updates': 338}
+train stats after 10848 examples: {'logps_train/chosen': '-149.01', 'loss/train': '149.01', 'grad_norm': '372', 'examples_per_second': '5.3713', 'counters/examples': 10848, 'counters/updates': 339}
+train stats after 10880 examples: {'logps_train/chosen': '-106.78', 'loss/train': '106.78', 'grad_norm': '310', 'examples_per_second': '5.4846', 'counters/examples': 10880, 'counters/updates': 340}
+train stats after 10912 examples: {'logps_train/chosen': '-146.5', 'loss/train': '146.5', 'grad_norm': '386', 'examples_per_second': '5.3595', 'counters/examples': 10912, 'counters/updates': 341}
+train stats after 10944 examples: {'logps_train/chosen': '-135.7', 'loss/train': '135.7', 'grad_norm': '330', 'examples_per_second': '5.3749', 'counters/examples': 10944, 'counters/updates': 342}
+train stats after 10976 examples: {'logps_train/chosen': '-126.14', 'loss/train': '126.14', 'grad_norm': '328', 'examples_per_second': '6.8666', 'counters/examples': 10976, 'counters/updates': 343}
+train stats after 11008 examples: {'logps_train/chosen': '-124.91', 'loss/train': '124.91', 'grad_norm': '360', 'examples_per_second': '5.8225', 'counters/examples': 11008, 'counters/updates': 344}
+train stats after 11040 examples: {'logps_train/chosen': '-137.12', 'loss/train': '137.12', 'grad_norm': '328', 'examples_per_second': '5.3668', 'counters/examples': 11040, 'counters/updates': 345}
+train stats after 11072 examples: {'logps_train/chosen': '-141.51', 'loss/train': '141.51', 'grad_norm': '370', 'examples_per_second': '5.3675', 'counters/examples': 11072, 'counters/updates': 346}
+train stats after 11104 examples: {'logps_train/chosen': '-177.12', 'loss/train': '177.12', 'grad_norm': '384', 'examples_per_second': '5.2056', 'counters/examples': 11104, 'counters/updates': 347}
+train stats after 11136 examples: {'logps_train/chosen': '-141.53', 'loss/train': '141.53', 'grad_norm': '340', 'examples_per_second': '5.3547', 'counters/examples': 11136, 'counters/updates': 348}
+train stats after 11168 examples: {'logps_train/chosen': '-89.229', 'loss/train': '89.229', 'grad_norm': '282', 'examples_per_second': '5.6184', 'counters/examples': 11168, 'counters/updates': 349}
+train stats after 11200 examples: {'logps_train/chosen': '-143.25', 'loss/train': '143.25', 'grad_norm': '342', 'examples_per_second': '5.3694', 'counters/examples': 11200, 'counters/updates': 350}
+train stats after 11232 examples: {'logps_train/chosen': '-144.85', 'loss/train': '144.85', 'grad_norm': '372', 'examples_per_second': '5.3755', 'counters/examples': 11232, 'counters/updates': 351}
+train stats after 11264 examples: {'logps_train/chosen': '-132.75', 'loss/train': '132.75', 'grad_norm': '364', 'examples_per_second': '5.566', 'counters/examples': 11264, 'counters/updates': 352}
+train stats after 11296 examples: {'logps_train/chosen': '-141.53', 'loss/train': '141.53', 'grad_norm': '356', 'examples_per_second': '5.2062', 'counters/examples': 11296, 'counters/updates': 353}
+train stats after 11328 examples: {'logps_train/chosen': '-151.29', 'loss/train': '151.29', 'grad_norm': '384', 'examples_per_second': '5.9502', 'counters/examples': 11328, 'counters/updates': 354}
+train stats after 11360 examples: {'logps_train/chosen': '-155.75', 'loss/train': '155.75', 'grad_norm': '408', 'examples_per_second': '5.5998', 'counters/examples': 11360, 'counters/updates': 355}
+train stats after 11392 examples: {'logps_train/chosen': '-128.61', 'loss/train': '128.61', 'grad_norm': '336', 'examples_per_second': '5.3692', 'counters/examples': 11392, 'counters/updates': 356}
+train stats after 11424 examples: {'logps_train/chosen': '-150.96', 'loss/train': '150.96', 'grad_norm': '404', 'examples_per_second': '5.3568', 'counters/examples': 11424, 'counters/updates': 357}
+train stats after 11456 examples: {'logps_train/chosen': '-120.55', 'loss/train': '120.55', 'grad_norm': '528', 'examples_per_second': '5.3659', 'counters/examples': 11456, 'counters/updates': 358}
+train stats after 11488 examples: {'logps_train/chosen': '-113.98', 'loss/train': '113.98', 'grad_norm': '352', 'examples_per_second': '6.0752', 'counters/examples': 11488, 'counters/updates': 359}
+train stats after 11520 examples: {'logps_train/chosen': '-117.34', 'loss/train': '117.34', 'grad_norm': '334', 'examples_per_second': '6.0705', 'counters/examples': 11520, 'counters/updates': 360}
+train stats after 11552 examples: {'logps_train/chosen': '-87.354', 'loss/train': '87.354', 'grad_norm': '300', 'examples_per_second': '5.4204', 'counters/examples': 11552, 'counters/updates': 361}
+train stats after 11584 examples: {'logps_train/chosen': '-98.756', 'loss/train': '98.756', 'grad_norm': '302', 'examples_per_second': '6.5227', 'counters/examples': 11584, 'counters/updates': 362}
+train stats after 11616 examples: {'logps_train/chosen': '-107.95', 'loss/train': '107.95', 'grad_norm': '348', 'examples_per_second': '5.6606', 'counters/examples': 11616, 'counters/updates': 363}
+train stats after 11648 examples: {'logps_train/chosen': '-137.59', 'loss/train': '137.59', 'grad_norm': '398', 'examples_per_second': '6.2544', 'counters/examples': 11648, 'counters/updates': 364}
+train stats after 11680 examples: {'logps_train/chosen': '-125.87', 'loss/train': '125.87', 'grad_norm': '346', 'examples_per_second': '5.2032', 'counters/examples': 11680, 'counters/updates': 365}
+train stats after 11712 examples: {'logps_train/chosen': '-137.33', 'loss/train': '137.33', 'grad_norm': '336', 'examples_per_second': '5.3711', 'counters/examples': 11712, 'counters/updates': 366}
+train stats after 11744 examples: {'logps_train/chosen': '-125.69', 'loss/train': '125.69', 'grad_norm': '346', 'examples_per_second': '5.3777', 'counters/examples': 11744, 'counters/updates': 367}
+train stats after 11776 examples: {'logps_train/chosen': '-105.1', 'loss/train': '105.1', 'grad_norm': '324', 'examples_per_second': '5.3918', 'counters/examples': 11776, 'counters/updates': 368}
+train stats after 11808 examples: {'logps_train/chosen': '-148.16', 'loss/train': '148.16', 'grad_norm': '364', 'examples_per_second': '5.3522', 'counters/examples': 11808, 'counters/updates': 369}
+train stats after 11840 examples: {'logps_train/chosen': '-140.32', 'loss/train': '140.32', 'grad_norm': '378', 'examples_per_second': '5.2187', 'counters/examples': 11840, 'counters/updates': 370}
+train stats after 11872 examples: {'logps_train/chosen': '-93.627', 'loss/train': '93.627', 'grad_norm': '292', 'examples_per_second': '5.3725', 'counters/examples': 11872, 'counters/updates': 371}
+train stats after 11904 examples: {'logps_train/chosen': '-124.05', 'loss/train': '124.05', 'grad_norm': '346', 'examples_per_second': '5.953', 'counters/examples': 11904, 'counters/updates': 372}
+train stats after 11936 examples: {'logps_train/chosen': '-153.5', 'loss/train': '153.5', 'grad_norm': '354', 'examples_per_second': '5.3719', 'counters/examples': 11936, 'counters/updates': 373}
+train stats after 11968 examples: {'logps_train/chosen': '-121.58', 'loss/train': '121.58', 'grad_norm': '328', 'examples_per_second': '5.1939', 'counters/examples': 11968, 'counters/updates': 374}
+train stats after 12000 examples: {'logps_train/chosen': '-122', 'loss/train': '122', 'grad_norm': '348', 'examples_per_second': '6.7594', 'counters/examples': 12000, 'counters/updates': 375}
+train stats after 12032 examples: {'logps_train/chosen': '-161.52', 'loss/train': '161.52', 'grad_norm': '430', 'examples_per_second': '5.3757', 'counters/examples': 12032, 'counters/updates': 376}
+train stats after 12064 examples: {'logps_train/chosen': '-139.64', 'loss/train': '139.64', 'grad_norm': '360', 'examples_per_second': '5.3592', 'counters/examples': 12064, 'counters/updates': 377}
+train stats after 12096 examples: {'logps_train/chosen': '-121.79', 'loss/train': '121.79', 'grad_norm': '330', 'examples_per_second': '6.2805', 'counters/examples': 12096, 'counters/updates': 378}
+train stats after 12128 examples: {'logps_train/chosen': '-164.59', 'loss/train': '164.59', 'grad_norm': '376', 'examples_per_second': '5.4044', 'counters/examples': 12128, 'counters/updates': 379}
+train stats after 12160 examples: {'logps_train/chosen': '-122.34', 'loss/train': '122.34', 'grad_norm': '348', 'examples_per_second': '5.8326', 'counters/examples': 12160, 'counters/updates': 380}
+train stats after 12192 examples: {'logps_train/chosen': '-89.834', 'loss/train': '89.834', 'grad_norm': '312', 'examples_per_second': '5.4191', 'counters/examples': 12192, 'counters/updates': 381}
+train stats after 12224 examples: {'logps_train/chosen': '-151.54', 'loss/train': '151.54', 'grad_norm': '378', 'examples_per_second': '5.7641', 'counters/examples': 12224, 'counters/updates': 382}
+train stats after 12256 examples: {'logps_train/chosen': '-102.72', 'loss/train': '102.72', 'grad_norm': '342', 'examples_per_second': '5.3731', 'counters/examples': 12256, 'counters/updates': 383}
+train stats after 12288 examples: {'logps_train/chosen': '-135.76', 'loss/train': '135.76', 'grad_norm': '362', 'examples_per_second': '5.2133', 'counters/examples': 12288, 'counters/updates': 384}
+train stats after 12320 examples: {'logps_train/chosen': '-116.58', 'loss/train': '116.58', 'grad_norm': '332', 'examples_per_second': '5.3862', 'counters/examples': 12320, 'counters/updates': 385}
+train stats after 12352 examples: {'logps_train/chosen': '-70.965', 'loss/train': '70.965', 'grad_norm': '276', 'examples_per_second': '6.7148', 'counters/examples': 12352, 'counters/updates': 386}
+train stats after 12384 examples: {'logps_train/chosen': '-114.89', 'loss/train': '114.89', 'grad_norm': '370', 'examples_per_second': '5.6526', 'counters/examples': 12384, 'counters/updates': 387}
+train stats after 12416 examples: {'logps_train/chosen': '-92.016', 'loss/train': '92.016', 'grad_norm': '304', 'examples_per_second': '5.8037', 'counters/examples': 12416, 'counters/updates': 388}
+train stats after 12448 examples: {'logps_train/chosen': '-122.17', 'loss/train': '122.17', 'grad_norm': '340', 'examples_per_second': '5.379', 'counters/examples': 12448, 'counters/updates': 389}
+train stats after 12480 examples: {'logps_train/chosen': '-106.8', 'loss/train': '106.8', 'grad_norm': '310', 'examples_per_second': '5.7126', 'counters/examples': 12480, 'counters/updates': 390}
+train stats after 12512 examples: {'logps_train/chosen': '-134.21', 'loss/train': '134.21', 'grad_norm': '408', 'examples_per_second': '5.603', 'counters/examples': 12512, 'counters/updates': 391}
+train stats after 12544 examples: {'logps_train/chosen': '-110.97', 'loss/train': '110.97', 'grad_norm': '326', 'examples_per_second': '6.3671', 'counters/examples': 12544, 'counters/updates': 392}
+train stats after 12576 examples: {'logps_train/chosen': '-119.27', 'loss/train': '119.27', 'grad_norm': '320', 'examples_per_second': '5.3996', 'counters/examples': 12576, 'counters/updates': 393}
+train stats after 12608 examples: {'logps_train/chosen': '-157.52', 'loss/train': '157.52', 'grad_norm': '410', 'examples_per_second': '5.3788', 'counters/examples': 12608, 'counters/updates': 394}
+train stats after 12640 examples: {'logps_train/chosen': '-126.88', 'loss/train': '126.88', 'grad_norm': '334', 'examples_per_second': '5.2232', 'counters/examples': 12640, 'counters/updates': 395}
+train stats after 12672 examples: {'logps_train/chosen': '-125.36', 'loss/train': '125.36', 'grad_norm': '316', 'examples_per_second': '5.3739', 'counters/examples': 12672, 'counters/updates': 396}
+train stats after 12704 examples: {'logps_train/chosen': '-112.2', 'loss/train': '112.2', 'grad_norm': '348', 'examples_per_second': '6.2173', 'counters/examples': 12704, 'counters/updates': 397}
+train stats after 12736 examples: {'logps_train/chosen': '-138.47', 'loss/train': '138.47', 'grad_norm': '356', 'examples_per_second': '5.2067', 'counters/examples': 12736, 'counters/updates': 398}
+train stats after 12768 examples: {'logps_train/chosen': '-140.18', 'loss/train': '140.18', 'grad_norm': '358', 'examples_per_second': '5.3657', 'counters/examples': 12768, 'counters/updates': 399}
+train stats after 12800 examples: {'logps_train/chosen': '-145.84', 'loss/train': '145.84', 'grad_norm': '378', 'examples_per_second': '5.3703', 'counters/examples': 12800, 'counters/updates': 400}
+train stats after 12832 examples: {'logps_train/chosen': '-119.38', 'loss/train': '119.38', 'grad_norm': '342', 'examples_per_second': '5.6103', 'counters/examples': 12832, 'counters/updates': 401}
+train stats after 12864 examples: {'logps_train/chosen': '-90.094', 'loss/train': '90.094', 'grad_norm': '304', 'examples_per_second': '6.5007', 'counters/examples': 12864, 'counters/updates': 402}
+train stats after 12896 examples: {'logps_train/chosen': '-144.36', 'loss/train': '144.36', 'grad_norm': '384', 'examples_per_second': '5.3874', 'counters/examples': 12896, 'counters/updates': 403}
+train stats after 12928 examples: {'logps_train/chosen': '-137.26', 'loss/train': '137.26', 'grad_norm': '362', 'examples_per_second': '5.3827', 'counters/examples': 12928, 'counters/updates': 404}
+train stats after 12960 examples: {'logps_train/chosen': '-127.52', 'loss/train': '127.52', 'grad_norm': '328', 'examples_per_second': '5.52', 'counters/examples': 12960, 'counters/updates': 405}
+train stats after 12992 examples: {'logps_train/chosen': '-109.61', 'loss/train': '109.61', 'grad_norm': '344', 'examples_per_second': '5.6218', 'counters/examples': 12992, 'counters/updates': 406}
+train stats after 13024 examples: {'logps_train/chosen': '-135.01', 'loss/train': '135.01', 'grad_norm': '374', 'examples_per_second': '5.2176', 'counters/examples': 13024, 'counters/updates': 407}
+train stats after 13056 examples: {'logps_train/chosen': '-144.34', 'loss/train': '144.34', 'grad_norm': '352', 'examples_per_second': '5.7185', 'counters/examples': 13056, 'counters/updates': 408}
+train stats after 13088 examples: {'logps_train/chosen': '-119.8', 'loss/train': '119.8', 'grad_norm': '318', 'examples_per_second': '5.408', 'counters/examples': 13088, 'counters/updates': 409}
+train stats after 13120 examples: {'logps_train/chosen': '-141.17', 'loss/train': '141.17', 'grad_norm': '352', 'examples_per_second': '5.7662', 'counters/examples': 13120, 'counters/updates': 410}
+train stats after 13152 examples: {'logps_train/chosen': '-106.99', 'loss/train': '106.99', 'grad_norm': '324', 'examples_per_second': '5.9985', 'counters/examples': 13152, 'counters/updates': 411}
+train stats after 13184 examples: {'logps_train/chosen': '-129.3', 'loss/train': '129.3', 'grad_norm': '374', 'examples_per_second': '5.5985', 'counters/examples': 13184, 'counters/updates': 412}
+train stats after 13216 examples: {'logps_train/chosen': '-135.5', 'loss/train': '135.5', 'grad_norm': '348', 'examples_per_second': '5.2187', 'counters/examples': 13216, 'counters/updates': 413}
+train stats after 13248 examples: {'logps_train/chosen': '-168.36', 'loss/train': '168.36', 'grad_norm': '388', 'examples_per_second': '5.5812', 'counters/examples': 13248, 'counters/updates': 414}
+train stats after 13280 examples: {'logps_train/chosen': '-95.527', 'loss/train': '95.527', 'grad_norm': '320', 'examples_per_second': '6.3534', 'counters/examples': 13280, 'counters/updates': 415}
+train stats after 13312 examples: {'logps_train/chosen': '-103.1', 'loss/train': '103.1', 'grad_norm': '324', 'examples_per_second': '5.6644', 'counters/examples': 13312, 'counters/updates': 416}
+train stats after 13344 examples: {'logps_train/chosen': '-98.203', 'loss/train': '98.203', 'grad_norm': '346', 'examples_per_second': '5.8568', 'counters/examples': 13344, 'counters/updates': 417}
+train stats after 13376 examples: {'logps_train/chosen': '-148.31', 'loss/train': '148.31', 'grad_norm': '342', 'examples_per_second': '5.4013', 'counters/examples': 13376, 'counters/updates': 418}
+train stats after 13408 examples: {'logps_train/chosen': '-151.88', 'loss/train': '151.88', 'grad_norm': '464', 'examples_per_second': '5.7775', 'counters/examples': 13408, 'counters/updates': 419}
+train stats after 13440 examples: {'logps_train/chosen': '-151.18', 'loss/train': '151.18', 'grad_norm': '366', 'examples_per_second': '5.2135', 'counters/examples': 13440, 'counters/updates': 420}
+train stats after 13472 examples: {'logps_train/chosen': '-114.35', 'loss/train': '114.35', 'grad_norm': '360', 'examples_per_second': '5.4306', 'counters/examples': 13472, 'counters/updates': 421}
+train stats after 13504 examples: {'logps_train/chosen': '-152.6', 'loss/train': '152.6', 'grad_norm': '368', 'examples_per_second': '5.6632', 'counters/examples': 13504, 'counters/updates': 422}
+train stats after 13536 examples: {'logps_train/chosen': '-135.81', 'loss/train': '135.81', 'grad_norm': '354', 'examples_per_second': '5.2101', 'counters/examples': 13536, 'counters/updates': 423}
+train stats after 13568 examples: {'logps_train/chosen': '-124.69', 'loss/train': '124.69', 'grad_norm': '328', 'examples_per_second': '5.4946', 'counters/examples': 13568, 'counters/updates': 424}
+train stats after 13600 examples: {'logps_train/chosen': '-118.99', 'loss/train': '118.99', 'grad_norm': '320', 'examples_per_second': '6.0837', 'counters/examples': 13600, 'counters/updates': 425}
+train stats after 13632 examples: {'logps_train/chosen': '-162.97', 'loss/train': '162.97', 'grad_norm': '378', 'examples_per_second': '5.3628', 'counters/examples': 13632, 'counters/updates': 426}
+train stats after 13664 examples: {'logps_train/chosen': '-119.57', 'loss/train': '119.57', 'grad_norm': '342', 'examples_per_second': '5.384', 'counters/examples': 13664, 'counters/updates': 427}
+train stats after 13696 examples: {'logps_train/chosen': '-110.79', 'loss/train': '110.79', 'grad_norm': '336', 'examples_per_second': '5.5708', 'counters/examples': 13696, 'counters/updates': 428}
+train stats after 13728 examples: {'logps_train/chosen': '-107.86', 'loss/train': '107.86', 'grad_norm': '322', 'examples_per_second': '5.2235', 'counters/examples': 13728, 'counters/updates': 429}
+train stats after 13760 examples: {'logps_train/chosen': '-143.41', 'loss/train': '143.41', 'grad_norm': '354', 'examples_per_second': '5.3807', 'counters/examples': 13760, 'counters/updates': 430}
+train stats after 13792 examples: {'logps_train/chosen': '-152.29', 'loss/train': '152.29', 'grad_norm': '350', 'examples_per_second': '5.3768', 'counters/examples': 13792, 'counters/updates': 431}
+train stats after 13824 examples: {'logps_train/chosen': '-140.87', 'loss/train': '140.87', 'grad_norm': '344', 'examples_per_second': '5.2003', 'counters/examples': 13824, 'counters/updates': 432}
+train stats after 13856 examples: {'logps_train/chosen': '-101.73', 'loss/train': '101.73', 'grad_norm': '304', 'examples_per_second': '6.2671', 'counters/examples': 13856, 'counters/updates': 433}
+train stats after 13888 examples: {'logps_train/chosen': '-104.3', 'loss/train': '104.3', 'grad_norm': '334', 'examples_per_second': '5.3792', 'counters/examples': 13888, 'counters/updates': 434}
+train stats after 13920 examples: {'logps_train/chosen': '-87.104', 'loss/train': '87.104', 'grad_norm': '302', 'examples_per_second': '5.2239', 'counters/examples': 13920, 'counters/updates': 435}
+train stats after 13952 examples: {'logps_train/chosen': '-148.75', 'loss/train': '148.75', 'grad_norm': '352', 'examples_per_second': '5.3769', 'counters/examples': 13952, 'counters/updates': 436}
+train stats after 13984 examples: {'logps_train/chosen': '-162.59', 'loss/train': '162.59', 'grad_norm': '406', 'examples_per_second': '5.6217', 'counters/examples': 13984, 'counters/updates': 437}
+train stats after 14016 examples: {'logps_train/chosen': '-144.29', 'loss/train': '144.29', 'grad_norm': '364', 'examples_per_second': '5.3794', 'counters/examples': 14016, 'counters/updates': 438}
+train stats after 14048 examples: {'logps_train/chosen': '-133.92', 'loss/train': '133.92', 'grad_norm': '366', 'examples_per_second': '6.4556', 'counters/examples': 14048, 'counters/updates': 439}
+train stats after 14080 examples: {'logps_train/chosen': '-99.451', 'loss/train': '99.451', 'grad_norm': '316', 'examples_per_second': '5.3903', 'counters/examples': 14080, 'counters/updates': 440}
+train stats after 14112 examples: {'logps_train/chosen': '-116.28', 'loss/train': '116.28', 'grad_norm': '338', 'examples_per_second': '5.3738', 'counters/examples': 14112, 'counters/updates': 441}
+train stats after 14144 examples: {'logps_train/chosen': '-106.07', 'loss/train': '106.07', 'grad_norm': '342', 'examples_per_second': '5.6518', 'counters/examples': 14144, 'counters/updates': 442}
+train stats after 14176 examples: {'logps_train/chosen': '-93.461', 'loss/train': '93.461', 'grad_norm': '306', 'examples_per_second': '5.8398', 'counters/examples': 14176, 'counters/updates': 443}
+train stats after 14208 examples: {'logps_train/chosen': '-102.7', 'loss/train': '102.7', 'grad_norm': '376', 'examples_per_second': '7.6292', 'counters/examples': 14208, 'counters/updates': 444}
+train stats after 14240 examples: {'logps_train/chosen': '-131.67', 'loss/train': '131.67', 'grad_norm': '350', 'examples_per_second': '5.629', 'counters/examples': 14240, 'counters/updates': 445}
+train stats after 14272 examples: {'logps_train/chosen': '-111.02', 'loss/train': '111.02', 'grad_norm': '316', 'examples_per_second': '5.2138', 'counters/examples': 14272, 'counters/updates': 446}
+train stats after 14304 examples: {'logps_train/chosen': '-122.45', 'loss/train': '122.45', 'grad_norm': '332', 'examples_per_second': '6.6964', 'counters/examples': 14304, 'counters/updates': 447}
+train stats after 14336 examples: {'logps_train/chosen': '-78.501', 'loss/train': '78.501', 'grad_norm': '298', 'examples_per_second': '6.7994', 'counters/examples': 14336, 'counters/updates': 448}
+train stats after 14368 examples: {'logps_train/chosen': '-125.79', 'loss/train': '125.79', 'grad_norm': '374', 'examples_per_second': '5.2231', 'counters/examples': 14368, 'counters/updates': 449}
+train stats after 14400 examples: {'logps_train/chosen': '-144.95', 'loss/train': '144.95', 'grad_norm': '376', 'examples_per_second': '5.3667', 'counters/examples': 14400, 'counters/updates': 450}
+train stats after 14432 examples: {'logps_train/chosen': '-113.95', 'loss/train': '113.95', 'grad_norm': '350', 'examples_per_second': '5.7585', 'counters/examples': 14432, 'counters/updates': 451}
+train stats after 14464 examples: {'logps_train/chosen': '-88.518', 'loss/train': '88.518', 'grad_norm': '318', 'examples_per_second': '6.1214', 'counters/examples': 14464, 'counters/updates': 452}
+train stats after 14496 examples: {'logps_train/chosen': '-127.18', 'loss/train': '127.18', 'grad_norm': '332', 'examples_per_second': '5.2191', 'counters/examples': 14496, 'counters/updates': 453}
+train stats after 14528 examples: {'logps_train/chosen': '-134.81', 'loss/train': '134.81', 'grad_norm': '372', 'examples_per_second': '5.5865', 'counters/examples': 14528, 'counters/updates': 454}
+train stats after 14560 examples: {'logps_train/chosen': '-112.38', 'loss/train': '112.38', 'grad_norm': '326', 'examples_per_second': '5.2108', 'counters/examples': 14560, 'counters/updates': 455}
+train stats after 14592 examples: {'logps_train/chosen': '-128.11', 'loss/train': '128.11', 'grad_norm': '334', 'examples_per_second': '5.6672', 'counters/examples': 14592, 'counters/updates': 456}
+train stats after 14624 examples: {'logps_train/chosen': '-119.71', 'loss/train': '119.71', 'grad_norm': '332', 'examples_per_second': '5.4396', 'counters/examples': 14624, 'counters/updates': 457}
+train stats after 14656 examples: {'logps_train/chosen': '-139.3', 'loss/train': '139.3', 'grad_norm': '376', 'examples_per_second': '5.4204', 'counters/examples': 14656, 'counters/updates': 458}
+train stats after 14688 examples: {'logps_train/chosen': '-130.26', 'loss/train': '130.26', 'grad_norm': '348', 'examples_per_second': '5.5921', 'counters/examples': 14688, 'counters/updates': 459}
+train stats after 14720 examples: {'logps_train/chosen': '-117.52', 'loss/train': '117.52', 'grad_norm': '358', 'examples_per_second': '5.3986', 'counters/examples': 14720, 'counters/updates': 460}
+train stats after 14752 examples: {'logps_train/chosen': '-165.55', 'loss/train': '165.55', 'grad_norm': '378', 'examples_per_second': '5.2035', 'counters/examples': 14752, 'counters/updates': 461}
+train stats after 14784 examples: {'logps_train/chosen': '-114.32', 'loss/train': '114.32', 'grad_norm': '392', 'examples_per_second': '5.6469', 'counters/examples': 14784, 'counters/updates': 462}
+train stats after 14816 examples: {'logps_train/chosen': '-131.8', 'loss/train': '131.8', 'grad_norm': '380', 'examples_per_second': '5.2054', 'counters/examples': 14816, 'counters/updates': 463}
+train stats after 14848 examples: {'logps_train/chosen': '-110.2', 'loss/train': '110.2', 'grad_norm': '318', 'examples_per_second': '5.4007', 'counters/examples': 14848, 'counters/updates': 464}
+train stats after 14880 examples: {'logps_train/chosen': '-134.36', 'loss/train': '134.36', 'grad_norm': '360', 'examples_per_second': '5.5856', 'counters/examples': 14880, 'counters/updates': 465}
+train stats after 14912 examples: {'logps_train/chosen': '-122.19', 'loss/train': '122.19', 'grad_norm': '336', 'examples_per_second': '5.7389', 'counters/examples': 14912, 'counters/updates': 466}
+train stats after 14944 examples: {'logps_train/chosen': '-132.77', 'loss/train': '132.77', 'grad_norm': '346', 'examples_per_second': '5.6291', 'counters/examples': 14944, 'counters/updates': 467}
+train stats after 14976 examples: {'logps_train/chosen': '-140.52', 'loss/train': '140.52', 'grad_norm': '370', 'examples_per_second': '5.3674', 'counters/examples': 14976, 'counters/updates': 468}
+train stats after 15008 examples: {'logps_train/chosen': '-116.29', 'loss/train': '116.29', 'grad_norm': '334', 'examples_per_second': '5.3648', 'counters/examples': 15008, 'counters/updates': 469}
+train stats after 15040 examples: {'logps_train/chosen': '-114.29', 'loss/train': '114.29', 'grad_norm': '336', 'examples_per_second': '5.3652', 'counters/examples': 15040, 'counters/updates': 470}
+train stats after 15072 examples: {'logps_train/chosen': '-142.18', 'loss/train': '142.18', 'grad_norm': '376', 'examples_per_second': '5.2127', 'counters/examples': 15072, 'counters/updates': 471}
+train stats after 15104 examples: {'logps_train/chosen': '-128', 'loss/train': '128', 'grad_norm': '344', 'examples_per_second': '5.5875', 'counters/examples': 15104, 'counters/updates': 472}
+train stats after 15136 examples: {'logps_train/chosen': '-97.77', 'loss/train': '97.77', 'grad_norm': '328', 'examples_per_second': '6.0899', 'counters/examples': 15136, 'counters/updates': 473}
+train stats after 15168 examples: {'logps_train/chosen': '-120.1', 'loss/train': '120.1', 'grad_norm': '324', 'examples_per_second': '5.4043', 'counters/examples': 15168, 'counters/updates': 474}
+train stats after 15200 examples: {'logps_train/chosen': '-123.69', 'loss/train': '123.69', 'grad_norm': '346', 'examples_per_second': '5.2069', 'counters/examples': 15200, 'counters/updates': 475}
+train stats after 15232 examples: {'logps_train/chosen': '-161.09', 'loss/train': '161.09', 'grad_norm': '354', 'examples_per_second': '5.3463', 'counters/examples': 15232, 'counters/updates': 476}
+train stats after 15264 examples: {'logps_train/chosen': '-137.04', 'loss/train': '137.04', 'grad_norm': '360', 'examples_per_second': '5.5815', 'counters/examples': 15264, 'counters/updates': 477}
+train stats after 15296 examples: {'logps_train/chosen': '-145.81', 'loss/train': '145.81', 'grad_norm': '368', 'examples_per_second': '5.8253', 'counters/examples': 15296, 'counters/updates': 478}
+train stats after 15328 examples: {'logps_train/chosen': '-147.84', 'loss/train': '147.84', 'grad_norm': '376', 'examples_per_second': '5.1963', 'counters/examples': 15328, 'counters/updates': 479}
+train stats after 15360 examples: {'logps_train/chosen': '-97.799', 'loss/train': '97.799', 'grad_norm': '312', 'examples_per_second': '6.2346', 'counters/examples': 15360, 'counters/updates': 480}
+train stats after 15392 examples: {'logps_train/chosen': '-127.41', 'loss/train': '127.41', 'grad_norm': '334', 'examples_per_second': '5.8391', 'counters/examples': 15392, 'counters/updates': 481}
+train stats after 15424 examples: {'logps_train/chosen': '-146.85', 'loss/train': '146.85', 'grad_norm': '334', 'examples_per_second': '5.1943', 'counters/examples': 15424, 'counters/updates': 482}
+train stats after 15456 examples: {'logps_train/chosen': '-90.795', 'loss/train': '90.795', 'grad_norm': '292', 'examples_per_second': '5.4825', 'counters/examples': 15456, 'counters/updates': 483}
+train stats after 15488 examples: {'logps_train/chosen': '-108.4', 'loss/train': '108.4', 'grad_norm': '334', 'examples_per_second': '6.2861', 'counters/examples': 15488, 'counters/updates': 484}
+train stats after 15520 examples: {'logps_train/chosen': '-156.96', 'loss/train': '156.96', 'grad_norm': '390', 'examples_per_second': '5.7622', 'counters/examples': 15520, 'counters/updates': 485}
+train stats after 15552 examples: {'logps_train/chosen': '-140.5', 'loss/train': '140.5', 'grad_norm': '336', 'examples_per_second': '5.7138', 'counters/examples': 15552, 'counters/updates': 486}
+train stats after 15584 examples: {'logps_train/chosen': '-119.56', 'loss/train': '119.56', 'grad_norm': '326', 'examples_per_second': '6.1202', 'counters/examples': 15584, 'counters/updates': 487}
+train stats after 15616 examples: {'logps_train/chosen': '-119.21', 'loss/train': '119.21', 'grad_norm': '348', 'examples_per_second': '5.7873', 'counters/examples': 15616, 'counters/updates': 488}
+train stats after 15648 examples: {'logps_train/chosen': '-97.222', 'loss/train': '97.222', 'grad_norm': '322', 'examples_per_second': '5.6613', 'counters/examples': 15648, 'counters/updates': 489}
+train stats after 15680 examples: {'logps_train/chosen': '-113.99', 'loss/train': '113.99', 'grad_norm': '372', 'examples_per_second': '5.3738', 'counters/examples': 15680, 'counters/updates': 490}
+train stats after 15712 examples: {'logps_train/chosen': '-117.95', 'loss/train': '117.95', 'grad_norm': '342', 'examples_per_second': '6.279', 'counters/examples': 15712, 'counters/updates': 491}
+train stats after 15744 examples: {'logps_train/chosen': '-125.64', 'loss/train': '125.64', 'grad_norm': '352', 'examples_per_second': '5.2037', 'counters/examples': 15744, 'counters/updates': 492}
+train stats after 15776 examples: {'logps_train/chosen': '-109.63', 'loss/train': '109.63', 'grad_norm': '348', 'examples_per_second': '5.368', 'counters/examples': 15776, 'counters/updates': 493}
+train stats after 15808 examples: {'logps_train/chosen': '-107.2', 'loss/train': '107.2', 'grad_norm': '322', 'examples_per_second': '5.2058', 'counters/examples': 15808, 'counters/updates': 494}
+train stats after 15840 examples: {'logps_train/chosen': '-97.937', 'loss/train': '97.937', 'grad_norm': '302', 'examples_per_second': '5.2079', 'counters/examples': 15840, 'counters/updates': 495}
+train stats after 15872 examples: {'logps_train/chosen': '-123.88', 'loss/train': '123.88', 'grad_norm': '378', 'examples_per_second': '5.3683', 'counters/examples': 15872, 'counters/updates': 496}
+train stats after 15904 examples: {'logps_train/chosen': '-121.32', 'loss/train': '121.32', 'grad_norm': '352', 'examples_per_second': '5.599', 'counters/examples': 15904, 'counters/updates': 497}
+train stats after 15936 examples: {'logps_train/chosen': '-87.633', 'loss/train': '87.633', 'grad_norm': '308', 'examples_per_second': '5.4386', 'counters/examples': 15936, 'counters/updates': 498}
+train stats after 15968 examples: {'logps_train/chosen': '-124.17', 'loss/train': '124.17', 'grad_norm': '338', 'examples_per_second': '6.9936', 'counters/examples': 15968, 'counters/updates': 499}
+train stats after 16000 examples: {'logps_train/chosen': '-141.46', 'loss/train': '141.46', 'grad_norm': '356', 'examples_per_second': '5.3546', 'counters/examples': 16000, 'counters/updates': 500}
+train stats after 16032 examples: {'logps_train/chosen': '-139.88', 'loss/train': '139.88', 'grad_norm': '362', 'examples_per_second': '5.3931', 'counters/examples': 16032, 'counters/updates': 501}
+train stats after 16064 examples: {'logps_train/chosen': '-108.58', 'loss/train': '108.58', 'grad_norm': '334', 'examples_per_second': '5.3721', 'counters/examples': 16064, 'counters/updates': 502}
+train stats after 16096 examples: {'logps_train/chosen': '-121.76', 'loss/train': '121.76', 'grad_norm': '358', 'examples_per_second': '5.3703', 'counters/examples': 16096, 'counters/updates': 503}
+train stats after 16128 examples: {'logps_train/chosen': '-115.1', 'loss/train': '115.1', 'grad_norm': '350', 'examples_per_second': '5.6576', 'counters/examples': 16128, 'counters/updates': 504}
+train stats after 16160 examples: {'logps_train/chosen': '-155.73', 'loss/train': '155.73', 'grad_norm': '370', 'examples_per_second': '5.3588', 'counters/examples': 16160, 'counters/updates': 505}
+train stats after 16192 examples: {'logps_train/chosen': '-79.152', 'loss/train': '79.152', 'grad_norm': '276', 'examples_per_second': '6.2318', 'counters/examples': 16192, 'counters/updates': 506}
+train stats after 16224 examples: {'logps_train/chosen': '-127.12', 'loss/train': '127.12', 'grad_norm': '342', 'examples_per_second': '5.829', 'counters/examples': 16224, 'counters/updates': 507}
+train stats after 16256 examples: {'logps_train/chosen': '-94.643', 'loss/train': '94.643', 'grad_norm': '308', 'examples_per_second': '5.3698', 'counters/examples': 16256, 'counters/updates': 508}
+train stats after 16288 examples: {'logps_train/chosen': '-140.75', 'loss/train': '140.75', 'grad_norm': '340', 'examples_per_second': '6.1767', 'counters/examples': 16288, 'counters/updates': 509}
+train stats after 16320 examples: {'logps_train/chosen': '-139.14', 'loss/train': '139.14', 'grad_norm': '344', 'examples_per_second': '5.1961', 'counters/examples': 16320, 'counters/updates': 510}
+train stats after 16352 examples: {'logps_train/chosen': '-155.96', 'loss/train': '155.96', 'grad_norm': '384', 'examples_per_second': '5.3722', 'counters/examples': 16352, 'counters/updates': 511}
+train stats after 16384 examples: {'logps_train/chosen': '-120.45', 'loss/train': '120.45', 'grad_norm': '308', 'examples_per_second': '5.3696', 'counters/examples': 16384, 'counters/updates': 512}
+train stats after 16416 examples: {'logps_train/chosen': '-107.09', 'loss/train': '107.09', 'grad_norm': '332', 'examples_per_second': '5.6116', 'counters/examples': 16416, 'counters/updates': 513}
+train stats after 16448 examples: {'logps_train/chosen': '-112.28', 'loss/train': '112.28', 'grad_norm': '320', 'examples_per_second': '5.3651', 'counters/examples': 16448, 'counters/updates': 514}
+train stats after 16480 examples: {'logps_train/chosen': '-130.21', 'loss/train': '130.21', 'grad_norm': '394', 'examples_per_second': '5.3759', 'counters/examples': 16480, 'counters/updates': 515}
+train stats after 16512 examples: {'logps_train/chosen': '-122.78', 'loss/train': '122.78', 'grad_norm': '366', 'examples_per_second': '5.9855', 'counters/examples': 16512, 'counters/updates': 516}
+train stats after 16544 examples: {'logps_train/chosen': '-175.99', 'loss/train': '175.99', 'grad_norm': '376', 'examples_per_second': '5.1698', 'counters/examples': 16544, 'counters/updates': 517}
+train stats after 16576 examples: {'logps_train/chosen': '-118.66', 'loss/train': '118.66', 'grad_norm': '312', 'examples_per_second': '5.6739', 'counters/examples': 16576, 'counters/updates': 518}
+train stats after 16608 examples: {'logps_train/chosen': '-107.62', 'loss/train': '107.62', 'grad_norm': '346', 'examples_per_second': '5.8474', 'counters/examples': 16608, 'counters/updates': 519}
+train stats after 16640 examples: {'logps_train/chosen': '-154.62', 'loss/train': '154.62', 'grad_norm': '352', 'examples_per_second': '5.3624', 'counters/examples': 16640, 'counters/updates': 520}
+train stats after 16672 examples: {'logps_train/chosen': '-108.68', 'loss/train': '108.68', 'grad_norm': '304', 'examples_per_second': '5.5134', 'counters/examples': 16672, 'counters/updates': 521}
+train stats after 16704 examples: {'logps_train/chosen': '-133.84', 'loss/train': '133.84', 'grad_norm': '324', 'examples_per_second': '5.3628', 'counters/examples': 16704, 'counters/updates': 522}
+train stats after 16736 examples: {'logps_train/chosen': '-164.28', 'loss/train': '164.28', 'grad_norm': '380', 'examples_per_second': '5.3561', 'counters/examples': 16736, 'counters/updates': 523}
+train stats after 16768 examples: {'logps_train/chosen': '-92.65', 'loss/train': '92.65', 'grad_norm': '296', 'examples_per_second': '6.6871', 'counters/examples': 16768, 'counters/updates': 524}
+train stats after 16800 examples: {'logps_train/chosen': '-103.8', 'loss/train': '103.8', 'grad_norm': '332', 'examples_per_second': '5.9392', 'counters/examples': 16800, 'counters/updates': 525}
+train stats after 16832 examples: {'logps_train/chosen': '-116.45', 'loss/train': '116.45', 'grad_norm': '340', 'examples_per_second': '6.0922', 'counters/examples': 16832, 'counters/updates': 526}
+train stats after 16864 examples: {'logps_train/chosen': '-105.48', 'loss/train': '105.48', 'grad_norm': '322', 'examples_per_second': '5.3748', 'counters/examples': 16864, 'counters/updates': 527}
+train stats after 16896 examples: {'logps_train/chosen': '-111.44', 'loss/train': '111.44', 'grad_norm': '302', 'examples_per_second': '6.623', 'counters/examples': 16896, 'counters/updates': 528}
+train stats after 16928 examples: {'logps_train/chosen': '-147.93', 'loss/train': '147.93', 'grad_norm': '350', 'examples_per_second': '5.3318', 'counters/examples': 16928, 'counters/updates': 529}
+train stats after 16960 examples: {'logps_train/chosen': '-127.49', 'loss/train': '127.49', 'grad_norm': '342', 'examples_per_second': '6.0916', 'counters/examples': 16960, 'counters/updates': 530}
+train stats after 16992 examples: {'logps_train/chosen': '-160.8', 'loss/train': '160.8', 'grad_norm': '360', 'examples_per_second': '5.2019', 'counters/examples': 16992, 'counters/updates': 531}
+train stats after 17024 examples: {'logps_train/chosen': '-112.77', 'loss/train': '112.77', 'grad_norm': '312', 'examples_per_second': '5.1912', 'counters/examples': 17024, 'counters/updates': 532}
+train stats after 17056 examples: {'logps_train/chosen': '-116.05', 'loss/train': '116.05', 'grad_norm': '318', 'examples_per_second': '5.3766', 'counters/examples': 17056, 'counters/updates': 533}
+train stats after 17088 examples: {'logps_train/chosen': '-153.15', 'loss/train': '153.15', 'grad_norm': '378', 'examples_per_second': '5.7708', 'counters/examples': 17088, 'counters/updates': 534}
+train stats after 17120 examples: {'logps_train/chosen': '-108.02', 'loss/train': '108.02', 'grad_norm': '368', 'examples_per_second': '5.8431', 'counters/examples': 17120, 'counters/updates': 535}
+train stats after 17152 examples: {'logps_train/chosen': '-141.43', 'loss/train': '141.43', 'grad_norm': '384', 'examples_per_second': '5.2051', 'counters/examples': 17152, 'counters/updates': 536}
+train stats after 17184 examples: {'logps_train/chosen': '-126.34', 'loss/train': '126.34', 'grad_norm': '400', 'examples_per_second': '6.236', 'counters/examples': 17184, 'counters/updates': 537}
+train stats after 17216 examples: {'logps_train/chosen': '-143.37', 'loss/train': '143.37', 'grad_norm': '418', 'examples_per_second': '5.3743', 'counters/examples': 17216, 'counters/updates': 538}
+train stats after 17248 examples: {'logps_train/chosen': '-114.37', 'loss/train': '114.37', 'grad_norm': '314', 'examples_per_second': '6.2485', 'counters/examples': 17248, 'counters/updates': 539}
+train stats after 17280 examples: {'logps_train/chosen': '-147.17', 'loss/train': '147.17', 'grad_norm': '362', 'examples_per_second': '6.2159', 'counters/examples': 17280, 'counters/updates': 540}
+train stats after 17312 examples: {'logps_train/chosen': '-101.11', 'loss/train': '101.11', 'grad_norm': '318', 'examples_per_second': '5.7093', 'counters/examples': 17312, 'counters/updates': 541}
+train stats after 17344 examples: {'logps_train/chosen': '-98.203', 'loss/train': '98.203', 'grad_norm': '314', 'examples_per_second': '5.7861', 'counters/examples': 17344, 'counters/updates': 542}
+train stats after 17376 examples: {'logps_train/chosen': '-97.32', 'loss/train': '97.32', 'grad_norm': '322', 'examples_per_second': '6.0538', 'counters/examples': 17376, 'counters/updates': 543}
+train stats after 17408 examples: {'logps_train/chosen': '-147.16', 'loss/train': '147.16', 'grad_norm': '354', 'examples_per_second': '5.3732', 'counters/examples': 17408, 'counters/updates': 544}
+train stats after 17440 examples: {'logps_train/chosen': '-123.2', 'loss/train': '123.2', 'grad_norm': '330', 'examples_per_second': '5.3509', 'counters/examples': 17440, 'counters/updates': 545}
+train stats after 17472 examples: {'logps_train/chosen': '-120.61', 'loss/train': '120.61', 'grad_norm': '406', 'examples_per_second': '5.9143', 'counters/examples': 17472, 'counters/updates': 546}
+train stats after 17504 examples: {'logps_train/chosen': '-100.86', 'loss/train': '100.86', 'grad_norm': '300', 'examples_per_second': '5.5902', 'counters/examples': 17504, 'counters/updates': 547}
+train stats after 17536 examples: {'logps_train/chosen': '-113.28', 'loss/train': '113.28', 'grad_norm': '324', 'examples_per_second': '5.2029', 'counters/examples': 17536, 'counters/updates': 548}
+train stats after 17568 examples: {'logps_train/chosen': '-102.32', 'loss/train': '102.32', 'grad_norm': '304', 'examples_per_second': '5.3795', 'counters/examples': 17568, 'counters/updates': 549}
+train stats after 17600 examples: {'logps_train/chosen': '-120.49', 'loss/train': '120.49', 'grad_norm': '354', 'examples_per_second': '5.6559', 'counters/examples': 17600, 'counters/updates': 550}
+train stats after 17632 examples: {'logps_train/chosen': '-111', 'loss/train': '111', 'grad_norm': '304', 'examples_per_second': '5.3734', 'counters/examples': 17632, 'counters/updates': 551}
+train stats after 17664 examples: {'logps_train/chosen': '-150.59', 'loss/train': '150.59', 'grad_norm': '400', 'examples_per_second': '5.208', 'counters/examples': 17664, 'counters/updates': 552}
+train stats after 17696 examples: {'logps_train/chosen': '-147.18', 'loss/train': '147.18', 'grad_norm': '366', 'examples_per_second': '5.3833', 'counters/examples': 17696, 'counters/updates': 553}
+train stats after 17728 examples: {'logps_train/chosen': '-118.45', 'loss/train': '118.45', 'grad_norm': '320', 'examples_per_second': '5.2212', 'counters/examples': 17728, 'counters/updates': 554}
+train stats after 17760 examples: {'logps_train/chosen': '-134.12', 'loss/train': '134.12', 'grad_norm': '326', 'examples_per_second': '5.3642', 'counters/examples': 17760, 'counters/updates': 555}
+train stats after 17792 examples: {'logps_train/chosen': '-114.94', 'loss/train': '114.94', 'grad_norm': '314', 'examples_per_second': '5.3747', 'counters/examples': 17792, 'counters/updates': 556}
+train stats after 17824 examples: {'logps_train/chosen': '-121.71', 'loss/train': '121.71', 'grad_norm': '338', 'examples_per_second': '5.3756', 'counters/examples': 17824, 'counters/updates': 557}
+train stats after 17856 examples: {'logps_train/chosen': '-137.95', 'loss/train': '137.95', 'grad_norm': '392', 'examples_per_second': '5.9249', 'counters/examples': 17856, 'counters/updates': 558}
+train stats after 17888 examples: {'logps_train/chosen': '-130.25', 'loss/train': '130.25', 'grad_norm': '336', 'examples_per_second': '5.8448', 'counters/examples': 17888, 'counters/updates': 559}
+train stats after 17920 examples: {'logps_train/chosen': '-137.87', 'loss/train': '137.87', 'grad_norm': '382', 'examples_per_second': '5.3736', 'counters/examples': 17920, 'counters/updates': 560}
+train stats after 17952 examples: {'logps_train/chosen': '-100.25', 'loss/train': '100.25', 'grad_norm': '316', 'examples_per_second': '5.7118', 'counters/examples': 17952, 'counters/updates': 561}
+train stats after 17984 examples: {'logps_train/chosen': '-114.87', 'loss/train': '114.87', 'grad_norm': '350', 'examples_per_second': '5.3782', 'counters/examples': 17984, 'counters/updates': 562}
+train stats after 18016 examples: {'logps_train/chosen': '-139.57', 'loss/train': '139.57', 'grad_norm': '316', 'examples_per_second': '5.3777', 'counters/examples': 18016, 'counters/updates': 563}
+train stats after 18048 examples: {'logps_train/chosen': '-102.61', 'loss/train': '102.61', 'grad_norm': '302', 'examples_per_second': '6.0643', 'counters/examples': 18048, 'counters/updates': 564}
+train stats after 18080 examples: {'logps_train/chosen': '-97.041', 'loss/train': '97.041', 'grad_norm': '302', 'examples_per_second': '5.381', 'counters/examples': 18080, 'counters/updates': 565}
+train stats after 18112 examples: {'logps_train/chosen': '-122.59', 'loss/train': '122.59', 'grad_norm': '314', 'examples_per_second': '5.4169', 'counters/examples': 18112, 'counters/updates': 566}
+train stats after 18144 examples: {'logps_train/chosen': '-124.72', 'loss/train': '124.72', 'grad_norm': '328', 'examples_per_second': '5.552', 'counters/examples': 18144, 'counters/updates': 567}
+train stats after 18176 examples: {'logps_train/chosen': '-95.832', 'loss/train': '95.832', 'grad_norm': '298', 'examples_per_second': '6.1079', 'counters/examples': 18176, 'counters/updates': 568}
+train stats after 18208 examples: {'logps_train/chosen': '-139.31', 'loss/train': '139.31', 'grad_norm': '336', 'examples_per_second': '5.5407', 'counters/examples': 18208, 'counters/updates': 569}
+train stats after 18240 examples: {'logps_train/chosen': '-117.5', 'loss/train': '117.5', 'grad_norm': '312', 'examples_per_second': '5.6561', 'counters/examples': 18240, 'counters/updates': 570}
+train stats after 18272 examples: {'logps_train/chosen': '-122.41', 'loss/train': '122.41', 'grad_norm': '310', 'examples_per_second': '5.9601', 'counters/examples': 18272, 'counters/updates': 571}
+train stats after 18304 examples: {'logps_train/chosen': '-137.58', 'loss/train': '137.58', 'grad_norm': '366', 'examples_per_second': '5.1914', 'counters/examples': 18304, 'counters/updates': 572}
+train stats after 18336 examples: {'logps_train/chosen': '-105.47', 'loss/train': '105.47', 'grad_norm': '296', 'examples_per_second': '6.3145', 'counters/examples': 18336, 'counters/updates': 573}
+train stats after 18368 examples: {'logps_train/chosen': '-104.41', 'loss/train': '104.41', 'grad_norm': '316', 'examples_per_second': '5.2321', 'counters/examples': 18368, 'counters/updates': 574}
+train stats after 18400 examples: {'logps_train/chosen': '-135.71', 'loss/train': '135.71', 'grad_norm': '350', 'examples_per_second': '5.9972', 'counters/examples': 18400, 'counters/updates': 575}
+train stats after 18432 examples: {'logps_train/chosen': '-169.34', 'loss/train': '169.34', 'grad_norm': '386', 'examples_per_second': '5.3653', 'counters/examples': 18432, 'counters/updates': 576}
+train stats after 18464 examples: {'logps_train/chosen': '-121.14', 'loss/train': '121.14', 'grad_norm': '344', 'examples_per_second': '5.2166', 'counters/examples': 18464, 'counters/updates': 577}
+train stats after 18496 examples: {'logps_train/chosen': '-142.03', 'loss/train': '142.03', 'grad_norm': '380', 'examples_per_second': '5.2233', 'counters/examples': 18496, 'counters/updates': 578}
+train stats after 18528 examples: {'logps_train/chosen': '-111.04', 'loss/train': '111.04', 'grad_norm': '350', 'examples_per_second': '5.3847', 'counters/examples': 18528, 'counters/updates': 579}
+train stats after 18560 examples: {'logps_train/chosen': '-126.49', 'loss/train': '126.49', 'grad_norm': '314', 'examples_per_second': '5.3849', 'counters/examples': 18560, 'counters/updates': 580}
+train stats after 18592 examples: {'logps_train/chosen': '-105.35', 'loss/train': '105.35', 'grad_norm': '280', 'examples_per_second': '5.2175', 'counters/examples': 18592, 'counters/updates': 581}
+train stats after 18624 examples: {'logps_train/chosen': '-91.307', 'loss/train': '91.307', 'grad_norm': '292', 'examples_per_second': '5.6235', 'counters/examples': 18624, 'counters/updates': 582}
+train stats after 18656 examples: {'logps_train/chosen': '-73.269', 'loss/train': '73.269', 'grad_norm': '284', 'examples_per_second': '6.1321', 'counters/examples': 18656, 'counters/updates': 583}
+train stats after 18688 examples: {'logps_train/chosen': '-93.069', 'loss/train': '93.069', 'grad_norm': '316', 'examples_per_second': '5.5404', 'counters/examples': 18688, 'counters/updates': 584}
+train stats after 18720 examples: {'logps_train/chosen': '-96.122', 'loss/train': '96.122', 'grad_norm': '300', 'examples_per_second': '6.0795', 'counters/examples': 18720, 'counters/updates': 585}
+train stats after 18752 examples: {'logps_train/chosen': '-100.96', 'loss/train': '100.96', 'grad_norm': '284', 'examples_per_second': '5.8411', 'counters/examples': 18752, 'counters/updates': 586}
+train stats after 18784 examples: {'logps_train/chosen': '-118.36', 'loss/train': '118.36', 'grad_norm': '336', 'examples_per_second': '5.3814', 'counters/examples': 18784, 'counters/updates': 587}
+train stats after 18816 examples: {'logps_train/chosen': '-127.41', 'loss/train': '127.41', 'grad_norm': '338', 'examples_per_second': '5.3841', 'counters/examples': 18816, 'counters/updates': 588}
+train stats after 18848 examples: {'logps_train/chosen': '-99.021', 'loss/train': '99.021', 'grad_norm': '282', 'examples_per_second': '5.4431', 'counters/examples': 18848, 'counters/updates': 589}
+train stats after 18880 examples: {'logps_train/chosen': '-127.8', 'loss/train': '127.8', 'grad_norm': '348', 'examples_per_second': '5.3654', 'counters/examples': 18880, 'counters/updates': 590}
+train stats after 18912 examples: {'logps_train/chosen': '-101.63', 'loss/train': '101.63', 'grad_norm': '304', 'examples_per_second': '5.2148', 'counters/examples': 18912, 'counters/updates': 591}
+train stats after 18944 examples: {'logps_train/chosen': '-145.41', 'loss/train': '145.41', 'grad_norm': '342', 'examples_per_second': '5.651', 'counters/examples': 18944, 'counters/updates': 592}
+train stats after 18976 examples: {'logps_train/chosen': '-118.86', 'loss/train': '118.86', 'grad_norm': '308', 'examples_per_second': '5.601', 'counters/examples': 18976, 'counters/updates': 593}
+train stats after 19008 examples: {'logps_train/chosen': '-117.73', 'loss/train': '117.73', 'grad_norm': '310', 'examples_per_second': '6.4694', 'counters/examples': 19008, 'counters/updates': 594}
+train stats after 19040 examples: {'logps_train/chosen': '-127.72', 'loss/train': '127.72', 'grad_norm': '342', 'examples_per_second': '5.2296', 'counters/examples': 19040, 'counters/updates': 595}
+train stats after 19072 examples: {'logps_train/chosen': '-144.72', 'loss/train': '144.72', 'grad_norm': '346', 'examples_per_second': '5.2232', 'counters/examples': 19072, 'counters/updates': 596}
+train stats after 19104 examples: {'logps_train/chosen': '-108.13', 'loss/train': '108.13', 'grad_norm': '296', 'examples_per_second': '5.3848', 'counters/examples': 19104, 'counters/updates': 597}
+train stats after 19136 examples: {'logps_train/chosen': '-100.18', 'loss/train': '100.18', 'grad_norm': '320', 'examples_per_second': '8.0302', 'counters/examples': 19136, 'counters/updates': 598}
+train stats after 19168 examples: {'logps_train/chosen': '-106.07', 'loss/train': '106.07', 'grad_norm': '342', 'examples_per_second': '5.6924', 'counters/examples': 19168, 'counters/updates': 599}
+train stats after 19200 examples: {'logps_train/chosen': '-106.03', 'loss/train': '106.03', 'grad_norm': '286', 'examples_per_second': '5.394', 'counters/examples': 19200, 'counters/updates': 600}
+train stats after 19232 examples: {'logps_train/chosen': '-120.95', 'loss/train': '120.95', 'grad_norm': '418', 'examples_per_second': '5.2246', 'counters/examples': 19232, 'counters/updates': 601}
+train stats after 19264 examples: {'logps_train/chosen': '-120.58', 'loss/train': '120.58', 'grad_norm': '334', 'examples_per_second': '5.6841', 'counters/examples': 19264, 'counters/updates': 602}
+train stats after 19296 examples: {'logps_train/chosen': '-98.654', 'loss/train': '98.654', 'grad_norm': '282', 'examples_per_second': '5.5803', 'counters/examples': 19296, 'counters/updates': 603}
+train stats after 19328 examples: {'logps_train/chosen': '-88.403', 'loss/train': '88.403', 'grad_norm': '276', 'examples_per_second': '6.1238', 'counters/examples': 19328, 'counters/updates': 604}
+train stats after 19360 examples: {'logps_train/chosen': '-157.97', 'loss/train': '157.97', 'grad_norm': '348', 'examples_per_second': '5.6477', 'counters/examples': 19360, 'counters/updates': 605}
+train stats after 19392 examples: {'logps_train/chosen': '-135.55', 'loss/train': '135.55', 'grad_norm': '344', 'examples_per_second': '5.2096', 'counters/examples': 19392, 'counters/updates': 606}
+train stats after 19424 examples: {'logps_train/chosen': '-103.21', 'loss/train': '103.21', 'grad_norm': '300', 'examples_per_second': '5.2205', 'counters/examples': 19424, 'counters/updates': 607}
+train stats after 19456 examples: {'logps_train/chosen': '-133.09', 'loss/train': '133.09', 'grad_norm': '322', 'examples_per_second': '5.5144', 'counters/examples': 19456, 'counters/updates': 608}
+train stats after 19488 examples: {'logps_train/chosen': '-106.43', 'loss/train': '106.43', 'grad_norm': '302', 'examples_per_second': '5.3819', 'counters/examples': 19488, 'counters/updates': 609}
+train stats after 19520 examples: {'logps_train/chosen': '-118.52', 'loss/train': '118.52', 'grad_norm': '300', 'examples_per_second': '5.6077', 'counters/examples': 19520, 'counters/updates': 610}
+train stats after 19552 examples: {'logps_train/chosen': '-164.93', 'loss/train': '164.93', 'grad_norm': '358', 'examples_per_second': '5.3726', 'counters/examples': 19552, 'counters/updates': 611}
+train stats after 19584 examples: {'logps_train/chosen': '-136.42', 'loss/train': '136.42', 'grad_norm': '398', 'examples_per_second': '5.2134', 'counters/examples': 19584, 'counters/updates': 612}
+train stats after 19616 examples: {'logps_train/chosen': '-127.02', 'loss/train': '127.02', 'grad_norm': '368', 'examples_per_second': '5.2195', 'counters/examples': 19616, 'counters/updates': 613}
+train stats after 19648 examples: {'logps_train/chosen': '-140.82', 'loss/train': '140.82', 'grad_norm': '436', 'examples_per_second': '5.3634', 'counters/examples': 19648, 'counters/updates': 614}
+train stats after 19680 examples: {'logps_train/chosen': '-122.01', 'loss/train': '122.01', 'grad_norm': '342', 'examples_per_second': '6.3316', 'counters/examples': 19680, 'counters/updates': 615}
+train stats after 19712 examples: {'logps_train/chosen': '-120.46', 'loss/train': '120.46', 'grad_norm': '320', 'examples_per_second': '5.6603', 'counters/examples': 19712, 'counters/updates': 616}
+train stats after 19744 examples: {'logps_train/chosen': '-115.39', 'loss/train': '115.39', 'grad_norm': '282', 'examples_per_second': '5.2132', 'counters/examples': 19744, 'counters/updates': 617}
+train stats after 19776 examples: {'logps_train/chosen': '-116.97', 'loss/train': '116.97', 'grad_norm': '312', 'examples_per_second': '7.0339', 'counters/examples': 19776, 'counters/updates': 618}
+train stats after 19808 examples: {'logps_train/chosen': '-113.9', 'loss/train': '113.9', 'grad_norm': '308', 'examples_per_second': '5.3852', 'counters/examples': 19808, 'counters/updates': 619}
+train stats after 19840 examples: {'logps_train/chosen': '-136.38', 'loss/train': '136.38', 'grad_norm': '330', 'examples_per_second': '5.2208', 'counters/examples': 19840, 'counters/updates': 620}
+train stats after 19872 examples: {'logps_train/chosen': '-107.13', 'loss/train': '107.13', 'grad_norm': '296', 'examples_per_second': '6.2391', 'counters/examples': 19872, 'counters/updates': 621}
+train stats after 19904 examples: {'logps_train/chosen': '-127.05', 'loss/train': '127.05', 'grad_norm': '330', 'examples_per_second': '5.3783', 'counters/examples': 19904, 'counters/updates': 622}
+train stats after 19936 examples: {'logps_train/chosen': '-110.51', 'loss/train': '110.51', 'grad_norm': '324', 'examples_per_second': '5.9683', 'counters/examples': 19936, 'counters/updates': 623}
+train stats after 19968 examples: {'logps_train/chosen': '-91.168', 'loss/train': '91.168', 'grad_norm': '306', 'examples_per_second': '5.3866', 'counters/examples': 19968, 'counters/updates': 624}
+train stats after 20000 examples: {'logps_train/chosen': '-126.17', 'loss/train': '126.17', 'grad_norm': '312', 'examples_per_second': '5.3871', 'counters/examples': 20000, 'counters/updates': 625}
+Running evaluation after 20000 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:19,  1.56it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:22,  1.33it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:22,  1.29it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:20,  1.35it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:20,  1.35it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:04<00:18,  1.44it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:05<00:17,  1.41it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:05<00:17,  1.35it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:06<00:16,  1.38it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:07<00:16,  1.33it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:08<00:16,  1.30it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:08<00:15,  1.29it/s]Computing eval metrics:  41%|████      | 13/32 [00:09<00:14,  1.27it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:10<00:14,  1.26it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:11<00:13,  1.27it/s]Computing eval metrics:  50%|█████     | 16/32 [00:12<00:12,  1.25it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:12<00:11,  1.26it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:13<00:11,  1.26it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:14<00:10,  1.26it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:15<00:09,  1.33it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:16<00:08,  1.30it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:16<00:07,  1.36it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:17<00:06,  1.39it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:18<00:05,  1.35it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:18<00:05,  1.31it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:19<00:04,  1.29it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:20<00:03,  1.27it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:21<00:03,  1.26it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:22<00:02,  1.30it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:22<00:01,  1.31it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:23<00:00,  1.35it/s]Computing eval metrics: 100%|██████████| 32/32 [00:24<00:00,  1.35it/s]Computing eval metrics: 100%|██████████| 32/32 [00:24<00:00,  1.32it/s]
