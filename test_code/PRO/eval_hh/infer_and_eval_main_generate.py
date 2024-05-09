@@ -31,7 +31,8 @@ if __name__ == "__main__":
     accelerator = Accelerator(kwargs_handlers=[kwargs])# **accelerator_log_kwargs)
     rank = int(os.environ['RANK'])
     rank_sum = accelerator.num_processes
-    model_name_or_path = os.path.join("..", "checkpoints", f"index_{args.index}", f"stage_{args.stage}", f"{args.directory}")
+    # model_name_or_path = os.path.join("..", "checkpoints", f"index_{args.index}", f"stage_{args.stage}", f"{args.directory}")
+    model_name_or_path ='/home/wxt/huatong/huggingface/hub/llama2_7b_sft_halos/LATEST/policy.pt'
     model_device = "cuda:{}".format(rank)
 
     model_config = AutoConfig.from_pretrained(model_name_or_path)
