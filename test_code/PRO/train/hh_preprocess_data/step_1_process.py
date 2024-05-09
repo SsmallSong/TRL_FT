@@ -17,12 +17,7 @@ Roles = {
 }
 
 def hhrlhf_preprocess(path,filename,index_generator,split='train'):
-<<<<<<< HEAD
-    with open(os.path.join(path,filename),'r', encoding='utf-8') as f:
-    
-=======
     with gzip.open(os.path.join(path,filename),'rt', encoding='utf-8') as f:
->>>>>>> 5bc6141539670bb5be4bec87855739ec3baccbdf
         raw = f.readlines()
     
     data = []
