@@ -50,8 +50,8 @@ if __name__ == "__main__":
     print(type(tokenizer.eos_token))
     print(tokenizer.eos_token)
     print(tokenizer.eos_token_id)
-    tokenizer.pad_token=tokenizer.eos_token,
-    tokenizer.pad_token_id=tokenizer.eos_token_id,
+    tokenizer.pad_token=tokenizer.eos_token
+    tokenizer.pad_token_id=tokenizer.eos_token_id
    # tokenizer.pad_token="</s>",
    # tokenizer.pad_token_id=2,
     tokenizer.sep_token = "<sep>"
