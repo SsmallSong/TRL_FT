@@ -41,15 +41,19 @@ if __name__ == "__main__":
         print(model.config)
     # set tokenizer
     if model.config.architectures[0].lower() == "llamaforcausallm":
-        tokenizer = LlamaTokenizer.from_pretrained(model_name_or_path)
+        tokenizer = LlamaTokenizer.from_pretrained(model_name_or_path,legacy=False)
         tokenizer.unk_token = "<unk>"
         tokenizer.bos_token = "<s>"
         tokenizer.eos_token = "</s>"
     else:
-        tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
-    
+        tokenizer = AutoTokenizer.from_pretrained(model_name_or_path,legacy=False)
+    print(type(tokenizer.eos_token))
+    print(tokenizer.eos_token)
+    print(tokenizer.eos_token_id)
     tokenizer.pad_token=tokenizer.eos_token,
     tokenizer.pad_token_id=tokenizer.eos_token_id,
+   # tokenizer.pad_token="</s>",
+   # tokenizer.pad_token_id=2,
     tokenizer.sep_token = "<sep>"
     model.resize_token_embeddings(len(tokenizer))
       

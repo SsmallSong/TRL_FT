@@ -11,7 +11,7 @@ from dataclasses import dataclass
 from typing import Literal, Optional
 import tqdm
 import reward_model
-from reward_model import TrainRewardModel
+#from reward_model import TrainRewardModel
 import nltk
 
 rank = int(os.environ['RANK'])

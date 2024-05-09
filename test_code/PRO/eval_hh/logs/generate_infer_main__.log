@@ -1,28 +1,67 @@
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:03,  1.55s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:02,  1.38s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:02,  1.50s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:03,  1.63s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:02<00:01,  1.46s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:03<00:01,  1.60s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:02<00:01,  1.52s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:03<00:01,  1.57s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:04<00:00,  1.30s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:04<00:00,  1.35s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:04<00:00,  1.37s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:04<00:00,  1.43s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:04<00:00,  1.31s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:04<00:00,  1.36s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:04<00:00,  1.40s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:04<00:00,  1.45s/it]
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
 Traceback (most recent call last):
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 8, in <module>
-    import metrics2
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/metrics2.py", line 14, in <module>
-    from reward_model import TrainRewardModel
-ImportError: cannot import name 'TrainRewardModel' from 'reward_model' (/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/reward_model.py)
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 51, in <module>
+    tokenizer.pad_token=tokenizer.eos_token,
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 1157, in pad_token
+    raise ValueError("Cannot set a non-string value as the PAD token")
+ValueError: Cannot set a non-string value as the PAD token
 Traceback (most recent call last):
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 8, in <module>
-    import metrics2
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/metrics2.py", line 14, in <module>
-    from reward_model import TrainRewardModel
-ImportError: cannot import name 'TrainRewardModel' from 'reward_model' (/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/reward_model.py)
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 51, in <module>
+    tokenizer.pad_token=tokenizer.eos_token,
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 1157, in pad_token
+    raise ValueError("Cannot set a non-string value as the PAD token")
+ValueError: Cannot set a non-string value as the PAD token
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
 Traceback (most recent call last):
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 8, in <module>
-    import metrics2
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/metrics2.py", line 14, in <module>
-    from reward_model import TrainRewardModel
-ImportError: cannot import name 'TrainRewardModel' from 'reward_model' (/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/reward_model.py)
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 51, in <module>
+    tokenizer.pad_token=tokenizer.eos_token,
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 1157, in pad_token
+    raise ValueError("Cannot set a non-string value as the PAD token")
+ValueError: Cannot set a non-string value as the PAD token
+<class 'transformers.models.llama.modeling_llama.LlamaForCausalLM'>
+LlamaConfig {
+  "_name_or_path": "/home/wxt/huatong/huggingface/hub/llama-7b-hh-sft",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_position_embeddings": 2048,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": false,
+  "vocab_size": 32000
+}
+
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
 Traceback (most recent call last):
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 8, in <module>
-    import metrics2
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/metrics2.py", line 14, in <module>
-    from reward_model import TrainRewardModel
-ImportError: cannot import name 'TrainRewardModel' from 'reward_model' (/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/reward_model.py)
-[2024-05-08 15:47:23,958] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 2449616) of binary: /home/wxt/.conda/envs/rl/bin/python
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 51, in <module>
+    tokenizer.pad_token=tokenizer.eos_token,
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 1157, in pad_token
+    raise ValueError("Cannot set a non-string value as the PAD token")
+ValueError: Cannot set a non-string value as the PAD token
+[2024-05-08 15:56:56,600] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 2451328) of binary: /home/wxt/.conda/envs/rl/bin/python
 Traceback (most recent call last):
   File "/home/wxt/.conda/envs/rl/bin/accelerate", line 8, in <module>
     sys.exit(main())
@@ -44,33 +83,33 @@ infer_and_eval_main_generate.py FAILED
 ------------------------------------------------------------
 Failures:
 [1]:
-  time      : 2024-05-08_15:47:23
+  time      : 2024-05-08_15:56:56
   host      : design-agent-09.internal.cloudapp.net
   rank      : 1 (local_rank: 1)
-  exitcode  : 1 (pid: 2449617)
+  exitcode  : 1 (pid: 2451329)
   error_file: <N/A>
   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
 [2]:
-  time      : 2024-05-08_15:47:23
+  time      : 2024-05-08_15:56:56
   host      : design-agent-09.internal.cloudapp.net
   rank      : 2 (local_rank: 2)
-  exitcode  : 1 (pid: 2449618)
+  exitcode  : 1 (pid: 2451330)
   error_file: <N/A>
   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
 [3]:
-  time      : 2024-05-08_15:47:23
+  time      : 2024-05-08_15:56:56
   host      : design-agent-09.internal.cloudapp.net
   rank      : 3 (local_rank: 3)
-  exitcode  : 1 (pid: 2449619)
+  exitcode  : 1 (pid: 2451331)
   error_file: <N/A>
   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
 ------------------------------------------------------------
 Root Cause (first observed failure):
 [0]:
-  time      : 2024-05-08_15:47:23
+  time      : 2024-05-08_15:56:56
   host      : design-agent-09.internal.cloudapp.net
   rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 2449616)
+  exitcode  : 1 (pid: 2451328)
   error_file: <N/A>
   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
 ============================================================
