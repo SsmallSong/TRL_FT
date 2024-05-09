@@ -17,6 +17,7 @@ Roles = {
 
 def hhrlhf_preprocess(path,filename,index_generator,split='train'):
     with open(os.path.join(path,filename),'r', encoding='utf-8') as f:
+    
         raw = f.readlines()
     
     data = []
