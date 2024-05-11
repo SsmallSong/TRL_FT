@@ -13,7 +13,7 @@ from transformers import (
     AutoModelForCausalLM
 )
 from peft import PeftConfig, PeftModel
-from infer_func_now import setup_seed, generate_pipeline, ranking_pipeline
+from infer_func_now import setup_seed, generate_pipeline
 from accelerate import Accelerator
 from accelerate.utils import InitProcessGroupKwargs
 from datetime import timedelta
@@ -46,7 +46,7 @@ if __name__ == "__main__":
             if os.path.exists(save_path):
                 os.remove(save_path)
             
-            save_path = os.path.join("/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval/cache", "infer_generate_main_{}_{}_{}".format(args.index, args.stage, file_name))
+            save_path = os.path.join("/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval", "infer_generate_main_{}_{}_{}".format(args.index, args.stage, file_name))
             with open(save_path, 'r', encoding='utf-8') as f:
                 infer_data = [json.loads(l) for l in f.readlines()]
             if "line_index" in infer_data[0]:
@@ -68,7 +68,7 @@ if __name__ == "__main__":
         "helpful_online.json",
         "helpful_rejection.json"
     ]:
-        save_path = os.path.join("/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval/cache", "infer_generate_main_{}_{}_{}".format(args.index, args.stage, file_name))
+        save_path = os.path.join("/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval", "infer_generate_main_{}_{}_{}".format(args.index, args.stage, file_name))
         with open(save_path, 'r', encoding='utf-8') as f:
             infer_data = [json.loads(l) for line_index, l in enumerate(f.readlines()) if (line_index - rank) % rank_sum == 0]
         raw_prefixes = [l['prefix'][0] for l in infer_data]
