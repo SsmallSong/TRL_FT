@@ -5,6 +5,7 @@ import json
 import tqdm
 #import torch
 import torch.nn.functional as F
+from typing import Dict, Union, Type, List
 import metrics2
 from transformers import (
     AutoConfig,
@@ -16,11 +17,15 @@ from infer_func_now import setup_seed, generate_pipeline
 from accelerate import Accelerator
 from accelerate.utils import InitProcessGroupKwargs
 from datetime import timedelta
+import gc
 import os
 os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
 import torch
 print(torch.cuda.device_count())
-
+def delete_dict(d: Dict):
+    """Delete all items inside the dict."""
+    for k in list(d.keys()):
+        del d[k]
 # kill
 def get_args():
     parser = argparse.ArgumentParser(description="")
@@ -37,12 +42,22 @@ if __name__ == "__main__":
     rank = int(os.environ['RANK'])
     rank_sum = accelerator.num_processes
     # model_name_or_path = os.path.join("..", "checkpoints", f"index_{args.index}", f"stage_{args.stage}", f"{args.directory}")
-    model_name_or_path ='/home/wxt/huatong/huggingface/hub/llama2_7b_sft_halos'
+    model_name_or_path ='daryl149/llama-2-7b-hf'
     model_device = "cuda:{}".format(rank)
 
-    # model_config = AutoConfig.from_pretrained(model_name_or_path)
-    # model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
-    model = AutoModelForCausalLM.from_pretrained(model_name_or_path).to(model_device)
+    model_config = AutoConfig.from_pretrained(model_name_or_path)
+    model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
+    # model = AutoModelForCausalLM.from_pretrained(model_name_or_path).to(model_device)
+
+    state_dict = torch.load('/home/wxt/.cache/huggingface/hub/daryl149/llama-2-7b-hf', map_location='cpu')
+    step, metrics = state_dict['step_idx'], state_dict['metrics']
+    model.load_state_dict(state_dict['state'])
+    delete_dict(state_dict)
+    gc.collect()
+    torch.cuda.empty_cache()
+
+    print('loaded pre-trained weights')
+
     if accelerator.is_main_process:
         print(type(model))
         print(model.config)
