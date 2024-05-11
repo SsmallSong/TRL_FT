@@ -3,7 +3,7 @@ import os
 import argparse
 import json
 import tqdm
-import torch
+#import torch
 import torch.nn.functional as F
 import metrics2
 from transformers import (
@@ -16,7 +16,12 @@ from infer_func_now import setup_seed, generate_pipeline
 from accelerate import Accelerator
 from accelerate.utils import InitProcessGroupKwargs
 from datetime import timedelta
+import os
+os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
+import torch
+print(torch.cuda.device_count())
 
+# kill
 def get_args():
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('--index', type=str)
@@ -32,7 +37,7 @@ if __name__ == "__main__":
     rank = int(os.environ['RANK'])
     rank_sum = accelerator.num_processes
     # model_name_or_path = os.path.join("..", "checkpoints", f"index_{args.index}", f"stage_{args.stage}", f"{args.directory}")
-    model_name_or_path ='/home/wxt/huatong/huggingface/hub/llama2_7b_sft_halos/LATEST'
+    model_name_or_path ='/home/wxt/huatong/huggingface/hub/llama2_7b_sft_halos'
     model_device = "cuda:{}".format(rank)
 
     # model_config = AutoConfig.from_pretrained(model_name_or_path)
