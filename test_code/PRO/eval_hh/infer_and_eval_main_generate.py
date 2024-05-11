@@ -49,8 +49,8 @@ if __name__ == "__main__":
     model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
     # model = AutoModelForCausalLM.from_pretrained(model_name_or_path).to(model_device)
 
-    state_dict = torch.load('/home/wxt/.cache/huggingface/hub/daryl149/llama-2-7b-hf', map_location='cpu')
-    step, metrics = state_dict['step_idx'], state_dict['metrics']
+    state_dict = torch.load('/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos/LATEST/policy.pt', map_location='cpu')
+    # step, metrics = state_dict['step_idx'], state_dict['metrics']
     model.load_state_dict(state_dict['state'])
     delete_dict(state_dict)
     gc.collect()
@@ -69,9 +69,9 @@ if __name__ == "__main__":
         tokenizer.eos_token = "</s>"
     else:
         tokenizer = AutoTokenizer.from_pretrained(model_name_or_path,legacy=False)
-    print(type(tokenizer.eos_token))
-    print(tokenizer.eos_token)
-    print(tokenizer.eos_token_id)
+    # print(type(tokenizer.eos_token))
+    # print(tokenizer.eos_token)
+    # print(tokenizer.eos_token_id)
     tokenizer.pad_token=tokenizer.eos_token
     tokenizer.pad_token_id=tokenizer.eos_token_id
    # tokenizer.pad_token="</s>",
@@ -79,7 +79,6 @@ if __name__ == "__main__":
     tokenizer.sep_token = "<sep>"
     model.resize_token_embeddings(len(tokenizer))
       
-    print(model.dtype)
     torch.cuda.empty_cache()
     model.eval()
     print(f"Rank {rank} is activated...")
