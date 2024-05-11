@@ -35,8 +35,9 @@ if __name__ == "__main__":
     model_name_or_path ='/home/wxt/huatong/huggingface/hub/llama2_7b_sft_halos/LATEST'
     model_device = "cuda:{}".format(rank)
 
-    model_config = AutoConfig.from_pretrained(model_name_or_path)
-    model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
+    # model_config = AutoConfig.from_pretrained(model_name_or_path)
+    # model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
+    model = AutoModelForCausalLM.from_pretrained(model_name_or_path).to(model_device)
     if accelerator.is_main_process:
         print(type(model))
         print(model.config)
