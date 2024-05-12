@@ -1,4 +1,16 @@
-Traceback (most recent call last):
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_score.py", line 27, in <module>
-    with open(save_path, 'r', encoding='utf-8') as f:
-FileNotFoundError: [Errno 2] No such file or directory: '/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval/infer_main_no1_1_harmless_base.json'
+Eval on harmless_base.json
+BLEU: 0.12230666366291747
+Avg Reward: 0.5409699498730547
+Eval on helpful_base.json
+BLEU: 0.15889812499099898
+Avg Reward: 0.3690685539592624
+Eval on helpful_online.json
+BLEU: 0.21737786151065672
+Avg Reward: 0.4702172149448668
+Eval on helpful_rejection.json
+BLEU: 0.19568501799792326
+Avg Reward: 0.41791692061607905
+
+Global Eval
+BLEU: 0.16859429004776177
+Avg Reward: 0.44468538641668204
