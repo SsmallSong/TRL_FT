@@ -1,0 +1,43 @@
+Rank 0 is activated...
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_reward.py", line 50, in <module>
+    with open(save_path, 'r', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval/infer_generate_main_origin_1_harmless_base.json'
+Rank 1 is activated...
+Rank 2 is activated...
+Rank 3 is activated...
+[2024-05-12 02:37:49,859] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 3897099 closing signal SIGTERM
+[2024-05-12 02:37:49,859] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 3897100 closing signal SIGTERM
+[2024-05-12 02:37:49,859] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 3897101 closing signal SIGTERM
+[2024-05-12 02:37:50,239] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 3897098) of binary: /home/wxt/.conda/envs/halos3/bin/python
+Traceback (most recent call last):
+  File "/home/wxt/.conda/envs/halos3/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 45, in main
+    args.func(args)
+  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/accelerate/commands/launch.py", line 970, in launch_command
+    multi_gpu_launcher(args)
+  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/accelerate/commands/launch.py", line 646, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+infer_and_eval_main_reward.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-05-12_02:37:49
+  host      : design-agent-09.internal.cloudapp.net
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3897098)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
