@@ -1,1 +1,16 @@
-run_infer_main_dist.sh: line 15: python: command not found
+Eval on harmless_base.json
+BLEU: 0.13104947176329793
+Avg Reward: 0.602657790495579
+Eval on helpful_base.json
+BLEU: 0.188348945184183
+Avg Reward: 0.40622042597428965
+Eval on helpful_online.json
+BLEU: 0.2647282026788076
+Avg Reward: 0.5403871369847643
+Eval on helpful_rejection.json
+BLEU: 0.2365770856379789
+Avg Reward: 0.4573069261085471
+
+Global Eval
+BLEU: 0.1985002004841593
+Avg Reward: 0.49357471751103627
