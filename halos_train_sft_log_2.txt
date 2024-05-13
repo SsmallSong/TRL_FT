@@ -1,0 +1,108 @@
+nohup: ignoring input
+4
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Making experiment directory /home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2
+WARNING: eval_every must be divisible by batch_size
+Setting eval_every to 992
+no FSDP port specified; using open port for FSDP: 49265
+seed: 1
+exp_name: llama2_7b_sft_halos_2
+datasets:
+- hh
+mode: train
+debug: false
+use_fsdp: true
+fsdp_port: 49265
+wandb:
+  enabled: true
+  entity: null
+  project: archangel
+cache_dir: /home/wxt/.cache/huggingface/hub
+local_run_dir: /home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2
+do_first_eval: true
+minimum_log_interval_secs: 1.0
+intermediate_checkpoints: false
+trainer: SFTTrainer
+lr: 2.0e-05
+n_epochs: 1
+n_examples: null
+optimizer: RMSprop
+warmup_steps: 150
+eval_every: 992
+n_samples: 128
+samples_dir: samples/
+n_eval_examples: 512
+saved_policy: /home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2/LATEST/policy.pt
+top_p: 0.95
+human_prefix: '
+
+  <|user|>
+
+  '
+assistant_prefix: '
+
+  <|assistant|>
+
+  '
+human_suffix: ''
+assistant_suffix: ''
+frac_unique_desirable: 1.0
+frac_unique_undesirable: 1.0
+model:
+  name_or_path: daryl149/llama-2-7b-hf
+  tokenizer_name_or_path: null
+  load_from: null
+  block_name: LlamaDecoderLayer
+  policy_dtype: bfloat16
+  fsdp_policy_mp: null
+  reference_dtype: bfloat16
+  max_grad_norm: 10.0
+  v_head_max_grad_norm: 0.1
+  max_length: 1024
+  max_prompt_length: 512
+  activation_checkpointing: true
+  batch_size: 16
+  gradient_accumulation_steps: 4
+  eval_batch_size: 16
+  use_flash_attention: false
+loss:
+  name: sft
+  trainer: SFTTrainer
+  dataloader: SFTDataLoader
+  use_reference_model: false
+
+================================================================================
+Writing to design-agent-09:/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2
+================================================================================
+building policy
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.58s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.59s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.74s/it]
+Loading tokenizer daryl149/llama-2-7b-hf
+0 special tokens added
+Loading HH dataset (train split) from Huggingface...
+Processing HH:   0%|          | 0/160800 [00:00<?, ?it/s]Processing HH:   1%|          | 1519/160800 [00:00<00:10, 15186.57it/s]Processing HH:   2%|▏         | 3038/160800 [00:00<00:10, 14735.64it/s]Processing HH:   3%|▎         | 4562/160800 [00:00<00:10, 14960.42it/s]Processing HH:   4%|▍         | 6059/160800 [00:00<00:10, 14862.31it/s]Processing HH:   5%|▍         | 7546/160800 [00:00<00:10, 14764.60it/s]Processing HH:   6%|▌         | 9023/160800 [00:00<00:10, 14551.48it/s]Processing HH:   7%|▋         | 10479/160800 [00:00<00:10, 14482.28it/s]Processing HH:   7%|▋         | 11991/160800 [00:00<00:10, 14681.98it/s]Processing HH:   8%|▊         | 13470/160800 [00:00<00:10, 14714.70it/s]Processing HH:   9%|▉         | 14942/160800 [00:01<00:14, 10270.61it/s]Processing HH:  10%|█         | 16430/160800 [00:01<00:12, 11349.03it/s]Processing HH:  11%|█         | 17947/160800 [00:01<00:11, 12304.38it/s]Processing HH:  12%|█▏        | 19377/160800 [00:01<00:11, 12829.57it/s]Processing HH:  13%|█▎        | 20858/160800 [00:01<00:10, 13370.78it/s]Processing HH:  14%|█▍        | 22270/160800 [00:01<00:10, 13430.11it/s]Processing HH:  15%|█▍        | 23746/160800 [00:01<00:09, 13804.62it/s]Processing HH:  16%|█▌        | 25166/160800 [00:01<00:09, 13871.33it/s]Processing HH:  17%|█▋        | 26601/160800 [00:01<00:09, 14009.89it/s]Processing HH:  17%|█▋        | 28054/160800 [00:02<00:09, 14162.04it/s]Processing HH:  18%|█▊        | 29540/160800 [00:02<00:09, 14367.92it/s]Processing HH:  19%|█▉        | 31018/160800 [00:02<00:08, 14488.51it/s]Processing HH:  20%|██        | 32527/160800 [00:02<00:08, 14666.04it/s]Processing HH:  21%|██        | 33999/160800 [00:02<00:11, 10712.80it/s]Processing HH:  22%|██▏       | 35410/160800 [00:02<00:10, 11517.41it/s]Processing HH:  23%|██▎       | 36912/160800 [00:02<00:09, 12401.97it/s]Processing HH:  24%|██▍       | 38393/160800 [00:02<00:09, 13040.71it/s]Processing HH:  25%|██▍       | 39837/160800 [00:02<00:09, 13423.03it/s]Processing HH:  26%|██▌       | 41307/160800 [00:03<00:08, 13781.94it/s]Processing HH:  27%|██▋       | 42799/160800 [00:03<00:08, 14105.89it/s]Processing HH:  28%|██▊       | 44243/160800 [00:03<00:08, 14008.82it/s]Processing HH:  28%|██▊       | 45668/160800 [00:03<00:08, 13973.35it/s]Processing HH:  29%|██▉       | 47082/160800 [00:03<00:08, 13903.44it/s]Processing HH:  30%|███       | 48484/160800 [00:03<00:08, 13821.46it/s]Processing HH:  31%|███       | 49875/160800 [00:03<00:08, 13622.03it/s]Processing HH:  32%|███▏      | 51250/160800 [00:03<00:08, 13658.58it/s]Processing HH:  33%|███▎      | 52649/160800 [00:03<00:07, 13754.67it/s]Processing HH:  34%|███▎      | 54055/160800 [00:04<00:07, 13844.61it/s]Processing HH:  35%|███▍      | 55481/160800 [00:04<00:07, 13965.59it/s]Processing HH:  35%|███▌      | 56880/160800 [00:04<00:07, 13868.27it/s]Processing HH:  36%|███▌      | 58269/160800 [00:04<00:10, 9777.07it/s] Processing HH:  37%|███▋      | 59666/160800 [00:04<00:09, 10741.28it/s]Processing HH:  38%|███▊      | 60981/160800 [00:04<00:08, 11335.87it/s]Processing HH:  39%|███▉      | 62359/160800 [00:04<00:08, 11973.62it/s]Processing HH:  40%|███▉      | 63772/160800 [00:04<00:07, 12558.17it/s]Processing HH:  41%|████      | 65140/160800 [00:04<00:07, 12869.15it/s]Processing HH:  41%|████▏     | 66579/160800 [00:05<00:07, 13301.31it/s]Processing HH:  42%|████▏     | 67980/160800 [00:05<00:06, 13505.62it/s]Processing HH:  43%|████▎     | 69368/160800 [00:05<00:06, 13613.93it/s]Processing HH:  44%|████▍     | 70749/160800 [00:05<00:06, 13652.50it/s]Processing HH:  45%|████▍     | 72171/160800 [00:05<00:06, 13818.01it/s]Processing HH:  46%|████▌     | 73583/160800 [00:05<00:06, 13907.19it/s]Processing HH:  47%|████▋     | 74981/160800 [00:05<00:06, 13787.28it/s]Processing HH:  47%|████▋     | 76365/160800 [00:05<00:06, 13784.02it/s]Processing HH:  48%|████▊     | 77753/160800 [00:05<00:06, 13809.13it/s]Processing HH:  49%|████▉     | 79137/160800 [00:05<00:05, 13685.00it/s]Processing HH:  50%|█████     | 80537/160800 [00:06<00:05, 13776.21it/s]Processing HH:  51%|█████     | 81924/160800 [00:06<00:05, 13796.71it/s]Processing HH:  52%|█████▏    | 83305/160800 [00:06<00:05, 13775.31it/s]Processing HH:  53%|█████▎    | 84687/160800 [00:06<00:05, 13786.10it/s]Processing HH:  54%|█████▎    | 86087/160800 [00:06<00:05, 13848.31it/s]Processing HH:  54%|█████▍    | 87473/160800 [00:06<00:08, 8396.42it/s] Processing HH:  55%|█████▌    | 88574/160800 [00:06<00:08, 8313.93it/s]Processing HH:  56%|█████▌    | 89587/160800 [00:07<00:08, 8274.99it/s]Processing HH:  56%|█████▋    | 90541/160800 [00:07<00:08, 8270.28it/s]Processing HH:  57%|█████▋    | 91457/160800 [00:07<00:08, 8232.84it/s]Processing HH:  57%|█████▋    | 92342/160800 [00:07<00:08, 8323.89it/s]Processing HH:  58%|█████▊    | 93219/160800 [00:07<00:08, 8233.59it/s]Processing HH:  59%|█████▊    | 94073/160800 [00:07<00:08, 8295.93it/s]Processing HH:  59%|█████▉    | 94925/160800 [00:07<00:08, 8091.66it/s]Processing HH:  60%|█████▉    | 95750/160800 [00:07<00:08, 8043.12it/s]Processing HH:  60%|██████    | 96608/160800 [00:07<00:07, 8187.12it/s]Processing HH:  61%|██████    | 97436/160800 [00:07<00:07, 8212.27it/s]Processing HH:  61%|██████    | 98267/160800 [00:08<00:07, 8238.91it/s]Processing HH:  62%|██████▏   | 99096/160800 [00:08<00:07, 8253.10it/s]Processing HH:  62%|██████▏   | 99925/160800 [00:08<00:07, 8193.70it/s]Processing HH:  63%|██████▎   | 100747/160800 [00:08<00:07, 8026.86it/s]Processing HH:  63%|██████▎   | 101579/160800 [00:08<00:07, 8108.64it/s]Processing HH:  64%|██████▎   | 102411/160800 [00:08<00:07, 8168.63it/s]Processing HH:  64%|██████▍   | 103232/160800 [00:08<00:07, 8175.21it/s]Processing HH:  65%|██████▍   | 104079/160800 [00:08<00:06, 8262.65it/s]Processing HH:  65%|██████▌   | 104906/160800 [00:08<00:06, 8167.63it/s]Processing HH:  66%|██████▌   | 105772/160800 [00:09<00:06, 8310.83it/s]Processing HH:  66%|██████▋   | 106604/160800 [00:09<00:06, 8229.55it/s]Processing HH:  67%|██████▋   | 107454/160800 [00:09<00:06, 8297.04it/s]Processing HH:  67%|██████▋   | 108285/160800 [00:09<00:06, 8228.14it/s]Processing HH:  68%|██████▊   | 109460/160800 [00:09<00:05, 9269.12it/s]Processing HH:  69%|██████▉   | 110686/160800 [00:09<00:04, 10156.48it/s]Processing HH:  70%|██████▉   | 111879/160800 [00:09<00:04, 10684.56it/s]Processing HH:  70%|███████   | 113046/160800 [00:09<00:04, 10976.45it/s]Processing HH:  71%|███████   | 114228/160800 [00:09<00:04, 11227.31it/s]Processing HH:  72%|███████▏  | 115452/160800 [00:09<00:03, 11527.68it/s]Processing HH:  73%|███████▎  | 116675/160800 [00:10<00:03, 11736.31it/s]Processing HH:  73%|███████▎  | 117925/160800 [00:10<00:03, 11961.67it/s]Processing HH:  74%|███████▍  | 119126/160800 [00:10<00:03, 11974.08it/s]Processing HH:  75%|███████▍  | 120366/160800 [00:10<00:03, 12099.01it/s]Processing HH:  76%|███████▌  | 121614/160800 [00:10<00:03, 12213.09it/s]Processing HH:  76%|███████▋  | 122836/160800 [00:10<00:05, 6724.97it/s] Processing HH:  77%|███████▋  | 124034/160800 [00:10<00:04, 7726.46it/s]Processing HH:  78%|███████▊  | 125253/160800 [00:10<00:04, 8680.81it/s]Processing HH:  79%|███████▊  | 126458/160800 [00:11<00:03, 9468.97it/s]Processing HH:  79%|███████▉  | 127687/160800 [00:11<00:03, 10175.96it/s]Processing HH:  80%|████████  | 128903/160800 [00:11<00:02, 10697.80it/s]Processing HH:  81%|████████  | 130118/160800 [00:11<00:02, 11093.35it/s]Processing HH:  82%|████████▏ | 131313/160800 [00:11<00:02, 11333.62it/s]Processing HH:  82%|████████▏ | 132501/160800 [00:11<00:02, 11235.02it/s]Processing HH:  83%|████████▎ | 133663/160800 [00:11<00:02, 11235.00it/s]Processing HH:  84%|████████▍ | 134852/160800 [00:11<00:02, 11422.62it/s]Processing HH:  85%|████████▍ | 136026/160800 [00:11<00:02, 11514.98it/s]Processing HH:  85%|████████▌ | 137224/160800 [00:12<00:02, 11651.53it/s]Processing HH:  86%|████████▌ | 138405/160800 [00:12<00:01, 11694.26it/s]Processing HH:  87%|████████▋ | 139600/160800 [00:12<00:01, 11767.73it/s]Processing HH:  88%|████████▊ | 140782/160800 [00:12<00:01, 11675.61it/s]Processing HH:  88%|████████▊ | 141976/160800 [00:12<00:01, 11753.13it/s]Processing HH:  89%|████████▉ | 143211/160800 [00:12<00:01, 11930.61it/s]Processing HH:  90%|████████▉ | 144407/160800 [00:12<00:01, 11937.64it/s]Processing HH:  91%|█████████ | 145609/160800 [00:12<00:01, 11962.10it/s]Processing HH:  91%|█████████▏| 146807/160800 [00:12<00:01, 11784.90it/s]Processing HH:  92%|█████████▏| 148027/160800 [00:12<00:01, 11906.71it/s]Processing HH:  93%|█████████▎| 149219/160800 [00:13<00:00, 11894.46it/s]Processing HH:  94%|█████████▎| 150421/160800 [00:13<00:00, 11929.10it/s]Processing HH:  94%|█████████▍| 151615/160800 [00:13<00:00, 11910.96it/s]Processing HH:  95%|█████████▌| 152838/160800 [00:13<00:00, 12003.21it/s]Processing HH:  96%|█████████▌| 154039/160800 [00:13<00:00, 11959.01it/s]Processing HH:  97%|█████████▋| 155262/160800 [00:13<00:00, 12038.33it/s]Processing HH:  97%|█████████▋| 156468/160800 [00:13<00:00, 12042.84it/s]Processing HH:  98%|█████████▊| 157673/160800 [00:13<00:00, 11967.61it/s]Processing HH:  99%|█████████▉| 158889/160800 [00:13<00:00, 12024.62it/s]Processing HH: 100%|█████████▉| 160103/160800 [00:13<00:00, 12058.98it/s]Processing HH: 100%|██████████| 160800/160800 [00:13<00:00, 11508.29it/s]
+Loading HH dataset (test split) from Huggingface...
+Processing HH:   0%|          | 0/8552 [00:00<?, ?it/s]Processing HH:  17%|█▋        | 1427/8552 [00:00<00:00, 14267.94it/s]Processing HH:  34%|███▎      | 2873/8552 [00:00<00:00, 14369.65it/s]Processing HH:  50%|█████     | 4310/8552 [00:00<00:00, 14191.64it/s]Processing HH:  67%|██████▋   | 5730/8552 [00:00<00:00, 11463.29it/s]Processing HH:  81%|████████  | 6938/8552 [00:00<00:00, 4961.83it/s] Processing HH:  96%|█████████▌| 8180/8552 [00:01<00:00, 6148.84it/s]Processing HH: 100%|██████████| 8552/8552 [00:01<00:00, 7584.74it/s]
+starting 4 processes for FSDP training
+setting RLIMIT_NOFILE soft limit to 1048576 from 1024
+4
+0 initializing distributed
+Creating trainer on process 0 with world size 4
+Finished generating 512 examples on test split
+Loaded 32 eval batches of size 16
+Sharding models...
+Attempting to enable activation checkpointing...
+Applying activation checkpointing wrapper to policy...
+FSDP activation checkpointing enabled!
+Loaded model on rank 0
+Using RMSprop optimizer with learning rate 2e-05
+Running evaluation after 0 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+Computing eval metrics:   3%|▎         | 1/32 [00:00<00:29,  1.04it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:22,  1.31it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:19,  1.51it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:16,  1.73it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.75it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.91it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:03<00:11,  2.09it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.17it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.27it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.06it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:09,  2.11it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.15it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:08,  2.11it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.05it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  2.02it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:07,  2.01it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:06,  2.16it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.15it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.12it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:10<00:05,  2.25it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.31it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.41it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:03,  2.27it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.34it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.24it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.10it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.14it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.16it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:14<00:01,  2.24it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.12it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:14<00:00,  2.21it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.32it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.09it/s]
