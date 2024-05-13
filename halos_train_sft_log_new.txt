@@ -173,3 +173,377 @@ skipping logging after 1952 examples to avoid logging too frequently
 skipping logging after 1984 examples to avoid logging too frequently
 Running evaluation after 1984 train examples
 Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:29,  1.06it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:22,  1.31it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:19,  1.50it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:16,  1.71it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.73it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.89it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:03<00:12,  2.06it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.13it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.25it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.03it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:10,  2.09it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.12it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.09it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.01it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  1.99it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:08,  1.98it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:07,  2.14it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.13it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.09it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:10<00:05,  2.23it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.29it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.41it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:03,  2.25it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.33it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.21it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.06it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.11it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.13it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:14<00:01,  2.21it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.10it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:15<00:00,  2.19it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.30it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.06it/s]
+eval after 1984: {'logps_eval/chosen': '-125.34', 'loss/eval': '125.34'}
+skipping logging after 2016 examples to avoid logging too frequently
+train stats after 2048 examples: {'logps_train/chosen': '-106.01', 'loss/train': '106.01', 'examples_per_second': '13.485', 'grad_norm': '164', 'counters/examples': 2048, 'counters/updates': 64}
+skipping logging after 2080 examples to avoid logging too frequently
+skipping logging after 2112 examples to avoid logging too frequently
+skipping logging after 2144 examples to avoid logging too frequently
+train stats after 2176 examples: {'logps_train/chosen': '-115.33', 'loss/train': '115.33', 'examples_per_second': '13.927', 'grad_norm': '143', 'counters/examples': 2176, 'counters/updates': 68}
+skipping logging after 2208 examples to avoid logging too frequently
+skipping logging after 2240 examples to avoid logging too frequently
+skipping logging after 2272 examples to avoid logging too frequently
+train stats after 2304 examples: {'logps_train/chosen': '-115.85', 'loss/train': '115.85', 'examples_per_second': '12.057', 'grad_norm': '145', 'counters/examples': 2304, 'counters/updates': 72}
+skipping logging after 2336 examples to avoid logging too frequently
+skipping logging after 2368 examples to avoid logging too frequently
+skipping logging after 2400 examples to avoid logging too frequently
+train stats after 2432 examples: {'logps_train/chosen': '-123.28', 'loss/train': '123.28', 'examples_per_second': '11.934', 'grad_norm': '167', 'counters/examples': 2432, 'counters/updates': 76}
+skipping logging after 2464 examples to avoid logging too frequently
+skipping logging after 2496 examples to avoid logging too frequently
+skipping logging after 2528 examples to avoid logging too frequently
+train stats after 2560 examples: {'logps_train/chosen': '-123.68', 'loss/train': '123.68', 'examples_per_second': '12.672', 'grad_norm': '169', 'counters/examples': 2560, 'counters/updates': 80}
+skipping logging after 2592 examples to avoid logging too frequently
+skipping logging after 2624 examples to avoid logging too frequently
+skipping logging after 2656 examples to avoid logging too frequently
+train stats after 2688 examples: {'logps_train/chosen': '-123.31', 'loss/train': '123.31', 'examples_per_second': '12.592', 'grad_norm': '159', 'counters/examples': 2688, 'counters/updates': 84}
+skipping logging after 2720 examples to avoid logging too frequently
+skipping logging after 2752 examples to avoid logging too frequently
+skipping logging after 2784 examples to avoid logging too frequently
+train stats after 2816 examples: {'logps_train/chosen': '-132.53', 'loss/train': '132.53', 'examples_per_second': '10.147', 'grad_norm': '161', 'counters/examples': 2816, 'counters/updates': 88}
+skipping logging after 2848 examples to avoid logging too frequently
+skipping logging after 2880 examples to avoid logging too frequently
+skipping logging after 2912 examples to avoid logging too frequently
+train stats after 2944 examples: {'logps_train/chosen': '-118.57', 'loss/train': '118.57', 'examples_per_second': '11.473', 'grad_norm': '148', 'counters/examples': 2944, 'counters/updates': 92}
+skipping logging after 2976 examples to avoid logging too frequently
+Running evaluation after 2976 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:29,  1.07it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:22,  1.32it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:19,  1.51it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:16,  1.73it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.73it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.89it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:03<00:12,  2.06it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.14it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.26it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.03it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:10,  2.09it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.13it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.09it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.02it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  1.99it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:08,  1.98it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:07,  2.14it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.13it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.09it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:10<00:05,  2.22it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.28it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.41it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:04,  2.25it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.32it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.21it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.06it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.11it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.12it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:14<00:01,  2.21it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.10it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:15<00:00,  2.18it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.29it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.06it/s]
+eval after 2976: {'logps_eval/chosen': '-123.74', 'loss/eval': '123.74'}
+skipping logging after 3008 examples to avoid logging too frequently
+skipping logging after 3040 examples to avoid logging too frequently
+train stats after 3072 examples: {'logps_train/chosen': '-132.78', 'loss/train': '132.78', 'examples_per_second': '11.279', 'grad_norm': '206', 'counters/examples': 3072, 'counters/updates': 96}
+skipping logging after 3104 examples to avoid logging too frequently
+skipping logging after 3136 examples to avoid logging too frequently
+skipping logging after 3168 examples to avoid logging too frequently
+train stats after 3200 examples: {'logps_train/chosen': '-130.42', 'loss/train': '130.42', 'examples_per_second': '11.408', 'grad_norm': '169', 'counters/examples': 3200, 'counters/updates': 100}
+skipping logging after 3232 examples to avoid logging too frequently
+skipping logging after 3264 examples to avoid logging too frequently
+skipping logging after 3296 examples to avoid logging too frequently
+train stats after 3328 examples: {'logps_train/chosen': '-121.4', 'loss/train': '121.4', 'examples_per_second': '11.901', 'grad_norm': '140', 'counters/examples': 3328, 'counters/updates': 104}
+skipping logging after 3360 examples to avoid logging too frequently
+skipping logging after 3392 examples to avoid logging too frequently
+skipping logging after 3424 examples to avoid logging too frequently
+train stats after 3456 examples: {'logps_train/chosen': '-115.04', 'loss/train': '115.04', 'examples_per_second': '11.742', 'grad_norm': '149', 'counters/examples': 3456, 'counters/updates': 108}
+skipping logging after 3488 examples to avoid logging too frequently
+skipping logging after 3520 examples to avoid logging too frequently
+skipping logging after 3552 examples to avoid logging too frequently
+train stats after 3584 examples: {'logps_train/chosen': '-128.88', 'loss/train': '128.88', 'examples_per_second': '11.33', 'grad_norm': '142', 'counters/examples': 3584, 'counters/updates': 112}
+skipping logging after 3616 examples to avoid logging too frequently
+skipping logging after 3648 examples to avoid logging too frequently
+skipping logging after 3680 examples to avoid logging too frequently
+train stats after 3712 examples: {'logps_train/chosen': '-119.69', 'loss/train': '119.69', 'examples_per_second': '10.512', 'grad_norm': '134', 'counters/examples': 3712, 'counters/updates': 116}
+skipping logging after 3744 examples to avoid logging too frequently
+skipping logging after 3776 examples to avoid logging too frequently
+skipping logging after 3808 examples to avoid logging too frequently
+train stats after 3840 examples: {'logps_train/chosen': '-106.41', 'loss/train': '106.41', 'examples_per_second': '12.209', 'grad_norm': '124.5', 'counters/examples': 3840, 'counters/updates': 120}
+skipping logging after 3872 examples to avoid logging too frequently
+skipping logging after 3904 examples to avoid logging too frequently
+skipping logging after 3936 examples to avoid logging too frequently
+train stats after 3968 examples: {'logps_train/chosen': '-101.2', 'loss/train': '101.2', 'examples_per_second': '14.91', 'grad_norm': '133', 'counters/examples': 3968, 'counters/updates': 124}
+Running evaluation after 3968 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:15,  1.99it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:17,  1.73it/s]Computing eval metrics:   9%|▉         | 3/32 [00:01<00:16,  1.77it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:14,  1.92it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:02<00:14,  1.86it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.98it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:03<00:11,  2.14it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:03<00:10,  2.19it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:09,  2.30it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:04<00:10,  2.06it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:09,  2.11it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:05<00:09,  2.14it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.11it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:06<00:08,  2.03it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  2.00it/s]Computing eval metrics:  50%|█████     | 16/32 [00:07<00:08,  1.98it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:06,  2.15it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:08<00:06,  2.14it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.10it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:09<00:05,  2.22it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.28it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.40it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:10<00:04,  2.24it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.33it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:11<00:03,  2.22it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.06it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:12<00:02,  2.11it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.13it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:13<00:01,  2.21it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.09it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:14<00:00,  2.19it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.30it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.13it/s]
+eval after 3968: {'logps_eval/chosen': '-123.11', 'loss/eval': '123.11'}
+skipping logging after 4000 examples to avoid logging too frequently
+skipping logging after 4032 examples to avoid logging too frequently
+skipping logging after 4064 examples to avoid logging too frequently
+train stats after 4096 examples: {'logps_train/chosen': '-114.6', 'loss/train': '114.6', 'examples_per_second': '10.737', 'grad_norm': '148', 'counters/examples': 4096, 'counters/updates': 128}
+skipping logging after 4128 examples to avoid logging too frequently
+skipping logging after 4160 examples to avoid logging too frequently
+skipping logging after 4192 examples to avoid logging too frequently
+train stats after 4224 examples: {'logps_train/chosen': '-110.57', 'loss/train': '110.57', 'examples_per_second': '11.535', 'grad_norm': '131', 'counters/examples': 4224, 'counters/updates': 132}
+skipping logging after 4256 examples to avoid logging too frequently
+skipping logging after 4288 examples to avoid logging too frequently
+skipping logging after 4320 examples to avoid logging too frequently
+train stats after 4352 examples: {'logps_train/chosen': '-116.76', 'loss/train': '116.76', 'examples_per_second': '11.036', 'grad_norm': '200', 'counters/examples': 4352, 'counters/updates': 136}
+skipping logging after 4384 examples to avoid logging too frequently
+skipping logging after 4416 examples to avoid logging too frequently
+skipping logging after 4448 examples to avoid logging too frequently
+train stats after 4480 examples: {'logps_train/chosen': '-119.24', 'loss/train': '119.24', 'examples_per_second': '10.005', 'grad_norm': '138', 'counters/examples': 4480, 'counters/updates': 140}
+skipping logging after 4512 examples to avoid logging too frequently
+skipping logging after 4544 examples to avoid logging too frequently
+skipping logging after 4576 examples to avoid logging too frequently
+train stats after 4608 examples: {'logps_train/chosen': '-129.82', 'loss/train': '129.82', 'examples_per_second': '11.03', 'grad_norm': '131', 'counters/examples': 4608, 'counters/updates': 144}
+skipping logging after 4640 examples to avoid logging too frequently
+skipping logging after 4672 examples to avoid logging too frequently
+skipping logging after 4704 examples to avoid logging too frequently
+train stats after 4736 examples: {'logps_train/chosen': '-135.71', 'loss/train': '135.71', 'examples_per_second': '12.862', 'grad_norm': '133', 'counters/examples': 4736, 'counters/updates': 148}
+skipping logging after 4768 examples to avoid logging too frequently
+skipping logging after 4800 examples to avoid logging too frequently
+skipping logging after 4832 examples to avoid logging too frequently
+train stats after 4864 examples: {'logps_train/chosen': '-133.88', 'loss/train': '133.88', 'examples_per_second': '11.293', 'grad_norm': '144', 'counters/examples': 4864, 'counters/updates': 152}
+skipping logging after 4896 examples to avoid logging too frequently
+skipping logging after 4928 examples to avoid logging too frequently
+skipping logging after 4960 examples to avoid logging too frequently
+Running evaluation after 4960 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:01<00:31,  1.01s/it]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:23,  1.27it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:19,  1.48it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:16,  1.69it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.72it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.87it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:04<00:12,  2.05it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.13it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.25it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.03it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:10,  2.09it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.13it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.09it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.03it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  2.00it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:08,  1.98it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:06,  2.15it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.14it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.10it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:10<00:05,  2.24it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.29it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.42it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:03,  2.26it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.33it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.23it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.07it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.12it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.12it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:14<00:01,  2.21it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.10it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:15<00:00,  2.19it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.30it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.06it/s]
+eval after 4960: {'logps_eval/chosen': '-122.74', 'loss/eval': '122.74'}
+train stats after 4992 examples: {'logps_train/chosen': '-115.16', 'loss/train': '115.16', 'examples_per_second': '11.718', 'grad_norm': '142', 'counters/examples': 4992, 'counters/updates': 156}
+skipping logging after 5024 examples to avoid logging too frequently
+skipping logging after 5056 examples to avoid logging too frequently
+skipping logging after 5088 examples to avoid logging too frequently
+train stats after 5120 examples: {'logps_train/chosen': '-119.91', 'loss/train': '119.91', 'examples_per_second': '12.482', 'grad_norm': '137', 'counters/examples': 5120, 'counters/updates': 160}
+skipping logging after 5152 examples to avoid logging too frequently
+skipping logging after 5184 examples to avoid logging too frequently
+skipping logging after 5216 examples to avoid logging too frequently
+train stats after 5248 examples: {'logps_train/chosen': '-116.75', 'loss/train': '116.75', 'examples_per_second': '12.048', 'grad_norm': '129', 'counters/examples': 5248, 'counters/updates': 164}
+skipping logging after 5280 examples to avoid logging too frequently
+skipping logging after 5312 examples to avoid logging too frequently
+skipping logging after 5344 examples to avoid logging too frequently
+train stats after 5376 examples: {'logps_train/chosen': '-116.4', 'loss/train': '116.4', 'examples_per_second': '13.732', 'grad_norm': '126.5', 'counters/examples': 5376, 'counters/updates': 168}
+skipping logging after 5408 examples to avoid logging too frequently
+skipping logging after 5440 examples to avoid logging too frequently
+skipping logging after 5472 examples to avoid logging too frequently
+train stats after 5504 examples: {'logps_train/chosen': '-142.32', 'loss/train': '142.32', 'examples_per_second': '10.416', 'grad_norm': '140', 'counters/examples': 5504, 'counters/updates': 172}
+skipping logging after 5536 examples to avoid logging too frequently
+skipping logging after 5568 examples to avoid logging too frequently
+skipping logging after 5600 examples to avoid logging too frequently
+train stats after 5632 examples: {'logps_train/chosen': '-109.4', 'loss/train': '109.4', 'examples_per_second': '12.265', 'grad_norm': '122.5', 'counters/examples': 5632, 'counters/updates': 176}
+skipping logging after 5664 examples to avoid logging too frequently
+skipping logging after 5696 examples to avoid logging too frequently
+skipping logging after 5728 examples to avoid logging too frequently
+train stats after 5760 examples: {'logps_train/chosen': '-99.38', 'loss/train': '99.38', 'examples_per_second': '12.327', 'grad_norm': '126', 'counters/examples': 5760, 'counters/updates': 180}
+skipping logging after 5792 examples to avoid logging too frequently
+skipping logging after 5824 examples to avoid logging too frequently
+skipping logging after 5856 examples to avoid logging too frequently
+train stats after 5888 examples: {'logps_train/chosen': '-109.21', 'loss/train': '109.21', 'examples_per_second': '11.679', 'grad_norm': '123', 'counters/examples': 5888, 'counters/updates': 184}
+skipping logging after 5920 examples to avoid logging too frequently
+skipping logging after 5952 examples to avoid logging too frequently
+Running evaluation after 5952 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:30,  1.00it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:23,  1.28it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:19,  1.48it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:16,  1.70it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.72it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.88it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:04<00:12,  2.06it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.13it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.25it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.03it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:10,  2.09it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.12it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.09it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.02it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  1.99it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:08,  1.98it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:07,  2.13it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.13it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.10it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:10<00:05,  2.23it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.29it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.41it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:03,  2.26it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.33it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.22it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.06it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.11it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.12it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:14<00:01,  2.21it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.10it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:15<00:00,  2.19it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.30it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.06it/s]
+eval after 5952: {'logps_eval/chosen': '-122.36', 'loss/eval': '122.36'}
+skipping logging after 5984 examples to avoid logging too frequently
+train stats after 6016 examples: {'logps_train/chosen': '-110.37', 'loss/train': '110.37', 'examples_per_second': '13.3', 'grad_norm': '123', 'counters/examples': 6016, 'counters/updates': 188}
+skipping logging after 6048 examples to avoid logging too frequently
+skipping logging after 6080 examples to avoid logging too frequently
+skipping logging after 6112 examples to avoid logging too frequently
+train stats after 6144 examples: {'logps_train/chosen': '-129', 'loss/train': '129', 'examples_per_second': '10.549', 'grad_norm': '142', 'counters/examples': 6144, 'counters/updates': 192}
+skipping logging after 6176 examples to avoid logging too frequently
+skipping logging after 6208 examples to avoid logging too frequently
+skipping logging after 6240 examples to avoid logging too frequently
+train stats after 6272 examples: {'logps_train/chosen': '-126.65', 'loss/train': '126.65', 'examples_per_second': '14.073', 'grad_norm': '129', 'counters/examples': 6272, 'counters/updates': 196}
+skipping logging after 6304 examples to avoid logging too frequently
+skipping logging after 6336 examples to avoid logging too frequently
+skipping logging after 6368 examples to avoid logging too frequently
+train stats after 6400 examples: {'logps_train/chosen': '-120.17', 'loss/train': '120.17', 'examples_per_second': '13.429', 'grad_norm': '128', 'counters/examples': 6400, 'counters/updates': 200}
+skipping logging after 6432 examples to avoid logging too frequently
+skipping logging after 6464 examples to avoid logging too frequently
+skipping logging after 6496 examples to avoid logging too frequently
+train stats after 6528 examples: {'logps_train/chosen': '-124.67', 'loss/train': '124.67', 'examples_per_second': '11.189', 'grad_norm': '137', 'counters/examples': 6528, 'counters/updates': 204}
+skipping logging after 6560 examples to avoid logging too frequently
+skipping logging after 6592 examples to avoid logging too frequently
+skipping logging after 6624 examples to avoid logging too frequently
+train stats after 6656 examples: {'logps_train/chosen': '-113.19', 'loss/train': '113.19', 'examples_per_second': '11.521', 'grad_norm': '122.5', 'counters/examples': 6656, 'counters/updates': 208}
+skipping logging after 6688 examples to avoid logging too frequently
+skipping logging after 6720 examples to avoid logging too frequently
+skipping logging after 6752 examples to avoid logging too frequently
+train stats after 6784 examples: {'logps_train/chosen': '-99.357', 'loss/train': '99.357', 'examples_per_second': '11.679', 'grad_norm': '109', 'counters/examples': 6784, 'counters/updates': 212}
+skipping logging after 6816 examples to avoid logging too frequently
+skipping logging after 6848 examples to avoid logging too frequently
+skipping logging after 6880 examples to avoid logging too frequently
+train stats after 6912 examples: {'logps_train/chosen': '-119.08', 'loss/train': '119.08', 'examples_per_second': '12.545', 'grad_norm': '124', 'counters/examples': 6912, 'counters/updates': 216}
+skipping logging after 6944 examples to avoid logging too frequently
+Running evaluation after 6944 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:25,  1.20it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:21,  1.40it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:18,  1.56it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:15,  1.76it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.76it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.90it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:03<00:12,  2.07it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.15it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.26it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.03it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:10,  2.09it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.12it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.08it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.01it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  1.99it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:08,  1.98it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:07,  2.13it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.13it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.10it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:10<00:05,  2.23it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.28it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.41it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:03,  2.26it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.32it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.21it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.06it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.11it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.12it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:14<00:01,  2.20it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.09it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:15<00:00,  2.18it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.29it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.08it/s]
+eval after 6944: {'logps_eval/chosen': '-122.32', 'loss/eval': '122.32'}
+skipping logging after 6976 examples to avoid logging too frequently
+skipping logging after 7008 examples to avoid logging too frequently
+train stats after 7040 examples: {'logps_train/chosen': '-119.47', 'loss/train': '119.47', 'examples_per_second': '12.653', 'grad_norm': '137', 'counters/examples': 7040, 'counters/updates': 220}
+skipping logging after 7072 examples to avoid logging too frequently
+skipping logging after 7104 examples to avoid logging too frequently
+skipping logging after 7136 examples to avoid logging too frequently
+train stats after 7168 examples: {'logps_train/chosen': '-131.16', 'loss/train': '131.16', 'examples_per_second': '11.641', 'grad_norm': '138', 'counters/examples': 7168, 'counters/updates': 224}
+skipping logging after 7200 examples to avoid logging too frequently
+skipping logging after 7232 examples to avoid logging too frequently
+skipping logging after 7264 examples to avoid logging too frequently
+train stats after 7296 examples: {'logps_train/chosen': '-121.39', 'loss/train': '121.39', 'examples_per_second': '11.336', 'grad_norm': '140', 'counters/examples': 7296, 'counters/updates': 228}
+skipping logging after 7328 examples to avoid logging too frequently
+skipping logging after 7360 examples to avoid logging too frequently
+skipping logging after 7392 examples to avoid logging too frequently
+train stats after 7424 examples: {'logps_train/chosen': '-117.76', 'loss/train': '117.76', 'examples_per_second': '14.019', 'grad_norm': '142', 'counters/examples': 7424, 'counters/updates': 232}
+skipping logging after 7456 examples to avoid logging too frequently
+skipping logging after 7488 examples to avoid logging too frequently
+skipping logging after 7520 examples to avoid logging too frequently
+train stats after 7552 examples: {'logps_train/chosen': '-110.13', 'loss/train': '110.13', 'examples_per_second': '15.61', 'grad_norm': '126.5', 'counters/examples': 7552, 'counters/updates': 236}
+skipping logging after 7584 examples to avoid logging too frequently
+skipping logging after 7616 examples to avoid logging too frequently
+skipping logging after 7648 examples to avoid logging too frequently
+train stats after 7680 examples: {'logps_train/chosen': '-120.89', 'loss/train': '120.89', 'examples_per_second': '10.265', 'grad_norm': '130', 'counters/examples': 7680, 'counters/updates': 240}
+skipping logging after 7712 examples to avoid logging too frequently
+skipping logging after 7744 examples to avoid logging too frequently
+skipping logging after 7776 examples to avoid logging too frequently
+train stats after 7808 examples: {'logps_train/chosen': '-106.95', 'loss/train': '106.95', 'examples_per_second': '15.654', 'grad_norm': '128', 'counters/examples': 7808, 'counters/updates': 244}
+skipping logging after 7840 examples to avoid logging too frequently
+skipping logging after 7872 examples to avoid logging too frequently
+skipping logging after 7904 examples to avoid logging too frequently
+train stats after 7936 examples: {'logps_train/chosen': '-103.93', 'loss/train': '103.93', 'examples_per_second': '13.97', 'grad_norm': '128', 'counters/examples': 7936, 'counters/updates': 248}
+Running evaluation after 7936 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:15,  1.98it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:17,  1.73it/s]Computing eval metrics:   9%|▉         | 3/32 [00:01<00:16,  1.77it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:14,  1.93it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:02<00:14,  1.86it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.98it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:03<00:11,  2.14it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:03<00:10,  2.19it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.29it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:04<00:10,  2.05it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:09,  2.11it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:05<00:09,  2.14it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.09it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:06<00:08,  2.02it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  2.00it/s]Computing eval metrics:  50%|█████     | 16/32 [00:07<00:08,  1.98it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:06,  2.15it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:08<00:06,  2.14it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.11it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:09<00:05,  2.23it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.28it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.41it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:10<00:03,  2.26it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.33it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:11<00:03,  2.23it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.07it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:12<00:02,  2.11it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.13it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:13<00:01,  2.21it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.10it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:14<00:00,  2.19it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.29it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.13it/s]
+eval after 7936: {'logps_eval/chosen': '-122.2', 'loss/eval': '122.2'}
+skipping logging after 7968 examples to avoid logging too frequently
+skipping logging after 8000 examples to avoid logging too frequently
+skipping logging after 8032 examples to avoid logging too frequently
+train stats after 8064 examples: {'logps_train/chosen': '-126.07', 'loss/train': '126.07', 'examples_per_second': '11.134', 'grad_norm': '127.5', 'counters/examples': 8064, 'counters/updates': 252}
+skipping logging after 8096 examples to avoid logging too frequently
+skipping logging after 8128 examples to avoid logging too frequently
+skipping logging after 8160 examples to avoid logging too frequently
+train stats after 8192 examples: {'logps_train/chosen': '-114.43', 'loss/train': '114.43', 'examples_per_second': '10.469', 'grad_norm': '120.5', 'counters/examples': 8192, 'counters/updates': 256}
+skipping logging after 8224 examples to avoid logging too frequently
+skipping logging after 8256 examples to avoid logging too frequently
+skipping logging after 8288 examples to avoid logging too frequently
+train stats after 8320 examples: {'logps_train/chosen': '-111.39', 'loss/train': '111.39', 'examples_per_second': '11.423', 'grad_norm': '141', 'counters/examples': 8320, 'counters/updates': 260}
+skipping logging after 8352 examples to avoid logging too frequently
+skipping logging after 8384 examples to avoid logging too frequently
+skipping logging after 8416 examples to avoid logging too frequently
+train stats after 8448 examples: {'logps_train/chosen': '-115.49', 'loss/train': '115.49', 'examples_per_second': '10.602', 'grad_norm': '121.5', 'counters/examples': 8448, 'counters/updates': 264}
+skipping logging after 8480 examples to avoid logging too frequently
+skipping logging after 8512 examples to avoid logging too frequently
+skipping logging after 8544 examples to avoid logging too frequently
+train stats after 8576 examples: {'logps_train/chosen': '-122.27', 'loss/train': '122.27', 'examples_per_second': '11.582', 'grad_norm': '130', 'counters/examples': 8576, 'counters/updates': 268}
+skipping logging after 8608 examples to avoid logging too frequently
+skipping logging after 8640 examples to avoid logging too frequently
+skipping logging after 8672 examples to avoid logging too frequently
+train stats after 8704 examples: {'logps_train/chosen': '-108.04', 'loss/train': '108.04', 'examples_per_second': '10.817', 'grad_norm': '133', 'counters/examples': 8704, 'counters/updates': 272}
+skipping logging after 8736 examples to avoid logging too frequently
+skipping logging after 8768 examples to avoid logging too frequently
+skipping logging after 8800 examples to avoid logging too frequently
+train stats after 8832 examples: {'logps_train/chosen': '-118.02', 'loss/train': '118.02', 'examples_per_second': '12.766', 'grad_norm': '125.5', 'counters/examples': 8832, 'counters/updates': 276}
+skipping logging after 8864 examples to avoid logging too frequently
+skipping logging after 8896 examples to avoid logging too frequently
+skipping logging after 8928 examples to avoid logging too frequently
+Running evaluation after 8928 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:30,  1.01it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:23,  1.29it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:19,  1.48it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:16,  1.70it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.72it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.87it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:04<00:12,  2.05it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.13it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.24it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.02it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:10,  2.08it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.12it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.09it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.02it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  1.99it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:08,  1.98it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:06,  2.15it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.14it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.10it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:10<00:05,  2.23it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.29it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.41it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:04,  2.25it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.33it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.21it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.06it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.11it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.12it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:14<00:01,  2.21it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.09it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:15<00:00,  2.18it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.29it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.06it/s]
+eval after 8928: {'logps_eval/chosen': '-122.34', 'loss/eval': '122.34'}
+train stats after 8960 examples: {'logps_train/chosen': '-120.46', 'loss/train': '120.46', 'examples_per_second': '11.603', 'grad_norm': '128', 'counters/examples': 8960, 'counters/updates': 280}
+skipping logging after 8992 examples to avoid logging too frequently
+skipping logging after 9024 examples to avoid logging too frequently
+skipping logging after 9056 examples to avoid logging too frequently
+train stats after 9088 examples: {'logps_train/chosen': '-98.53', 'loss/train': '98.53', 'examples_per_second': '13.64', 'grad_norm': '112', 'counters/examples': 9088, 'counters/updates': 284}
+skipping logging after 9120 examples to avoid logging too frequently
+skipping logging after 9152 examples to avoid logging too frequently
+skipping logging after 9184 examples to avoid logging too frequently
+train stats after 9216 examples: {'logps_train/chosen': '-125.36', 'loss/train': '125.36', 'examples_per_second': '12.167', 'grad_norm': '130', 'counters/examples': 9216, 'counters/updates': 288}
+skipping logging after 9248 examples to avoid logging too frequently
+skipping logging after 9280 examples to avoid logging too frequently
+skipping logging after 9312 examples to avoid logging too frequently
+train stats after 9344 examples: {'logps_train/chosen': '-122.8', 'loss/train': '122.8', 'examples_per_second': '11.741', 'grad_norm': '140', 'counters/examples': 9344, 'counters/updates': 292}
+skipping logging after 9376 examples to avoid logging too frequently
+skipping logging after 9408 examples to avoid logging too frequently
+skipping logging after 9440 examples to avoid logging too frequently
+train stats after 9472 examples: {'logps_train/chosen': '-105.99', 'loss/train': '105.99', 'examples_per_second': '11.808', 'grad_norm': '130', 'counters/examples': 9472, 'counters/updates': 296}
+skipping logging after 9504 examples to avoid logging too frequently
+skipping logging after 9536 examples to avoid logging too frequently
+skipping logging after 9568 examples to avoid logging too frequently
+train stats after 9600 examples: {'logps_train/chosen': '-110.11', 'loss/train': '110.11', 'examples_per_second': '11.749', 'grad_norm': '129', 'counters/examples': 9600, 'counters/updates': 300}
+skipping logging after 9632 examples to avoid logging too frequently
+skipping logging after 9664 examples to avoid logging too frequently
+skipping logging after 9696 examples to avoid logging too frequently
+train stats after 9728 examples: {'logps_train/chosen': '-127.13', 'loss/train': '127.13', 'examples_per_second': '10.532', 'grad_norm': '136', 'counters/examples': 9728, 'counters/updates': 304}
+skipping logging after 9760 examples to avoid logging too frequently
+skipping logging after 9792 examples to avoid logging too frequently
+skipping logging after 9824 examples to avoid logging too frequently
+train stats after 9856 examples: {'logps_train/chosen': '-111.48', 'loss/train': '111.48', 'examples_per_second': '13.747', 'grad_norm': '125', 'counters/examples': 9856, 'counters/updates': 308}
+skipping logging after 9888 examples to avoid logging too frequently
+skipping logging after 9920 examples to avoid logging too frequently
+Running evaluation after 9920 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:28,  1.10it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:22,  1.34it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:19,  1.52it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:16,  1.73it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.74it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.89it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:03<00:12,  2.06it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.14it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.25it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.03it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:10,  2.09it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.13it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.09it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.02it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  1.99it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:08,  1.97it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:07,  2.14it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.13it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.10it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:10<00:05,  2.23it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.28it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.41it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:03,  2.25it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.32it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.22it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.07it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.12it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.13it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:14<00:01,  2.21it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.10it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:15<00:00,  2.19it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.30it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.07it/s]
+eval after 9920: {'logps_eval/chosen': '-122.26', 'loss/eval': '122.26'}
+skipping logging after 9952 examples to avoid logging too frequently
+train stats after 9984 examples: {'logps_train/chosen': '-103.83', 'loss/train': '103.83', 'examples_per_second': '12.287', 'grad_norm': '116.5', 'counters/examples': 9984, 'counters/updates': 312}
+skipping logging after 10016 examples to avoid logging too frequently
+skipping logging after 10048 examples to avoid logging too frequently
+skipping logging after 10080 examples to avoid logging too frequently
+train stats after 10112 examples: {'logps_train/chosen': '-108.67', 'loss/train': '108.67', 'examples_per_second': '11.092', 'grad_norm': '127', 'counters/examples': 10112, 'counters/updates': 316}
+skipping logging after 10144 examples to avoid logging too frequently
+skipping logging after 10176 examples to avoid logging too frequently
+skipping logging after 10208 examples to avoid logging too frequently
+train stats after 10240 examples: {'logps_train/chosen': '-115.07', 'loss/train': '115.07', 'examples_per_second': '12.304', 'grad_norm': '120.5', 'counters/examples': 10240, 'counters/updates': 320}
+skipping logging after 10272 examples to avoid logging too frequently
+skipping logging after 10304 examples to avoid logging too frequently
+skipping logging after 10336 examples to avoid logging too frequently
+train stats after 10368 examples: {'logps_train/chosen': '-112.93', 'loss/train': '112.93', 'examples_per_second': '9.6229', 'grad_norm': '118', 'counters/examples': 10368, 'counters/updates': 324}
+skipping logging after 10400 examples to avoid logging too frequently
+skipping logging after 10432 examples to avoid logging too frequently
+skipping logging after 10464 examples to avoid logging too frequently
+train stats after 10496 examples: {'logps_train/chosen': '-141.73', 'loss/train': '141.73', 'examples_per_second': '10.997', 'grad_norm': '142', 'counters/examples': 10496, 'counters/updates': 328}
+skipping logging after 10528 examples to avoid logging too frequently
+skipping logging after 10560 examples to avoid logging too frequently
+skipping logging after 10592 examples to avoid logging too frequently
+train stats after 10624 examples: {'logps_train/chosen': '-112.25', 'loss/train': '112.25', 'examples_per_second': '13.334', 'grad_norm': '118.5', 'counters/examples': 10624, 'counters/updates': 332}
+skipping logging after 10656 examples to avoid logging too frequently
+skipping logging after 10688 examples to avoid logging too frequently
+skipping logging after 10720 examples to avoid logging too frequently
+train stats after 10752 examples: {'logps_train/chosen': '-99.064', 'loss/train': '99.064', 'examples_per_second': '13.389', 'grad_norm': '116.5', 'counters/examples': 10752, 'counters/updates': 336}
+skipping logging after 10784 examples to avoid logging too frequently
+skipping logging after 10816 examples to avoid logging too frequently
+skipping logging after 10848 examples to avoid logging too frequently
+train stats after 10880 examples: {'logps_train/chosen': '-124.59', 'loss/train': '124.59', 'examples_per_second': '12.165', 'grad_norm': '129', 'counters/examples': 10880, 'counters/updates': 340}
+skipping logging after 10912 examples to avoid logging too frequently
+Running evaluation after 10912 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:25,  1.20it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:21,  1.40it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:18,  1.56it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:15,  1.77it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.77it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.91it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:03<00:12,  2.08it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.14it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.26it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.03it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:10,  2.09it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.12it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.09it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.02it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  2.00it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:08,  1.98it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:06,  2.14it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.13it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.10it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:09<00:05,  2.23it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.29it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.42it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:03,  2.27it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.34it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.23it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.07it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.12it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.13it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:14<00:01,  2.21it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.09it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:14<00:00,  2.19it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.29it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.08it/s]
+eval after 10912: {'logps_eval/chosen': '-122.63', 'loss/eval': '122.63'}
+skipping logging after 10944 examples to avoid logging too frequently
+skipping logging after 10976 examples to avoid logging too frequently
+train stats after 11008 examples: {'logps_train/chosen': '-127.58', 'loss/train': '127.58', 'examples_per_second': '12.67', 'grad_norm': '142', 'counters/examples': 11008, 'counters/updates': 344}
+skipping logging after 11040 examples to avoid logging too frequently
+skipping logging after 11072 examples to avoid logging too frequently
+skipping logging after 11104 examples to avoid logging too frequently
+train stats after 11136 examples: {'logps_train/chosen': '-142.24', 'loss/train': '142.24', 'examples_per_second': '11.427', 'grad_norm': '151', 'counters/examples': 11136, 'counters/updates': 348}
+skipping logging after 11168 examples to avoid logging too frequently
+skipping logging after 11200 examples to avoid logging too frequently
+skipping logging after 11232 examples to avoid logging too frequently
+train stats after 11264 examples: {'logps_train/chosen': '-121.61', 'loss/train': '121.61', 'examples_per_second': '10.668', 'grad_norm': '135', 'counters/examples': 11264, 'counters/updates': 352}
+skipping logging after 11296 examples to avoid logging too frequently
+skipping logging after 11328 examples to avoid logging too frequently
+skipping logging after 11360 examples to avoid logging too frequently
+train stats after 11392 examples: {'logps_train/chosen': '-137.17', 'loss/train': '137.17', 'examples_per_second': '10.909', 'grad_norm': '144', 'counters/examples': 11392, 'counters/updates': 356}
+skipping logging after 11424 examples to avoid logging too frequently
+skipping logging after 11456 examples to avoid logging too frequently
+skipping logging after 11488 examples to avoid logging too frequently
+train stats after 11520 examples: {'logps_train/chosen': '-121.52', 'loss/train': '121.52', 'examples_per_second': '12.678', 'grad_norm': '141', 'counters/examples': 11520, 'counters/updates': 360}
+skipping logging after 11552 examples to avoid logging too frequently
+skipping logging after 11584 examples to avoid logging too frequently
+skipping logging after 11616 examples to avoid logging too frequently
+train stats after 11648 examples: {'logps_train/chosen': '-99.871', 'loss/train': '99.871', 'examples_per_second': '12.726', 'grad_norm': '124.5', 'counters/examples': 11648, 'counters/updates': 364}
+skipping logging after 11680 examples to avoid logging too frequently
+skipping logging after 11712 examples to avoid logging too frequently
+skipping logging after 11744 examples to avoid logging too frequently
+train stats after 11776 examples: {'logps_train/chosen': '-116.7', 'loss/train': '116.7', 'examples_per_second': '10.412', 'grad_norm': '130', 'counters/examples': 11776, 'counters/updates': 368}
+skipping logging after 11808 examples to avoid logging too frequently
+skipping logging after 11840 examples to avoid logging too frequently
+skipping logging after 11872 examples to avoid logging too frequently
+train stats after 11904 examples: {'logps_train/chosen': '-120.65', 'loss/train': '120.65', 'examples_per_second': '11.486', 'grad_norm': '123.5', 'counters/examples': 11904, 'counters/updates': 372}
+Running evaluation after 11904 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:15,  1.96it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:17,  1.72it/s]Computing eval metrics:   9%|▉         | 3/32 [00:01<00:16,  1.76it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:14,  1.92it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:02<00:14,  1.86it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.98it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:03<00:11,  2.14it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:03<00:10,  2.20it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:09,  2.30it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:04<00:10,  2.06it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:09,  2.11it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:05<00:09,  2.14it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.10it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:06<00:08,  2.02it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  2.00it/s]Computing eval metrics:  50%|█████     | 16/32 [00:07<00:08,  1.99it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:06,  2.15it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:08<00:06,  2.14it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.10it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:09<00:05,  2.24it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.29it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.42it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:10<00:03,  2.26it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.33it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:11<00:03,  2.22it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.07it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:12<00:02,  2.12it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.12it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:13<00:01,  2.21it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.09it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:14<00:00,  2.19it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.29it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.13it/s]
+eval after 11904: {'logps_eval/chosen': '-122.25', 'loss/eval': '122.25'}
+skipping logging after 11936 examples to avoid logging too frequently
+skipping logging after 11968 examples to avoid logging too frequently
+skipping logging after 12000 examples to avoid logging too frequently
+train stats after 12032 examples: {'logps_train/chosen': '-133.68', 'loss/train': '133.68', 'examples_per_second': '11.35', 'grad_norm': '136', 'counters/examples': 12032, 'counters/updates': 376}
+skipping logging after 12064 examples to avoid logging too frequently
+skipping logging after 12096 examples to avoid logging too frequently
+skipping logging after 12128 examples to avoid logging too frequently
+train stats after 12160 examples: {'logps_train/chosen': '-129.48', 'loss/train': '129.48', 'examples_per_second': '12.373', 'grad_norm': '126.5', 'counters/examples': 12160, 'counters/updates': 380}
+skipping logging after 12192 examples to avoid logging too frequently
+skipping logging after 12224 examples to avoid logging too frequently
+skipping logging after 12256 examples to avoid logging too frequently
+train stats after 12288 examples: {'logps_train/chosen': '-112.85', 'loss/train': '112.85', 'examples_per_second': '9.927', 'grad_norm': '123.5', 'counters/examples': 12288, 'counters/updates': 384}
+skipping logging after 12320 examples to avoid logging too frequently
+skipping logging after 12352 examples to avoid logging too frequently
+skipping logging after 12384 examples to avoid logging too frequently
+train stats after 12416 examples: {'logps_train/chosen': '-91.242', 'loss/train': '91.242', 'examples_per_second': '12.342', 'grad_norm': '111', 'counters/examples': 12416, 'counters/updates': 388}
+skipping logging after 12448 examples to avoid logging too frequently
+skipping logging after 12480 examples to avoid logging too frequently
+skipping logging after 12512 examples to avoid logging too frequently
+train stats after 12544 examples: {'logps_train/chosen': '-112.01', 'loss/train': '112.01', 'examples_per_second': '14.45', 'grad_norm': '128', 'counters/examples': 12544, 'counters/updates': 392}
+skipping logging after 12576 examples to avoid logging too frequently
+skipping logging after 12608 examples to avoid logging too frequently
+skipping logging after 12640 examples to avoid logging too frequently
+train stats after 12672 examples: {'logps_train/chosen': '-125.11', 'loss/train': '125.11', 'examples_per_second': '13.207', 'grad_norm': '126', 'counters/examples': 12672, 'counters/updates': 396}
+skipping logging after 12704 examples to avoid logging too frequently
+skipping logging after 12736 examples to avoid logging too frequently
+skipping logging after 12768 examples to avoid logging too frequently
+train stats after 12800 examples: {'logps_train/chosen': '-128.81', 'loss/train': '128.81', 'examples_per_second': '11.776', 'grad_norm': '139', 'counters/examples': 12800, 'counters/updates': 400}
+skipping logging after 12832 examples to avoid logging too frequently
+skipping logging after 12864 examples to avoid logging too frequently
+skipping logging after 12896 examples to avoid logging too frequently
+Running evaluation after 12896 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:30,  1.02it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:23,  1.29it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:19,  1.49it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:16,  1.71it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.73it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.88it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:04<00:12,  2.06it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.14it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.26it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.04it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:10,  2.09it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.13it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.10it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.02it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  2.00it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:08,  1.98it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:06,  2.15it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.14it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.10it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:10<00:05,  2.23it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.29it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.40it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:04,  2.25it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.33it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.22it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.07it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.11it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.13it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:14<00:01,  2.21it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.09it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:15<00:00,  2.18it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.29it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.06it/s]
