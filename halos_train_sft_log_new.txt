@@ -1,0 +1,175 @@
+4
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Making experiment directory /home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2
+WARNING: eval_every must be divisible by batch_size
+Setting eval_every to 992
+no FSDP port specified; using open port for FSDP: 44467
+seed: 1
+exp_name: llama2_7b_sft_halos_2
+datasets:
+- hh
+mode: train
+debug: false
+use_fsdp: true
+fsdp_port: 44467
+wandb:
+  enabled: true
+  entity: null
+  project: archangel
+cache_dir: /home/wxt/.cache/huggingface/hub
+local_run_dir: /home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2
+do_first_eval: true
+minimum_log_interval_secs: 1.0
+intermediate_checkpoints: false
+trainer: SFTTrainer
+lr: 2.0e-05
+n_epochs: 1
+n_examples: null
+optimizer: RMSprop
+warmup_steps: 150
+eval_every: 992
+n_samples: 128
+samples_dir: samples/
+n_eval_examples: 512
+saved_policy: /home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2/LATEST/policy.pt
+top_p: 0.95
+human_prefix: '
+
+  <|user|>
+
+  '
+assistant_prefix: '
+
+  <|assistant|>
+
+  '
+human_suffix: ''
+assistant_suffix: ''
+frac_unique_desirable: 1.0
+frac_unique_undesirable: 1.0
+model:
+  name_or_path: daryl149/llama-2-7b-hf
+  tokenizer_name_or_path: null
+  load_from: null
+  block_name: LlamaDecoderLayer
+  policy_dtype: bfloat16
+  fsdp_policy_mp: null
+  reference_dtype: bfloat16
+  max_grad_norm: 10.0
+  v_head_max_grad_norm: 0.1
+  max_length: 1024
+  max_prompt_length: 512
+  activation_checkpointing: true
+  batch_size: 32
+  gradient_accumulation_steps: 4
+  eval_batch_size: 16
+  use_flash_attention: false
+loss:
+  name: sft
+  trainer: SFTTrainer
+  dataloader: SFTDataLoader
+  use_reference_model: false
+
+================================================================================
+Writing to design-agent-09:/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2
+================================================================================
+building policy
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.62s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.59s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.74s/it]
+Loading tokenizer daryl149/llama-2-7b-hf
+0 special tokens added
+Loading HH dataset (train split) from Huggingface...
+Processing HH:   0%|          | 0/160800 [00:00<?, ?it/s]Processing HH:   1%|          | 1499/160800 [00:00<00:10, 14984.51it/s]Processing HH:   2%|▏         | 2998/160800 [00:00<00:10, 14666.34it/s]Processing HH:   3%|▎         | 4531/160800 [00:00<00:10, 14963.63it/s]Processing HH:   4%|▎         | 6028/160800 [00:00<00:10, 14887.74it/s]Processing HH:   5%|▍         | 7518/160800 [00:00<00:10, 14870.27it/s]Processing HH:   6%|▌         | 9006/160800 [00:00<00:10, 14439.29it/s]Processing HH:   7%|▋         | 10494/160800 [00:00<00:10, 14578.15it/s]Processing HH:   7%|▋         | 12014/160800 [00:00<00:10, 14771.36it/s]Processing HH:   8%|▊         | 13509/160800 [00:00<00:09, 14823.25it/s]Processing HH:   9%|▉         | 14993/160800 [00:01<00:13, 10417.82it/s]Processing HH:  10%|█         | 16485/160800 [00:01<00:12, 11474.39it/s]Processing HH:  11%|█         | 17967/160800 [00:01<00:11, 12314.96it/s]Processing HH:  12%|█▏        | 19422/160800 [00:01<00:10, 12904.90it/s]Processing HH:  13%|█▎        | 20888/160800 [00:01<00:10, 13384.18it/s]Processing HH:  14%|█▍        | 22299/160800 [00:01<00:10, 13576.84it/s]Processing HH:  15%|█▍        | 23801/160800 [00:01<00:09, 13989.79it/s]Processing HH:  16%|█▌        | 25250/160800 [00:01<00:09, 14133.01it/s]Processing HH:  17%|█▋        | 26691/160800 [00:01<00:09, 14128.06it/s]Processing HH:  18%|█▊        | 28150/160800 [00:02<00:09, 14262.62it/s]Processing HH:  18%|█▊        | 29649/160800 [00:02<00:09, 14475.55it/s]Processing HH:  19%|█▉        | 31135/160800 [00:02<00:08, 14587.92it/s]Processing HH:  20%|██        | 32646/160800 [00:02<00:08, 14739.49it/s]Processing HH:  21%|██        | 34125/160800 [00:02<00:11, 10818.77it/s]Processing HH:  22%|██▏       | 35571/160800 [00:02<00:10, 11685.33it/s]Processing HH:  23%|██▎       | 37056/160800 [00:02<00:09, 12488.08it/s]Processing HH:  24%|██▍       | 38521/160800 [00:02<00:09, 13059.88it/s]Processing HH:  25%|██▍       | 40039/160800 [00:02<00:08, 13643.12it/s]Processing HH:  26%|██▌       | 41487/160800 [00:03<00:08, 13878.15it/s]Processing HH:  27%|██▋       | 42943/160800 [00:03<00:08, 14069.65it/s]Processing HH:  28%|██▊       | 44383/160800 [00:03<00:08, 14010.53it/s]Processing HH:  28%|██▊       | 45809/160800 [00:03<00:08, 14082.32it/s]Processing HH:  29%|██▉       | 47234/160800 [00:03<00:08, 13945.02it/s]Processing HH:  30%|███       | 48640/160800 [00:03<00:08, 13854.98it/s]Processing HH:  31%|███       | 50034/160800 [00:03<00:08, 13768.72it/s]Processing HH:  32%|███▏      | 51425/160800 [00:03<00:07, 13807.90it/s]Processing HH:  33%|███▎      | 52831/160800 [00:03<00:07, 13880.02it/s]Processing HH:  34%|███▎      | 54227/160800 [00:03<00:07, 13901.22it/s]Processing HH:  35%|███▍      | 55642/160800 [00:04<00:07, 13974.26it/s]Processing HH:  35%|███▌      | 57041/160800 [00:04<00:07, 13968.64it/s]Processing HH:  36%|███▋      | 58439/160800 [00:04<00:10, 9899.07it/s] Processing HH:  37%|███▋      | 59860/160800 [00:04<00:09, 10899.41it/s]Processing HH:  38%|███▊      | 61140/160800 [00:04<00:08, 11368.77it/s]Processing HH:  39%|███▉      | 62570/160800 [00:04<00:08, 12134.17it/s]Processing HH:  40%|███▉      | 63967/160800 [00:04<00:07, 12633.46it/s]Processing HH:  41%|████      | 65357/160800 [00:04<00:07, 12986.55it/s]Processing HH:  42%|████▏     | 66773/160800 [00:05<00:07, 13321.61it/s]Processing HH:  42%|████▏     | 68181/160800 [00:05<00:06, 13539.94it/s]Processing HH:  43%|████▎     | 69562/160800 [00:05<00:06, 13613.37it/s]Processing HH:  44%|████▍     | 70942/160800 [00:05<00:06, 13127.72it/s]Processing HH:  45%|████▌     | 72365/160800 [00:05<00:06, 13445.00it/s]Processing HH:  46%|████▌     | 73760/160800 [00:05<00:06, 13590.49it/s]Processing HH:  47%|████▋     | 75129/160800 [00:05<00:06, 13612.20it/s]Processing HH:  48%|████▊     | 76516/160800 [00:05<00:06, 13686.61it/s]Processing HH:  48%|████▊     | 77927/160800 [00:05<00:06, 13811.57it/s]Processing HH:  49%|████▉     | 79312/160800 [00:05<00:05, 13816.53it/s]Processing HH:  50%|█████     | 80738/160800 [00:06<00:05, 13945.82it/s]Processing HH:  51%|█████     | 82173/160800 [00:06<00:05, 14066.39it/s]Processing HH:  52%|█████▏    | 83581/160800 [00:06<00:05, 13986.05it/s]Processing HH:  53%|█████▎    | 84981/160800 [00:06<00:05, 13981.19it/s]Processing HH:  54%|█████▎    | 86380/160800 [00:06<00:07, 9460.09it/s] Processing HH:  54%|█████▍    | 87521/160800 [00:06<00:08, 9130.18it/s]Processing HH:  55%|█████▌    | 88569/160800 [00:06<00:08, 8898.31it/s]Processing HH:  56%|█████▌    | 89551/160800 [00:06<00:08, 8793.02it/s]Processing HH:  56%|█████▋    | 90493/160800 [00:07<00:08, 8602.56it/s]Processing HH:  57%|█████▋    | 91396/160800 [00:07<00:08, 8481.90it/s]Processing HH:  57%|█████▋    | 92273/160800 [00:07<00:08, 8551.90it/s]Processing HH:  58%|█████▊    | 93149/160800 [00:07<00:07, 8462.84it/s]Processing HH:  58%|█████▊    | 94010/160800 [00:07<00:07, 8479.13it/s]Processing HH:  59%|█████▉    | 94868/160800 [00:07<00:07, 8248.50it/s]Processing HH:  60%|█████▉    | 95701/160800 [00:07<00:07, 8241.13it/s]Processing HH:  60%|██████    | 96545/160800 [00:07<00:07, 8296.60it/s]Processing HH:  61%|██████    | 97379/160800 [00:07<00:07, 8256.90it/s]Processing HH:  61%|██████    | 98213/160800 [00:08<00:07, 8280.14it/s]Processing HH:  62%|██████▏   | 99043/160800 [00:08<00:07, 8260.74it/s]Processing HH:  62%|██████▏   | 99871/160800 [00:08<00:07, 8231.69it/s]Processing HH:  63%|██████▎   | 100696/160800 [00:08<00:07, 8175.10it/s]Processing HH:  63%|██████▎   | 101515/160800 [00:08<00:07, 8133.25it/s]Processing HH:  64%|██████▎   | 102365/160800 [00:08<00:07, 8237.08it/s]Processing HH:  64%|██████▍   | 103193/160800 [00:08<00:06, 8248.45it/s]Processing HH:  65%|██████▍   | 104024/160800 [00:08<00:06, 8264.41it/s]Processing HH:  65%|██████▌   | 104875/160800 [00:08<00:06, 8336.53it/s]Processing HH:  66%|██████▌   | 105720/160800 [00:08<00:06, 8370.13it/s]Processing HH:  66%|██████▋   | 106558/160800 [00:09<00:06, 8293.68it/s]Processing HH:  67%|██████▋   | 107403/160800 [00:09<00:06, 8338.38it/s]Processing HH:  67%|██████▋   | 108238/160800 [00:09<00:06, 8260.26it/s]Processing HH:  68%|██████▊   | 109404/160800 [00:09<00:05, 9266.54it/s]Processing HH:  69%|██████▉   | 110649/160800 [00:09<00:04, 10212.66it/s]Processing HH:  70%|██████▉   | 111862/160800 [00:09<00:04, 10783.49it/s]Processing HH:  70%|███████   | 113044/160800 [00:09<00:04, 11091.48it/s]Processing HH:  71%|███████   | 114264/160800 [00:09<00:04, 11422.43it/s]Processing HH:  72%|███████▏  | 115493/160800 [00:09<00:03, 11681.38it/s]Processing HH:  73%|███████▎  | 116727/160800 [00:09<00:03, 11875.56it/s]Processing HH:  73%|███████▎  | 117964/160800 [00:10<00:03, 12022.38it/s]Processing HH:  74%|███████▍  | 119167/160800 [00:10<00:03, 11999.65it/s]Processing HH:  75%|███████▍  | 120380/160800 [00:10<00:03, 12037.69it/s]Processing HH:  76%|███████▌  | 121616/160800 [00:10<00:03, 12132.09it/s]Processing HH:  76%|███████▋  | 122830/160800 [00:10<00:05, 6755.76it/s] Processing HH:  77%|███████▋  | 124041/160800 [00:10<00:04, 7785.75it/s]Processing HH:  78%|███████▊  | 125264/160800 [00:10<00:04, 8741.99it/s]Processing HH:  79%|███████▊  | 126481/160800 [00:11<00:03, 9549.09it/s]Processing HH:  79%|███████▉  | 127723/160800 [00:11<00:03, 10270.59it/s]Processing HH:  80%|████████  | 128979/160800 [00:11<00:02, 10875.89it/s]Processing HH:  81%|████████  | 130191/160800 [00:11<00:02, 11215.47it/s]Processing HH:  82%|████████▏ | 131439/160800 [00:11<00:02, 11568.04it/s]Processing HH:  82%|████████▏ | 132650/160800 [00:11<00:02, 11681.43it/s]Processing HH:  83%|████████▎ | 133857/160800 [00:11<00:02, 11523.53it/s]Processing HH:  84%|████████▍ | 135037/160800 [00:11<00:02, 11590.47it/s]Processing HH:  85%|████████▍ | 136216/160800 [00:11<00:02, 11640.72it/s]Processing HH:  85%|████████▌ | 137438/160800 [00:11<00:01, 11809.21it/s]Processing HH:  86%|████████▌ | 138647/160800 [00:12<00:01, 11889.37it/s]Processing HH:  87%|████████▋ | 139858/160800 [00:12<00:01, 11953.21it/s]Processing HH:  88%|████████▊ | 141059/160800 [00:12<00:01, 11918.75it/s]Processing HH:  88%|████████▊ | 142255/160800 [00:12<00:01, 11794.41it/s]Processing HH:  89%|████████▉ | 143461/160800 [00:12<00:01, 11870.78it/s]Processing HH:  90%|████████▉ | 144690/160800 [00:12<00:01, 11991.32it/s]Processing HH:  91%|█████████ | 145891/160800 [00:12<00:01, 11849.30it/s]Processing HH:  91%|█████████▏| 147078/160800 [00:12<00:01, 11768.74it/s]Processing HH:  92%|█████████▏| 148316/160800 [00:12<00:01, 11947.89it/s]Processing HH:  93%|█████████▎| 149533/160800 [00:12<00:00, 12013.09it/s]Processing HH:  94%|█████████▎| 150740/160800 [00:13<00:00, 12028.44it/s]Processing HH:  95%|█████████▍| 151958/160800 [00:13<00:00, 12071.84it/s]Processing HH:  95%|█████████▌| 153166/160800 [00:13<00:00, 12030.76it/s]Processing HH:  96%|█████████▌| 154377/160800 [00:13<00:00, 12052.17it/s]Processing HH:  97%|█████████▋| 155600/160800 [00:13<00:00, 12104.10it/s]Processing HH:  98%|█████████▊| 156830/160800 [00:13<00:00, 12162.46it/s]Processing HH:  98%|█████████▊| 158047/160800 [00:13<00:00, 11928.44it/s]Processing HH:  99%|█████████▉| 159284/160800 [00:13<00:00, 12057.30it/s]Processing HH: 100%|█████████▉| 160495/160800 [00:13<00:00, 12072.72it/s]Processing HH: 100%|██████████| 160800/160800 [00:13<00:00, 11589.73it/s]
+Loading HH dataset (test split) from Huggingface...
+Processing HH:   0%|          | 0/8552 [00:00<?, ?it/s]Processing HH:  16%|█▋        | 1410/8552 [00:00<00:00, 14095.91it/s]Processing HH:  33%|███▎      | 2845/8552 [00:00<00:00, 14241.29it/s]Processing HH:  50%|████▉     | 4270/8552 [00:00<00:00, 13999.69it/s]Processing HH:  66%|██████▋   | 5671/8552 [00:00<00:00, 11549.28it/s]Processing HH:  80%|████████  | 6877/8552 [00:00<00:00, 5085.58it/s] Processing HH:  95%|█████████▌| 8128/8552 [00:01<00:00, 6299.39it/s]Processing HH: 100%|██████████| 8552/8552 [00:01<00:00, 7734.91it/s]
+starting 4 processes for FSDP training
+setting RLIMIT_NOFILE soft limit to 1048576 from 1024
+4
+0 initializing distributed
+Creating trainer on process 0 with world size 4
+Finished generating 512 examples on test split
+Loaded 32 eval batches of size 16
+Sharding models...
+Attempting to enable activation checkpointing...
+Applying activation checkpointing wrapper to policy...
+FSDP activation checkpointing enabled!
+Loaded model on rank 0
+Using RMSprop optimizer with learning rate 2e-05
+Running evaluation after 0 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+Computing eval metrics:   3%|▎         | 1/32 [00:00<00:29,  1.06it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:22,  1.32it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:19,  1.52it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:16,  1.75it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.77it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.92it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:03<00:11,  2.10it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.18it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.29it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.06it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:09,  2.12it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.16it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:08,  2.13it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.06it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  2.03it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:07,  2.02it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:06,  2.17it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.17it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.13it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:09<00:05,  2.26it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.32it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.43it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:03,  2.29it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.36it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.26it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.11it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.15it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.16it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:13<00:01,  2.24it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.13it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:14<00:00,  2.22it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.32it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.10it/s]
+eval after 0: {'logps_eval/chosen': '-133', 'loss/eval': '133'}
+skipping logging after 32 examples to avoid logging too frequently
+skipping logging after 64 examples to avoid logging too frequently
+skipping logging after 96 examples to avoid logging too frequently
+train stats after 128 examples: {'logps_train/chosen': '-128.42', 'loss/train': '128.42', 'examples_per_second': '12.522', 'grad_norm': '304', 'counters/examples': 128, 'counters/updates': 4}
+skipping logging after 160 examples to avoid logging too frequently
+skipping logging after 192 examples to avoid logging too frequently
+skipping logging after 224 examples to avoid logging too frequently
+train stats after 256 examples: {'logps_train/chosen': '-133.93', 'loss/train': '133.93', 'examples_per_second': '13.689', 'grad_norm': '302', 'counters/examples': 256, 'counters/updates': 8}
+skipping logging after 288 examples to avoid logging too frequently
+skipping logging after 320 examples to avoid logging too frequently
+skipping logging after 352 examples to avoid logging too frequently
+train stats after 384 examples: {'logps_train/chosen': '-131.03', 'loss/train': '131.03', 'examples_per_second': '13.228', 'grad_norm': '344', 'counters/examples': 384, 'counters/updates': 12}
+skipping logging after 416 examples to avoid logging too frequently
+skipping logging after 448 examples to avoid logging too frequently
+skipping logging after 480 examples to avoid logging too frequently
+train stats after 512 examples: {'logps_train/chosen': '-118.48', 'loss/train': '118.48', 'examples_per_second': '13.651', 'grad_norm': '292', 'counters/examples': 512, 'counters/updates': 16}
+skipping logging after 544 examples to avoid logging too frequently
+skipping logging after 576 examples to avoid logging too frequently
+skipping logging after 608 examples to avoid logging too frequently
+train stats after 640 examples: {'logps_train/chosen': '-116.55', 'loss/train': '116.55', 'examples_per_second': '11.619', 'grad_norm': '274', 'counters/examples': 640, 'counters/updates': 20}
+skipping logging after 672 examples to avoid logging too frequently
+skipping logging after 704 examples to avoid logging too frequently
+skipping logging after 736 examples to avoid logging too frequently
+train stats after 768 examples: {'logps_train/chosen': '-124.11', 'loss/train': '124.11', 'examples_per_second': '12.361', 'grad_norm': '262', 'counters/examples': 768, 'counters/updates': 24}
+skipping logging after 800 examples to avoid logging too frequently
+skipping logging after 832 examples to avoid logging too frequently
+skipping logging after 864 examples to avoid logging too frequently
+train stats after 896 examples: {'logps_train/chosen': '-144.48', 'loss/train': '144.48', 'examples_per_second': '10.606', 'grad_norm': '255', 'counters/examples': 896, 'counters/updates': 28}
+skipping logging after 928 examples to avoid logging too frequently
+skipping logging after 960 examples to avoid logging too frequently
+skipping logging after 992 examples to avoid logging too frequently
+Running evaluation after 992 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:29,  1.07it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:22,  1.32it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:19,  1.51it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:16,  1.72it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.74it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.89it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:03<00:12,  2.06it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.14it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.25it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.03it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:10,  2.10it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.12it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.09it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.02it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  2.00it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:08,  1.99it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:06,  2.15it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.14it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.11it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:10<00:05,  2.24it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.30it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.42it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:03,  2.27it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.34it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.23it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.07it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.12it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.14it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:14<00:01,  2.22it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.10it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:15<00:00,  2.19it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.30it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.07it/s]
+eval after 992: {'logps_eval/chosen': '-130.01', 'loss/eval': '130.01'}
+train stats after 1024 examples: {'logps_train/chosen': '-141.94', 'loss/train': '141.94', 'examples_per_second': '11.379', 'grad_norm': '258', 'counters/examples': 1024, 'counters/updates': 32}
+skipping logging after 1056 examples to avoid logging too frequently
+skipping logging after 1088 examples to avoid logging too frequently
+skipping logging after 1120 examples to avoid logging too frequently
+train stats after 1152 examples: {'logps_train/chosen': '-143.37', 'loss/train': '143.37', 'examples_per_second': '10.529', 'grad_norm': '239', 'counters/examples': 1152, 'counters/updates': 36}
+skipping logging after 1184 examples to avoid logging too frequently
+skipping logging after 1216 examples to avoid logging too frequently
+skipping logging after 1248 examples to avoid logging too frequently
+train stats after 1280 examples: {'logps_train/chosen': '-111.37', 'loss/train': '111.37', 'examples_per_second': '12.471', 'grad_norm': '228', 'counters/examples': 1280, 'counters/updates': 40}
+skipping logging after 1312 examples to avoid logging too frequently
+skipping logging after 1344 examples to avoid logging too frequently
+skipping logging after 1376 examples to avoid logging too frequently
+train stats after 1408 examples: {'logps_train/chosen': '-113.6', 'loss/train': '113.6', 'examples_per_second': '12.807', 'grad_norm': '302', 'counters/examples': 1408, 'counters/updates': 44}
+skipping logging after 1440 examples to avoid logging too frequently
+skipping logging after 1472 examples to avoid logging too frequently
+skipping logging after 1504 examples to avoid logging too frequently
+train stats after 1536 examples: {'logps_train/chosen': '-139.5', 'loss/train': '139.5', 'examples_per_second': '11.378', 'grad_norm': '438', 'counters/examples': 1536, 'counters/updates': 48}
+skipping logging after 1568 examples to avoid logging too frequently
+skipping logging after 1600 examples to avoid logging too frequently
+skipping logging after 1632 examples to avoid logging too frequently
+train stats after 1664 examples: {'logps_train/chosen': '-126.45', 'loss/train': '126.45', 'examples_per_second': '14.369', 'grad_norm': '240', 'counters/examples': 1664, 'counters/updates': 52}
+skipping logging after 1696 examples to avoid logging too frequently
+skipping logging after 1728 examples to avoid logging too frequently
+skipping logging after 1760 examples to avoid logging too frequently
+train stats after 1792 examples: {'logps_train/chosen': '-128.48', 'loss/train': '128.48', 'examples_per_second': '12.111', 'grad_norm': '209', 'counters/examples': 1792, 'counters/updates': 56}
+skipping logging after 1824 examples to avoid logging too frequently
+skipping logging after 1856 examples to avoid logging too frequently
+skipping logging after 1888 examples to avoid logging too frequently
+train stats after 1920 examples: {'logps_train/chosen': '-131.31', 'loss/train': '131.31', 'examples_per_second': '12.159', 'grad_norm': '170', 'counters/examples': 1920, 'counters/updates': 60}
+skipping logging after 1952 examples to avoid logging too frequently
+skipping logging after 1984 examples to avoid logging too frequently
+Running evaluation after 1984 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:00<00:29,  1.06it/s]Computing eval metrics:   6%|▋         | 2/32 [00:01<00:22,  1.31it/s]Computing eval metrics:   9%|▉         | 3/32 [00:02<00:19,  1.50it/s]Computing eval metrics:  12%|█▎        | 4/32 [00:02<00:16,  1.71it/s]Computing eval metrics:  16%|█▌        | 5/32 [00:03<00:15,  1.73it/s]Computing eval metrics:  19%|█▉        | 6/32 [00:03<00:13,  1.89it/s]Computing eval metrics:  22%|██▏       | 7/32 [00:03<00:12,  2.06it/s]Computing eval metrics:  25%|██▌       | 8/32 [00:04<00:11,  2.13it/s]Computing eval metrics:  28%|██▊       | 9/32 [00:04<00:10,  2.25it/s]Computing eval metrics:  31%|███▏      | 10/32 [00:05<00:10,  2.03it/s]Computing eval metrics:  34%|███▍      | 11/32 [00:05<00:10,  2.09it/s]Computing eval metrics:  38%|███▊      | 12/32 [00:06<00:09,  2.12it/s]Computing eval metrics:  41%|████      | 13/32 [00:06<00:09,  2.09it/s]Computing eval metrics:  44%|████▍     | 14/32 [00:07<00:08,  2.01it/s]Computing eval metrics:  47%|████▋     | 15/32 [00:07<00:08,  1.99it/s]Computing eval metrics:  50%|█████     | 16/32 [00:08<00:08,  1.98it/s]Computing eval metrics:  53%|█████▎    | 17/32 [00:08<00:07,  2.14it/s]Computing eval metrics:  56%|█████▋    | 18/32 [00:09<00:06,  2.13it/s]Computing eval metrics:  59%|█████▉    | 19/32 [00:09<00:06,  2.09it/s]Computing eval metrics:  62%|██████▎   | 20/32 [00:10<00:05,  2.23it/s]Computing eval metrics:  66%|██████▌   | 21/32 [00:10<00:04,  2.29it/s]Computing eval metrics:  69%|██████▉   | 22/32 [00:10<00:04,  2.41it/s]Computing eval metrics:  72%|███████▏  | 23/32 [00:11<00:03,  2.25it/s]Computing eval metrics:  75%|███████▌  | 24/32 [00:11<00:03,  2.33it/s]Computing eval metrics:  78%|███████▊  | 25/32 [00:12<00:03,  2.21it/s]Computing eval metrics:  81%|████████▏ | 26/32 [00:12<00:02,  2.06it/s]Computing eval metrics:  84%|████████▍ | 27/32 [00:13<00:02,  2.11it/s]Computing eval metrics:  88%|████████▊ | 28/32 [00:13<00:01,  2.13it/s]Computing eval metrics:  91%|█████████ | 29/32 [00:14<00:01,  2.21it/s]Computing eval metrics:  94%|█████████▍| 30/32 [00:14<00:00,  2.10it/s]Computing eval metrics:  97%|█████████▋| 31/32 [00:15<00:00,  2.19it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.30it/s]Computing eval metrics: 100%|██████████| 32/32 [00:15<00:00,  2.06it/s]
