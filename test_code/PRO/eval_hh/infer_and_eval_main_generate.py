@@ -48,13 +48,13 @@ if __name__ == "__main__":
     model_config = AutoConfig.from_pretrained(model_name_or_path)
     model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
     # model = AutoModelForCausalLM.from_pretrained(model_name_or_path).to(model_device)
-    if args.stage==2:
-        state_dict = torch.load('/home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos/LATEST/policy.pt', map_location='cpu')
-        # step, metrics = state_dict['step_idx'], state_dict['metrics']
-        model.load_state_dict(state_dict['state'])
-        delete_dict(state_dict)
-        gc.collect()
-        torch.cuda.empty_cache()
+    # if args.stage==2:
+    state_dict = torch.load('/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2/LATEST/policy.pt', map_location='cpu')
+    # step, metrics = state_dict['step_idx'], state_dict['metrics']
+    model.load_state_dict(state_dict['state'])
+    delete_dict(state_dict)
+    gc.collect()
+    torch.cuda.empty_cache()
 
     print('loaded pre-trained weights')
 
