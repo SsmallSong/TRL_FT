@@ -48,23 +48,23 @@ if __name__ == "__main__":
     model_config = AutoConfig.from_pretrained(model_name_or_path)
     model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
     # model = AutoModelForCausalLM.from_pretrained(model_name_or_path).to(model_device)
-    if args.stage==3:
-        state_dict = torch.load('/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_2/LATEST/policy.pt', map_location='cpu')
-        # step, metrics = state_dict['step_idx'], state_dict['metrics']
-        model.load_state_dict(state_dict['state'])
-        delete_dict(state_dict)
-        gc.collect()
-        torch.cuda.empty_cache()
-        print('loaded pre-trained weights')
+    # if args.stage==3:
+    state_dict = torch.load('/home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_2/LATEST/policy.pt', map_location='cpu')
+    # step, metrics = state_dict['step_idx'], state_dict['metrics']
+    model.load_state_dict(state_dict['state'])
+    delete_dict(state_dict)
+    gc.collect()
+    torch.cuda.empty_cache()
+    print('loaded pre-trained weights')
 
-    if args.stage==4:
-        state_dict = torch.load('/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt', map_location='cpu')
-        # step, metrics = state_dict['step_idx'], state_dict['metrics']
-        model.load_state_dict(state_dict['state'])
-        delete_dict(state_dict)
-        gc.collect()
-        torch.cuda.empty_cache()
-        print('loaded pre-trained weights')
+    # if args.stage==4:
+    #     state_dict = torch.load('/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt', map_location='cpu')
+    #     # step, metrics = state_dict['step_idx'], state_dict['metrics']
+    #     model.load_state_dict(state_dict['state'])
+    #     delete_dict(state_dict)
+    #     gc.collect()
+    #     torch.cuda.empty_cache()
+    #     print('loaded pre-trained weights')
 
     if accelerator.is_main_process:
         print(type(model))
