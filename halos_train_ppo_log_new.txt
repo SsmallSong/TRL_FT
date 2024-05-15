@@ -15802,3 +15802,1203 @@ train stats after 251008 examples: {'loss/total': '0.82769', 'loss/critic': '0.2
 skipping logging after 251024 examples to avoid logging too frequently
 skipping logging after 251040 examples to avoid logging too frequently
 skipping logging after 251056 examples to avoid logging too frequently
+train stats after 251072 examples: {'loss/total': '0.67194', 'loss/critic': '0.23096', 'loss/policy': '0.15376', 'clipfrac/policy': '0.38657', 'loss/entropy': '1.3778', 'loss/policykl': '5.1602', 'loss/seqratio': '1.6374e-11', 'returns/mean': '-0.052782', 'returns/var': '0.11457', 'val/mean': '0.0091372', 'val/var': '0.0050597', 'examples_per_second': '9.4145', 'grad_norm': '1.6422', 'counters/examples': 251072, 'counters/updates': 15692}
+skipping logging after 251088 examples to avoid logging too frequently
+skipping logging after 251104 examples to avoid logging too frequently
+skipping logging after 251120 examples to avoid logging too frequently
+train stats after 251136 examples: {'loss/total': '0.72134', 'loss/critic': '0.23186', 'loss/policy': '0.25857', 'clipfrac/policy': '0.38032', 'loss/entropy': '1.4597', 'loss/policykl': '4.6016', 'loss/seqratio': '8.0292e-13', 'returns/mean': '-0.0682', 'returns/var': '0.106', 'val/mean': '-0.10374', 'val/var': '0.010164', 'examples_per_second': '10.156', 'grad_norm': '9.1268', 'counters/examples': 251136, 'counters/updates': 15696}
+skipping logging after 251152 examples to avoid logging too frequently
+skipping logging after 251168 examples to avoid logging too frequently
+skipping logging after 251184 examples to avoid logging too frequently
+train stats after 251200 examples: {'loss/total': '2.2392', 'loss/critic': '0.22718', 'loss/policy': '1.6967', 'clipfrac/policy': '0.44537', 'loss/entropy': '1.3128', 'loss/policykl': '5.4004', 'loss/seqratio': '4.1877e-08', 'returns/mean': '0.011625', 'returns/var': '0.1251', 'val/mean': '-0.016245', 'val/var': '0.0041814', 'examples_per_second': '11.472', 'grad_norm': '154', 'counters/examples': 251200, 'counters/updates': 15700}
+skipping logging after 251216 examples to avoid logging too frequently
+skipping logging after 251232 examples to avoid logging too frequently
+skipping logging after 251248 examples to avoid logging too frequently
+train stats after 251264 examples: {'loss/total': '1.1582', 'loss/critic': '0.22097', 'loss/policy': '0.60545', 'clipfrac/policy': '0.4622', 'loss/entropy': '1.3717', 'loss/policykl': '5.5039', 'loss/seqratio': '1.0993e-09', 'returns/mean': '0.044048', 'returns/var': '0.13884', 'val/mean': '0.020037', 'val/var': '0.0047717', 'examples_per_second': '10.507', 'grad_norm': '33.751', 'counters/examples': 251264, 'counters/updates': 15704}
+skipping logging after 251280 examples to avoid logging too frequently
+skipping logging after 251296 examples to avoid logging too frequently
+skipping logging after 251312 examples to avoid logging too frequently
+train stats after 251328 examples: {'loss/total': '0.91479', 'loss/critic': '0.25394', 'loss/policy': '0.18959', 'clipfrac/policy': '0.46115', 'loss/entropy': '0.85467', 'loss/policykl': '7.2305', 'loss/seqratio': '7.0693e-22', 'returns/mean': '0.056611', 'returns/var': '0.12401', 'val/mean': '0.016473', 'val/var': '0.005372', 'examples_per_second': '9.6956', 'grad_norm': '2.9858', 'counters/examples': 251328, 'counters/updates': 15708}
+skipping logging after 251344 examples to avoid logging too frequently
+skipping logging after 251360 examples to avoid logging too frequently
+skipping logging after 251376 examples to avoid logging too frequently
+train stats after 251392 examples: {'loss/total': '0.74706', 'loss/critic': '0.20519', 'loss/policy': '0.13686', 'clipfrac/policy': '0.453', 'loss/entropy': '1.0306', 'loss/policykl': '6.0801', 'loss/seqratio': '3.2969e-11', 'returns/mean': '0.094023', 'returns/var': '0.098938', 'val/mean': '0.076042', 'val/var': '0.0061655', 'examples_per_second': '9.8723', 'grad_norm': '2.0321', 'counters/examples': 251392, 'counters/updates': 15712}
+skipping logging after 251408 examples to avoid logging too frequently
+skipping logging after 251424 examples to avoid logging too frequently
+skipping logging after 251440 examples to avoid logging too frequently
+train stats after 251456 examples: {'loss/total': '0.66423', 'loss/critic': '0.25919', 'loss/policy': '0.18813', 'clipfrac/policy': '0.3721', 'loss/entropy': '1.2608', 'loss/policykl': '4.7314', 'loss/seqratio': '6.5804e-05', 'returns/mean': '0.012825', 'returns/var': '0.13101', 'val/mean': '0.07181', 'val/var': '0.0059452', 'examples_per_second': '9.0916', 'grad_norm': '2.3621', 'counters/examples': 251456, 'counters/updates': 15716}
+skipping logging after 251472 examples to avoid logging too frequently
+skipping logging after 251488 examples to avoid logging too frequently
+skipping logging after 251504 examples to avoid logging too frequently
+train stats after 251520 examples: {'loss/total': '0.80301', 'loss/critic': '0.22096', 'loss/policy': '0.30398', 'clipfrac/policy': '0.43336', 'loss/entropy': '1.261', 'loss/policykl': '4.9707', 'loss/seqratio': '1.0139e-09', 'returns/mean': '-0.020768', 'returns/var': '0.10004', 'val/mean': '-0.031676', 'val/var': '0.004878', 'examples_per_second': '11.397', 'grad_norm': '7.8756', 'counters/examples': 251520, 'counters/updates': 15720}
+skipping logging after 251536 examples to avoid logging too frequently
+skipping logging after 251552 examples to avoid logging too frequently
+skipping logging after 251568 examples to avoid logging too frequently
+train stats after 251584 examples: {'loss/total': '27.039', 'loss/critic': '0.23754', 'loss/policy': '26.586', 'clipfrac/policy': '0.40419', 'loss/entropy': '1.4485', 'loss/policykl': '4.5068', 'loss/seqratio': '3.134e-16', 'returns/mean': '-0.0331', 'returns/var': '0.12333', 'val/mean': '-0.059025', 'val/var': '0.0068054', 'examples_per_second': '9.8596', 'grad_norm': '4160', 'counters/examples': 251584, 'counters/updates': 15724}
+skipping logging after 251600 examples to avoid logging too frequently
+skipping logging after 251616 examples to avoid logging too frequently
+skipping logging after 251632 examples to avoid logging too frequently
+train stats after 251648 examples: {'loss/total': '2.6215', 'loss/critic': '0.23351', 'loss/policy': '2.1188', 'clipfrac/policy': '0.38134', 'loss/entropy': '1.366', 'loss/policykl': '5.001', 'loss/seqratio': '1.4843e-08', 'returns/mean': '-0.0044039', 'returns/var': '0.10427', 'val/mean': '0.0045506', 'val/var': '0.0041175', 'examples_per_second': '10', 'grad_norm': '146', 'counters/examples': 251648, 'counters/updates': 15728}
+skipping logging after 251664 examples to avoid logging too frequently
+skipping logging after 251680 examples to avoid logging too frequently
+skipping logging after 251696 examples to avoid logging too frequently
+train stats after 251712 examples: {'loss/total': '0.78627', 'loss/critic': '0.24712', 'loss/policy': '0.18919', 'clipfrac/policy': '0.38966', 'loss/entropy': '1.0019', 'loss/policykl': '5.9453', 'loss/seqratio': '1.5253e-10', 'returns/mean': '-0.030948', 'returns/var': '0.1305', 'val/mean': '-0.035011', 'val/var': '0.004199', 'examples_per_second': '11.325', 'grad_norm': '2.36', 'counters/examples': 251712, 'counters/updates': 15732}
+skipping logging after 251728 examples to avoid logging too frequently
+skipping logging after 251744 examples to avoid logging too frequently
+skipping logging after 251760 examples to avoid logging too frequently
+train stats after 251776 examples: {'loss/total': '0.72571', 'loss/critic': '0.24616', 'loss/policy': '0.16294', 'clipfrac/policy': '0.44345', 'loss/entropy': '1.1222', 'loss/policykl': '5.5996', 'loss/seqratio': '2.1905e-06', 'returns/mean': '-0.051243', 'returns/var': '0.13517', 'val/mean': '-0.035697', 'val/var': '0.0051622', 'examples_per_second': '10.73', 'grad_norm': '4.1256', 'counters/examples': 251776, 'counters/updates': 15736}
+skipping logging after 251792 examples to avoid logging too frequently
+skipping logging after 251808 examples to avoid logging too frequently
+skipping logging after 251824 examples to avoid logging too frequently
+train stats after 251840 examples: {'loss/total': '2.1982', 'loss/critic': '0.21988', 'loss/policy': '1.6404', 'clipfrac/policy': '0.45315', 'loss/entropy': '1.0143', 'loss/policykl': '5.5605', 'loss/seqratio': '3.3769e-11', 'returns/mean': '0.017159', 'returns/var': '0.10773', 'val/mean': '-0.021425', 'val/var': '0.0032244', 'examples_per_second': '10.782', 'grad_norm': '144', 'counters/examples': 251840, 'counters/updates': 15740}
+skipping logging after 251856 examples to avoid logging too frequently
+skipping logging after 251872 examples to avoid logging too frequently
+skipping logging after 251888 examples to avoid logging too frequently
+train stats after 251904 examples: {'loss/total': '0.77109', 'loss/critic': '0.22907', 'loss/policy': '0.1261', 'clipfrac/policy': '0.4279', 'loss/entropy': '0.89629', 'loss/policykl': '6.4258', 'loss/seqratio': '7.846e-08', 'returns/mean': '0.016546', 'returns/var': '0.099466', 'val/mean': '0.0047741', 'val/var': '0.0023718', 'examples_per_second': '10.789', 'grad_norm': '5.6254', 'counters/examples': 251904, 'counters/updates': 15744}
+skipping logging after 251920 examples to avoid logging too frequently
+skipping logging after 251936 examples to avoid logging too frequently
+skipping logging after 251952 examples to avoid logging too frequently
+train stats after 251968 examples: {'loss/total': '0.77248', 'loss/critic': '0.2555', 'loss/policy': '0.25552', 'clipfrac/policy': '0.39737', 'loss/entropy': '1.3821', 'loss/policykl': '5.1436', 'loss/seqratio': '4.6276e-09', 'returns/mean': '-0.041569', 'returns/var': '0.14057', 'val/mean': '-0.0085812', 'val/var': '0.002352', 'examples_per_second': '10.132', 'grad_norm': '6.0318', 'counters/examples': 251968, 'counters/updates': 15748}
+skipping logging after 251984 examples to avoid logging too frequently
+skipping logging after 252000 examples to avoid logging too frequently
+skipping logging after 252016 examples to avoid logging too frequently
+train stats after 252032 examples: {'loss/total': '0.71679', 'loss/critic': '0.22819', 'loss/policy': '0.21195', 'clipfrac/policy': '0.36055', 'loss/entropy': '1.2153', 'loss/policykl': '5.0254', 'loss/seqratio': '7.007e-15', 'returns/mean': '0.0058875', 'returns/var': '0.10524', 'val/mean': '-0.011202', 'val/var': '0.0034437', 'examples_per_second': '10.13', 'grad_norm': '2.1727', 'counters/examples': 252032, 'counters/updates': 15752}
+skipping logging after 252048 examples to avoid logging too frequently
+skipping logging after 252064 examples to avoid logging too frequently
+skipping logging after 252080 examples to avoid logging too frequently
+train stats after 252096 examples: {'loss/total': '2.2511', 'loss/critic': '0.22582', 'loss/policy': '1.766', 'clipfrac/policy': '0.42631', 'loss/entropy': '1.2527', 'loss/policykl': '4.8281', 'loss/seqratio': '1.3504e-07', 'returns/mean': '-0.034368', 'returns/var': '0.11756', 'val/mean': '0.0017667', 'val/var': '0.0031714', 'examples_per_second': '9.4447', 'grad_norm': '294', 'counters/examples': 252096, 'counters/updates': 15756}
+skipping logging after 252112 examples to avoid logging too frequently
+skipping logging after 252128 examples to avoid logging too frequently
+skipping logging after 252144 examples to avoid logging too frequently
+train stats after 252160 examples: {'loss/total': '0.77028', 'loss/critic': '0.23067', 'loss/policy': '0.15322', 'clipfrac/policy': '0.37149', 'loss/entropy': '0.92174', 'loss/policykl': '6.1504', 'loss/seqratio': '2.6054e-09', 'returns/mean': '-0.024666', 'returns/var': '0.10672', 'val/mean': '-0.011245', 'val/var': '0.0025401', 'examples_per_second': '10.55', 'grad_norm': '41.501', 'counters/examples': 252160, 'counters/updates': 15760}
+skipping logging after 252176 examples to avoid logging too frequently
+skipping logging after 252192 examples to avoid logging too frequently
+skipping logging after 252208 examples to avoid logging too frequently
+train stats after 252224 examples: {'loss/total': '0.84504', 'loss/critic': '0.23915', 'loss/policy': '0.27563', 'clipfrac/policy': '0.39343', 'loss/entropy': '1.225', 'loss/policykl': '5.6699', 'loss/seqratio': '1.1816e-08', 'returns/mean': '-0.0087954', 'returns/var': '0.12938', 'val/mean': '-0.036612', 'val/var': '0.0028038', 'examples_per_second': '10.685', 'grad_norm': '10.751', 'counters/examples': 252224, 'counters/updates': 15764}
+skipping logging after 252240 examples to avoid logging too frequently
+skipping logging after 252256 examples to avoid logging too frequently
+skipping logging after 252272 examples to avoid logging too frequently
+train stats after 252288 examples: {'loss/total': '0.92282', 'loss/critic': '0.25143', 'loss/policy': '0.31923', 'clipfrac/policy': '0.43041', 'loss/entropy': '1.1089', 'loss/policykl': '6.0117', 'loss/seqratio': '6.1409e-09', 'returns/mean': '0.035055', 'returns/var': '0.13009', 'val/mean': '-0.004612', 'val/var': '0.0012233', 'examples_per_second': '10.898', 'grad_norm': '5.2196', 'counters/examples': 252288, 'counters/updates': 15768}
+skipping logging after 252304 examples to avoid logging too frequently
+skipping logging after 252320 examples to avoid logging too frequently
+skipping logging after 252336 examples to avoid logging too frequently
+train stats after 252352 examples: {'loss/total': '1.3953', 'loss/critic': '0.20806', 'loss/policy': '0.66914', 'clipfrac/policy': '0.42754', 'loss/entropy': '0.75272', 'loss/policykl': '7.2363', 'loss/seqratio': '4.441e-16', 'returns/mean': '0.014084', 'returns/var': '0.10511', 'val/mean': '0.016753', 'val/var': '0.0010736', 'examples_per_second': '9.7963', 'grad_norm': '61', 'counters/examples': 252352, 'counters/updates': 15772}
+skipping logging after 252368 examples to avoid logging too frequently
+skipping logging after 252384 examples to avoid logging too frequently
+skipping logging after 252400 examples to avoid logging too frequently
+train stats after 252416 examples: {'loss/total': '1.0498', 'loss/critic': '0.24396', 'loss/policy': '0.13206', 'clipfrac/policy': '0.43458', 'loss/entropy': '0.48671', 'loss/policykl': '9.1562', 'loss/seqratio': '1.8767e-14', 'returns/mean': '0.047816', 'returns/var': '0.1046', 'val/mean': '0.02852', 'val/var': '0.0010308', 'examples_per_second': '10.596', 'grad_norm': '3.1879', 'counters/examples': 252416, 'counters/updates': 15776}
+skipping logging after 252432 examples to avoid logging too frequently
+skipping logging after 252448 examples to avoid logging too frequently
+skipping logging after 252464 examples to avoid logging too frequently
+train stats after 252480 examples: {'loss/total': '0.91149', 'loss/critic': '0.24529', 'loss/policy': '0.26024', 'clipfrac/policy': '0.43953', 'loss/entropy': '1.0179', 'loss/policykl': '6.4883', 'loss/seqratio': '2.5466e-09', 'returns/mean': '0.0075973', 'returns/var': '0.12142', 'val/mean': '0.022247', 'val/var': '0.00087011', 'examples_per_second': '10.159', 'grad_norm': '6.8755', 'counters/examples': 252480, 'counters/updates': 15780}
+skipping logging after 252496 examples to avoid logging too frequently
+skipping logging after 252512 examples to avoid logging too frequently
+skipping logging after 252528 examples to avoid logging too frequently
+train stats after 252544 examples: {'loss/total': '0.83545', 'loss/critic': '0.20542', 'loss/policy': '0.16506', 'clipfrac/policy': '0.43418', 'loss/entropy': '0.88984', 'loss/policykl': '6.6855', 'loss/seqratio': '6.3968e-18', 'returns/mean': '0.051934', 'returns/var': '0.095634', 'val/mean': '0.014767', 'val/var': '0.0010556', 'examples_per_second': '9.0396', 'grad_norm': '4.7505', 'counters/examples': 252544, 'counters/updates': 15784}
+skipping logging after 252560 examples to avoid logging too frequently
+skipping logging after 252576 examples to avoid logging too frequently
+skipping logging after 252592 examples to avoid logging too frequently
+train stats after 252608 examples: {'loss/total': '0.75974', 'loss/critic': '0.23064', 'loss/policy': '0.1588', 'clipfrac/policy': '0.42919', 'loss/entropy': '1.2299', 'loss/policykl': '5.9863', 'loss/seqratio': '2.9786e-11', 'returns/mean': '0.011158', 'returns/var': '0.11693', 'val/mean': '0.022762', 'val/var': '0.0012167', 'examples_per_second': '10.029', 'grad_norm': '1.9534', 'counters/examples': 252608, 'counters/updates': 15788}
+skipping logging after 252624 examples to avoid logging too frequently
+skipping logging after 252640 examples to avoid logging too frequently
+skipping logging after 252656 examples to avoid logging too frequently
+train stats after 252672 examples: {'loss/total': '1.5597', 'loss/critic': '0.23724', 'loss/policy': '1.0448', 'clipfrac/policy': '0.42873', 'loss/entropy': '1.4279', 'loss/policykl': '5.1289', 'loss/seqratio': '5.0733e-11', 'returns/mean': '0.0125', 'returns/var': '0.13148', 'val/mean': '0.017711', 'val/var': '0.0012827', 'examples_per_second': '10.541', 'grad_norm': '215', 'counters/examples': 252672, 'counters/updates': 15792}
+skipping logging after 252688 examples to avoid logging too frequently
+skipping logging after 252704 examples to avoid logging too frequently
+skipping logging after 252720 examples to avoid logging too frequently
+train stats after 252736 examples: {'loss/total': '0.71325', 'loss/critic': '0.23993', 'loss/policy': '0.15617', 'clipfrac/policy': '0.44046', 'loss/entropy': '1.4598', 'loss/policykl': '5.5508', 'loss/seqratio': '1.7117e-07', 'returns/mean': '0.061976', 'returns/var': '0.11682', 'val/mean': '0.025674', 'val/var': '0.00083494', 'examples_per_second': '11.279', 'grad_norm': '1.6805', 'counters/examples': 252736, 'counters/updates': 15796}
+skipping logging after 252752 examples to avoid logging too frequently
+skipping logging after 252768 examples to avoid logging too frequently
+skipping logging after 252784 examples to avoid logging too frequently
+train stats after 252800 examples: {'loss/total': '11.867', 'loss/critic': '0.22947', 'loss/policy': '11.355', 'clipfrac/policy': '0.44378', 'loss/entropy': '1.5195', 'loss/policykl': '5.0977', 'loss/seqratio': '1.4749e-17', 'returns/mean': '0.078932', 'returns/var': '0.11957', 'val/mean': '0.045433', 'val/var': '0.00088656', 'examples_per_second': '10.644', 'grad_norm': '1608', 'counters/examples': 252800, 'counters/updates': 15800}
+skipping logging after 252816 examples to avoid logging too frequently
+skipping logging after 252832 examples to avoid logging too frequently
+skipping logging after 252848 examples to avoid logging too frequently
+train stats after 252864 examples: {'loss/total': '0.76629', 'loss/critic': '0.25132', 'loss/policy': '0.22178', 'clipfrac/policy': '0.37348', 'loss/entropy': '1.391', 'loss/policykl': '5.4199', 'loss/seqratio': '1.9558e-08', 'returns/mean': '0.027508', 'returns/var': '0.11632', 'val/mean': '0.052864', 'val/var': '0.00091922', 'examples_per_second': '11.418', 'grad_norm': '4.1881', 'counters/examples': 252864, 'counters/updates': 15804}
+skipping logging after 252880 examples to avoid logging too frequently
+skipping logging after 252896 examples to avoid logging too frequently
+skipping logging after 252912 examples to avoid logging too frequently
+train stats after 252928 examples: {'loss/total': '0.82427', 'loss/critic': '0.22334', 'loss/policy': '0.27028', 'clipfrac/policy': '0.38113', 'loss/entropy': '1.3907', 'loss/policykl': '5.5117', 'loss/seqratio': '1.5181e-07', 'returns/mean': '-0.021146', 'returns/var': '0.11064', 'val/mean': '0.045097', 'val/var': '0.00098014', 'examples_per_second': '10.021', 'grad_norm': '8.9388', 'counters/examples': 252928, 'counters/updates': 15808}
+skipping logging after 252944 examples to avoid logging too frequently
+skipping logging after 252960 examples to avoid logging too frequently
+skipping logging after 252976 examples to avoid logging too frequently
+train stats after 252992 examples: {'loss/total': '0.79892', 'loss/critic': '0.2447', 'loss/policy': '0.20516', 'clipfrac/policy': '0.42141', 'loss/entropy': '1.2924', 'loss/policykl': '5.9141', 'loss/seqratio': '4.4839e-11', 'returns/mean': '0.018198', 'returns/var': '0.12938', 'val/mean': '0.018398', 'val/var': '0.00078237', 'examples_per_second': '10.31', 'grad_norm': '1.8206', 'counters/examples': 252992, 'counters/updates': 15812}
+skipping logging after 253008 examples to avoid logging too frequently
+skipping logging after 253024 examples to avoid logging too frequently
+skipping logging after 253040 examples to avoid logging too frequently
+train stats after 253056 examples: {'loss/total': '0.78468', 'loss/critic': '0.24475', 'loss/policy': '0.21094', 'clipfrac/policy': '0.45586', 'loss/entropy': '1.3595', 'loss/policykl': '5.7109', 'loss/seqratio': '1.9027e-09', 'returns/mean': '0.034405', 'returns/var': '0.13292', 'val/mean': '0.015547', 'val/var': '0.0012363', 'examples_per_second': '10.405', 'grad_norm': '3.4381', 'counters/examples': 253056, 'counters/updates': 15816}
+skipping logging after 253072 examples to avoid logging too frequently
+skipping logging after 253088 examples to avoid logging too frequently
+skipping logging after 253104 examples to avoid logging too frequently
+train stats after 253120 examples: {'loss/total': '0.70191', 'loss/critic': '0.23587', 'loss/policy': '0.19309', 'clipfrac/policy': '0.38032', 'loss/entropy': '1.4697', 'loss/policykl': '5.0625', 'loss/seqratio': '2.7358e-09', 'returns/mean': '0.0016684', 'returns/var': '0.12142', 'val/mean': '0.024006', 'val/var': '0.0011683', 'examples_per_second': '10.318', 'grad_norm': '2.141', 'counters/examples': 253120, 'counters/updates': 15820}
+skipping logging after 253136 examples to avoid logging too frequently
+skipping logging after 253152 examples to avoid logging too frequently
+skipping logging after 253168 examples to avoid logging too frequently
+train stats after 253184 examples: {'loss/total': '0.70235', 'loss/critic': '0.27557', 'loss/policy': '0.21412', 'clipfrac/policy': '0.42037', 'loss/entropy': '1.5426', 'loss/policykl': '4.8545', 'loss/seqratio': '5.8682e-14', 'returns/mean': '-0.028251', 'returns/var': '0.15353', 'val/mean': '0.01229', 'val/var': '0.0013775', 'examples_per_second': '11.127', 'grad_norm': '2.1729', 'counters/examples': 253184, 'counters/updates': 15824}
+skipping logging after 253200 examples to avoid logging too frequently
+skipping logging after 253216 examples to avoid logging too frequently
+skipping logging after 253232 examples to avoid logging too frequently
+train stats after 253248 examples: {'loss/total': '0.66508', 'loss/critic': '0.2236', 'loss/policy': '0.20752', 'clipfrac/policy': '0.41575', 'loss/entropy': '1.5269', 'loss/policykl': '4.5508', 'loss/seqratio': '9.9246e-09', 'returns/mean': '-0.032778', 'returns/var': '0.1021', 'val/mean': '-0.019985', 'val/var': '0.0026851', 'examples_per_second': '10.482', 'grad_norm': '8.1879', 'counters/examples': 253248, 'counters/updates': 15828}
+skipping logging after 253264 examples to avoid logging too frequently
+skipping logging after 253280 examples to avoid logging too frequently
+skipping logging after 253296 examples to avoid logging too frequently
+train stats after 253312 examples: {'loss/total': '0.65819', 'loss/critic': '0.2401', 'loss/policy': '0.21108', 'clipfrac/policy': '0.41225', 'loss/entropy': '1.6147', 'loss/policykl': '4.4482', 'loss/seqratio': '4.7607e-08', 'returns/mean': '-0.0042175', 'returns/var': '0.14154', 'val/mean': '-0.012598', 'val/var': '0.0020008', 'examples_per_second': '11.218', 'grad_norm': '2.5005', 'counters/examples': 253312, 'counters/updates': 15832}
+skipping logging after 253328 examples to avoid logging too frequently
+skipping logging after 253344 examples to avoid logging too frequently
+skipping logging after 253360 examples to avoid logging too frequently
+train stats after 253376 examples: {'loss/total': '9.6173', 'loss/critic': '0.24641', 'loss/policy': '9.2014', 'clipfrac/policy': '0.38292', 'loss/entropy': '1.617', 'loss/policykl': '4.1357', 'loss/seqratio': '1.3551e-10', 'returns/mean': '0.024908', 'returns/var': '0.14152', 'val/mean': '-0.01233', 'val/var': '0.0027044', 'examples_per_second': '11.066', 'grad_norm': '608', 'counters/examples': 253376, 'counters/updates': 15836}
+skipping logging after 253392 examples to avoid logging too frequently
+skipping logging after 253408 examples to avoid logging too frequently
+skipping logging after 253424 examples to avoid logging too frequently
+train stats after 253440 examples: {'loss/total': '2.2803', 'loss/critic': '0.24286', 'loss/policy': '1.9215', 'clipfrac/policy': '0.34268', 'loss/entropy': '1.5943', 'loss/policykl': '3.5645', 'loss/seqratio': '3.7025e-06', 'returns/mean': '-0.024183', 'returns/var': '0.12796', 'val/mean': '0.014133', 'val/var': '0.0015128', 'examples_per_second': '10.24', 'grad_norm': '30.001', 'counters/examples': 253440, 'counters/updates': 15840}
+skipping logging after 253456 examples to avoid logging too frequently
+skipping logging after 253472 examples to avoid logging too frequently
+skipping logging after 253488 examples to avoid logging too frequently
+train stats after 253504 examples: {'loss/total': '0.82103', 'loss/critic': '0.21679', 'loss/policy': '0.39711', 'clipfrac/policy': '0.43863', 'loss/entropy': '1.4424', 'loss/policykl': '4.2168', 'loss/seqratio': '2.1004e-06', 'returns/mean': '0.028134', 'returns/var': '0.097741', 'val/mean': '0.0016489', 'val/var': '0.0010711', 'examples_per_second': '10.167', 'grad_norm': '10.938', 'counters/examples': 253504, 'counters/updates': 15844}
+skipping logging after 253520 examples to avoid logging too frequently
+skipping logging after 253536 examples to avoid logging too frequently
+skipping logging after 253552 examples to avoid logging too frequently
+train stats after 253568 examples: {'loss/total': '0.73782', 'loss/critic': '0.22263', 'loss/policy': '0.17724', 'clipfrac/policy': '0.43548', 'loss/entropy': '1.1492', 'loss/policykl': '5.582', 'loss/seqratio': '4.984e-10', 'returns/mean': '-0.018308', 'returns/var': '0.11438', 'val/mean': '0.0057689', 'val/var': '0.001505', 'examples_per_second': '9.0118', 'grad_norm': '2.7818', 'counters/examples': 253568, 'counters/updates': 15848}
+skipping logging after 253584 examples to avoid logging too frequently
+skipping logging after 253600 examples to avoid logging too frequently
+skipping logging after 253616 examples to avoid logging too frequently
+train stats after 253632 examples: {'loss/total': '0.72535', 'loss/critic': '0.21882', 'loss/policy': '0.22328', 'clipfrac/policy': '0.38776', 'loss/entropy': '1.2415', 'loss/policykl': '4.999', 'loss/seqratio': '3.6082e-14', 'returns/mean': '-0.01199', 'returns/var': '0.12414', 'val/mean': '-0.0040617', 'val/var': '0.002789', 'examples_per_second': '9.7901', 'grad_norm': '7.9067', 'counters/examples': 253632, 'counters/updates': 15852}
+skipping logging after 253648 examples to avoid logging too frequently
+skipping logging after 253664 examples to avoid logging too frequently
+skipping logging after 253680 examples to avoid logging too frequently
+train stats after 253696 examples: {'loss/total': '1.5848', 'loss/critic': '0.23607', 'loss/policy': '1.0835', 'clipfrac/policy': '0.38734', 'loss/entropy': '1.3161', 'loss/policykl': '4.9902', 'loss/seqratio': '1.8432e-17', 'returns/mean': '-0.043996', 'returns/var': '0.10964', 'val/mean': '-0.014192', 'val/var': '0.001899', 'examples_per_second': '9.9649', 'grad_norm': '54.25', 'counters/examples': 253696, 'counters/updates': 15856}
+skipping logging after 253712 examples to avoid logging too frequently
+skipping logging after 253728 examples to avoid logging too frequently
+skipping logging after 253744 examples to avoid logging too frequently
+train stats after 253760 examples: {'loss/total': '0.81757', 'loss/critic': '0.2599', 'loss/policy': '0.20169', 'clipfrac/policy': '0.45948', 'loss/entropy': '1.2561', 'loss/policykl': '6.1328', 'loss/seqratio': '5.4933e-10', 'returns/mean': '0.011522', 'returns/var': '0.12979', 'val/mean': '-0.033484', 'val/var': '0.0020881', 'examples_per_second': '10.671', 'grad_norm': '2.9548', 'counters/examples': 253760, 'counters/updates': 15860}
+skipping logging after 253776 examples to avoid logging too frequently
+skipping logging after 253792 examples to avoid logging too frequently
+skipping logging after 253808 examples to avoid logging too frequently
+train stats after 253824 examples: {'loss/total': '0.77994', 'loss/critic': '0.21452', 'loss/policy': '0.217', 'clipfrac/policy': '0.45112', 'loss/entropy': '1.3147', 'loss/policykl': '5.6074', 'loss/seqratio': '2.5904e-14', 'returns/mean': '0.0075064', 'returns/var': '0.10564', 'val/mean': '0.015489', 'val/var': '0.0016178', 'examples_per_second': '10.256', 'grad_norm': '3.3128', 'counters/examples': 253824, 'counters/updates': 15864}
+skipping logging after 253840 examples to avoid logging too frequently
+skipping logging after 253856 examples to avoid logging too frequently
+skipping logging after 253872 examples to avoid logging too frequently
+train stats after 253888 examples: {'loss/total': '0.75491', 'loss/critic': '0.25717', 'loss/policy': '0.209', 'clipfrac/policy': '0.35319', 'loss/entropy': '1.2435', 'loss/policykl': '5.4336', 'loss/seqratio': '9.0597e-14', 'returns/mean': '-0.014955', 'returns/var': '0.1183', 'val/mean': '0.023886', 'val/var': '0.0012639', 'examples_per_second': '10.255', 'grad_norm': '5.4698', 'counters/examples': 253888, 'counters/updates': 15868}
+skipping logging after 253904 examples to avoid logging too frequently
+skipping logging after 253920 examples to avoid logging too frequently
+skipping logging after 253936 examples to avoid logging too frequently
+train stats after 253952 examples: {'loss/total': '0.86232', 'loss/critic': '0.22959', 'loss/policy': '0.42618', 'clipfrac/policy': '0.36131', 'loss/entropy': '1.3875', 'loss/policykl': '4.3369', 'loss/seqratio': '4.7963e-08', 'returns/mean': '-0.021292', 'returns/var': '0.11275', 'val/mean': '8.3447e-05', 'val/var': '0.001447', 'examples_per_second': '11.341', 'grad_norm': '36.751', 'counters/examples': 253952, 'counters/updates': 15872}
+skipping logging after 253968 examples to avoid logging too frequently
+skipping logging after 253984 examples to avoid logging too frequently
+skipping logging after 254000 examples to avoid logging too frequently
+train stats after 254016 examples: {'loss/total': '0.75171', 'loss/critic': '0.22545', 'loss/policy': '0.19672', 'clipfrac/policy': '0.42926', 'loss/entropy': '1.3503', 'loss/policykl': '5.5332', 'loss/seqratio': '6.3655e-08', 'returns/mean': '0.0071861', 'returns/var': '0.12103', 'val/mean': '-0.0029793', 'val/var': '0.0012558', 'examples_per_second': '10.272', 'grad_norm': '4.1254', 'counters/examples': 254016, 'counters/updates': 15876}
+skipping logging after 254032 examples to avoid logging too frequently
+skipping logging after 254048 examples to avoid logging too frequently
+skipping logging after 254064 examples to avoid logging too frequently
+train stats after 254080 examples: {'loss/total': '1.0319', 'loss/critic': '0.23651', 'loss/policy': '0.51522', 'clipfrac/policy': '0.39959', 'loss/entropy': '1.3643', 'loss/policykl': '5.1426', 'loss/seqratio': '2.0027e-05', 'returns/mean': '0.044668', 'returns/var': '0.12234', 'val/mean': '-0.0083425', 'val/var': '0.0011361', 'examples_per_second': '10.065', 'grad_norm': '46.001', 'counters/examples': 254080, 'counters/updates': 15880}
+skipping logging after 254096 examples to avoid logging too frequently
+skipping logging after 254112 examples to avoid logging too frequently
+skipping logging after 254128 examples to avoid logging too frequently
+train stats after 254144 examples: {'loss/total': '0.80574', 'loss/critic': '0.2556', 'loss/policy': '0.20553', 'clipfrac/policy': '0.43703', 'loss/entropy': '1.0896', 'loss/policykl': '5.9785', 'loss/seqratio': '4.977e-06', 'returns/mean': '0.0064075', 'returns/var': '0.13287', 'val/mean': '0.024849', 'val/var': '0.00096619', 'examples_per_second': '10.598', 'grad_norm': '2.3598', 'counters/examples': 254144, 'counters/updates': 15884}
+skipping logging after 254160 examples to avoid logging too frequently
+skipping logging after 254176 examples to avoid logging too frequently
+skipping logging after 254192 examples to avoid logging too frequently
+train stats after 254208 examples: {'loss/total': '0.85798', 'loss/critic': '0.27894', 'loss/policy': '0.29428', 'clipfrac/policy': '0.41391', 'loss/entropy': '1.2562', 'loss/policykl': '5.6055', 'loss/seqratio': '1.8859e-08', 'returns/mean': '0.0031133', 'returns/var': '0.16095', 'val/mean': '0.0070133', 'val/var': '0.00081825', 'examples_per_second': '10.046', 'grad_norm': '2.1566', 'counters/examples': 254208, 'counters/updates': 15888}
+skipping logging after 254224 examples to avoid logging too frequently
+skipping logging after 254240 examples to avoid logging too frequently
+skipping logging after 254256 examples to avoid logging too frequently
+train stats after 254272 examples: {'loss/total': '0.719', 'loss/critic': '0.20994', 'loss/policy': '0.20445', 'clipfrac/policy': '0.36882', 'loss/entropy': '1.3466', 'loss/policykl': '5.127', 'loss/seqratio': '9.8109e-08', 'returns/mean': '0.033618', 'returns/var': '0.10895', 'val/mean': '0.0083809', 'val/var': '0.0010455', 'examples_per_second': '10.095', 'grad_norm': '4.9381', 'counters/examples': 254272, 'counters/updates': 15892}
+skipping logging after 254288 examples to avoid logging too frequently
+skipping logging after 254304 examples to avoid logging too frequently
+skipping logging after 254320 examples to avoid logging too frequently
+train stats after 254336 examples: {'loss/total': '0.82207', 'loss/critic': '0.23196', 'loss/policy': '0.34441', 'clipfrac/policy': '0.42335', 'loss/entropy': '1.4022', 'loss/policykl': '4.752', 'loss/seqratio': '4.2425e-10', 'returns/mean': '0.078208', 'returns/var': '0.12131', 'val/mean': '0.012547', 'val/var': '0.001297', 'examples_per_second': '10.826', 'grad_norm': '27.751', 'counters/examples': 254336, 'counters/updates': 15896}
+skipping logging after 254352 examples to avoid logging too frequently
+skipping logging after 254368 examples to avoid logging too frequently
+skipping logging after 254384 examples to avoid logging too frequently
+train stats after 254400 examples: {'loss/total': '2.6555', 'loss/critic': '0.20992', 'loss/policy': '2.171', 'clipfrac/policy': '0.39496', 'loss/entropy': '1.1502', 'loss/policykl': '4.8271', 'loss/seqratio': '2.2538e-07', 'returns/mean': '0.032113', 'returns/var': '0.11095', 'val/mean': '0.03521', 'val/var': '0.0015981', 'examples_per_second': '9.2454', 'grad_norm': '398', 'counters/examples': 254400, 'counters/updates': 15900}
+skipping logging after 254416 examples to avoid logging too frequently
+skipping logging after 254432 examples to avoid logging too frequently
+skipping logging after 254448 examples to avoid logging too frequently
+train stats after 254464 examples: {'loss/total': '2.8095', 'loss/critic': '0.24683', 'loss/policy': '2.2218', 'clipfrac/policy': '0.38235', 'loss/entropy': '1.1986', 'loss/policykl': '5.8535', 'loss/seqratio': '3.0423e-09', 'returns/mean': '-0.0018807', 'returns/var': '0.13422', 'val/mean': '0.030712', 'val/var': '0.0016019', 'examples_per_second': '9.6119', 'grad_norm': '227', 'counters/examples': 254464, 'counters/updates': 15904}
+skipping logging after 254480 examples to avoid logging too frequently
+skipping logging after 254496 examples to avoid logging too frequently
+skipping logging after 254512 examples to avoid logging too frequently
+train stats after 254528 examples: {'loss/total': '0.91877', 'loss/critic': '0.26225', 'loss/policy': '0.1725', 'clipfrac/policy': '0.39839', 'loss/entropy': '1.0133', 'loss/policykl': '7.4355', 'loss/seqratio': '2.6831e-09', 'returns/mean': '-0.06842', 'returns/var': '0.13651', 'val/mean': '0.019167', 'val/var': '0.0021861', 'examples_per_second': '10.76', 'grad_norm': '2.2049', 'counters/examples': 254528, 'counters/updates': 15908}
+skipping logging after 254544 examples to avoid logging too frequently
+skipping logging after 254560 examples to avoid logging too frequently
+skipping logging after 254576 examples to avoid logging too frequently
+train stats after 254592 examples: {'loss/total': '0.80762', 'loss/critic': '0.24747', 'loss/policy': '0.18588', 'clipfrac/policy': '0.40469', 'loss/entropy': '1.2474', 'loss/policykl': '6.1934', 'loss/seqratio': '5.4017e-07', 'returns/mean': '-0.027918', 'returns/var': '0.12864', 'val/mean': '-0.051778', 'val/var': '0.0038419', 'examples_per_second': '10.391', 'grad_norm': '2.2819', 'counters/examples': 254592, 'counters/updates': 15912}
+skipping logging after 254608 examples to avoid logging too frequently
+skipping logging after 254624 examples to avoid logging too frequently
+skipping logging after 254640 examples to avoid logging too frequently
+train stats after 254656 examples: {'loss/total': '0.78956', 'loss/critic': '0.26248', 'loss/policy': '0.24092', 'clipfrac/policy': '0.42495', 'loss/entropy': '1.3754', 'loss/policykl': '5.4609', 'loss/seqratio': '6.0751e-13', 'returns/mean': '-0.11685', 'returns/var': '0.12976', 'val/mean': '-0.057842', 'val/var': '0.004631', 'examples_per_second': '10.342', 'grad_norm': '2.5009', 'counters/examples': 254656, 'counters/updates': 15916}
+skipping logging after 254672 examples to avoid logging too frequently
+skipping logging after 254688 examples to avoid logging too frequently
+skipping logging after 254704 examples to avoid logging too frequently
+train stats after 254720 examples: {'loss/total': '0.83649', 'loss/critic': '0.24788', 'loss/policy': '0.29361', 'clipfrac/policy': '0.43086', 'loss/entropy': '1.3787', 'loss/policykl': '5.3994', 'loss/seqratio': '5.5643e-18', 'returns/mean': '-0.09779', 'returns/var': '0.10196', 'val/mean': '-0.11481', 'val/var': '0.0073814', 'examples_per_second': '10.67', 'grad_norm': '5.4388', 'counters/examples': 254720, 'counters/updates': 15920}
+skipping logging after 254736 examples to avoid logging too frequently
+skipping logging after 254752 examples to avoid logging too frequently
+skipping logging after 254768 examples to avoid logging too frequently
+train stats after 254784 examples: {'loss/total': '0.84382', 'loss/critic': '0.21937', 'loss/policy': '0.34029', 'clipfrac/policy': '0.44265', 'loss/entropy': '1.3794', 'loss/policykl': '5.0137', 'loss/seqratio': '7.7331e-09', 'returns/mean': '-0.00049326', 'returns/var': '0.10537', 'val/mean': '-0.035478', 'val/var': '0.0029802', 'examples_per_second': '10.052', 'grad_norm': '10.376', 'counters/examples': 254784, 'counters/updates': 15924}
+skipping logging after 254800 examples to avoid logging too frequently
+skipping logging after 254816 examples to avoid logging too frequently
+skipping logging after 254832 examples to avoid logging too frequently
+train stats after 254848 examples: {'loss/total': '0.73854', 'loss/critic': '0.25957', 'loss/policy': '0.14585', 'clipfrac/policy': '0.42618', 'loss/entropy': '1.235', 'loss/policykl': '5.9043', 'loss/seqratio': '0.0023956', 'returns/mean': '0.021172', 'returns/var': '0.11719', 'val/mean': '-0.002841', 'val/var': '0.0021899', 'examples_per_second': '11.835', 'grad_norm': '3.61', 'counters/examples': 254848, 'counters/updates': 15928}
+skipping logging after 254864 examples to avoid logging too frequently
+skipping logging after 254880 examples to avoid logging too frequently
+skipping logging after 254896 examples to avoid logging too frequently
+train stats after 254912 examples: {'loss/total': '0.70935', 'loss/critic': '0.22282', 'loss/policy': '0.1921', 'clipfrac/policy': '0.42868', 'loss/entropy': '1.3439', 'loss/policykl': '5.1543', 'loss/seqratio': '2.6892e-08', 'returns/mean': '-0.0073343', 'returns/var': '0.11267', 'val/mean': '-0.0072541', 'val/var': '0.0016398', 'examples_per_second': '10.144', 'grad_norm': '1.8987', 'counters/examples': 254912, 'counters/updates': 15932}
+skipping logging after 254928 examples to avoid logging too frequently
+skipping logging after 254944 examples to avoid logging too frequently
+skipping logging after 254960 examples to avoid logging too frequently
+train stats after 254976 examples: {'loss/total': '0.99636', 'loss/critic': '0.20931', 'loss/policy': '0.5171', 'clipfrac/policy': '0.37403', 'loss/entropy': '1.3923', 'loss/policykl': '4.7754', 'loss/seqratio': '1.9973e-08', 'returns/mean': '0.0068591', 'returns/var': '0.1015', 'val/mean': '-0.0072293', 'val/var': '0.0030154', 'examples_per_second': '10.49', 'grad_norm': '20.875', 'counters/examples': 254976, 'counters/updates': 15936}
+skipping logging after 254992 examples to avoid logging too frequently
+skipping logging after 255008 examples to avoid logging too frequently
+skipping logging after 255024 examples to avoid logging too frequently
+train stats after 255040 examples: {'loss/total': '0.82495', 'loss/critic': '0.24586', 'loss/policy': '0.16624', 'clipfrac/policy': '0.45295', 'loss/entropy': '1.1108', 'loss/policykl': '6.5645', 'loss/seqratio': '1.0995e-14', 'returns/mean': '0.02066', 'returns/var': '0.12865', 'val/mean': '-0.0090685', 'val/var': '0.0025358', 'examples_per_second': '11.64', 'grad_norm': '1.9615', 'counters/examples': 255040, 'counters/updates': 15940}
+skipping logging after 255056 examples to avoid logging too frequently
+skipping logging after 255072 examples to avoid logging too frequently
+skipping logging after 255088 examples to avoid logging too frequently
+train stats after 255104 examples: {'loss/total': '0.72959', 'loss/critic': '0.22542', 'loss/policy': '0.17631', 'clipfrac/policy': '0.45503', 'loss/entropy': '1.267', 'loss/policykl': '5.5098', 'loss/seqratio': '2.204e-14', 'returns/mean': '0.0033197', 'returns/var': '0.10816', 'val/mean': '0.0050018', 'val/var': '0.0026412', 'examples_per_second': '10.08', 'grad_norm': '1.9615', 'counters/examples': 255104, 'counters/updates': 15944}
+skipping logging after 255120 examples to avoid logging too frequently
+skipping logging after 255136 examples to avoid logging too frequently
+skipping logging after 255152 examples to avoid logging too frequently
+train stats after 255168 examples: {'loss/total': '1.6099', 'loss/critic': '0.25244', 'loss/policy': '1.0848', 'clipfrac/policy': '0.36331', 'loss/entropy': '1.3098', 'loss/policykl': '5.2275', 'loss/seqratio': '6.3801e-10', 'returns/mean': '-0.026378', 'returns/var': '0.11052', 'val/mean': '-0.0079288', 'val/var': '0.0037804', 'examples_per_second': '10.619', 'grad_norm': '85.501', 'counters/examples': 255168, 'counters/updates': 15948}
+skipping logging after 255184 examples to avoid logging too frequently
+skipping logging after 255200 examples to avoid logging too frequently
+skipping logging after 255216 examples to avoid logging too frequently
+train stats after 255232 examples: {'loss/total': '1.1461', 'loss/critic': '0.21524', 'loss/policy': '0.48896', 'clipfrac/policy': '0.44553', 'loss/entropy': '1.1601', 'loss/policykl': '6.5469', 'loss/seqratio': '0.0083618', 'returns/mean': '-0.062261', 'returns/var': '0.10366', 'val/mean': '-0.029516', 'val/var': '0.0024314', 'examples_per_second': '10.824', 'grad_norm': '13.063', 'counters/examples': 255232, 'counters/updates': 15952}
+skipping logging after 255248 examples to avoid logging too frequently
+skipping logging after 255264 examples to avoid logging too frequently
+skipping logging after 255280 examples to avoid logging too frequently
+train stats after 255296 examples: {'loss/total': '1.1019', 'loss/critic': '0.24807', 'loss/policy': '0.18656', 'clipfrac/policy': '0.45887', 'loss/entropy': '0.47467', 'loss/policykl': '9.127', 'loss/seqratio': '9.4502e-13', 'returns/mean': '0.026622', 'returns/var': '0.1368', 'val/mean': '-0.018278', 'val/var': '0.0038805', 'examples_per_second': '10.021', 'grad_norm': '2.892', 'counters/examples': 255296, 'counters/updates': 15956}
+skipping logging after 255312 examples to avoid logging too frequently
+skipping logging after 255328 examples to avoid logging too frequently
+skipping logging after 255344 examples to avoid logging too frequently
+train stats after 255360 examples: {'loss/total': '0.92891', 'loss/critic': '0.21918', 'loss/policy': '0.37728', 'clipfrac/policy': '0.37763', 'loss/entropy': '0.95726', 'loss/policykl': '5.4941', 'loss/seqratio': '3.738e-09', 'returns/mean': '0.012907', 'returns/var': '0.11595', 'val/mean': '0.028708', 'val/var': '0.0017948', 'examples_per_second': '9.9646', 'grad_norm': '9.0629', 'counters/examples': 255360, 'counters/updates': 15960}
+skipping logging after 255376 examples to avoid logging too frequently
+skipping logging after 255392 examples to avoid logging too frequently
+skipping logging after 255408 examples to avoid logging too frequently
+train stats after 255424 examples: {'loss/total': '0.90482', 'loss/critic': '0.21888', 'loss/policy': '0.15727', 'clipfrac/policy': '0.4385', 'loss/entropy': '0.64758', 'loss/policykl': '7.4551', 'loss/seqratio': '7.3044e-12', 'returns/mean': '0.086877', 'returns/var': '0.099435', 'val/mean': '0.044712', 'val/var': '0.00337', 'examples_per_second': '11.749', 'grad_norm': '3.0475', 'counters/examples': 255424, 'counters/updates': 15964}
+skipping logging after 255440 examples to avoid logging too frequently
+skipping logging after 255456 examples to avoid logging too frequently
+skipping logging after 255472 examples to avoid logging too frequently
+train stats after 255488 examples: {'loss/total': '13.023', 'loss/critic': '0.27743', 'loss/policy': '12.541', 'clipfrac/policy': '0.41592', 'loss/entropy': '1.1942', 'loss/policykl': '4.7969', 'loss/seqratio': '0.00015552', 'returns/mean': '-0.083695', 'returns/var': '0.13141', 'val/mean': '0.052166', 'val/var': '0.0025887', 'examples_per_second': '10.064', 'grad_norm': '1408', 'counters/examples': 255488, 'counters/updates': 15968}
+skipping logging after 255504 examples to avoid logging too frequently
+skipping logging after 255520 examples to avoid logging too frequently
+skipping logging after 255536 examples to avoid logging too frequently
+train stats after 255552 examples: {'loss/total': '1.012', 'loss/critic': '0.23375', 'loss/policy': '0.34204', 'clipfrac/policy': '0.3987', 'loss/entropy': '0.84545', 'loss/policykl': '6.6777', 'loss/seqratio': '0.0042114', 'returns/mean': '0.021697', 'returns/var': '0.11641', 'val/mean': '-0.0067649', 'val/var': '0.0020986', 'examples_per_second': '9.5671', 'grad_norm': '21.251', 'counters/examples': 255552, 'counters/updates': 15972}
+skipping logging after 255568 examples to avoid logging too frequently
+skipping logging after 255584 examples to avoid logging too frequently
+skipping logging after 255600 examples to avoid logging too frequently
+train stats after 255616 examples: {'loss/total': '1.0443', 'loss/critic': '0.23563', 'loss/policy': '0.19384', 'clipfrac/policy': '0.47536', 'loss/entropy': '0.54654', 'loss/policykl': '8.4805', 'loss/seqratio': '9.77e-14', 'returns/mean': '0.011904', 'returns/var': '0.12536', 'val/mean': '0.012916', 'val/var': '0.0011797', 'examples_per_second': '9.9003', 'grad_norm': '3.0942', 'counters/examples': 255616, 'counters/updates': 15976}
+skipping logging after 255632 examples to avoid logging too frequently
+skipping logging after 255648 examples to avoid logging too frequently
+skipping logging after 255664 examples to avoid logging too frequently
+train stats after 255680 examples: {'loss/total': '0.75106', 'loss/critic': '0.25958', 'loss/policy': '0.16631', 'clipfrac/policy': '0.45457', 'loss/entropy': '1.1575', 'loss/policykl': '5.8203', 'loss/seqratio': '2.2204e-14', 'returns/mean': '0.00088389', 'returns/var': '0.12291', 'val/mean': '-0.00035572', 'val/var': '0.0018671', 'examples_per_second': '11.097', 'grad_norm': '1.7505', 'counters/examples': 255680, 'counters/updates': 15980}
+skipping logging after 255696 examples to avoid logging too frequently
+skipping logging after 255712 examples to avoid logging too frequently
+skipping logging after 255728 examples to avoid logging too frequently
+train stats after 255744 examples: {'loss/total': '2.66', 'loss/critic': '0.24684', 'loss/policy': '2.1596', 'clipfrac/policy': '0.4039', 'loss/entropy': '1.3285', 'loss/policykl': '4.9785', 'loss/seqratio': '2.6084e-07', 'returns/mean': '0.0023148', 'returns/var': '0.13512', 'val/mean': '0.012634', 'val/var': '0.0021248', 'examples_per_second': '11.127', 'grad_norm': '10.876', 'counters/examples': 255744, 'counters/updates': 15984}
+skipping logging after 255760 examples to avoid logging too frequently
+skipping logging after 255776 examples to avoid logging too frequently
+skipping logging after 255792 examples to avoid logging too frequently
+train stats after 255808 examples: {'loss/total': '0.80407', 'loss/critic': '0.23675', 'loss/policy': '0.154', 'clipfrac/policy': '0.40363', 'loss/entropy': '0.97647', 'loss/policykl': '6.4785', 'loss/seqratio': '6.9531e-20', 'returns/mean': '-0.045717', 'returns/var': '0.11218', 'val/mean': '0.023633', 'val/var': '0.002249', 'examples_per_second': '10.717', 'grad_norm': '4.4075', 'counters/examples': 255808, 'counters/updates': 15988}
+skipping logging after 255824 examples to avoid logging too frequently
+skipping logging after 255840 examples to avoid logging too frequently
+skipping logging after 255856 examples to avoid logging too frequently
+train stats after 255872 examples: {'loss/total': '0.78887', 'loss/critic': '0.20411', 'loss/policy': '0.2496', 'clipfrac/policy': '0.37216', 'loss/entropy': '1.1742', 'loss/policykl': '5.3691', 'loss/seqratio': '1.301e-17', 'returns/mean': '-0.044664', 'returns/var': '0.096199', 'val/mean': '-0.02899', 'val/var': '0.0034318', 'examples_per_second': '9.1349', 'grad_norm': '3.4067', 'counters/examples': 255872, 'counters/updates': 15992}
+skipping logging after 255888 examples to avoid logging too frequently
+skipping logging after 255904 examples to avoid logging too frequently
+skipping logging after 255920 examples to avoid logging too frequently
+train stats after 255936 examples: {'loss/total': '0.67319', 'loss/critic': '0.25702', 'loss/policy': '0.21029', 'clipfrac/policy': '0.39222', 'loss/entropy': '1.463', 'loss/policykl': '4.6045', 'loss/seqratio': '9.6452e-08', 'returns/mean': '-0.08114', 'returns/var': '0.13946', 'val/mean': '-0.058414', 'val/var': '0.0054865', 'examples_per_second': '11.526', 'grad_norm': '5.4068', 'counters/examples': 255936, 'counters/updates': 15996}
+skipping logging after 255952 examples to avoid logging too frequently
+skipping logging after 255968 examples to avoid logging too frequently
+skipping logging after 255984 examples to avoid logging too frequently
+train stats after 256000 examples: {'loss/total': '0.74004', 'loss/critic': '0.23581', 'loss/policy': '0.26869', 'clipfrac/policy': '0.40675', 'loss/entropy': '1.4015', 'loss/policykl': '4.6914', 'loss/seqratio': '9.0241e-06', 'returns/mean': '-0.069661', 'returns/var': '0.12201', 'val/mean': '-0.059948', 'val/var': '0.0044413', 'examples_per_second': '9.9875', 'grad_norm': '5.4379', 'counters/examples': 256000, 'counters/updates': 16000}
+skipping logging after 256016 examples to avoid logging too frequently
+skipping logging after 256032 examples to avoid logging too frequently
+skipping logging after 256048 examples to avoid logging too frequently
+train stats after 256064 examples: {'loss/total': '2.5812', 'loss/critic': '0.28871', 'loss/policy': '2.1507', 'clipfrac/policy': '0.38858', 'loss/entropy': '1.5264', 'loss/policykl': '4.2744', 'loss/seqratio': '6.4902e-09', 'returns/mean': '-0.0022884', 'returns/var': '0.15288', 'val/mean': '-0.07312', 'val/var': '0.005105', 'examples_per_second': '11.087', 'grad_norm': '264', 'counters/examples': 256064, 'counters/updates': 16004}
+skipping logging after 256080 examples to avoid logging too frequently
+skipping logging after 256096 examples to avoid logging too frequently
+skipping logging after 256112 examples to avoid logging too frequently
+train stats after 256128 examples: {'loss/total': '0.77396', 'loss/critic': '0.24759', 'loss/policy': '0.16992', 'clipfrac/policy': '0.40434', 'loss/entropy': '1.0934', 'loss/policykl': '6.0176', 'loss/seqratio': '1.0606e-10', 'returns/mean': '0.014931', 'returns/var': '0.11218', 'val/mean': '0.0093088', 'val/var': '0.0020802', 'examples_per_second': '10.571', 'grad_norm': '1.9144', 'counters/examples': 256128, 'counters/updates': 16008}
+skipping logging after 256144 examples to avoid logging too frequently
+skipping logging after 256160 examples to avoid logging too frequently
+skipping logging after 256176 examples to avoid logging too frequently
+train stats after 256192 examples: {'loss/total': '0.91187', 'loss/critic': '0.25225', 'loss/policy': '0.47417', 'clipfrac/policy': '0.35759', 'loss/entropy': '1.3796', 'loss/policykl': '4.3525', 'loss/seqratio': '1.3934e-11', 'returns/mean': '-0.027241', 'returns/var': '0.13912', 'val/mean': '0.010196', 'val/var': '0.0023715', 'examples_per_second': '10.735', 'grad_norm': '10.438', 'counters/examples': 256192, 'counters/updates': 16012}
+skipping logging after 256208 examples to avoid logging too frequently
+skipping logging after 256224 examples to avoid logging too frequently
+skipping logging after 256240 examples to avoid logging too frequently
+train stats after 256256 examples: {'loss/total': '0.90075', 'loss/critic': '0.23302', 'loss/policy': '0.18822', 'clipfrac/policy': '0.45377', 'loss/entropy': '0.85947', 'loss/policykl': '7.1035', 'loss/seqratio': '2.7626e-11', 'returns/mean': '0.044025', 'returns/var': '0.10422', 'val/mean': '-0.012215', 'val/var': '0.0025785', 'examples_per_second': '10.214', 'grad_norm': '10.689', 'counters/examples': 256256, 'counters/updates': 16016}
+skipping logging after 256272 examples to avoid logging too frequently
+skipping logging after 256288 examples to avoid logging too frequently
+skipping logging after 256304 examples to avoid logging too frequently
+train stats after 256320 examples: {'loss/total': '0.74758', 'loss/critic': '0.24009', 'loss/policy': '0.19599', 'clipfrac/policy': '0.38932', 'loss/entropy': '1.3048', 'loss/policykl': '5.4922', 'loss/seqratio': '2.583e-10', 'returns/mean': '0.037387', 'returns/var': '0.12023', 'val/mean': '0.023228', 'val/var': '0.0020115', 'examples_per_second': '10.014', 'grad_norm': '4.6883', 'counters/examples': 256320, 'counters/updates': 16020}
+skipping logging after 256336 examples to avoid logging too frequently
+skipping logging after 256352 examples to avoid logging too frequently
+skipping logging after 256368 examples to avoid logging too frequently
+train stats after 256384 examples: {'loss/total': '0.65323', 'loss/critic': '0.22193', 'loss/policy': '0.18152', 'clipfrac/policy': '0.36895', 'loss/entropy': '1.3866', 'loss/policykl': '4.6973', 'loss/seqratio': '6.5513e-17', 'returns/mean': '0.067245', 'returns/var': '0.10846', 'val/mean': '0.036865', 'val/var': '0.0035229', 'examples_per_second': '9.5965', 'grad_norm': '1.9618', 'counters/examples': 256384, 'counters/updates': 16024}
+skipping logging after 256400 examples to avoid logging too frequently
+skipping logging after 256416 examples to avoid logging too frequently
+skipping logging after 256432 examples to avoid logging too frequently
+train stats after 256448 examples: {'loss/total': '0.70142', 'loss/critic': '0.23792', 'loss/policy': '0.25336', 'clipfrac/policy': '0.35125', 'loss/entropy': '1.4319', 'loss/policykl': '4.459', 'loss/seqratio': '5.2237e-13', 'returns/mean': '0.04011', 'returns/var': '0.10778', 'val/mean': '0.060425', 'val/var': '0.0028501', 'examples_per_second': '10.958', 'grad_norm': '5.7828', 'counters/examples': 256448, 'counters/updates': 16028}
+skipping logging after 256464 examples to avoid logging too frequently
+skipping logging after 256480 examples to avoid logging too frequently
+skipping logging after 256496 examples to avoid logging too frequently
+train stats after 256512 examples: {'loss/total': '1.0495', 'loss/critic': '0.21741', 'loss/policy': '0.59616', 'clipfrac/policy': '0.31922', 'loss/entropy': '1.4915', 'loss/policykl': '4.5088', 'loss/seqratio': '1.0058e-06', 'returns/mean': '0.048704', 'returns/var': '0.10587', 'val/mean': '0.030052', 'val/var': '0.0014617', 'examples_per_second': '9.9573', 'grad_norm': '79.501', 'counters/examples': 256512, 'counters/updates': 16032}
+skipping logging after 256528 examples to avoid logging too frequently
+skipping logging after 256544 examples to avoid logging too frequently
+skipping logging after 256560 examples to avoid logging too frequently
+train stats after 256576 examples: {'loss/total': '0.79088', 'loss/critic': '0.21818', 'loss/policy': '0.26563', 'clipfrac/policy': '0.41425', 'loss/entropy': '1.5029', 'loss/policykl': '5.2324', 'loss/seqratio': '1.3343e-15', 'returns/mean': '0.073478', 'returns/var': '0.11074', 'val/mean': '0.02827', 'val/var': '0.0019243', 'examples_per_second': '11.189', 'grad_norm': '8.1886', 'counters/examples': 256576, 'counters/updates': 16036}
+skipping logging after 256592 examples to avoid logging too frequently
+skipping logging after 256608 examples to avoid logging too frequently
+skipping logging after 256624 examples to avoid logging too frequently
+train stats after 256640 examples: {'loss/total': '0.78517', 'loss/critic': '0.22872', 'loss/policy': '0.24516', 'clipfrac/policy': '0.40398', 'loss/entropy': '1.5263', 'loss/policykl': '5.3779', 'loss/seqratio': '1.08e-12', 'returns/mean': '0.092961', 'returns/var': '0.1267', 'val/mean': '0.053276', 'val/var': '0.0016546', 'examples_per_second': '9.5664', 'grad_norm': '4.1262', 'counters/examples': 256640, 'counters/updates': 16040}
+skipping logging after 256656 examples to avoid logging too frequently
+skipping logging after 256672 examples to avoid logging too frequently
+skipping logging after 256688 examples to avoid logging too frequently
+train stats after 256704 examples: {'loss/total': '0.6645', 'loss/critic': '0.22503', 'loss/policy': '0.14747', 'clipfrac/policy': '0.39835', 'loss/entropy': '1.6184', 'loss/policykl': '5.1484', 'loss/seqratio': '1.367e-15', 'returns/mean': '0.058171', 'returns/var': '0.10487', 'val/mean': '0.092453', 'val/var': '0.0024457', 'examples_per_second': '10.6', 'grad_norm': '1.6268', 'counters/examples': 256704, 'counters/updates': 16044}
+skipping logging after 256720 examples to avoid logging too frequently
+skipping logging after 256736 examples to avoid logging too frequently
+skipping logging after 256752 examples to avoid logging too frequently
+train stats after 256768 examples: {'loss/total': '0.62286', 'loss/critic': '0.25527', 'loss/policy': '0.15229', 'clipfrac/policy': '0.39363', 'loss/entropy': '1.6895', 'loss/policykl': '4.6797', 'loss/seqratio': '2.2882e-14', 'returns/mean': '0.072001', 'returns/var': '0.14091', 'val/mean': '0.041885', 'val/var': '0.0013695', 'examples_per_second': '11.13', 'grad_norm': '2.3133', 'counters/examples': 256768, 'counters/updates': 16048}
+skipping logging after 256784 examples to avoid logging too frequently
+skipping logging after 256800 examples to avoid logging too frequently
+skipping logging after 256816 examples to avoid logging too frequently
+train stats after 256832 examples: {'loss/total': '0.89929', 'loss/critic': '0.25578', 'loss/policy': '0.47437', 'clipfrac/policy': '0.34933', 'loss/entropy': '1.701', 'loss/policykl': '4.2236', 'loss/seqratio': '1.8129e-16', 'returns/mean': '0.047142', 'returns/var': '0.14502', 'val/mean': '0.054893', 'val/var': '0.0014246', 'examples_per_second': '11.141', 'grad_norm': '13.625', 'counters/examples': 256832, 'counters/updates': 16052}
+skipping logging after 256848 examples to avoid logging too frequently
+skipping logging after 256864 examples to avoid logging too frequently
+skipping logging after 256880 examples to avoid logging too frequently
+train stats after 256896 examples: {'loss/total': '0.92603', 'loss/critic': '0.26485', 'loss/policy': '0.39176', 'clipfrac/policy': '0.38082', 'loss/entropy': '1.5916', 'loss/policykl': '5.3184', 'loss/seqratio': '1.0952e-06', 'returns/mean': '-0.011767', 'returns/var': '0.11751', 'val/mean': '0.055412', 'val/var': '0.0015697', 'examples_per_second': '11.356', 'grad_norm': '16.377', 'counters/examples': 256896, 'counters/updates': 16056}
+skipping logging after 256912 examples to avoid logging too frequently
+skipping logging after 256928 examples to avoid logging too frequently
+skipping logging after 256944 examples to avoid logging too frequently
+train stats after 256960 examples: {'loss/total': '0.78436', 'loss/critic': '0.26345', 'loss/policy': '0.14696', 'clipfrac/policy': '0.36586', 'loss/entropy': '1.4418', 'loss/policykl': '6.3496', 'loss/seqratio': '8.1332e-18', 'returns/mean': '0.013814', 'returns/var': '0.13046', 'val/mean': '0.0201', 'val/var': '0.002305', 'examples_per_second': '10.556', 'grad_norm': '2.3132', 'counters/examples': 256960, 'counters/updates': 16060}
+skipping logging after 256976 examples to avoid logging too frequently
+skipping logging after 256992 examples to avoid logging too frequently
+skipping logging after 257008 examples to avoid logging too frequently
+train stats after 257024 examples: {'loss/total': '0.79993', 'loss/critic': '0.24642', 'loss/policy': '0.22386', 'clipfrac/policy': '0.44984', 'loss/entropy': '1.59', 'loss/policykl': '5.7363', 'loss/seqratio': '3.3334e-13', 'returns/mean': '0.040192', 'returns/var': '0.11411', 'val/mean': '0.017442', 'val/var': '0.0018182', 'examples_per_second': '10.485', 'grad_norm': '3.813', 'counters/examples': 257024, 'counters/updates': 16064}
+skipping logging after 257040 examples to avoid logging too frequently
+skipping logging after 257056 examples to avoid logging too frequently
+skipping logging after 257072 examples to avoid logging too frequently
+train stats after 257088 examples: {'loss/total': '0.83591', 'loss/critic': '0.2285', 'loss/policy': '0.26283', 'clipfrac/policy': '0.42358', 'loss/entropy': '1.5278', 'loss/policykl': '5.707', 'loss/seqratio': '1.8086e-11', 'returns/mean': '0.045285', 'returns/var': '0.11148', 'val/mean': '0.031307', 'val/var': '0.0014307', 'examples_per_second': '10.438', 'grad_norm': '10.751', 'counters/examples': 257088, 'counters/updates': 16068}
+skipping logging after 257104 examples to avoid logging too frequently
+skipping logging after 257120 examples to avoid logging too frequently
+skipping logging after 257136 examples to avoid logging too frequently
+train stats after 257152 examples: {'loss/total': '0.6724', 'loss/critic': '0.25566', 'loss/policy': '0.19975', 'clipfrac/policy': '0.37627', 'loss/entropy': '1.5513', 'loss/policykl': '4.7041', 'loss/seqratio': '4.1286e-16', 'returns/mean': '0.012947', 'returns/var': '0.12462', 'val/mean': '0.033868', 'val/var': '0.0013504', 'examples_per_second': '10.146', 'grad_norm': '6.0323', 'counters/examples': 257152, 'counters/updates': 16072}
+skipping logging after 257168 examples to avoid logging too frequently
+skipping logging after 257184 examples to avoid logging too frequently
+skipping logging after 257200 examples to avoid logging too frequently
+train stats after 257216 examples: {'loss/total': '16.841', 'loss/critic': '0.23163', 'loss/policy': '16.365', 'clipfrac/policy': '0.38773', 'loss/entropy': '1.5698', 'loss/policykl': '4.7432', 'loss/seqratio': '5.4026e-14', 'returns/mean': '0.030244', 'returns/var': '0.11874', 'val/mean': '0.023373', 'val/var': '0.0016925', 'examples_per_second': '10.445', 'grad_norm': '1168', 'counters/examples': 257216, 'counters/updates': 16076}
+skipping logging after 257232 examples to avoid logging too frequently
+skipping logging after 257248 examples to avoid logging too frequently
+skipping logging after 257264 examples to avoid logging too frequently
+train stats after 257280 examples: {'loss/total': '0.984', 'loss/critic': '0.20442', 'loss/policy': '0.31887', 'clipfrac/policy': '0.3769', 'loss/entropy': '1.1196', 'loss/policykl': '6.6289', 'loss/seqratio': '1.4625e-09', 'returns/mean': '0.021124', 'returns/var': '0.093863', 'val/mean': '0.025425', 'val/var': '0.00094318', 'examples_per_second': '9.3469', 'grad_norm': '12.625', 'counters/examples': 257280, 'counters/updates': 16080}
+skipping logging after 257296 examples to avoid logging too frequently
+skipping logging after 257312 examples to avoid logging too frequently
+skipping logging after 257328 examples to avoid logging too frequently
+train stats after 257344 examples: {'loss/total': '0.84758', 'loss/critic': '0.23732', 'loss/policy': '0.16527', 'clipfrac/policy': '0.44022', 'loss/entropy': '1.282', 'loss/policykl': '6.8008', 'loss/seqratio': '2.9598e-24', 'returns/mean': '0.028167', 'returns/var': '0.11461', 'val/mean': '0.019337', 'val/var': '0.00085747', 'examples_per_second': '11.353', 'grad_norm': '2.9068', 'counters/examples': 257344, 'counters/updates': 16084}
+skipping logging after 257360 examples to avoid logging too frequently
+skipping logging after 257376 examples to avoid logging too frequently
+skipping logging after 257392 examples to avoid logging too frequently
+train stats after 257408 examples: {'loss/total': '0.76139', 'loss/critic': '0.25075', 'loss/policy': '0.19626', 'clipfrac/policy': '0.38092', 'loss/entropy': '1.3847', 'loss/policykl': '5.6279', 'loss/seqratio': '1.977e-22', 'returns/mean': '-0.0095628', 'returns/var': '0.10861', 'val/mean': '0.027248', 'val/var': '0.001086', 'examples_per_second': '11.141', 'grad_norm': '2.5944', 'counters/examples': 257408, 'counters/updates': 16088}
+skipping logging after 257424 examples to avoid logging too frequently
+skipping logging after 257440 examples to avoid logging too frequently
+skipping logging after 257456 examples to avoid logging too frequently
+train stats after 257472 examples: {'loss/total': '0.81937', 'loss/critic': '0.22654', 'loss/policy': '0.28964', 'clipfrac/policy': '0.4182', 'loss/entropy': '1.4568', 'loss/policykl': '5.2754', 'loss/seqratio': '1.802e-16', 'returns/mean': '-0.041473', 'returns/var': '0.10239', 'val/mean': '0.014502', 'val/var': '0.0013263', 'examples_per_second': '9.361', 'grad_norm': '28.251', 'counters/examples': 257472, 'counters/updates': 16092}
+skipping logging after 257488 examples to avoid logging too frequently
+skipping logging after 257504 examples to avoid logging too frequently
+skipping logging after 257520 examples to avoid logging too frequently
+train stats after 257536 examples: {'loss/total': '0.6929', 'loss/critic': '0.21383', 'loss/policy': '0.19381', 'clipfrac/policy': '0.36902', 'loss/entropy': '1.3846', 'loss/policykl': '4.9717', 'loss/seqratio': '7.8444e-12', 'returns/mean': '0.00063378', 'returns/var': '0.089654', 'val/mean': '0.0012064', 'val/var': '0.0019305', 'examples_per_second': '10.588', 'grad_norm': '2.7973', 'counters/examples': 257536, 'counters/updates': 16096}
+skipping logging after 257552 examples to avoid logging too frequently
+skipping logging after 257568 examples to avoid logging too frequently
+skipping logging after 257584 examples to avoid logging too frequently
+train stats after 257600 examples: {'loss/total': '0.67637', 'loss/critic': '0.22818', 'loss/policy': '0.23048', 'clipfrac/policy': '0.38383', 'loss/entropy': '1.5269', 'loss/policykl': '4.4375', 'loss/seqratio': '4.0047e-08', 'returns/mean': '0.017499', 'returns/var': '0.11856', 'val/mean': '0.020219', 'val/var': '0.001651', 'examples_per_second': '11.117', 'grad_norm': '6.4691', 'counters/examples': 257600, 'counters/updates': 16100}
+skipping logging after 257616 examples to avoid logging too frequently
+skipping logging after 257632 examples to avoid logging too frequently
+skipping logging after 257648 examples to avoid logging too frequently
+train stats after 257664 examples: {'loss/total': '0.66947', 'loss/critic': '0.22022', 'loss/policy': '0.19278', 'clipfrac/policy': '0.3826', 'loss/entropy': '1.3951', 'loss/policykl': '4.7451', 'loss/seqratio': '1.2696e-05', 'returns/mean': '0.022432', 'returns/var': '0.10951', 'val/mean': '0.017063', 'val/var': '0.00099659', 'examples_per_second': '10.828', 'grad_norm': '3.1571', 'counters/examples': 257664, 'counters/updates': 16104}
+skipping logging after 257680 examples to avoid logging too frequently
+skipping logging after 257696 examples to avoid logging too frequently
+skipping logging after 257712 examples to avoid logging too frequently
+train stats after 257728 examples: {'loss/total': '0.71029', 'loss/critic': '0.25013', 'loss/policy': '0.25747', 'clipfrac/policy': '0.35313', 'loss/entropy': '1.3536', 'loss/policykl': '4.5', 'loss/seqratio': '9.6991e-10', 'returns/mean': '-0.012951', 'returns/var': '0.12415', 'val/mean': '0.023566', 'val/var': '0.0016458', 'examples_per_second': '9.5315', 'grad_norm': '3.8448', 'counters/examples': 257728, 'counters/updates': 16108}
+skipping logging after 257744 examples to avoid logging too frequently
+skipping logging after 257760 examples to avoid logging too frequently
+skipping logging after 257776 examples to avoid logging too frequently
+train stats after 257792 examples: {'loss/total': '1.1567', 'loss/critic': '0.21326', 'loss/policy': '0.68995', 'clipfrac/policy': '0.39649', 'loss/entropy': '1.3908', 'loss/policykl': '4.6436', 'loss/seqratio': '1.8201e-10', 'returns/mean': '-0.0081055', 'returns/var': '0.104', 'val/mean': '0.0066757', 'val/var': '0.0015239', 'examples_per_second': '10.353', 'grad_norm': '24.125', 'counters/examples': 257792, 'counters/updates': 16112}
+skipping logging after 257808 examples to avoid logging too frequently
+skipping logging after 257824 examples to avoid logging too frequently
+skipping logging after 257840 examples to avoid logging too frequently
+train stats after 257856 examples: {'loss/total': '0.78651', 'loss/critic': '0.24788', 'loss/policy': '0.16416', 'clipfrac/policy': '0.46396', 'loss/entropy': '1.2262', 'loss/policykl': '6.1953', 'loss/seqratio': '2.1555e-10', 'returns/mean': '0.05414', 'returns/var': '0.13109', 'val/mean': '-0.010058', 'val/var': '0.0023267', 'examples_per_second': '11.134', 'grad_norm': '2.3295', 'counters/examples': 257856, 'counters/updates': 16116}
+skipping logging after 257872 examples to avoid logging too frequently
+skipping logging after 257888 examples to avoid logging too frequently
+skipping logging after 257904 examples to avoid logging too frequently
+train stats after 257920 examples: {'loss/total': '1.2447', 'loss/critic': '0.23154', 'loss/policy': '0.71932', 'clipfrac/policy': '0.42146', 'loss/entropy': '1.4135', 'loss/policykl': '5.2334', 'loss/seqratio': '6.8562e-20', 'returns/mean': '0.017184', 'returns/var': '0.12142', 'val/mean': '0.030186', 'val/var': '0.0014794', 'examples_per_second': '9.4591', 'grad_norm': '70', 'counters/examples': 257920, 'counters/updates': 16120}
+skipping logging after 257936 examples to avoid logging too frequently
+skipping logging after 257952 examples to avoid logging too frequently
+skipping logging after 257968 examples to avoid logging too frequently
+train stats after 257984 examples: {'loss/total': '1.607', 'loss/critic': '0.22799', 'loss/policy': '1.0274', 'clipfrac/policy': '0.39662', 'loss/entropy': '1.3941', 'loss/policykl': '5.7695', 'loss/seqratio': '8.1855e-12', 'returns/mean': '-0.019584', 'returns/var': '0.11711', 'val/mean': '0.035038', 'val/var': '0.0013874', 'examples_per_second': '9.8688', 'grad_norm': '4.0632', 'counters/examples': 257984, 'counters/updates': 16124}
+skipping logging after 258000 examples to avoid logging too frequently
+skipping logging after 258016 examples to avoid logging too frequently
+skipping logging after 258032 examples to avoid logging too frequently
+train stats after 258048 examples: {'loss/total': '0.78978', 'loss/critic': '0.24645', 'loss/policy': '0.20919', 'clipfrac/policy': '0.47443', 'loss/entropy': '1.4775', 'loss/policykl': '5.7832', 'loss/seqratio': '2.0686e-09', 'returns/mean': '0.011006', 'returns/var': '0.12737', 'val/mean': '0.017329', 'val/var': '0.0025296', 'examples_per_second': '11.282', 'grad_norm': '4.7817', 'counters/examples': 258048, 'counters/updates': 16128}
+skipping logging after 258064 examples to avoid logging too frequently
+skipping logging after 258080 examples to avoid logging too frequently
+skipping logging after 258096 examples to avoid logging too frequently
+train stats after 258112 examples: {'loss/total': '0.75999', 'loss/critic': '0.24606', 'loss/policy': '0.25899', 'clipfrac/policy': '0.39663', 'loss/entropy': '1.4415', 'loss/policykl': '4.9844', 'loss/seqratio': '1.5053e-06', 'returns/mean': '0.0076991', 'returns/var': '0.11998', 'val/mean': '0.028545', 'val/var': '0.0021129', 'examples_per_second': '10.541', 'grad_norm': '6.6255', 'counters/examples': 258112, 'counters/updates': 16132}
+skipping logging after 258128 examples to avoid logging too frequently
+skipping logging after 258144 examples to avoid logging too frequently
+skipping logging after 258160 examples to avoid logging too frequently
+train stats after 258176 examples: {'loss/total': '0.69023', 'loss/critic': '0.22038', 'loss/policy': '0.19474', 'clipfrac/policy': '0.41481', 'loss/entropy': '1.4593', 'loss/policykl': '4.9307', 'loss/seqratio': '1.437e-10', 'returns/mean': '0.088755', 'returns/var': '0.11259', 'val/mean': '0.02961', 'val/var': '0.0018625', 'examples_per_second': '9.8835', 'grad_norm': '2.4234', 'counters/examples': 258176, 'counters/updates': 16136}
+skipping logging after 258192 examples to avoid logging too frequently
+skipping logging after 258208 examples to avoid logging too frequently
+skipping logging after 258224 examples to avoid logging too frequently
+train stats after 258240 examples: {'loss/total': '0.69263', 'loss/critic': '0.21925', 'loss/policy': '0.23645', 'clipfrac/policy': '0.34596', 'loss/entropy': '1.5143', 'loss/policykl': '4.54', 'loss/seqratio': '0.069824', 'returns/mean': '0.0034732', 'returns/var': '0.11804', 'val/mean': '0.056046', 'val/var': '0.0024695', 'examples_per_second': '9.774', 'grad_norm': '13.189', 'counters/examples': 258240, 'counters/updates': 16140}
+skipping logging after 258256 examples to avoid logging too frequently
+skipping logging after 258272 examples to avoid logging too frequently
+skipping logging after 258288 examples to avoid logging too frequently
+train stats after 258304 examples: {'loss/total': '1.0421', 'loss/critic': '0.22201', 'loss/policy': '0.53565', 'clipfrac/policy': '0.42632', 'loss/entropy': '1.4276', 'loss/policykl': '5.0381', 'loss/seqratio': '1.4736e-08', 'returns/mean': '0.053144', 'returns/var': '0.12323', 'val/mean': '0.037379', 'val/var': '0.0019913', 'examples_per_second': '10.694', 'grad_norm': '33.25', 'counters/examples': 258304, 'counters/updates': 16144}
+skipping logging after 258320 examples to avoid logging too frequently
+skipping logging after 258336 examples to avoid logging too frequently
+skipping logging after 258352 examples to avoid logging too frequently
+train stats after 258368 examples: {'loss/total': '0.82974', 'loss/critic': '0.20511', 'loss/policy': '0.16021', 'clipfrac/policy': '0.42304', 'loss/entropy': '1.2601', 'loss/policykl': '6.6816', 'loss/seqratio': '1.7462e-08', 'returns/mean': '0.027655', 'returns/var': '0.10158', 'val/mean': '0.047333', 'val/var': '0.0015666', 'examples_per_second': '10.339', 'grad_norm': '2.1723', 'counters/examples': 258368, 'counters/updates': 16148}
+skipping logging after 258384 examples to avoid logging too frequently
+skipping logging after 258400 examples to avoid logging too frequently
+skipping logging after 258416 examples to avoid logging too frequently
+train stats after 258432 examples: {'loss/total': '0.67443', 'loss/critic': '0.21977', 'loss/policy': '0.16906', 'clipfrac/policy': '0.38428', 'loss/entropy': '1.3471', 'loss/policykl': '5.0269', 'loss/seqratio': '6.4402e-16', 'returns/mean': '-0.0019958', 'returns/var': '0.099921', 'val/mean': '0.034376', 'val/var': '0.0016372', 'examples_per_second': '10.888', 'grad_norm': '1.6411', 'counters/examples': 258432, 'counters/updates': 16152}
+skipping logging after 258448 examples to avoid logging too frequently
+skipping logging after 258464 examples to avoid logging too frequently
+skipping logging after 258480 examples to avoid logging too frequently
+train stats after 258496 examples: {'loss/total': '0.73859', 'loss/critic': '0.22059', 'loss/policy': '0.22344', 'clipfrac/policy': '0.42828', 'loss/entropy': '1.4684', 'loss/policykl': '5.1338', 'loss/seqratio': '1.1269e-07', 'returns/mean': '0.039102', 'returns/var': '0.10202', 'val/mean': '0.021353', 'val/var': '0.0015814', 'examples_per_second': '10.403', 'grad_norm': '9.2506', 'counters/examples': 258496, 'counters/updates': 16156}
+skipping logging after 258512 examples to avoid logging too frequently
+skipping logging after 258528 examples to avoid logging too frequently
+skipping logging after 258544 examples to avoid logging too frequently
+train stats after 258560 examples: {'loss/total': '0.9019', 'loss/critic': '0.2363', 'loss/policy': '0.43676', 'clipfrac/policy': '0.40636', 'loss/entropy': '1.5353', 'loss/policykl': '4.627', 'loss/seqratio': '6.5326e-18', 'returns/mean': '0.015865', 'returns/var': '0.1155', 'val/mean': '0.026695', 'val/var': '0.0017226', 'examples_per_second': '10.799', 'grad_norm': '20.25', 'counters/examples': 258560, 'counters/updates': 16160}
+skipping logging after 258576 examples to avoid logging too frequently
+skipping logging after 258592 examples to avoid logging too frequently
+skipping logging after 258608 examples to avoid logging too frequently
+train stats after 258624 examples: {'loss/total': '3.6756', 'loss/critic': '0.24986', 'loss/policy': '3.2056', 'clipfrac/policy': '0.41209', 'loss/entropy': '1.5209', 'loss/policykl': '4.6738', 'loss/seqratio': '0.026611', 'returns/mean': '0.020242', 'returns/var': '0.12906', 'val/mean': '0.026851', 'val/var': '0.0018814', 'examples_per_second': '10.508', 'grad_norm': '668', 'counters/examples': 258624, 'counters/updates': 16164}
+skipping logging after 258640 examples to avoid logging too frequently
+skipping logging after 258656 examples to avoid logging too frequently
+skipping logging after 258672 examples to avoid logging too frequently
+train stats after 258688 examples: {'loss/total': '1.1444', 'loss/critic': '0.23727', 'loss/policy': '0.63412', 'clipfrac/policy': '0.34888', 'loss/entropy': '1.4798', 'loss/policykl': '5.0801', 'loss/seqratio': '2.1309e-07', 'returns/mean': '-0.0090681', 'returns/var': '0.13482', 'val/mean': '-0.0012798', 'val/var': '0.0028281', 'examples_per_second': '9.8354', 'grad_norm': '93.501', 'counters/examples': 258688, 'counters/updates': 16168}
+skipping logging after 258704 examples to avoid logging too frequently
+skipping logging after 258720 examples to avoid logging too frequently
+skipping logging after 258736 examples to avoid logging too frequently
+train stats after 258752 examples: {'loss/total': '0.8163', 'loss/critic': '0.2527', 'loss/policy': '0.21807', 'clipfrac/policy': '0.48217', 'loss/entropy': '1.367', 'loss/policykl': '5.957', 'loss/seqratio': '4.7216e-11', 'returns/mean': '-0.0010381', 'returns/var': '0.14061', 'val/mean': '-0.00014496', 'val/var': '0.0028577', 'examples_per_second': '10.208', 'grad_norm': '2.7353', 'counters/examples': 258752, 'counters/updates': 16172}
+skipping logging after 258768 examples to avoid logging too frequently
+skipping logging after 258784 examples to avoid logging too frequently
+skipping logging after 258800 examples to avoid logging too frequently
+train stats after 258816 examples: {'loss/total': '1.6542', 'loss/critic': '0.24715', 'loss/policy': '1.1503', 'clipfrac/policy': '0.41481', 'loss/entropy': '1.4777', 'loss/policykl': '5.0156', 'loss/seqratio': '2.8422e-11', 'returns/mean': '-0.06189', 'returns/var': '0.097619', 'val/mean': '0.010229', 'val/var': '0.0041628', 'examples_per_second': '11.275', 'grad_norm': '67.001', 'counters/examples': 258816, 'counters/updates': 16176}
+skipping logging after 258832 examples to avoid logging too frequently
+skipping logging after 258848 examples to avoid logging too frequently
+skipping logging after 258864 examples to avoid logging too frequently
+train stats after 258880 examples: {'loss/total': '1.1208', 'loss/critic': '0.24098', 'loss/policy': '0.42093', 'clipfrac/policy': '0.4063', 'loss/entropy': '1.2536', 'loss/policykl': '6.9785', 'loss/seqratio': '1.1813e-13', 'returns/mean': '0.0091783', 'returns/var': '0.10888', 'val/mean': '-0.05365', 'val/var': '0.0048485', 'examples_per_second': '10.732', 'grad_norm': '17.251', 'counters/examples': 258880, 'counters/updates': 16180}
+skipping logging after 258896 examples to avoid logging too frequently
+skipping logging after 258912 examples to avoid logging too frequently
+skipping logging after 258928 examples to avoid logging too frequently
+train stats after 258944 examples: {'loss/total': '0.96893', 'loss/critic': '0.24976', 'loss/policy': '0.16321', 'clipfrac/policy': '0.41885', 'loss/entropy': '0.95731', 'loss/policykl': '8.0352', 'loss/seqratio': '9.2644e-22', 'returns/mean': '0.011767', 'returns/var': '0.13392', 'val/mean': '0.020888', 'val/var': '0.0023913', 'examples_per_second': '11.61', 'grad_norm': '2.6725', 'counters/examples': 258944, 'counters/updates': 16184}
+skipping logging after 258960 examples to avoid logging too frequently
+skipping logging after 258976 examples to avoid logging too frequently
+skipping logging after 258992 examples to avoid logging too frequently
+train stats after 259008 examples: {'loss/total': '0.75662', 'loss/critic': '0.21926', 'loss/policy': '0.17435', 'clipfrac/policy': '0.40401', 'loss/entropy': '1.3438', 'loss/policykl': '5.7969', 'loss/seqratio': '2.4775e-09', 'returns/mean': '0.03047', 'returns/var': '0.11343', 'val/mean': '-0.015107', 'val/var': '0.0038319', 'examples_per_second': '10.159', 'grad_norm': '2.2662', 'counters/examples': 259008, 'counters/updates': 16188}
+skipping logging after 259024 examples to avoid logging too frequently
+skipping logging after 259040 examples to avoid logging too frequently
+skipping logging after 259056 examples to avoid logging too frequently
+train stats after 259072 examples: {'loss/total': '0.75766', 'loss/critic': '0.23972', 'loss/policy': '0.22096', 'clipfrac/policy': '0.40406', 'loss/entropy': '1.4271', 'loss/policykl': '5.3418', 'loss/seqratio': '1.4752e-06', 'returns/mean': '-0.0069052', 'returns/var': '0.12586', 'val/mean': '-0.0083017', 'val/var': '0.0035892', 'examples_per_second': '8.8659', 'grad_norm': '3.8754', 'counters/examples': 259072, 'counters/updates': 16192}
+skipping logging after 259088 examples to avoid logging too frequently
+skipping logging after 259104 examples to avoid logging too frequently
+skipping logging after 259120 examples to avoid logging too frequently
+train stats after 259136 examples: {'loss/total': '1.1537', 'loss/critic': '0.25602', 'loss/policy': '0.64441', 'clipfrac/policy': '0.33971', 'loss/entropy': '1.492', 'loss/policykl': '5.0664', 'loss/seqratio': '7.0936e-14', 'returns/mean': '0.036127', 'returns/var': '0.13103', 'val/mean': '-0.014776', 'val/var': '0.0032201', 'examples_per_second': '9.7478', 'grad_norm': '27.001', 'counters/examples': 259136, 'counters/updates': 16196}
+skipping logging after 259152 examples to avoid logging too frequently
+skipping logging after 259168 examples to avoid logging too frequently
+skipping logging after 259184 examples to avoid logging too frequently
+train stats after 259200 examples: {'loss/total': '0.75106', 'loss/critic': '0.20699', 'loss/policy': '0.14413', 'clipfrac/policy': '0.47193', 'loss/entropy': '1.2887', 'loss/policykl': '6.0488', 'loss/seqratio': '7.1866e-06', 'returns/mean': '0.10406', 'returns/var': '0.10126', 'val/mean': '0.032717', 'val/var': '0.0013237', 'examples_per_second': '10.532', 'grad_norm': '4.7517', 'counters/examples': 259200, 'counters/updates': 16200}
+skipping logging after 259216 examples to avoid logging too frequently
+skipping logging after 259232 examples to avoid logging too frequently
+skipping logging after 259248 examples to avoid logging too frequently
+train stats after 259264 examples: {'loss/total': '0.72861', 'loss/critic': '0.24939', 'loss/policy': '0.20536', 'clipfrac/policy': '0.42263', 'loss/entropy': '1.4773', 'loss/policykl': '5.209', 'loss/seqratio': '7.7568e-07', 'returns/mean': '0.020619', 'returns/var': '0.11944', 'val/mean': '0.076462', 'val/var': '0.0024056', 'examples_per_second': '10.384', 'grad_norm': '2.6891', 'counters/examples': 259264, 'counters/updates': 16204}
+skipping logging after 259280 examples to avoid logging too frequently
+skipping logging after 259296 examples to avoid logging too frequently
+skipping logging after 259312 examples to avoid logging too frequently
+train stats after 259328 examples: {'loss/total': '0.6107', 'loss/critic': '0.24576', 'loss/policy': '0.16024', 'clipfrac/policy': '0.34046', 'loss/entropy': '1.4743', 'loss/policykl': '4.4795', 'loss/seqratio': '0.0083634', 'returns/mean': '-0.045167', 'returns/var': '0.12148', 'val/mean': '0.026175', 'val/var': '0.0016818', 'examples_per_second': '10.826', 'grad_norm': '2.1737', 'counters/examples': 259328, 'counters/updates': 16208}
+skipping logging after 259344 examples to avoid logging too frequently
+skipping logging after 259360 examples to avoid logging too frequently
+skipping logging after 259376 examples to avoid logging too frequently
+train stats after 259392 examples: {'loss/total': '0.72923', 'loss/critic': '0.21267', 'loss/policy': '0.29448', 'clipfrac/policy': '0.40094', 'loss/entropy': '1.612', 'loss/policykl': '4.3262', 'loss/seqratio': '1.5864e-11', 'returns/mean': '0.0088918', 'returns/var': '0.10414', 'val/mean': '-0.010019', 'val/var': '0.0020249', 'examples_per_second': '10.961', 'grad_norm': '9.3131', 'counters/examples': 259392, 'counters/updates': 16212}
+skipping logging after 259408 examples to avoid logging too frequently
+skipping logging after 259424 examples to avoid logging too frequently
+skipping logging after 259440 examples to avoid logging too frequently
+train stats after 259456 examples: {'loss/total': '0.835', 'loss/critic': '0.24717', 'loss/policy': '0.29871', 'clipfrac/policy': '0.39257', 'loss/entropy': '1.402', 'loss/policykl': '5.3359', 'loss/seqratio': '2.6016e-10', 'returns/mean': '-0.009193', 'returns/var': '0.12264', 'val/mean': '-0.0032286', 'val/var': '0.0023842', 'examples_per_second': '10.657', 'grad_norm': '7.813', 'counters/examples': 259456, 'counters/updates': 16216}
+skipping logging after 259472 examples to avoid logging too frequently
+skipping logging after 259488 examples to avoid logging too frequently
+skipping logging after 259504 examples to avoid logging too frequently
+train stats after 259520 examples: {'loss/total': '0.746', 'loss/critic': '0.23766', 'loss/policy': '0.27646', 'clipfrac/policy': '0.35558', 'loss/entropy': '1.4247', 'loss/policykl': '4.6699', 'loss/seqratio': '3.9637e-06', 'returns/mean': '0.011455', 'returns/var': '0.10878', 'val/mean': '-0.0021379', 'val/var': '0.001626', 'examples_per_second': '9.8375', 'grad_norm': '9.4379', 'counters/examples': 259520, 'counters/updates': 16220}
+skipping logging after 259536 examples to avoid logging too frequently
+skipping logging after 259552 examples to avoid logging too frequently
+skipping logging after 259568 examples to avoid logging too frequently
+train stats after 259584 examples: {'loss/total': '0.73819', 'loss/critic': '0.21615', 'loss/policy': '0.22029', 'clipfrac/policy': '0.38366', 'loss/entropy': '1.2162', 'loss/policykl': '5.1572', 'loss/seqratio': '4.1894e-15', 'returns/mean': '-0.03865', 'returns/var': '0.094053', 'val/mean': '0.0056615', 'val/var': '0.0022748', 'examples_per_second': '10.254', 'grad_norm': '6.532', 'counters/examples': 259584, 'counters/updates': 16224}
+skipping logging after 259600 examples to avoid logging too frequently
+skipping logging after 259616 examples to avoid logging too frequently
+skipping logging after 259632 examples to avoid logging too frequently
+train stats after 259648 examples: {'loss/total': '0.70877', 'loss/critic': '0.23934', 'loss/policy': '0.20491', 'clipfrac/policy': '0.42947', 'loss/entropy': '1.2969', 'loss/policykl': '5.0107', 'loss/seqratio': '1.0516e-12', 'returns/mean': '-0.031933', 'returns/var': '0.11923', 'val/mean': '-0.0091462', 'val/var': '0.0022202', 'examples_per_second': '9.9232', 'grad_norm': '3.4848', 'counters/examples': 259648, 'counters/updates': 16228}
+skipping logging after 259664 examples to avoid logging too frequently
+skipping logging after 259680 examples to avoid logging too frequently
+skipping logging after 259696 examples to avoid logging too frequently
+train stats after 259712 examples: {'loss/total': '0.69176', 'loss/critic': '0.23254', 'loss/policy': '0.23143', 'clipfrac/policy': '0.40558', 'loss/entropy': '1.3377', 'loss/policykl': '4.5771', 'loss/seqratio': '0.00025368', 'returns/mean': '-0.018932', 'returns/var': '0.11654', 'val/mean': '-0.019086', 'val/var': '0.0041327', 'examples_per_second': '10.039', 'grad_norm': '4.4066', 'counters/examples': 259712, 'counters/updates': 16232}
+skipping logging after 259728 examples to avoid logging too frequently
+skipping logging after 259744 examples to avoid logging too frequently
+skipping logging after 259760 examples to avoid logging too frequently
+train stats after 259776 examples: {'loss/total': '0.6954', 'loss/critic': '0.24198', 'loss/policy': '0.2611', 'clipfrac/policy': '0.4182', 'loss/entropy': '1.4489', 'loss/policykl': '4.3193', 'loss/seqratio': '0.0072744', 'returns/mean': '-0.017437', 'returns/var': '0.11957', 'val/mean': '-0.018847', 'val/var': '0.0019763', 'examples_per_second': '10.57', 'grad_norm': '3.4067', 'counters/examples': 259776, 'counters/updates': 16236}
+skipping logging after 259792 examples to avoid logging too frequently
+skipping logging after 259808 examples to avoid logging too frequently
+skipping logging after 259824 examples to avoid logging too frequently
+train stats after 259840 examples: {'loss/total': '2.691', 'loss/critic': '0.2322', 'loss/policy': '2.272', 'clipfrac/policy': '0.35111', 'loss/entropy': '1.4365', 'loss/policykl': '4.166', 'loss/seqratio': '1.8887e-06', 'returns/mean': '-0.025579', 'returns/var': '0.13035', 'val/mean': '-0.025331', 'val/var': '0.0024896', 'examples_per_second': '10.096', 'grad_norm': '117', 'counters/examples': 259840, 'counters/updates': 16240}
+skipping logging after 259856 examples to avoid logging too frequently
+skipping logging after 259872 examples to avoid logging too frequently
+skipping logging after 259888 examples to avoid logging too frequently
+train stats after 259904 examples: {'loss/total': '0.93645', 'loss/critic': '0.1973', 'loss/policy': '0.14151', 'clipfrac/policy': '0.43401', 'loss/entropy': '1.1537', 'loss/policykl': '7.9316', 'loss/seqratio': '4.4793e-11', 'returns/mean': '-0.03017', 'returns/var': '0.097611', 'val/mean': '-0.039909', 'val/var': '0.0050678', 'examples_per_second': '10.604', 'grad_norm': '2.1723', 'counters/examples': 259904, 'counters/updates': 16244}
+skipping logging after 259920 examples to avoid logging too frequently
+skipping logging after 259936 examples to avoid logging too frequently
+skipping logging after 259952 examples to avoid logging too frequently
+train stats after 259968 examples: {'loss/total': '0.85817', 'loss/critic': '0.21266', 'loss/policy': '0.18453', 'clipfrac/policy': '0.47224', 'loss/entropy': '1.2229', 'loss/policykl': '6.7168', 'loss/seqratio': '2.6904e-11', 'returns/mean': '-0.034347', 'returns/var': '0.10426', 'val/mean': '-0.04023', 'val/var': '0.0050259', 'examples_per_second': '10.588', 'grad_norm': '2.1257', 'counters/examples': 259968, 'counters/updates': 16248}
+skipping logging after 259984 examples to avoid logging too frequently
+skipping logging after 260000 examples to avoid logging too frequently
+skipping logging after 260016 examples to avoid logging too frequently
+train stats after 260032 examples: {'loss/total': '0.75941', 'loss/critic': '0.24642', 'loss/policy': '0.14854', 'clipfrac/policy': '0.45222', 'loss/entropy': '1.3755', 'loss/policykl': '6.082', 'loss/seqratio': '2.7284e-14', 'returns/mean': '0.053275', 'returns/var': '0.14669', 'val/mean': '-0.014158', 'val/var': '0.0020349', 'examples_per_second': '8.7597', 'grad_norm': '1.7901', 'counters/examples': 260032, 'counters/updates': 16252}
+skipping logging after 260048 examples to avoid logging too frequently
+skipping logging after 260064 examples to avoid logging too frequently
+skipping logging after 260080 examples to avoid logging too frequently
+train stats after 260096 examples: {'loss/total': '182.96', 'loss/critic': '0.22804', 'loss/policy': '182.39', 'clipfrac/policy': '0.43988', 'loss/entropy': '1.3993', 'loss/policykl': '5.6074', 'loss/seqratio': '3.0169e-27', 'returns/mean': '0.072527', 'returns/var': '0.113', 'val/mean': '0.02364', 'val/var': '0.0021923', 'examples_per_second': '10.71', 'grad_norm': '23040', 'counters/examples': 260096, 'counters/updates': 16256}
+skipping logging after 260112 examples to avoid logging too frequently
+skipping logging after 260128 examples to avoid logging too frequently
+skipping logging after 260144 examples to avoid logging too frequently
+train stats after 260160 examples: {'loss/total': '0.76125', 'loss/critic': '0.23168', 'loss/policy': '0.15151', 'clipfrac/policy': '0.43205', 'loss/entropy': '1.2924', 'loss/policykl': '6.0742', 'loss/seqratio': '1.1244e-08', 'returns/mean': '0.029391', 'returns/var': '0.11376', 'val/mean': '0.056816', 'val/var': '0.0026536', 'examples_per_second': '9.5169', 'grad_norm': '3.7201', 'counters/examples': 260160, 'counters/updates': 16260}
+skipping logging after 260176 examples to avoid logging too frequently
+skipping logging after 260192 examples to avoid logging too frequently
+skipping logging after 260208 examples to avoid logging too frequently
+train stats after 260224 examples: {'loss/total': '0.72066', 'loss/critic': '0.24452', 'loss/policy': '0.21517', 'clipfrac/policy': '0.42445', 'loss/entropy': '1.4169', 'loss/policykl': '5.0312', 'loss/seqratio': '0.0054626', 'returns/mean': '0.01754', 'returns/var': '0.12845', 'val/mean': '0.026066', 'val/var': '0.0015526', 'examples_per_second': '11.191', 'grad_norm': '1.7974', 'counters/examples': 260224, 'counters/updates': 16264}
+skipping logging after 260240 examples to avoid logging too frequently
+skipping logging after 260256 examples to avoid logging too frequently
+skipping logging after 260272 examples to avoid logging too frequently
+train stats after 260288 examples: {'loss/total': '0.71119', 'loss/critic': '0.20029', 'loss/policy': '0.24385', 'clipfrac/policy': '0.40515', 'loss/entropy': '1.4601', 'loss/policykl': '4.6533', 'loss/seqratio': '2.9636e-14', 'returns/mean': '0.029608', 'returns/var': '0.095329', 'val/mean': '0.0065989', 'val/var': '0.0021591', 'examples_per_second': '10.221', 'grad_norm': '5.2504', 'counters/examples': 260288, 'counters/updates': 16268}
+skipping logging after 260304 examples to avoid logging too frequently
+skipping logging after 260320 examples to avoid logging too frequently
+skipping logging after 260336 examples to avoid logging too frequently
+train stats after 260352 examples: {'loss/total': '0.72662', 'loss/critic': '0.2342', 'loss/policy': '0.19657', 'clipfrac/policy': '0.41967', 'loss/entropy': '1.353', 'loss/policykl': '5.2773', 'loss/seqratio': '2.2224e-15', 'returns/mean': '0.021685', 'returns/var': '0.1196', 'val/mean': '0.025925', 'val/var': '0.0015601', 'examples_per_second': '10.583', 'grad_norm': '2.9534', 'counters/examples': 260352, 'counters/updates': 16272}
+skipping logging after 260368 examples to avoid logging too frequently
+skipping logging after 260384 examples to avoid logging too frequently
+skipping logging after 260400 examples to avoid logging too frequently
+train stats after 260416 examples: {'loss/total': '0.69567', 'loss/critic': '0.26147', 'loss/policy': '0.18659', 'clipfrac/policy': '0.37059', 'loss/entropy': '1.3281', 'loss/policykl': '5.0615', 'loss/seqratio': '6.0101e-13', 'returns/mean': '0.021657', 'returns/var': '0.12671', 'val/mean': '0.023865', 'val/var': '0.0015945', 'examples_per_second': '9.8848', 'grad_norm': '2.5473', 'counters/examples': 260416, 'counters/updates': 16276}
+skipping logging after 260432 examples to avoid logging too frequently
+skipping logging after 260448 examples to avoid logging too frequently
+skipping logging after 260464 examples to avoid logging too frequently
+train stats after 260480 examples: {'loss/total': '0.90076', 'loss/critic': '0.23937', 'loss/policy': '0.43181', 'clipfrac/policy': '0.43182', 'loss/entropy': '1.4106', 'loss/policykl': '4.6689', 'loss/seqratio': '0.00017363', 'returns/mean': '0.020261', 'returns/var': '0.12204', 'val/mean': '0.025848', 'val/var': '0.0011135', 'examples_per_second': '10.418', 'grad_norm': '17.001', 'counters/examples': 260480, 'counters/updates': 16280}
+skipping logging after 260496 examples to avoid logging too frequently
+skipping logging after 260512 examples to avoid logging too frequently
+skipping logging after 260528 examples to avoid logging too frequently
+train stats after 260544 examples: {'loss/total': '0.83413', 'loss/critic': '0.21974', 'loss/policy': '0.25893', 'clipfrac/policy': '0.44202', 'loss/entropy': '1.2529', 'loss/policykl': '5.7305', 'loss/seqratio': '0.00035095', 'returns/mean': '-0.01792', 'returns/var': '0.10733', 'val/mean': '0.030964', 'val/var': '0.0015347', 'examples_per_second': '9.5756', 'grad_norm': '21.375', 'counters/examples': 260544, 'counters/updates': 16284}
+skipping logging after 260560 examples to avoid logging too frequently
+skipping logging after 260576 examples to avoid logging too frequently
+skipping logging after 260592 examples to avoid logging too frequently
+train stats after 260608 examples: {'loss/total': '0.9166', 'loss/critic': '0.23449', 'loss/policy': '0.38142', 'clipfrac/policy': '0.40576', 'loss/entropy': '1.3756', 'loss/policykl': '5.3281', 'loss/seqratio': '2.4196e-10', 'returns/mean': '0.020502', 'returns/var': '0.11515', 'val/mean': '0.030659', 'val/var': '0.0015254', 'examples_per_second': '10.088', 'grad_norm': '11.688', 'counters/examples': 260608, 'counters/updates': 16288}
+skipping logging after 260624 examples to avoid logging too frequently
+skipping logging after 260640 examples to avoid logging too frequently
+skipping logging after 260656 examples to avoid logging too frequently
+train stats after 260672 examples: {'loss/total': '0.72453', 'loss/critic': '0.23683', 'loss/policy': '0.1394', 'clipfrac/policy': '0.39396', 'loss/entropy': '1.0498', 'loss/policykl': '5.8252', 'loss/seqratio': '8.2254e-06', 'returns/mean': '0.022985', 'returns/var': '0.12615', 'val/mean': '0.036514', 'val/var': '0.0040174', 'examples_per_second': '9.106', 'grad_norm': '2.1568', 'counters/examples': 260672, 'counters/updates': 16292}
+skipping logging after 260688 examples to avoid logging too frequently
+skipping logging after 260704 examples to avoid logging too frequently
+skipping logging after 260720 examples to avoid logging too frequently
+train stats after 260736 examples: {'loss/total': '0.71963', 'loss/critic': '0.24592', 'loss/policy': '0.18665', 'clipfrac/policy': '0.35982', 'loss/entropy': '1.2046', 'loss/policykl': '5.3086', 'loss/seqratio': '3.6877e-12', 'returns/mean': '0.0196', 'returns/var': '0.12202', 'val/mean': '0.042684', 'val/var': '0.0018761', 'examples_per_second': '11.011', 'grad_norm': '8.0631', 'counters/examples': 260736, 'counters/updates': 16296}
+skipping logging after 260752 examples to avoid logging too frequently
+skipping logging after 260768 examples to avoid logging too frequently
+skipping logging after 260784 examples to avoid logging too frequently
+train stats after 260800 examples: {'loss/total': '1.6038', 'loss/critic': '0.23756', 'loss/policy': '1.0721', 'clipfrac/policy': '0.38869', 'loss/entropy': '1.2086', 'loss/policykl': '5.2949', 'loss/seqratio': '4.4584e-05', 'returns/mean': '-0.011402', 'returns/var': '0.11015', 'val/mean': '0.033547', 'val/var': '0.0010827', 'examples_per_second': '9.9612', 'grad_norm': '193', 'counters/examples': 260800, 'counters/updates': 16300}
+skipping logging after 260816 examples to avoid logging too frequently
+skipping logging after 260832 examples to avoid logging too frequently
+skipping logging after 260848 examples to avoid logging too frequently
+train stats after 260864 examples: {'loss/total': '0.94895', 'loss/critic': '0.24942', 'loss/policy': '0.35112', 'clipfrac/policy': '0.40474', 'loss/entropy': '1.0062', 'loss/policykl': '5.9551', 'loss/seqratio': '1.1227e-12', 'returns/mean': '-0.02904', 'returns/var': '0.12738', 'val/mean': '0.012042', 'val/var': '0.0013273', 'examples_per_second': '10.857', 'grad_norm': '9.4382', 'counters/examples': 260864, 'counters/updates': 16304}
+skipping logging after 260880 examples to avoid logging too frequently
+skipping logging after 260896 examples to avoid logging too frequently
+skipping logging after 260912 examples to avoid logging too frequently
+train stats after 260928 examples: {'loss/total': '0.75423', 'loss/critic': '0.22411', 'loss/policy': '0.17142', 'clipfrac/policy': '0.42259', 'loss/entropy': '1.0512', 'loss/policykl': '5.8027', 'loss/seqratio': '3.3288e-09', 'returns/mean': '-0.033112', 'returns/var': '0.12146', 'val/mean': '-0.0099134', 'val/var': '0.0018027', 'examples_per_second': '10.674', 'grad_norm': '2.9848', 'counters/examples': 260928, 'counters/updates': 16308}
+skipping logging after 260944 examples to avoid logging too frequently
+skipping logging after 260960 examples to avoid logging too frequently
+skipping logging after 260976 examples to avoid logging too frequently
+train stats after 260992 examples: {'loss/total': '0.76555', 'loss/critic': '0.23243', 'loss/policy': '0.27201', 'clipfrac/policy': '0.35848', 'loss/entropy': '1.252', 'loss/policykl': '4.9111', 'loss/seqratio': '0.012634', 'returns/mean': '-0.031423', 'returns/var': '0.123', 'val/mean': '-0.029266', 'val/var': '0.0023685', 'examples_per_second': '11.144', 'grad_norm': '14.125', 'counters/examples': 260992, 'counters/updates': 16312}
+skipping logging after 261008 examples to avoid logging too frequently
+skipping logging after 261024 examples to avoid logging too frequently
+skipping logging after 261040 examples to avoid logging too frequently
+train stats after 261056 examples: {'loss/total': '0.72428', 'loss/critic': '0.23763', 'loss/policy': '0.20615', 'clipfrac/policy': '0.38538', 'loss/entropy': '1.2967', 'loss/policykl': '5.1621', 'loss/seqratio': '2.575e-05', 'returns/mean': '-0.028813', 'returns/var': '0.12691', 'val/mean': '-0.040294', 'val/var': '0.0029221', 'examples_per_second': '11.03', 'grad_norm': '2.5473', 'counters/examples': 261056, 'counters/updates': 16316}
+skipping logging after 261072 examples to avoid logging too frequently
+skipping logging after 261088 examples to avoid logging too frequently
+skipping logging after 261104 examples to avoid logging too frequently
+train stats after 261120 examples: {'loss/total': '0.63922', 'loss/critic': '0.21307', 'loss/policy': '0.16273', 'clipfrac/policy': '0.39919', 'loss/entropy': '1.2653', 'loss/policykl': '4.7441', 'loss/seqratio': '1.2478e-17', 'returns/mean': '-0.017588', 'returns/var': '0.11146', 'val/mean': '-0.042366', 'val/var': '0.0028448', 'examples_per_second': '9.9737', 'grad_norm': '2.235', 'counters/examples': 261120, 'counters/updates': 16320}
+skipping logging after 261136 examples to avoid logging too frequently
+skipping logging after 261152 examples to avoid logging too frequently
+skipping logging after 261168 examples to avoid logging too frequently
+train stats after 261184 examples: {'loss/total': '0.63531', 'loss/critic': '0.24742', 'loss/policy': '0.15689', 'clipfrac/policy': '0.40908', 'loss/entropy': '1.3663', 'loss/policykl': '4.7607', 'loss/seqratio': '2.7642e-14', 'returns/mean': '-0.0023173', 'returns/var': '0.11094', 'val/mean': '-0.004278', 'val/var': '0.0028849', 'examples_per_second': '11.349', 'grad_norm': '3.0472', 'counters/examples': 261184, 'counters/updates': 16324}
+skipping logging after 261200 examples to avoid logging too frequently
+skipping logging after 261216 examples to avoid logging too frequently
+skipping logging after 261232 examples to avoid logging too frequently
+train stats after 261248 examples: {'loss/total': '0.82828', 'loss/critic': '0.23993', 'loss/policy': '0.38789', 'clipfrac/policy': '0.35726', 'loss/entropy': '1.3816', 'loss/policykl': '4.3818', 'loss/seqratio': '6.482e-07', 'returns/mean': '0.012274', 'returns/var': '0.12713', 'val/mean': '-0.0036535', 'val/var': '0.0019023', 'examples_per_second': '9.5062', 'grad_norm': '15.563', 'counters/examples': 261248, 'counters/updates': 16328}
+skipping logging after 261264 examples to avoid logging too frequently
+skipping logging after 261280 examples to avoid logging too frequently
+skipping logging after 261296 examples to avoid logging too frequently
+train stats after 261312 examples: {'loss/total': '0.81171', 'loss/critic': '0.2211', 'loss/policy': '0.23321', 'clipfrac/policy': '0.37175', 'loss/entropy': '1.0558', 'loss/policykl': '5.7656', 'loss/seqratio': '7.242e-06', 'returns/mean': '-0.0066847', 'returns/var': '0.10196', 'val/mean': '0.032173', 'val/var': '0.0020146', 'examples_per_second': '9.6461', 'grad_norm': '2.11', 'counters/examples': 261312, 'counters/updates': 16332}
+skipping logging after 261328 examples to avoid logging too frequently
+skipping logging after 261344 examples to avoid logging too frequently
+skipping logging after 261360 examples to avoid logging too frequently
+train stats after 261376 examples: {'loss/total': '0.74558', 'loss/critic': '0.24', 'loss/policy': '0.2068', 'clipfrac/policy': '0.37968', 'loss/entropy': '1.2231', 'loss/policykl': '5.3633', 'loss/seqratio': '1.716e-12', 'returns/mean': '-0.01873', 'returns/var': '0.12595', 'val/mean': '0.01992', 'val/var': '0.00314', 'examples_per_second': '9.3958', 'grad_norm': '2.3137', 'counters/examples': 261376, 'counters/updates': 16336}
+skipping logging after 261392 examples to avoid logging too frequently
+skipping logging after 261408 examples to avoid logging too frequently
+skipping logging after 261424 examples to avoid logging too frequently
+train stats after 261440 examples: {'loss/total': '0.696', 'loss/critic': '0.23363', 'loss/policy': '0.1911', 'clipfrac/policy': '0.37335', 'loss/entropy': '1.2957', 'loss/policykl': '5.0244', 'loss/seqratio': '2.4562e-10', 'returns/mean': '0.0063056', 'returns/var': '0.10559', 'val/mean': '-0.028768', 'val/var': '0.0019972', 'examples_per_second': '10.689', 'grad_norm': '13.813', 'counters/examples': 261440, 'counters/updates': 16340}
+skipping logging after 261456 examples to avoid logging too frequently
+skipping logging after 261472 examples to avoid logging too frequently
+skipping logging after 261488 examples to avoid logging too frequently
+train stats after 261504 examples: {'loss/total': '0.66153', 'loss/critic': '0.22833', 'loss/policy': '0.19062', 'clipfrac/policy': '0.41724', 'loss/entropy': '1.3956', 'loss/policykl': '4.6846', 'loss/seqratio': '1.2676e-11', 'returns/mean': '0.023687', 'returns/var': '0.11758', 'val/mean': '0.0049567', 'val/var': '0.0021257', 'examples_per_second': '10.499', 'grad_norm': '1.8132', 'counters/examples': 261504, 'counters/updates': 16344}
+skipping logging after 261520 examples to avoid logging too frequently
+skipping logging after 261536 examples to avoid logging too frequently
+skipping logging after 261552 examples to avoid logging too frequently
+train stats after 261568 examples: {'loss/total': '0.87973', 'loss/critic': '0.27742', 'loss/policy': '0.41711', 'clipfrac/policy': '0.38063', 'loss/entropy': '1.4054', 'loss/policykl': '4.6025', 'loss/seqratio': '0.0041199', 'returns/mean': '0.059869', 'returns/var': '0.14689', 'val/mean': '0.017971', 'val/var': '0.0016201', 'examples_per_second': '10.567', 'grad_norm': '69.501', 'counters/examples': 261568, 'counters/updates': 16348}
+skipping logging after 261584 examples to avoid logging too frequently
+skipping logging after 261600 examples to avoid logging too frequently
+skipping logging after 261616 examples to avoid logging too frequently
+train stats after 261632 examples: {'loss/total': '0.64649', 'loss/critic': '0.22007', 'loss/policy': '0.16602', 'clipfrac/policy': '0.38529', 'loss/entropy': '1.3337', 'loss/policykl': '4.7861', 'loss/seqratio': '8.44e-05', 'returns/mean': '0.033594', 'returns/var': '0.1024', 'val/mean': '0.040296', 'val/var': '0.0025668', 'examples_per_second': '9.4956', 'grad_norm': '2.0161', 'counters/examples': 261632, 'counters/updates': 16352}
+skipping logging after 261648 examples to avoid logging too frequently
+skipping logging after 261664 examples to avoid logging too frequently
+skipping logging after 261680 examples to avoid logging too frequently
+train stats after 261696 examples: {'loss/total': '0.74579', 'loss/critic': '0.24672', 'loss/policy': '0.27311', 'clipfrac/policy': '0.36384', 'loss/entropy': '1.4161', 'loss/policykl': '4.7021', 'loss/seqratio': '0.010071', 'returns/mean': '0.049636', 'returns/var': '0.11262', 'val/mean': '0.046848', 'val/var': '0.0032969', 'examples_per_second': '12.349', 'grad_norm': '11.313', 'counters/examples': 261696, 'counters/updates': 16356}
+skipping logging after 261712 examples to avoid logging too frequently
+skipping logging after 261728 examples to avoid logging too frequently
+skipping logging after 261744 examples to avoid logging too frequently
+train stats after 261760 examples: {'loss/total': '0.6781', 'loss/critic': '0.2341', 'loss/policy': '0.27537', 'clipfrac/policy': '0.35147', 'loss/entropy': '1.3014', 'loss/policykl': '4.0049', 'loss/seqratio': '0.00029755', 'returns/mean': '0.019134', 'returns/var': '0.10983', 'val/mean': '0.045017', 'val/var': '0.0031209', 'examples_per_second': '10.233', 'grad_norm': '4.1889', 'counters/examples': 261760, 'counters/updates': 16360}
+skipping logging after 261776 examples to avoid logging too frequently
+skipping logging after 261792 examples to avoid logging too frequently
+skipping logging after 261808 examples to avoid logging too frequently
+train stats after 261824 examples: {'loss/total': '0.6997', 'loss/critic': '0.22191', 'loss/policy': '0.31418', 'clipfrac/policy': '0.32298', 'loss/entropy': '1.3249', 'loss/policykl': '3.833', 'loss/seqratio': '0.076172', 'returns/mean': '-0.022477', 'returns/var': '0.10984', 'val/mean': '0.013996', 'val/var': '0.0020475', 'examples_per_second': '9.4664', 'grad_norm': '11.063', 'counters/examples': 261824, 'counters/updates': 16364}
+skipping logging after 261840 examples to avoid logging too frequently
+skipping logging after 261856 examples to avoid logging too frequently
+skipping logging after 261872 examples to avoid logging too frequently
+train stats after 261888 examples: {'loss/total': '0.70043', 'loss/critic': '0.24957', 'loss/policy': '0.24029', 'clipfrac/policy': '0.37554', 'loss/entropy': '1.307', 'loss/policykl': '4.5762', 'loss/seqratio': '1.4976e-06', 'returns/mean': '-0.10954', 'returns/var': '0.1221', 'val/mean': '-0.038297', 'val/var': '0.0023048', 'examples_per_second': '11.047', 'grad_norm': '4.6578', 'counters/examples': 261888, 'counters/updates': 16368}
+skipping logging after 261904 examples to avoid logging too frequently
+skipping logging after 261920 examples to avoid logging too frequently
+skipping logging after 261936 examples to avoid logging too frequently
+train stats after 261952 examples: {'loss/total': '1.2018', 'loss/critic': '0.24641', 'loss/policy': '0.71579', 'clipfrac/policy': '0.36452', 'loss/entropy': '1.2782', 'loss/policykl': '4.835', 'loss/seqratio': '1.8366e-16', 'returns/mean': '-0.11007', 'returns/var': '0.10752', 'val/mean': '-0.14462', 'val/var': '0.0085192', 'examples_per_second': '9.8996', 'grad_norm': '60.252', 'counters/examples': 261952, 'counters/updates': 16372}
+skipping logging after 261968 examples to avoid logging too frequently
+skipping logging after 261984 examples to avoid logging too frequently
+skipping logging after 262000 examples to avoid logging too frequently
+train stats after 262016 examples: {'loss/total': '0.82742', 'loss/critic': '0.25724', 'loss/policy': '0.22829', 'clipfrac/policy': '0.41905', 'loss/entropy': '1.2545', 'loss/policykl': '5.9648', 'loss/seqratio': '0.0082397', 'returns/mean': '0.0012071', 'returns/var': '0.13022', 'val/mean': '-0.029986', 'val/var': '0.0016658', 'examples_per_second': '9.2849', 'grad_norm': '5.8446', 'counters/examples': 262016, 'counters/updates': 16376}
+skipping logging after 262032 examples to avoid logging too frequently
+skipping logging after 262048 examples to avoid logging too frequently
+skipping logging after 262064 examples to avoid logging too frequently
+train stats after 262080 examples: {'loss/total': '0.68788', 'loss/critic': '0.2272', 'loss/policy': '0.17169', 'clipfrac/policy': '0.34947', 'loss/entropy': '1.2563', 'loss/policykl': '5.1367', 'loss/seqratio': '1.9499e-11', 'returns/mean': '-0.020707', 'returns/var': '0.11926', 'val/mean': '0.00077724', 'val/var': '0.0024345', 'examples_per_second': '10.983', 'grad_norm': '1.899', 'counters/examples': 262080, 'counters/updates': 16380}
+skipping logging after 262096 examples to avoid logging too frequently
+skipping logging after 262112 examples to avoid logging too frequently
+skipping logging after 262128 examples to avoid logging too frequently
+train stats after 262144 examples: {'loss/total': '0.63752', 'loss/critic': '0.22989', 'loss/policy': '0.13193', 'clipfrac/policy': '0.41761', 'loss/entropy': '1.3396', 'loss/policykl': '5.0312', 'loss/seqratio': '8.4377e-15', 'returns/mean': '-0.01272', 'returns/var': '0.10583', 'val/mean': '-0.0023227', 'val/var': '0.0015349', 'examples_per_second': '10.461', 'grad_norm': '1.6722', 'counters/examples': 262144, 'counters/updates': 16384}
+skipping logging after 262160 examples to avoid logging too frequently
+skipping logging after 262176 examples to avoid logging too frequently
+skipping logging after 262192 examples to avoid logging too frequently
+train stats after 262208 examples: {'loss/total': '0.60459', 'loss/critic': '0.23574', 'loss/policy': '0.15448', 'clipfrac/policy': '0.36709', 'loss/entropy': '1.3495', 'loss/policykl': '4.4814', 'loss/seqratio': '0.032227', 'returns/mean': '-0.021069', 'returns/var': '0.11501', 'val/mean': '0.0018368', 'val/var': '0.0018699', 'examples_per_second': '10.613', 'grad_norm': '2.1881', 'counters/examples': 262208, 'counters/updates': 16388}
+skipping logging after 262224 examples to avoid logging too frequently
+skipping logging after 262240 examples to avoid logging too frequently
+skipping logging after 262256 examples to avoid logging too frequently
+train stats after 262272 examples: {'loss/total': '0.82776', 'loss/critic': '0.23491', 'loss/policy': '0.40586', 'clipfrac/policy': '0.34782', 'loss/entropy': '1.3904', 'loss/policykl': '4.1963', 'loss/seqratio': '1.5094e-16', 'returns/mean': '0.0081873', 'returns/var': '0.11321', 'val/mean': '-0.013718', 'val/var': '0.003233', 'examples_per_second': '11.127', 'grad_norm': '42.251', 'counters/examples': 262272, 'counters/updates': 16392}
+skipping logging after 262288 examples to avoid logging too frequently
+skipping logging after 262304 examples to avoid logging too frequently
+skipping logging after 262320 examples to avoid logging too frequently
+train stats after 262336 examples: {'loss/total': '0.65527', 'loss/critic': '0.24169', 'loss/policy': '0.18032', 'clipfrac/policy': '0.35837', 'loss/entropy': '1.3467', 'loss/policykl': '4.7246', 'loss/seqratio': '0.00019074', 'returns/mean': '-0.015329', 'returns/var': '0.13704', 'val/mean': '-0.0001483', 'val/var': '0.0022211', 'examples_per_second': '10.939', 'grad_norm': '1.563', 'counters/examples': 262336, 'counters/updates': 16396}
+skipping logging after 262352 examples to avoid logging too frequently
+skipping logging after 262368 examples to avoid logging too frequently
+skipping logging after 262384 examples to avoid logging too frequently
+train stats after 262400 examples: {'loss/total': '0.55439', 'loss/critic': '0.22666', 'loss/policy': '0.13184', 'clipfrac/policy': '0.32858', 'loss/entropy': '1.3095', 'loss/policykl': '4.2021', 'loss/seqratio': '0.064942', 'returns/mean': '-0.013482', 'returns/var': '0.12466', 'val/mean': '-0.022667', 'val/var': '0.0032182', 'examples_per_second': '9.6045', 'grad_norm': '1.8285', 'counters/examples': 262400, 'counters/updates': 16400}
+skipping logging after 262416 examples to avoid logging too frequently
+skipping logging after 262432 examples to avoid logging too frequently
+skipping logging after 262448 examples to avoid logging too frequently
+train stats after 262464 examples: {'loss/total': '0.90768', 'loss/critic': '0.2412', 'loss/policy': '0.50354', 'clipfrac/policy': '0.35432', 'loss/entropy': '1.3964', 'loss/policykl': '4.0156', 'loss/seqratio': '0.015503', 'returns/mean': '0.018539', 'returns/var': '0.10733', 'val/mean': '-0.017459', 'val/var': '0.004087', 'examples_per_second': '10.177', 'grad_norm': '48.501', 'counters/examples': 262464, 'counters/updates': 16404}
+skipping logging after 262480 examples to avoid logging too frequently
+skipping logging after 262496 examples to avoid logging too frequently
+skipping logging after 262512 examples to avoid logging too frequently
+train stats after 262528 examples: {'loss/total': '0.65306', 'loss/critic': '0.26263', 'loss/policy': '0.22575', 'clipfrac/policy': '0.38664', 'loss/entropy': '1.4741', 'loss/policykl': '4.2461', 'loss/seqratio': '4.5805e-22', 'returns/mean': '-0.03528', 'returns/var': '0.14872', 'val/mean': '-0.046915', 'val/var': '0.0041103', 'examples_per_second': '9.1232', 'grad_norm': '6.9692', 'counters/examples': 262528, 'counters/updates': 16408}
+skipping logging after 262544 examples to avoid logging too frequently
+skipping logging after 262560 examples to avoid logging too frequently
+skipping logging after 262576 examples to avoid logging too frequently
+train stats after 262592 examples: {'loss/total': '0.71373', 'loss/critic': '0.23841', 'loss/policy': '0.30034', 'clipfrac/policy': '0.37938', 'loss/entropy': '1.4145', 'loss/policykl': '4.1113', 'loss/seqratio': '3.1883e-11', 'returns/mean': '-0.014389', 'returns/var': '0.11704', 'val/mean': '-0.027658', 'val/var': '0.0029354', 'examples_per_second': '10.664', 'grad_norm': '6.6568', 'counters/examples': 262592, 'counters/updates': 16412}
+skipping logging after 262608 examples to avoid logging too frequently
+skipping logging after 262624 examples to avoid logging too frequently
+skipping logging after 262640 examples to avoid logging too frequently
+train stats after 262656 examples: {'loss/total': '0.62336', 'loss/critic': '0.24254', 'loss/policy': '0.18673', 'clipfrac/policy': '0.39718', 'loss/entropy': '1.3727', 'loss/policykl': '4.3438', 'loss/seqratio': '0.074707', 'returns/mean': '-0.012556', 'returns/var': '0.123', 'val/mean': '-0.052219', 'val/var': '0.0059128', 'examples_per_second': '10.707', 'grad_norm': '3.4696', 'counters/examples': 262656, 'counters/updates': 16416}
+skipping logging after 262672 examples to avoid logging too frequently
+skipping logging after 262688 examples to avoid logging too frequently
+skipping logging after 262704 examples to avoid logging too frequently
+train stats after 262720 examples: {'loss/total': '0.76041', 'loss/critic': '0.22684', 'loss/policy': '0.36019', 'clipfrac/policy': '0.33725', 'loss/entropy': '1.3434', 'loss/policykl': '3.9824', 'loss/seqratio': '2.6218e-16', 'returns/mean': '0.017819', 'returns/var': '0.10949', 'val/mean': '-0.0057279', 'val/var': '0.0032272', 'examples_per_second': '9.9787', 'grad_norm': '8.0631', 'counters/examples': 262720, 'counters/updates': 16420}
+skipping logging after 262736 examples to avoid logging too frequently
+skipping logging after 262752 examples to avoid logging too frequently
+skipping logging after 262768 examples to avoid logging too frequently
+train stats after 262784 examples: {'loss/total': '1.1467', 'loss/critic': '0.2031', 'loss/policy': '0.58019', 'clipfrac/policy': '0.43987', 'loss/entropy': '1.1811', 'loss/policykl': '5.6445', 'loss/seqratio': '6.1989e-06', 'returns/mean': '0.027586', 'returns/var': '0.098232', 'val/mean': '0.0057369', 'val/var': '0.0036411', 'examples_per_second': '11.091', 'grad_norm': '57.001', 'counters/examples': 262784, 'counters/updates': 16424}
+skipping logging after 262800 examples to avoid logging too frequently
+skipping logging after 262816 examples to avoid logging too frequently
+skipping logging after 262832 examples to avoid logging too frequently
+train stats after 262848 examples: {'loss/total': '0.94263', 'loss/critic': '0.2273', 'loss/policy': '0.25774', 'clipfrac/policy': '0.43154', 'loss/entropy': '1.155', 'loss/policykl': '6.8262', 'loss/seqratio': '0.004059', 'returns/mean': '0.0069921', 'returns/var': '0.11849', 'val/mean': '0.027853', 'val/var': '0.002727', 'examples_per_second': '10.014', 'grad_norm': '13.688', 'counters/examples': 262848, 'counters/updates': 16428}
+skipping logging after 262864 examples to avoid logging too frequently
+skipping logging after 262880 examples to avoid logging too frequently
+skipping logging after 262896 examples to avoid logging too frequently
+train stats after 262912 examples: {'loss/total': '0.8167', 'loss/critic': '0.21019', 'loss/policy': '0.18032', 'clipfrac/policy': '0.43269', 'loss/entropy': '1.2627', 'loss/policykl': '6.3398', 'loss/seqratio': '2.5747e-30', 'returns/mean': '-0.01429', 'returns/var': '0.11781', 'val/mean': '-0.0018845', 'val/var': '0.0031166', 'examples_per_second': '10.002', 'grad_norm': '2.1569', 'counters/examples': 262912, 'counters/updates': 16432}
+skipping logging after 262928 examples to avoid logging too frequently
+skipping logging after 262944 examples to avoid logging too frequently
+skipping logging after 262960 examples to avoid logging too frequently
+train stats after 262976 examples: {'loss/total': '0.78978', 'loss/critic': '0.2239', 'loss/policy': '0.227', 'clipfrac/policy': '0.40284', 'loss/entropy': '1.329', 'loss/policykl': '5.6055', 'loss/seqratio': '0.011719', 'returns/mean': '-0.027041', 'returns/var': '0.10504', 'val/mean': '-0.024849', 'val/var': '0.0050488', 'examples_per_second': '10.279', 'grad_norm': '3.6728', 'counters/examples': 262976, 'counters/updates': 16436}
+skipping logging after 262992 examples to avoid logging too frequently
+skipping logging after 263008 examples to avoid logging too frequently
+skipping logging after 263024 examples to avoid logging too frequently
+train stats after 263040 examples: {'loss/total': '0.94549', 'loss/critic': '0.24408', 'loss/policy': '0.44671', 'clipfrac/policy': '0.38042', 'loss/entropy': '1.3688', 'loss/policykl': '4.9668', 'loss/seqratio': '2.8522e-08', 'returns/mean': '-0.05266', 'returns/var': '0.13048', 'val/mean': '0.0041991', 'val/var': '0.0028744', 'examples_per_second': '9.4426', 'grad_norm': '9.7508', 'counters/examples': 263040, 'counters/updates': 16440}
+skipping logging after 263056 examples to avoid logging too frequently
+skipping logging after 263072 examples to avoid logging too frequently
+skipping logging after 263088 examples to avoid logging too frequently
+train stats after 263104 examples: {'loss/total': '85.942', 'loss/critic': '0.20621', 'loss/policy': '85.414', 'clipfrac/policy': '0.42244', 'loss/entropy': '1.3582', 'loss/policykl': '5.2676', 'loss/seqratio': '3.2131e-08', 'returns/mean': '-0.082758', 'returns/var': '0.094248', 'val/mean': '-0.030362', 'val/var': '0.0031214', 'examples_per_second': '11.238', 'grad_norm': '1792', 'counters/examples': 263104, 'counters/updates': 16444}
+skipping logging after 263120 examples to avoid logging too frequently
+skipping logging after 263136 examples to avoid logging too frequently
+skipping logging after 263152 examples to avoid logging too frequently
+train stats after 263168 examples: {'loss/total': '0.88144', 'loss/critic': '0.26134', 'loss/policy': '0.18889', 'clipfrac/policy': '0.50271', 'loss/entropy': '1.3624', 'loss/policykl': '6.9004', 'loss/seqratio': '3.379e-08', 'returns/mean': '-0.12337', 'returns/var': '0.14209', 'val/mean': '-0.14717', 'val/var': '0.0086327', 'examples_per_second': '12.182', 'grad_norm': '2.0177', 'counters/examples': 263168, 'counters/updates': 16448}
+skipping logging after 263184 examples to avoid logging too frequently
+skipping logging after 263200 examples to avoid logging too frequently
+skipping logging after 263216 examples to avoid logging too frequently
+train stats after 263232 examples: {'loss/total': '0.79089', 'loss/critic': '0.21103', 'loss/policy': '0.13558', 'clipfrac/policy': '0.45454', 'loss/entropy': '1.3733', 'loss/policykl': '6.5332', 'loss/seqratio': '2.9976e-15', 'returns/mean': '-0.021647', 'returns/var': '0.096032', 'val/mean': '-0.05014', 'val/var': '0.003263', 'examples_per_second': '10.838', 'grad_norm': '1.7435', 'counters/examples': 263232, 'counters/updates': 16452}
+skipping logging after 263248 examples to avoid logging too frequently
+skipping logging after 263264 examples to avoid logging too frequently
+skipping logging after 263280 examples to avoid logging too frequently
+train stats after 263296 examples: {'loss/total': '0.76119', 'loss/critic': '0.22919', 'loss/policy': '0.17808', 'clipfrac/policy': '0.46009', 'loss/entropy': '1.4345', 'loss/policykl': '5.8066', 'loss/seqratio': '0.00061035', 'returns/mean': '0.0096944', 'returns/var': '0.10881', 'val/mean': '0.0029078', 'val/var': '0.0031617', 'examples_per_second': '11.004', 'grad_norm': '1.8054', 'counters/examples': 263296, 'counters/updates': 16456}
+skipping logging after 263312 examples to avoid logging too frequently
+skipping logging after 263328 examples to avoid logging too frequently
+skipping logging after 263344 examples to avoid logging too frequently
+train stats after 263360 examples: {'loss/total': '0.72404', 'loss/critic': '0.22546', 'loss/policy': '0.16625', 'clipfrac/policy': '0.46015', 'loss/entropy': '1.5095', 'loss/policykl': '5.5547', 'loss/seqratio': '2.2006e-08', 'returns/mean': '0.031812', 'returns/var': '0.11426', 'val/mean': '0.0094651', 'val/var': '0.0018587', 'examples_per_second': '10.032', 'grad_norm': '3.8132', 'counters/examples': 263360, 'counters/updates': 16460}
+skipping logging after 263376 examples to avoid logging too frequently
+skipping logging after 263392 examples to avoid logging too frequently
+skipping logging after 263408 examples to avoid logging too frequently
+train stats after 263424 examples: {'loss/total': '1.0634', 'loss/critic': '0.22715', 'loss/policy': '0.59444', 'clipfrac/policy': '0.37594', 'loss/entropy': '1.5762', 'loss/policykl': '4.667', 'loss/seqratio': '8.3267e-17', 'returns/mean': '-0.014537', 'returns/var': '0.11277', 'val/mean': '0.034195', 'val/var': '0.00245', 'examples_per_second': '9.6985', 'grad_norm': '38.751', 'counters/examples': 263424, 'counters/updates': 16464}
+skipping logging after 263440 examples to avoid logging too frequently
+skipping logging after 263456 examples to avoid logging too frequently
+skipping logging after 263472 examples to avoid logging too frequently
+train stats after 263488 examples: {'loss/total': '0.88261', 'loss/critic': '0.2306', 'loss/policy': '0.2575', 'clipfrac/policy': '0.46315', 'loss/entropy': '1.2916', 'loss/policykl': '6.2266', 'loss/seqratio': '3.7178e-07', 'returns/mean': '-0.032239', 'returns/var': '0.11255', 'val/mean': '-0.0072069', 'val/var': '0.0021577', 'examples_per_second': '10.721', 'grad_norm': '2.766', 'counters/examples': 263488, 'counters/updates': 16468}
+skipping logging after 263504 examples to avoid logging too frequently
+skipping logging after 263520 examples to avoid logging too frequently
+skipping logging after 263536 examples to avoid logging too frequently
+train stats after 263552 examples: {'loss/total': '2.1401', 'loss/critic': '0.24819', 'loss/policy': '1.4984', 'clipfrac/policy': '0.43842', 'loss/entropy': '1.1451', 'loss/policykl': '6.3926', 'loss/seqratio': '1.9063e-09', 'returns/mean': '-0.019325', 'returns/var': '0.13656', 'val/mean': '-0.0050526', 'val/var': '0.0018191', 'examples_per_second': '11.139', 'grad_norm': '83.5', 'counters/examples': 263552, 'counters/updates': 16472}
+skipping logging after 263568 examples to avoid logging too frequently
+skipping logging after 263584 examples to avoid logging too frequently
+skipping logging after 263600 examples to avoid logging too frequently
+train stats after 263616 examples: {'loss/total': '0.92105', 'loss/critic': '0.21976', 'loss/policy': '0.16959', 'clipfrac/policy': '0.47443', 'loss/entropy': '0.96438', 'loss/policykl': '7.4922', 'loss/seqratio': '1.0501e-16', 'returns/mean': '0.015963', 'returns/var': '0.10379', 'val/mean': '-0.0098553', 'val/var': '0.003536', 'examples_per_second': '10.539', 'grad_norm': '5.5942', 'counters/examples': 263616, 'counters/updates': 16476}
+skipping logging after 263632 examples to avoid logging too frequently
+skipping logging after 263648 examples to avoid logging too frequently
+skipping logging after 263664 examples to avoid logging too frequently
+train stats after 263680 examples: {'loss/total': '0.82339', 'loss/critic': '0.22263', 'loss/policy': '0.23095', 'clipfrac/policy': '0.3899', 'loss/entropy': '1.2075', 'loss/policykl': '5.9062', 'loss/seqratio': '3.0731e-13', 'returns/mean': '-0.1125', 'returns/var': '0.10311', 'val/mean': '-0.023515', 'val/var': '0.0054135', 'examples_per_second': '10.61', 'grad_norm': '4.3454', 'counters/examples': 263680, 'counters/updates': 16480}
+skipping logging after 263696 examples to avoid logging too frequently
+skipping logging after 263712 examples to avoid logging too frequently
+skipping logging after 263728 examples to avoid logging too frequently
+train stats after 263744 examples: {'loss/total': '0.69909', 'loss/critic': '0.25905', 'loss/policy': '0.15854', 'clipfrac/policy': '0.43991', 'loss/entropy': '1.2965', 'loss/policykl': '5.3799', 'loss/seqratio': '1.2187e-10', 'returns/mean': '-0.083312', 'returns/var': '0.13362', 'val/mean': '-0.1088', 'val/var': '0.0085783', 'examples_per_second': '9.8776', 'grad_norm': '1.7282', 'counters/examples': 263744, 'counters/updates': 16484}
+skipping logging after 263760 examples to avoid logging too frequently
+skipping logging after 263776 examples to avoid logging too frequently
+skipping logging after 263792 examples to avoid logging too frequently
+train stats after 263808 examples: {'loss/total': '0.73161', 'loss/critic': '0.24056', 'loss/policy': '0.24165', 'clipfrac/policy': '0.42268', 'loss/entropy': '1.2942', 'loss/policykl': '4.875', 'loss/seqratio': '0.069824', 'returns/mean': '-0.034672', 'returns/var': '0.13155', 'val/mean': '-0.027316', 'val/var': '0.0036795', 'examples_per_second': '10.113', 'grad_norm': '3.3601', 'counters/examples': 263808, 'counters/updates': 16488}
+skipping logging after 263824 examples to avoid logging too frequently
+skipping logging after 263840 examples to avoid logging too frequently
+skipping logging after 263856 examples to avoid logging too frequently
+train stats after 263872 examples: {'loss/total': '0.67974', 'loss/critic': '0.23841', 'loss/policy': '0.17088', 'clipfrac/policy': '0.39865', 'loss/entropy': '1.3243', 'loss/policykl': '5.0625', 'loss/seqratio': '0.032594', 'returns/mean': '-0.0028517', 'returns/var': '0.12698', 'val/mean': '-0.016067', 'val/var': '0.0022595', 'examples_per_second': '10.934', 'grad_norm': '23.875', 'counters/examples': 263872, 'counters/updates': 16492}
+skipping logging after 263888 examples to avoid logging too frequently
+skipping logging after 263904 examples to avoid logging too frequently
+skipping logging after 263920 examples to avoid logging too frequently
+train stats after 263936 examples: {'loss/total': '0.68401', 'loss/critic': '0.24741', 'loss/policy': '0.25856', 'clipfrac/policy': '0.34907', 'loss/entropy': '1.4593', 'loss/policykl': '4.2305', 'loss/seqratio': '9.127e-07', 'returns/mean': '-0.065185', 'returns/var': '0.1253', 'val/mean': '-0.01301', 'val/var': '0.0017388', 'examples_per_second': '10.476', 'grad_norm': '6.2823', 'counters/examples': 263936, 'counters/updates': 16496}
+skipping logging after 263952 examples to avoid logging too frequently
+skipping logging after 263968 examples to avoid logging too frequently
+skipping logging after 263984 examples to avoid logging too frequently
+train stats after 264000 examples: {'loss/total': '0.67597', 'loss/critic': '0.24871', 'loss/policy': '0.1542', 'clipfrac/policy': '0.45447', 'loss/entropy': '1.3633', 'loss/policykl': '5.1914', 'loss/seqratio': '7.5996e-07', 'returns/mean': '0.039692', 'returns/var': '0.1139', 'val/mean': '-0.038937', 'val/var': '0.0024161', 'examples_per_second': '10.776', 'grad_norm': '2.689', 'counters/examples': 264000, 'counters/updates': 16500}
+skipping logging after 264016 examples to avoid logging too frequently
+skipping logging after 264032 examples to avoid logging too frequently
+skipping logging after 264048 examples to avoid logging too frequently
+train stats after 264064 examples: {'loss/total': '0.6295', 'loss/critic': '0.23977', 'loss/policy': '0.14066', 'clipfrac/policy': '0.42747', 'loss/entropy': '1.4456', 'loss/policykl': '4.8652', 'loss/seqratio': '1.3968e-17', 'returns/mean': '0.081561', 'returns/var': '0.11088', 'val/mean': '-0.00072193', 'val/var': '0.0017809', 'examples_per_second': '9.8897', 'grad_norm': '1.4932', 'counters/examples': 264064, 'counters/updates': 16504}
+skipping logging after 264080 examples to avoid logging too frequently
+skipping logging after 264096 examples to avoid logging too frequently
+skipping logging after 264112 examples to avoid logging too frequently
+train stats after 264128 examples: {'loss/total': '0.71766', 'loss/critic': '0.23747', 'loss/policy': '0.24715', 'clipfrac/policy': '0.3568', 'loss/entropy': '1.498', 'loss/policykl': '4.6846', 'loss/seqratio': '2.6838e-14', 'returns/mean': '0.065367', 'returns/var': '0.11562', 'val/mean': '0.022583', 'val/var': '0.0011425', 'examples_per_second': '9.4455', 'grad_norm': '4.2194', 'counters/examples': 264128, 'counters/updates': 16508}
+skipping logging after 264144 examples to avoid logging too frequently
+skipping logging after 264160 examples to avoid logging too frequently
+skipping logging after 264176 examples to avoid logging too frequently
+train stats after 264192 examples: {'loss/total': '0.71624', 'loss/critic': '0.24845', 'loss/policy': '0.31214', 'clipfrac/policy': '0.40559', 'loss/entropy': '1.515', 'loss/policykl': '4.0195', 'loss/seqratio': '1.1799e-09', 'returns/mean': '0.044468', 'returns/var': '0.11826', 'val/mean': '0.031303', 'val/var': '0.0023746', 'examples_per_second': '9.8804', 'grad_norm': '6.7191', 'counters/examples': 264192, 'counters/updates': 16512}
+skipping logging after 264208 examples to avoid logging too frequently
+skipping logging after 264224 examples to avoid logging too frequently
+skipping logging after 264240 examples to avoid logging too frequently
+train stats after 264256 examples: {'loss/total': '2.1671', 'loss/critic': '0.23393', 'loss/policy': '1.7835', 'clipfrac/policy': '0.37405', 'loss/entropy': '1.475', 'loss/policykl': '3.8125', 'loss/seqratio': '1.7521e-08', 'returns/mean': '0.012433', 'returns/var': '0.12352', 'val/mean': '0.032616', 'val/var': '0.0018338', 'examples_per_second': '10.093', 'grad_norm': '107.5', 'counters/examples': 264256, 'counters/updates': 16516}
+skipping logging after 264272 examples to avoid logging too frequently
+skipping logging after 264288 examples to avoid logging too frequently
+skipping logging after 264304 examples to avoid logging too frequently
+train stats after 264320 examples: {'loss/total': '1.242', 'loss/critic': '0.25527', 'loss/policy': '0.5693', 'clipfrac/policy': '0.47534', 'loss/entropy': '1.0316', 'loss/policykl': '6.7012', 'loss/seqratio': '0.010376', 'returns/mean': '-0.013154', 'returns/var': '0.11173', 'val/mean': '0.044701', 'val/var': '0.0011747', 'examples_per_second': '10.308', 'grad_norm': '29.625', 'counters/examples': 264320, 'counters/updates': 16520}
+skipping logging after 264336 examples to avoid logging too frequently
+skipping logging after 264352 examples to avoid logging too frequently
+skipping logging after 264368 examples to avoid logging too frequently
+train stats after 264384 examples: {'loss/total': '0.85021', 'loss/critic': '0.22885', 'loss/policy': '0.13479', 'clipfrac/policy': '0.46968', 'loss/entropy': '1.01', 'loss/policykl': '7.1348', 'loss/seqratio': '3.499e-19', 'returns/mean': '0.061245', 'returns/var': '0.12276', 'val/mean': '0.053268', 'val/var': '0.0021219', 'examples_per_second': '10.552', 'grad_norm': '4.3441', 'counters/examples': 264384, 'counters/updates': 16524}
+skipping logging after 264400 examples to avoid logging too frequently
+skipping logging after 264416 examples to avoid logging too frequently
+skipping logging after 264432 examples to avoid logging too frequently
+train stats after 264448 examples: {'loss/total': '0.71466', 'loss/critic': '0.24139', 'loss/policy': '0.13571', 'clipfrac/policy': '0.40913', 'loss/entropy': '1.2597', 'loss/policykl': '5.7656', 'loss/seqratio': '1.8996e-10', 'returns/mean': '0.069449', 'returns/var': '0.11985', 'val/mean': '0.040077', 'val/var': '0.0021938', 'examples_per_second': '9.9822', 'grad_norm': '2.4847', 'counters/examples': 264448, 'counters/updates': 16528}
+skipping logging after 264464 examples to avoid logging too frequently
+skipping logging after 264480 examples to avoid logging too frequently
+skipping logging after 264496 examples to avoid logging too frequently
+train stats after 264512 examples: {'loss/total': '0.70121', 'loss/critic': '0.21508', 'loss/policy': '0.14425', 'clipfrac/policy': '0.41205', 'loss/entropy': '1.3', 'loss/policykl': '5.5449', 'loss/seqratio': '3.4317e-13', 'returns/mean': '0.027126', 'returns/var': '0.093464', 'val/mean': '0.040795', 'val/var': '0.0014311', 'examples_per_second': '10.244', 'grad_norm': '1.8206', 'counters/examples': 264512, 'counters/updates': 16532}
+skipping logging after 264528 examples to avoid logging too frequently
+skipping logging after 264544 examples to avoid logging too frequently
+skipping logging after 264560 examples to avoid logging too frequently
+train stats after 264576 examples: {'loss/total': '0.60843', 'loss/critic': '0.23835', 'loss/policy': '0.1594', 'clipfrac/policy': '0.37719', 'loss/entropy': '1.4148', 'loss/policykl': '4.4688', 'loss/seqratio': '2.53e-10', 'returns/mean': '0.0011233', 'returns/var': '0.11439', 'val/mean': '0.025545', 'val/var': '0.0014658', 'examples_per_second': '10.606', 'grad_norm': '9.5004', 'counters/examples': 264576, 'counters/updates': 16536}
+skipping logging after 264592 examples to avoid logging too frequently
+skipping logging after 264608 examples to avoid logging too frequently
+skipping logging after 264624 examples to avoid logging too frequently
+train stats after 264640 examples: {'loss/total': '0.78603', 'loss/critic': '0.24915', 'loss/policy': '0.36923', 'clipfrac/policy': '0.34837', 'loss/entropy': '1.4311', 'loss/policykl': '4.1436', 'loss/seqratio': '0.049805', 'returns/mean': '0.016351', 'returns/var': '0.11698', 'val/mean': '0.014107', 'val/var': '0.0020442', 'examples_per_second': '10.935', 'grad_norm': '7.5006', 'counters/examples': 264640, 'counters/updates': 16540}
+skipping logging after 264656 examples to avoid logging too frequently
+skipping logging after 264672 examples to avoid logging too frequently
+skipping logging after 264688 examples to avoid logging too frequently
+train stats after 264704 examples: {'loss/total': '1.044', 'loss/critic': '0.26437', 'loss/policy': '0.60725', 'clipfrac/policy': '0.40619', 'loss/entropy': '1.3867', 'loss/policykl': '4.3428', 'loss/seqratio': '2.4766e-11', 'returns/mean': '-0.0014561', 'returns/var': '0.13343', 'val/mean': '0.00085592', 'val/var': '0.0010079', 'examples_per_second': '10.63', 'grad_norm': '42', 'counters/examples': 264704, 'counters/updates': 16544}
+skipping logging after 264720 examples to avoid logging too frequently
+skipping logging after 264736 examples to avoid logging too frequently
+skipping logging after 264752 examples to avoid logging too frequently
+train stats after 264768 examples: {'loss/total': '0.63318', 'loss/critic': '0.2238', 'loss/policy': '0.18038', 'clipfrac/policy': '0.41979', 'loss/entropy': '1.2321', 'loss/policykl': '4.5049', 'loss/seqratio': '0.0083618', 'returns/mean': '0.01418', 'returns/var': '0.11827', 'val/mean': '0.0016181', 'val/var': '0.00090563', 'examples_per_second': '10.328', 'grad_norm': '7.6568', 'counters/examples': 264768, 'counters/updates': 16548}
+skipping logging after 264784 examples to avoid logging too frequently
+skipping logging after 264800 examples to avoid logging too frequently
+skipping logging after 264816 examples to avoid logging too frequently
+train stats after 264832 examples: {'loss/total': '10.471', 'loss/critic': '0.23271', 'loss/policy': '10.073', 'clipfrac/policy': '0.34495', 'loss/entropy': '1.3083', 'loss/policykl': '3.9561', 'loss/seqratio': '1.6391e-17', 'returns/mean': '0.0019038', 'returns/var': '0.11031', 'val/mean': '0.011652', 'val/var': '0.0012074', 'examples_per_second': '10.718', 'grad_norm': '1744', 'counters/examples': 264832, 'counters/updates': 16552}
+skipping logging after 264848 examples to avoid logging too frequently
+skipping logging after 264864 examples to avoid logging too frequently
+skipping logging after 264880 examples to avoid logging too frequently
+train stats after 264896 examples: {'loss/total': '0.78409', 'loss/critic': '0.23764', 'loss/policy': '0.22654', 'clipfrac/policy': '0.4474', 'loss/entropy': '1.1188', 'loss/policykl': '5.5537', 'loss/seqratio': '1.8119e-13', 'returns/mean': '-0.0063627', 'returns/var': '0.11951', 'val/mean': '0.0048566', 'val/var': '0.0036054', 'examples_per_second': '10.214', 'grad_norm': '2.5006', 'counters/examples': 264896, 'counters/updates': 16556}
+skipping logging after 264912 examples to avoid logging too frequently
+skipping logging after 264928 examples to avoid logging too frequently
+skipping logging after 264944 examples to avoid logging too frequently
+train stats after 264960 examples: {'loss/total': '0.71383', 'loss/critic': '0.2356', 'loss/policy': '0.23906', 'clipfrac/policy': '0.37781', 'loss/entropy': '1.1541', 'loss/policykl': '4.7217', 'loss/seqratio': '8.1746e-09', 'returns/mean': '-0.022213', 'returns/var': '0.12891', 'val/mean': '0.035484', 'val/var': '0.0019073', 'examples_per_second': '9.536', 'grad_norm': '3.3913', 'counters/examples': 264960, 'counters/updates': 16560}
+skipping logging after 264976 examples to avoid logging too frequently
+skipping logging after 264992 examples to avoid logging too frequently
+skipping logging after 265008 examples to avoid logging too frequently
+train stats after 265024 examples: {'loss/total': '0.6666', 'loss/critic': '0.22367', 'loss/policy': '0.29693', 'clipfrac/policy': '0.34066', 'loss/entropy': '1.3151', 'loss/policykl': '3.6758', 'loss/seqratio': '0.45117', 'returns/mean': '-0.050373', 'returns/var': '0.10798', 'val/mean': '-0.0027318', 'val/var': '0.0024025', 'examples_per_second': '9.8058', 'grad_norm': '10.439', 'counters/examples': 265024, 'counters/updates': 16564}
+skipping logging after 265040 examples to avoid logging too frequently
+skipping logging after 265056 examples to avoid logging too frequently
+skipping logging after 265072 examples to avoid logging too frequently
+train stats after 265088 examples: {'loss/total': '0.80611', 'loss/critic': '0.23401', 'loss/policy': '0.23676', 'clipfrac/policy': '0.41303', 'loss/entropy': '1.0886', 'loss/policykl': '5.6699', 'loss/seqratio': '1.6144e-11', 'returns/mean': '-0.023152', 'returns/var': '0.1117', 'val/mean': '-0.077316', 'val/var': '0.0038195', 'examples_per_second': '10.115', 'grad_norm': '16.502', 'counters/examples': 265088, 'counters/updates': 16568}
+skipping logging after 265104 examples to avoid logging too frequently
+skipping logging after 265120 examples to avoid logging too frequently
+skipping logging after 265136 examples to avoid logging too frequently
+train stats after 265152 examples: {'loss/total': '0.80387', 'loss/critic': '0.22296', 'loss/policy': '0.30725', 'clipfrac/policy': '0.39563', 'loss/entropy': '1.2217', 'loss/policykl': '4.9443', 'loss/seqratio': '2.8662e-07', 'returns/mean': '0.0050123', 'returns/var': '0.10137', 'val/mean': '-0.0011396', 'val/var': '0.0016556', 'examples_per_second': '9.8261', 'grad_norm': '11.625', 'counters/examples': 265152, 'counters/updates': 16572}
+skipping logging after 265168 examples to avoid logging too frequently
+skipping logging after 265184 examples to avoid logging too frequently
+skipping logging after 265200 examples to avoid logging too frequently
+train stats after 265216 examples: {'loss/total': '0.78496', 'loss/critic': '0.23023', 'loss/policy': '0.22309', 'clipfrac/policy': '0.41949', 'loss/entropy': '1.1346', 'loss/policykl': '5.5957', 'loss/seqratio': '7.4163e-14', 'returns/mean': '-0.044586', 'returns/var': '0.12313', 'val/mean': '-0.005218', 'val/var': '0.0016558', 'examples_per_second': '9.3679', 'grad_norm': '4.5005', 'counters/examples': 265216, 'counters/updates': 16576}
+skipping logging after 265232 examples to avoid logging too frequently
+skipping logging after 265248 examples to avoid logging too frequently
+skipping logging after 265264 examples to avoid logging too frequently
+train stats after 265280 examples: {'loss/total': '4.1441', 'loss/critic': '0.24342', 'loss/policy': '3.6593', 'clipfrac/policy': '0.41443', 'loss/entropy': '1.2722', 'loss/policykl': '4.8213', 'loss/seqratio': '7.254e-19', 'returns/mean': '0.02946', 'returns/var': '0.12247', 'val/mean': '-0.011335', 'val/var': '0.0015039', 'examples_per_second': '10.283', 'grad_norm': '612', 'counters/examples': 265280, 'counters/updates': 16580}
+skipping logging after 265296 examples to avoid logging too frequently
+skipping logging after 265312 examples to avoid logging too frequently
+skipping logging after 265328 examples to avoid logging too frequently
+train stats after 265344 examples: {'loss/total': '0.80351', 'loss/critic': '0.25637', 'loss/policy': '0.16179', 'clipfrac/policy': '0.49135', 'loss/entropy': '0.95618', 'loss/policykl': '6.3984', 'loss/seqratio': '0.15527', 'returns/mean': '0.027849', 'returns/var': '0.13489', 'val/mean': '0.0041702', 'val/var': '0.001063', 'examples_per_second': '10.851', 'grad_norm': '2.3288', 'counters/examples': 265344, 'counters/updates': 16584}
+skipping logging after 265360 examples to avoid logging too frequently
+skipping logging after 265376 examples to avoid logging too frequently
+skipping logging after 265392 examples to avoid logging too frequently
+train stats after 265408 examples: {'loss/total': '0.73892', 'loss/critic': '0.24201', 'loss/policy': '0.27142', 'clipfrac/policy': '0.3733', 'loss/entropy': '1.3035', 'loss/policykl': '4.6504', 'loss/seqratio': '0.0022435', 'returns/mean': '-0.016106', 'returns/var': '0.11641', 'val/mean': '0.018949', 'val/var': '0.0011508', 'examples_per_second': '11.575', 'grad_norm': '48.251', 'counters/examples': 265408, 'counters/updates': 16588}
+skipping logging after 265424 examples to avoid logging too frequently
+skipping logging after 265440 examples to avoid logging too frequently
+skipping logging after 265456 examples to avoid logging too frequently
+train stats after 265472 examples: {'loss/total': '0.72839', 'loss/critic': '0.23111', 'loss/policy': '0.17383', 'clipfrac/policy': '0.42393', 'loss/entropy': '0.87441', 'loss/policykl': '5.5234', 'loss/seqratio': '0.0033722', 'returns/mean': '0.039102', 'returns/var': '0.12233', 'val/mean': '0.0065184', 'val/var': '0.0022206', 'examples_per_second': '10.03', 'grad_norm': '2.1723', 'counters/examples': 265472, 'counters/updates': 16592}
+skipping logging after 265488 examples to avoid logging too frequently
+skipping logging after 265504 examples to avoid logging too frequently
+skipping logging after 265520 examples to avoid logging too frequently
+train stats after 265536 examples: {'loss/total': '0.91036', 'loss/critic': '0.25759', 'loss/policy': '0.44367', 'clipfrac/policy': '0.35095', 'loss/entropy': '1.2566', 'loss/policykl': '4.6445', 'loss/seqratio': '1.6912e-09', 'returns/mean': '-0.040293', 'returns/var': '0.1394', 'val/mean': '0.00088835', 'val/var': '0.0019078', 'examples_per_second': '10.222', 'grad_norm': '5.5633', 'counters/examples': 265536, 'counters/updates': 16596}
+skipping logging after 265552 examples to avoid logging too frequently
+skipping logging after 265568 examples to avoid logging too frequently
+skipping logging after 265584 examples to avoid logging too frequently
+train stats after 265600 examples: {'loss/total': '0.64003', 'loss/critic': '0.26072', 'loss/policy': '0.26645', 'clipfrac/policy': '0.35706', 'loss/entropy': '1.5565', 'loss/policykl': '3.71', 'loss/seqratio': '0.010193', 'returns/mean': '-0.031621', 'returns/var': '0.14636', 'val/mean': '-0.027073', 'val/var': '0.0020888', 'examples_per_second': '11.516', 'grad_norm': '8.6255', 'counters/examples': 265600, 'counters/updates': 16600}
+skipping logging after 265616 examples to avoid logging too frequently
+skipping logging after 265632 examples to avoid logging too frequently
+skipping logging after 265648 examples to avoid logging too frequently
+train stats after 265664 examples: {'loss/total': '0.65559', 'loss/critic': '0.24573', 'loss/policy': '0.18292', 'clipfrac/policy': '0.41472', 'loss/entropy': '1.1863', 'loss/policykl': '4.7031', 'loss/seqratio': '3.256e-09', 'returns/mean': '-0.023138', 'returns/var': '0.13852', 'val/mean': '-0.014725', 'val/var': '0.00209', 'examples_per_second': '10.087', 'grad_norm': '9.688', 'counters/examples': 265664, 'counters/updates': 16604}
+skipping logging after 265680 examples to avoid logging too frequently
+skipping logging after 265696 examples to avoid logging too frequently
+skipping logging after 265712 examples to avoid logging too frequently
+train stats after 265728 examples: {'loss/total': '0.69107', 'loss/critic': '0.199', 'loss/policy': '0.28027', 'clipfrac/policy': '0.33519', 'loss/entropy': '1.2492', 'loss/policykl': '4.0889', 'loss/seqratio': '8.1491e-08', 'returns/mean': '-0.063284', 'returns/var': '0.087807', 'val/mean': '-0.0060501', 'val/var': '0.0021574', 'examples_per_second': '9.6639', 'grad_norm': '12.814', 'counters/examples': 265728, 'counters/updates': 16608}
+skipping logging after 265744 examples to avoid logging too frequently
+skipping logging after 265760 examples to avoid logging too frequently
+skipping logging after 265776 examples to avoid logging too frequently
+train stats after 265792 examples: {'loss/total': '0.65389', 'loss/critic': '0.24385', 'loss/policy': '0.22043', 'clipfrac/policy': '0.41343', 'loss/entropy': '1.2816', 'loss/policykl': '4.3115', 'loss/seqratio': '5.0789e-16', 'returns/mean': '-0.037179', 'returns/var': '0.12691', 'val/mean': '-0.076884', 'val/var': '0.0056529', 'examples_per_second': '11.588', 'grad_norm': '8.3135', 'counters/examples': 265792, 'counters/updates': 16612}
+skipping logging after 265808 examples to avoid logging too frequently
+skipping logging after 265824 examples to avoid logging too frequently
+skipping logging after 265840 examples to avoid logging too frequently
+train stats after 265856 examples: {'loss/total': '0.59922', 'loss/critic': '0.2508', 'loss/policy': '0.21023', 'clipfrac/policy': '0.40014', 'loss/entropy': '1.289', 'loss/policykl': '3.8643', 'loss/seqratio': '0.013161', 'returns/mean': '-0.045706', 'returns/var': '0.1468', 'val/mean': '-0.027118', 'val/var': '0.0025585', 'examples_per_second': '10.259', 'grad_norm': '3.0474', 'counters/examples': 265856, 'counters/updates': 16616}
+skipping logging after 265872 examples to avoid logging too frequently
+skipping logging after 265888 examples to avoid logging too frequently
+skipping logging after 265904 examples to avoid logging too frequently
+train stats after 265920 examples: {'loss/total': '0.77744', 'loss/critic': '0.24509', 'loss/policy': '0.36532', 'clipfrac/policy': '0.38995', 'loss/entropy': '1.3339', 'loss/policykl': '4.0977', 'loss/seqratio': '0.0021826', 'returns/mean': '-0.039331', 'returns/var': '0.12764', 'val/mean': '-0.056328', 'val/var': '0.0049117', 'examples_per_second': '9.9997', 'grad_norm': '10.376', 'counters/examples': 265920, 'counters/updates': 16620}
+skipping logging after 265936 examples to avoid logging too frequently
+skipping logging after 265952 examples to avoid logging too frequently
+skipping logging after 265968 examples to avoid logging too frequently
+train stats after 265984 examples: {'loss/total': '0.77012', 'loss/critic': '0.21597', 'loss/policy': '0.19227', 'clipfrac/policy': '0.40494', 'loss/entropy': '1.0021', 'loss/policykl': '5.7559', 'loss/seqratio': '1.4552e-10', 'returns/mean': '-0.10501', 'returns/var': '0.094001', 'val/mean': '-0.026759', 'val/var': '0.0037762', 'examples_per_second': '9.4178', 'grad_norm': '2.0635', 'counters/examples': 265984, 'counters/updates': 16624}
+skipping logging after 266000 examples to avoid logging too frequently
+skipping logging after 266016 examples to avoid logging too frequently
+skipping logging after 266032 examples to avoid logging too frequently
+train stats after 266048 examples: {'loss/total': '0.748', 'loss/critic': '0.22483', 'loss/policy': '0.17385', 'clipfrac/policy': '0.47518', 'loss/entropy': '1.1206', 'loss/policykl': '5.7168', 'loss/seqratio': '2.3246e-06', 'returns/mean': '-0.070983', 'returns/var': '0.10357', 'val/mean': '-0.069046', 'val/var': '0.0065413', 'examples_per_second': '11.244', 'grad_norm': '6.3757', 'counters/examples': 266048, 'counters/updates': 16628}
+skipping logging after 266064 examples to avoid logging too frequently
+skipping logging after 266080 examples to avoid logging too frequently
+skipping logging after 266096 examples to avoid logging too frequently
+train stats after 266112 examples: {'loss/total': '1.2441', 'loss/critic': '0.2369', 'loss/policy': '0.77547', 'clipfrac/policy': '0.39354', 'loss/entropy': '1.2052', 'loss/policykl': '4.6621', 'loss/seqratio': '3.0621e-14', 'returns/mean': '-0.031863', 'returns/var': '0.1057', 'val/mean': '-0.048359', 'val/var': '0.0057878', 'examples_per_second': '9.5784', 'grad_norm': '15.563', 'counters/examples': 266112, 'counters/updates': 16632}
+skipping logging after 266128 examples to avoid logging too frequently
+skipping logging after 266144 examples to avoid logging too frequently
+skipping logging after 266160 examples to avoid logging too frequently
+train stats after 266176 examples: {'loss/total': '0.75246', 'loss/critic': '0.25864', 'loss/policy': '0.15588', 'clipfrac/policy': '0.37234', 'loss/entropy': '0.83863', 'loss/policykl': '5.9385', 'loss/seqratio': '1.1222e-07', 'returns/mean': '-0.029055', 'returns/var': '0.13632', 'val/mean': '-0.02847', 'val/var': '0.0019395', 'examples_per_second': '10.729', 'grad_norm': '2.1567', 'counters/examples': 266176, 'counters/updates': 16636}
+skipping logging after 266192 examples to avoid logging too frequently
+skipping logging after 266208 examples to avoid logging too frequently
+skipping logging after 266224 examples to avoid logging too frequently
+train stats after 266240 examples: {'loss/total': '0.68704', 'loss/critic': '0.22301', 'loss/policy': '0.16553', 'clipfrac/policy': '0.43118', 'loss/entropy': '1.1066', 'loss/policykl': '5.1924', 'loss/seqratio': '5.2678e-09', 'returns/mean': '0.0062294', 'returns/var': '0.10961', 'val/mean': '-0.019054', 'val/var': '0.0021625', 'examples_per_second': '10.339', 'grad_norm': '1.7818', 'counters/examples': 266240, 'counters/updates': 16640}
+skipping logging after 266256 examples to avoid logging too frequently
+skipping logging after 266272 examples to avoid logging too frequently
+skipping logging after 266288 examples to avoid logging too frequently
+train stats after 266304 examples: {'loss/total': '0.71552', 'loss/critic': '0.22525', 'loss/policy': '0.28199', 'clipfrac/policy': '0.45365', 'loss/entropy': '1.2572', 'loss/policykl': '4.3115', 'loss/seqratio': '0.050781', 'returns/mean': '0.0023266', 'returns/var': '0.11499', 'val/mean': '-0.014996', 'val/var': '0.0023537', 'examples_per_second': '10.736', 'grad_norm': '5.7191', 'counters/examples': 266304, 'counters/updates': 16644}
+skipping logging after 266320 examples to avoid logging too frequently
+skipping logging after 266336 examples to avoid logging too frequently
+skipping logging after 266352 examples to avoid logging too frequently
+train stats after 266368 examples: {'loss/total': '0.7005', 'loss/critic': '0.2336', 'loss/policy': '0.19718', 'clipfrac/policy': '0.40691', 'loss/entropy': '1.1052', 'loss/policykl': '5.0078', 'loss/seqratio': '0.027054', 'returns/mean': '0.011029', 'returns/var': '0.11483', 'val/mean': '-0.0071459', 'val/var': '0.0021188', 'examples_per_second': '10.23', 'grad_norm': '4.1568', 'counters/examples': 266368, 'counters/updates': 16648}
+skipping logging after 266384 examples to avoid logging too frequently
+skipping logging after 266400 examples to avoid logging too frequently
+skipping logging after 266416 examples to avoid logging too frequently
+train stats after 266432 examples: {'loss/total': '0.70359', 'loss/critic': '0.21892', 'loss/policy': '0.23815', 'clipfrac/policy': '0.37952', 'loss/entropy': '1.2484', 'loss/policykl': '4.6318', 'loss/seqratio': '3.9871e-09', 'returns/mean': '-0.026756', 'returns/var': '0.10797', 'val/mean': '-0.00025463', 'val/var': '0.0019314', 'examples_per_second': '10.824', 'grad_norm': '3.8911', 'counters/examples': 266432, 'counters/updates': 16652}
+skipping logging after 266448 examples to avoid logging too frequently
+skipping logging after 266464 examples to avoid logging too frequently
+skipping logging after 266480 examples to avoid logging too frequently
+train stats after 266496 examples: {'loss/total': '0.67035', 'loss/critic': '0.22449', 'loss/policy': '0.29994', 'clipfrac/policy': '0.37499', 'loss/entropy': '1.3265', 'loss/policykl': '3.6816', 'loss/seqratio': '5.3167e-05', 'returns/mean': '-0.017305', 'returns/var': '0.11819', 'val/mean': '-0.011952', 'val/var': '0.0011779', 'examples_per_second': '9.6728', 'grad_norm': '5.9067', 'counters/examples': 266496, 'counters/updates': 16656}
+skipping logging after 266512 examples to avoid logging too frequently
+skipping logging after 266528 examples to avoid logging too frequently
+skipping logging after 266544 examples to avoid logging too frequently
+train stats after 266560 examples: {'loss/total': '0.66246', 'loss/critic': '0.25479', 'loss/policy': '0.29694', 'clipfrac/policy': '0.37408', 'loss/entropy': '1.2893', 'loss/policykl': '3.6309', 'loss/seqratio': '0.00019114', 'returns/mean': '-0.029915', 'returns/var': '0.13084', 'val/mean': '-0.0085192', 'val/var': '0.0029035', 'examples_per_second': '10.961', 'grad_norm': '4.6879', 'counters/examples': 266560, 'counters/updates': 16660}
+skipping logging after 266576 examples to avoid logging too frequently
+skipping logging after 266592 examples to avoid logging too frequently
+skipping logging after 266608 examples to avoid logging too frequently
+train stats after 266624 examples: {'loss/total': '0.64177', 'loss/critic': '0.23647', 'loss/policy': '0.21204', 'clipfrac/policy': '0.35265', 'loss/entropy': '1.2501', 'loss/policykl': '4.2725', 'loss/seqratio': '0.049255', 'returns/mean': '-0.024858', 'returns/var': '0.12492', 'val/mean': '-0.0050389', 'val/var': '0.0016279', 'examples_per_second': '11.049', 'grad_norm': '2.6253', 'counters/examples': 266624, 'counters/updates': 16664}
+skipping logging after 266640 examples to avoid logging too frequently
+skipping logging after 266656 examples to avoid logging too frequently
+skipping logging after 266672 examples to avoid logging too frequently
+train stats after 266688 examples: {'loss/total': '0.58175', 'loss/critic': '0.23936', 'loss/policy': '0.16907', 'clipfrac/policy': '0.35255', 'loss/entropy': '1.3278', 'loss/policykl': '4.1045', 'loss/seqratio': '1.4955e-20', 'returns/mean': '0.022436', 'returns/var': '0.13088', 'val/mean': '-0.0075827', 'val/var': '0.0021495', 'examples_per_second': '10.255', 'grad_norm': '1.8755', 'counters/examples': 266688, 'counters/updates': 16668}
+skipping logging after 266704 examples to avoid logging too frequently
+skipping logging after 266720 examples to avoid logging too frequently
+skipping logging after 266736 examples to avoid logging too frequently
+train stats after 266752 examples: {'loss/total': '0.65626', 'loss/critic': '0.23187', 'loss/policy': '0.28052', 'clipfrac/policy': '0.34307', 'loss/entropy': '1.384', 'loss/policykl': '3.7373', 'loss/seqratio': '6.157e-08', 'returns/mean': '0.02944', 'returns/var': '0.12996', 'val/mean': '-0.0086303', 'val/var': '0.0026351', 'examples_per_second': '10.299', 'grad_norm': '31.751', 'counters/examples': 266752, 'counters/updates': 16672}
+skipping logging after 266768 examples to avoid logging too frequently
+skipping logging after 266784 examples to avoid logging too frequently
+skipping logging after 266800 examples to avoid logging too frequently
+train stats after 266816 examples: {'loss/total': '0.98474', 'loss/critic': '0.22383', 'loss/policy': '0.5334', 'clipfrac/policy': '0.35341', 'loss/entropy': '1.2962', 'loss/policykl': '4.4893', 'loss/seqratio': '3.6282e-13', 'returns/mean': '-0.015034', 'returns/var': '0.10825', 'val/mean': '0.0034261', 'val/var': '0.0016737', 'examples_per_second': '8.9501', 'grad_norm': '42.75', 'counters/examples': 266816, 'counters/updates': 16676}
+skipping logging after 266832 examples to avoid logging too frequently
+skipping logging after 266848 examples to avoid logging too frequently
+skipping logging after 266864 examples to avoid logging too frequently
+train stats after 266880 examples: {'loss/total': '0.84421', 'loss/critic': '0.24481', 'loss/policy': '0.33846', 'clipfrac/policy': '0.38068', 'loss/entropy': '1.2217', 'loss/policykl': '5.0352', 'loss/seqratio': '6.1482e-10', 'returns/mean': '-0.014959', 'returns/var': '0.12646', 'val/mean': '-0.0021219', 'val/var': '0.0018821', 'examples_per_second': '11.181', 'grad_norm': '7.5004', 'counters/examples': 266880, 'counters/updates': 16680}
+skipping logging after 266896 examples to avoid logging too frequently
+skipping logging after 266912 examples to avoid logging too frequently
+skipping logging after 266928 examples to avoid logging too frequently
+train stats after 266944 examples: {'loss/total': '1.3666', 'loss/critic': '0.2011', 'loss/policy': '0.82304', 'clipfrac/policy': '0.41784', 'loss/entropy': '1.2315', 'loss/policykl': '5.415', 'loss/seqratio': '2.0313', 'returns/mean': '0.015507', 'returns/var': '0.090753', 'val/mean': '-0.0084591', 'val/var': '0.0031257', 'examples_per_second': '9.657', 'grad_norm': '142', 'counters/examples': 266944, 'counters/updates': 16684}
+skipping logging after 266960 examples to avoid logging too frequently
+skipping logging after 266976 examples to avoid logging too frequently
+skipping logging after 266992 examples to avoid logging too frequently
+train stats after 267008 examples: {'loss/total': '0.78101', 'loss/critic': '0.23575', 'loss/policy': '0.18564', 'clipfrac/policy': '0.42497', 'loss/entropy': '1.1665', 'loss/policykl': '5.9336', 'loss/seqratio': '2.4587e-07', 'returns/mean': '0.012886', 'returns/var': '0.1225', 'val/mean': '0.0037551', 'val/var': '0.0015072', 'examples_per_second': '9.7428', 'grad_norm': '1.7347', 'counters/examples': 267008, 'counters/updates': 16688}
+skipping logging after 267024 examples to avoid logging too frequently
+skipping logging after 267040 examples to avoid logging too frequently
+skipping logging after 267056 examples to avoid logging too frequently
+train stats after 267072 examples: {'loss/total': '1.0782', 'loss/critic': '0.23991', 'loss/policy': '0.50937', 'clipfrac/policy': '0.40364', 'loss/entropy': '1.1912', 'loss/policykl': '5.666', 'loss/seqratio': '0.00022316', 'returns/mean': '-0.0040958', 'returns/var': '0.14158', 'val/mean': '-0.0046052', 'val/var': '0.0013492', 'examples_per_second': '10.621', 'grad_norm': '22.001', 'counters/examples': 267072, 'counters/updates': 16692}
+skipping logging after 267088 examples to avoid logging too frequently
+skipping logging after 267104 examples to avoid logging too frequently
+skipping logging after 267120 examples to avoid logging too frequently
+train stats after 267136 examples: {'loss/total': '1.1419', 'loss/critic': '0.24779', 'loss/policy': '0.39109', 'clipfrac/policy': '0.43871', 'loss/entropy': '1.0177', 'loss/policykl': '7.4824', 'loss/seqratio': '3.6478e-05', 'returns/mean': '-0.058485', 'returns/var': '0.13362', 'val/mean': '-0.029199', 'val/var': '0.0024011', 'examples_per_second': '10.738', 'grad_norm': '9.1881', 'counters/examples': 267136, 'counters/updates': 16696}
+skipping logging after 267152 examples to avoid logging too frequently
+skipping logging after 267168 examples to avoid logging too frequently
+skipping logging after 267184 examples to avoid logging too frequently
+train stats after 267200 examples: {'loss/total': '0.81995', 'loss/critic': '0.21381', 'loss/policy': '0.19183', 'clipfrac/policy': '0.39218', 'loss/entropy': '1.2502', 'loss/policykl': '6.2617', 'loss/seqratio': '2.3399e-20', 'returns/mean': '-0.079972', 'returns/var': '0.096837', 'val/mean': '-0.045087', 'val/var': '0.0029714', 'examples_per_second': '10.051', 'grad_norm': '2.1888', 'counters/examples': 267200, 'counters/updates': 16700}
+skipping logging after 267216 examples to avoid logging too frequently
+skipping logging after 267232 examples to avoid logging too frequently
+skipping logging after 267248 examples to avoid logging too frequently
+train stats after 267264 examples: {'loss/total': '0.77847', 'loss/critic': '0.23013', 'loss/policy': '0.21342', 'clipfrac/policy': '0.46105', 'loss/entropy': '1.4174', 'loss/policykl': '5.6309', 'loss/seqratio': '1.5234e-11', 'returns/mean': '-0.071172', 'returns/var': '0.099497', 'val/mean': '-0.1189', 'val/var': '0.0041862', 'examples_per_second': '10.261', 'grad_norm': '4.4084', 'counters/examples': 267264, 'counters/updates': 16704}
+skipping logging after 267280 examples to avoid logging too frequently
+skipping logging after 267296 examples to avoid logging too frequently
+skipping logging after 267312 examples to avoid logging too frequently
+train stats after 267328 examples: {'loss/total': '0.7368', 'loss/critic': '0.26001', 'loss/policy': '0.1789', 'clipfrac/policy': '0.41755', 'loss/entropy': '1.3191', 'loss/policykl': '5.5527', 'loss/seqratio': '0.00029755', 'returns/mean': '-0.0092028', 'returns/var': '0.14349', 'val/mean': '-0.03557', 'val/var': '0.0018235', 'examples_per_second': '10.852', 'grad_norm': '1.8913', 'counters/examples': 267328, 'counters/updates': 16708}
+skipping logging after 267344 examples to avoid logging too frequently
+skipping logging after 267360 examples to avoid logging too frequently
+skipping logging after 267376 examples to avoid logging too frequently
+train stats after 267392 examples: {'loss/total': '1.0762', 'loss/critic': '0.27329', 'loss/policy': '0.57002', 'clipfrac/policy': '0.40653', 'loss/entropy': '1.4361', 'loss/policykl': '5.0352', 'loss/seqratio': '0.11792', 'returns/mean': '-0.0098378', 'returns/var': '0.13894', 'val/mean': '-0.013918', 'val/var': '0.001579', 'examples_per_second': '11.5', 'grad_norm': '48.75', 'counters/examples': 267392, 'counters/updates': 16712}
+skipping logging after 267408 examples to avoid logging too frequently
+skipping logging after 267424 examples to avoid logging too frequently
+skipping logging after 267440 examples to avoid logging too frequently
+train stats after 267456 examples: {'loss/total': '0.87493', 'loss/critic': '0.23403', 'loss/policy': '0.25394', 'clipfrac/policy': '0.4528', 'loss/entropy': '1.2852', 'loss/policykl': '6.1836', 'loss/seqratio': '0.054062', 'returns/mean': '0.045882', 'returns/var': '0.11713', 'val/mean': '-0.0023017', 'val/var': '0.00077355', 'examples_per_second': '10.993', 'grad_norm': '3.1413', 'counters/examples': 267456, 'counters/updates': 16716}
+skipping logging after 267472 examples to avoid logging too frequently
+skipping logging after 267488 examples to avoid logging too frequently
+skipping logging after 267504 examples to avoid logging too frequently
+train stats after 267520 examples: {'loss/total': '0.94785', 'loss/critic': '0.26323', 'loss/policy': '0.39565', 'clipfrac/policy': '0.4624', 'loss/entropy': '1.4198', 'loss/policykl': '5.4941', 'loss/seqratio': '1.0312e-05', 'returns/mean': '0.046227', 'returns/var': '0.12456', 'val/mean': '0.027357', 'val/var': '0.0011517', 'examples_per_second': '10.325', 'grad_norm': '24.875', 'counters/examples': 267520, 'counters/updates': 16720}
+skipping logging after 267536 examples to avoid logging too frequently
+skipping logging after 267552 examples to avoid logging too frequently
+skipping logging after 267568 examples to avoid logging too frequently
+train stats after 267584 examples: {'loss/total': '0.78992', 'loss/critic': '0.23472', 'loss/policy': '0.15451', 'clipfrac/policy': '0.44695', 'loss/entropy': '1.4466', 'loss/policykl': '6.332', 'loss/seqratio': '1.5833e-08', 'returns/mean': '0.037047', 'returns/var': '0.11969', 'val/mean': '0.033215', 'val/var': '0.0010842', 'examples_per_second': '11.205', 'grad_norm': '1.8831', 'counters/examples': 267584, 'counters/updates': 16724}
+skipping logging after 267600 examples to avoid logging too frequently
+skipping logging after 267616 examples to avoid logging too frequently
+skipping logging after 267632 examples to avoid logging too frequently
+train stats after 267648 examples: {'loss/total': '0.69169', 'loss/critic': '0.24953', 'loss/policy': '0.16723', 'clipfrac/policy': '0.36174', 'loss/entropy': '1.5008', 'loss/policykl': '5.2207', 'loss/seqratio': '0.033698', 'returns/mean': '0.023795', 'returns/var': '0.11784', 'val/mean': '0.045837', 'val/var': '0.00069237', 'examples_per_second': '10.981', 'grad_norm': '3.2818', 'counters/examples': 267648, 'counters/updates': 16728}
+skipping logging after 267664 examples to avoid logging too frequently
+skipping logging after 267680 examples to avoid logging too frequently
+skipping logging after 267696 examples to avoid logging too frequently
+train stats after 267712 examples: {'loss/total': '0.73476', 'loss/critic': '0.25468', 'loss/policy': '0.24479', 'clipfrac/policy': '0.39546', 'loss/entropy': '1.4886', 'loss/policykl': '4.8721', 'loss/seqratio': '3.0705e-16', 'returns/mean': '-0.03109', 'returns/var': '0.13134', 'val/mean': '0.010294', 'val/var': '0.0011485', 'examples_per_second': '10.317', 'grad_norm': '6.1881', 'counters/examples': 267712, 'counters/updates': 16732}
+skipping logging after 267728 examples to avoid logging too frequently
+skipping logging after 267744 examples to avoid logging too frequently
+skipping logging after 267760 examples to avoid logging too frequently
+train stats after 267776 examples: {'loss/total': '0.8546', 'loss/critic': '0.19962', 'loss/policy': '0.33564', 'clipfrac/policy': '0.35923', 'loss/entropy': '1.3533', 'loss/policykl': '5.1699', 'loss/seqratio': '6.184e-07', 'returns/mean': '-0.0067506', 'returns/var': '0.098287', 'val/mean': '-0.0086672', 'val/var': '0.0015464', 'examples_per_second': '10.121', 'grad_norm': '27.375', 'counters/examples': 267776, 'counters/updates': 16736}
+skipping logging after 267792 examples to avoid logging too frequently
+skipping logging after 267808 examples to avoid logging too frequently
+skipping logging after 267824 examples to avoid logging too frequently
+train stats after 267840 examples: {'loss/total': '0.76549', 'loss/critic': '0.22722', 'loss/policy': '0.32371', 'clipfrac/policy': '0.38591', 'loss/entropy': '1.3526', 'loss/policykl': '4.3945', 'loss/seqratio': '1.5028e-12', 'returns/mean': '-0.034562', 'returns/var': '0.11649', 'val/mean': '-0.017344', 'val/var': '0.00099242', 'examples_per_second': '10.565', 'grad_norm': '9.8129', 'counters/examples': 267840, 'counters/updates': 16740}
+skipping logging after 267856 examples to avoid logging too frequently
+skipping logging after 267872 examples to avoid logging too frequently
+skipping logging after 267888 examples to avoid logging too frequently
+train stats after 267904 examples: {'loss/total': '1.0515', 'loss/critic': '0.25058', 'loss/policy': '0.50216', 'clipfrac/policy': '0.42058', 'loss/entropy': '1.2855', 'loss/policykl': '5.4746', 'loss/seqratio': '0.24316', 'returns/mean': '-0.046678', 'returns/var': '0.13611', 'val/mean': '-0.028944', 'val/var': '0.0043511', 'examples_per_second': '10.663', 'grad_norm': '12.126', 'counters/examples': 267904, 'counters/updates': 16744}
+skipping logging after 267920 examples to avoid logging too frequently
+skipping logging after 267936 examples to avoid logging too frequently
+skipping logging after 267952 examples to avoid logging too frequently
+train stats after 267968 examples: {'loss/total': '0.83715', 'loss/critic': '0.22463', 'loss/policy': '0.17268', 'clipfrac/policy': '0.47183', 'loss/entropy': '1.061', 'loss/policykl': '6.626', 'loss/seqratio': '7.2099e-18', 'returns/mean': '-0.015998', 'returns/var': '0.1055', 'val/mean': '-0.053345', 'val/var': '0.0032055', 'examples_per_second': '9.3367', 'grad_norm': '1.7588', 'counters/examples': 267968, 'counters/updates': 16748}
+skipping logging after 267984 examples to avoid logging too frequently
+skipping logging after 268000 examples to avoid logging too frequently
+skipping logging after 268016 examples to avoid logging too frequently
+train stats after 268032 examples: {'loss/total': '0.78694', 'loss/critic': '0.25453', 'loss/policy': '0.1594', 'clipfrac/policy': '0.47011', 'loss/entropy': '1.1392', 'loss/policykl': '6.25', 'loss/seqratio': '6.0023e-16', 'returns/mean': '0.030271', 'returns/var': '0.12915', 'val/mean': '-0.011934', 'val/var': '0.0014231', 'examples_per_second': '11.57', 'grad_norm': '2.2974', 'counters/examples': 268032, 'counters/updates': 16752}
+skipping logging after 268048 examples to avoid logging too frequently
+skipping logging after 268064 examples to avoid logging too frequently
+skipping logging after 268080 examples to avoid logging too frequently
+train stats after 268096 examples: {'loss/total': '0.75529', 'loss/critic': '0.23603', 'loss/policy': '0.22705', 'clipfrac/policy': '0.38758', 'loss/entropy': '1.237', 'loss/policykl': '5.2598', 'loss/seqratio': '6.3144e-15', 'returns/mean': '-0.03524', 'returns/var': '0.11998', 'val/mean': '0.0045495', 'val/var': '0.0014851', 'examples_per_second': '10.695', 'grad_norm': '6.0947', 'counters/examples': 268096, 'counters/updates': 16756}
+skipping logging after 268112 examples to avoid logging too frequently
+skipping logging after 268128 examples to avoid logging too frequently
+skipping logging after 268144 examples to avoid logging too frequently
+train stats after 268160 examples: {'loss/total': '0.89434', 'loss/critic': '0.24897', 'loss/policy': '0.37952', 'clipfrac/policy': '0.44388', 'loss/entropy': '1.2295', 'loss/policykl': '5.1211', 'loss/seqratio': '0.0011511', 'returns/mean': '-0.058549', 'returns/var': '0.13015', 'val/mean': '-0.031116', 'val/var': '0.0016897', 'examples_per_second': '10.922', 'grad_norm': '12.563', 'counters/examples': 268160, 'counters/updates': 16760}
+skipping logging after 268176 examples to avoid logging too frequently
+skipping logging after 268192 examples to avoid logging too frequently
+skipping logging after 268208 examples to avoid logging too frequently
+train stats after 268224 examples: {'loss/total': '0.6827', 'loss/critic': '0.23684', 'loss/policy': '0.1431', 'clipfrac/policy': '0.48135', 'loss/entropy': '1.2072', 'loss/policykl': '5.373', 'loss/seqratio': '5.1688e-18', 'returns/mean': '0.018784', 'returns/var': '0.094953', 'val/mean': '-0.035864', 'val/var': '0.0021821', 'examples_per_second': '10.853', 'grad_norm': '2.9071', 'counters/examples': 268224, 'counters/updates': 16764}
+skipping logging after 268240 examples to avoid logging too frequently
+skipping logging after 268256 examples to avoid logging too frequently
+skipping logging after 268272 examples to avoid logging too frequently
+train stats after 268288 examples: {'loss/total': '0.67424', 'loss/critic': '0.20222', 'loss/policy': '0.22788', 'clipfrac/policy': '0.37851', 'loss/entropy': '1.3503', 'loss/policykl': '4.4453', 'loss/seqratio': '4.7089e-06', 'returns/mean': '-0.040246', 'returns/var': '0.096307', 'val/mean': '-0.0074959', 'val/var': '0.0012448', 'examples_per_second': '10.628', 'grad_norm': '6.9382', 'counters/examples': 268288, 'counters/updates': 16768}
+skipping logging after 268304 examples to avoid logging too frequently
+skipping logging after 268320 examples to avoid logging too frequently
+skipping logging after 268336 examples to avoid logging too frequently
+train stats after 268352 examples: {'loss/total': '0.86079', 'loss/critic': '0.28837', 'loss/policy': '0.34802', 'clipfrac/policy': '0.45792', 'loss/entropy': '1.3141', 'loss/policykl': '5.0996', 'loss/seqratio': '0.0002861', 'returns/mean': '-0.039473', 'returns/var': '0.16011', 'val/mean': '-0.045238', 'val/var': '0.0019619', 'examples_per_second': '11.048', 'grad_norm': '24.751', 'counters/examples': 268352, 'counters/updates': 16772}
+skipping logging after 268368 examples to avoid logging too frequently
+skipping logging after 268384 examples to avoid logging too frequently
+skipping logging after 268400 examples to avoid logging too frequently
+train stats after 268416 examples: {'loss/total': '0.76681', 'loss/critic': '0.25108', 'loss/policy': '0.15639', 'clipfrac/policy': '0.43057', 'loss/entropy': '1.2888', 'loss/policykl': '6.0801', 'loss/seqratio': '1.477e-09', 'returns/mean': '0.0512', 'returns/var': '0.13565', 'val/mean': '-0.020597', 'val/var': '0.0015574', 'examples_per_second': '10.933', 'grad_norm': '1.8374', 'counters/examples': 268416, 'counters/updates': 16776}
+skipping logging after 268432 examples to avoid logging too frequently
+skipping logging after 268448 examples to avoid logging too frequently
+skipping logging after 268464 examples to avoid logging too frequently
+train stats after 268480 examples: {'loss/total': '0.75673', 'loss/critic': '0.25215', 'loss/policy': '0.19439', 'clipfrac/policy': '0.42753', 'loss/entropy': '1.4078', 'loss/policykl': '5.5957', 'loss/seqratio': '0.013855', 'returns/mean': '0.027978', 'returns/var': '0.12489', 'val/mean': '0.0094709', 'val/var': '0.0017829', 'examples_per_second': '10.698', 'grad_norm': '3.0159', 'counters/examples': 268480, 'counters/updates': 16780}
+skipping logging after 268496 examples to avoid logging too frequently
+skipping logging after 268512 examples to avoid logging too frequently
+skipping logging after 268528 examples to avoid logging too frequently
+train stats after 268544 examples: {'loss/total': '0.72108', 'loss/critic': '0.24703', 'loss/policy': '0.1815', 'clipfrac/policy': '0.39684', 'loss/entropy': '1.4765', 'loss/policykl': '5.3672', 'loss/seqratio': '1.0161e-12', 'returns/mean': '0.047745', 'returns/var': '0.12529', 'val/mean': '0.012536', 'val/var': '0.0010818', 'examples_per_second': '11.894', 'grad_norm': '2.5005', 'counters/examples': 268544, 'counters/updates': 16784}
+skipping logging after 268560 examples to avoid logging too frequently
+skipping logging after 268576 examples to avoid logging too frequently
+skipping logging after 268592 examples to avoid logging too frequently
+train stats after 268608 examples: {'loss/total': '0.82724', 'loss/critic': '0.25677', 'loss/policy': '0.36715', 'clipfrac/policy': '0.40884', 'loss/entropy': '1.552', 'loss/policykl': '4.5732', 'loss/seqratio': '2.7498e-11', 'returns/mean': '0.010082', 'returns/var': '0.13933', 'val/mean': '0.033333', 'val/var': '0.00080502', 'examples_per_second': '11.167', 'grad_norm': '13.563', 'counters/examples': 268608, 'counters/updates': 16788}
+skipping logging after 268624 examples to avoid logging too frequently
+skipping logging after 268640 examples to avoid logging too frequently
+skipping logging after 268656 examples to avoid logging too frequently
+train stats after 268672 examples: {'loss/total': '0.76819', 'loss/critic': '0.2229', 'loss/policy': '0.15781', 'clipfrac/policy': '0.39356', 'loss/entropy': '1.1755', 'loss/policykl': '6.0781', 'loss/seqratio': '0.0065613', 'returns/mean': '-0.015326', 'returns/var': '0.096127', 'val/mean': '0.030388', 'val/var': '0.0019829', 'examples_per_second': '10.437', 'grad_norm': '2.0166', 'counters/examples': 268672, 'counters/updates': 16792}
+skipping logging after 268688 examples to avoid logging too frequently
+skipping logging after 268704 examples to avoid logging too frequently
+skipping logging after 268720 examples to avoid logging too frequently
+train stats after 268736 examples: {'loss/total': '0.72044', 'loss/critic': '0.24311', 'loss/policy': '0.16015', 'clipfrac/policy': '0.39423', 'loss/entropy': '1.2818', 'loss/policykl': '5.5762', 'loss/seqratio': '1.4808e-09', 'returns/mean': '-0.0067607', 'returns/var': '0.12524', 'val/mean': '-0.0065298', 'val/var': '0.0018563', 'examples_per_second': '11.442', 'grad_norm': '1.5003', 'counters/examples': 268736, 'counters/updates': 16796}
+skipping logging after 268752 examples to avoid logging too frequently
+skipping logging after 268768 examples to avoid logging too frequently
+skipping logging after 268784 examples to avoid logging too frequently
+train stats after 268800 examples: {'loss/total': '0.68255', 'loss/critic': '0.25361', 'loss/policy': '0.14656', 'clipfrac/policy': '0.46549', 'loss/entropy': '1.3816', 'loss/policykl': '5.332', 'loss/seqratio': '9.1518e-12', 'returns/mean': '0.033952', 'returns/var': '0.13218', 'val/mean': '-0.001368', 'val/var': '0.0009793', 'examples_per_second': '11.287', 'grad_norm': '1.477', 'counters/examples': 268800, 'counters/updates': 16800}
+skipping logging after 268816 examples to avoid logging too frequently
+skipping logging after 268832 examples to avoid logging too frequently
+skipping logging after 268848 examples to avoid logging too frequently
+train stats after 268864 examples: {'loss/total': '0.83633', 'loss/critic': '0.21985', 'loss/policy': '0.37795', 'clipfrac/policy': '0.35663', 'loss/entropy': '1.359', 'loss/policykl': '4.5615', 'loss/seqratio': '1.4097e-10', 'returns/mean': '0.047355', 'returns/var': '0.11571', 'val/mean': '0.0080309', 'val/var': '0.00085306', 'examples_per_second': '10.157', 'grad_norm': '31.75', 'counters/examples': 268864, 'counters/updates': 16804}
+skipping logging after 268880 examples to avoid logging too frequently
+skipping logging after 268896 examples to avoid logging too frequently
+skipping logging after 268912 examples to avoid logging too frequently
+train stats after 268928 examples: {'loss/total': '0.75685', 'loss/critic': '0.21557', 'loss/policy': '0.15899', 'clipfrac/policy': '0.52045', 'loss/entropy': '1.4316', 'loss/policykl': '5.9531', 'loss/seqratio': '4.9114e-05', 'returns/mean': '0.052067', 'returns/var': '0.093182', 'val/mean': '0.012811', 'val/var': '0.00073111', 'examples_per_second': '10.696', 'grad_norm': '1.6724', 'counters/examples': 268928, 'counters/updates': 16808}
+skipping logging after 268944 examples to avoid logging too frequently
+skipping logging after 268960 examples to avoid logging too frequently
+skipping logging after 268976 examples to avoid logging too frequently
+train stats after 268992 examples: {'loss/total': '0.69862', 'loss/critic': '0.21824', 'loss/policy': '0.20132', 'clipfrac/policy': '0.37503', 'loss/entropy': '1.43', 'loss/policykl': '4.9512', 'loss/seqratio': '0.042116', 'returns/mean': '-0.015526', 'returns/var': '0.1343', 'val/mean': '0.028416', 'val/var': '0.0014069', 'examples_per_second': '10.217', 'grad_norm': '5.4069', 'counters/examples': 268992, 'counters/updates': 16812}
+skipping logging after 269008 examples to avoid logging too frequently
+skipping logging after 269024 examples to avoid logging too frequently
+skipping logging after 269040 examples to avoid logging too frequently
+train stats after 269056 examples: {'loss/total': '0.70595', 'loss/critic': '0.25109', 'loss/policy': '0.18305', 'clipfrac/policy': '0.40514', 'loss/entropy': '1.5081', 'loss/policykl': '5.2031', 'loss/seqratio': '2.0708e-17', 'returns/mean': '-0.023407', 'returns/var': '0.13192', 'val/mean': '0.0027647', 'val/var': '0.0014318', 'examples_per_second': '9.8522', 'grad_norm': '2.2191', 'counters/examples': 269056, 'counters/updates': 16816}
+skipping logging after 269072 examples to avoid logging too frequently
+skipping logging after 269088 examples to avoid logging too frequently
+skipping logging after 269104 examples to avoid logging too frequently
+train stats after 269120 examples: {'loss/total': '1.2314', 'loss/critic': '0.21532', 'loss/policy': '0.70948', 'clipfrac/policy': '0.46516', 'loss/entropy': '1.5407', 'loss/policykl': '5.1973', 'loss/seqratio': '1.2852e-07', 'returns/mean': '0.032751', 'returns/var': '0.1097', 'val/mean': '-0.0037091', 'val/var': '0.00095654', 'examples_per_second': '10.204', 'grad_norm': '22.876', 'counters/examples': 269120, 'counters/updates': 16820}
+skipping logging after 269136 examples to avoid logging too frequently
+skipping logging after 269152 examples to avoid logging too frequently
+skipping logging after 269168 examples to avoid logging too frequently
+train stats after 269184 examples: {'loss/total': '0.87058', 'loss/critic': '0.24595', 'loss/policy': '0.21651', 'clipfrac/policy': '0.43617', 'loss/entropy': '1.3667', 'loss/policykl': '6.5137', 'loss/seqratio': '2.5913e-17', 'returns/mean': '-0.027869', 'returns/var': '0.12577', 'val/mean': '0.0077119', 'val/var': '0.0021023', 'examples_per_second': '10.605', 'grad_norm': '2.6412', 'counters/examples': 269184, 'counters/updates': 16824}
+skipping logging after 269200 examples to avoid logging too frequently
+skipping logging after 269216 examples to avoid logging too frequently
+skipping logging after 269232 examples to avoid logging too frequently
+train stats after 269248 examples: {'loss/total': '1.462', 'loss/critic': '0.25746', 'loss/policy': '0.87276', 'clipfrac/policy': '0.43786', 'loss/entropy': '1.4084', 'loss/policykl': '5.8691', 'loss/seqratio': '0.20032', 'returns/mean': '-0.020315', 'returns/var': '0.13812', 'val/mean': '-0.0066648', 'val/var': '0.001362', 'examples_per_second': '9.4921', 'grad_norm': '151', 'counters/examples': 269248, 'counters/updates': 16828}
+skipping logging after 269264 examples to avoid logging too frequently
+skipping logging after 269280 examples to avoid logging too frequently
+skipping logging after 269296 examples to avoid logging too frequently
+train stats after 269312 examples: {'loss/total': '0.83278', 'loss/critic': '0.2269', 'loss/policy': '0.16645', 'clipfrac/policy': '0.44156', 'loss/entropy': '1.3653', 'loss/policykl': '6.6406', 'loss/seqratio': '1.0117e-20', 'returns/mean': '0.0022918', 'returns/var': '0.10866', 'val/mean': '-0.0036588', 'val/var': '0.00098264', 'examples_per_second': '9.4449', 'grad_norm': '1.9067', 'counters/examples': 269312, 'counters/updates': 16832}
+skipping logging after 269328 examples to avoid logging too frequently
+skipping logging after 269344 examples to avoid logging too frequently
+skipping logging after 269360 examples to avoid logging too frequently
+train stats after 269376 examples: {'loss/total': '0.79045', 'loss/critic': '0.24518', 'loss/policy': '0.16593', 'clipfrac/policy': '0.4676', 'loss/entropy': '1.4517', 'loss/policykl': '6.2227', 'loss/seqratio': '9.9078e-11', 'returns/mean': '0.030477', 'returns/var': '0.12337', 'val/mean': '0.0025257', 'val/var': '0.0019374', 'examples_per_second': '11.889', 'grad_norm': '1.7039', 'counters/examples': 269376, 'counters/updates': 16836}
+skipping logging after 269392 examples to avoid logging too frequently
+skipping logging after 269408 examples to avoid logging too frequently
+skipping logging after 269424 examples to avoid logging too frequently
+train stats after 269440 examples: {'loss/total': '0.74288', 'loss/critic': '0.2497', 'loss/policy': '0.20266', 'clipfrac/policy': '0.42623', 'loss/entropy': '1.5746', 'loss/policykl': '5.3789', 'loss/seqratio': '1.0896e-07', 'returns/mean': '0.058045', 'returns/var': '0.14629', 'val/mean': '0.011879', 'val/var': '0.001559', 'examples_per_second': '10.595', 'grad_norm': '1.8989', 'counters/examples': 269440, 'counters/updates': 16840}
+skipping logging after 269456 examples to avoid logging too frequently
+skipping logging after 269472 examples to avoid logging too frequently
+skipping logging after 269488 examples to avoid logging too frequently
+train stats after 269504 examples: {'loss/total': '0.91665', 'loss/critic': '0.22537', 'loss/policy': '0.42917', 'clipfrac/policy': '0.3843', 'loss/entropy': '1.5916', 'loss/policykl': '4.8496', 'loss/seqratio': '7.7007e-09', 'returns/mean': '0.051466', 'returns/var': '0.10741', 'val/mean': '0.034431', 'val/var': '0.001539', 'examples_per_second': '10.16', 'grad_norm': '24.375', 'counters/examples': 269504, 'counters/updates': 16844}
+skipping logging after 269520 examples to avoid logging too frequently
+skipping logging after 269536 examples to avoid logging too frequently
+skipping logging after 269552 examples to avoid logging too frequently
+train stats after 269568 examples: {'loss/total': '1.299', 'loss/critic': '0.23767', 'loss/policy': '0.74416', 'clipfrac/policy': '0.44157', 'loss/entropy': '1.2925', 'loss/policykl': '5.5312', 'loss/seqratio': '0.014661', 'returns/mean': '0.049237', 'returns/var': '0.114', 'val/mean': '0.031834', 'val/var': '0.0012099', 'examples_per_second': '10.262', 'grad_norm': '92.001', 'counters/examples': 269568, 'counters/updates': 16848}
+skipping logging after 269584 examples to avoid logging too frequently
+skipping logging after 269600 examples to avoid logging too frequently
+skipping logging after 269616 examples to avoid logging too frequently
+train stats after 269632 examples: {'loss/total': '0.74119', 'loss/critic': '0.27647', 'loss/policy': '0.19643', 'clipfrac/policy': '0.4399', 'loss/entropy': '1.3119', 'loss/policykl': '5.4199', 'loss/seqratio': '4.7323e-08', 'returns/mean': '0.008913', 'returns/var': '0.17219', 'val/mean': '0.083878', 'val/var': '0.0038092', 'examples_per_second': '10.772', 'grad_norm': '2.2517', 'counters/examples': 269632, 'counters/updates': 16852}
+skipping logging after 269648 examples to avoid logging too frequently
+skipping logging after 269664 examples to avoid logging too frequently
+skipping logging after 269680 examples to avoid logging too frequently
+train stats after 269696 examples: {'loss/total': '0.69219', 'loss/critic': '0.23286', 'loss/policy': '0.23198', 'clipfrac/policy': '0.40984', 'loss/entropy': '1.4427', 'loss/policykl': '4.5811', 'loss/seqratio': '1.0195e-07', 'returns/mean': '0.012105', 'returns/var': '0.12623', 'val/mean': '0.010845', 'val/var': '0.0020337', 'examples_per_second': '9.7509', 'grad_norm': '2.0942', 'counters/examples': 269696, 'counters/updates': 16856}
+skipping logging after 269712 examples to avoid logging too frequently
+skipping logging after 269728 examples to avoid logging too frequently
+skipping logging after 269744 examples to avoid logging too frequently
+train stats after 269760 examples: {'loss/total': '0.58749', 'loss/critic': '0.20892', 'loss/policy': '0.1938', 'clipfrac/policy': '0.4237', 'loss/entropy': '1.5688', 'loss/policykl': '3.915', 'loss/seqratio': '2.3037e-07', 'returns/mean': '-0.013458', 'returns/var': '0.10124', 'val/mean': '0.010975', 'val/var': '0.002604', 'examples_per_second': '9.7365', 'grad_norm': '5.0318', 'counters/examples': 269760, 'counters/updates': 16860}
+skipping logging after 269776 examples to avoid logging too frequently
+skipping logging after 269792 examples to avoid logging too frequently
+skipping logging after 269808 examples to avoid logging too frequently
+train stats after 269824 examples: {'loss/total': '0.63671', 'loss/critic': '0.22539', 'loss/policy': '0.20526', 'clipfrac/policy': '0.37064', 'loss/entropy': '1.4498', 'loss/policykl': '4.292', 'loss/seqratio': '0.0046935', 'returns/mean': '-0.073397', 'returns/var': '0.10459', 'val/mean': '-0.019346', 'val/var': '0.0027366', 'examples_per_second': '8.8676', 'grad_norm': '1.8059', 'counters/examples': 269824, 'counters/updates': 16864}
+skipping logging after 269840 examples to avoid logging too frequently
+skipping logging after 269856 examples to avoid logging too frequently
+skipping logging after 269872 examples to avoid logging too frequently
+train stats after 269888 examples: {'loss/total': '0.69002', 'loss/critic': '0.24155', 'loss/policy': '0.26744', 'clipfrac/policy': '0.40287', 'loss/entropy': '1.5488', 'loss/policykl': '4.2031', 'loss/seqratio': '2.8335e-14', 'returns/mean': '-0.051101', 'returns/var': '0.11604', 'val/mean': '-0.10965', 'val/var': '0.0061836', 'examples_per_second': '10.008', 'grad_norm': '8.4391', 'counters/examples': 269888, 'counters/updates': 16868}
+skipping logging after 269904 examples to avoid logging too frequently
+skipping logging after 269920 examples to avoid logging too frequently
+skipping logging after 269936 examples to avoid logging too frequently
+train stats after 269952 examples: {'loss/total': '1.6997', 'loss/critic': '0.21129', 'loss/policy': '1.233', 'clipfrac/policy': '0.39472', 'loss/entropy': '1.5344', 'loss/policykl': '4.6475', 'loss/seqratio': '0.10352', 'returns/mean': '0.018622', 'returns/var': '0.10464', 'val/mean': '-0.013175', 'val/var': '0.0026889', 'examples_per_second': '9.872', 'grad_norm': '137', 'counters/examples': 269952, 'counters/updates': 16872}
+skipping logging after 269968 examples to avoid logging too frequently
+skipping logging after 269984 examples to avoid logging too frequently
+skipping logging after 270000 examples to avoid logging too frequently
+train stats after 270016 examples: {'loss/total': '0.73224', 'loss/critic': '0.25234', 'loss/policy': '0.20689', 'clipfrac/policy': '0.41376', 'loss/entropy': '1.3756', 'loss/policykl': '5.2266', 'loss/seqratio': '1.6431e-14', 'returns/mean': '-0.020984', 'returns/var': '0.12447', 'val/mean': '0.0033093', 'val/var': '0.0017245', 'examples_per_second': '10.421', 'grad_norm': '2.4692', 'counters/examples': 270016, 'counters/updates': 16876}
+skipping logging after 270032 examples to avoid logging too frequently
+skipping logging after 270048 examples to avoid logging too frequently
+skipping logging after 270064 examples to avoid logging too frequently
+train stats after 270080 examples: {'loss/total': '1.3669', 'loss/critic': '0.23165', 'loss/policy': '0.89551', 'clipfrac/policy': '0.41317', 'loss/entropy': '1.4592', 'loss/policykl': '4.6924', 'loss/seqratio': '4.0019e-11', 'returns/mean': '-0.020281', 'returns/var': '0.11684', 'val/mean': '-0.0012441', 'val/var': '0.0021474', 'examples_per_second': '10.272', 'grad_norm': '40.001', 'counters/examples': 270080, 'counters/updates': 16880}
+skipping logging after 270096 examples to avoid logging too frequently
+skipping logging after 270112 examples to avoid logging too frequently
+skipping logging after 270128 examples to avoid logging too frequently
+train stats after 270144 examples: {'loss/total': '0.73417', 'loss/critic': '0.23125', 'loss/policy': '0.16093', 'clipfrac/policy': '0.45312', 'loss/entropy': '1.0592', 'loss/policykl': '5.7109', 'loss/seqratio': '2.1982e-07', 'returns/mean': '0.012926', 'returns/var': '0.1173', 'val/mean': '-0.0145', 'val/var': '0.0023696', 'examples_per_second': '11.038', 'grad_norm': '2.2818', 'counters/examples': 270144, 'counters/updates': 16884}
+skipping logging after 270160 examples to avoid logging too frequently
+skipping logging after 270176 examples to avoid logging too frequently
+skipping logging after 270192 examples to avoid logging too frequently
+train stats after 270208 examples: {'loss/total': '0.76625', 'loss/critic': '0.22329', 'loss/policy': '0.25084', 'clipfrac/policy': '0.488', 'loss/entropy': '1.2941', 'loss/policykl': '5.1348', 'loss/seqratio': '0.00029565', 'returns/mean': '0.032163', 'returns/var': '0.12095', 'val/mean': '-0.0072155', 'val/var': '0.0026965', 'examples_per_second': '11.22', 'grad_norm': '7.5011', 'counters/examples': 270208, 'counters/updates': 16888}
+skipping logging after 270224 examples to avoid logging too frequently
+skipping logging after 270240 examples to avoid logging too frequently
+skipping logging after 270256 examples to avoid logging too frequently
