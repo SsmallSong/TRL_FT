@@ -1,0 +1,227 @@
+4
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Making experiment directory /home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_beta0
+no FSDP port specified; using open port for FSDP: 55979
+seed: 1
+exp_name: llama2_7b_dpo_halos_beta0
+datasets:
+- hh
+mode: train
+debug: false
+use_fsdp: true
+fsdp_port: 55979
+wandb:
+  enabled: true
+  entity: null
+  project: archangel
+cache_dir: /home/wxt/.cache/huggingface/hub
+local_run_dir: /home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_beta0
+do_first_eval: true
+minimum_log_interval_secs: 1.0
+intermediate_checkpoints: false
+trainer: DPOTrainer
+lr: 1.0e-05
+n_epochs: 1
+n_examples: null
+optimizer: RMSprop
+warmup_steps: 150
+eval_every: 4000
+n_samples: 128
+samples_dir: samples/
+n_eval_examples: 512
+saved_policy: /home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_beta0/LATEST/policy.pt
+top_p: 0.95
+human_prefix: '
+
+  <|user|>
+
+  '
+assistant_prefix: '
+
+  <|assistant|>
+
+  '
+human_suffix: ''
+assistant_suffix: ''
+frac_unique_desirable: 1.0
+frac_unique_undesirable: 1.0
+model:
+  name_or_path: daryl149/llama-2-7b-hf
+  tokenizer_name_or_path: null
+  load_from: /home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt
+  block_name: LlamaDecoderLayer
+  policy_dtype: bfloat16
+  fsdp_policy_mp: null
+  reference_dtype: bfloat16
+  max_grad_norm: 10.0
+  v_head_max_grad_norm: 0.1
+  max_length: 1024
+  max_prompt_length: 512
+  activation_checkpointing: true
+  batch_size: 16
+  gradient_accumulation_steps: 4
+  eval_batch_size: 16
+  use_flash_attention: false
+loss:
+  name: dpo
+  beta: 0
+  trainer: DPOTrainer
+  dataloader: PairedPreferenceDataLoader
+  use_reference_model: true
+
+================================================================================
+Writing to design-agent-09:/home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_beta0
+================================================================================
+building policy
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.38s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.50s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.63s/it]
+building reference model
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.24s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.44s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.56s/it]
+loading pre-trained weights at step 159968 from /home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt with metrics {}
+loaded pre-trained weights
+Loading tokenizer daryl149/llama-2-7b-hf
+0 special tokens added
+Loading HH dataset (train split) from Huggingface...
+Processing HH:   0%|          | 0/160800 [00:00<?, ?it/s]Processing HH:   1%|          | 1516/160800 [00:00<00:10, 15159.36it/s]Processing HH:   2%|▏         | 3032/160800 [00:00<00:10, 15016.21it/s]Processing HH:   3%|▎         | 4566/160800 [00:00<00:10, 15162.44it/s]Processing HH:   4%|▍         | 6083/160800 [00:00<00:10, 15015.77it/s]Processing HH:   5%|▍         | 7585/160800 [00:00<00:10, 14882.75it/s]Processing HH:   6%|▌         | 9074/160800 [00:00<00:10, 14707.11it/s]Processing HH:   7%|▋         | 10573/160800 [00:00<00:10, 14796.59it/s]Processing HH:   7%|▋         | 12054/160800 [00:00<00:10, 14627.47it/s]Processing HH:   8%|▊         | 13518/160800 [00:00<00:10, 14575.42it/s]Processing HH:   9%|▉         | 14976/160800 [00:01<00:14, 10022.09it/s]Processing HH:  10%|█         | 16472/160800 [00:01<00:12, 11158.42it/s]Processing HH:  11%|█         | 17983/160800 [00:01<00:11, 12135.75it/s]Processing HH:  12%|█▏        | 19432/160800 [00:01<00:11, 12750.30it/s]Processing HH:  13%|█▎        | 20933/160800 [00:01<00:10, 13364.21it/s]Processing HH:  14%|█▍        | 22404/160800 [00:01<00:10, 13737.50it/s]Processing HH:  15%|█▍        | 23884/160800 [00:01<00:09, 14037.13it/s]Processing HH:  16%|█▌        | 25331/160800 [00:01<00:09, 13944.45it/s]Processing HH:  17%|█▋        | 26841/160800 [00:01<00:09, 14277.09it/s]Processing HH:  18%|█▊        | 28339/160800 [00:02<00:09, 14481.10it/s]Processing HH:  19%|█▊        | 29872/160800 [00:02<00:08, 14729.89it/s]Processing HH:  20%|█▉        | 31379/160800 [00:02<00:08, 14829.31it/s]Processing HH:  20%|██        | 32910/160800 [00:02<00:08, 14970.91it/s]Processing HH:  21%|██▏       | 34414/160800 [00:02<00:11, 10930.27it/s]Processing HH:  22%|██▏       | 35911/160800 [00:02<00:10, 11886.27it/s]Processing HH:  23%|██▎       | 37365/160800 [00:02<00:09, 12553.46it/s]Processing HH:  24%|██▍       | 38762/160800 [00:02<00:09, 12928.12it/s]Processing HH:  25%|██▌       | 40259/160800 [00:02<00:08, 13488.05it/s]Processing HH:  26%|██▌       | 41724/160800 [00:03<00:08, 13809.70it/s]Processing HH:  27%|██▋       | 43151/160800 [00:03<00:08, 13836.00it/s]Processing HH:  28%|██▊       | 44567/160800 [00:03<00:08, 13703.31it/s]Processing HH:  29%|██▊       | 45974/160800 [00:03<00:08, 13808.58it/s]Processing HH:  29%|██▉       | 47371/160800 [00:03<00:08, 13846.92it/s]Processing HH:  30%|███       | 48796/160800 [00:03<00:08, 13963.81it/s]Processing HH:  31%|███       | 50213/160800 [00:03<00:07, 14024.44it/s]Processing HH:  32%|███▏      | 51622/160800 [00:03<00:07, 13840.26it/s]Processing HH:  33%|███▎      | 53011/160800 [00:03<00:07, 13838.92it/s]Processing HH:  34%|███▍      | 54445/160800 [00:04<00:07, 13986.94it/s]Processing HH:  35%|███▍      | 55867/160800 [00:04<00:07, 14055.74it/s]Processing HH:  36%|███▌      | 57275/160800 [00:04<00:10, 9784.13it/s] Processing HH:  37%|███▋      | 58697/160800 [00:04<00:09, 10796.07it/s]Processing HH:  37%|███▋      | 60102/160800 [00:04<00:08, 11595.29it/s]Processing HH:  38%|███▊      | 61489/160800 [00:04<00:08, 12186.06it/s]Processing HH:  39%|███▉      | 62945/160800 [00:04<00:07, 12827.68it/s]Processing HH:  40%|███▉      | 64304/160800 [00:04<00:07, 12940.09it/s]Processing HH:  41%|████      | 65695/160800 [00:04<00:07, 13211.21it/s]Processing HH:  42%|████▏     | 67070/160800 [00:05<00:07, 13364.60it/s]Processing HH:  43%|████▎     | 68475/160800 [00:05<00:06, 13563.45it/s]Processing HH:  43%|████▎     | 69859/160800 [00:05<00:06, 13643.84it/s]Processing HH:  44%|████▍     | 71238/160800 [00:05<00:06, 13674.10it/s]Processing HH:  45%|████▌     | 72680/160800 [00:05<00:06, 13892.59it/s]Processing HH:  46%|████▌     | 74117/160800 [00:05<00:06, 14028.93it/s]Processing HH:  47%|████▋     | 75526/160800 [00:05<00:06, 13992.24it/s]Processing HH:  48%|████▊     | 76929/160800 [00:05<00:06, 13920.16it/s]Processing HH:  49%|████▊     | 78324/160800 [00:05<00:06, 13661.35it/s]Processing HH:  50%|████▉     | 79732/160800 [00:05<00:05, 13783.44it/s]Processing HH:  50%|█████     | 81113/160800 [00:06<00:05, 13789.72it/s]Processing HH:  51%|█████▏    | 82523/160800 [00:06<00:05, 13880.77it/s]Processing HH:  52%|█████▏    | 83918/160800 [00:06<00:05, 13900.21it/s]Processing HH:  53%|█████▎    | 85323/160800 [00:06<00:05, 13944.75it/s]Processing HH:  54%|█████▍    | 86719/160800 [00:06<00:08, 9100.52it/s] Processing HH:  55%|█████▍    | 87847/160800 [00:06<00:08, 8930.76it/s]Processing HH:  55%|█████▌    | 88891/160800 [00:06<00:08, 8607.42it/s]Processing HH:  56%|█████▌    | 89855/160800 [00:07<00:08, 8609.90it/s]Processing HH:  56%|█████▋    | 90788/160800 [00:07<00:08, 8506.81it/s]Processing HH:  57%|█████▋    | 91688/160800 [00:07<00:08, 8511.65it/s]Processing HH:  58%|█████▊    | 92574/160800 [00:07<00:07, 8548.64it/s]Processing HH:  58%|█████▊    | 93454/160800 [00:07<00:07, 8454.73it/s]Processing HH:  59%|█████▊    | 94317/160800 [00:07<00:07, 8472.89it/s]Processing HH:  59%|█████▉    | 95177/160800 [00:07<00:07, 8446.12it/s]Processing HH:  60%|█████▉    | 96030/160800 [00:07<00:07, 8367.76it/s]Processing HH:  60%|██████    | 96873/160800 [00:07<00:07, 8294.77it/s]Processing HH:  61%|██████    | 97727/160800 [00:07<00:07, 8362.42it/s]Processing HH:  61%|██████▏   | 98567/160800 [00:08<00:07, 8311.94it/s]Processing HH:  62%|██████▏   | 99401/160800 [00:08<00:07, 8288.09it/s]Processing HH:  62%|██████▏   | 100232/160800 [00:08<00:07, 8289.78it/s]Processing HH:  63%|██████▎   | 101075/160800 [00:08<00:07, 8329.59it/s]Processing HH:  63%|██████▎   | 101922/160800 [00:08<00:07, 8368.20it/s]Processing HH:  64%|██████▍   | 102794/160800 [00:08<00:06, 8470.93it/s]Processing HH:  64%|██████▍   | 103658/160800 [00:08<00:06, 8517.41it/s]Processing HH:  65%|██████▌   | 104524/160800 [00:08<00:06, 8557.52it/s]Processing HH:  66%|██████▌   | 105380/160800 [00:08<00:06, 8404.11it/s]Processing HH:  66%|██████▌   | 106225/160800 [00:08<00:06, 8416.27it/s]Processing HH:  67%|██████▋   | 107068/160800 [00:09<00:06, 8300.68it/s]Processing HH:  67%|██████▋   | 107899/160800 [00:09<00:06, 8249.07it/s]Processing HH:  68%|██████▊   | 108925/160800 [00:09<00:05, 8840.72it/s]Processing HH:  68%|██████▊   | 110140/160800 [00:09<00:05, 9820.85it/s]Processing HH:  69%|██████▉   | 111330/160800 [00:09<00:04, 10436.78it/s]Processing HH:  70%|███████   | 112577/160800 [00:09<00:04, 11041.74it/s]Processing HH:  71%|███████   | 113800/160800 [00:09<00:04, 11394.32it/s]Processing HH:  72%|███████▏  | 115056/160800 [00:09<00:03, 11741.63it/s]Processing HH:  72%|███████▏  | 116232/160800 [00:09<00:03, 11712.39it/s]Processing HH:  73%|███████▎  | 117485/160800 [00:09<00:03, 11952.23it/s]Processing HH:  74%|███████▍  | 118690/160800 [00:10<00:03, 11979.30it/s]Processing HH:  75%|███████▍  | 119919/160800 [00:10<00:03, 12071.82it/s]Processing HH:  75%|███████▌  | 121161/160800 [00:10<00:03, 12174.98it/s]Processing HH:  76%|███████▌  | 122406/160800 [00:10<00:03, 12256.32it/s]Processing HH:  77%|███████▋  | 123632/160800 [00:10<00:04, 7821.03it/s] Processing HH:  78%|███████▊  | 124884/160800 [00:10<00:04, 8828.75it/s]Processing HH:  78%|███████▊  | 126031/160800 [00:10<00:03, 9447.40it/s]Processing HH:  79%|███████▉  | 127285/160800 [00:10<00:03, 10222.15it/s]Processing HH:  80%|███████▉  | 128554/160800 [00:11<00:02, 10872.09it/s]Processing HH:  81%|████████  | 129833/160800 [00:11<00:02, 11394.75it/s]Processing HH:  82%|████████▏ | 131054/160800 [00:11<00:02, 11623.40it/s]Processing HH:  82%|████████▏ | 132287/160800 [00:11<00:02, 11821.81it/s]Processing HH:  83%|████████▎ | 133534/160800 [00:11<00:02, 12009.51it/s]Processing HH:  84%|████████▍ | 134782/160800 [00:11<00:02, 12146.58it/s]Processing HH:  85%|████████▍ | 136030/160800 [00:11<00:02, 12244.89it/s]Processing HH:  85%|████████▌ | 137268/160800 [00:11<00:01, 12273.60it/s]Processing HH:  86%|████████▌ | 138505/160800 [00:11<00:01, 12052.40it/s]Processing HH:  87%|████████▋ | 139729/160800 [00:11<00:01, 12106.87it/s]Processing HH:  88%|████████▊ | 140945/160800 [00:12<00:01, 11805.85it/s]Processing HH:  88%|████████▊ | 142131/160800 [00:12<00:01, 11812.15it/s]Processing HH:  89%|████████▉ | 143334/160800 [00:12<00:01, 11874.43it/s]Processing HH:  90%|████████▉ | 144562/160800 [00:12<00:01, 11992.80it/s]Processing HH:  91%|█████████ | 145829/160800 [00:12<00:01, 12191.24it/s]Processing HH:  91%|█████████▏| 147050/160800 [00:12<00:01, 12158.57it/s]Processing HH:  92%|█████████▏| 148295/160800 [00:12<00:01, 12241.69it/s]Processing HH:  93%|█████████▎| 149526/160800 [00:12<00:00, 12258.20it/s]Processing HH:  94%|█████████▍| 150753/160800 [00:12<00:00, 12035.05it/s]Processing HH:  95%|█████████▍| 151992/160800 [00:13<00:00, 12137.28it/s]Processing HH:  95%|█████████▌| 153207/160800 [00:13<00:00, 12124.82it/s]Processing HH:  96%|█████████▌| 154425/160800 [00:13<00:00, 12140.71it/s]Processing HH:  97%|█████████▋| 155660/160800 [00:13<00:00, 12198.60it/s]Processing HH:  98%|█████████▊| 156907/160800 [00:13<00:00, 12276.22it/s]Processing HH:  98%|█████████▊| 158135/160800 [00:13<00:00, 12223.58it/s]Processing HH:  99%|█████████▉| 159390/160800 [00:13<00:00, 12320.29it/s]Processing HH: 100%|█████████▉| 160656/160800 [00:13<00:00, 12419.90it/s]Processing HH: 100%|██████████| 160800/160800 [00:13<00:00, 11723.54it/s]
+Loading HH dataset (test split) from Huggingface...
+Processing HH:   0%|          | 0/8552 [00:00<?, ?it/s]Processing HH:  16%|█▌        | 1364/8552 [00:00<00:00, 13627.34it/s]Processing HH:  32%|███▏      | 2749/8552 [00:00<00:00, 13756.23it/s]Processing HH:  48%|████▊     | 4138/8552 [00:00<00:00, 13815.83it/s]Processing HH:  65%|██████▍   | 5520/8552 [00:00<00:00, 11944.39it/s]Processing HH:  79%|███████▉  | 6747/8552 [00:00<00:00, 11497.08it/s]Processing HH:  93%|█████████▎| 7918/8552 [00:01<00:00, 5054.11it/s] Processing HH: 100%|██████████| 8552/8552 [00:01<00:00, 7605.77it/s]
+starting 4 processes for FSDP training
+setting RLIMIT_NOFILE soft limit to 1048576 from 1024
+4
+0 initializing distributed
+Creating trainer on process 0 with world size 4
+Finished 512 examples on test split
+Loaded 32 eval batches of size 16
+Sharding models...
+Attempting to enable activation checkpointing...
+Applying activation checkpointing wrapper to policy...
+FSDP activation checkpointing enabled!
+Loaded model on rank 0
+Using RMSprop optimizer with learning rate 1e-05
+Running evaluation after 0 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+Computing eval metrics:   3%|▎         | 1/32 [00:02<01:12,  2.32s/it]Computing eval metrics:   6%|▋         | 2/32 [00:04<01:03,  2.13s/it]Computing eval metrics:   9%|▉         | 3/32 [00:05<00:54,  1.88s/it]Computing eval metrics:  12%|█▎        | 4/32 [00:07<00:51,  1.85s/it]Computing eval metrics:  16%|█▌        | 5/32 [00:08<00:40,  1.52s/it]Computing eval metrics:  19%|█▉        | 6/32 [00:10<00:41,  1.61s/it]Computing eval metrics:  22%|██▏       | 7/32 [00:11<00:36,  1.45s/it]Computing eval metrics:  25%|██▌       | 8/32 [00:13<00:36,  1.52s/it]Computing eval metrics:  28%|██▊       | 9/32 [00:14<00:35,  1.53s/it]Computing eval metrics:  31%|███▏      | 10/32 [00:16<00:31,  1.45s/it]Computing eval metrics:  34%|███▍      | 11/32 [00:17<00:31,  1.52s/it]Computing eval metrics:  38%|███▊      | 12/32 [00:19<00:29,  1.46s/it]Computing eval metrics:  41%|████      | 13/32 [00:20<00:26,  1.41s/it]Computing eval metrics:  44%|████▍     | 14/32 [00:21<00:25,  1.40s/it]Computing eval metrics:  47%|████▋     | 15/32 [00:22<00:21,  1.26s/it]Computing eval metrics:  50%|█████     | 16/32 [00:23<00:19,  1.21s/it]Computing eval metrics:  53%|█████▎    | 17/32 [00:25<00:19,  1.29s/it]Computing eval metrics:  56%|█████▋    | 18/32 [00:26<00:18,  1.30s/it]Computing eval metrics:  59%|█████▉    | 19/32 [00:27<00:16,  1.25s/it]Computing eval metrics:  62%|██████▎   | 20/32 [00:28<00:14,  1.20s/it]Computing eval metrics:  66%|██████▌   | 21/32 [00:30<00:13,  1.24s/it]Computing eval metrics:  69%|██████▉   | 22/32 [00:30<00:11,  1.12s/it]Computing eval metrics:  72%|███████▏  | 23/32 [00:32<00:10,  1.18s/it]Computing eval metrics:  75%|███████▌  | 24/32 [00:33<00:10,  1.26s/it]Computing eval metrics:  78%|███████▊  | 25/32 [00:34<00:08,  1.23s/it]Computing eval metrics:  81%|████████▏ | 26/32 [00:36<00:07,  1.27s/it]Computing eval metrics:  84%|████████▍ | 27/32 [00:38<00:07,  1.44s/it]Computing eval metrics:  88%|████████▊ | 28/32 [00:39<00:05,  1.38s/it]Computing eval metrics:  91%|█████████ | 29/32 [00:41<00:04,  1.58s/it]Computing eval metrics:  94%|█████████▍| 30/32 [00:42<00:02,  1.39s/it]Computing eval metrics:  97%|█████████▋| 31/32 [00:43<00:01,  1.38s/it]Computing eval metrics: 100%|██████████| 32/32 [00:44<00:00,  1.37s/it]Computing eval metrics: 100%|██████████| 32/32 [00:44<00:00,  1.41s/it]
+eval after 0: {'rewards_eval/chosen': '0', 'rewards_eval/rejected': '0', 'rewards_eval/accuracies': '0', 'rewards_eval/margins': '0', 'logps_eval/rejected': '-147.66', 'logps_eval/chosen': '-144.92', 'loss/eval': '0.69141'}
+skipping logging after 16 examples to avoid logging too frequently
+skipping logging after 32 examples to avoid logging too frequently
+skipping logging after 48 examples to avoid logging too frequently
+train stats after 64 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-139.07', 'logps_train/chosen': '-44.217', 'loss/train': '0.69141', 'examples_per_second': '6.3778', 'grad_norm': '0', 'counters/examples': 64, 'counters/updates': 4}
+skipping logging after 80 examples to avoid logging too frequently
+skipping logging after 96 examples to avoid logging too frequently
+skipping logging after 112 examples to avoid logging too frequently
+train stats after 128 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-128.14', 'logps_train/chosen': '-45.758', 'loss/train': '0.69141', 'examples_per_second': '4.9221', 'grad_norm': '0', 'counters/examples': 128, 'counters/updates': 8}
+skipping logging after 144 examples to avoid logging too frequently
+skipping logging after 160 examples to avoid logging too frequently
+skipping logging after 176 examples to avoid logging too frequently
+train stats after 192 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-155.99', 'logps_train/chosen': '-43.15', 'loss/train': '0.69141', 'examples_per_second': '3.8077', 'grad_norm': '0', 'counters/examples': 192, 'counters/updates': 12}
+skipping logging after 208 examples to avoid logging too frequently
+skipping logging after 224 examples to avoid logging too frequently
+skipping logging after 240 examples to avoid logging too frequently
+train stats after 256 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-131.93', 'logps_train/chosen': '-39.964', 'loss/train': '0.69141', 'examples_per_second': '6.2032', 'grad_norm': '0', 'counters/examples': 256, 'counters/updates': 16}
+skipping logging after 272 examples to avoid logging too frequently
+skipping logging after 288 examples to avoid logging too frequently
+skipping logging after 304 examples to avoid logging too frequently
+train stats after 320 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-149.81', 'logps_train/chosen': '-34.786', 'loss/train': '0.69141', 'examples_per_second': '5.426', 'grad_norm': '0', 'counters/examples': 320, 'counters/updates': 20}
+skipping logging after 336 examples to avoid logging too frequently
+skipping logging after 352 examples to avoid logging too frequently
+skipping logging after 368 examples to avoid logging too frequently
+train stats after 384 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-146.19', 'logps_train/chosen': '-34.75', 'loss/train': '0.69141', 'examples_per_second': '6.5142', 'grad_norm': '0', 'counters/examples': 384, 'counters/updates': 24}
+skipping logging after 400 examples to avoid logging too frequently
+skipping logging after 416 examples to avoid logging too frequently
+skipping logging after 432 examples to avoid logging too frequently
+train stats after 448 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-114.68', 'logps_train/chosen': '-26.85', 'loss/train': '0.69141', 'examples_per_second': '5.5891', 'grad_norm': '0', 'counters/examples': 448, 'counters/updates': 28}
+skipping logging after 464 examples to avoid logging too frequently
+skipping logging after 480 examples to avoid logging too frequently
+skipping logging after 496 examples to avoid logging too frequently
+train stats after 512 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-109.19', 'logps_train/chosen': '-35.541', 'loss/train': '0.69141', 'examples_per_second': '6.0148', 'grad_norm': '0', 'counters/examples': 512, 'counters/updates': 32}
+skipping logging after 528 examples to avoid logging too frequently
+skipping logging after 544 examples to avoid logging too frequently
+skipping logging after 560 examples to avoid logging too frequently
+train stats after 576 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-119.76', 'logps_train/chosen': '-40.758', 'loss/train': '0.69141', 'examples_per_second': '5.0687', 'grad_norm': '0', 'counters/examples': 576, 'counters/updates': 36}
+skipping logging after 592 examples to avoid logging too frequently
+skipping logging after 608 examples to avoid logging too frequently
+skipping logging after 624 examples to avoid logging too frequently
+train stats after 640 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-139.96', 'logps_train/chosen': '-37.771', 'loss/train': '0.69141', 'examples_per_second': '4.8772', 'grad_norm': '0', 'counters/examples': 640, 'counters/updates': 40}
+skipping logging after 656 examples to avoid logging too frequently
+skipping logging after 672 examples to avoid logging too frequently
+skipping logging after 688 examples to avoid logging too frequently
+train stats after 704 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-147.53', 'logps_train/chosen': '-48.398', 'loss/train': '0.69141', 'examples_per_second': '5.1045', 'grad_norm': '0', 'counters/examples': 704, 'counters/updates': 44}
+skipping logging after 720 examples to avoid logging too frequently
+skipping logging after 736 examples to avoid logging too frequently
+skipping logging after 752 examples to avoid logging too frequently
+train stats after 768 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-121.03', 'logps_train/chosen': '-43.913', 'loss/train': '0.69141', 'examples_per_second': '5.5507', 'grad_norm': '0', 'counters/examples': 768, 'counters/updates': 48}
+skipping logging after 784 examples to avoid logging too frequently
+skipping logging after 800 examples to avoid logging too frequently
+skipping logging after 816 examples to avoid logging too frequently
+train stats after 832 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-113.07', 'logps_train/chosen': '-42.633', 'loss/train': '0.69141', 'examples_per_second': '6.6823', 'grad_norm': '0', 'counters/examples': 832, 'counters/updates': 52}
+skipping logging after 848 examples to avoid logging too frequently
+skipping logging after 864 examples to avoid logging too frequently
+skipping logging after 880 examples to avoid logging too frequently
+train stats after 896 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-136.36', 'logps_train/chosen': '-34.037', 'loss/train': '0.69141', 'examples_per_second': '3.7781', 'grad_norm': '0', 'counters/examples': 896, 'counters/updates': 56}
+skipping logging after 912 examples to avoid logging too frequently
+skipping logging after 928 examples to avoid logging too frequently
+skipping logging after 944 examples to avoid logging too frequently
+train stats after 960 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-150.46', 'logps_train/chosen': '-39.218', 'loss/train': '0.69141', 'examples_per_second': '6.0373', 'grad_norm': '0', 'counters/examples': 960, 'counters/updates': 60}
+skipping logging after 976 examples to avoid logging too frequently
+skipping logging after 992 examples to avoid logging too frequently
+skipping logging after 1008 examples to avoid logging too frequently
+train stats after 1024 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-120.38', 'logps_train/chosen': '-44.835', 'loss/train': '0.69141', 'examples_per_second': '4.9935', 'grad_norm': '0', 'counters/examples': 1024, 'counters/updates': 64}
+skipping logging after 1040 examples to avoid logging too frequently
+skipping logging after 1056 examples to avoid logging too frequently
+skipping logging after 1072 examples to avoid logging too frequently
+train stats after 1088 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-111.91', 'logps_train/chosen': '-37.902', 'loss/train': '0.69141', 'examples_per_second': '6.1265', 'grad_norm': '0', 'counters/examples': 1088, 'counters/updates': 68}
+skipping logging after 1104 examples to avoid logging too frequently
+skipping logging after 1120 examples to avoid logging too frequently
+skipping logging after 1136 examples to avoid logging too frequently
+train stats after 1152 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-119.49', 'logps_train/chosen': '-40.729', 'loss/train': '0.69141', 'examples_per_second': '6.1053', 'grad_norm': '0', 'counters/examples': 1152, 'counters/updates': 72}
+skipping logging after 1168 examples to avoid logging too frequently
+skipping logging after 1184 examples to avoid logging too frequently
+skipping logging after 1200 examples to avoid logging too frequently
+train stats after 1216 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-140.66', 'logps_train/chosen': '-38.604', 'loss/train': '0.69141', 'examples_per_second': '4.628', 'grad_norm': '0', 'counters/examples': 1216, 'counters/updates': 76}
+skipping logging after 1232 examples to avoid logging too frequently
+skipping logging after 1248 examples to avoid logging too frequently
+skipping logging after 1264 examples to avoid logging too frequently
+train stats after 1280 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-148.88', 'logps_train/chosen': '-41.335', 'loss/train': '0.69141', 'examples_per_second': '4.5646', 'grad_norm': '0', 'counters/examples': 1280, 'counters/updates': 80}
+skipping logging after 1296 examples to avoid logging too frequently
+skipping logging after 1312 examples to avoid logging too frequently
+skipping logging after 1328 examples to avoid logging too frequently
+train stats after 1344 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-141.61', 'logps_train/chosen': '-38.786', 'loss/train': '0.69141', 'examples_per_second': '6.26', 'grad_norm': '0', 'counters/examples': 1344, 'counters/updates': 84}
+skipping logging after 1360 examples to avoid logging too frequently
+skipping logging after 1376 examples to avoid logging too frequently
+skipping logging after 1392 examples to avoid logging too frequently
+train stats after 1408 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-163.52', 'logps_train/chosen': '-39.417', 'loss/train': '0.69141', 'examples_per_second': '4.7468', 'grad_norm': '0', 'counters/examples': 1408, 'counters/updates': 88}
+skipping logging after 1424 examples to avoid logging too frequently
+skipping logging after 1440 examples to avoid logging too frequently
+skipping logging after 1456 examples to avoid logging too frequently
+train stats after 1472 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-137.61', 'logps_train/chosen': '-37.61', 'loss/train': '0.69141', 'examples_per_second': '4.0131', 'grad_norm': '0', 'counters/examples': 1472, 'counters/updates': 92}
+skipping logging after 1488 examples to avoid logging too frequently
+skipping logging after 1504 examples to avoid logging too frequently
+skipping logging after 1520 examples to avoid logging too frequently
+train stats after 1536 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-153.12', 'logps_train/chosen': '-37.035', 'loss/train': '0.69141', 'examples_per_second': '5.0463', 'grad_norm': '0', 'counters/examples': 1536, 'counters/updates': 96}
+skipping logging after 1552 examples to avoid logging too frequently
+skipping logging after 1568 examples to avoid logging too frequently
+skipping logging after 1584 examples to avoid logging too frequently
+train stats after 1600 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-133.22', 'logps_train/chosen': '-34.508', 'loss/train': '0.69141', 'examples_per_second': '5.6093', 'grad_norm': '0', 'counters/examples': 1600, 'counters/updates': 100}
+skipping logging after 1616 examples to avoid logging too frequently
+skipping logging after 1632 examples to avoid logging too frequently
+skipping logging after 1648 examples to avoid logging too frequently
+train stats after 1664 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-158.63', 'logps_train/chosen': '-42.35', 'loss/train': '0.69141', 'examples_per_second': '5.9345', 'grad_norm': '0', 'counters/examples': 1664, 'counters/updates': 104}
+skipping logging after 1680 examples to avoid logging too frequently
+skipping logging after 1696 examples to avoid logging too frequently
+skipping logging after 1712 examples to avoid logging too frequently
+train stats after 1728 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-168.83', 'logps_train/chosen': '-40.022', 'loss/train': '0.69141', 'examples_per_second': '6.8231', 'grad_norm': '0', 'counters/examples': 1728, 'counters/updates': 108}
+skipping logging after 1744 examples to avoid logging too frequently
+skipping logging after 1760 examples to avoid logging too frequently
+skipping logging after 1776 examples to avoid logging too frequently
+train stats after 1792 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-132.12', 'logps_train/chosen': '-35.697', 'loss/train': '0.69141', 'examples_per_second': '4.4756', 'grad_norm': '0', 'counters/examples': 1792, 'counters/updates': 112}
+skipping logging after 1808 examples to avoid logging too frequently
+skipping logging after 1824 examples to avoid logging too frequently
+skipping logging after 1840 examples to avoid logging too frequently
+train stats after 1856 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-107.37', 'logps_train/chosen': '-39.691', 'loss/train': '0.69141', 'examples_per_second': '5.1025', 'grad_norm': '0', 'counters/examples': 1856, 'counters/updates': 116}
