@@ -5,16 +5,16 @@ id=$1
 ranking_len=$2
 accelerate launch --config_file dp_config.yaml infer_and_eval_main_generate.py \
     --index dpo  \
-    --stage 2 > /home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/logs/generate_infer_main_dpo_2.log 2>&1 
+    --stage 1 > /home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/logs/generate_infer_main_dpo_1.log 2>&1 
     
 
 accelerate launch --config_file dp_config.yaml infer_and_eval_main_reward.py \
     --index dpo \
-    --stage 2 > /home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/logs/reward_infer_main_dpo_2.log 2>&1
+    --stage 1 > /home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/logs/reward_infer_main_dpo_1.log 2>&1
 
 python -u infer_and_eval_main_score.py \
     --index dpo \
-    --stage 2 > /home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/logs/score_infer_main_dpo_2.log 2>&1
+    --stage 1 > /home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/logs/score_infer_main_dpo_1.log 2>&1
 
 
 
