@@ -6,6 +6,7 @@ import torch
 device = "cuda" # the device to load the model onto
 # export CUDA_VISIBLE_DEVICES=1
 model_id='/home/wxt/huatong/huggingface/hub/mistral_7b_instruct'
+model_id='mistralai/Mistral-7B-Instruct-v0.2'
 # model_id='daryl149/llama-2-7b-hf'
 tokenizer = AutoTokenizer.from_pretrained(model_id, padding_side='left')
 print("Tokenizer Loading Finished!")
