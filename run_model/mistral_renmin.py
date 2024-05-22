@@ -29,7 +29,7 @@ messages_2 = [
     {"role": "user", "content": "2024年3月18日,习近平总书记在湖南考察期间第一站来到了哪所学校？"}
    ]
 
-messages_1 = [
+messages_3 = [
             {"role": "user", "content": "On March 18, 2024, during his inspection tour in Hunan Province, General Secretary Xi Jinping made his first stop at which school?"},
 
                ]
