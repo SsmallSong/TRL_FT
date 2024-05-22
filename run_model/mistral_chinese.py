@@ -6,6 +6,7 @@ device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("
 model_path = "itpossible/Chinese-Mistral-7B-Instruct-v0.1"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, device_map=device)
+model.generation_config.pad_token_id = model.generation_config.eos_token_id
 
 text = "请为我推荐中国三座比较著名的山"
 # messages = [{"role": "user", "content": text}]
