@@ -14,6 +14,7 @@ output_dir = '/home/wxt/hautong/TRL_FT/rag/renmin_docs'
 with gzip.open(input_file, 'rt', encoding='utf-8') as f:
     data = json.load(f)
 
+
 # 将每个JSON对象写入单独的TXT文件
 for i, article in enumerate(data, start=1):
     file_name = os.path.join(output_dir, f"{i}.txt")
