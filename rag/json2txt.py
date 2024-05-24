@@ -4,11 +4,11 @@ import gzip
 
 # 读取JSON文件
 input_file = '/home/wxt/hautong/TRL_FT/rag/article.json.gz'
-output_dir = '/home/wxt/hautong/TRL_FT/rag/renmin_docs'
+output_dir = '/home/wxt/hautong/renmin_docs'
 
 # # 如果输出目录不存在，则创建
-# if not os.path.exists(output_dir):
-#     os.makedirs(output_dir)
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
 
 # 读取JSON文件内容到一个列表
 with gzip.open(input_file, 'rt', encoding='utf-8') as f:
