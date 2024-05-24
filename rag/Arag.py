@@ -15,6 +15,10 @@ Original file is located at
 # !pip install sentence_transformers
 
 # !pip install llama_index
+import os
+import torch
+os.environ["CUDA_VISIBLE_DEVICES"]="1"
+print(torch.cuda.device_count())
 
 from llama_index.core import VectorStoreIndex,SimpleDirectoryReader,ServiceContext
 from llama_index.llms.huggingface import HuggingFaceLLM
@@ -24,7 +28,7 @@ documents= SimpleDirectoryReader('/home/wxt/huatong/renmin_docs').load_data()
 print(type(documents))
 print(len(documents))
 print(documents[0])
-
+documents=documents[0:20]
 system_prompt="""
 You are a Q&A assistant. Your goal is to answer questions as
 ccurately as possible based on the instructions and context provided.
@@ -33,20 +37,21 @@ ccurately as possible based on the instructions and context provided.
 ## Default Format Supportable By Llama2
 query_wrapper_prompt= SimpleInputPrompt("<USER|>{query_string}<|ASSISTANT>")
 
-query_wrapper_prompt
+#query_wrapper_prompt
 
 # !huggingface-cli login
 
 import torch
-model_id='mistralai/Mistral-7B-Instruct-v0.2'
+modelid='mistralai/Mistral-7B-Instruct-v0.2'
+modelid="itpossible/Chinese-Mistral-7B-Instruct-v0.1"
 llm = HuggingFaceLLM(
     context_window=4096,
     max_new_tokens=256,
     generate_kwargs={"temperature": 0.0, "do_sample": False},
     system_prompt=system_prompt,
-    query_wrapper_prompt=query_wrapper_prompt,
-    tokenizer_name=model_id,
-    model_name=model_id,
+#    query_wrapper_prompt=query_wrapper_prompt,
+    tokenizer_name=modelid,
+    model_name=modelid,
     device_map="auto",
     # uncomment this if using CUDA to reduce memory usage
     model_kwargs={"torch_dtype": torch.float16 , "load_in_8bit":True}
@@ -54,7 +59,7 @@ llm = HuggingFaceLLM(
 
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 from llama_index.core import ServiceContext
-from llama_index.embeddings import LangchainEmbedding
+from llama_index.embeddings.langchain import LangchainEmbedding
 
 embed_model=LangchainEmbedding(
     HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2"))
@@ -64,15 +69,18 @@ service_context=ServiceContext.from_defaults(
     llm=llm,
     embed_model=embed_model
 )
-
+print("1111111111111111111")
 index=VectorStoreIndex.from_documents(documents,service_context=service_context)
-
+print("222222222222222222")
 query_engine=index.as_query_engine()
 
-response=query_engine.query("what is attention is all you need?")
+#response=query_engine.query("what is attention is all you need?",query_string="what is attention is all you need?")
+response=query_engine.query("2024年是中国红十字会成立多少周年?")
+print(response)
+
+response=query_engine.query("2024年3月18日,习近平总书记在湖南考察期间第一站来到了哪所学校？")
 
 print(response)
 
-response=query_engine.query("what is YOLO?")
-
+response=query_engine.query("2024年我国文化和旅游部部长是谁？")
 print(response)
