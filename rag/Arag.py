@@ -23,15 +23,18 @@ print(torch.cuda.device_count())
 from llama_index.core import VectorStoreIndex,SimpleDirectoryReader,ServiceContext
 from llama_index.llms.huggingface import HuggingFaceLLM
 from llama_index.core.prompts.prompts import SimpleInputPrompt
+from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+from llama_index.embeddings.langchain import LangchainEmbedding
 
 documents= SimpleDirectoryReader('/home/wxt/huatong/renmin_docs').load_data()
 print(type(documents))
 print(len(documents))
 print(documents[0])
-documents=documents[0:20]
+# documents=documents[0:20]
 system_prompt="""
-You are a Q&A assistant. Your goal is to answer questions as
-ccurately as possible based on the instructions and context provided.
+你是一个问答助手。你的目标是根据提供的指令和上下文尽可能准确地回答问题。
+你的所有回答都应该是中文的。
+知识库中每篇文章都提供了url，每回答一个问题，都要在后面同时返回你是从哪个url对应的文章中找到的答案。
 """
 
 ## Default Format Supportable By Llama2
@@ -41,11 +44,10 @@ query_wrapper_prompt= SimpleInputPrompt("<USER|>{query_string}<|ASSISTANT>")
 
 # !huggingface-cli login
 
-import torch
 modelid='mistralai/Mistral-7B-Instruct-v0.2'
 modelid="itpossible/Chinese-Mistral-7B-Instruct-v0.1"
 llm = HuggingFaceLLM(
-    context_window=4096,
+    context_window=1024,
     max_new_tokens=256,
     generate_kwargs={"temperature": 0.0, "do_sample": False},
     system_prompt=system_prompt,
@@ -57,9 +59,7 @@ llm = HuggingFaceLLM(
     model_kwargs={"torch_dtype": torch.float16 , "load_in_8bit":True}
 )
 
-from langchain.embeddings.huggingface import HuggingFaceEmbeddings
-from llama_index.core import ServiceContext
-from llama_index.embeddings.langchain import LangchainEmbedding
+
 
 embed_model=LangchainEmbedding(
     HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2"))
@@ -69,18 +69,27 @@ service_context=ServiceContext.from_defaults(
     llm=llm,
     embed_model=embed_model
 )
-print("1111111111111111111")
+print("Begin Index")
 index=VectorStoreIndex.from_documents(documents,service_context=service_context)
-print("222222222222222222")
+print("Finish Index")
 query_engine=index.as_query_engine()
 
 #response=query_engine.query("what is attention is all you need?",query_string="what is attention is all you need?")
 response=query_engine.query("2024年是中国红十字会成立多少周年?")
 print(response)
 
-response=query_engine.query("2024年3月18日,习近平总书记在湖南考察期间第一站来到了哪所学校？")
+response=query_engine.query("《中华人民共和国爱国主义教育法》什么时候实施？")
+print(response)
 
+response=query_engine.query("2024年3月18日,习近平总书记在湖南考察期间第一站来到了哪所学校？")
 print(response)
 
 response=query_engine.query("2024年我国文化和旅游部部长是谁？")
 print(response)
+
+response=query_engine.query("2023—2024赛季国际滑联短道速滑世界杯北京站比赛中，刘少昂参与获得几枚奖牌？")
+print(response)
+
+response=query_engine.query("福建自贸试验区在自贸建设十年中主要从哪几个方面推动改革创新？")
+print(response)
+
