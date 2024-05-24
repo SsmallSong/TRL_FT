@@ -3,8 +3,8 @@ import os
 import gzip
 
 # 读取JSON文件
-input_file = '/home/wxt/hautong/TRL_FT/rag/article.json.gz'
-output_dir = '/home/wxt/hautong/renmin_docs'
+input_file = '/home/wxt/huatong/TRL_FT/rag/article.json.gz'
+output_dir = '/home/wxt/huatong/renmin_docs'
 
 # # 如果输出目录不存在，则创建
 if not os.path.exists(output_dir):
