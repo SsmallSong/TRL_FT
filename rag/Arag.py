@@ -17,10 +17,10 @@ Original file is located at
 # !pip install llama_index
 
 from llama_index.core import VectorStoreIndex,SimpleDirectoryReader,ServiceContext
-from llama_index.llms import HuggingFaceLLM
-from llama_index.prompts.prompts import SimpleInputPrompt
+from llama_index.llms.huggingface import HuggingFaceLLM
+from llama_index.core.prompts.prompts import SimpleInputPrompt
 
-documents= SimpleDirectoryReader('/home/wxt/hautong/TRL_FT/rag/renmin_docs').load_data()
+documents= SimpleDirectoryReader('/home/wxt/huatong/renmin_docs').load_data()
 print(type(documents))
 print(len(documents))
 print(documents[0])
@@ -53,7 +53,7 @@ llm = HuggingFaceLLM(
 )
 
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
-from llama_index import ServiceContext
+from llama_index.core import ServiceContext
 from llama_index.embeddings import LangchainEmbedding
 
 embed_model=LangchainEmbedding(
