@@ -36,7 +36,7 @@ modelid="baichuan-inc/Baichuan2-7B-Chat"
 llm = HuggingFaceLLM(
     context_window=1024,
     max_new_tokens=512,
-    trust_remote_code=True,
+ #   trust_remote_code=True,
     generate_kwargs={"pad_token_id": 2,
             "temperature": 0.2, "do_sample": True},
 #    system_prompt=system_prompt,
@@ -44,14 +44,15 @@ llm = HuggingFaceLLM(
     tokenizer_name=modelid,
     model_name=modelid,
     device_map="auto",
-    model_kwargs={"torch_dtype": torch.float16}
+    model_kwargs={"trust_remote_code":True,"torch_dtype": torch.float16},
+    tokenizer_kwargs={"trust_remote_code":True}
     #model_kwargs={"torch_dtype": torch.float16 , "load_in_8bit":True}
 )
 
 
 def Mistral_instruct_query(questionText):
-    queryQuestion = "<s>[INST] " + questionText + " [/INST]"
-    return queryQuestion
+#    questionText = "<s>[INST] " + questionText + " [/INST]"
+    return questionText
 
 # embed_model=LangchainEmbedding(
 #     HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2"))
@@ -74,8 +75,8 @@ chroma_collection = db.get_or_create_collection("quickstart")
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
-index=VectorStoreIndex.from_documents(documents,storage_context=storage_context)
-# index = VectorStoreIndex.from_vector_store( vector_store, storage_context=storage_context)
+#index=VectorStoreIndex.from_documents(documents,storage_context=storage_context)
+index = VectorStoreIndex.from_vector_store( vector_store, storage_context=storage_context)
 print("Finish Index")
 # query_engine = CitationQueryEngine.from_args(
 #             index, 
