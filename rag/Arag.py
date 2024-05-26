@@ -30,7 +30,7 @@ query_wrapper_prompt= SimpleInputPrompt("<USER|>{query_string}<|ASSISTANT>")
 
 modelid='mistralai/Mistral-7B-Instruct-v0.2'
 modelid="itpossible/Chinese-Mistral-7B-Instruct-v0.1"
-# modelid="baichuan-inc/Baichuan2-7B-Chat"
+modelid="baichuan-inc/Baichuan2-7B-Chat"
 llm = HuggingFaceLLM(
     context_window=1024,
     max_new_tokens=512,
