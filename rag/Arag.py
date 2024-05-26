@@ -17,22 +17,23 @@ Original file is located at
 # !pip install llama_index
 import os
 import torch
-os.environ["CUDA_VISIBLE_DEVICES"]="0,1"
+os.environ["CUDA_VISIBLE_DEVICES"]="1"
 print(torch.cuda.device_count())
 import chromadb
 from llama_index.core import VectorStoreIndex,SimpleDirectoryReader,ServiceContext
 from llama_index.llms.huggingface import HuggingFaceLLM
 from llama_index.core.prompts.prompts import SimpleInputPrompt
-from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings.huggingface import HuggingFaceEmbeddings
 from llama_index.embeddings.langchain import LangchainEmbedding
 from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import StorageContext
-
+from llama_index.core import Settings
+from llama_index.core.query_engine import CitationQueryEngine
 
 documents= SimpleDirectoryReader('/home/wxt/huatong/renmin_docs').load_data()
-print(type(documents))
-print(len(documents))
-print(documents[0])
+#print(type(documents))
+#print(len(documents))
+#print(documents[0])
 #documents=documents[0:20]
 system_prompt="""
 你是一个问答助手。你的目标是根据提供的指令和上下文尽可能准确地回答问题。
@@ -52,26 +53,30 @@ modelid="itpossible/Chinese-Mistral-7B-Instruct-v0.1"
 llm = HuggingFaceLLM(
     context_window=1024,
     max_new_tokens=256,
-    generate_kwargs={"temperature": 0.0, "do_sample": False},
-    system_prompt=system_prompt,
+    generate_kwargs={"pad_token_id": 2,
+            "temperature": 1.0, "do_sample": True},
+#    system_prompt=system_prompt,
 #    query_wrapper_prompt=query_wrapper_prompt,
     tokenizer_name=modelid,
     model_name=modelid,
     device_map="auto",
     # uncomment this if using CUDA to reduce memory usage
-    model_kwargs={"torch_dtype": torch.float16 , "load_in_8bit":True}
+    model_kwargs={"torch_dtype": torch.float16}
+    #model_kwargs={"torch_dtype": torch.float16 , "load_in_8bit":True}
 )
 
 
 
 embed_model=LangchainEmbedding(
     HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2"))
+Settings.embed_model = embed_model
+Settings.llm = llm
 
-service_context=ServiceContext.from_defaults(
-    chunk_size=1024,
-    llm=llm,
-    embed_model=embed_model
-)
+#service_context=ServiceContext.from_defaults(
+ #   chunk_size=1024,
+ #   llm=llm,
+ #   embed_model=embed_model
+#)
 
 print("Begin Index")
 
@@ -82,16 +87,21 @@ storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
 
 
-index=VectorStoreIndex.from_documents(documents,storage_context=storage_context,service_context=service_context)
-#index = VectorStoreIndex.from_vector_store( vector_store,service_context=service_context, storage_context=storage_context)
+#index=VectorStoreIndex.from_documents(documents,storage_context=storage_context,service_context=service_context)
+index = VectorStoreIndex.from_vector_store( vector_store, storage_context=storage_context)
 #index.save_to_disk('/home/wxt/huatong/rmrb_index_file.faiss')
 print("Finish Index")
-query_engine=index.as_query_engine()
-print("111111111111")
+query_engine = CitationQueryEngine.from_args(
+            index, 
+                similarity_top_k=3, 
+                    citation_chunk_size=256,
+                    )
+#query_engine=index.as_query_engine()
+#print("111111111111")
 #response=query_engine.query("what is attention is all you need?",query_string="what is attention is all you need?")
 response=query_engine.query("2024年是中国红十字会成立多少周年?")
 print(response)
-kill
+
 response=query_engine.query("《中华人民共和国爱国主义教育法》什么时候实施？")
 print(response)
 
