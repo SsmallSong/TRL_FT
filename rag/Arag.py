@@ -30,12 +30,12 @@ query_wrapper_prompt= SimpleInputPrompt("<USER|>{query_string}<|ASSISTANT>")
 
 modelid='mistralai/Mistral-7B-Instruct-v0.2'
 modelid="itpossible/Chinese-Mistral-7B-Instruct-v0.1"
-modelid="baichuan-inc/Baichuan2-7B-Chat"
+# modelid="baichuan-inc/Baichuan2-7B-Chat"
 llm = HuggingFaceLLM(
     context_window=1024,
-    max_new_tokens=256,
+    max_new_tokens=512,
     generate_kwargs={"pad_token_id": 2,
-            "temperature": 1.0, "do_sample": True},
+            "temperature": 0.2, "do_sample": True},
 #    system_prompt=system_prompt,
 #    query_wrapper_prompt=query_wrapper_prompt,
     tokenizer_name=modelid,
@@ -46,6 +46,9 @@ llm = HuggingFaceLLM(
 )
 
 
+def Mistral_instruct_query(questionText):
+    queryQuestion = "<s>[INST] " + questionText + " [/INST]"
+    return queryQuestion
 
 embed_model=LangchainEmbedding(
     HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2"))
@@ -75,21 +78,21 @@ print("Finish Index")
 #                     )
 query_engine=index.as_query_engine()
 
-response=query_engine.query("2024年是中国红十字会成立多少周年?")
+response=query_engine.query(Mistral_instruct_query("2024年是中国红十字会成立多少周年?"))
 print(response)
 
-response=query_engine.query("《中华人民共和国爱国主义教育法》什么时候实施？")
+response=query_engine.query(Mistral_instruct_query("《中华人民共和国爱国主义教育法》什么时候实施？"))
 print(response)
 
-response=query_engine.query("2024年3月18日,习近平总书记在湖南考察期间第一站来到了哪所学校？")
+response=query_engine.query(Mistral_instruct_query("2024年3月18日,习近平总书记在湖南考察期间第一站来到了哪所学校？"))
 print(response)
 
-response=query_engine.query("2024年我国文化和旅游部部长是谁？")
+response=query_engine.query(Mistral_instruct_query("2024年我国文化和旅游部部长是谁？"))
 print(response)
 
-response=query_engine.query("2023—2024赛季国际滑联短道速滑世界杯北京站比赛中，刘少昂参与获得几枚奖牌？")
+response=query_engine.query(Mistral_instruct_query("2023—2024赛季国际滑联短道速滑世界杯北京站比赛中，刘少昂参与获得几枚奖牌？"))
 print(response)
 
-response=query_engine.query("福建自贸试验区在自贸建设十年中主要从哪几个方面推动改革创新？")
+response=query_engine.query(Mistral_instruct_query("福建自贸试验区在自贸建设十年中主要从哪几个方面推动改革创新？"))
 print(response)
 
