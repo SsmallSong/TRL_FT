@@ -21,8 +21,10 @@ documents= SimpleDirectoryReader('/home/wxt/huatong/renmin_docs').load_data()
 #documents=documents[0:20]
 system_prompt="""
 你是一个问答助手。你的目标是根据提供的指令和上下文尽可能准确地回答问题。
-你的所有回答都应该是中文的。
-知识库中每篇文章都提供了url，每回答一个问题，都要在后面同时返回你是从哪个url对应的文章中找到的答案。
+你的所有回答除了给定格式外都应该是中文的。
+知识库中每篇文章都提供了url，每回答一个问题，都要在后面同时给出相关文档的url。
+答案格式如下:
+"answer:{$answer}\nrelated-urls:{$related-urls}\n "
 """
 
 
@@ -34,6 +36,7 @@ modelid="baichuan-inc/Baichuan2-7B-Chat"
 llm = HuggingFaceLLM(
     context_window=1024,
     max_new_tokens=512,
+    trust_remote_code=True,
     generate_kwargs={"pad_token_id": 2,
             "temperature": 0.2, "do_sample": True},
 #    system_prompt=system_prompt,
@@ -50,8 +53,11 @@ def Mistral_instruct_query(questionText):
     queryQuestion = "<s>[INST] " + questionText + " [/INST]"
     return queryQuestion
 
+# embed_model=LangchainEmbedding(
+#     HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2"))
+
 embed_model=LangchainEmbedding(
-    HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2"))
+    HuggingFaceEmbeddings(model_name="BAAI/bge-small-zh-v1.5"))
 Settings.embed_model = embed_model
 Settings.llm = llm
 
@@ -63,13 +69,13 @@ Settings.llm = llm
 
 print("Begin Index")
 
-db = chromadb.PersistentClient(path="/home/wxt/huatong/rmrb_chroma_db")
+db = chromadb.PersistentClient(path="/home/wxt/huatong/rmrb_chroma_db_zh")
 chroma_collection = db.get_or_create_collection("quickstart")
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
-#index=VectorStoreIndex.from_documents(documents,storage_context=storage_context,service_context=service_context)
-index = VectorStoreIndex.from_vector_store( vector_store, storage_context=storage_context)
+index=VectorStoreIndex.from_documents(documents,storage_context=storage_context)
+# index = VectorStoreIndex.from_vector_store( vector_store, storage_context=storage_context)
 print("Finish Index")
 # query_engine = CitationQueryEngine.from_args(
 #             index, 
