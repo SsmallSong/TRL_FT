@@ -1,3 +1,31 @@
+
+# Load model directly
+from transformers import AutoModelForCausalLM,AutoTokenizer
+model = AutoModelForCausalLM.from_pretrained("baichuan-inc/Baichuan2-13B-Chat", trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained("baichuan-inc/Baichuan2-13B-Chat", use_fast=False, trust_remote_code=True)
+query="hello"
+from transformers.generation.utils import GenerationConfig
+import torch 
+model.generation_config = GenerationConfig.from_pretrained("baichuan-inc/Baichuan-13B-Chat")
+messages = []
+messages.append({"role": "user", "content": "世界上第二高的山峰是哪座"})
+
+messages=tokenizer.apply_chat_template(
+            messages,
+                tokenize=False,
+                    add_generation_prompt=True
+                    )
+query=tokenizer.apply_chat_template(
+            query,
+                tokenize=False,
+                    add_generation_prompt=True
+                    
+                    )
+print(query)
+print("====================================")
+print(messages)
+kill
+
 import json
 import os
 import gzip

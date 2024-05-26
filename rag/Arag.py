@@ -1,7 +1,7 @@
 
 import os
 import torch
-os.environ["CUDA_VISIBLE_DEVICES"]="1"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 print(torch.cuda.device_count())
 import chromadb
 from llama_index.core import VectorStoreIndex,SimpleDirectoryReader,ServiceContext
@@ -22,9 +22,9 @@ documents= SimpleDirectoryReader('/home/wxt/huatong/renmin_docs').load_data()
 system_prompt="""
 你是一个问答助手。你的目标是根据提供的指令和上下文尽可能准确地回答问题。
 你的所有回答除了给定格式外都应该是中文的。
-知识库中每篇文章都提供了url，每回答一个问题，都要在后面同时给出相关文档的url。
-答案格式如下:
-"answer:{$answer}\nrelated-urls:{$related-urls}\n "
+知识库中每篇文章都提供了url链接，每回答一个问题，都要在后面同时给出相关文档的url链接。
+输出格式如下:
+"答案:{}\n相关链接:{}\n "
 """
 
 
@@ -39,7 +39,7 @@ llm = HuggingFaceLLM(
  #   trust_remote_code=True,
     generate_kwargs={"pad_token_id": 2,
             "temperature": 0.2, "do_sample": True},
-#    system_prompt=system_prompt,
+ #   system_prompt=system_prompt,
 #    query_wrapper_prompt=query_wrapper_prompt,
     tokenizer_name=modelid,
     model_name=modelid,
@@ -52,6 +52,7 @@ llm = HuggingFaceLLM(
 
 def Mistral_instruct_query(questionText):
 #    questionText = "<s>[INST] " + questionText + " [/INST]"
+  #  questionText="<reserved_106> "+questionText
     return questionText
 
 # embed_model=LangchainEmbedding(
