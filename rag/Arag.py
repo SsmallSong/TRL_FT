@@ -4,6 +4,8 @@ import torch
 os.environ["CUDA_VISIBLE_DEVICES"]="0"
 print(torch.cuda.device_count())
 import chromadb
+from FlagEmbedding import FlagReranker
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from llama_index.core import VectorStoreIndex,SimpleDirectoryReader,ServiceContext
 from llama_index.llms.huggingface import HuggingFaceLLM
 from llama_index.core.prompts.prompts import SimpleInputPrompt
@@ -97,21 +99,46 @@ storage_context = StorageContext.from_defaults(vector_store=vector_store)
 #index=VectorStoreIndex.from_documents(documents,storage_context=storage_context)
 index = VectorStoreIndex.from_vector_store( vector_store, storage_context=storage_context)
 print("Finish Index")
+
+# rerank_llm_name = "AI-ModelScope/bge-reranker-v2-m3"
+# downloaded_rerank_model = snapshot_download(rerank_llm_name)
+# rerank_llm = SentenceTransformerRerank(model=downloaded_rerank_model, top_n=3)
+reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True) # Setting use_fp16 to True speeds up computation with a slight performance degradation
+
 # query_engine = CitationQueryEngine.from_args(
 #             index, 
 #             similarity_top_k=3, 
 #             citation_chunk_size=256,
 #                     )
-query_engine=index.as_query_engine()
+query_engine=index.as_query_engine(similarity_top_k=5, node_postprocessors=[reranker])
 
 query_list=[
-    "2024年是中国红十字会成立多少周年?",
-    "《中华人民共和国爱国主义教育法》什么时候实施？",
-    "2024年3月18日,习近平总书记在湖南考察期间第一站来到了哪所学校？",
-    "2024年我国文化和旅游部部长是谁？",
-    "2023—2024赛季国际滑联短道速滑世界杯北京站比赛中，刘少昂参与获得几枚奖牌？",
-    "福建自贸试验区在自贸建设十年中主要从哪几个方面推动改革创新？"
+
+"谁主持了国务院第七次专题学习？",
+"重庆市潼南区文化和旅游发展委员会党组书记、主任是谁？",
+"元古堆村村委会主任是谁？",
+"《中华人民共和国国务院组织法》什么时候公布？",
+"陕西省延安市安塞区高桥镇南沟村党支书是谁？",
+"首艘长江支线换电电池动力集装箱班轮是什么？",
+"国家数据局挂牌时间是什么时候？",
+"北京长峰医院发生重大火灾事故造成多少人死亡？",
+"2023上半年机械工业增加值同比增长多少？",
+"中国艺术体操队的首个世界冠军是在哪个城市取得的？",
+"长江生态环境保护民主监督启动于什么时候？",
+"联合国教科文组织在促进女童和妇女教育领域的唯一奖项是什么？",
+"2023年是纪念中美“乒乓外交”多少周年？",
+"哈尔滨亚冬会包含几个大项？",
+"全国人大常委会副委员长、中华全国总工会主席是谁",
+
+    # "2024年是中国红十字会成立多少周年?",
+    # "《中华人民共和国爱国主义教育法》什么时候实施？",
+    # "2024年3月18日,习近平总书记在湖南考察期间第一站来到了哪所学校？",
+    # "2024年我国文化和旅游部部长是谁？",
+    # "2023—2024赛季国际滑联短道速滑世界杯北京站比赛中，刘少昂参与获得几枚奖牌？",
+    # "福建自贸试验区在自贸建设十年中主要从哪几个方面推动改革创新？"
 ]
+
+
 
 for i in range(len(query_list)):
     response=query_engine.query(Chat_instruct_query(query_list[i],modelid,use_chat=False))
