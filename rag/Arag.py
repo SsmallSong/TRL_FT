@@ -101,6 +101,7 @@ storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
 #index=VectorStoreIndex.from_documents(documents,storage_context=storage_context)
 index = VectorStoreIndex.from_vector_store( vector_store, storage_context=storage_context)
+print(index)
 print("Finish Index")
 
 rerank_llm_name = "BAAI/bge-reranker-v2-m3"
