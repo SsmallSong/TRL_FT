@@ -1,9 +1,12 @@
 
 import os
 import torch
-os.environ["CUDA_VISIBLE_DEVICES"]="0"
+os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
 print(torch.cuda.device_count())
 import chromadb
+from llama_index.core.postprocessor import SentenceTransformerRerank
+from llama_index.core.prompts import PromptTemplate
+from huggingface_hub import snapshot_download
 from FlagEmbedding import FlagReranker
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from llama_index.core import VectorStoreIndex,SimpleDirectoryReader,ServiceContext
@@ -100,10 +103,10 @@ storage_context = StorageContext.from_defaults(vector_store=vector_store)
 index = VectorStoreIndex.from_vector_store( vector_store, storage_context=storage_context)
 print("Finish Index")
 
-# rerank_llm_name = "AI-ModelScope/bge-reranker-v2-m3"
-# downloaded_rerank_model = snapshot_download(rerank_llm_name)
-# rerank_llm = SentenceTransformerRerank(model=downloaded_rerank_model, top_n=3)
-reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True) # Setting use_fp16 to True speeds up computation with a slight performance degradation
+rerank_llm_name = "BAAI/bge-reranker-v2-m3"
+#downloaded_rerank_model = snapshot_download(rerank_llm_name)
+reranker= SentenceTransformerRerank(model=rerank_llm_name, top_n=3)
+#reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True) # Setting use_fp16 to True speeds up computation with a slight performance degradation
 
 # query_engine = CitationQueryEngine.from_args(
 #             index, 
@@ -111,7 +114,7 @@ reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True) # Setting use_
 #             citation_chunk_size=256,
 #                     )
 query_engine=index.as_query_engine(similarity_top_k=5, node_postprocessors=[reranker])
-
+#query_engine=index.as_query_engine()
 query_list=[
 
 "谁主持了国务院第七次专题学习？",
