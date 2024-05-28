@@ -117,7 +117,6 @@ reranker= SentenceTransformerRerank(model=rerank_llm_name, top_n=3)
 query_engine=index.as_query_engine(similarity_top_k=5, node_postprocessors=[reranker])
 #query_engine=index.as_query_engine()
 query_list=[
-
 "谁主持了国务院第七次专题学习？",
 "重庆市潼南区文化和旅游发展委员会党组书记、主任是谁？",
 "元古堆村村委会主任是谁？",
