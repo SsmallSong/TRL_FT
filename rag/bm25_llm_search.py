@@ -6,7 +6,7 @@ from rank_bm25 import BM25Okapi
 import pickle
 import gzip
 # 确保已下载nltk的中文停用词表
-# nltk.download('stopwords')
+nltk.download('stopwords')
 import time
 from nltk.corpus import stopwords
 
@@ -14,7 +14,7 @@ from nltk.corpus import stopwords
 chinese_stopwords = set(stopwords.words('chinese'))
 
 # 假设你的JSON文件名为'articles.json'
-with gzip.open('/home/wxt/huatong/TRL_FT/rag/article.json', 'rt', encoding='utf-8') as f:
+with gzip.open('/home/wxt/huatong/TRL_FT/rag/article.json.gz', 'rt', encoding='utf-8') as f:
     data = json.load(f)
 
 url_list = []
@@ -24,8 +24,8 @@ for item in data:
     url_list.append(item['url'])
     text_list.append(item['title'] + " " + item['content'])
 
-print("URL列表:", url_list)
-print("文本列表:", text_list)
+#print("URL列表:", url_list)
+#print("文本列表:", text_list)
 
 def remove_punctuation(words):
     # 定义中文标点符号
@@ -44,10 +44,10 @@ with open('/home/wxt/huatong/renmin_docs/bm25_model/rmrb_text_cut.pkl', 'wb') as
     pickle.dump(text_seg_list, f)
 
 
-print("文本切词列表:", text_seg_list)
+#print("文本切词列表:", text_seg_list)
 
-for text in text_seg_list:
-    print(len(text))
+#for text in text_seg_list:
+ #   print(len(text))
 
 bm25 = BM25Okapi(text_seg_list)
 with open('/home/wxt/huatong/renmin_docs/bm25_model/bm25_model.pkl', 'wb') as f:
