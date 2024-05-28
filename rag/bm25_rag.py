@@ -21,7 +21,7 @@ model_path = "baichuan-inc/Baichuan2-7B-Chat"
 tokenizer = AutoTokenizer.from_pretrained("baichuan-inc/Baichuan2-7B-Chat", use_fast=False, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained("baichuan-inc/Baichuan2-7B-Chat", device_map="auto", torch_dtype=torch.bfloat16, trust_remote_code=True)
 model.generation_config = GenerationConfig.from_pretrained("baichuan-inc/Baichuan2-7B-Chat")
-
+model.to(device)
 
 #编写retriever
 chinese_stopwords = set(stopwords.words('chinese'))
@@ -79,6 +79,7 @@ for query in query_list:
         prompt_now=prompt_now+text_list[i]+'\n'
     prompt_now=prompt_now+"\n问题如下：\n"+query
     messages=[{"role": "user", "content": prompt_now}]
+    messages=messages.to(device)
     response = model.chat(tokenizer, messages)
     print(query)
     print(response)
