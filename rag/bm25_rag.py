@@ -11,7 +11,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers.generation.utils import GenerationConfig
 import os
-os.environ["CUDA_VISIBLE_DEVICES"]="1"
+os.environ["CUDA_VISIBLE_DEVICES"]="0,1"
 device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
 print(torch.cuda.device_count())
 
@@ -79,7 +79,7 @@ for query in query_list:
         prompt_now=prompt_now+text_list[i]+'\n'
     prompt_now=prompt_now+"\n问题如下：\n"+query
     messages=[{"role": "user", "content": prompt_now}]
-    messages=messages.to(device)
+    messages=torch.tensor(messages).to(device)
     response = model.chat(tokenizer, messages)
     print(query)
     print(response)
