@@ -18,7 +18,7 @@ from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import StorageContext
 from llama_index.core import Settings
 from llama_index.core.query_engine import CitationQueryEngine
-
+from llama_index.core.llms import ChatMessage, MessageRole
 documents= SimpleDirectoryReader('/home/wxt/huatong/renmin_docs').load_data()
 #print(type(documents))
 #print(len(documents))
@@ -26,10 +26,7 @@ documents= SimpleDirectoryReader('/home/wxt/huatong/renmin_docs').load_data()
 #documents=documents[0:20]
 system_prompt="""
 你是一个问答助手。你的目标是根据提供的指令和上下文尽可能准确地回答问题。
-你的所有回答除了给定格式外都应该是中文的。
-知识库中每篇文章都提供了url链接，每回答一个问题，都要在后面同时给出相关文档的url链接。
-输出格式如下:
-"答案:{}\n相关链接:{}\n "
+你的所有回答都应该是中文的。
 """
 
 
@@ -37,6 +34,7 @@ system_prompt="""
 modelid='mistralai/Mistral-7B-Instruct-v0.2'
 modelid="itpossible/Chinese-Mistral-7B-Instruct-v0.1"
 modelid="baichuan-inc/Baichuan2-7B-Chat"
+modelid="01-ai/Yi-1.5-34B-Chat"
 
 # modelid="baichuan-inc/Baichuan2-13B-Chat"
 llm = HuggingFaceLLM(
@@ -81,7 +79,7 @@ def Chat_instruct_query(questionText,modelid,use_chat=True):
 #     HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2"))
 
 embed_model=LangchainEmbedding(
-    HuggingFaceEmbeddings(model_name="BAAI/bge-small-zh-v1.5"))
+    HuggingFaceEmbeddings(model_name="BAAI/bge-base-zh-v1.5"))
 
 Settings.embed_model = embed_model
 Settings.llm = llm
@@ -94,7 +92,7 @@ Settings.llm = llm
 
 print("Begin Index")
 
-db = chromadb.PersistentClient(path="/home/wxt/huatong/rmrb_chroma_db_zh")
+db = chromadb.PersistentClient(path="/home/wxt/huatong/rmrb_chroma_db_zh_base")
 chroma_collection = db.get_or_create_collection("quickstart")
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
@@ -106,16 +104,39 @@ print("Finish Index")
 
 rerank_llm_name = "BAAI/bge-reranker-v2-m3"
 #downloaded_rerank_model = snapshot_download(rerank_llm_name)
-reranker= SentenceTransformerRerank(model=rerank_llm_name, top_n=3)
+reranker= SentenceTransformerRerank(model=rerank_llm_name, top_n=10)
 #reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True) # Setting use_fp16 to True speeds up computation with a slight performance degradation
-
+print("rerank-llm finished")
 # query_engine = CitationQueryEngine.from_args(
 #             index, 
 #             similarity_top_k=3, 
 #             citation_chunk_size=256,
 #                     )
-query_engine=index.as_query_engine(similarity_top_k=5, node_postprocessors=[reranker])
+from llama_index.core import ChatPromptTemplate
+
+new_summary_tmpl_str_zh=(
+"根据提供的内容来回答问题\n"
+"---------------------\n"
+"{context_str}\n"
+"---------------------\n"
+"仅仅根据上面提供的知识，不要考虑任何先验知识，回答下面的问题\n"
+"{query_str}"
+        )
+chat_template = ChatPromptTemplate(message_templates=[
+        ChatMessage(role="system", content=system_prompt),
+            ChatMessage(role="user", content=new_summary_tmpl_str_zh)
+            ])
+
+
+query_engine=index.as_query_engine(similarity_top_k=3,
+                                    node_postprocessors=[reranker],
+                                    )
+
+query_engine.update_prompts(
+            prompts_dict={"response_synthesizer:text_qa_template": chat_template}
+            )
 #query_engine=index.as_query_engine()
+print("query_engine finished")
 query_list=[
 "谁主持了国务院第七次专题学习？",
 "重庆市潼南区文化和旅游发展委员会党组书记、主任是谁？",
@@ -142,7 +163,8 @@ query_list=[
 ]
 
 
-
+print("begin gen-answer")
 for i in range(len(query_list)):
-    response=query_engine.query(Chat_instruct_query(query_list[i],modelid,use_chat=False))
+    #response=query_engine.query(Chat_instruct_query(query_list[i],modelid,use_chat=False))
+    response=query_engine.query(query_list[i])
     print(response)
