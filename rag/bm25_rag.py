@@ -18,10 +18,10 @@ print(torch.cuda.device_count())
 #加载mdoel
 model_path = "itpossible/Chinese-Mistral-7B-Instruct-v0.1"
 model_path = "baichuan-inc/Baichuan2-7B-Chat"
-tokenizer = AutoTokenizer.from_pretrained("baichuan-inc/Baichuan2-7B-Chat", use_fast=False, trust_remote_code=True)
-model = AutoModelForCausalLM.from_pretrained("baichuan-inc/Baichuan2-7B-Chat", device_map="auto", torch_dtype=torch.bfloat16, trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False, trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained(model_path, device_map=device, torch_dtype=torch.bfloat16, trust_remote_code=True)
 model.generation_config = GenerationConfig.from_pretrained("baichuan-inc/Baichuan2-7B-Chat")
-model.to(device)
+#model.to(device)
 
 #编写retriever
 chinese_stopwords = set(stopwords.words('chinese'))
@@ -48,7 +48,7 @@ with open('/home/wxt/huatong/renmin_docs/bm25_model/rmrb_text_cut.pkl', 'rb') as
 with open('/home/wxt/huatong/renmin_docs/bm25_model/bm25_model.pkl', 'rb') as f:
     bm25 = pickle.load(f)
 
-top_k=3
+top_k=1
 query_list=[
 "谁主持了国务院第七次专题学习？",
 "重庆市潼南区文化和旅游发展委员会党组书记、主任是谁？",
@@ -65,6 +65,11 @@ query_list=[
 "2023年是纪念中美“乒乓外交”多少周年？",
 "哈尔滨亚冬会包含几个大项？",
 "全国人大常委会副委员长、中华全国总工会主席是谁",
+"2023年广西植树造林面积大约多少亩？",
+"在第二十八个世界读书日，构建海洋命运共同体理念已经提出几周年了？",
+"中央外事工作会议指出，新时代新征程中国特色大国外交方针原则有“四个坚持”，是哪四个",
+"第十一届茅盾文学奖获奖作品有哪些?",
+"第四届“光影中国”荣誉盛典获“荣誉推编剧有"
 ]
 tok_k_docs_index = []
 for query in query_list:
@@ -79,7 +84,7 @@ for query in query_list:
         prompt_now=prompt_now+text_list[i]+'\n'
     prompt_now=prompt_now+"\n问题如下：\n"+query
     messages=[{"role": "user", "content": prompt_now}]
-    messages=torch.tensor(messages).to(device)
+    #messages=torch.tensor(messages).to(device)
     response = model.chat(tokenizer, messages)
     print(query)
     print(response)

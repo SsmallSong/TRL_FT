@@ -1,4 +1,10 @@
+# Load model directly
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
+tokenizer = AutoTokenizer.from_pretrained("01-ai/Yi-1.5-34B-Chat")
+model = AutoModelForCausalLM.from_pretrained("01-ai/Yi-1.5-34B-Chat")
+
+kill
 # Load model directly
 from transformers import AutoModelForCausalLM,AutoTokenizer
 model = AutoModelForCausalLM.from_pretrained("baichuan-inc/Baichuan2-13B-Chat", trust_remote_code=True)
