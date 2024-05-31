@@ -6,12 +6,9 @@ print(torch.cuda.device_count())
 import chromadb
 from llama_index.core.postprocessor import SentenceTransformerRerank
 from llama_index.core.prompts import PromptTemplate
-from huggingface_hub import snapshot_download
-from FlagEmbedding import FlagReranker
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from llama_index.core import VectorStoreIndex,SimpleDirectoryReader,ServiceContext
 from llama_index.llms.huggingface import HuggingFaceLLM
-from llama_index.core.prompts.prompts import SimpleInputPrompt
 from langchain_community.embeddings.huggingface import HuggingFaceEmbeddings
 from llama_index.embeddings.langchain import LangchainEmbedding
 from llama_index.vector_stores.chroma import ChromaVectorStore
@@ -19,39 +16,7 @@ from llama_index.core import StorageContext
 from llama_index.core import Settings
 from llama_index.core.query_engine import CitationQueryEngine
 from llama_index.core.llms import ChatMessage, MessageRole
-documents= SimpleDirectoryReader('/home/wxt/huatong/renmin_docs').load_data()
-#print(type(documents))
-#print(len(documents))
-#print(documents[0])
-#documents=documents[0:20]
-system_prompt="""
-你是一个问答助手。你的目标是根据提供的指令和上下文尽可能准确地回答问题。
-你的所有回答都应该是中文的。
-"""
-
-
-
-modelid='mistralai/Mistral-7B-Instruct-v0.2'
-modelid="itpossible/Chinese-Mistral-7B-Instruct-v0.1"
-modelid="baichuan-inc/Baichuan2-7B-Chat"
-modelid="01-ai/Yi-1.5-34B-Chat"
-
-# modelid="baichuan-inc/Baichuan2-13B-Chat"
-llm = HuggingFaceLLM(
-    context_window=3072,
-    max_new_tokens=1024,
-    generate_kwargs={"pad_token_id": 2,
-            "temperature": 0.2, "do_sample": True},
- #   system_prompt=system_prompt,
-    tokenizer_name=modelid,
-    model_name=modelid,
-    device_map="auto",
-    model_kwargs={"trust_remote_code":True,"torch_dtype": torch.float16},
-    tokenizer_kwargs={"trust_remote_code":True}
-
-)
-
-
+from llama_index.core import ChatPromptTemplate
 def Mistral_instruct_query(questionText):
     questionText = "<s>[INST] " + questionText + " [/INST]"
     return questionText
@@ -74,6 +39,33 @@ def Chat_instruct_query(questionText,modelid,use_chat=True):
         else:
             questionText=Origin_instruct_query(questionText)
     return questionText
+
+documents= SimpleDirectoryReader('/home/wxt/huatong/renmin_docs').load_data()
+
+system_prompt=("""
+你是一个问答助手。你的目标是根据提供的指令和上下文尽可能准确地回答问题。
+你的所有回答都应该是中文的。
+""")
+
+modelid='mistralai/Mistral-7B-Instruct-v0.2'
+modelid="itpossible/Chinese-Mistral-7B-Instruct-v0.1"
+modelid="baichuan-inc/Baichuan2-7B-Chat"
+modelid="baichuan-inc/Baichuan2-13B-Chat"
+modelid="01-ai/Yi-1.5-34B-Chat"
+
+llm = HuggingFaceLLM(
+    context_window=3072,
+    max_new_tokens=1024,
+    generate_kwargs={"pad_token_id": 2,
+            "temperature": 0.2, "do_sample": True},
+ #   system_prompt=system_prompt,
+    tokenizer_name=modelid,
+    model_name=modelid,
+    device_map="auto",
+    model_kwargs={"trust_remote_code":True,"torch_dtype": torch.float16},
+    tokenizer_kwargs={"trust_remote_code":True}
+
+)
 
 # embed_model=LangchainEmbedding(
 #     HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2"))
@@ -98,21 +90,20 @@ vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
 #index=VectorStoreIndex.from_documents(documents,storage_context=storage_context)
-index = VectorStoreIndex.from_vector_store( vector_store, storage_context=storage_context)
+index = VectorStoreIndex.from_vector_store(vector_store, storage_context=storage_context)
 print(index)
 print("Finish Index")
 
 rerank_llm_name = "BAAI/bge-reranker-v2-m3"
-#downloaded_rerank_model = snapshot_download(rerank_llm_name)
 reranker= SentenceTransformerRerank(model=rerank_llm_name, top_n=10)
-#reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True) # Setting use_fp16 to True speeds up computation with a slight performance degradation
 print("rerank-llm finished")
+
 # query_engine = CitationQueryEngine.from_args(
 #             index, 
 #             similarity_top_k=3, 
 #             citation_chunk_size=256,
 #                     )
-from llama_index.core import ChatPromptTemplate
+
 
 new_summary_tmpl_str_zh=(
 "根据提供的内容来回答问题\n"
@@ -122,20 +113,22 @@ new_summary_tmpl_str_zh=(
 "仅仅根据上面提供的知识，不要考虑任何先验知识，回答下面的问题\n"
 "{query_str}"
         )
+
 chat_template = ChatPromptTemplate(message_templates=[
-        ChatMessage(role="system", content=system_prompt),
-            ChatMessage(role="user", content=new_summary_tmpl_str_zh)
+        ChatMessage(role=MessageRole.SYSTEM, content=system_prompt),
+            ChatMessage(role=MessageRole.USER, content=new_summary_tmpl_str_zh)
             ])
 
-
-query_engine=index.as_query_engine(similarity_top_k=3,
+query_engine=index.as_query_engine( llm=llm,
+                                    text_qa_template=chat_template,
+                                    similarity_top_k=3,
                                     node_postprocessors=[reranker],
                                     )
 
-query_engine.update_prompts(
-            prompts_dict={"response_synthesizer:text_qa_template": chat_template}
-            )
-#query_engine=index.as_query_engine()
+# query_engine.update_prompts(
+#             prompts_dict={"response_synthesizer:text_qa_template": chat_template}
+#             )
+
 print("query_engine finished")
 query_list=[
 "谁主持了国务院第七次专题学习？",
@@ -152,7 +145,7 @@ query_list=[
 "联合国教科文组织在促进女童和妇女教育领域的唯一奖项是什么？",
 "2023年是纪念中美“乒乓外交”多少周年？",
 "哈尔滨亚冬会包含几个大项？",
-"全国人大常委会副委员长、中华全国总工会主席是谁",
+"全国人大常委会副委员长、中华全国总工会主席是谁"
 
     # "2024年是中国红十字会成立多少周年?",
     # "《中华人民共和国爱国主义教育法》什么时候实施？",
