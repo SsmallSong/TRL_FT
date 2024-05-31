@@ -11,13 +11,14 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers.generation.utils import GenerationConfig
 import os
-os.environ["CUDA_VISIBLE_DEVICES"]="0,1"
+os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
 device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
 print(torch.cuda.device_count())
 
 #加载mdoel
 model_path = "itpossible/Chinese-Mistral-7B-Instruct-v0.1"
 model_path = "baichuan-inc/Baichuan2-7B-Chat"
+#model_path="01-ai/Yi-1.5-34B-Chat"
 tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(model_path, device_map=device, torch_dtype=torch.bfloat16, trust_remote_code=True)
 model.generation_config = GenerationConfig.from_pretrained("baichuan-inc/Baichuan2-7B-Chat")

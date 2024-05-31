@@ -1,7 +1,7 @@
 
 import os
 import torch
-os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 print(torch.cuda.device_count())
 import chromadb
 from llama_index.core.postprocessor import SentenceTransformerRerank
@@ -41,7 +41,7 @@ def Chat_instruct_query(questionText,modelid,use_chat=True):
     return questionText
 
 documents= SimpleDirectoryReader('/home/wxt/huatong/renmin_docs').load_data()
-
+#documents=documents[0:10]
 system_prompt=("""
 你是一个问答助手。你的目标是根据提供的指令和上下文尽可能准确地回答问题。
 你的所有回答都应该是中文的。
@@ -50,8 +50,8 @@ system_prompt=("""
 modelid='mistralai/Mistral-7B-Instruct-v0.2'
 modelid="itpossible/Chinese-Mistral-7B-Instruct-v0.1"
 modelid="baichuan-inc/Baichuan2-7B-Chat"
-modelid="baichuan-inc/Baichuan2-13B-Chat"
-modelid="01-ai/Yi-1.5-34B-Chat"
+#modelid="baichuan-inc/Baichuan2-13B-Chat"
+#modelid="01-ai/Yi-1.5-34B-Chat"
 
 llm = HuggingFaceLLM(
     context_window=3072,
@@ -67,11 +67,10 @@ llm = HuggingFaceLLM(
 
 )
 
-# embed_model=LangchainEmbedding(
-#     HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2"))
+#embed_model=LangchainEmbedding(
+    # HuggingFaceEmbeddings(model_name="BAAI/bge-small-zh-v1.5"))
 
-embed_model=LangchainEmbedding(
-    HuggingFaceEmbeddings(model_name="BAAI/bge-base-zh-v1.5"))
+embed_model=HuggingFaceEmbeddings(model_name="BAAI/bge-base-zh-v1.5")
 
 Settings.embed_model = embed_model
 Settings.llm = llm
@@ -89,7 +88,7 @@ chroma_collection = db.get_or_create_collection("quickstart")
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
-#index=VectorStoreIndex.from_documents(documents,storage_context=storage_context)
+#index=VectorStoreIndex.from_documents(documents, storage_context=storage_context)
 index = VectorStoreIndex.from_vector_store(vector_store, storage_context=storage_context)
 print(index)
 print("Finish Index")
@@ -157,7 +156,8 @@ query_list=[
 
 
 print("begin gen-answer")
-for i in range(len(query_list)):
+for i  in range(len( query_list)):
+    print(query_list[i])
     #response=query_engine.query(Chat_instruct_query(query_list[i],modelid,use_chat=False))
     response=query_engine.query(query_list[i])
     print(response)
