@@ -38,8 +38,8 @@ modelid="01-ai/Yi-1.5-34B-Chat"
 
 # modelid="baichuan-inc/Baichuan2-13B-Chat"
 llm = HuggingFaceLLM(
-    context_window=1024,
-    max_new_tokens=512,
+    context_window=3072,
+    max_new_tokens=1024,
     generate_kwargs={"pad_token_id": 2,
             "temperature": 0.2, "do_sample": True},
  #   system_prompt=system_prompt,
