@@ -49,7 +49,7 @@ with open('/home/wxt/huatong/renmin_docs/bm25_model/rmrb_text_cut.pkl', 'rb') as
 with open('/home/wxt/huatong/renmin_docs/bm25_model/bm25_model.pkl', 'rb') as f:
     bm25 = pickle.load(f)
 
-top_k=1
+top_k=2
 query_list=[
 "谁主持了国务院第七次专题学习？",
 "重庆市潼南区文化和旅游发展委员会党组书记、主任是谁？",
