@@ -38,7 +38,7 @@ model = FlagModel('BAAI/bge-large-zh-v1.5',
 import gzip
 import json
 import pickle
-with gzip.open('/data2/huatong/rag/article.json.gz', 'rt', encoding='utf-8') as f:
+with gzip.open('/home/wxt/huatong/TRL_FT/rag/article.json.gz', 'rt', encoding='utf-8') as f:
     data = json.load(f)
 # # data=data[0:5]
 print("begin get url and text")
@@ -51,7 +51,7 @@ for item in data:
 # with open("/data2/huatong/rag/rmrb_bge.pkl", 'wb') as file:
 #     pickle.dump(embeddings, file)
 
-with open("/data2/huatong/rag/rmrb_bge_chunk.pkl", 'rb') as file:
+with open("/home/wxt/huatong/rmrb_bge_chunk500.pkl", 'rb') as file:
     docs_embeddings=pickle.load(file)
 # print(np.array(docs_embeddings).shape)
 
@@ -67,7 +67,7 @@ for i in range(len(query_embeddings)):
 print("finish score")
 
 # #加载mdoel
-model_path = "/data2/huatong/model/01ai"
+# model_path = "/data2/huatong/model/01ai"
 model_path="01-ai/Yi-1.5-9B-Chat"
 
 print("begin load model")

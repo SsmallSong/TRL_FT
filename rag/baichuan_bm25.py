@@ -21,7 +21,7 @@ model_path = "baichuan-inc/Baichuan2-7B-Chat"
 #model_path="01-ai/Yi-1.5-34B-Chat"
 tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(model_path, device_map=device, torch_dtype=torch.bfloat16, trust_remote_code=True)
-model.generation_config = GenerationConfig.from_pretrained("baichuan-inc/Baichuan2-7B-Chat")
+model.generation_config = GenerationConfig.from_pretrained(model_path)
 #model.to(device)
 
 #编写retriever
@@ -78,11 +78,11 @@ for query in query_list:
     tokenized_query = remove_punctuation(seg_list)
     scores = bm25.get_scores(tokenized_query)
     top_k_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:top_k]
-    prompt_now='''你是一个问答机器人，结合提供的参考资料，回答我的问题。\n\n参考资料如下：\n'''
+    prompt_now='''你是一个问答机器人，结合提供的参考资料，回答我的问题，问题是填空题，答案要简洁明了。\n\n下面是一个例子：\n问题：谁主持了国务院第七次专题学习？\n答案：李强\n\n参考资料如下：\n'''
     print("Top-{} 最相关的文档索引: {}".format(top_k, top_k_indices))
     print("Top-{} 最相关的文档url: {}".format(top_k, [url_list[i] for i in top_k_indices]))
-    for i in top_k_indices:
-        prompt_now=prompt_now+text_list[i]+'\n'
+    for j in top_k_indices:
+        prompt_now=prompt_now+text_list[j]+'\n'
     prompt_now=prompt_now+"\n问题如下：\n"+query
     messages=[{"role": "user", "content": prompt_now}]
     #messages=torch.tensor(messages).to(device)
