@@ -88,7 +88,7 @@ for i, text_list in enumerate(split_list):
 
 # embeddings = model.encode(split_list)
 
-with open("~/huatong/TRL_FT/rag/rmrb_bge_chunk500.pkl", 'wb') as file:
+with open("~/huatong/rmrb_bge_chunk500.pkl", 'wb') as file:
     pickle.dump(embeddings_list, file)
 
 # with open("/data2/huatong/rag/rmrb_bge_chunk.pkl", 'rb') as file:
