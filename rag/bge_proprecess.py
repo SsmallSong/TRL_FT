@@ -41,7 +41,7 @@ model = FlagModel('BAAI/bge-large-zh-v1.5',
 import gzip
 import json
 import pickle
-with gzip.open('~/huatong/TRL_FT/rag/article.json.gz', 'rt', encoding='utf-8') as f:
+with gzip.open('/home/wxt/huatong/TRL_FT/rag/article.json.gz', 'rt', encoding='utf-8') as f:
     data = json.load(f)
 # # data=data[0:5]
 print("begin get url and text")
@@ -88,7 +88,7 @@ for i, text_list in enumerate(split_list):
 
 # embeddings = model.encode(split_list)
 
-with open("~/huatong/rmrb_bge_chunk500.pkl", 'wb') as file:
+with open("/home/wxt/huatong/rmrb_bge_chunk500.pkl", 'wb') as file:
     pickle.dump(embeddings_list, file)
 
 # with open("/data2/huatong/rag/rmrb_bge_chunk.pkl", 'rb') as file:
