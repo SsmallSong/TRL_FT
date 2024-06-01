@@ -96,6 +96,7 @@ model = AutoModelForCausalLM.from_pretrained(model_path, device_map=device, torc
 top_k=1
 tok_k_docs_index = []
 print("begin get response")
+response_list=[]
 for i in range(len(query_list)):
     prompt_now='''你是一个问答机器人，结合提供的参考资料，回答我的问题，问题是填空题，答案要简洁明了。\n\n下面是一个例子：\n问题：谁主持了国务院第七次专题学习？\n答案：李强\n\n参考资料如下：\n'''
     print("===============================================================")
@@ -125,3 +126,5 @@ for i in range(len(query_list)):
 
     print(query_list[i])
     print(response)
+    response_list.append(response)
+print(response_list)
