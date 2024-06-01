@@ -87,7 +87,7 @@ with open('/home/wxt/huatong/renmin_docs/bm25_model/bm25_model.pkl', 'rb') as f:
 
 # #加载mdoel
 # model_path = "/data2/huatong/model/01ai"
-model_path="01-ai/Yi-1.5-9B-Chat"
+model_path="01-ai/Yi-1.5-34B-Chat"
 
 print("begin load model")
 tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False)
@@ -119,7 +119,7 @@ for i in range(len(query_list)):
     messages=[{"role": "user", "content": prompt_now}]
     #messages=torch.tensor(messages).to(device)
     input_ids = tokenizer.apply_chat_template(conversation=messages, tokenize=True, return_tensors='pt')
-    output_ids = model.generate(input_ids.to('cuda'), eos_token_id=tokenizer.eos_token_id)
+    output_ids = model.generate(input_ids.to('cuda'), eos_token_id=tokenizer.eos_token_id, max_new_tokens=100)
     response = tokenizer.decode(output_ids[0][input_ids.shape[1]:], skip_special_tokens=True)
 
     print(query_list[i])
