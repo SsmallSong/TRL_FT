@@ -80,26 +80,27 @@ def evaluate(queries: list):
         prompt_now='''你是一个问答机器人，结合提供的参考资料，回答我的问题，问题是填空题，答案要简洁明了。\n\n下面是一个例子：\n问题：谁主持了国务院第七次专题学习？\n答案：李强\n\n参考资料如下：\n'''
         print("===============================================================")
         bge_scores= scores_all[i]
-        top_k_indices = sorted(range(len(bge_scores)), key=lambda i: bge_scores[i], reverse=True)[:top_k]
+        top_k_indices_bge = sorted(range(len(bge_scores)), key=lambda i: bge_scores[i], reverse=True)[:top_k]
         # print("Bge-Top-{} 最相关的文档索引: {}".format(top_k, top_k_indices))
-        print("Bge-Top-{} 最相关的文档url: {}".format(top_k, [url_list[i] for i in top_k_indices]))
-        for j in top_k_indices:
+        print("Bge-Top-{} 最相关的文档url: {}".format(top_k, [url_list[i] for i in top_k_indices_bge]))
+        for j in top_k_indices_bge:
             prompt_now=prompt_now+text_list[j]+'\n'
 
-        seg_list = jieba.lcut(queries[i])
+        seg_list = jieba.lcut(query_list[i])
         tokenized_query = remove_punctuation(seg_list)
         bm25_scores = bm25.get_scores(tokenized_query)
-        top_k_indices = sorted(range(len(bm25_scores)), key=lambda i: bm25_scores[i], reverse=True)[:top_k]
+        top_k_indices_bm25 = sorted(range(len(bm25_scores)), key=lambda i: bm25_scores[i], reverse=True)[:top_k]
         # print("BM25-Top-{} 最相关的文档索引: {}".format(top_k, top_k_indices))
-        print("Bm25-Top-{} 最相关的文档url: {}".format(top_k, [url_list[i] for i in top_k_indices]))
-        for j in top_k_indices:
-            prompt_now=prompt_now+text_list[j]+'\n'
+        print("Bm25-Top-{} 最相关的文档url: {}".format(top_k, [url_list[i] for i in top_k_indices_bm25]))
+        for j in top_k_indices_bm25:
+            if j not in top_k_indices_bge:
+                prompt_now=prompt_now+text_list[j]+'\n'
 
         prompt_now=prompt_now+"\n问题："+queries[i]
         messages=[{"role": "user", "content": prompt_now}]
         #messages=torch.tensor(messages).to(device)
         input_ids = tokenizer.apply_chat_template(conversation=messages, tokenize=True, return_tensors='pt')
-        output_ids = model.generate(input_ids.to('cuda'), eos_token_id=tokenizer.eos_token_id)
+        output_ids = model.generate(input_ids.to('cuda'), eos_token_id=tokenizer.eos_token_id,max_new_tokens=100)
         response = tokenizer.decode(output_ids[0][input_ids.shape[1]:], skip_special_tokens=True)
         ans_list.append(response)
         print(queries[i])
