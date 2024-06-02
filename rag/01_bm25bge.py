@@ -98,7 +98,7 @@ tok_k_docs_index = []
 print("begin get response")
 response_list=[]
 for i in range(len(query_list)):
-    prompt_now='''你是一个问答机器人，结合提供的参考资料，按照示例的格式回答问题。问题都是填空题，所以你的答案要简洁。下面是一些问答示例：\n查询：谁主持了国务院第七次专题学习？\n答案：李强\n\n查询：第十一届茅盾文学奖获奖作品有哪些？\n答案：《雪山大地》；《宝水》；《本巴》；《千里江山图》；《回响》\n\n查询：中国艺术体操队的首个世界冠军是在哪个城市取得的？\n答案：西班牙瓦伦西亚\n\n下面是若干项相关的参考资料，请根据这些资料作答：\n\n'''
+    prompt_now='''你是一个问答机器人，结合提供的参考资料，按照示例的格式回答问题。问题都是填空题，所以你的答案要简洁。下面是一些问答示例：\n\n查询：谁主持了国务院第七次专题学习？\n答案：李强\n\n查询：第十一届茅盾文学奖获奖作品有哪些？\n答案：《雪山大地》；《宝水》；《本巴》；《千里江山图》；《回响》\n\n查询：中国艺术体操队的首个世界冠军是在哪个城市取得的？\n答案：西班牙瓦伦西亚\n\n下面是若干项相关的参考资料，请根据这些资料作答：\n\n'''
     print("===============================================================")
     bge_scores= scores_all[i]
     top_k_indices_bge = sorted(range(len(bge_scores)), key=lambda i: bge_scores[i], reverse=True)[:top_k]
@@ -117,7 +117,7 @@ for i in range(len(query_list)):
         if j not in top_k_indices_bge:
             prompt_now=prompt_now+text_list[j]+'\n'
 
-    prompt_now=prompt_now+"\n根据上面提供的资料，回答如下问题：\n查询："+query_list[i]+"\n请用如下格式回答：\n答案：{$ans}"
+    prompt_now=prompt_now+"\n根据上面提供的资料，回答如下问题，注意格式：\n查询："+query_list[i]+"\n请用如下格式回答：\n答案：{$ans}"
     messages=[{"role": "user", "content": prompt_now}]
     #messages=torch.tensor(messages).to(device)
     input_ids = tokenizer.apply_chat_template(conversation=messages, tokenize=True, return_tensors='pt')
