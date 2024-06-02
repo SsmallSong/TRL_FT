@@ -58,7 +58,7 @@ for item in data:
 # with open("/data2/huatong/rag/rmrb_bge.pkl", 'wb') as file:
 #     pickle.dump(embeddings, file)
 
-with open("/home/wxt/huatong/rmrb_bge_chunk500.pkl", 'rb') as file:
+with open("/home/wxt/huatong/rmrb_bge_chunk1000.pkl", 'rb') as file:
     docs_embeddings=pickle.load(file)
 # print(np.array(docs_embeddings).shape)
 
@@ -97,8 +97,8 @@ model = AutoModelForCausalLM.from_pretrained(model_path, device_map=device, torc
 
 reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True) # Setting use_fp16 to True speeds up computation with a slight performance degradation
 
-top_k_recall=10
-top_k_final=2
+top_k_recall=15
+top_k_final=1
 print("begin get response")
 response_list=[]
 for i in range(len(query_list)):
@@ -113,6 +113,7 @@ for i in range(len(query_list)):
     rerank_score_bge = reranker.compute_score(rerank_list_bge, normalize=True)
     top_k_indices_in_rerankls_bge = sorted(range(len(rerank_score_bge)), key=lambda i: rerank_score_bge[i], reverse=True)[:top_k_final]
     top_k_indices_bge =[top_k_indices_recall_bge[ele] for ele in top_k_indices_in_rerankls_bge]
+    print("Bge-Recall-{} 相关的文档url: {}".format(top_k_recall, [url_list[i] for i in top_k_indices_recall_bge]))
     # top_k_indices_bge = sorted(range(len(bge_scores)), key=lambda i: bge_scores[i], reverse=True)[:top_k]
     # print("Bge-Top-{} 最相关的文档索引: {}".format(top_k, top_k_indices))
     print("Bge-Top-{} 最相关的文档url: {}".format(top_k_final, [url_list[i] for i in top_k_indices_bge]))
@@ -148,3 +149,5 @@ for i in range(len(query_list)):
     print(response)
     response_list.append(response)
 print(response_list)
+res_list=[ele[ele.index("：")+1:] for ele in response_list]
+print(res_list)

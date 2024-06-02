@@ -6,7 +6,7 @@ import torch
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers.generation.utils import GenerationConfig
-os.environ["CUDA_VISIBLE_DEVICES"]="0"
+os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
 device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
 query_list=[
 "谁主持了国务院第七次专题学习？",
@@ -51,7 +51,7 @@ for item in data:
     url_list.append(item['url'])
     text_list.append((item['title'] + " " + item['content']).replace("\n", "").replace("\r", ""))
 
-def split_into_chunks(text, chunk_size=500):
+def split_into_chunks(text, chunk_size=1000):
     # return [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
     chunks = []
     while len(text) > chunk_size:
@@ -88,7 +88,7 @@ for i, text_list in enumerate(split_list):
 
 # embeddings = model.encode(split_list)
 
-with open("/home/wxt/huatong/rmrb_bge_chunk500.pkl", 'wb') as file:
+with open("/home/wxt/huatong/rmrb_bge_chunk1000.pkl", 'wb') as file:
     pickle.dump(embeddings_list, file)
 
 # with open("/data2/huatong/rag/rmrb_bge_chunk.pkl", 'rb') as file:
