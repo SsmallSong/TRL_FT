@@ -1,7 +1,7 @@
 export PYTHONIOENCODING=utf-8
 export OMP_NUM_THREADS=16
 
-index="dpo_beta01_e2"
+index="llama2_7b_sft_halos_2_3"
 log_file="/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/logs/generate_infer_main_${index}.log"
 
 # 执行命令并重定向输出到动态生成的文件名
