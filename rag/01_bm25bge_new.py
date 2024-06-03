@@ -113,7 +113,7 @@ for i in range(len(query_list)):
     rerank_score_bge = reranker.compute_score(rerank_list_bge, normalize=True)
     top_k_indices_in_rerankls_bge = sorted(range(len(rerank_score_bge)), key=lambda i: rerank_score_bge[i], reverse=True)[:top_k_final]
     top_k_indices_bge =[top_k_indices_recall_bge[ele] for ele in top_k_indices_in_rerankls_bge]
-    print("Bge-Recall-{} 相关的文档url: {}".format(top_k_recall, [url_list[i] for i in top_k_indices_recall_bge]))
+ #   print("Bge-Recall-{} 相关的文档url: {}".format(top_k_recall, [url_list[i] for i in top_k_indices_recall_bge]))
     # top_k_indices_bge = sorted(range(len(bge_scores)), key=lambda i: bge_scores[i], reverse=True)[:top_k]
     # print("Bge-Top-{} 最相关的文档索引: {}".format(top_k, top_k_indices))
     print("Bge-Top-{} 最相关的文档url: {}".format(top_k_final, [url_list[i] for i in top_k_indices_bge]))
