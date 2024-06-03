@@ -115,7 +115,8 @@ if __name__ == "__main__":
         prompts = []
         for prefix in raw_prefixes:
             prefix = "".join(prefix)
-            prefix = prefix.replace("<|prompter|>", "\n\nHuman: ").replace("<|assistant|>", "\n\nAssistant: ").rstrip()
+            # prefix = prefix.replace("<|prompter|>", "\n\nHuman: ").replace("<|assistant|>", "\n\nAssistant: ").rstrip()
+            prefix = prefix.replace("<|prompter|>", "\n<|user|>\n").replace("<|assistant|>", "\n<|assistant|>\n").rstrip()
             prompts.append(prefix)
         
         setup_seed()
