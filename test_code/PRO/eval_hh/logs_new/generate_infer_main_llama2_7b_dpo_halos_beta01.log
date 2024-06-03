@@ -1,55 +1,16 @@
-4
-4
-4
-4
-/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.26s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.86s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.22s/it]
-Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.65s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.60s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.65s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  4.11s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  4.49s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.16s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.53s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.28s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.63s/it]
-loaded pre-trained weights
-Rank 3 is activated...
-loaded pre-trained weights
-loaded pre-trained weights
-loaded pre-trained weights
-<class 'transformers.models.llama.modeling_llama.LlamaForCausalLM'>
-LlamaConfig {
-  "_name_or_path": "daryl149/llama-2-7b-hf",
-  "architectures": [
-    "LlamaForCausalLM"
-  ],
-  "attention_bias": false,
-  "bos_token_id": 1,
-  "eos_token_id": 2,
-  "hidden_act": "silu",
-  "hidden_size": 4096,
-  "initializer_range": 0.02,
-  "intermediate_size": 11008,
-  "max_position_embeddings": 2048,
-  "model_type": "llama",
-  "num_attention_heads": 32,
-  "num_hidden_layers": 32,
-  "num_key_value_heads": 32,
-  "pad_token_id": 0,
-  "pretraining_tp": 1,
-  "rms_norm_eps": 1e-05,
-  "rope_scaling": null,
-  "rope_theta": 10000.0,
-  "tie_word_embeddings": false,
-  "torch_dtype": "float16",
-  "transformers_version": "4.35.2",
-  "use_cache": true,
-  "vocab_size": 32000
-}
+Eval on harmless_base.json
+BLEU: 0.16232627932146565
+Avg Reward: 0.5449080883128936
+Eval on helpful_base.json
+BLEU: 0.20501458323356572
+Avg Reward: 0.5202999402726973
+Eval on helpful_online.json
+BLEU: 0.31516481412537695
+Avg Reward: 0.5980930694924578
+Eval on helpful_rejection.json
+BLEU: 0.2625358812043633
+Avg Reward: 0.5608767071374983
 
-Rank 2 is activated...
-Rank 0 is activated...
-Rank 1 is activated...
-  0%|          | 0/21 [00:00<?, ?it/s]  0%|          | 0/21 [00:00<?, ?it/s]  0%|          | 0/21 [00:00<?, ?it/s]  0%|          | 0/21 [00:00<?, ?it/s]  5%|▍         | 1/21 [00:21<07:03, 21.16s/it]  5%|▍         | 1/21 [00:21<07:05, 21.29s/it]  5%|▍         | 1/21 [00:21<07:07, 21.35s/it]  5%|▍         | 1/21 [00:21<07:14, 21.73s/it] 10%|▉         | 2/21 [00:38<05:54, 18.64s/it] 10%|▉         | 2/21 [00:38<05:54, 18.66s/it] 10%|▉         | 2/21 [00:38<05:56, 18.76s/it] 10%|▉         | 2/21 [00:38<05:58, 18.85s/it] 14%|█▍        | 3/21 [00:55<05:21, 17.89s/it] 14%|█▍        | 3/21 [00:55<05:21, 17.87s/it] 14%|█▍        | 3/21 [00:55<05:23, 17.98s/it] 14%|█▍        | 3/21 [00:55<05:23, 17.95s/it] 19%|█▉        | 4/21 [01:12<04:58, 17.56s/it] 19%|█▉        | 4/21 [01:12<04:58, 17.53s/it] 19%|█▉        | 4/21 [01:12<04:59, 17.62s/it] 19%|█▉        | 4/21 [01:12<04:58, 17.56s/it] 24%|██▍       | 5/21 [01:29<04:37, 17.36s/it] 24%|██▍       | 5/21 [01:29<04:38, 17.41s/it] 24%|██▍       | 5/21 [01:29<04:39, 17.44s/it] 24%|██▍       | 5/21 [01:29<04:37, 17.35s/it] 29%|██▊       | 6/21 [01:46<04:19, 17.27s/it] 29%|██▊       | 6/21 [01:46<04:19, 17.32s/it] 29%|██▊       | 6/21 [01:46<04:18, 17.24s/it] 29%|██▊       | 6/21 [01:46<04:20, 17.34s/it] 33%|███▎      | 7/21 [02:03<04:00, 17.21s/it] 33%|███▎      | 7/21 [02:03<04:01, 17.28s/it] 33%|███▎      | 7/21 [02:03<04:00, 17.17s/it] 33%|███▎      | 7/21 [02:03<04:01, 17.28s/it]
+Global Eval
+BLEU: 0.22658782317966547
+Avg Reward: 0.5503273989913756
