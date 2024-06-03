@@ -91,7 +91,7 @@ if __name__ == "__main__":
             "helpful_online.json",
             "helpful_rejection.json"
         ]:
-            save_path = os.path.join("/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval", "infer_generate_main_{}_{}_{}".format(args.index, args.stage, file_name))
+            save_path = os.path.join("/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval_new", "infer_generate_main_{}_{}_{}".format(args.index, args.stage, file_name))
             if os.path.exists(save_path):
                 os.remove(save_path)
     accelerator.wait_for_everyone()
@@ -122,7 +122,7 @@ if __name__ == "__main__":
         setup_seed()
         generated_suffixes, truncated_prompts = generate_pipeline(model, tokenizer, prompts, add_special_tokens=True)
         setup_seed()        
-        save_path = os.path.join("/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval", "infer_generate_main_{}_{}_{}".format(args.index, args.stage, file_name))
+        save_path = os.path.join("/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval_new", "infer_generate_main_{}_{}_{}".format(args.index, args.stage, file_name))
         
         for index in range(len(infer_data)):
             infer_data[index]['infer'] = {"t": generated_suffixes[index]}
