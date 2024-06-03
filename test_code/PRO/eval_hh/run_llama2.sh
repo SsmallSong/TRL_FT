@@ -5,9 +5,6 @@ index="llama2_7b_sft_halos_2_3"
 log_file="/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/logs/generate_infer_main_${index}.log"
 
 # 执行命令并重定向输出到动态生成的文件名
-accelerate launch --config_file dp_config.yaml infer_and_eval_main_generate.py \
-    --index $index \
-    --stage 1 > $log_file 2>&1
 
 accelerate launch --config_file dp_config.yaml infer_and_eval_main_generate.py \
     --index $index  \
