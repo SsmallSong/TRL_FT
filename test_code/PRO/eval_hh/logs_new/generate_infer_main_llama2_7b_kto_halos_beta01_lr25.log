@@ -1,0 +1,16 @@
+Eval on harmless_base.json
+BLEU: 0.08234732565401541
+Avg Reward: 0.5124704115492353
+Eval on helpful_base.json
+BLEU: 0.18792698658193838
+Avg Reward: 0.442397565614929
+Eval on helpful_online.json
+BLEU: 0.20662595075615925
+Avg Reward: 0.5413442153368753
+Eval on helpful_rejection.json
+BLEU: 0.21374147162314133
+Avg Reward: 0.48266812951109894
+
+Global Eval
+BLEU: 0.1701594038510202
+Avg Reward: 0.48742875244359524
