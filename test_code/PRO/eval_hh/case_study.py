@@ -7,7 +7,7 @@ import tqdm
 #import torch
 import torch.nn.functional as F
 from typing import Dict, Union, Type, List
-import metrics2
+#import metrics2
 from transformers import (
     AutoConfig,
     AutoTokenizer,
@@ -29,7 +29,7 @@ def delete_dict(d: Dict):
         del d[k]
 
 if __name__ == "__main__":
-    args = get_args()
+#    args = get_args()
     kwargs = InitProcessGroupKwargs(timeout=timedelta(seconds=5400))
     accelerator = Accelerator(kwargs_handlers=[kwargs])# **accelerator_log_kwargs)
     model_name_or_path ='daryl149/llama-2-7b-hf'
