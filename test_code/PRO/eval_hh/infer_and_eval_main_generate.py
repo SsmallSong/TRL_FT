@@ -45,6 +45,7 @@ if __name__ == "__main__":
     # model_name_or_path = os.path.join("..", "checkpoints", f"index_{args.index}", f"stage_{args.stage}", f"{args.directory}")
     model_name_or_path ='daryl149/llama-2-7b-hf'
     model_device = "cuda:{}".format(rank)
+    kill
 
     model_config = AutoConfig.from_pretrained(model_name_or_path)
     model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
