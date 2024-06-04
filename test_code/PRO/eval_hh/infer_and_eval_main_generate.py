@@ -51,7 +51,7 @@ if __name__ == "__main__":
 
     if args.model_ckpt!='non':
         print("load model")
-        #kill
+        kill
         ckpt_path = f"/home/wxt/.cache/huggingface/hub/{args.model_ckpt}/LATEST/policy.pt"
         state_dict = torch.load(ckpt_path, map_location='cpu')
         #kill
