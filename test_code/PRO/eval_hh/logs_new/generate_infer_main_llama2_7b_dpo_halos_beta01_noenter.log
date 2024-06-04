@@ -1,4 +1,4 @@
 Traceback (most recent call last):
   File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_score.py", line 27, in <module>
     with open(save_path, 'r', encoding='utf-8') as f:
-FileNotFoundError: [Errno 2] No such file or directory: '/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval_new/infer_main_llama2_7b_dpo_halos_beta01_1_harmless_base.json'
+FileNotFoundError: [Errno 2] No such file or directory: '/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval_new/infer_main_llama2_7b_dpo_halos_beta01_noenter_1_harmless_base.json'
