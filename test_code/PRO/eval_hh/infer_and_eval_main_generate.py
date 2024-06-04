@@ -87,9 +87,9 @@ if __name__ == "__main__":
     if accelerator.is_main_process:
         for file_name in [
             "harmless_base.json",
-            "helpful_base.json",
-            "helpful_online.json",
-            "helpful_rejection.json"
+            # "helpful_base.json",
+            # "helpful_online.json",
+            # "helpful_rejection.json"
         ]:
             save_path = os.path.join("/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval_new", "infer_generate_main_{}_{}_{}".format(args.index, args.stage, file_name))
             if os.path.exists(save_path):
@@ -98,9 +98,9 @@ if __name__ == "__main__":
     
     for file_name in [
         "harmless_base.json",
-        "helpful_base.json",
-        "helpful_online.json",
-        "helpful_rejection.json"
+        # "helpful_base.json",
+        # "helpful_online.json",
+        # "helpful_rejection.json"
     ]:
         file_path = os.path.join("..", "data", "hh_test", file_name)
         with open(file_path, "r", encoding='utf-8') as f:
