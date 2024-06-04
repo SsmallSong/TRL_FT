@@ -32,7 +32,7 @@ def get_args():
     parser.add_argument('--index', type=str)
     parser.add_argument('--stage', type=int)
     parser.add_argument('--directory', default="best_checkpoint", type=str)
-    # parser.add_argument('--model_ckpt',default="non", type=str)
+    parser.add_argument('--model_ckpt',default="non", type=str)
     args = parser.parse_args()
     return args
 
@@ -49,19 +49,16 @@ if __name__ == "__main__":
     model_config = AutoConfig.from_pretrained(model_name_or_path )
     model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
 
-    # if args.model_ckpt!='non':
-    #     print("load model")
-    #     kill
-    #     ckpt_path = f"/home/wxt/.cache/huggingface/hub/{args.model_ckpt}/LATEST/policy.pt"
-    #     state_dict = torch.load(ckpt_path, map_location='cpu')
-    #     #kill
-    #     # step, metrics = state_dict['step_idx'], state_dict['metrics']
-    #     model.load_state_dict(state_dict['state'])
-    #     delete_dict(state_dict)
-    #     gc.collect()
-    #     #kill
-    #     torch.cuda.empty_cache()
-    #     print('loaded pre-trained weights')
+    if args.model_ckpt!='non':
+        print("load model")
+        ckpt_path = f"/home/wxt/.cache/huggingface/hub/{args.model_ckpt}/LATEST/policy.pt"
+        state_dict = torch.load(ckpt_path, map_location='cpu')
+        # step, metrics = state_dict['step_idx'], state_dict['metrics']
+        model.load_state_dict(state_dict['state'])
+        delete_dict(state_dict)
+        gc.collect()
+        torch.cuda.empty_cache()
+        print('loaded pre-trained weights')
 
     if accelerator.is_main_process:
         print(type(model))
