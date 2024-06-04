@@ -9,8 +9,8 @@ model_ckpt="llama2_7b_dpo_halos_beta01"
 
 accelerate launch --config_file dp_config.yaml infer_and_eval_main_generate.py \
     --index $index  \
-    --model_ckpt $model_ckpt \
     --stage 1 > $log_file 2>&1 
+     # --model_ckpt $model_ckpt \
     
 # accelerate launch --config_file dp_config.yaml infer_and_eval_main_reward.py \
 #     --index $index \
