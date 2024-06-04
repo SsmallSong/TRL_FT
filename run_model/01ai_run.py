@@ -40,6 +40,7 @@ model = AutoModelForCausalLM.from_pretrained(model_path, device_map=device, torc
 
 prompt_now="改写下面的query，使之能更好地适应搜索引擎。回答格式如下：问题:{$query} \n答亲:以{$answer}\n\n下面是你要改写的query：\n"
 for query in query_list:
+  prompt_now="改写下面的query，使之能更好地适应搜索引擎。注意，你改写的query也要是一个问句，我会直接用这个改写的query去查询，不要给我提建议，直接进行改写。回答格式如下：\n改写后的query:{}\n\n下面是你要改写的query：\n"
   prompt_now=prompt_now+query
   messages=[{"role": "user", "content": prompt_now}]
   
