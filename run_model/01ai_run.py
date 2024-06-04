@@ -43,8 +43,8 @@ for query in query_list:
   prompt_now=prompt_now+query
   messages=[{"role": "user", "content": prompt_now}]
   
-  input_ids = tokenizer.apply_chat_template(conversation=messages, tokenize=True, add_generation_prompt=True, return_tensors='pt')
-  output_ids = model.generate(input_ids.to('cuda'))
+  input_ids = tokenizer.apply_chat_template(conversation=messages, tokenize=True, return_tensors='pt')
+  output_ids = model.generate(input_ids.to('cuda'), eos_token_id=tokenizer.eos_token_id, max_new_tokens=100)
   response = tokenizer.decode(output_ids[0][input_ids.shape[1]:], skip_special_tokens=True)
   print("="*20)
   print(query)
