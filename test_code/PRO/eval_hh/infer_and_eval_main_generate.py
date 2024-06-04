@@ -45,18 +45,24 @@ if __name__ == "__main__":
     # model_name_or_path = os.path.join("..", "checkpoints", f"index_{args.index}", f"stage_{args.stage}", f"{args.directory}")
     model_name_or_path ='daryl149/llama-2-7b-hf'
     model_device = "cuda:{}".format(rank)
-    kill
+   # kill
 
-    model_config = AutoConfig.from_pretrained(model_name_or_path)
+    model_config = AutoConfig.from_pretrained(model_name_or_path )
+    
     model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
-    # model = AutoModelForCausalLM.from_pretrained(model_name_or_path).to(model_device)
+    kill
+   # model = AutoModelForCausalLM.from_pretrained(model_name_or_path).to(model_device)
     if args.model_ckpt!="non":
+        print("load model")
+        #kill
         ckpt_path = f"/home/wxt/.cache/huggingface/hub/{args.model_ckpt}/LATEST/policy.pt"
         state_dict = torch.load(ckpt_path, map_location='cpu')
+        #kill
         # step, metrics = state_dict['step_idx'], state_dict['metrics']
         model.load_state_dict(state_dict['state'])
         delete_dict(state_dict)
         gc.collect()
+        #kill
         torch.cuda.empty_cache()
         print('loaded pre-trained weights')
 

@@ -1,16 +1,4 @@
-Eval on harmless_base.json
-BLEU: 0.14285103533039994
-Avg Reward: 0.5230839136362746
-Eval on helpful_base.json
-BLEU: 0.19445089917045325
-Avg Reward: 0.5067027772926332
-Eval on helpful_online.json
-BLEU: 0.3153305299721441
-Avg Reward: 0.5898155890766219
-Eval on helpful_rejection.json
-BLEU: 0.25517763492107753
-Avg Reward: 0.556866738428936
-
-Global Eval
-BLEU: 0.2160692959353868
-Avg Reward: 0.5382942343411738
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_score.py", line 27, in <module>
+    with open(save_path, 'r', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/data_eval_new/infer_main_llama2_7b_dpo_halos_beta03_1_harmless_base.json'

@@ -1,16 +1,26 @@
-Eval on harmless_base.json
-BLEU: 0.00815889835312339
-Avg Reward: 0.3317978231616602
-Eval on helpful_base.json
-BLEU: 0.0006179262672017122
-Avg Reward: 0.19707296099656196
-Eval on helpful_online.json
-BLEU: 0.003456918812356304
-Avg Reward: 0.2174422295739472
-Eval on helpful_rejection.json
-BLEU: 0.0009964960790888465
-Avg Reward: 0.20472999161299726
-
-Global Eval
-BLEU: 0.003155665730860088
-Avg Reward: 0.23866970699955845
+Traceback (most recent call last):
+  File "/home/wxt/.conda/envs/rl/bin/accelerate", line 5, in <module>
+    from accelerate.commands.accelerate_cli import main
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/__init__.py", line 16, in <module>
+    from .accelerator import Accelerator
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/accelerator.py", line 32, in <module>
+    import torch
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/__init__.py", line 1854, in <module>
+    from . import _meta_registrations
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/_meta_registrations.py", line 9, in <module>
+    from torch._decomp import (
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/_decomp/__init__.py", line 243, in <module>
+    import torch._decomp.decompositions
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/_decomp/decompositions.py", line 11, in <module>
+    import torch._prims as prims
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/_prims/__init__.py", line 1153, in <module>
+    sub = _make_elementwise_binary_prim(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/_prims/__init__.py", line 462, in _make_elementwise_binary_prim
+    return _make_prim(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/_prims/__init__.py", line 300, in _make_prim
+    prim_autograd_impl.impl(name, _autograd_impl)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/library.py", line 168, in impl
+    self.m.impl(name, dispatch_key if dispatch_key != "" else "CompositeImplicitAutograd", fn)
+  File "<frozen importlib._bootstrap>", line 224, in _lock_unlock_module
+  File "<frozen importlib._bootstrap>", line 110, in acquire
+KeyboardInterrupt
