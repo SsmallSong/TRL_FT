@@ -1,4 +1,12 @@
-
+from FlagEmbedding import FlagModel
+import numpy as np
+import os
+import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers.generation.utils import GenerationConfig
+from FlagEmbedding import FlagReranker
+os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
+device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
 
 
 from transformers import AutoModelForCausalLM, AutoTokenizer
