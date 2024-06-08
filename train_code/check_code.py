@@ -39,7 +39,7 @@ model_config = AutoConfig.from_pretrained(model_name_or_path )
 model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
 
 print("begin load model")
-ckpt_path = f"/home/wxt/.cache/huggingface/hub/{args.model_ckpt}/LATEST/policy.pt"
+ckpt_path = f"/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt"
 state_dict = torch.load(ckpt_path, map_location='cpu')
 model.load_state_dict(state_dict['state'])
 delete_dict(state_dict)
