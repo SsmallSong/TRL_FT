@@ -1,7 +1,7 @@
 #import shutil
 
 from datasets import load_dataset
-from transformers import AutoModelForCausalLM,AutoModelForSequenceClassification,AutoTokenizer,HfArgumentParser
+from transformers import AutoModelForCausalLM,AutoModelForSequenceClassification,AutoTokenizer,HfArgumentParser,AutoConfig
 
 from trl import ModelConfig
 from trl.trainer.ppov2_trainer import PPOv2Config, PPOv2Trainer
@@ -55,9 +55,10 @@ if __name__ == "__main__":
     tokenizer.add_special_tokens({"pad_token": "[PAD]"})
     if tokenizer.chat_template is None:
         tokenizer.chat_template = SIMPLE_QUERY_CHAT_TEMPLATE
-    
-    ref_policy = AutoModelForCausalLM.from_pretrained(config.sft_model_path)
-    policy = AutoModelForCausalLM.from_pretrained(config.sft_model_path)
+        
+    model_config = AutoConfig.from_pretrained(config.sft_model_path)
+    ref_policy = AutoModelForCausalLM.from_pretrained(config.sft_model_path,config=model_config)
+    policy = AutoModelForCausalLM.from_pretrained(config.sft_model_path,config=model_config)
 
     print('begin loading pre-trained weights')
     ckpt_path = f"/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt"
