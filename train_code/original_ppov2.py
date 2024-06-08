@@ -48,7 +48,7 @@ accelerate launch --config_file examples/accelerate_configs/deepspeed_zero3.yaml
 
 
 if __name__ == "__main__":
-    model_name_or_path ='home/wxt/huatong/huggingface/hub/llama2_sft/snapshots/142d0a5354ab12acdfff745a4d5c2ced307970dd'
+    model_name_or_path ='/home/wxt/huatong/huggingface/hub/llama2_sft/'
 
     parser = HfArgumentParser((PPOv2Config, ModelConfig))
     config, model_config = parser.parse_args_into_dataclasses()
