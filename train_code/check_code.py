@@ -1,4 +1,5 @@
 #import some packages and reward funcs
+import model_training.models.reward_model
 import os
 import argparse
 import json
