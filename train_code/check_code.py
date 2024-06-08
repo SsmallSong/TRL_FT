@@ -47,7 +47,7 @@ if __name__ == "__main__":
     # remove output_dir if exists
     # shutil.rmtree(config.output_dir, ignore_errors=True)
 
-    raw_datasets = load_dataset("trl-internal-testing/hh-rlhf-trl-style", split="descriptiveness")
+    raw_datasets = load_dataset("trl-internal-testing/hh-rlhf-trl-style",split='train')
     print(raw_datasets)
     # eval_samples = 20
     # train_dataset = raw_datasets.select(range(len(raw_datasets) - eval_samples))
