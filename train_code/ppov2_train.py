@@ -29,8 +29,8 @@ accelerate launch --config_file examples/accelerate_configs/deepspeed_zero3.yaml
     --per_device_train_batch_size 1 \
     --gradient_accumulation_steps 16 \
     --total_episodes 10000 \
-    --model_name_or_path /home/wxt/huatong/huggingface/hub/models--daryl149--llama-2-7b-hf/snapshots/142d0a5354ab12acdfff745a4d5c2ced307970dd \
-    --sft_model_path /home/wxt/huatong/huggingface/hub/models--daryl149--llama-2-7b-hf/snapshots/142d0a5354ab12acdfff745a4d5c2ced307970dd \
+    --model_name_or_path daryl149/llama-2-7b-hf\
+    --sft_model_path daryl149/llama-2-7b-hf \
     --reward_model_path OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5 \
     --local_rollout_forward_batch_size 1 \
     --deepspeed3 \
