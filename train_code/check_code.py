@@ -9,7 +9,8 @@ from transformers import (
     AutoConfig,
     AutoTokenizer,
     LlamaTokenizer,
-    AutoModelForCausalLM
+    AutoModelForCausalLM,
+    AutoModelForSequenceClassification
 )
 
 import gc
