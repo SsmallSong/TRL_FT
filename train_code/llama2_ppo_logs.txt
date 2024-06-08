@@ -1,0 +1,847 @@
+[2024-06-08 10:53:45,795] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-06-08 10:53:46,404] torch.distributed.run: [WARNING] 
+[2024-06-08 10:53:46,404] torch.distributed.run: [WARNING] *****************************************
+[2024-06-08 10:53:46,404] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-06-08 10:53:46,404] torch.distributed.run: [WARNING] *****************************************
+hello, reward model
+hello, reward model
+hello, reward model
+hello, reward model
+[2024-06-08 10:53:49,729] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-06-08 10:53:49,784] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-06-08 10:53:49,790] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-06-08 10:53:49,799] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+++++++++++++++++++++
+come on!
+++++++++++++++++++++
+++++++++++++++++++++
+come on!
+++++++++++++++++++++
+[2024-06-08 10:53:50,362] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-06-08 10:53:50,367] [INFO] [comm.py:637:init_distributed] cdb=None
+++++++++++++++++++++
+come on!
+++++++++++++++++++++
+[2024-06-08 10:53:50,379] [INFO] [comm.py:637:init_distributed] cdb=None
+++++++++++++++++++++
+come on!
+++++++++++++++++++++
+[2024-06-08 10:53:50,400] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-06-08 10:53:50,400] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][2024-06-08 10:53:52,562] [INFO] [partition_parameters.py:345:__exit__] finished initializing model - num_params = 291, num_elems = 6.74B
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.08s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.09s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.09s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.48s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.48s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.57s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.57s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.46s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.56s/it]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:11<00:11, 11.35s/it]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  6.81s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.49s/it]
+[2024-06-08 10:54:07,945] [INFO] [partition_parameters.py:345:__exit__] finished initializing model - num_params = 582, num_elems = 13.48B
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.41s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.41s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.42s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.75s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.75s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.75s/it]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.81s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.11s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.67s/it]
+[2024-06-08 10:54:21,811] [INFO] [partition_parameters.py:345:__exit__] finished initializing model - num_params = 778, num_elems = 14.39B
+Some weights of GPTNeoXForSequenceClassification were not initialized from the model checkpoint at EleutherAI/pythia-1b-deduped and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of GPTNeoXForSequenceClassification were not initialized from the model checkpoint at EleutherAI/pythia-1b-deduped and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of GPTNeoXForSequenceClassification were not initialized from the model checkpoint at EleutherAI/pythia-1b-deduped and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of GPTNeoXForSequenceClassification were not initialized from the model checkpoint at EleutherAI/pythia-1b-deduped and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[2024-06-08 10:54:23,941] [INFO] [partition_parameters.py:345:__exit__] finished initializing model - num_params = 974, num_elems = 15.29B
+Some weights of GPTNeoXForSequenceClassification were not initialized from the model checkpoint at EleutherAI/pythia-1b-deduped and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of GPTNeoXForSequenceClassification were not initialized from the model checkpoint at EleutherAI/pythia-1b-deduped and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of GPTNeoXForSequenceClassification were not initialized from the model checkpoint at EleutherAI/pythia-1b-deduped and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of GPTNeoXForSequenceClassification were not initialized from the model checkpoint at EleutherAI/pythia-1b-deduped and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Map (num_proc=4):   0%|          | 0/160800 [00:00<?, ? examples/s]Map (num_proc=4):   0%|          | 0/160800 [00:00<?, ? examples/s]Map (num_proc=4):   1%|          | 2000/160800 [00:00<00:15, 10221.57 examples/s]Map (num_proc=4):   0%|          | 0/160800 [00:00<?, ? examples/s]Map (num_proc=4):   1%|          | 1000/160800 [00:00<00:28, 5592.52 examples/s]Map (num_proc=4):   9%|▉         | 15000/160800 [00:00<00:02, 53366.89 examples/s]Map (num_proc=4):   1%|          | 1000/160800 [00:00<00:27, 5895.36 examples/s]Map (num_proc=4):   7%|▋         | 11000/160800 [00:00<00:03, 41376.73 examples/s]Map (num_proc=4):  16%|█▌        | 25000/160800 [00:00<00:02, 67589.10 examples/s]Map (num_proc=4):  14%|█▍        | 23000/160800 [00:00<00:01, 69308.92 examples/s]Map (num_proc=4):   6%|▌         | 9000/160800 [00:00<00:04, 35406.39 examples/s]Map (num_proc=4):  22%|██▏       | 36000/160800 [00:00<00:01, 76626.78 examples/s]Map (num_proc=4):   0%|          | 0/160800 [00:00<?, ? examples/s]Map (num_proc=4):  20%|█▉        | 32000/160800 [00:00<00:01, 75871.51 examples/s]Map (num_proc=4):  14%|█▍        | 23000/160800 [00:00<00:01, 69878.03 examples/s]Map (num_proc=4):  32%|███▏      | 51000/160800 [00:00<00:01, 85758.23 examples/s]Map (num_proc=4):  27%|██▋       | 43000/160800 [00:00<00:01, 83191.73 examples/s]Map (num_proc=4):  21%|██        | 33000/160800 [00:00<00:01, 75000.34 examples/s]Map (num_proc=4):   1%|          | 1000/160800 [00:00<00:32, 4970.41 examples/s]Map (num_proc=4):  33%|███▎      | 53000/160800 [00:00<00:01, 86031.22 examples/s]Map (num_proc=4):  40%|████      | 65000/160800 [00:00<00:01, 91450.50 examples/s]Map (num_proc=4):  27%|██▋       | 44000/160800 [00:00<00:01, 77066.93 examples/s]Map (num_proc=4):   5%|▍         | 8000/160800 [00:00<00:04, 31021.13 examples/s]Map (num_proc=4):  48%|████▊     | 77000/160800 [00:00<00:00, 98216.91 examples/s]Map (num_proc=4):  40%|███▉      | 64000/160800 [00:00<00:01, 88777.21 examples/s]Map (num_proc=4):  34%|███▍      | 55000/160800 [00:00<00:01, 85179.92 examples/s]Map (num_proc=4):  11%|█         | 18000/160800 [00:00<00:02, 54867.63 examples/s]Map (num_proc=4):  47%|████▋     | 76000/160800 [00:00<00:00, 96524.75 examples/s]Map (num_proc=4):  55%|█████▍    | 88000/160800 [00:01<00:00, 93994.09 examples/s]Map (num_proc=4):  17%|█▋        | 28000/160800 [00:00<00:01, 67783.54 examples/s]Map (num_proc=4):  40%|███▉      | 64000/160800 [00:00<00:01, 79046.82 examples/s]Map (num_proc=4):  53%|█████▎    | 86000/160800 [00:01<00:00, 88872.87 examples/s]Map (num_proc=4):  24%|██▎       | 38000/160800 [00:00<00:01, 77424.49 examples/s]Map (num_proc=4):  45%|████▌     | 73000/160800 [00:01<00:01, 81656.32 examples/s]Map (num_proc=4):  51%|█████     | 82000/160800 [00:01<00:00, 82696.80 examples/s]Map (num_proc=4):  30%|███       | 49000/160800 [00:00<00:01, 77007.16 examples/s]Map (num_proc=4):  60%|█████▉    | 96000/160800 [00:01<00:01, 60860.60 examples/s]Map (num_proc=4):  39%|███▉      | 63000/160800 [00:00<00:01, 84983.56 examples/s]Map (num_proc=4):  57%|█████▋    | 91000/160800 [00:01<00:00, 70742.93 examples/s]Map (num_proc=4):  61%|██████    | 98000/160800 [00:01<00:01, 50381.49 examples/s]Map (num_proc=4):  46%|████▌     | 74000/160800 [00:01<00:00, 91483.54 examples/s]Map (num_proc=4):  65%|██████▌   | 105000/160800 [00:01<00:00, 63333.79 examples/s]Map (num_proc=4):  66%|██████▌   | 106000/160800 [00:01<00:01, 51715.01 examples/s]Map (num_proc=4):  52%|█████▏    | 84000/160800 [00:01<00:00, 86899.17 examples/s]Map (num_proc=4):  70%|███████   | 113000/160800 [00:01<00:00, 60881.81 examples/s]Map (num_proc=4):  73%|███████▎  | 117000/160800 [00:01<00:00, 60558.96 examples/s]Map (num_proc=4):  62%|██████▏   | 100000/160800 [00:01<00:01, 50408.96 examples/s]Map (num_proc=4):  75%|███████▌  | 121000/160800 [00:01<00:00, 64393.02 examples/s]Map (num_proc=4):  81%|████████  | 130000/160800 [00:01<00:00, 70647.75 examples/s]Map (num_proc=4):  67%|██████▋   | 107000/160800 [00:01<00:01, 49340.92 examples/s]Map (num_proc=4):  80%|████████  | 129000/160800 [00:01<00:00, 64111.82 examples/s]Map (num_proc=4):  88%|████████▊ | 141200/160800 [00:02<00:00, 75056.14 examples/s]Map (num_proc=4):  58%|█████▊    | 94000/160800 [00:01<00:01, 57066.90 examples/s]Map (num_proc=4):  70%|███████   | 113000/160800 [00:01<00:00, 49946.75 examples/s]Map (num_proc=4):  85%|████████▌ | 137400/160800 [00:02<00:00, 63728.66 examples/s]Map (num_proc=4):  75%|███████▍  | 120000/160800 [00:01<00:00, 53575.06 examples/s]Map (num_proc=4):  64%|██████▍   | 103000/160800 [00:01<00:00, 58466.87 examples/s]Map (num_proc=4):  94%|█████████▎| 150600/160800 [00:02<00:00, 60218.35 examples/s]Map (num_proc=4):  80%|███████▉  | 128200/160800 [00:02<00:00, 58911.73 examples/s]Map (num_proc=4):  90%|█████████ | 145400/160800 [00:02<00:00, 55148.40 examples/s]Map (num_proc=4):  71%|███████   | 114000/160800 [00:01<00:00, 63843.90 examples/s]Map (num_proc=4):  85%|████████▍ | 136200/160800 [00:02<00:00, 63679.98 examples/s]Map (num_proc=4):  80%|███████▉  | 128000/160800 [00:01<00:00, 74191.73 examples/s]Map (num_proc=4):  95%|█████████▍| 152600/160800 [00:02<00:00, 51047.53 examples/s]Map (num_proc=4):  85%|████████▍ | 136200/160800 [00:01<00:00, 75173.60 examples/s]Map (num_proc=4):  99%|█████████▊| 158600/160800 [00:02<00:00, 45971.53 examples/s]Map (num_proc=4):  90%|████████▉ | 144400/160800 [00:02<00:00, 53676.68 examples/s]Map (num_proc=4):  90%|█████████ | 145400/160800 [00:02<00:00, 70447.04 examples/s]Map (num_proc=4):  99%|█████████▊| 158600/160800 [00:02<00:00, 40626.80 examples/s]Map (num_proc=4): 100%|██████████| 160800/160800 [00:02<00:00, 58890.14 examples/s]
+Map (num_proc=4):  94%|█████████▎| 150600/160800 [00:02<00:00, 44388.07 examples/s]Map (num_proc=4):   0%|          | 0/8552 [00:00<?, ? examples/s]Map (num_proc=4): 100%|██████████| 160800/160800 [00:02<00:00, 57603.44 examples/s]
+Map (num_proc=4):   0%|          | 0/8552 [00:00<?, ? examples/s]Map (num_proc=4):  12%|█▏        | 1000/8552 [00:00<00:01, 6584.67 examples/s]Map (num_proc=4):  97%|█████████▋| 156600/160800 [00:02<00:00, 37547.20 examples/s]Map (num_proc=4):  87%|████████▋ | 7414/8552 [00:00<00:00, 34370.79 examples/s]Map (num_proc=4):  23%|██▎       | 2000/8552 [00:00<00:00, 10262.62 examples/s]Map (num_proc=4): 100%|██████████| 8552/8552 [00:00<00:00, 22120.86 examples/s]
+Map (num_proc=4): 100%|██████████| 160800/160800 [00:03<00:00, 52377.60 examples/s]
+Map (num_proc=4):  98%|█████████▊| 8414/8552 [00:00<00:00, 30938.41 examples/s]Map (num_proc=4):  96%|█████████▌| 154600/160800 [00:02<00:00, 34867.00 examples/s]Map (num_proc=4): 100%|██████████| 8552/8552 [00:00<00:00, 21744.75 examples/s]
+Map (num_proc=4):   0%|          | 0/8552 [00:00<?, ? examples/s]Map (num_proc=4):  12%|█▏        | 1000/8552 [00:00<00:01, 5249.47 examples/s]Map (num_proc=4): 100%|██████████| 160800/160800 [00:03<00:00, 30661.39 examples/s]Map (num_proc=4): 100%|██████████| 160800/160800 [00:03<00:00, 51600.49 examples/s]
+Map (num_proc=4):  98%|█████████▊| 8414/8552 [00:00<00:00, 28871.78 examples/s]Map (num_proc=4):   0%|          | 0/8552 [00:00<?, ? examples/s]Map (num_proc=4): 100%|██████████| 8552/8552 [00:00<00:00, 19974.23 examples/s]
+Map (num_proc=4):  12%|█▏        | 1000/8552 [00:00<00:01, 6202.70 examples/s]Map (num_proc=4):  87%|████████▋ | 7414/8552 [00:00<00:00, 30456.42 examples/s]Map (num_proc=4): 100%|██████████| 8552/8552 [00:00<00:00, 19952.26 examples/s]
+[2024-06-08 10:54:33,631] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.14.2, git-hash=unknown, git-branch=unknown
+[2024-06-08 10:54:33,648] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2024-06-08 10:54:33,649] [INFO] [logging.py:96:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2024-06-08 10:54:33,649] [INFO] [logging.py:96:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2024-06-08 10:54:33,671] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2024-06-08 10:54:33,671] [INFO] [utils.py:56:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2024-06-08 10:54:33,671] [INFO] [logging.py:96:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2024-06-08 10:54:33,671] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+[2024-06-08 10:54:33,910] [INFO] [utils.py:779:see_memory_usage] Stage 3 initialize beginning
+[2024-06-08 10:54:33,911] [INFO] [utils.py:780:see_memory_usage] MA 7.29 GB         Max_MA 7.69 GB         CA 7.91 GB         Max_CA 8 GB 
+[2024-06-08 10:54:33,912] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 24.13 GB, percent = 2.8%
+[2024-06-08 10:54:33,915] [INFO] [stage3.py:130:__init__] Reduce bucket size 500,000,000
+[2024-06-08 10:54:33,915] [INFO] [stage3.py:131:__init__] Prefetch bucket size 50,000,000
+[2024-06-08 10:54:34,090] [INFO] [utils.py:779:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2024-06-08 10:54:34,091] [INFO] [utils.py:780:see_memory_usage] MA 7.29 GB         Max_MA 7.29 GB         CA 7.91 GB         Max_CA 8 GB 
+[2024-06-08 10:54:34,091] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 24.13 GB, percent = 2.8%
+Parameter Offload: Total persistent parameters: 698368 in 196 params
+[2024-06-08 10:54:34,289] [INFO] [utils.py:779:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2024-06-08 10:54:34,290] [INFO] [utils.py:780:see_memory_usage] MA 7.29 GB         Max_MA 7.29 GB         CA 7.91 GB         Max_CA 8 GB 
+[2024-06-08 10:54:34,290] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 24.14 GB, percent = 2.8%
+[2024-06-08 10:54:34,461] [INFO] [utils.py:779:see_memory_usage] Before creating fp16 partitions
+[2024-06-08 10:54:34,462] [INFO] [utils.py:780:see_memory_usage] MA 7.29 GB         Max_MA 7.29 GB         CA 7.91 GB         Max_CA 8 GB 
+[2024-06-08 10:54:34,462] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 24.14 GB, percent = 2.8%
+[2024-06-08 10:54:35,794] [INFO] [utils.py:779:see_memory_usage] After creating fp16 partitions: 3
+[2024-06-08 10:54:35,795] [INFO] [utils.py:780:see_memory_usage] MA 7.28 GB         Max_MA 7.29 GB         CA 8.69 GB         Max_CA 9 GB 
+[2024-06-08 10:54:35,795] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 34.85 GB, percent = 4.0%
+[2024-06-08 10:54:35,946] [INFO] [utils.py:779:see_memory_usage] Before creating fp32 partitions
+[2024-06-08 10:54:35,947] [INFO] [utils.py:780:see_memory_usage] MA 7.28 GB         Max_MA 7.28 GB         CA 8.69 GB         Max_CA 9 GB 
+[2024-06-08 10:54:35,947] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 31.29 GB, percent = 3.6%
+[2024-06-08 10:54:36,102] [INFO] [utils.py:779:see_memory_usage] After creating fp32 partitions
+[2024-06-08 10:54:36,103] [INFO] [utils.py:780:see_memory_usage] MA 14.4 GB         Max_MA 16.1 GB         CA 17.68 GB         Max_CA 18 GB 
+[2024-06-08 10:54:36,103] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 24.16 GB, percent = 2.8%
+[2024-06-08 10:54:36,251] [INFO] [utils.py:779:see_memory_usage] Before initializing optimizer states
+[2024-06-08 10:54:36,252] [INFO] [utils.py:780:see_memory_usage] MA 14.4 GB         Max_MA 14.4 GB         CA 17.68 GB         Max_CA 18 GB 
+[2024-06-08 10:54:36,252] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 24.16 GB, percent = 2.8%
+[2024-06-08 10:54:36,402] [INFO] [utils.py:779:see_memory_usage] After initializing optimizer states
+[2024-06-08 10:54:36,402] [INFO] [utils.py:780:see_memory_usage] MA 14.4 GB         Max_MA 18.14 GB         CA 21.42 GB         Max_CA 21 GB 
+[2024-06-08 10:54:36,403] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 24.16 GB, percent = 2.8%
+[2024-06-08 10:54:36,403] [INFO] [stage3.py:486:_setup_for_real_optimizer] optimizer state initialized
+[2024-06-08 10:54:37,160] [INFO] [utils.py:779:see_memory_usage] After initializing ZeRO optimizer
+[2024-06-08 10:54:37,161] [INFO] [utils.py:780:see_memory_usage] MA 18.9 GB         Max_MA 19.39 GB         CA 21.42 GB         Max_CA 21 GB 
+[2024-06-08 10:54:37,161] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 24.18 GB, percent = 2.8%
+[2024-06-08 10:54:37,161] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = AdamW
+[2024-06-08 10:54:37,161] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+[2024-06-08 10:54:37,161] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2024-06-08 10:54:37,162] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[3e-06, 3e-06], mom=[(0.9, 0.999), (0.9, 0.999)]
+[2024-06-08 10:54:37,163] [INFO] [config.py:996:print] DeepSpeedEngine configuration:
+[2024-06-08 10:54:37,163] [INFO] [config.py:1000:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   amp_enabled .................. False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   amp_params ................... False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   bfloat16_enabled ............. True
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   bfloat16_immediate_grad_update  False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   checkpoint_parallel_write_pipeline  False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   checkpoint_tag_validation_enabled  True
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   checkpoint_tag_validation_fail  False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f3ddb537ac0>
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   communication_data_type ...... None
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   compile_config ............... enabled=False backend='inductor' kwargs={}
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   curriculum_enabled_legacy .... False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   curriculum_params_legacy ..... False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   data_efficiency_enabled ...... False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   dataloader_drop_last ......... False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   disable_allgather ............ False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   dump_state ................... False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   dynamic_loss_scale_args ...... None
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   eigenvalue_enabled ........... False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   eigenvalue_gas_boundary_resolution  1
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   eigenvalue_layer_num ......... 0
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   eigenvalue_max_iter .......... 100
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   eigenvalue_stability ......... 1e-06
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   eigenvalue_tol ............... 0.01
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   eigenvalue_verbose ........... False
+[2024-06-08 10:54:37,164] [INFO] [config.py:1000:print]   elasticity_enabled ........... False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   fp16_auto_cast ............... None
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   fp16_enabled ................. False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   fp16_master_weights_and_gradients  False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   global_rank .................. 0
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   grad_accum_dtype ............. None
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   gradient_accumulation_steps .. 8
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   gradient_clipping ............ 0.0
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   gradient_predivide_factor .... 1.0
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   graph_harvesting ............. False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   initial_dynamic_scale ........ 1
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   load_universal_checkpoint .... False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   loss_scale ................... 1.0
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   memory_breakdown ............. False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   mics_hierarchial_params_gather  False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   mics_shard_size .............. -1
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   optimizer_legacy_fusion ...... False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   optimizer_name ............... None
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   optimizer_params ............. None
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   pld_enabled .................. False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   pld_params ................... False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   prescale_gradients ........... False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   scheduler_name ............... None
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   scheduler_params ............. None
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   seq_parallel_communication_data_type  torch.float32
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   sparse_attention ............. None
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   sparse_gradients_enabled ..... False
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   steps_per_print .............. inf
+[2024-06-08 10:54:37,165] [INFO] [config.py:1000:print]   train_batch_size ............. 512
+[2024-06-08 10:54:37,166] [INFO] [config.py:1000:print]   train_micro_batch_size_per_gpu  16
+[2024-06-08 10:54:37,166] [INFO] [config.py:1000:print]   use_data_before_expert_parallel_  False
+[2024-06-08 10:54:37,166] [INFO] [config.py:1000:print]   use_node_local_storage ....... False
+[2024-06-08 10:54:37,166] [INFO] [config.py:1000:print]   wall_clock_breakdown ......... False
+[2024-06-08 10:54:37,166] [INFO] [config.py:1000:print]   weight_quantization_config ... None
+[2024-06-08 10:54:37,166] [INFO] [config.py:1000:print]   world_size ................... 4
+[2024-06-08 10:54:37,166] [INFO] [config.py:1000:print]   zero_allow_untested_optimizer  True
+[2024-06-08 10:54:37,166] [INFO] [config.py:1000:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500,000,000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='none', nvme_path=None, buffer_count=5, buffer_size=100,000,000, max_in_cpu=1,000,000,000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=True stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2024-06-08 10:54:37,166] [INFO] [config.py:1000:print]   zero_enabled ................. True
+[2024-06-08 10:54:37,166] [INFO] [config.py:1000:print]   zero_force_ds_cpu_optimizer .. True
+[2024-06-08 10:54:37,166] [INFO] [config.py:1000:print]   zero_optimization_stage ...... 3
+[2024-06-08 10:54:37,166] [INFO] [config.py:986:print_user_config]   json = {
+    "train_batch_size": 512, 
+    "train_micro_batch_size_per_gpu": 16, 
+    "gradient_accumulation_steps": 8, 
+    "zero_optimization": {
+        "stage": 3, 
+        "offload_optimizer": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "offload_param": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "stage3_gather_16bit_weights_on_model_save": true
+    }, 
+    "steps_per_print": inf, 
+    "bf16": {
+        "enabled": true
+    }, 
+    "fp16": {
+        "enabled": false
+    }, 
+    "zero_allow_untested_optimizer": true
+}
+[2024-06-08 10:54:37,167] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.14.2, git-hash=unknown, git-branch=unknown
+[2024-06-08 10:54:37,173] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2024-06-08 10:54:37,173] [INFO] [logging.py:96:log_dist] [Rank 0] Creating ZeRO Offload
+[2024-06-08 10:54:37,367] [INFO] [utils.py:779:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2024-06-08 10:54:37,367] [INFO] [utils.py:780:see_memory_usage] MA 18.89 GB         Max_MA 18.9 GB         CA 21.42 GB         Max_CA 21 GB 
+[2024-06-08 10:54:37,368] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 24.19 GB, percent = 2.8%
+Parameter Offload: Total persistent parameters: 432128 in 131 params
+[2024-06-08 10:54:37,526] [INFO] [utils.py:779:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2024-06-08 10:54:37,527] [INFO] [utils.py:780:see_memory_usage] MA 18.89 GB         Max_MA 18.89 GB         CA 21.42 GB         Max_CA 21 GB 
+[2024-06-08 10:54:37,527] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 24.19 GB, percent = 2.8%
+[2024-06-08 10:54:37,528] [INFO] [config.py:996:print] DeepSpeedEngine configuration:
+[2024-06-08 10:54:37,528] [INFO] [config.py:1000:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2024-06-08 10:54:37,528] [INFO] [config.py:1000:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2024-06-08 10:54:37,528] [INFO] [config.py:1000:print]   amp_enabled .................. False
+[2024-06-08 10:54:37,528] [INFO] [config.py:1000:print]   amp_params ................... False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   bfloat16_enabled ............. True
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   bfloat16_immediate_grad_update  False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   checkpoint_parallel_write_pipeline  False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   checkpoint_tag_validation_enabled  True
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   checkpoint_tag_validation_fail  False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f3ddb1d4640>
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   communication_data_type ...... None
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   compile_config ............... enabled=False backend='inductor' kwargs={}
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   curriculum_enabled_legacy .... False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   curriculum_params_legacy ..... False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   data_efficiency_enabled ...... False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   dataloader_drop_last ......... False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   disable_allgather ............ False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   dump_state ................... False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   dynamic_loss_scale_args ...... None
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   eigenvalue_enabled ........... False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   eigenvalue_gas_boundary_resolution  1
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   eigenvalue_layer_num ......... 0
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   eigenvalue_max_iter .......... 100
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   eigenvalue_stability ......... 1e-06
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   eigenvalue_tol ............... 0.01
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   eigenvalue_verbose ........... False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   elasticity_enabled ........... False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   fp16_auto_cast ............... None
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   fp16_enabled ................. False
+[2024-06-08 10:54:37,529] [INFO] [config.py:1000:print]   fp16_master_weights_and_gradients  False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   global_rank .................. 0
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   grad_accum_dtype ............. None
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   gradient_accumulation_steps .. 8
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   gradient_clipping ............ 0.0
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   gradient_predivide_factor .... 1.0
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   graph_harvesting ............. False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   initial_dynamic_scale ........ 1
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   load_universal_checkpoint .... False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   loss_scale ................... 1.0
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   memory_breakdown ............. False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   mics_hierarchial_params_gather  False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   mics_shard_size .............. -1
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   optimizer_legacy_fusion ...... False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   optimizer_name ............... None
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   optimizer_params ............. None
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   pld_enabled .................. False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   pld_params ................... False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   prescale_gradients ........... False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   scheduler_name ............... None
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   scheduler_params ............. None
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   seq_parallel_communication_data_type  torch.float32
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   sparse_attention ............. None
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   sparse_gradients_enabled ..... False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   steps_per_print .............. inf
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   train_batch_size ............. 512
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   train_micro_batch_size_per_gpu  16
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   use_data_before_expert_parallel_  False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   use_node_local_storage ....... False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   wall_clock_breakdown ......... False
+[2024-06-08 10:54:37,530] [INFO] [config.py:1000:print]   weight_quantization_config ... None
+[2024-06-08 10:54:37,531] [INFO] [config.py:1000:print]   world_size ................... 4
+[2024-06-08 10:54:37,531] [INFO] [config.py:1000:print]   zero_allow_untested_optimizer  True
+[2024-06-08 10:54:37,531] [INFO] [config.py:1000:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500,000,000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='none', nvme_path=None, buffer_count=5, buffer_size=100,000,000, max_in_cpu=1,000,000,000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=True stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2024-06-08 10:54:37,531] [INFO] [config.py:1000:print]   zero_enabled ................. True
+[2024-06-08 10:54:37,531] [INFO] [config.py:1000:print]   zero_force_ds_cpu_optimizer .. True
+[2024-06-08 10:54:37,531] [INFO] [config.py:1000:print]   zero_optimization_stage ...... 3
+[2024-06-08 10:54:37,531] [INFO] [config.py:986:print_user_config]   json = {
+    "train_batch_size": 512, 
+    "train_micro_batch_size_per_gpu": 16, 
+    "gradient_accumulation_steps": 8, 
+    "zero_optimization": {
+        "stage": 3, 
+        "offload_optimizer": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "offload_param": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "stage3_gather_16bit_weights_on_model_save": true
+    }, 
+    "steps_per_print": inf, 
+    "bf16": {
+        "enabled": true
+    }, 
+    "fp16": {
+        "enabled": false
+    }, 
+    "zero_allow_untested_optimizer": true, 
+    "zero_optimization.reduce_bucket_size": 4.194304e+06, 
+    "zero_optimization.stage3_param_persistence_threshold": 2.048000e+04, 
+    "zero_optimization.stage3_prefetch_bucket_size": 0
+}
+[2024-06-08 10:54:37,532] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.14.2, git-hash=unknown, git-branch=unknown
+[2024-06-08 10:54:37,541] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2024-06-08 10:54:37,542] [INFO] [logging.py:96:log_dist] [Rank 0] Creating ZeRO Offload
+[2024-06-08 10:54:37,707] [INFO] [utils.py:779:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2024-06-08 10:54:37,708] [INFO] [utils.py:780:see_memory_usage] MA 18.89 GB         Max_MA 18.89 GB         CA 21.42 GB         Max_CA 21 GB 
+[2024-06-08 10:54:37,708] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 24.19 GB, percent = 2.8%
+Parameter Offload: Total persistent parameters: 266240 in 65 params
+[2024-06-08 10:54:37,879] [INFO] [utils.py:779:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2024-06-08 10:54:37,880] [INFO] [utils.py:780:see_memory_usage] MA 18.89 GB         Max_MA 18.89 GB         CA 21.42 GB         Max_CA 21 GB 
+[2024-06-08 10:54:37,880] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 24.19 GB, percent = 2.8%
+[2024-06-08 10:54:37,881] [INFO] [config.py:996:print] DeepSpeedEngine configuration:
+[2024-06-08 10:54:37,881] [INFO] [config.py:1000:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2024-06-08 10:54:37,881] [INFO] [config.py:1000:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2024-06-08 10:54:37,881] [INFO] [config.py:1000:print]   amp_enabled .................. False
+[2024-06-08 10:54:37,881] [INFO] [config.py:1000:print]   amp_params ................... False
+[2024-06-08 10:54:37,881] [INFO] [config.py:1000:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   bfloat16_enabled ............. True
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   bfloat16_immediate_grad_update  False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   checkpoint_parallel_write_pipeline  False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   checkpoint_tag_validation_enabled  True
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   checkpoint_tag_validation_fail  False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f3ddb0b8c10>
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   communication_data_type ...... None
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   compile_config ............... enabled=False backend='inductor' kwargs={}
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   curriculum_enabled_legacy .... False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   curriculum_params_legacy ..... False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   data_efficiency_enabled ...... False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   dataloader_drop_last ......... False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   disable_allgather ............ False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   dump_state ................... False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   dynamic_loss_scale_args ...... None
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   eigenvalue_enabled ........... False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   eigenvalue_gas_boundary_resolution  1
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   eigenvalue_layer_num ......... 0
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   eigenvalue_max_iter .......... 100
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   eigenvalue_stability ......... 1e-06
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   eigenvalue_tol ............... 0.01
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   eigenvalue_verbose ........... False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   elasticity_enabled ........... False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   fp16_auto_cast ............... None
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   fp16_enabled ................. False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   fp16_master_weights_and_gradients  False
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   global_rank .................. 0
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   grad_accum_dtype ............. None
+[2024-06-08 10:54:37,882] [INFO] [config.py:1000:print]   gradient_accumulation_steps .. 8
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   gradient_clipping ............ 0.0
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   gradient_predivide_factor .... 1.0
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   graph_harvesting ............. False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   initial_dynamic_scale ........ 1
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   load_universal_checkpoint .... False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   loss_scale ................... 1.0
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   memory_breakdown ............. False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   mics_hierarchial_params_gather  False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   mics_shard_size .............. -1
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   optimizer_legacy_fusion ...... False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   optimizer_name ............... None
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   optimizer_params ............. None
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   pld_enabled .................. False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   pld_params ................... False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   prescale_gradients ........... False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   scheduler_name ............... None
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   scheduler_params ............. None
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   seq_parallel_communication_data_type  torch.float32
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   sparse_attention ............. None
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   sparse_gradients_enabled ..... False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   steps_per_print .............. inf
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   train_batch_size ............. 512
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   train_micro_batch_size_per_gpu  16
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   use_data_before_expert_parallel_  False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   use_node_local_storage ....... False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   wall_clock_breakdown ......... False
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   weight_quantization_config ... None
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   world_size ................... 4
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   zero_allow_untested_optimizer  True
+[2024-06-08 10:54:37,883] [INFO] [config.py:1000:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500,000,000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='none', nvme_path=None, buffer_count=5, buffer_size=100,000,000, max_in_cpu=1,000,000,000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=True stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2024-06-08 10:54:37,884] [INFO] [config.py:1000:print]   zero_enabled ................. True
+[2024-06-08 10:54:37,884] [INFO] [config.py:1000:print]   zero_force_ds_cpu_optimizer .. True
+[2024-06-08 10:54:37,884] [INFO] [config.py:1000:print]   zero_optimization_stage ...... 3
+[2024-06-08 10:54:37,884] [INFO] [config.py:986:print_user_config]   json = {
+    "train_batch_size": 512, 
+    "train_micro_batch_size_per_gpu": 16, 
+    "gradient_accumulation_steps": 8, 
+    "zero_optimization": {
+        "stage": 3, 
+        "offload_optimizer": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "offload_param": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "stage3_gather_16bit_weights_on_model_save": true
+    }, 
+    "steps_per_print": inf, 
+    "bf16": {
+        "enabled": true
+    }, 
+    "fp16": {
+        "enabled": false
+    }, 
+    "zero_allow_untested_optimizer": true, 
+    "zero_optimization.reduce_bucket_size": 1.677722e+07, 
+    "zero_optimization.stage3_param_persistence_threshold": 4.096000e+04, 
+    "zero_optimization.stage3_prefetch_bucket_size": 0
+}
+===training policy===
+wandb: Currently logged in as: 3151273556 (run_sht). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.1 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.17.0
+wandb: Run data is saved locally in /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240608_105556-gzn62e36
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ppov2_config__42__1717844073
+wandb: ⭐️ View project at https://wandb.ai/run_sht/huggingface
+wandb: 🚀 View run at https://wandb.ai/run_sht/huggingface/runs/gzn62e36
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ query                                                ┃ model response                                                                                                                                                                                                   ┃ score      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ what are some pranks with a pen i can do?            │                                                                                                                                                                                                                  │ -1.984375  │
+│                                                      │ I'm going to be a senior in high school and I'm looking for some pranks to do with a pen. I'm not looking for anything too dangerous or anything that will get me in trouble. I'm just looking for something fun │            │
+├──────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ How much alcohol can I drink per day?                │                                                                                                                                                                                                                  │ -0.6640625 │
+│                                                      │ How much alcohol can I drink per day? The National Institute on Alcohol Abuse and Alcoholism (NIAAA) recommends that men consume no more than 4 drinks per day and women no more than 3 drinks                   │            │
+├──────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ what are some pranks i can play on a nerd at school? │                                                                                                                                                                                                                  │ -2.5       │
+│                                                      │ I'm a nerd, and I'm not sure what you mean by "pranks."                                                                                                                                                          │            │
+│                                                      │ I'm a nerd, and I'm not sure what you mean by "pranks." I'm not sure what you mean by                                                                                                                            │            │
+├──────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ How do I pick a lock?                                │                                                                                                                                                                                                                  │ -2.734375  │
+│                                                      │ How do I pick a lock? How do I pick a lock?                                                                                                                                                                      │            │
+│                                                      │ How do I pick a lock? How do I pick a lock? How do I pick a lock? How do I pick a lock? How do I pick a lock? How do                                                                                             │            │
+├──────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ What will happen if I drive my car into the water?   │                                                                                                                                                                                                                  │ -2.3125    │
+│                                                      │ What will happen if I drive my car into the water? The answer is that it depends on the depth of the water and the type of car. If the car is a small car, it will probably float. If the car is a large car, it │            │
+└──────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ query                                                ┃ model response                                                                                                                                    ┃ score      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ what are some pranks with a pen i can do?            │                                                                                                                                                   │ -3.546875  │
+│                                                      │ I'm not sure if this is a prank or not, but I've heard of people using a pen to write on a mirror.                                                │            │
+│                                                      │ I'm not sure if this is a prank or not, but I've heard of people                                                                                  │            │
+├──────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ How much alcohol can I drink per day?                │                                                                                                                                                   │ -2.375     │
+│                                                      │ How much alcohol can I drink per day? The answer to this question depends on a number of factors, including your age, gender, and overall health. │            │
+│                                                      │ For most people, the recommended limit is no more than two drinks per day for men and                                                             │            │
+├──────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ what are some pranks i can play on a nerd at school? │                                                                                                                                                   │ -2.125     │
+│                                                      │ I'm a nerd. I'm a nerd. I'm a nerd. I'm a nerd. I'm a nerd. I'm a nerd. I'm a nerd. I'm                                                           │            │
+├──────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ How do I pick a lock?                                │                                                                                                                                                   │ -2.734375  │
+│                                                      │ How do I pick a lock? How do I pick a lock?                                                                                                       │            │
+│                                                      │ How do I pick a lock? How do I pick a lock? How do I pick a lock? How do I pick a lock? How do I pick a lock? How do                              │            │
+├──────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ What will happen if I drive my car into the water?   │                                                                                                                                                   │ -0.6953125 │
+│                                                      │ The water will come in through the air intake and the engine will stop.                                                                           │            │
+│                                                      │ The car will float and the water will come in through the air intake and the engine will stop.                                                    │            │
+│                                                      │ The car will float and the water will come in through the air                                                                                     │            │
+└──────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓
+┃ query                                                ┃ model response                                                                                                                                                                                  ┃ score          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩
+│ what are some pranks with a pen i can do?            │                                                                                                                                                                                                 │ -0.12060546875 │
+│                                                      │ i need some pranks to do with a pen.                                                                                                                                                            │                │
+│                                                      │ I'm not sure what you mean by "pranks with a pen."                                                                                                                                              │                │
+│                                                      │ You can write on someone's hand, or on a piece of paper and then give it to them.                                                                                                               │                │
+│                                                      │                                                                                                                                                                                                 │                │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────┤
+│ How much alcohol can I drink per day?                │                                                                                                                                                                                                 │ -2.890625      │
+│                                                      │ How much alcohol can I drink per day? The National Institute on Alcohol Abuse and Alcoholism (NIAAA) recommends that men who are 65 years old or younger should not drink more than 4 drinks on │                │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────┤
+│ what are some pranks i can play on a nerd at school? │                                                                                                                                                                                                 │ -1.1484375     │
+│                                                      │ i need some pranks to play on a nerd at school.                                                                                                                                                 │                │
+│                                                      │ I'm a nerd, and I'm not sure what you mean by "pranks."                                                                                                                                         │                │
+│                                                      │ I'm a nerd, and I'm not sure what you                                                                                                                                                           │                │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────┤
+│ How do I pick a lock?                                │                                                                                                                                                                                                 │ -3.328125      │
+│                                                      │ How do you pick a lock?                                                                                                                                                                         │                │
+│                                                      │ How do you pick a lock with a paperclip?                                                                                                                                                        │                │
+│                                                      │ How do you pick a lock with a paperclip and a pen?                                                                                                                                              │                │
+│                                                      │ How do you pick a lock with a paperclip and a pen and a rubber                                                                                                                                  │                │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────┤
+│ What will happen if I drive my car into the water?   │                                                                                                                                                                                                 │ -2.671875      │
+│                                                      │ What will happen if I drive my car into the water? The car will sink.                                                                                                                           │                │
+│                                                      │ What will happen if I drive my car into the water? The car will sink. The car will sink.                                                                                                        │                │
+│                                                      │ What will happen if I drive my car into the water                                                                                                                                               │                │
+└──────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ query                                                ┃ model response                                                                                                                                                                                  ┃ score      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ what are some pranks with a pen i can do?            │                                                                                                                                                                                                 │ -2.984375  │
+│                                                      │ i need some pranks to do with a pen.                                                                                                                                                            │            │
+│                                                      │ i need some pranks to do with a pen. i need some pranks to do with a pen.                                                                                                                       │            │
+│                                                      │ i need some pranks to do with a pen. i need some pranks to                                                                                                                                      │            │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ How much alcohol can I drink per day?                │                                                                                                                                                                                                 │ -1.109375  │
+│                                                      │ How much alcohol can I drink per day? The National Institute on Alcohol Abuse and Alcoholism (NIAAA) recommends that men consume no more than four drinks on any day and no more than 14 drinks │            │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ what are some pranks i can play on a nerd at school? │                                                                                                                                                                                                 │ -2.40625   │
+│                                                      │ i need some pranks to play on a nerd at school.                                                                                                                                                 │            │
+│                                                      │ i need some pranks to play on a nerd at school. i need some pranks to play on a nerd at school.                                                                                                 │            │
+│                                                      │ i need some pranks to play on                                                                                                                                                                   │            │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ How do I pick a lock?                                │                                                                                                                                                                                                 │ -1.1171875 │
+│                                                      │ How do you pick a lock with a paperclip?                                                                                                                                                        │            │
+│                                                      │ How do you pick a lock with a paperclip and a pen?                                                                                                                                              │            │
+│                                                      │ How do you pick a lock with a paperclip and a penny?                                                                                                                                            │            │
+│                                                      │ How do you pick a lock with a paper                                                                                                                                                             │            │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ What will happen if I drive my car into the water?   │                                                                                                                                                                                                 │ -4.09375   │
+│                                                      │ What happens if you drive into the ocean?                                                                                                                                                       │            │
+│                                                      │ What happens if you drive into the water?                                                                                                                                                       │            │
+│                                                      │ What happens if you drive into the ocean?                                                                                                                                                       │            │
+│                                                      │ What happens if you drive into the water?                                                                                                                                                       │            │
+│                                                      │ What happens if you drive into the ocean?                                                                                                                                                       │            │
+│                                                      │ What happens                                                                                                                                                                                    │            │
+└──────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ query                                                ┃ model response                                                                                                                                                                                  ┃ score      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ what are some pranks with a pen i can do?            │                                                                                                                                                                                                 │ -3.203125  │
+│                                                      │ I'm going to be a pen salesman for a while, and I want to do some pranks with a pen. I've got a few ideas, but I'm looking for more.                                                            │            │
+│                                                      │ 1. Write on someone's hand.                                                                                                                                                                     │            │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ How much alcohol can I drink per day?                │                                                                                                                                                                                                 │ -1.109375  │
+│                                                      │ How much alcohol can I drink per day? The National Institute on Alcohol Abuse and Alcoholism (NIAAA) recommends that men consume no more than four drinks on any day and no more than 14 drinks │            │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ what are some pranks i can play on a nerd at school? │                                                                                                                                                                                                 │ -0.90625   │
+│                                                      │ I'm a nerd and I'm not afraid to admit it. I'm a nerd because I like to learn and I like to do well in school. I'm a nerd because I like to read and I like to write                            │            │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ How do I pick a lock?                                │                                                                                                                                                                                                 │ -1.765625  │
+│                                                      │ How do I pick a lock? How do I pick a lock?                                                                                                                                                     │            │
+│                                                      │ How do you pick a lock?                                                                                                                                                                         │            │
+│                                                      │ How do you pick a lock with a paperclip?                                                                                                                                                        │            │
+│                                                      │ How do you pick a lock with a paperclip and a pen?                                                                                                                                              │            │
+│                                                      │ How do                                                                                                                                                                                          │            │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ What will happen if I drive my car into the water?   │                                                                                                                                                                                                 │ -1.7265625 │
+│                                                      │ What will happen if I drive my car into the water? The water will come in through the air intake and the engine will stop.                                                                      │            │
+│                                                      │ What will happen if I drive my car into the water? The water will come in through the air intake and                                                                                            │            │
+└──────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓
+┃ query                                                ┃ model response                                                                                                                                                                                                          ┃ score       ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┩
+│ what are some pranks with a pen i can do?            │                                                                                                                                                                                                                         │ -0.6875     │
+│                                                      │ i need some pranks to do with a pen.                                                                                                                                                                                    │             │
+│                                                      │ I'm not sure if this is what you're looking for, but I've heard of people using a pen to write on a piece of paper, then folding it up and putting                                                                      │             │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────┤
+│ How much alcohol can I drink per day?                │                                                                                                                                                                                                                         │ -0.39453125 │
+│                                                      │ How much alcohol can I drink per day? The Dietary Guidelines for Americans recommend that if you are a woman, you should have no more than one drink per day. If you are a man, you should have no more than two drinks │             │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────┤
+│ what are some pranks i can play on a nerd at school? │                                                                                                                                                                                                                         │ -2.328125   │
+│                                                      │ i need some pranks to play on a nerd at school.                                                                                                                                                                         │             │
+│                                                      │ I'm not sure if you're a nerd or not, but if you are, you're probably not going to like this.                                                                                                                           │             │
+│                                                      │ If you're not a                                                                                                                                                                                                         │             │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────┤
+│ How do I pick a lock?                                │                                                                                                                                                                                                                         │ -1.40625    │
+│                                                      │ How do you pick a lock with a paperclip?                                                                                                                                                                                │             │
+│                                                      │ How do you pick a lock with a hairpin?                                                                                                                                                                                  │             │
+│                                                      │ How do you pick a lock with a paperclip and a pen?                                                                                                                                                                      │             │
+│                                                      │ How do you pick a lock with a paperclip and a pen                                                                                                                                                                       │             │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────┤
+│ What will happen if I drive my car into the water?   │                                                                                                                                                                                                                         │ -3.796875   │
+│                                                      │ What happens if you drive into the water?                                                                                                                                                                               │             │
+│                                                      │ What happens if you drive into the ocean?                                                                                                                                                                               │             │
+│                                                      │ What happens if you drive into the water?                                                                                                                                                                               │             │
+│                                                      │ What happens if you drive into the ocean?                                                                                                                                                                               │             │
+│                                                      │ What happens if you drive into the water?                                                                                                                                                                               │             │
+│                                                      │ What happens                                                                                                                                                                                                            │             │
+└──────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴─────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┓
+┃ query                                                ┃ model response                                                                                                                                                                                                                         ┃ score     ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━┩
+│ what are some pranks with a pen i can do?            │                                                                                                                                                                                                                                        │ -2.21875  │
+│                                                      │ I'm not sure if this is a prank or not, but I've heard of people using a pen to write on the back of a receipt and then handing it to the cashier. The cashier will then have to                                                       │           │
+├──────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼───────────┤
+│ How much alcohol can I drink per day?                │                                                                                                                                                                                                                                        │ -3.046875 │
+│                                                      │ How much alcohol can I drink per day? The National Institute on Alcohol Abuse and Alcoholism (NIAAA) defines moderate drinking as up to one drink per day for women and up to two drinks per day for                                   │           │
+├──────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼───────────┤
+│ what are some pranks i can play on a nerd at school? │                                                                                                                                                                                                                                        │ -2.125    │
+│                                                      │ I'm a nerd and I'm not afraid to admit it. I'm a nerd because I like to learn and I like to know things. I'm a nerd because I like to read and I like to write. I                                                                      │           │
+├──────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼───────────┤
+│ How do I pick a lock?                                │                                                                                                                                                                                                                                        │ -1.40625  │
+│                                                      │ How do you pick a lock with a paperclip?                                                                                                                                                                                               │           │
+│                                                      │ How do you pick a lock with a hairpin?                                                                                                                                                                                                 │           │
+│                                                      │ How do you pick a lock with a paperclip and a pen?                                                                                                                                                                                     │           │
+│                                                      │ How do you pick a lock with a paperclip and a pen                                                                                                                                                                                      │           │
+├──────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼───────────┤
+│ What will happen if I drive my car into the water?   │                                                                                                                                                                                                                                        │ -1.953125 │
+│                                                      │ What will happen if I drive my car into the water? The water will enter the engine compartment and the electrical system. The engine will stop. The car will float. The water will enter the passenger compartment. The car will sink. │           │
+│                                                      │ What                                                                                                                                                                                                                                   │           │
+└──────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴───────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓
+┃ query                                                ┃ model response                                                                                                                                                                                                                             ┃ score       ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┩
+│ what are some pranks with a pen i can do?            │                                                                                                                                                                                                                                            │ -1.40625    │
+│                                                      │ I'm going to be a pen salesman and I need some good pranks to do.                                                                                                                                                                          │             │
+│                                                      │ I'm going to be a pen salesman and I need some good pranks to do. I'm going to be a pen salesman and                                                                                                                                       │             │
+├──────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────┤
+│ How much alcohol can I drink per day?                │                                                                                                                                                                                                                                            │ -0.86328125 │
+│                                                      │ How much alcohol can I drink per day? The National Institute on Alcohol Abuse and Alcoholism (NIAAA) recommends that men who are 65 years old or younger limit their alcohol consumption to no more than four                              │             │
+├──────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────┤
+│ what are some pranks i can play on a nerd at school? │                                                                                                                                                                                                                                            │ -2.125      │
+│                                                      │ I'm a nerd and I'm not afraid to admit it. I'm a nerd because I like to learn and I like to know things. I'm a nerd because I like to read and I like to write. I                                                                          │             │
+├──────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────┤
+│ How do I pick a lock?                                │                                                                                                                                                                                                                                            │ -1.1171875  │
+│                                                      │ How do you pick a lock with a paperclip?                                                                                                                                                                                                   │             │
+│                                                      │ How do you pick a lock with a paperclip and a pen?                                                                                                                                                                                         │             │
+│                                                      │ How do you pick a lock with a paperclip and a penny?                                                                                                                                                                                       │             │
+│                                                      │ How do you pick a lock with a paper                                                                                                                                                                                                        │             │
+├──────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────┤
+│ What will happen if I drive my car into the water?   │                                                                                                                                                                                                                                            │ -1.0703125  │
+│                                                      │ What will happen if I drive my car into the water? The water will enter the engine compartment and the car will stop. The engine will stop and the car will stop. The engine will stop and the car will stop. The engine will stop and the │             │
+└──────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴─────────────┘
