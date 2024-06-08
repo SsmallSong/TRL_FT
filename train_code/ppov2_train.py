@@ -7,6 +7,15 @@ from trl import ModelConfig
 from trl.trainer.ppov2_trainer import PPOv2Config, PPOv2Trainer
 from trl.trainer.utils import SIMPLE_QUERY_CHAT_TEMPLATE
 import torch
+import os
+import gc
+from typing import Dict, Union, Type, List
+from accelerate import Accelerator
+from accelerate.utils import InitProcessGroupKwargs
+def delete_dict(d: Dict):
+    """Delete all items inside the dict."""
+    for k in list(d.keys()):
+        del d[k]
 print("+"*20)
 print("come on!")
 print("+"*20)
@@ -47,8 +56,9 @@ if __name__ == "__main__":
     ################
     # Model & Tokenizer
     ################
+    model_name_or_path ='daryl149/llama-2-7b-hf'
     tokenizer = AutoTokenizer.from_pretrained(
-        model_config.model_name_or_path,
+        model_name_or_path,
         padding_side="left",
         trust_remote_code=True,
     )
@@ -56,19 +66,19 @@ if __name__ == "__main__":
     if tokenizer.chat_template is None:
         tokenizer.chat_template = SIMPLE_QUERY_CHAT_TEMPLATE
         
-    model_config = AutoConfig.from_pretrained(config.sft_model_path)
-    ref_policy = AutoModelForCausalLM.from_pretrained(config.sft_model_path,config=model_config)
-    policy = AutoModelForCausalLM.from_pretrained(config.sft_model_path,config=model_config)
+    model_config_2 = AutoConfig.from_pretrained(model_name_or_path)
+    ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2)
+    policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2)
 
-    # print('begin loading pre-trained weights')
-    # ckpt_path = f"/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt"
-    # state_dict = torch.load(ckpt_path, map_location='cpu')
-    # ref_policy.load_state_dict(state_dict['state'])
-    # policy.load_state_dict(state_dict['state'])
-    # delete_dict(state_dict)
-    # gc.collect()
-    # torch.cuda.empty_cache()
-    # print('loaded pre-trained weights')
+    print('begin loading pre-trained weights')
+    ckpt_path = f"/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt"
+    state_dict = torch.load(ckpt_path, map_location='cpu')
+    ref_policy.load_state_dict(state_dict['state'])
+    policy.load_state_dict(state_dict['state'])
+    delete_dict(state_dict)
+    gc.collect()
+    torch.cuda.empty_cache()
+    print('loaded pre-trained weights')
 
     value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
     reward_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
