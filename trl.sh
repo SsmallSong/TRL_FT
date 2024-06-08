@@ -76,61 +76,61 @@
 #nohup bash trl.sh > /home/wxt/huatong/TRL_FT/output_dpo.txt 2>&1 &
 
 
-accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\
-    --num_processes 4\
-    /home/wxt/huatong/TRL_FT/train_code/mistral_dpo_train.py \
-    --dataset_name='snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset' \
-    --model_name_or_path='mistralai/Mistral-7B-Instruct-v0.2' \
-    --per_device_train_batch_size 4 \
-    --learning_rate 1e-6 \
-    --gradient_accumulation_steps 8 \
-    --logging_steps 10 \
-    --eval_steps 500 \
-    --output_dir='/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo_new' \
-    --warmup_steps 150 \
-    --bf16 \
-    --logging_first_step \
-    --max_length 600\
-    --max_prompt_length 128\
-    --max_target_length 128\
-    --no_remove_unused_columns > /home/wxt/huatong/TRL_FT/output/dpo_train_log_2.txt 2>&1
+# accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\
+#     --num_processes 4\
+#     /home/wxt/huatong/TRL_FT/train_code/mistral_dpo_train.py \
+#     --dataset_name='snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset' \
+#     --model_name_or_path='mistralai/Mistral-7B-Instruct-v0.2' \
+#     --per_device_train_batch_size 4 \
+#     --learning_rate 1e-6 \
+#     --gradient_accumulation_steps 8 \
+#     --logging_steps 10 \
+#     --eval_steps 500 \
+#     --output_dir='/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo_new' \
+#     --warmup_steps 150 \
+#     --bf16 \
+#     --logging_first_step \
+#     --max_length 600\
+#     --max_prompt_length 128\
+#     --max_target_length 128\
+#     --no_remove_unused_columns > /home/wxt/huatong/TRL_FT/output/dpo_train_log_2.txt 2>&1
 
-accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\
-    --num_processes 4\
-    /home/wxt/huatong/TRL_FT/train_code/mistral_dpo_train.py \
-    --dataset_name='trl-internal-testing/hh-rlhf-trl-style' \
-    --model_name_or_path='mistralai/Mistral-7B-Instruct-v0.2' \
-    --per_device_train_batch_size 4 \
-    --learning_rate 1e-6 \
-    --gradient_accumulation_steps 8 \
-    --logging_steps 10 \
-    --eval_steps 500 \
-    --output_dir='/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo_hhrlhf' \
-    --warmup_steps 150 \
-    --bf16 \
-    --logging_first_step \
-    --max_length 600\
-    --max_prompt_length 128\
-    --max_target_length 128\
-    --no_remove_unused_columns 2>&1 | tee /home/wxt/huatong/TRL_FT/output/dpo_mistral_hhrlhf_train_log.txt 
+# accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\
+#     --num_processes 4\
+#     /home/wxt/huatong/TRL_FT/train_code/mistral_dpo_train.py \
+#     --dataset_name='trl-internal-testing/hh-rlhf-trl-style' \
+#     --model_name_or_path='mistralai/Mistral-7B-Instruct-v0.2' \
+#     --per_device_train_batch_size 4 \
+#     --learning_rate 1e-6 \
+#     --gradient_accumulation_steps 8 \
+#     --logging_steps 10 \
+#     --eval_steps 500 \
+#     --output_dir='/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo_hhrlhf' \
+#     --warmup_steps 150 \
+#     --bf16 \
+#     --logging_first_step \
+#     --max_length 600\
+#     --max_prompt_length 128\
+#     --max_target_length 128\
+#     --no_remove_unused_columns 2>&1 | tee /home/wxt/huatong/TRL_FT/output/dpo_mistral_hhrlhf_train_log.txt 
 
-accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\
-    --num_processes 4\
-    /home/wxt/huatong/TRL_FT/train_code/llama_sft_train.py \
-    --model_name_or_path="daryl149/llama-2-7b-hf" \
-    --learning_rate 1.41e-6 \
-    --per_device_train_batch_size 16 \
-    --gradient_accumulation_steps 8 \
-    --output_dir="/home/wxt/huatong/huggingface/hub/llama-7b-hh-sft" \
-    --logging_steps 5 \
-    --num_train_epochs 3 \
-    --max_steps=-1 \
-    --bf16 \
-    --logging_first_step \
-    --gradient_checkpointing \
-    --dataset_text_field="text" 2>&1 | tee /home/wxt/huatong/TRL_FT/output/sft_llama2_hhrlhf_train_log.txt 
+# accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\
+#     --num_processes 4\
+#     /home/wxt/huatong/TRL_FT/train_code/llama_sft_train.py \
+#     --model_name_or_path="daryl149/llama-2-7b-hf" \
+#     --learning_rate 1.41e-6 \
+#     --per_device_train_batch_size 16 \
+#     --gradient_accumulation_steps 8 \
+#     --output_dir="/home/wxt/huatong/huggingface/hub/llama-7b-hh-sft" \
+#     --logging_steps 5 \
+#     --num_train_epochs 3 \
+#     --max_steps=-1 \
+#     --bf16 \
+#     --logging_first_step \
+#     --gradient_checkpointing \
+#     --dataset_text_field="text" 2>&1 | tee /home/wxt/huatong/TRL_FT/output/sft_llama2_hhrlhf_train_log.txt 
 
-    --packing True\
+#     --packing True\
 
 
 accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\ 
@@ -148,7 +148,7 @@ accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_z
     --reward_model_path OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5 \
     --local_rollout_forward_batch_size 1 \
     --deepspeed3 \
-    --non_eos_penalty \
+    --non_eos_penalty  2>&1 | tee /home/wxt/huatong/TRL_FT/train_code/llama2_ppo_logs.txt 
 # python /home/wxt/huatong/TRL_FT/dpo_train.py \
 #     --dataset_name=s"norkelai/Snorkel-Mistral-PairRM-DPO-Dataset" \
 #     --model_name_or_path="mistralai/Mistral-7B-Instruct-v0.2" \
