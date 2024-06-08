@@ -48,6 +48,19 @@ accelerate launch --config_file examples/accelerate_configs/deepspeed_zero3.yaml
 
 
 if __name__ == "__main__":
+
+    model_name_or_path ='daryl149/llama-2-7b-hf'
+    model_config = AutoConfig.from_pretrained(model_name_or_path )
+    model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config)#.to(model_device)
+    print("begin load model")
+    ckpt_path = f"/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt"
+    state_dict = torch.load(ckpt_path, map_location='cpu')
+    model.load_state_dict(state_dict['state'])
+    delete_dict(state_dict)
+    gc.collect()
+    torch.cuda.empty_cache()
+    print('loaded pre-trained weights')
+
     parser = HfArgumentParser((PPOv2Config, ModelConfig))
     config, model_config = parser.parse_args_into_dataclasses()
     # remove output_dir if exists
