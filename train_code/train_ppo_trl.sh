@@ -1,5 +1,5 @@
 accelerate launch --config_file /home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml \
-	/home/wxt/huatong/TRL_FT/train_code/ppov2_train.py \
+	/home/wxt/huatong/TRL_FT/train_code/original_ppov2.py \
     --output_dir /home/wxt/huatong/huggingface/hub/llama2_ppo_online \
     --num_ppo_epochs 1 \
     --num_mini_batches 1 \
