@@ -17,7 +17,7 @@ from transformers import (
 )
 from accelerate import Accelerator
 from accelerate.utils import InitProcessGroupKwargs
-def delete_dict(d: Dict):
+def elete_dict(d: Dict):
     """Delete all items inside the dict."""
     for k in list(d.keys()):
         del d[k]
