@@ -6,7 +6,7 @@ from transformers import AutoModelForCausalLM,AutoModelForSequenceClassification
 from trl import ModelConfig
 from trl.trainer.ppov2_trainer import PPOv2Config, PPOv2Trainer
 from trl.trainer.utils import SIMPLE_QUERY_CHAT_TEMPLATE
-
+import torch
 print("+"*20)
 print("come on!")
 print("+"*20)
