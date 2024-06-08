@@ -49,9 +49,11 @@ accelerate launch --config_file examples/accelerate_configs/deepspeed_zero3.yaml
 
 if __name__ == "__main__":
     model_name_or_path ='daryl149/llama-2-7b-hf'
+    device = torch.device(f'cuda:{torch.cuda.current_device()}' if torch.cuda.is_available() else 'cpu')
+    print(device)
     model_config_2 = AutoConfig.from_pretrained(model_name_or_path)
-    ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2)
-    policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2)
+    ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2).to(device)
+    policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2).to(device)
     
     print('begin loading pre-trained weights')
     ckpt_path = f"/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt"
