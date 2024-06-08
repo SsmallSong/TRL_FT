@@ -48,28 +48,30 @@ accelerate launch --config_file examples/accelerate_configs/deepspeed_zero3.yaml
 
 
 if __name__ == "__main__":
+   model_name_or_path ='daryl149/llama-2-7b-hf'
+   model_config_2 = AutoConfig.from_pretrained(model_name_or_path)
+   ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2)
+   policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2)
 
-    model_name_or_path ='daryl149/llama-2-7b-hf'
-    model_config = AutoConfig.from_pretrained(model_name_or_path )
-    model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config)#.to(model_device)
-    print("begin load model")
-    ckpt_path = f"/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt"
-    state_dict = torch.load(ckpt_path, map_location='cpu')
-    model.load_state_dict(state_dict['state'])
-    delete_dict(state_dict)
-    gc.collect()
-    torch.cuda.empty_cache()
-    print('loaded pre-trained weights')
+   print('begin loading pre-trained weights')
+   ckpt_path = f"/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt"
+   state_dict = torch.load(ckpt_path, map_location='cpu')
+   ref_policy.load_state_dict(state_dict['state'])
+   policy.load_state_dict(state_dict['state'])
+   delete_dict(state_dict)
+   gc.collect()
+   torch.cuda.empty_cache()
+   print('loaded pre-trained weights')
 
-   # parser = HfArgumentParser((PPOv2Config, ModelConfig))
-  #  config, model_config = parser.parse_args_into_dataclasses()
-    # remove output_dir if exists
+   parser = HfArgumentParser((PPOv2Config, ModelConfig))
+   config, model_config = parser.parse_args_into_dataclasses()
+   # # remove output_dir if exists
  #   shutil.rmtree(config.output_dir, ignore_errors=True)
 
     ################
     # Model & Tokenizer
     ################
-    model_name_or_path ='daryl149/llama-2-7b-hf'
+   
     tokenizer = AutoTokenizer.from_pretrained(
         model_name_or_path,
         padding_side="left",
@@ -79,19 +81,7 @@ if __name__ == "__main__":
     if tokenizer.chat_template is None:
         tokenizer.chat_template = SIMPLE_QUERY_CHAT_TEMPLATE
         
-    model_config_2 = AutoConfig.from_pretrained(model_name_or_path)
-    ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2)
-    policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2)
-
-    print('begin loading pre-trained weights')
-    ckpt_path = f"/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt"
-    state_dict = torch.load(ckpt_path, map_location='cpu')
-    ref_policy.load_state_dict(state_dict['state'])
-    policy.load_state_dict(state_dict['state'])
-    delete_dict(state_dict)
-    gc.collect()
-    torch.cuda.empty_cache()
-    print('loaded pre-trained weights')
+    
 
     value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
     reward_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
