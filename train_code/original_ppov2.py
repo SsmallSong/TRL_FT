@@ -48,7 +48,7 @@ accelerate launch --config_file examples/accelerate_configs/deepspeed_zero3.yaml
 
 
 if __name__ == "__main__":
-    model_name_or_path ='daryl149/llama-2-7b-hf'
+    model_name_or_path ='home/wxt/huatong/huggingface/hub/llama2_sft/snapshots/142d0a5354ab12acdfff745a4d5c2ced307970dd'
 
     parser = HfArgumentParser((PPOv2Config, ModelConfig))
     config, model_config = parser.parse_args_into_dataclasses()
@@ -64,6 +64,7 @@ if __name__ == "__main__":
         padding_side="left",
         trust_remote_code=True,
     )
+    
     tokenizer.add_special_tokens({"pad_token": "[PAD]"})
     if tokenizer.chat_template is None:
         tokenizer.chat_template = SIMPLE_QUERY_CHAT_TEMPLATE
