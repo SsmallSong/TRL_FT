@@ -14,6 +14,8 @@ from transformers import (
     AutoModelForCausalLM,
     AutoModelForSequenceClassification
 )
+from accelerate import Accelerator
+from accelerate.utils import InitProcessGroupKwargs
 def delete_dict(d: Dict):
     """Delete all items inside the dict."""
     for k in list(d.keys()):
@@ -24,14 +26,20 @@ os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
 import torch
 print(torch.cuda.device_count())
 
+
+kwargs = InitProcessGroupKwargs(timeout=timedelta(seconds=5400))
+accelerator = Accelerator(kwargs_handlers=[kwargs])# **accelerator_log_kwargs)
+rank = int(os.environ['RANK'])
+rank_sum = accelerator.num_processes
+model_device = "cuda:{}".format(rank)
+
 model_name_or_path ='daryl149/llama-2-7b-hf'
 model_config = AutoConfig.from_pretrained(model_name_or_path )
 model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
 
-print("load model")
+print("begin load model")
 ckpt_path = f"/home/wxt/.cache/huggingface/hub/{args.model_ckpt}/LATEST/policy.pt"
 state_dict = torch.load(ckpt_path, map_location='cpu')
-# step, metrics = state_dict['step_idx'], state_dict['metrics']
 model.load_state_dict(state_dict['state'])
 delete_dict(state_dict)
 gc.collect()
