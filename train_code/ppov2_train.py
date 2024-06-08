@@ -61,8 +61,8 @@ if __name__ == "__main__":
     torch.cuda.empty_cache()
     print('loaded pre-trained weights')
 
-    parser = HfArgumentParser((PPOv2Config, ModelConfig))
-    config, model_config = parser.parse_args_into_dataclasses()
+   # parser = HfArgumentParser((PPOv2Config, ModelConfig))
+  #  config, model_config = parser.parse_args_into_dataclasses()
     # remove output_dir if exists
  #   shutil.rmtree(config.output_dir, ignore_errors=True)
 
@@ -79,9 +79,9 @@ if __name__ == "__main__":
     if tokenizer.chat_template is None:
         tokenizer.chat_template = SIMPLE_QUERY_CHAT_TEMPLATE
         
-    # model_config_2 = AutoConfig.from_pretrained(model_name_or_path)
-    ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
-    policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
+    model_config_2 = AutoConfig.from_pretrained(model_name_or_path)
+    ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2)
+    policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2)
 
     print('begin loading pre-trained weights')
     ckpt_path = f"/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt"
