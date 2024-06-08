@@ -58,10 +58,22 @@ if __name__ == "__main__":
     tokenizer.add_special_tokens({"pad_token": "[PAD]"})
     if tokenizer.chat_template is None:
         tokenizer.chat_template = SIMPLE_QUERY_CHAT_TEMPLATE
-    value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
-    reward_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
+    
     ref_policy = AutoModelForCausalLM.from_pretrained(config.sft_model_path)
     policy = AutoModelForCausalLM.from_pretrained(config.sft_model_path)
+
+    print('begin loading pre-trained weights')
+    ckpt_path = f"/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt"
+    state_dict = torch.load(ckpt_path, map_location='cpu')
+    ref_policy.load_state_dict(state_dict['state'])
+    policy.load_state_dict(state_dict['state'])
+    delete_dict(state_dict)
+    gc.collect()
+    torch.cuda.empty_cache()
+    print('loaded pre-trained weights')
+
+    value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
+    reward_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
     ################
     # Dataset
     ################
