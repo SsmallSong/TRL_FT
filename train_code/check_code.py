@@ -17,13 +17,13 @@ from transformers import (
 )
 from accelerate import Accelerator
 from accelerate.utils import InitProcessGroupKwargs
-def elete_dict(d: Dict):
+def delete_dict(d: Dict):
     """Delete all items inside the dict."""
     for k in list(d.keys()):
         del d[k]
 import gc
 import os
-os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
+#1os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
 import torch
 print(torch.cuda.device_count())
 
