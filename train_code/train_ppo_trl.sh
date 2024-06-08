@@ -1,7 +1,7 @@
-accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\ 
+accelerate launch --config_file /home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml \ 
     --num_processes 4\
     /home/wxt/huatong/TRL_FT/train_code/ppov2_train.py \    
-    --output_dir  /home/wxt/huatong/huggingface/hub/llama2_ppo_online \
+    --output_dir /home/wxt/huatong/huggingface/hub/llama2_ppo_online \
     --num_ppo_epochs 1 \
     --num_mini_batches 1 \
     --learning_rate 3e-6 \
@@ -13,4 +13,4 @@ accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_z
     --reward_model_path OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5 \
     --local_rollout_forward_batch_size 1 \
     --deepspeed3 \
-    --non_eos_penalty  2>&1 | tee /home/wxt/huatong/TRL_FT/train_code/llama2_ppo_logs.txt 
+    --non_eos_penalty 2>&1 | tee /home/wxt/huatong/TRL_FT/train_code/llama2_ppo_logs.txt 
