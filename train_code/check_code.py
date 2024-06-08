@@ -11,7 +11,7 @@ from transformers import (
     LlamaTokenizer,
     AutoModelForCausalLM
 )
-from infer_func_now import setup_seed, generate_pipeline
+
 import gc
 import os
 os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
