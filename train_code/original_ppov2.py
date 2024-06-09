@@ -50,8 +50,8 @@ accelerate launch --config_file examples/accelerate_configs/deepspeed_zero3.yaml
 if __name__ == "__main__":
     model_name_or_path ='/home/wxt/huggingface/hub/llama2_sft_mirror/'
 
-    # parser = HfArgumentParser((PPOv2Config, ModelConfig))
-    # config, model_config = parser.parse_args_into_dataclasses()
+    parser = HfArgumentParser((PPOv2Config, ModelConfig))
+    config, model_config = parser.parse_args_into_dataclasses()
     # # # remove output_dir if exists
     # #   shutil.rmtree(config.output_dir, ignore_errors=True)
     
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     # ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
     # policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
     
-    # print(config.reward_model_path)
+    print(config.reward_model_path)
     print("+"*30)
     value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path)
     reward_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)

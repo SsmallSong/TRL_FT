@@ -10,7 +10,7 @@ accelerate launch --config_file /home/wxt/huatong/TRL_FT/config_file/deepspeed_z
     --response_length 100 \
     --model_name_or_path daryl149/llama-2-7b-hf \
     --sft_model_path daryl149/llama-2-7b-hf \
-    --reward_model_path "OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5" \
+    --reward_model_path "OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"  \
     --local_rollout_forward_batch_size 1 \
     --stop_token eos \
     --stop_token_id 2 \
