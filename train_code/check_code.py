@@ -1,35 +1,9 @@
-#import shutil
-import model_training.models.reward_model
-from datasets import load_dataset
-from transformers import AutoModelForCausalLM,AutoModelForSequenceClassification,AutoTokenizer,HfArgumentParser,AutoConfig
+# install open assistant model_training module (e.g. run `pip install -e .` in `model/` directory of open-assistant repository)
+import model_training.models.reward_model  # noqa: F401 (registers reward model for AutoModel loading)
 
-from trl import ModelConfig
-from trl.trainer.ppov2_trainer import PPOv2Config, PPOv2Trainer
-from trl.trainer.utils import SIMPLE_QUERY_CHAT_TEMPLATE
-import torch
-import os
-import gc
-from typing import Dict, Union, Type, List
-from accelerate import Accelerator
-from accelerate.utils import InitProcessGroupKwargs
-
-print("+"*20)
-print("come on!")
-print("+"*20)
-
-
-if __name__ == "__main__":
-    model_name_or_path ='daryl149/llama-2-7b-hf'
-
-    train_dataset = load_dataset("trl-internal-testing/hh-rlhf-trl-style", split="train")
-    eval_dataset = load_dataset("trl-internal-testing/hh-rlhf-trl-style", split="test")
-    dataset_text_field = "prompt"
-    for i in range(len(train_dataset)):
-        train_dataset[dataset_text_field][i]="\n<|user|>\n"+train_dataset[dataset_text_field][i]+"\n<|assistant|>\n"
-    prompts=train_dataset[dataset_text_field]
-
-    print(prompts[0:10])
-    # for i in range(len(prompt_origin)):
-    #     prompt_origin[i]="\n<|user|>\n"+prompt_origin[i]+"\n<|assistant|>\n"
-    # print(prompt_origin[0:10])
-    
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+rm = AutoModelForSequenceClassification.from_pretrained(model_name)
+input_text = "<|prompter|>Hi how are you?<|endoftext|><|assistant|>Hi, I am Open-Assistant a large open-source language model trained by LAION AI. How can I help you today?<|endoftext|>"
+inputs = tokenizer(input_text, return_tensors="pt")
+score = rm(**inputs).logits[0].cpu().detach()
+print(score)
