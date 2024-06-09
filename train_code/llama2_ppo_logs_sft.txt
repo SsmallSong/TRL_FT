@@ -1,7 +1,5 @@
 hello, reward model
-[2024-06-09 14:23:33,320] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
-Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[2024-06-09 14:51:13,257] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
 [93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
 [93m [WARNING] [0m async_io: please install the libaio-dev package with apt
 [93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
@@ -15,14 +13,23 @@ Special tokens have been added in the vocabulary, make sure the associated word 
 [93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
 [93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
 [93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
-<class 'model_training.models.reward_model.GPTNeoXRewardModel'>
-<class 'model_training.models.reward_model.GPTNeoXRewardModelOutput'>
-odict_keys(['logits'])
-tensor([6.4645])
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.01it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.65it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.50it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.14it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.79it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.65it/s]
 OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5
 ++++++++++++++++++++++++++++++
-odict_keys(['logits'])
+Map (num_proc=4):   0%|          | 0/160800 [00:00<?, ? examples/s]Map (num_proc=4):   1%|          | 1000/160800 [00:00<00:33, 4734.45 examples/s]Map (num_proc=4):   4%|▍         | 7000/160800 [00:00<00:05, 25701.50 examples/s]Map (num_proc=4):   9%|▉         | 15000/160800 [00:00<00:03, 44635.00 examples/s]Map (num_proc=4):  16%|█▌        | 25000/160800 [00:00<00:02, 63118.00 examples/s]Map (num_proc=4):  21%|██        | 34000/160800 [00:00<00:01, 68495.36 examples/s]Map (num_proc=4):  27%|██▋       | 43000/160800 [00:00<00:01, 65311.77 examples/s]Map (num_proc=4):  32%|███▏      | 52000/160800 [00:00<00:01, 71016.78 examples/s]Map (num_proc=4):  39%|███▊      | 62000/160800 [00:01<00:01, 77672.32 examples/s]Map (num_proc=4):  44%|████▍     | 71000/160800 [00:01<00:01, 75542.20 examples/s]Map (num_proc=4):  50%|█████     | 81000/160800 [00:01<00:01, 77463.43 examples/s]Map (num_proc=4):  56%|█████▌    | 90000/160800 [00:01<00:00, 79442.02 examples/s]Map (num_proc=4):  62%|██████▏   | 100000/160800 [00:01<00:00, 61075.22 examples/s]Map (num_proc=4):  67%|██████▋   | 107000/160800 [00:01<00:00, 60823.33 examples/s]Map (num_proc=4):  73%|███████▎  | 118000/160800 [00:01<00:00, 68469.39 examples/s]Map (num_proc=4):  78%|███████▊  | 126000/160800 [00:01<00:00, 69569.70 examples/s]Map (num_proc=4):  86%|████████▌ | 138200/160800 [00:02<00:00, 81182.18 examples/s]Map (num_proc=4):  92%|█████████▏| 147600/160800 [00:02<00:00, 50311.52 examples/s]Map (num_proc=4):  96%|█████████▌| 154600/160800 [00:02<00:00, 36357.48 examples/s]Map (num_proc=4): 100%|██████████| 160800/160800 [00:03<00:00, 30809.57 examples/s]Map (num_proc=4): 100%|██████████| 160800/160800 [00:03<00:00, 50203.54 examples/s]
+Map (num_proc=4):   0%|          | 0/8552 [00:00<?, ? examples/s]Map (num_proc=4):  12%|█▏        | 1000/8552 [00:00<00:01, 4738.81 examples/s]Map (num_proc=4):  85%|████████▌ | 7276/8552 [00:00<00:00, 27823.04 examples/s]Map (num_proc=4): 100%|██████████| 8552/8552 [00:00<00:00, 16642.91 examples/s]
+===training policy===
+<class 'model_training.models.reward_model.GPTNeoXRewardModel'>
+torch.Size([1, 137])
+<class 'model_training.models.reward_model.GPTNeoXRewardModel'>
+<class 'transformers.modeling_outputs.BaseModelOutputWithPast'>
+odict_keys(['last_hidden_state', 'hidden_states'])
 Traceback (most recent call last):
-  File "/home/wxt/huatong/TRL_FT/train_code/original_ppov2.py", line 84, in <module>
-    print(scores)
-NameError: name 'scores' is not defined. Did you mean: 'score'?
+  File "/home/wxt/huatong/TRL_FT/train_code/original_ppov2.py", line 104, in <module>
+    trainer.train()
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/ppov2_trainer.py", line 323, in train
+    full_value, _, _ = get_reward(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/utils.py", line 970, in get_reward
+    reward_logits = model.score(output.hidden_states[-1])
+TypeError: GPTNeoXRewardModel.score() missing 1 required positional argument: 'suffixes'
