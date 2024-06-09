@@ -29,8 +29,6 @@ if __name__ == "__main__":
 
     parser = HfArgumentParser((PPOv2Config, ModelConfig))
     config, model_config = parser.parse_args_into_dataclasses()
-    import model_training.models.reward_model
-
     
     # # # remove output_dir if exists
     # #   shutil.rmtree(config.output_dir, ignore_errors=True)
