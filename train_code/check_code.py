@@ -1,48 +1,29 @@
-#import some packages and reward funcs
+#import shutil
 import model_training.models.reward_model
+from datasets import load_dataset
+from transformers import AutoModelForCausalLM,AutoModelForSequenceClassification,AutoTokenizer,HfArgumentParser,AutoConfig
+
+from trl import ModelConfig
+from trl.trainer.ppov2_trainer import PPOv2Config, PPOv2Trainer
+from trl.trainer.utils import SIMPLE_QUERY_CHAT_TEMPLATE
+import torch
 import os
-import argparse
-import json
-import tqdm
-# import torch
-from datetime import timedelta
-import torch.nn.functional as F
+import gc
 from typing import Dict, Union, Type, List
-from transformers import (
-    AutoConfig,
-    AutoTokenizer,
-    LlamaTokenizer,
-    AutoModelForCausalLM,
-    AutoModelForSequenceClassification
-)
 from accelerate import Accelerator
 from accelerate.utils import InitProcessGroupKwargs
-def delete_dict(d: Dict):
-    """Delete all items inside the dict."""
-    for k in list(d.keys()):
-        del d[k]
-import gc
-import os
-#1os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
-import torch
-print(torch.cuda.device_count())
+
+print("+"*20)
+print("come on!")
+print("+"*20)
 
 
-#kwargs = InitProcessGroupKwargs(timeout=timedelta(seconds=5400))
-#accelerator = Accelerator(kwargs_handlers=[kwargs])# **accelerator_log_kwargs)
-#rank = int(os.environ['RANK'])
-#rank_sum = accelerator.num_processes
-#model_device = "cuda:{}".format(rank)
+if __name__ == "__main__":
+    model_name_or_path ='daryl149/llama-2-7b-hf'
 
-model_name_or_path ='daryl149/llama-2-7b-hf'
-model_config = AutoConfig.from_pretrained(model_name_or_path )
-model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config)#.to(model_device)
-
-print("begin load model")
-ckpt_path = f"/home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt"
-state_dict = torch.load(ckpt_path, map_location='cpu')
-model.load_state_dict(state_dict['state'])
-delete_dict(state_dict)
-gc.collect()
-torch.cuda.empty_cache()
-print('loaded pre-trained weights')
+    train_dataset = load_dataset("trl-internal-testing/hh-rlhf-trl-style", split="train")
+    eval_dataset = load_dataset("trl-internal-testing/hh-rlhf-trl-style", split="test")
+    dataset_text_field = "prompt"
+    prompt_origin=train_dataset[dataset_text_field]
+    print(prompt_origin[0:10])
+    
