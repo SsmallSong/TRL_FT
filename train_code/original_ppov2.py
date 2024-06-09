@@ -74,7 +74,7 @@ if __name__ == "__main__":
     
     print(config.reward_model_path)
     print("+"*30)
-    value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
+    value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path)
     reward_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
     
     tokenizer = AutoTokenizer.from_pretrained(config.reward_model_path)
