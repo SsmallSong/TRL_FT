@@ -88,11 +88,11 @@ if __name__ == "__main__":
         """pre-tokenize the dataset before training; only collate during training"""
 
         def tokenize(element):
-            print(element[dataset_text_field])
+            # print(element[dataset_text_field])
             element_temp=["\n<|user|>\n"+ele+"\n<|assistant|>\n" for ele in element[dataset_text_field]]
-            print(element_temp)
+            # print(element_temp)
             outputs = tokenizer(
-                "\n<|user|>\n"+element[dataset_text_field]+"\n<|assistant|>\n",
+                element_temp,
                 padding=False,
             )
             return {"input_ids": outputs["input_ids"]}
