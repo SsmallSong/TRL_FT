@@ -10,7 +10,7 @@ accelerate launch --config_file /home/wxt/huatong/TRL_FT/config_file/deepspeed_z
     --response_length 100 \
     --model_name_or_path daryl149/llama-2-7b-hf \
     --sft_model_path daryl149/llama-2-7b-hf \
-    --reward_model_path "cleanrl/EleutherAI_pythia-1b-deduped__reward__tldr"  \
+    --reward_model_path "EleutherAI/pythia-1b-deduped"  \
     --local_rollout_forward_batch_size 1 \
     --stop_token eos \
     --stop_token_id 2 \
