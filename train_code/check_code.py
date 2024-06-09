@@ -24,9 +24,12 @@ if __name__ == "__main__":
     train_dataset = load_dataset("trl-internal-testing/hh-rlhf-trl-style", split="train")
     eval_dataset = load_dataset("trl-internal-testing/hh-rlhf-trl-style", split="test")
     dataset_text_field = "prompt"
-    prompt_origin=train_dataset[dataset_text_field]
-    print(prompt_origin[0:10])
-    for i in range(len(prompt_origin)):
-        prompt_origin[i]="\n<|user|>\n"+prompt_origin[i]+"\n<|assistant|>\n"
-    print(prompt_origin[0:10])
+    for i in range(len(train_dataset)):
+        train_dataset[dataset_text_field][i]="\n<|user|>\n"+train_dataset[dataset_text_field][i]+"\n<|assistant|>\n"
+    prompts=train_dataset[dataset_text_field]
+
+    print(prompts[0:10])
+    # for i in range(len(prompt_origin)):
+    #     prompt_origin[i]="\n<|user|>\n"+prompt_origin[i]+"\n<|assistant|>\n"
+    # print(prompt_origin[0:10])
     
