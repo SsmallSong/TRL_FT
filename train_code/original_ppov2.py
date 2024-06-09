@@ -76,6 +76,15 @@ if __name__ == "__main__":
     print("+"*30)
     value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
     reward_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
+    
+    tokenizer = AutoTokenizer.from_pretrained(config.reward_model_path)
+    input_text = "<|prompter|>Hi how are you?<|endoftext|><|assistant|>Hi, I am Open-Assistant a large open-source language model trained by LAION AI. How can I help you today?<|endoftext|>"
+    inputs = tokenizer(input_text, return_tensors="pt")
+    output=value_model(**inputs)
+    print(output.keys())
+    score = value_model(**inputs).logits[0].cpu().detach()
+    print(scores)
+    kill
     ################
     # Dataset
     ################
