@@ -26,4 +26,7 @@ if __name__ == "__main__":
     dataset_text_field = "prompt"
     prompt_origin=train_dataset[dataset_text_field]
     print(prompt_origin[0:10])
+    for i in range(len(prompt_origin)):
+        prompt_origin[i]="\n<|user|>\n"+prompt_origin[i]+"\n<|assistant|>\n"
+    print(prompt_origin[0:10])
     
