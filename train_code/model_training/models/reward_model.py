@@ -50,7 +50,34 @@ class GPTNeoXRewardModel(GPTNeoXPreTrainedModel):
         self.gpt_neox = GPTNeoXModel(config)
         self.out_proj = nn.Linear(config.hidden_size, 1)
         self.pooling = config.pooling
+        
+    def score(self, prefixes: List[str], suffixes: List[str]) -> torch.FloatTensor:
+        model_name = "OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"
+        model_device = "cuda" if torch.cuda.is_available() else "cpu"
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        tokenizer.truncation_side = "left"
+        reward_model = AutoModelForSequenceClassification.from_pretrained(model_name).to(model_device)
+        reward_model.eval()
 
+        texts = []
+        for p, s in zip(prefixes, suffixes):
+            assert p[-1] == "<|user|>" or p[-1] == "<|assistant|>", p[-1]
+            temp_prefix = p[:-1] + [p[-1]+s]
+            texts.append("".join([t + tokenizer.eos_token for t in temp_prefix]))
+        
+        input_content = tokenizer(
+            texts,
+            padding=True,
+            truncation=True,
+            max_length=1024,
+            return_tensors="pt",
+        ).to(model_device)
+
+        with torch.no_grad():
+            rewards = reward_model(**input_content).logits
+        
+        return rewards.view(-1)
+        
     def forward(
         self,
         input_ids,
