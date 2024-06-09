@@ -28,6 +28,18 @@ if __name__ == "__main__":
     model_name_or_path ='/home/wxt/huggingface/hub/llama2_sft_mirror/'
 
     parser = HfArgumentParser((PPOv2Config, ModelConfig))
+
+    model_name="OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    rm = AutoModelForSequenceClassification.from_pretrained(model_name)
+    input_text = "<|user|>Hi how are you?<|assistant|>Hi, I am Open-Assistant a large open-source language model trained by LAION AI. How can I help you today?"
+    inputs = tokenizer(input_text, return_tensors="pt")
+    output=rm(**inputs)
+    print(type(output))
+    print(output.keys())
+    score = output.logits[0].cpu().detach()
+    print(score)
+    
     config, model_config = parser.parse_args_into_dataclasses()
     # # # remove output_dir if exists
     # #   shutil.rmtree(config.output_dir, ignore_errors=True)
@@ -48,16 +60,7 @@ if __name__ == "__main__":
     # # model_config_2 = AutoConfig.from_pretrained(model_name_or_path)
     # ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
     # policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
-    model_name="OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    rm = AutoModelForSequenceClassification.from_pretrained(model_name)
-    input_text = "<|user|>Hi how are you?<|assistant|>Hi, I am Open-Assistant a large open-source language model trained by LAION AI. How can I help you today?"
-    inputs = tokenizer(input_text, return_tensors="pt")
-    output=rm(**inputs)
-    print(type(output))
-    print(output.keys())
-    score = output.logits[0].cpu().detach()
-    print(score)
+    
     print(config.reward_model_path)
     print("+"*30)
     value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path)
