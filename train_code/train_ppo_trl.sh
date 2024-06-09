@@ -18,3 +18,5 @@ accelerate launch --config_file /home/wxt/huatong/TRL_FT/config_file/deepspeed_z
 
 
     # -reward_model_path OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5 \
+    #EleutherAI/pythia-1b-deduped
+#cleanrl/EleutherAI_pythia-1b-deduped__reward__tldr
