@@ -102,7 +102,7 @@ if __name__ == "__main__":
         def tokenize(element):
 
             outputs = tokenizer(
-                "\n<|user|>\n"+element[dataset_text_field]+"\n<|assistant|>\n",
+                "<|user|>\n"+element[dataset_text_field]+"\n<|assistant|>\n",
                 padding=False,
             )
             return {"input_ids": outputs["input_ids"]}

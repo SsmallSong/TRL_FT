@@ -6,7 +6,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
 model = AutoModelForCausalLM.from_pretrained(model_name_or_path)
 
 # 获取 EOS token 的 ID
-eos_token_id = tokenizer.eos_token_id
+eos_token_id = tokenizer.stop_token_id
 
 # 获取 EOS token 的字符串表示
 eos_token = tokenizer.decode([eos_token_id])

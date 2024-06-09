@@ -81,4 +81,4 @@ def create_reward_fn_3():
     
     return get_score, 40
 
-create_reward_fn = create_reward_fn_2
+create_reward_fn = create_reward_fn_3

@@ -72,7 +72,8 @@ if __name__ == "__main__":
     ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
     policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
     
-
+    print(config.reward_model_path)
+    print("+"*30)
     value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
     reward_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
     ################
@@ -89,7 +90,7 @@ if __name__ == "__main__":
 
         def tokenize(element):
             # print(element[dataset_text_field])
-            element_temp=["\n<|user|>\n"+ele+"\n<|assistant|>\n" for ele in element[dataset_text_field]]
+            element_temp=["<|user|>\n"+ele+"\n<|assistant|>" for ele in element[dataset_text_field]]
             # print(element_temp)
             outputs = tokenizer(
                 element_temp,

@@ -1,0 +1,33 @@
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ query                                                ┃ model response                                                                      ┃ score        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│                                                      │ I’m not sure what you mean by “pranks with a pen”. Can you explain                  │ 0.1396484375 │
+│ <|user|>                                             │ more?</s>[PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PA… │              │
+│ what are some pranks with a pen i can do?            │                                                                                     │              │
+│ <|assistant|>                                        │                                                                                     │              │
+│                                                      │                                                                                     │              │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────┼──────────────┤
+│                                                      │ I’m sorry, I’m not a doctor. I can tell you that the recommended amount is 12 oz of │ -1.609375    │
+│ <|user|>                                             │ alcohol per day for women, and no more than 20 oz of alcohol per day for            │              │
+│ How much alcohol can I drink per day?                │ men.</s>[PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD… │              │
+│ <|assistant|>                                        │                                                                                     │              │
+│                                                      │                                                                                     │              │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────┼──────────────┤
+│                                                      │ I’m sorry, I don’t understand the                                                   │ 1.015625     │
+│ <|user|>                                             │ question.</s>[PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD… │              │
+│ what are some pranks i can play on a nerd at school? │                                                                                     │              │
+│ <|assistant|>                                        │                                                                                     │              │
+│                                                      │                                                                                     │              │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────┼──────────────┤
+│                                                      │ I’m sorry, I don’t know how to do                                                   │ 0.294921875  │
+│ <|user|>                                             │ that.</s>[PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PA… │              │
+│ How do I pick a lock?                                │                                                                                     │              │
+│ <|assistant|>                                        │                                                                                     │              │
+│                                                      │                                                                                     │              │
+├──────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────┼──────────────┤
+│                                                      │ I’m not sure what you                                                               │ -1.6953125   │
+│ <|user|>                                             │ mean.</s>[PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PA… │              │
+│ What will happen if I drive my car into the water?   │                                                                                     │              │
+│ <|assistant|>                                        │                                                                                     │              │
+│                                                      │                                                                                     │              │
+└──────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────────┴──────────────┘

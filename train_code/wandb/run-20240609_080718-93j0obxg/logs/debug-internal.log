@@ -1,0 +1,247 @@
+2024-06-09 08:07:18,690 INFO    StreamThr :827941 [internal.py:wandb_internal():85] W&B internal server running at pid: 827941, started at: 2024-06-09 08:07:18.689718
+2024-06-09 08:07:18,691 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status
+2024-06-09 08:07:18,693 INFO    WriterThread:827941 [datastore.py:open_for_write():87] open: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/run-93j0obxg.wandb
+2024-06-09 08:07:18,693 DEBUG   SenderThread:827941 [sender.py:send():378] send: header
+2024-06-09 08:07:18,698 DEBUG   SenderThread:827941 [sender.py:send():378] send: run
+2024-06-09 08:07:18,963 INFO    SenderThread:827941 [dir_watcher.py:__init__():211] watching files in: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files
+2024-06-09 08:07:18,963 INFO    SenderThread:827941 [sender.py:_start_run_threads():1123] run started: 93j0obxg with start time 1717920438.689665
+2024-06-09 08:07:18,969 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: check_version
+2024-06-09 08:07:18,969 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: check_version
+2024-06-09 08:07:19,033 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: run_start
+2024-06-09 08:07:19,062 DEBUG   HandlerThread:827941 [system_info.py:__init__():26] System info init
+2024-06-09 08:07:19,062 DEBUG   HandlerThread:827941 [system_info.py:__init__():41] System info init done
+2024-06-09 08:07:19,062 INFO    HandlerThread:827941 [system_monitor.py:start():194] Starting system monitor
+2024-06-09 08:07:19,062 INFO    SystemMonitor:827941 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-09 08:07:19,063 INFO    HandlerThread:827941 [system_monitor.py:probe():214] Collecting system info
+2024-06-09 08:07:19,063 INFO    SystemMonitor:827941 [interfaces.py:start():188] Started cpu monitoring
+2024-06-09 08:07:19,063 INFO    SystemMonitor:827941 [interfaces.py:start():188] Started disk monitoring
+2024-06-09 08:07:19,064 INFO    SystemMonitor:827941 [interfaces.py:start():188] Started gpu monitoring
+2024-06-09 08:07:19,065 INFO    SystemMonitor:827941 [interfaces.py:start():188] Started memory monitoring
+2024-06-09 08:07:19,066 INFO    SystemMonitor:827941 [interfaces.py:start():188] Started network monitoring
+2024-06-09 08:07:19,096 DEBUG   HandlerThread:827941 [system_info.py:probe():150] Probing system
+2024-06-09 08:07:19,098 DEBUG   HandlerThread:827941 [system_info.py:_probe_git():135] Probing git
+2024-06-09 08:07:19,104 DEBUG   HandlerThread:827941 [system_info.py:_probe_git():143] Probing git done
+2024-06-09 08:07:19,105 DEBUG   HandlerThread:827941 [system_info.py:probe():198] Probing system done
+2024-06-09 08:07:19,105 DEBUG   HandlerThread:827941 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-1017-azure-x86_64-with-glibc2.31', 'python': '3.10.14', 'heartbeatAt': '2024-06-09T08:07:19.096473', 'startedAt': '2024-06-09T08:07:18.685142', 'docker': None, 'cuda': None, 'args': ('--output_dir', '/home/wxt/huatong/huggingface/hub/llama2_ppo_online', '--num_ppo_epochs', '1', '--num_mini_batches', '1', '--learning_rate', '3e-6', '--per_device_train_batch_size', '1', '--gradient_accumulation_steps', '16', '--total_episodes', '10000', '--response_length', '100', '--model_name_or_path', 'daryl149/llama-2-7b-hf', '--sft_model_path', 'daryl149/llama-2-7b-hf', '--reward_model_path', 'EleutherAI/pythia-1b-deduped', '--local_rollout_forward_batch_size', '1', '--non_eos_penalty'), 'state': 'running', 'program': '/home/wxt/huatong/TRL_FT/train_code/original_ppov2.py', 'codePathLocal': 'original_ppov2.py', 'codePath': 'train_code/original_ppov2.py', 'git': {'remote': 'https://github.com/SsmallSong/TRL_FT.git', 'commit': 'a3a0ab2db587b2732c26355720cf9ba8d699969c'}, 'email': None, 'root': '/home/wxt/huatong/TRL_FT', 'host': 'design-agent-09', 'username': 'wxt', 'executable': '/home/wxt/.conda/envs/rl/bin/python', 'cpu_count': 96, 'cpu_count_logical': 96, 'cpu_freq': {'current': 2481.3593958333354, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2943.252, 'min': 0.0, 'max': 0.0}, {'current': 2499.318, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 3328.293, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 3326.118, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 3324.324, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}, {'current': 2445.434, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 1984.6844749450684, 'used': 986.3222198486328}}, 'gpu': 'NVIDIA A100 80GB PCIe', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}], 'memory': {'total': 866.1251564025879}}
+2024-06-09 08:07:19,105 INFO    HandlerThread:827941 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-09 08:07:19,105 INFO    HandlerThread:827941 [system_monitor.py:probe():227] Publishing system info
+2024-06-09 08:07:19,105 DEBUG   HandlerThread:827941 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-06-09 08:07:19,964 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_created():271] file/dir created: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/conda-environment.yaml
+2024-06-09 08:07:22,930 DEBUG   HandlerThread:827941 [system_info.py:_save_conda():222] Saving conda packages done
+2024-06-09 08:07:22,931 INFO    HandlerThread:827941 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-09 08:07:22,932 DEBUG   SenderThread:827941 [sender.py:send():378] send: files
+2024-06-09 08:07:22,933 INFO    SenderThread:827941 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-06-09 08:07:22,964 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/conda-environment.yaml
+2024-06-09 08:07:22,964 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_created():271] file/dir created: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/wandb-metadata.json
+2024-06-09 08:07:23,059 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: python_packages
+2024-06-09 08:07:23,060 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: python_packages
+2024-06-09 08:07:23,063 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-09 08:07:23,064 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: stop_status
+2024-06-09 08:07:23,067 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-09 08:07:23,312 DEBUG   SenderThread:827941 [sender.py:send():378] send: telemetry
+2024-06-09 08:07:23,312 DEBUG   SenderThread:827941 [sender.py:send():378] send: config
+2024-06-09 08:07:23,313 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,313 DEBUG   SenderThread:827941 [sender.py:send():378] send: telemetry
+2024-06-09 08:07:23,313 DEBUG   SenderThread:827941 [sender.py:send():378] send: telemetry
+2024-06-09 08:07:23,313 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,313 WARNING SenderThread:827941 [sender.py:send_metric():1340] Seen metric with glob (shouldn't happen)
+2024-06-09 08:07:23,313 DEBUG   SenderThread:827941 [sender.py:send():378] send: telemetry
+2024-06-09 08:07:23,313 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,313 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,313 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,313 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,313 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,313 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send():378] send: history
+2024-06-09 08:07:23,314 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: summary_record
+2024-06-09 08:07:23,316 INFO    wandb-upload_0:827941 [upload_job.py:push():130] Uploaded file /tmp/tmp7eu873fjwandb/66h4v3z5-wandb-metadata.json
+2024-06-09 08:07:23,317 INFO    SenderThread:827941 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-09 08:07:23,964 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_created():271] file/dir created: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/requirements.txt
+2024-06-09 08:07:23,965 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_created():271] file/dir created: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/wandb-summary.json
+2024-06-09 08:07:24,317 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:07:28,558 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: log_artifact
+2024-06-09 08:07:28,559 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: log_artifact
+2024-06-09 08:07:28,788 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-09 08:07:28,967 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_created():271] file/dir created: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/media/table/completions_1_0917569abc424040db28.table.json
+2024-06-09 08:07:28,967 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_created():271] file/dir created: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/output.log
+2024-06-09 08:07:28,967 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_created():271] file/dir created: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/media/table
+2024-06-09 08:07:28,967 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_created():271] file/dir created: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/media
+2024-06-09 08:07:29,105 INFO    wandb-upload_0:827941 [upload_job.py:push():88] Uploaded file /home/wxt/.local/share/wandb/artifacts/staging/tmpz3n641m0
+2024-06-09 08:07:29,256 INFO    wandb-upload_1:827941 [upload_job.py:push():130] Uploaded file /tmp/tmp7eu873fjwandb/jsms05s1-media/table/completions_1_0917569abc424040db28.table.json
+2024-06-09 08:07:29,722 INFO    SenderThread:827941 [sender.py:send_request_log_artifact():1455] logged artifact run-93j0obxg-completions - {'id': 'QXJ0aWZhY3Q6ODY1NDc2MzE2', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE4MzkxMzc1MA==', 'latestArtifact': None}}
+2024-06-09 08:07:29,722 DEBUG   SenderThread:827941 [sender.py:send():378] send: files
+2024-06-09 08:07:29,722 INFO    SenderThread:827941 [sender.py:_save_file():1389] saving file media/table/completions_1_0917569abc424040db28.table.json with policy now
+2024-06-09 08:07:29,723 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:29,723 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:29,723 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:29,723 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:29,723 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:29,723 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:29,723 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:29,723 DEBUG   SenderThread:827941 [sender.py:send():378] send: metric
+2024-06-09 08:07:29,723 DEBUG   SenderThread:827941 [sender.py:send():378] send: history
+2024-06-09 08:07:29,724 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: summary_record
+2024-06-09 08:07:29,724 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:07:29,725 INFO    SenderThread:827941 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-09 08:07:29,967 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/wandb-summary.json
+2024-06-09 08:07:30,074 INFO    wandb-upload_0:827941 [upload_job.py:push():130] Uploaded file /tmp/tmp7eu873fjwandb/thyw7c4i-media/table/completions_1_0917569abc424040db28.table.json
+2024-06-09 08:07:30,968 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/output.log
+2024-06-09 08:07:34,727 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:07:38,061 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-09 08:07:38,061 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: stop_status
+2024-06-09 08:07:40,199 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:07:45,200 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:07:50,204 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:07:50,975 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/config.yaml
+2024-06-09 08:07:53,061 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-09 08:07:53,062 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: stop_status
+2024-06-09 08:07:56,220 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:08:01,221 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:08:06,222 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:08:08,061 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-09 08:08:08,062 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: stop_status
+2024-06-09 08:08:12,196 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:08:17,196 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:08:19,066 DEBUG   SystemMonitor:827941 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-09 08:08:19,068 DEBUG   SenderThread:827941 [sender.py:send():378] send: stats
+2024-06-09 08:08:23,061 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-09 08:08:23,062 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: stop_status
+2024-06-09 08:08:23,208 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:08:28,209 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:08:33,210 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:08:38,062 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-09 08:08:38,063 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: stop_status
+2024-06-09 08:08:39,203 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:08:44,204 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:08:49,070 DEBUG   SenderThread:827941 [sender.py:send():378] send: stats
+2024-06-09 08:08:50,071 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:08:53,062 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-09 08:08:53,063 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: stop_status
+2024-06-09 08:08:55,142 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:09:00,143 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:09:05,144 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:09:08,063 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-09 08:09:08,063 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: stop_status
+2024-06-09 08:09:10,196 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:09:14,103 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-09 08:09:14,105 DEBUG   SenderThread:827941 [sender.py:send():378] send: history
+2024-06-09 08:09:14,105 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: summary_record
+2024-06-09 08:09:14,107 INFO    SenderThread:827941 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-09 08:09:15,006 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/wandb-summary.json
+2024-06-09 08:09:16,108 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:09:19,077 DEBUG   SenderThread:827941 [sender.py:send():378] send: stats
+2024-06-09 08:09:22,078 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:09:23,062 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-09 08:09:23,062 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: stop_status
+2024-06-09 08:09:27,194 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:09:32,195 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:09:37,196 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:09:38,062 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-09 08:09:38,063 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: stop_status
+2024-06-09 08:09:42,221 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:09:47,222 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:09:49,073 DEBUG   SenderThread:827941 [sender.py:send():378] send: stats
+2024-06-09 08:09:53,062 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-09 08:09:53,063 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: stop_status
+2024-06-09 08:09:53,192 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:09:58,193 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:10:03,194 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:10:08,063 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-09 08:10:08,063 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: stop_status
+2024-06-09 08:10:08,229 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:10:13,230 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:10:14,121 DEBUG   SenderThread:827941 [sender.py:send():378] send: exit
+2024-06-09 08:10:14,121 INFO    SenderThread:827941 [sender.py:send_exit():585] handling exit code: 255
+2024-06-09 08:10:14,121 INFO    SenderThread:827941 [sender.py:send_exit():587] handling runtime: 175
+2024-06-09 08:10:14,123 INFO    SenderThread:827941 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-09 08:10:14,123 INFO    SenderThread:827941 [sender.py:send_exit():593] send defer
+2024-06-09 08:10:14,124 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: defer
+2024-06-09 08:10:14,124 INFO    HandlerThread:827941 [handler.py:handle_request_defer():184] handle defer: 0
+2024-06-09 08:10:14,124 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: defer
+2024-06-09 08:10:14,124 INFO    SenderThread:827941 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-06-09 08:10:14,124 INFO    SenderThread:827941 [sender.py:transition_state():613] send defer: 1
+2024-06-09 08:10:14,124 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: defer
+2024-06-09 08:10:14,124 INFO    HandlerThread:827941 [handler.py:handle_request_defer():184] handle defer: 1
+2024-06-09 08:10:14,125 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: defer
+2024-06-09 08:10:14,125 INFO    SenderThread:827941 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-06-09 08:10:14,125 INFO    SenderThread:827941 [sender.py:transition_state():613] send defer: 2
+2024-06-09 08:10:14,125 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: defer
+2024-06-09 08:10:14,125 INFO    HandlerThread:827941 [handler.py:handle_request_defer():184] handle defer: 2
+2024-06-09 08:10:14,125 INFO    HandlerThread:827941 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-09 08:10:14,125 INFO    HandlerThread:827941 [interfaces.py:finish():200] Joined cpu monitor
+2024-06-09 08:10:14,126 INFO    HandlerThread:827941 [interfaces.py:finish():200] Joined disk monitor
+2024-06-09 08:10:14,126 DEBUG   SystemMonitor:827941 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-09 08:10:14,126 DEBUG   SystemMonitor:827941 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-09 08:10:14,970 INFO    HandlerThread:827941 [interfaces.py:finish():200] Joined gpu monitor
+2024-06-09 08:10:14,970 INFO    HandlerThread:827941 [interfaces.py:finish():200] Joined memory monitor
+2024-06-09 08:10:14,970 INFO    HandlerThread:827941 [interfaces.py:finish():200] Joined network monitor
+2024-06-09 08:10:14,971 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: defer
+2024-06-09 08:10:14,971 INFO    SenderThread:827941 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-06-09 08:10:14,971 INFO    SenderThread:827941 [sender.py:transition_state():613] send defer: 3
+2024-06-09 08:10:14,971 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: defer
+2024-06-09 08:10:14,971 DEBUG   SenderThread:827941 [sender.py:send():378] send: stats
+2024-06-09 08:10:14,971 INFO    HandlerThread:827941 [handler.py:handle_request_defer():184] handle defer: 3
+2024-06-09 08:10:14,972 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: defer
+2024-06-09 08:10:14,972 INFO    SenderThread:827941 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-06-09 08:10:14,972 INFO    SenderThread:827941 [sender.py:transition_state():613] send defer: 4
+2024-06-09 08:10:14,973 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: defer
+2024-06-09 08:10:14,973 INFO    HandlerThread:827941 [handler.py:handle_request_defer():184] handle defer: 4
+2024-06-09 08:10:14,973 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: defer
+2024-06-09 08:10:14,973 INFO    SenderThread:827941 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-06-09 08:10:14,973 INFO    SenderThread:827941 [sender.py:transition_state():613] send defer: 5
+2024-06-09 08:10:14,973 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: defer
+2024-06-09 08:10:14,973 INFO    HandlerThread:827941 [handler.py:handle_request_defer():184] handle defer: 5
+2024-06-09 08:10:14,973 DEBUG   SenderThread:827941 [sender.py:send():378] send: summary
+2024-06-09 08:10:14,974 INFO    SenderThread:827941 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-09 08:10:14,974 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: defer
+2024-06-09 08:10:14,974 INFO    SenderThread:827941 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-06-09 08:10:14,974 INFO    SenderThread:827941 [sender.py:transition_state():613] send defer: 6
+2024-06-09 08:10:14,974 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: defer
+2024-06-09 08:10:14,974 INFO    HandlerThread:827941 [handler.py:handle_request_defer():184] handle defer: 6
+2024-06-09 08:10:14,975 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: defer
+2024-06-09 08:10:14,975 INFO    SenderThread:827941 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-06-09 08:10:14,975 INFO    SenderThread:827941 [sender.py:transition_state():613] send defer: 7
+2024-06-09 08:10:14,975 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: status_report
+2024-06-09 08:10:14,975 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: defer
+2024-06-09 08:10:14,975 INFO    HandlerThread:827941 [handler.py:handle_request_defer():184] handle defer: 7
+2024-06-09 08:10:14,975 DEBUG   SenderThread:827941 [sender.py:send_request():405] send_request: defer
+2024-06-09 08:10:14,975 INFO    SenderThread:827941 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-06-09 08:10:15,029 INFO    Thread-12 :827941 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/wandb-summary.json
+2024-06-09 08:10:15,121 DEBUG   HandlerThread:827941 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-09 08:10:15,885 WARNING StreamThr :827941 [internal.py:is_dead():413] Internal process exiting, parent pid 827015 disappeared
+2024-06-09 08:10:15,885 ERROR   StreamThr :827941 [internal.py:wandb_internal():151] Internal process shutdown.
+2024-06-09 08:10:16,121 INFO    HandlerThread:827941 [handler.py:finish():882] shutting down handler
+2024-06-09 08:10:16,121 INFO    WriterThread:827941 [datastore.py:close():296] close: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/run-93j0obxg.wandb
+2024-06-09 08:10:16,562 INFO    SenderThread:827941 [sender.py:transition_state():613] send defer: 8
+2024-06-09 08:10:16,562 INFO    SenderThread:827941 [sender.py:finish():1545] shutting down sender
+2024-06-09 08:10:16,562 INFO    SenderThread:827941 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-09 08:10:17,030 INFO    SenderThread:827941 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/output.log
+2024-06-09 08:10:17,030 INFO    SenderThread:827941 [dir_watcher.py:finish():388] scan: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files
+2024-06-09 08:10:17,030 INFO    SenderThread:827941 [dir_watcher.py:finish():402] scan save: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/conda-environment.yaml conda-environment.yaml
+2024-06-09 08:10:17,031 INFO    SenderThread:827941 [dir_watcher.py:finish():402] scan save: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/wandb-summary.json wandb-summary.json
+2024-06-09 08:10:17,031 INFO    SenderThread:827941 [dir_watcher.py:finish():402] scan save: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/config.yaml config.yaml
+2024-06-09 08:10:17,031 INFO    SenderThread:827941 [dir_watcher.py:finish():402] scan save: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/wandb-metadata.json wandb-metadata.json
+2024-06-09 08:10:17,031 INFO    SenderThread:827941 [dir_watcher.py:finish():402] scan save: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/requirements.txt requirements.txt
+2024-06-09 08:10:17,032 INFO    SenderThread:827941 [dir_watcher.py:finish():402] scan save: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/output.log output.log
+2024-06-09 08:10:17,041 INFO    SenderThread:827941 [dir_watcher.py:finish():402] scan save: /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/media/table/completions_1_0917569abc424040db28.table.json media/table/completions_1_0917569abc424040db28.table.json
+2024-06-09 08:10:17,041 INFO    SenderThread:827941 [file_pusher.py:finish():169] shutting down file pusher
+2024-06-09 08:10:17,041 INFO    SenderThread:827941 [file_pusher.py:join():175] waiting for file pusher
+2024-06-09 08:10:17,262 INFO    wandb-upload_1:827941 [upload_job.py:push():130] Uploaded file /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/conda-environment.yaml
+2024-06-09 08:10:17,265 INFO    wandb-upload_2:827941 [upload_job.py:push():130] Uploaded file /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/config.yaml
+2024-06-09 08:10:17,385 INFO    wandb-upload_0:827941 [upload_job.py:push():130] Uploaded file /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/wandb-summary.json
+2024-06-09 08:10:17,390 INFO    wandb-upload_3:827941 [upload_job.py:push():130] Uploaded file /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/requirements.txt
+2024-06-09 08:10:17,404 INFO    wandb-upload_4:827941 [upload_job.py:push():130] Uploaded file /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_080718-93j0obxg/files/output.log
+2024-06-09 08:10:18,043 INFO    SenderThread:827941 [file_stream.py:finish():601] file stream finish called
+2024-06-09 08:10:18,282 INFO    SenderThread:827941 [file_stream.py:finish():605] file stream finish is done
