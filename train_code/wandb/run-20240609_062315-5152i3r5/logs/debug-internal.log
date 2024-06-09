@@ -554,3 +554,7 @@
 2024-06-09 06:37:18,115 INFO    SenderThread:799124 [sender.py:finish():1545] shutting down sender
 2024-06-09 06:37:18,115 INFO    SenderThread:799124 [file_pusher.py:finish():169] shutting down file pusher
 2024-06-09 06:37:18,115 INFO    SenderThread:799124 [file_pusher.py:join():175] waiting for file pusher
+2024-06-09 06:37:37,991 INFO    wandb-upload_0:799124 [upload_job.py:push():130] Uploaded file /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240609_062315-5152i3r5/files/wandb-summary.json
+2024-06-09 06:37:38,192 INFO    Thread-11 (_thread_body):799124 [sender.py:transition_state():613] send defer: 11
+2024-06-09 06:37:38,641 INFO    SenderThread:799124 [file_stream.py:finish():601] file stream finish called
+2024-06-09 06:37:38,716 INFO    SenderThread:799124 [file_stream.py:finish():605] file stream finish is done
