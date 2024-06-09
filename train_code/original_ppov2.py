@@ -17,51 +17,12 @@ from accelerate import Accelerator
 from accelerate.utils import InitProcessGroupKwargs
 
 
-model_name="OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-rm = AutoModelForSequenceClassification.from_pretrained(model_name)
-input_text = "<|user|>Hi how are you?<|assistant|>Hi, I am Open-Assistant a large open-source language model trained by LAION AI. How can I help you today?"
-inputs = tokenizer(input_text, return_tensors="pt")
-output=rm(**inputs)
-print(type(output))
-print(output.keys())
-score = output.logits[0].cpu().detach()
-print(score)
+
 
 def delete_dict(d: Dict):
     """Delete all items inside the dict."""
     for k in list(d.keys()):
         del d[k]
-print("+"*20)
-print("come on!")
-print("+"*20)
-"""
-python -i examples/scripts/ppo/ppo.py \
-    --learning_rate 3e-6 \
-    --output_dir models/minimal/ppo \
-    --per_device_train_batch_size 64 \
-    --gradient_accumulation_steps 1 \
-    --total_episodes 10000 \
-    --model_name_or_path daryl149/llama-2-7b-hf \
-    --non_eos_penalty \
-
-accelerate launch --config_file examples/accelerate_configs/deepspeed_zero3.yaml \
-    examples/scripts/ppo/ppo.py \
-    --output_dir models/minimal/ppo \
-    --num_ppo_epochs 1 \
-    --num_mini_batches 1 \
-    --learning_rate 3e-6 \
-    --per_device_train_batch_size 1 \
-    --gradient_accumulation_steps 16 \
-    --total_episodes 10000 \
-    --model_name_or_path daryl149/llama-2-7b-hf\
-    --sft_model_path daryl149/llama-2-7b-hf \
-    --reward_model_path OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5 \
-    --local_rollout_forward_batch_size 1 \
-    --deepspeed3 \
-    --non_eos_penalty \
-"""
-
 
 if __name__ == "__main__":
     model_name_or_path ='/home/wxt/huggingface/hub/llama2_sft_mirror/'
@@ -87,11 +48,21 @@ if __name__ == "__main__":
     # # model_config_2 = AutoConfig.from_pretrained(model_name_or_path)
     # ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
     # policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
-    
+    model_name="OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    rm = AutoModelForSequenceClassification.from_pretrained(model_name)
+    input_text = "<|user|>Hi how are you?<|assistant|>Hi, I am Open-Assistant a large open-source language model trained by LAION AI. How can I help you today?"
+    inputs = tokenizer(input_text, return_tensors="pt")
+    output=rm(**inputs)
+    print(type(output))
+    print(output.keys())
+    score = output.logits[0].cpu().detach()
+    print(score)
     print(config.reward_model_path)
     print("+"*30)
     value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path)
     reward_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
+
     
     tokenizer = AutoTokenizer.from_pretrained(config.reward_model_path)
     input_text = "<|prompter|>Hi how are you?<|endoftext|><|assistant|>Hi, I am Open-Assistant a large open-source language model trained by LAION AI. How can I help you today?<|endoftext|>"
