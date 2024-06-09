@@ -31,23 +31,6 @@ if __name__ == "__main__":
     config, model_config = parser.parse_args_into_dataclasses()
     import model_training.models.reward_model
 
-    # print(config)
-    # print("=="*30)
-    # print(model_config)
-    # kill
-    model_name="OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    rm = AutoModelForSequenceClassification.from_pretrained(model_name)
-    print(type(rm))
-   # kill
-    input_text = "<|user|>Hi how are you?<|assistant|>Hi, I am Open-Assistant a large open-source language model trained by LAION AI. How can I help you today?"
-    inputs = tokenizer(input_text, return_tensors="pt")
-    output=rm(**inputs)
-    print(type(output))
-    print(output.keys())
-    score = output.logits[0].cpu().detach()
-    print(score)
-    
     
     # # # remove output_dir if exists
     # #   shutil.rmtree(config.output_dir, ignore_errors=True)
@@ -56,33 +39,25 @@ if __name__ == "__main__":
     # # Model & Tokenizer
     # ################
     
-    # tokenizer = AutoTokenizer.from_pretrained(
-    #     model_name_or_path,
-    #     padding_side="left",
-    #     trust_remote_code=True,
-    # )
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_name_or_path,
+        padding_side="left",
+        trust_remote_code=True,
+    )
     
-    # tokenizer.add_special_tokens({"pad_token": "[PAD]"})
-    # if tokenizer.chat_template is None:
-    #     tokenizer.chat_template = SIMPLE_QUERY_CHAT_TEMPLATE
-    # # model_config_2 = AutoConfig.from_pretrained(model_name_or_path)
-    # ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
-    # policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
+    tokenizer.add_special_tokens({"pad_token": "[PAD]"})
+    if tokenizer.chat_template is None:
+        tokenizer.chat_template = SIMPLE_QUERY_CHAT_TEMPLATE
+    # model_config_2 = AutoConfig.from_pretrained(model_name_or_path)
+    ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
+    policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
     
     print(config.reward_model_path)
     print("+"*30)
-    value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path)
+    value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
     reward_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
 
-    
-    tokenizer = AutoTokenizer.from_pretrained(config.reward_model_path)
-    input_text = "<|prompter|>Hi how are you?<|endoftext|><|assistant|>Hi, I am Open-Assistant a large open-source language model trained by LAION AI. How can I help you today?<|endoftext|>"
-    inputs = tokenizer(input_text, return_tensors="pt")
-    output=value_model(**inputs)
-    print(output.keys())
-    score = value_model(**inputs).logits[0].cpu().detach()
-    print(scores)
-    kill
+
     ################
     # Dataset
     ################
