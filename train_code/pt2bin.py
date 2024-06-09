@@ -4,8 +4,15 @@ with open('/home/wxt/huggingface/hub/llama2_sft_mirror/pytorch_model-00001-of-00
 with open('/home/wxt/huggingface/hub/llama2_sft_mirror/pytorch_model-00002-of-00002.bin', 'rb') as file:
         binary_data_2 = file.read()
 num=0
-print(len(binary_data_1)+len(binary_len_2))
-print(binary_data)
+print(len(binary_data_1)+len(binary_data_2))
+for key , value in binary_data_1.items():
+    num+=1
+    if num==10:
+        break
+    print(key)
+    print(value)
+
+#print(binary_data_1)
 
 print("="*20)
 print("="*20)
@@ -22,14 +29,13 @@ cont=1
 print(len(policy))
 state_dict=policy['state']
 print(len(state_dict))
-print((state_dict))
+#print((state_dict))
 # kill
-# for key,value in policy.items():
-#     cont+=1
-
+for key,value in state_dict.items():
+     cont+=1
 #     print("="*20)
-#     print(key)
-#     print(value)
+     print(key)
+     print(value)
 #     print("="*20)
-#     if cont==10:
-#         break
+     if cont==10:
+         break
