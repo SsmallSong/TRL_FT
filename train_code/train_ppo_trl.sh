@@ -7,6 +7,7 @@ accelerate launch --config_file /home/wxt/huatong/TRL_FT/config_file/deepspeed_z
     --per_device_train_batch_size 1 \
     --gradient_accumulation_steps 16 \
     --total_episodes 10000 \
+    --response_length 256 \
     --model_name_or_path daryl149/llama-2-7b-hf \
     --sft_model_path daryl149/llama-2-7b-hf \
     --reward_model_path EleutherAI/pythia-1b-deduped \
