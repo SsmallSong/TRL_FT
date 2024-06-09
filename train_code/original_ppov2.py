@@ -89,6 +89,8 @@ if __name__ == "__main__":
 
         def tokenize(element):
             print(element[dataset_text_field])
+            element_temp=["\n<|user|>\n"+ele+"\n<|assistant|>\n" for ele in element[dataset_text_field]]
+            print(element_temp)
             outputs = tokenizer(
                 "\n<|user|>\n"+element[dataset_text_field]+"\n<|assistant|>\n",
                 padding=False,
