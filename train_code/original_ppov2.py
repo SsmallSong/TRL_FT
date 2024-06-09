@@ -28,7 +28,8 @@ if __name__ == "__main__":
     model_name_or_path ='/home/wxt/huggingface/hub/llama2_sft_mirror/'
 
     parser = HfArgumentParser((PPOv2Config, ModelConfig))
-
+    config, model_config = parser.parse_args_into_dataclasses()
+    
     model_name="OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     rm = AutoModelForSequenceClassification.from_pretrained(model_name)
@@ -40,7 +41,7 @@ if __name__ == "__main__":
     score = output.logits[0].cpu().detach()
     print(score)
     
-    config, model_config = parser.parse_args_into_dataclasses()
+    
     # # # remove output_dir if exists
     # #   shutil.rmtree(config.output_dir, ignore_errors=True)
     
