@@ -68,9 +68,9 @@ if __name__ == "__main__":
     tokenizer.add_special_tokens({"pad_token": "[PAD]"})
     if tokenizer.chat_template is None:
         tokenizer.chat_template = SIMPLE_QUERY_CHAT_TEMPLATE
-    model_config_2 = AutoConfig.from_pretrained(model_name_or_path)
-    ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2)
-    policy = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config_2)
+    # model_config_2 = AutoConfig.from_pretrained(model_name_or_path)
+    ref_policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
+    policy = AutoModelForCausalLM.from_pretrained(model_name_or_path)
     
 
     value_model = AutoModelForSequenceClassification.from_pretrained(config.reward_model_path, num_labels=1)
