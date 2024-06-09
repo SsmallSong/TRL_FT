@@ -1,7 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # 加载模型和分词器
-model_name_or_path = "your-model-name-or-path"  # 请将此处替换为具体的模型名称或路径
+model_name_or_path = "/home/wxt/huggingface/hub/llama2_sft_mirror/"  # 请将此处替换为具体的模型名称或路径
 tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
 model = AutoModelForCausalLM.from_pretrained(model_name_or_path)
 
