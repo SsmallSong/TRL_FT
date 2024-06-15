@@ -8,25 +8,35 @@ import transformers
 from vllm import LLM, SamplingParams
 import pickle as pkl
 
+
+# state_dict = torch.load(os.path.join(config.cache_dir, config.saved_policy), map_location='cpu')
+# step, metrics = state_dict['step_idx'], state_dict['metrics']
+# print(f'loading pre-trained weights for policy at step {step} from {config.saved_policy} with metrics {json.dumps(metrics, indent=2)}')
+# policy.load_state_dict(state_dict['state'])
+
 f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
-#x=x[0:3]
 
-# print(x)
 sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
 
-# ref_model_id = 'hermes_mft2_ray_rl0_0.2_7_not_nor2_lora_checkpoint_6000'
-#model_id = '/home/wxt/huatong/huggingface/hub/mistral_7b_instruct_dpo_new'
-#model_id='mistralai/Mistral-7B-Instruct-v0.2'
+load_dict_path="non"
+cache_path="non"
 model_id='snorkelai/Snorkel-Mistral-PairRM-DPO'
 model_id="/home/wxt/huatong/huggingface/hub/llama-7b-hh-sft"
-mistral_temp = True 
+mistral_temp = False
 res = []
 tokenizer = transformers.AutoTokenizer.from_pretrained(model_id,legacy=False)
 print('1111111111111')
 if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
+    
     llm = LLM(model=model_id, tensor_parallel_size=1,
                   trust_remote_code=True)
+    if load_dict_path !="non":
+        state_dict = torch.load(os.path.join(cache_path, load_dict_path), map_location='cpu')
+        step, metrics = state_dict['step_idx'], state_dict['metrics']
+        print(f'loading pre-trained weights for policy at step {step} from {config.saved_policy} with metrics {json.dumps(metrics, indent=2)}')
+        llm.load_state_dict(state_dict['state'])
+
     pos = model_id.rfind('/')
     name = model_id[pos:]
     if name.find('checkpoint') == 1:
@@ -35,7 +45,6 @@ if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
     print(name)
     print('/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/model_answer{}.jsonl'.format(name))
     for e in x[:]:
-  #      print(e)
         e = json.loads(e)
         turns = e['turns']
         question_id = e['question_id']
@@ -61,7 +70,7 @@ if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
     out_f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/model_answer{}.jsonl'.format(name)
     out_f = open(out_f, 'w')
     out_f.write('\n'.join(res))
-   # print(mess)
+
     pkl.dump(messes, open('mess_{}'.format(model_id.replace('/', '')),'wb'))
 
     del llm
@@ -70,7 +79,7 @@ if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
 else:
     prompts = []
     messes = pkl.load(open('mess_{}'.format(model_id.replace('/', '')), 'rb'))
-  #  print(messes)
+
     for i, e in enumerate(x[:]):
         e = json.loads(e)
         turns = e['turns']
@@ -84,15 +93,16 @@ else:
             prompts.append(prompt)
 
 print('2222222222222222')
-# new_messes = []
-# for e in messes:
-#     new_messes.append(e)
-#     new_messes.append(e[:2])
-# messes = new_messes
 
 if not os.path.exists('alpaca_{}.json'.format(model_id.replace('/', ''))):
     llm = LLM(model=model_id, tensor_parallel_size=1,
                       trust_remote_code=True)
+    if load_dict_path !="non":
+        state_dict = torch.load(os.path.join(cache_path, load_dict_path), map_location='cpu')
+        step, metrics = state_dict['step_idx'], state_dict['metrics']
+        print(f'loading pre-trained weights for policy at step {step} from {config.saved_policy} with metrics {json.dumps(metrics, indent=2)}')
+        llm.load_state_dict(state_dict['state'])
+        
     import datasets
     eval_set = datasets.load_dataset("tatsu-lab/alpaca_eval", "alpaca_eval",trust_remote_code=True)["eval"]
     alpaca_prompts = []
