@@ -10,7 +10,7 @@ import transformers
 from vllm import LLM, SamplingParams
 import pickle as pkl
 from transformers import AutoModelForCausalLM
-
+os.environ["CUDA_VISIBLE_DEVICES"] = "1,2,3"
 f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
 
