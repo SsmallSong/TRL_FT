@@ -7,12 +7,7 @@ import torch
 import transformers
 from vllm import LLM, SamplingParams
 import pickle as pkl
-
-
-# state_dict = torch.load(os.path.join(config.cache_dir, config.saved_policy), map_location='cpu')
-# step, metrics = state_dict['step_idx'], state_dict['metrics']
-# print(f'loading pre-trained weights for policy at step {step} from {config.saved_policy} with metrics {json.dumps(metrics, indent=2)}')
-# policy.load_state_dict(state_dict['state'])
+from transformers import AutoModelForCausalLM
 
 f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
@@ -20,7 +15,7 @@ x = open(f).readlines()
 sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
 
 load_dict_path_list=["llama2_7b_sft_halos_2_3/LATEST/policy.pt","llama2_7b_dpo_halos_beta01/LATEST/policy.pt","llama2_7b_kto_halos_beta01/LATEST/policy.pt","llama2_7b_ppo_halos_2/LATEST/policy.pt"]
-# load_dict_path=load_dict_path_list[0]
+
 cache_path="/home/wxt/.cache/huggingface/hub"
 model_id="daryl149/llama-2-7b-hf"
 for load_dict_path in load_dict_path_list:
@@ -28,72 +23,11 @@ for load_dict_path in load_dict_path_list:
   res = []
   tokenizer = transformers.AutoTokenizer.from_pretrained(model_id,legacy=False)
   print('1111111111111')
-  if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
-      
-      model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True)
-      if load_dict_path !="non":
-          state_dict = torch.load(os.path.join(cache_path, load_dict_path), map_location='cpu')
-          step, metrics = state_dict['step_idx'], state_dict['metrics']
-          # print(f'loading pre-trained weights for policy at step {step} from {config.saved_policy} with metrics {json.dumps(metrics, indent=2)}')
-          llm.load_state_dict(state_dict['state'])
   
-      pos = model_id.rfind('/')
-      name = model_id[pos:]
-      if name.find('checkpoint') == 1:
-          name = model_id[model_id.rfind('/', 0, pos):].replace('/', '')
-      messes = []
-      print(name)
-      print('/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/model_answer{}.jsonl'.format(name))
-      for e in x[:]:
-          e = json.loads(e)
-          turns = e['turns']
-          question_id = e['question_id']
-          mess = []
-          resp_turns = []
-          for t in turns:
-              mess.append({'role': 'user', 'content': t})
-              prompts = tokenizer.apply_chat_template(mess, tokenize=False)
-              
-              prompts += "<|im_start|>assistant\n"
-              predict = llm.generate(prompts, sampling_params)
-              mess.append({'role': 'assistant', 'content': predict[0].outputs[0].text.strip()})
-              resp_turns.append(predict[0].outputs[0].text.strip())
-            
-          messes.append(mess)
-          res.append({'question_id': question_id,  'answer_id': question_id, 'model_id': name,
-                      'choices': [{'index': 0, 'turns': resp_turns}]})
-          res[-1] = json.dumps(res[-1])
-  
-      out_f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/model_answer{}.jsonl'.format(name)
-      out_f = open(out_f, 'w')
-      out_f.write('\n'.join(res))
-  
-      pkl.dump(messes, open('mess_{}'.format(model_id.replace('/', '')),'wb'))
-  
-      del llm
-      torch.cuda.empty_cache()
-  
-  else:
-      prompts = []
-      messes = pkl.load(open('mess_{}'.format(model_id.replace('/', '')), 'rb'))
-  
-      for i, e in enumerate(x[:]):
-          e = json.loads(e)
-          turns = e['turns']
-          question_id = e['question_id']
-          # mess = []
-          resp_turns = []
-          for j, t in enumerate(turns):
-              mess = messes[i][:j*2+1]
-              prompt = tokenizer.apply_chat_template(mess, tokenize=False)
-              prompt += "<|im_start|>assistant\n"
-              prompts.append(prompt)
-  
-  print('2222222222222222')
   
   if not os.path.exists('alpaca_{}.json'.format(model_id.replace('/', ''))):
-      llm = LLM(model=model_id, tensor_parallel_size=1,
-                        trust_remote_code=True)
+      llm = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True)
+    
       if load_dict_path !="non":
           state_dict = torch.load(os.path.join(cache_path, load_dict_path), map_location='cpu')
           step, metrics = state_dict['step_idx'], state_dict['metrics']
