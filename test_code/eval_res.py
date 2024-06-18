@@ -19,10 +19,11 @@ x = open(f).readlines()
 
 sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
 
-load_dict_path="non"
-cache_path="non"
-model_id='snorkelai/Snorkel-Mistral-PairRM-DPO'
-model_id="/home/wxt/huatong/huggingface/hub/llama-7b-hh-sft"
+load_dict_path_list=["llama2_7b_sft_halos_2_3","llama2_7b_dpo_halos_beta01","llama2_7b_kto_halos_beta01","llama2_7b_ppo_halos_2"]
+load_dict_path=load_dict_path_list[0]
+cache_path="/home/wxt/.cache/huggingface/hub"
+# model_id='snorkelai/Snorkel-Mistral-PairRM-DPO'
+model_id="daryl149/llama-2-7b-hf"
 mistral_temp = False
 res = []
 tokenizer = transformers.AutoTokenizer.from_pretrained(model_id,legacy=False)
