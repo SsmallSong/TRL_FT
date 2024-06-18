@@ -35,7 +35,7 @@ if not os.path.exists('mess_{}'.format(model_id.replace('/',''))):
     if load_dict_path !="non":
         state_dict = torch.load(os.path.join(cache_path, load_dict_path), map_location='cpu')
         step, metrics = state_dict['step_idx'], state_dict['metrics']
-        print(f'loading pre-trained weights for policy at step {step} from {config.saved_policy} with metrics {json.dumps(metrics, indent=2)}')
+        # print(f'loading pre-trained weights for policy at step {step} from {config.saved_policy} with metrics {json.dumps(metrics, indent=2)}')
         llm.load_state_dict(state_dict['state'])
 
     pos = model_id.rfind('/')
