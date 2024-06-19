@@ -8,7 +8,7 @@ log_file="/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/logs_new/generate_infer
 model_ckpt="non"
 
 accelerate launch --config_file dp_config.yaml infer_and_eval_main_generate.py \
-    --index $index  \
+    --index $index \
     --model_ckpt $model_ckpt \
     --stage 1 > $log_file 2>&1 
      

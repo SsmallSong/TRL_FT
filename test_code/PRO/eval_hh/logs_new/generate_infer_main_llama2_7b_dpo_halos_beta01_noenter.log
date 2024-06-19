@@ -1,138 +1,132 @@
 4
-/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
 4
 4
 4
-/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
   warnings.warn(
-/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
   warnings.warn(
-/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
   warnings.warn(
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:08<00:08,  8.56s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:08<00:08,  8.82s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:08<00:08,  8.77s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:08<00:08,  8.93s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.78s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.20s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.27s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.80s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.26s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.78s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.29s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.83s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:11<00:11, 11.72s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:12<00:12, 12.25s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:12<00:12, 12.02s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:11<00:11, 12.00s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  6.72s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.52s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  6.71s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.50s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  6.67s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.43s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  6.91s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.71s/it]
+load model
+load model
+load model
+load model
+loaded pre-trained weights
+loaded pre-trained weights
+loaded pre-trained weights
+<class 'transformers.models.llama.modeling_llama.LlamaForCausalLM'>
+loaded pre-trained weights
+LlamaConfig {
+  "_name_or_path": "daryl149/llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_position_embeddings": 2048,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.2",
+  "use_cache": true,
+  "vocab_size": 32000
+}
+
+Rank 2 is activated...
+Rank 3 is activated...
+Rank 0 is activated...
+Rank 1 is activated...
+  0%|          | 0/21 [00:00<?, ?it/s]  0%|          | 0/21 [00:00<?, ?it/s]  0%|          | 0/21 [00:00<?, ?it/s]  0%|          | 0/21 [00:00<?, ?it/s]  0%|          | 0/21 [00:05<?, ?it/s]
 Traceback (most recent call last):
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 50, in <module>
-    model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2271, in to
-    return super().to(*args, **kwargs)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1160, in to
-    return self._apply(convert)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  [Previous line repeated 2 more times]
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 833, in _apply
-    param_applied = fn(param)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1158, in convert
-    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
-torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 172.00 MiB. GPU 3 has a total capacty of 79.15 GiB of which 146.62 MiB is free. Process 3321028 has 74.42 GiB memory in use. Including non-PyTorch memory, this process has 4.51 GiB memory in use. Of the allocated memory 4.10 GiB is allocated by PyTorch, and 1.87 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 124, in <module>
+    generated_suffixes, truncated_prompts = generate_pipeline(model, tokenizer, prompts, add_special_tokens=True)
+  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_func_now.py", line 46, in generate_pipeline
+    ts = model.generate(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/generation/utils.py", line 1758, in generate
+    result = self._sample(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/generation/utils.py", line 2397, in _sample
+    outputs = self(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 1164, in forward
+    outputs = self.model(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 968, in forward
+    layer_outputs = decoder_layer(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 727, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 216, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 452.00 MiB. GPU 0 has a total capacity of 79.15 GiB of which 5.50 MiB is free. Process 2227153 has 13.66 GiB memory in use. Process 2235667 has 13.66 GiB memory in use. Process 2251449 has 13.66 GiB memory in use. Including non-PyTorch memory, this process has 38.14 GiB memory in use. Of the allocated memory 34.54 GiB is allocated by PyTorch, and 2.94 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2024-06-19 03:03:24,933] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 4023720 closing signal SIGTERM
+[2024-06-19 03:03:24,934] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 4023721 closing signal SIGTERM
+[2024-06-19 03:03:24,934] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 4023722 closing signal SIGTERM
+[2024-06-19 03:03:25,415] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 4023719) of binary: /home/wxt/.conda/envs/rl/bin/python
 Traceback (most recent call last):
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 50, in <module>
-    model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2271, in to
-    return super().to(*args, **kwargs)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1160, in to
-    return self._apply(convert)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  [Previous line repeated 2 more times]
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 833, in _apply
-    param_applied = fn(param)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1158, in convert
-    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
-torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 64.00 MiB. GPU 2 has a total capacty of 79.15 GiB of which 2.62 MiB is free. Process 3321027 has 69.73 GiB memory in use. Including non-PyTorch memory, this process has 9.33 GiB memory in use. Of the allocated memory 8.93 GiB is allocated by PyTorch, and 1.65 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
-Traceback (most recent call last):
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 50, in <module>
-    model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2271, in to
-    return super().to(*args, **kwargs)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1160, in to
-    return self._apply(convert)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  [Previous line repeated 2 more times]
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 833, in _apply
-    param_applied = fn(param)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1158, in convert
-    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
-torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 172.00 MiB. GPU 1 has a total capacty of 79.15 GiB of which 49.88 MiB is free. Process 3321026 has 69.11 GiB memory in use. Including non-PyTorch memory, this process has 9.80 GiB memory in use. Of the allocated memory 9.39 GiB is allocated by PyTorch, and 1.65 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
-Traceback (most recent call last):
-  File "/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/infer_and_eval_main_generate.py", line 50, in <module>
-    model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2271, in to
-    return super().to(*args, **kwargs)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1160, in to
-    return self._apply(convert)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  [Previous line repeated 2 more times]
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 833, in _apply
-    param_applied = fn(param)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1158, in convert
-    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
-torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 172.00 MiB. GPU 0 has a total capacty of 79.15 GiB of which 166.62 MiB is free. Process 3321025 has 67.77 GiB memory in use. Including non-PyTorch memory, this process has 11.14 GiB memory in use. Of the allocated memory 10.73 GiB is allocated by PyTorch, and 1.59 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
-[2024-06-04 09:47:10,675] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 3330851 closing signal SIGTERM
-[2024-06-04 09:47:10,789] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 1 (pid: 3330852) of binary: /home/wxt/.conda/envs/halos3/bin/python
-Traceback (most recent call last):
-  File "/home/wxt/.conda/envs/halos3/bin/accelerate", line 8, in <module>
+  File "/home/wxt/.conda/envs/rl/bin/accelerate", line 8, in <module>
     sys.exit(main())
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 45, in main
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
     args.func(args)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/accelerate/commands/launch.py", line 970, in launch_command
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1066, in launch_command
     multi_gpu_launcher(args)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/accelerate/commands/launch.py", line 646, in multi_gpu_launcher
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/launch.py", line 711, in multi_gpu_launcher
     distrib_run.run(args)
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/distributed/run.py", line 797, in run
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/run.py", line 803, in run
     elastic_launch(
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 135, in __call__
     return launch_agent(self._config, self._entrypoint, list(args))
-  File "/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
     raise ChildFailedError(
 torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
 ============================================================
 infer_and_eval_main_generate.py FAILED
 ------------------------------------------------------------
 Failures:
-[1]:
-  time      : 2024-06-04_09:47:10
-  host      : design-agent-09.internal.cloudapp.net
-  rank      : 2 (local_rank: 2)
-  exitcode  : 1 (pid: 3330853)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-[2]:
-  time      : 2024-06-04_09:47:10
-  host      : design-agent-09.internal.cloudapp.net
-  rank      : 3 (local_rank: 3)
-  exitcode  : 1 (pid: 3330854)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+  <NO_OTHER_FAILURES>
 ------------------------------------------------------------
 Root Cause (first observed failure):
 [0]:
-  time      : 2024-06-04_09:47:10
+  time      : 2024-06-19_03:03:24
   host      : design-agent-09.internal.cloudapp.net
-  rank      : 1 (local_rank: 1)
-  exitcode  : 1 (pid: 3330852)
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 4023719)
   error_file: <N/A>
   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
 ============================================================
