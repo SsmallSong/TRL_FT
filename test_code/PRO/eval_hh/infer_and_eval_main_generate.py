@@ -19,7 +19,7 @@ from accelerate.utils import InitProcessGroupKwargs
 from datetime import timedelta
 import gc
 import os
-os.environ["CUDA_VISIBLE_DEVICES"]="1,2,3"
+os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
 import torch
 print(torch.cuda.device_count())
 def delete_dict(d: Dict):
