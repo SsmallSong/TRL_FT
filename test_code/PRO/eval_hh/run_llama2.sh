@@ -11,13 +11,13 @@ model_ckpt="non"
 #     --stage 1 > $log_file 2>&1 
      
     
-accelerate launch --config_file dp_config.yaml infer_and_eval_main_reward.py \
-    --index $index \
-    --stage 1 > $log_file 2>&1
-
-# python -u infer_and_eval_main_score.py \
+# accelerate launch --config_file dp_config.yaml infer_and_eval_main_reward.py \
 #     --index $index \
 #     --stage 1 > $log_file 2>&1
+
+python -u infer_and_eval_main_score.py \
+    --index $index \
+    --stage 1 > $log_file 2>&1
 
 
 # index="llama2_7b_dpo_halos_beta01_frontenter"
