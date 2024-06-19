@@ -19,7 +19,7 @@ from accelerate.utils import InitProcessGroupKwargs
 from datetime import timedelta
 import gc
 import os
-os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
+os.environ["CUDA_VISIBLE_DEVICES"]="1,2,3"
 import torch
 print(torch.cuda.device_count())
 def delete_dict(d: Dict):
@@ -43,22 +43,22 @@ if __name__ == "__main__":
     rank = int(os.environ['RANK'])
     rank_sum = accelerator.num_processes
     # model_name_or_path = os.path.join("..", "checkpoints", f"index_{args.index}", f"stage_{args.stage}", f"{args.directory}")
-    model_name_or_path ='daryl149/llama-2-7b-hf'
+    model_name_or_path ='/home/wxt/.cache/huggingface/hub/llama2_ppo_online'
     model_device = "cuda:{}".format(rank)
 
     model_config = AutoConfig.from_pretrained(model_name_or_path )
     model = AutoModelForCausalLM.from_pretrained(model_name_or_path,config=model_config).to(model_device)
 
-    if args.model_ckpt!='non':
-        print("load model")
-        ckpt_path = f"/home/wxt/.cache/huggingface/hub/{args.model_ckpt}/LATEST/policy.pt"
-        state_dict = torch.load(ckpt_path, map_location='cpu')
-        # step, metrics = state_dict['step_idx'], state_dict['metrics']
-        model.load_state_dict(state_dict['state'])
-        delete_dict(state_dict)
-        gc.collect()
-        torch.cuda.empty_cache()
-        print('loaded pre-trained weights')
+    # if args.model_ckpt!='non':
+    #     print("load model")
+    #     ckpt_path = f"/home/wxt/.cache/huggingface/hub/{args.model_ckpt}/LATEST/policy.pt"
+    #     state_dict = torch.load(ckpt_path, map_location='cpu')
+    #     # step, metrics = state_dict['step_idx'], state_dict['metrics']
+    #     model.load_state_dict(state_dict['state'])
+    #     delete_dict(state_dict)
+    #     gc.collect()
+    #     torch.cuda.empty_cache()
+    #     print('loaded pre-trained weights')
 
     if accelerator.is_main_process:
         print(type(model))
