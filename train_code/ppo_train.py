@@ -1,22 +1,12 @@
-# Copyright 2023 The HuggingFace Inc. team. All rights reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+
 """
 python examples/scripts/ppo.py \
     --log_with=wandb
 """
 from dataclasses import dataclass, field
 from typing import Optional
+import model_training.models.reward_model  # noqa: F401 (registers reward model for AutoModel loading)
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
 
 import torch
 from accelerate import Accelerator
@@ -58,30 +48,16 @@ model_name_or_path ='/home/wxt/huggingface/hub/llama2_sft_mirror/'
 # from the `datasets` library. One should customize this function to train the model on
 # its own dataset.
 def build_dataset(config, query_dataset, input_min_text_length=2, input_max_text_length=8):
-    """
-    Build dataset for training. This builds the dataset from `load_dataset`, one should
-    customize this function to train the model on its own dataset.
-
-    Args:
-        query_dataset (`str`):
-            The name of the dataset to be loaded.
-
-    Returns:
-        dataloader (`torch.utils.data.DataLoader`):
-            The dataloader for the dataset.
-    """
+    
     tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
     tokenizer.pad_token = tokenizer.eos_token
-    # load imdb with datasets
-    ds = load_dataset(query_dataset, split="train")
-    ds = ds.rename_columns({"text": "review"})
-    ds = ds.filter(lambda x: len(x["review"]) > 200, batched=False)
 
-    input_size = LengthSampler(input_min_text_length, input_max_text_length)
+    ds = load_dataset(query_dataset, split="train")
 
     def tokenize(sample):
-        sample["input_ids"] = tokenizer.encode(sample["review"])[: input_size()]
-        sample["query"] = tokenizer.decode(sample["input_ids"])
+        element_temp="\n<|user|>\n"+sample['prompt']+"\n<|assistant|>\n" 
+        sample["input_ids"] = tokenizer.encode(element_temp)
+        sample["query"] = element_temp
         return sample
 
     ds = ds.map(tokenize, batched=False)
@@ -143,8 +119,10 @@ if ppo_trainer.accelerator.num_processes == 1:
         device = "npu:0"
     else:
         device = 0 if torch.cuda.is_available() else "cpu"  # to avoid a `pipeline` bug
+        
+reward_model_name=ppo_config.reward_model       
 ds_plugin = ppo_trainer.accelerator.state.deepspeed_plugin
-task, model_name = ppo_config.reward_model.split(":")
+task, model_name = .split(":")
 if ds_plugin is not None and ds_plugin.is_zero3_init_enabled():
     with ds_plugin.zero3_init_context_manager(enable=False):
         sentiment_pipe = pipeline(task, model=model_name, device=device)
