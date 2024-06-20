@@ -120,21 +120,9 @@ if ppo_trainer.accelerator.num_processes == 1:
     else:
         device = 0 if torch.cuda.is_available() else "cpu"  # to avoid a `pipeline` bug
         
-reward_model_name=ppo_config.reward_model       
-ds_plugin = ppo_trainer.accelerator.state.deepspeed_plugin
-task, model_name = .split(":")
-if ds_plugin is not None and ds_plugin.is_zero3_init_enabled():
-    with ds_plugin.zero3_init_context_manager(enable=False):
-        sentiment_pipe = pipeline(task, model=model_name, device=device)
-else:
-    sentiment_pipe = pipeline(task, model=model_name, device=device)
-
-# Some tokenizers like GPT-2's don't have a padding token by default, so we set one here.
-if sentiment_pipe.tokenizer.pad_token_id is None:
-    sentiment_pipe.tokenizer.pad_token_id = tokenizer.pad_token_id
-
-if sentiment_pipe.model.config.pad_token_id is None:
-    sentiment_pipe.model.config.pad_token_id = tokenizer.pad_token_id
+reward_model_name="reward_model_path OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"
+rm_tokenizer = AutoTokenizer.from_pretrained(reward_model_name)
+reward_model= AutoModelForSequenceClassification.from_pretrained(reward_model_name)
 
 # We then define the arguments to pass to the `generate` function. These arguments
 # are passed to the `generate` function of the PPOTrainer, which is a wrapper around
@@ -166,6 +154,11 @@ for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     ref_pipe_outputs = sentiment_pipe(ref_texts, **sent_kwargs)
     ref_rewards = [torch.tensor(output[1]["score"]) for output in ref_pipe_outputs]
     batch["ref_rewards"] = ref_rewards
+
+    input_text = "<|prompter|>Hi how are you?<|endoftext|><|assistant|>Hi, I am Open-Assistant a large open-source language model trained by LAION AI. How can I help you today?<|endoftext|>"
+    inputs = tokenizer(input_text, return_tensors="pt")
+    score = rm(**inputs).logits[0].cpu().detach()
+    print(score)
 
     # Run PPO step
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
