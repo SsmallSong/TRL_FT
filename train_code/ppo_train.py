@@ -155,11 +155,11 @@ for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     # ref_rewards = [torch.tensor(output[1]["score"]) for output in ref_pipe_outputs]
     # batch["ref_rewards"] = ref_rewards
     
-    texts = [q + r for q, r in zip(batch["query"], batch["response"])]
+    texts = [q.replace("\n<|user|>\n","<|prompter|>").replace("\n<|assistant|>\n","<|endoftext|><|assistant|>") + r + "<|endoftext|>" for q, r in zip(batch["query"], batch["response"])]
     inputs = tokenizer(texts, return_tensors="pt")
     rewards = rm(**inputs).logits#.cpu().detach()
     
-    ref_texts = [q + r for q, r in zip(batch["query"], batch["ref_response"])]
+    ref_texts = [q.replace("\n<|user|>\n","<|prompter|>").replace("\n<|assistant|>\n","<|endoftext|><|assistant|>") + r + "<|endoftext|>" for q, r in zip(batch["query"], batch["ref_response"])]
     ref_inputs = tokenizer(ref_texts, return_tensors="pt")
     ref_rewards = rm(**ref_inputs).logits#.cpu().detach()
 
