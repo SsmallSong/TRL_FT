@@ -122,7 +122,7 @@ if ppo_trainer.accelerator.num_processes == 1:
         
 reward_model_name="reward_model_path OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"
 rm_tokenizer = AutoTokenizer.from_pretrained(reward_model_name)
-reward_model= AutoModelForSequenceClassification.from_pretrained(reward_model_name)
+rm= AutoModelForSequenceClassification.from_pretrained(reward_model_name)
 
 # We then define the arguments to pass to the `generate` function. These arguments
 # are passed to the `generate` function of the PPOTrainer, which is a wrapper around
@@ -146,19 +146,22 @@ for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     batch["response"] = tokenizer.batch_decode(response_tensors)
     batch["ref_response"] = tokenizer.batch_decode(ref_response_tensors)
 
-    # Compute sentiment score
+    # Compute reward score
+    # texts = [q + r for q, r in zip(batch["query"], batch["response"])]
+    # pipe_outputs = sentiment_pipe(texts, **sent_kwargs)
+    # rewards = [torch.tensor(output[1]["score"]) for output in pipe_outputs]
+    # ref_texts = [q + r for q, r in zip(batch["query"], batch["ref_response"])]
+    # ref_pipe_outputs = sentiment_pipe(ref_texts, **sent_kwargs)
+    # ref_rewards = [torch.tensor(output[1]["score"]) for output in ref_pipe_outputs]
+    # batch["ref_rewards"] = ref_rewards
+    
     texts = [q + r for q, r in zip(batch["query"], batch["response"])]
-    pipe_outputs = sentiment_pipe(texts, **sent_kwargs)
-    rewards = [torch.tensor(output[1]["score"]) for output in pipe_outputs]
+    inputs = tokenizer(texts, return_tensors="pt")
+    rewards = rm(**inputs).logits#.cpu().detach()
+    
     ref_texts = [q + r for q, r in zip(batch["query"], batch["ref_response"])]
-    ref_pipe_outputs = sentiment_pipe(ref_texts, **sent_kwargs)
-    ref_rewards = [torch.tensor(output[1]["score"]) for output in ref_pipe_outputs]
-    batch["ref_rewards"] = ref_rewards
-
-    input_text = "<|prompter|>Hi how are you?<|endoftext|><|assistant|>Hi, I am Open-Assistant a large open-source language model trained by LAION AI. How can I help you today?<|endoftext|>"
-    inputs = tokenizer(input_text, return_tensors="pt")
-    score = rm(**inputs).logits[0].cpu().detach()
-    print(score)
+    ref_inputs = tokenizer(ref_texts, return_tensors="pt")
+    ref_rewards = rm(**ref_inputs).logits#.cpu().detach()
 
     # Run PPO step
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
