@@ -48,7 +48,7 @@ parser = HfArgumentParser((ScriptArguments, PPOConfig))
 args, ppo_config = parser.parse_args_into_dataclasses()
 
 # We then define the arguments to pass to the sentiment analysis pipeline.
-# We set `return_all_scores` to True to get the sentiment score for each token.
+# We set `rmodel_name_or_path ='/home/wxt/huggingface/hub/llama2_sft_mirror/'eturn_all_scores` to True to get the sentiment score for each token.
 sent_kwargs = {"return_all_scores": True, "function_to_apply": "none", "batch_size": 16}
 
 trl_model_class = AutoModelForCausalLMWithValueHead if not args.use_seq2seq else AutoModelForSeq2SeqLMWithValueHead
@@ -90,7 +90,7 @@ def build_dataset(config, query_dataset, input_min_text_length=2, input_max_text
 
 
 # We retrieve the dataloader by calling the `build_dataset` function.
-dataset = build_dataset(ppo_config, ppo_config.query_dataset)
+dataset = build_dataset(ppo_config, "trl-internal-testing/hh-rlhf-trl-style")
 
 
 def collator(data):
