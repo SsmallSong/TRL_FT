@@ -1,7 +1,7 @@
 # install open assistant model_training module (e.g. run `pip install -e .` in `model/` directory of open-assistant repository)
 import model_training.models.reward_model  # noqa: F401 (registers reward model for AutoModel loading)
 from transformers import AutoTokenizer, AutoConfig, AutoModelForSequenceClassification
-
+import torch
 model_name="OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 rm = AutoModelForSequenceClassification.from_pretrained(model_name)
