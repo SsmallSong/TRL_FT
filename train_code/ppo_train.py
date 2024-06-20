@@ -48,11 +48,11 @@ parser = HfArgumentParser((ScriptArguments, PPOConfig))
 args, ppo_config = parser.parse_args_into_dataclasses()
 
 # We then define the arguments to pass to the sentiment analysis pipeline.
-# We set `rmodel_name_or_path ='/home/wxt/huggingface/hub/llama2_sft_mirror/'eturn_all_scores` to True to get the sentiment score for each token.
+# We set `return_all_scores` to True to get the sentiment score for each token.
 sent_kwargs = {"return_all_scores": True, "function_to_apply": "none", "batch_size": 16}
 
 trl_model_class = AutoModelForCausalLMWithValueHead if not args.use_seq2seq else AutoModelForSeq2SeqLMWithValueHead
-
+model_name_or_path ='/home/wxt/huggingface/hub/llama2_sft_mirror/'
 
 # Below is an example function to build the dataset. In our case, we use the IMDB dataset
 # from the `datasets` library. One should customize this function to train the model on
@@ -70,7 +70,7 @@ def build_dataset(config, query_dataset, input_min_text_length=2, input_max_text
         dataloader (`torch.utils.data.DataLoader`):
             The dataloader for the dataset.
     """
-    tokenizer = AutoTokenizer.from_pretrained(config.model_name)
+    tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
     tokenizer.pad_token = tokenizer.eos_token
     # load imdb with datasets
     ds = load_dataset(query_dataset, split="train")
@@ -102,7 +102,7 @@ set_seed(ppo_config.seed)
 
 # Now let's build the model, the reference model, and the tokenizer.
 if not args.use_peft:
-    ref_model = trl_model_class.from_pretrained(ppo_config.model_name, trust_remote_code=args.trust_remote_code)
+    ref_model = trl_model_class.from_pretrained(model_name_or_path, trust_remote_code=args.trust_remote_code)
     device_map = None
     peft_config = None
 else:
@@ -117,14 +117,14 @@ else:
     device_map = {"": Accelerator().local_process_index}
 
 model = trl_model_class.from_pretrained(
-    ppo_config.model_name,
+    model_name_or_path,
     trust_remote_code=args.trust_remote_code,
     device_map=device_map,
     peft_config=peft_config,
 )
 
 
-tokenizer = AutoTokenizer.from_pretrained(ppo_config.model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
 
 # Some tokenizers like GPT-2's don't have a padding token by default, so we set one here.
 tokenizer.pad_token_id = tokenizer.eos_token_id
