@@ -135,19 +135,21 @@ generation_kwargs = {
     "top_p": 1.0,
     "do_sample": True,
     "pad_token_id": tokenizer.eos_token_id,
-    "max_new_tokens": 1024,
+    "max_new_tokens": 512,
 }
 print("333333333333")
 for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     query_tensors = batch["input_ids"]
 
     # Get response from gpt2
+    print("444444444444")
     response_tensors, ref_response_tensors = ppo_trainer.generate(
         query_tensors, return_prompt=False, generate_ref_response=True, **generation_kwargs
     )
+    print("55555555555555")
     batch["response"] = tokenizer.batch_decode(response_tensors)
     batch["ref_response"] = tokenizer.batch_decode(ref_response_tensors)
-
+    print("6666666666666")
     # Compute reward score
     # texts = [q + r for q, r in zip(batch["query"], batch["response"])]
     # pipe_outputs = sentiment_pipe(texts, **sent_kwargs)
