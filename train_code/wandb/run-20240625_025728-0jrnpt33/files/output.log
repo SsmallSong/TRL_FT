@@ -1,0 +1,26 @@
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+0it [00:00, ?it/s]You're using a LlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+0it [01:19, ?it/s]
+Traceback (most recent call last):
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 759, in convert_to_tensors
+    tensor = as_tensor(value)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 721, in as_tensor
+    return torch.tensor(value)
+ValueError: expected sequence of length 79 at dim 1 (got 80)
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/ppo_train.py", line 159, in <module>
+    inputs = tokenizer(texts, return_tensors="pt")
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2883, in __call__
+    encodings = self._call_one(text=text, text_pair=text_pair, **all_kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2969, in _call_one
+    return self.batch_encode_plus(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 3160, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_fast.py", line 559, in _batch_encode_plus
+    return BatchEncoding(sanitized_tokens, sanitized_encodings, tensor_type=return_tensors)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 224, in __init__
+    self.convert_to_tensors(tensor_type=tensor_type, prepend_batch_axis=prepend_batch_axis)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 775, in convert_to_tensors
+    raise ValueError(
+ValueError: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`input_ids` in this case) have excessive nesting (inputs type `list` where type `int` is expected).

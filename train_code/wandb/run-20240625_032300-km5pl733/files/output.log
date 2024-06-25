@@ -1,0 +1,158 @@
+22222222222
+333333333333
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+0it [00:00, ?it/s]You're using a LlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+====================text==========================
+<|prompter|>What is the worst thing you have ever said to anyone posing a question or making a statement?<|endoftext|><|assistant|>I’m sorry to hear that, I would like to think that my record of interactions with people is one of helpful and respectful collaboration. I deeply apolog<|endoftext|>
+<|prompter|>I am trying to locate the residential address of Matt Ryan, the quarterback for the Atlanta Falcons.<|endoftext|><|assistant|>I’m sorry but I can’t find any address for Matt Ryan. Can you tell me more about what you’re looking for, perhaps I can<|endoftext|>
+<|prompter|>Since the pandemic, people's behavior patterns have changed. What do doctors state, is the best method for cleaning weekly? Should people shower once a day, or once a week?<|endoftext|><|assistant|>Here are general guidelines from doctors about cleaning your body:
+- Daily showers are fine for most people. Showering every day<|endoftext|>
+<|prompter|>How do I make my own homeschool curriculum?<|endoftext|><|assistant|>Let’s first start by thinking of the subjects you want to include in your homeschool curriculum. What kind of subjects are you interested in?<|endoftext|>
+<|prompter|>Give me some reasons why homosexuals are degenerate.<|endoftext|><|assistant|>I’m not going to answer your question.</s><|endoftext|>
+<|prompter|>Can you help me figure out how to poison my roommates bird<|endoftext|><|assistant|>Can you tell me more about what you mean by “poison” and “bird”?</s><|endoftext|>
+<|prompter|>How can I get back at my doctor for giving me the wrong diagnosis?<|endoftext|><|assistant|>If your doctor gave you a wrong diagnosis, it’s important to find out how this happened and why. Medical decisions can be particularly hard to understand<|endoftext|>
+<|prompter|>Are certain flowers better for a gift?<|endoftext|><|assistant|>This is interesting, I don’t know about flowers and which would be best, I’d suggest talking to a friend. You might want to search on<|endoftext|>
+<|prompter|>I need money<|endoftext|><|assistant|>I am sorry, I understand you need money. Would you be interested in learning more about joining a bank? The bank can help you securely store and access<|endoftext|>
+<|prompter|>What should you take on a day trip hiking?<|endoftext|><|assistant|>I’m not sure how much you know about hiking, so I’ll try to answer in stages. I’ll start with what you might<|endoftext|>
+====================text==========================
+====================reward==========================
+tensor([[-5.3073],
+        [-2.9702],
+        [-3.1478],
+        [-3.8924],
+        [-2.9556],
+        [-3.0329],
+        [-3.7052],
+        [-3.9496],
+        [-4.0817],
+        [-2.6369],
+        [-4.9575],
+        [-3.5777],
+        [-3.6688],
+        [-4.4600],
+        [-2.5707],
+        [-4.6977],
+        [-2.9033],
+        [-2.8301],
+        [-1.5909],
+        [-2.8727],
+        [-2.7487],
+        [-2.5431],
+        [-2.2829],
+        [-3.6936],
+        [-2.0408],
+        [-2.8290],
+        [-4.2527],
+        [-3.7877],
+        [-3.8945],
+        [-1.5429],
+        [-2.9450],
+        [-3.7185],
+        [-3.3004],
+        [-3.8432],
+        [-4.3974],
+        [-2.6349],
+        [-4.0815],
+        [-4.1830],
+        [-4.2248],
+        [-3.0163],
+        [-4.4450],
+        [-4.0476],
+        [-3.8315],
+        [-2.2401],
+        [-3.8348],
+        [-3.0090],
+        [-3.2318],
+        [-4.9494],
+        [-3.4660],
+        [-3.8106],
+        [-3.0850],
+        [-3.4655],
+        [-3.9671],
+        [-4.2713],
+        [-3.6820],
+        [-2.8468],
+        [-3.6501],
+        [-3.5457],
+        [-4.0553],
+        [-4.4521],
+        [-4.6956],
+        [-4.1308],
+        [-5.1129],
+        [-4.1836],
+        [-4.2598],
+        [-3.7197],
+        [-3.0295],
+        [-4.1370],
+        [-3.8437],
+        [-2.8857],
+        [-3.9017],
+        [-4.6192],
+        [-3.7781],
+        [-4.9818],
+        [-3.5480],
+        [-3.3362],
+        [-3.8622],
+        [-4.1314],
+        [-3.5257],
+        [-2.8075],
+        [-3.8477],
+        [-2.7744],
+        [-3.6498],
+        [-3.5697],
+        [-3.8256],
+        [-3.4303],
+        [-2.7239],
+        [-5.3026],
+        [-3.6119],
+        [-3.0286],
+        [-4.9103],
+        [-1.6527],
+        [-4.5821],
+        [-4.7200],
+        [-4.8372],
+        [-2.4783],
+        [-4.3395],
+        [-3.4703],
+        [-4.6081],
+        [-3.6754],
+        [-5.4653],
+        [-3.0209],
+        [-4.3947],
+        [-3.3279],
+        [-3.1412],
+        [-1.7235],
+        [-1.6926],
+        [-2.9797],
+        [-3.9329],
+        [-3.1422],
+        [-1.6762],
+        [-4.1669],
+        [-3.7744],
+        [-5.5360],
+        [-2.7144],
+        [-4.1224],
+        [-4.7833],
+        [-4.9235],
+        [-4.5661],
+        [-4.5988],
+        [-4.5095],
+        [-3.4430],
+        [-4.1665],
+        [-4.2296],
+        [-4.6149],
+        [-3.7607],
+        [-5.1636],
+        [-3.0098]], grad_fn=<AddmmBackward0>)
+====================reward==========================
+0it [02:19, ?it/s]
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/ppo_train.py", line 176, in <module>
+    stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/ppo_trainer.py", line 672, in step
+    queries, responses, scores, response_masks = self._step_safety_checker(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/ppo_trainer.py", line 623, in _step_safety_checker
+    raise ValueError(f"{name} must be a list of tensors - got {type(tensor_list)}")
+ValueError: scores must be a list of tensors - got <class 'torch.Tensor'>

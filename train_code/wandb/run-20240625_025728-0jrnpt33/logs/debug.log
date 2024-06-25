@@ -1,0 +1,30 @@
+2024-06-25 02:57:28,636 INFO    MainThread:1911042 [wandb_setup.py:_flush():76] Current SDK version is 0.17.0
+2024-06-25 02:57:28,636 INFO    MainThread:1911042 [wandb_setup.py:_flush():76] Configure stats pid to 1911042
+2024-06-25 02:57:28,636 INFO    MainThread:1911042 [wandb_setup.py:_flush():76] Loading settings from /home/wxt/.config/wandb/settings
+2024-06-25 02:57:28,636 INFO    MainThread:1911042 [wandb_setup.py:_flush():76] Loading settings from /home/wxt/huatong/TRL_FT/train_code/wandb/settings
+2024-06-25 02:57:28,636 INFO    MainThread:1911042 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-06-25 02:57:28,636 INFO    MainThread:1911042 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-25 02:57:28,636 INFO    MainThread:1911042 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train_code/ppo_train.py', 'program_abspath': '/home/wxt/huatong/TRL_FT/train_code/ppo_train.py', 'program': '/home/wxt/huatong/TRL_FT/train_code/ppo_train.py'}
+2024-06-25 02:57:28,636 INFO    MainThread:1911042 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-25 02:57:28,636 INFO    MainThread:1911042 [wandb_init.py:_log_setup():520] Logging user logs to /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240625_025728-0jrnpt33/logs/debug.log
+2024-06-25 02:57:28,636 INFO    MainThread:1911042 [wandb_init.py:_log_setup():521] Logging internal logs to /home/wxt/huatong/TRL_FT/train_code/wandb/run-20240625_025728-0jrnpt33/logs/debug-internal.log
+2024-06-25 02:57:28,636 INFO    MainThread:1911042 [wandb_init.py:init():560] calling init triggers
+2024-06-25 02:57:28,636 INFO    MainThread:1911042 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {}
+2024-06-25 02:57:28,637 INFO    MainThread:1911042 [wandb_init.py:init():610] starting backend
+2024-06-25 02:57:28,637 INFO    MainThread:1911042 [wandb_init.py:init():614] setting up manager
+2024-06-25 02:57:28,637 INFO    MainThread:1911042 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-06-25 02:57:28,638 INFO    MainThread:1911042 [wandb_init.py:init():622] backend started and connected
+2024-06-25 02:57:28,640 INFO    MainThread:1911042 [wandb_init.py:init():711] updated telemetry
+2024-06-25 02:57:28,645 INFO    MainThread:1911042 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-06-25 02:57:28,876 INFO    MainThread:1911042 [wandb_run.py:_on_init():2396] communicating current version
+2024-06-25 02:57:28,935 INFO    MainThread:1911042 [wandb_run.py:_on_init():2405] got version response upgrade_message: "wandb version 0.17.3 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-06-25 02:57:28,935 INFO    MainThread:1911042 [wandb_init.py:init():795] starting run threads in backend
+2024-06-25 02:57:33,028 INFO    MainThread:1911042 [wandb_run.py:_console_start():2374] atexit reg
+2024-06-25 02:57:33,028 INFO    MainThread:1911042 [wandb_run.py:_redirect():2229] redirect: wrap_raw
+2024-06-25 02:57:33,028 INFO    MainThread:1911042 [wandb_run.py:_redirect():2294] Wrapping output streams.
+2024-06-25 02:57:33,028 INFO    MainThread:1911042 [wandb_run.py:_redirect():2319] Redirects installed.
+2024-06-25 02:57:33,030 INFO    MainThread:1911042 [wandb_init.py:init():838] run started, returning control to user process
+2024-06-25 02:57:33,031 INFO    MainThread:1911042 [wandb_run.py:_config_callback():1376] config_cb None None {'trl_ppo_trainer_config': {'exp_name': 'ppo_train', 'seed': 0, 'log_with': 'wandb', 'task_name': None, 'model_name': '/home/wxt/huggingface/hub/llama2_sft_mirror/', 'query_dataset': 'trl-internal-testing/hh-rlhf-trl-style', 'reward_model': 'OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5', 'remove_unused_columns': True, 'tracker_project_name': 'trl', 'steps': 20000, 'learning_rate': 1.41e-05, 'adap_kl_ctrl': True, 'init_kl_coef': 0.2, 'kl_penalty': 'kl', 'target': 6, 'horizon': 10000, 'gamma': 1, 'lam': 0.95, 'cliprange': 0.2, 'cliprange_value': 0.2, 'vf_coef': 0.1, 'batch_size': 128, 'forward_batch_size': None, 'mini_batch_size': 128, 'gradient_accumulation_steps': 1, 'world_size': 1, 'ppo_epochs': 4, 'max_grad_norm': None, 'optimize_cuda_cache': None, 'optimize_device_cache': False, 'early_stopping': False, 'target_kl': 1, 'compare_steps': 1, 'ratio_threshold': 10.0, 'use_score_scaling': False, 'use_score_norm': False, 'score_clip': None, 'whiten_rewards': False, 'gradient_checkpointing': False, 'is_encoder_decoder': False, 'is_peft_model': False, 'backward_batch_size': 128, 'global_backward_batch_size': 128, 'global_batch_size': 128, 'total_ppo_epochs': 157}}
+2024-06-25 02:59:03,926 WARNING MsgRouterThr:1911042 [router.py:message_loop():77] message_loop has been closed
