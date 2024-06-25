@@ -145,6 +145,7 @@ generation_kwargs = {
     "max_new_tokens": 32,
 }
 print("333333333333")
+print(ppo_trainer.dataloader)
 for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     print("The epoch is: ",_epoch)
     print(batch)
