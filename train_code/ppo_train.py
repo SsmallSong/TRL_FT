@@ -56,6 +56,7 @@ def build_dataset(config, query_dataset):
     tokenizer.pad_token = tokenizer.eos_token
 
     ds = load_dataset(query_dataset, split="train")
+    ds = ds.select(range(10))
 
     def tokenize(sample):
         element_temp="\n<|user|>\n"+sample['prompt']+"\n<|assistant|>\n" 
@@ -142,6 +143,7 @@ generation_kwargs = {
 }
 print("333333333333")
 for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
+    print("The epoch is: ",_epoch)
     query_tensors = batch["input_ids"]
 
     # Get response from gpt2
@@ -154,13 +156,6 @@ for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     batch["ref_response"] = tokenizer.batch_decode(ref_response_tensors)
     print("6666666666666")
     # Compute reward score
-    # texts = [q + r for q, r in zip(batch["query"], batch["response"])]
-    # pipe_outputs = sentiment_pipe(texts, **sent_kwargs)
-    # rewards = [torch.tensor(output[1]["score"]) for output in pipe_outputs]
-    # ref_texts = [q + r for q, r in zip(batch["query"], batch["ref_response"])]
-    # ref_pipe_outputs = sentiment_pipe(ref_texts, **sent_kwargs)
-    # ref_rewards = [torch.tensor(output[1]["score"]) for output in ref_pipe_outputs]
-    # batch["ref_rewards"] = ref_rewards
     
     texts = [q.replace("\n<|user|>\n","<|prompter|>").replace("\n<|assistant|>\n","<|endoftext|><|assistant|>") + r + "<|endoftext|>" for q, r in zip(batch["query"], batch["response"])]
     print("====================text==========================")
@@ -183,4 +178,5 @@ for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     # Run PPO step
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
     ppo_trainer.log_stats(stats, batch, rewards, columns_to_log=["query", "response", "ref_response", "ref_rewards"])
+save_path="/home/wxt/huatong/huggingface/hub/llama2_ppov1_online/"
 torch.save(ppo_trainer.model.state_dict(), save_path)
