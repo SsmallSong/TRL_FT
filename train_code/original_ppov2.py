@@ -11,6 +11,7 @@ from trl.trainer.ppov2_trainer import PPOv2Config, PPOv2Trainer
 from trl.trainer.utils import SIMPLE_QUERY_CHAT_TEMPLATE
 import torch
 import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
 import gc
 from typing import Dict, Union, Type, List
 from accelerate import Accelerator
