@@ -135,7 +135,7 @@ generation_kwargs = {
     "top_p": 1.0,
     "do_sample": True,
     "pad_token_id": tokenizer.eos_token_id,
-    "max_new_tokens": 32,
+    "max_new_tokens": 1024,
 }
 print("333333333333")
 for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
@@ -158,19 +158,21 @@ for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     # batch["ref_rewards"] = ref_rewards
     
     texts = [q.replace("\n<|user|>\n","<|prompter|>").replace("\n<|assistant|>\n","<|endoftext|><|assistant|>") + r + "<|endoftext|>" for q, r in zip(batch["query"], batch["response"])]
-    print("====================text==========================")
-    for i in range(10):
-        print(texts[i])
-    print("====================text==========================")
+    # print("====================text==========================")
+    # for i in range(10):
+    #     print(texts[i])
+    # print("====================text==========================")
     inputs = tokenizer(texts, return_tensors="pt", padding=True, truncation=True,max_length=1024)
-    rewards = rm(**inputs).logits#.cpu().detach()
-    print("====================reward==========================")
-    print(rewards)
-    print("====================reward==========================")
+    rewards_tensor = rm(**inputs).logits#.cpu().detach()
+    rewards = [row for row in rewards_tensor]
+    # print("====================reward==========================")
+    # print(rewards)
+    # print("====================reward==========================")
     
     ref_texts = [q.replace("\n<|user|>\n","<|prompter|>").replace("\n<|assistant|>\n","<|endoftext|><|assistant|>") + r + "<|endoftext|>" for q, r in zip(batch["query"], batch["ref_response"])]
     ref_inputs = tokenizer(ref_texts, return_tensors="pt", padding=True, truncation=True,max_length=1024)
-    ref_rewards = rm(**ref_inputs).logits#.cpu().detach()
+    ref_rewards_tensor = rm(**ref_inputs).logits#.cpu().detach()
+    ref_rewards = [row for row in ref_rewards_tensor]
 
     # Run PPO step
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
