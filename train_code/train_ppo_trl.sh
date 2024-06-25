@@ -25,5 +25,5 @@ python /home/wxt/huatong/TRL_FT/train_code/ppo_train.py \
     --log_with=wandb \
     --reward_model="OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5" \
     --query_dataset="trl-internal-testing/hh-rlhf-trl-style" \
-    --world_size= 4 \
+    --world_size: int = 4 \
     --model_name="/home/wxt/huggingface/hub/llama2_sft_mirror/"  2>&1 | tee /home/wxt/huatong/TRL_FT/train_code/ppov1_logs_sft.txt 
