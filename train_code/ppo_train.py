@@ -120,7 +120,7 @@ if ppo_trainer.accelerator.num_processes == 1:
     else:
         device = 0 if torch.cuda.is_available() else "cpu"  # to avoid a `pipeline` bug
         
-reward_model_name="reward_model_path OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"
+reward_model_name="OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5"
 rm_tokenizer = AutoTokenizer.from_pretrained(reward_model_name)
 rm= AutoModelForSequenceClassification.from_pretrained(reward_model_name)
 
