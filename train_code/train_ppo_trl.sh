@@ -45,7 +45,7 @@
 #     --model_name="/home/wxt/huggingface/hub/llama2_sft_mirror/"  2>&1 | tee /home/wxt/huatong/TRL_FT/train_code/ppov1_logs_sft.txt 
 
 accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\ 
-    /home/wxt/huatong/TRL_FT/train_code/ppov2_train.py \
+    /home/wxt/huatong/TRL_FT/train_code/ppo_train.py \
     --output_dir  /home/wxt/huatong/huggingface/hub/llama2_ppo_online_v1 \
     --num_mini_batches 32 \
     --learning_rate 3e-6 \
