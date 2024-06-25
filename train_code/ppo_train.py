@@ -186,6 +186,7 @@ for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     # Run PPO step
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
     ppo_trainer.log_stats(stats, batch, rewards, columns_to_log=["query", "response", "ref_response", "ref_rewards"])
+    print('777777777777777')
     torch.save(ppo_trainer.model.state_dict(), save_path)
 
 torch.save(ppo_trainer.model.state_dict(), save_path)
