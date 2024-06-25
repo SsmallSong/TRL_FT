@@ -148,6 +148,7 @@ print("333333333333")
 print(ppo_trainer.dataloader)
 total_batches = len(ppo_trainer.dataloader)
 print("total_batches: ",total_batches)
+save_path="/home/wxt/huatong/huggingface/hub/llama2_ppov1_online/"
 for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     print("The epoch is: ",_epoch)
     # print(batch)
@@ -185,5 +186,6 @@ for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     # Run PPO step
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
     ppo_trainer.log_stats(stats, batch, rewards, columns_to_log=["query", "response", "ref_response", "ref_rewards"])
-save_path="/home/wxt/huatong/huggingface/hub/llama2_ppov1_online/"
+    torch.save(ppo_trainer.model.state_dict(), save_path)
+
 torch.save(ppo_trainer.model.state_dict(), save_path)
