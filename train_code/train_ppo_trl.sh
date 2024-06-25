@@ -16,9 +16,9 @@
 #     --stop_token_id 2 \
 #     --non_eos_penalty 2>&1 | tee /home/wxt/huatong/TRL_FT/train_code/llama2_ppo_logs_sft.txt 
 
-accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\ 
+accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888\
     --num_processes 4\
-    /home/wxt/huatong/TRL_FT/train_code/ppov2_train.py \    
+    /home/wxt/huatong/TRL_FT/train_code/ppov2_train.py \
     --output_dir  /home/wxt/huatong/huggingface/hub/llama2_ppo_online \
     --num_ppo_epochs 1 \
     --num_mini_batches 1 \
