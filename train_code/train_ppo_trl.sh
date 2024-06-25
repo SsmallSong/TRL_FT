@@ -45,8 +45,8 @@
 
 # accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888 \
 python /home/wxt/huatong/TRL_FT/train_code/ppo_train.py \
-    --batch_size 16 \
-    --mini_batch_size 8 \
+    --batch_size 1 \
+    --mini_batch_size 1 \
     --learning_rate 3e-6 \
     --ppo_epochs 3 \
     --log_with=wandb \
