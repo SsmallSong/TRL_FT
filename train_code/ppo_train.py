@@ -56,8 +56,8 @@ def build_dataset(config, query_dataset):
     tokenizer.pad_token = tokenizer.eos_token
 
     ds = load_dataset(query_dataset, split="train")
-    ds = ds.select(range(10))
-    print(ds[:3])
+    # ds = ds.select(range(10))
+    # print(ds[:3])
 
     def tokenize(sample):
         element_temp="\n<|user|>\n"+sample['prompt']+"\n<|assistant|>\n" 
