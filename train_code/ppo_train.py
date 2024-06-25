@@ -3,6 +3,7 @@
 python examples/scripts/ppo.py \
     --log_with=wandb
 """
+print("okokokoko")
 from dataclasses import dataclass, field
 from typing import Optional
 import model_training.models.reward_model  # noqa: F401 (registers reward model for AutoModel loading)
