@@ -56,14 +56,15 @@ def build_dataset(config, query_dataset):
     tokenizer.pad_token = tokenizer.eos_token
 
     ds = load_dataset(query_dataset, split="train")
-    # ds = ds.select(range(100))
+    ds = ds.select(range(10))
+    print(ds[:3])
 
     def tokenize(sample):
         element_temp="\n<|user|>\n"+sample['prompt']+"\n<|assistant|>\n" 
         sample["input_ids"] = tokenizer.encode(element_temp, padding=True, truncation=True,max_length=128)
         sample["query"] = element_temp
         return sample
-
+    
     ds = ds.map(tokenize, batched=False)
     ds.set_format(type="torch")
     return ds
@@ -73,6 +74,7 @@ print("00000000000")
 
 # We retrieve the dataloader by calling the `build_dataset` function.
 dataset = build_dataset(ppo_config, "trl-internal-testing/hh-rlhf-trl-style")
+print(dataset[:3])
 print(dataset)
 print('111111111111')
 
@@ -164,7 +166,7 @@ for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
         print(texts[i])
     print("====================text==========================")
     inputs = tokenizer(texts, return_tensors="pt", padding=True, truncation=True,max_length=256)
-    print("The inputs shape: ",inputs.shape)
+    # print("The inputs shape: ",inputs.shape)
     rewards_tensor = rm(**inputs).logits#.cpu().detach()
     rewards = [row for row in rewards_tensor]
     print("====================reward==========================")
