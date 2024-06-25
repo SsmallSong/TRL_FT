@@ -2,7 +2,7 @@
 import model_training.models.reward_model
 
 
-
+print("okokokok")
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM,AutoModelForSequenceClassification,AutoTokenizer,HfArgumentParser,AutoConfig
 
