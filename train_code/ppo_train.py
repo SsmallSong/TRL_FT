@@ -18,8 +18,8 @@ from transformers import AutoTokenizer, HfArgumentParser, pipeline
 from trl import AutoModelForCausalLMWithValueHead, AutoModelForSeq2SeqLMWithValueHead, PPOConfig, PPOTrainer, set_seed
 from trl.core import LengthSampler
 from trl.import_utils import is_npu_available, is_xpu_available
-
-
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
 tqdm.pandas()
 
 
