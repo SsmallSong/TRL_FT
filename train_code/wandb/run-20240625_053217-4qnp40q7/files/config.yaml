@@ -1,0 +1,93 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.14
+    cli_version: 0.17.0
+    framework: huggingface
+    huggingface_version: 4.41.2
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1719293537
+    t:
+      1:
+      - 1
+      - 5
+      - 11
+      - 49
+      - 51
+      - 53
+      - 55
+      - 71
+      - 84
+      - 98
+      - 105
+      2:
+      - 1
+      - 5
+      - 11
+      - 49
+      - 51
+      - 53
+      - 55
+      - 71
+      - 84
+      - 98
+      - 105
+      3:
+      - 23
+      4: 3.10.14
+      5: 0.17.0
+      6: 4.41.2
+      8:
+      - 5
+      13: linux-x86_64
+trl_ppo_trainer_config:
+  desc: null
+  value:
+    exp_name: ppo_train
+    seed: 0
+    log_with: wandb
+    task_name: null
+    model_name: /home/wxt/huggingface/hub/llama2_sft_mirror/
+    query_dataset: trl-internal-testing/hh-rlhf-trl-style
+    reward_model: OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5
+    remove_unused_columns: true
+    tracker_project_name: trl
+    steps: 20000
+    learning_rate: 3.0e-06
+    adap_kl_ctrl: true
+    init_kl_coef: 0.2
+    kl_penalty: kl
+    target: 6
+    horizon: 10000
+    gamma: 1
+    lam: 0.95
+    cliprange: 0.2
+    cliprange_value: 0.2
+    vf_coef: 0.1
+    batch_size: 128
+    forward_batch_size: null
+    mini_batch_size: 32
+    gradient_accumulation_steps: 1
+    world_size: 4
+    ppo_epochs: 3
+    max_grad_norm: null
+    optimize_cuda_cache: null
+    optimize_device_cache: false
+    early_stopping: false
+    target_kl: 1
+    compare_steps: 1
+    ratio_threshold: 10.0
+    use_score_scaling: false
+    use_score_norm: false
+    score_clip: null
+    whiten_rewards: false
+    gradient_checkpointing: false
+    is_encoder_decoder: false
+    is_peft_model: false
+    backward_batch_size: 32
+    global_backward_batch_size: 128
+    global_batch_size: 512
+    total_ppo_epochs: 157
