@@ -158,16 +158,16 @@ for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     # batch["ref_rewards"] = ref_rewards
     
     texts = [q.replace("\n<|user|>\n","<|prompter|>").replace("\n<|assistant|>\n","<|endoftext|><|assistant|>") + r + "<|endoftext|>" for q, r in zip(batch["query"], batch["response"])]
-    # print("====================text==========================")
-    # for i in range(10):
-    #     print(texts[i])
-    # print("====================text==========================")
+    print("====================text==========================")
+    for i in range(10):
+        print(texts[i])
+    print("====================text==========================")
     inputs = tokenizer(texts, return_tensors="pt", padding=True, truncation=True,max_length=1024)
     rewards_tensor = rm(**inputs).logits#.cpu().detach()
     rewards = [row for row in rewards_tensor]
-    # print("====================reward==========================")
-    # print(rewards)
-    # print("====================reward==========================")
+    print("====================reward==========================")
+    print(rewards)
+    print("====================reward==========================")
     
     ref_texts = [q.replace("\n<|user|>\n","<|prompter|>").replace("\n<|assistant|>\n","<|endoftext|><|assistant|>") + r + "<|endoftext|>" for q, r in zip(batch["query"], batch["ref_response"])]
     ref_inputs = tokenizer(ref_texts, return_tensors="pt", padding=True, truncation=True,max_length=1024)
