@@ -73,6 +73,7 @@ print("00000000000")
 
 # We retrieve the dataloader by calling the `build_dataset` function.
 dataset = build_dataset(ppo_config, "trl-internal-testing/hh-rlhf-trl-style")
+print(dataset)
 print('111111111111')
 
 def collator(data):
