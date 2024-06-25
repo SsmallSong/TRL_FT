@@ -45,7 +45,6 @@
 
 # accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888 \
 python /home/wxt/huatong/TRL_FT/train_code/ppo_train.py \
-    --output_dir "/home/wxt/huatong/huggingface/hub/llama2_ppo_online_v1" \
     --mini_batch_size 32 \
     --learning_rate 3e-6 \
     --ppo_epochs 3 \
@@ -54,3 +53,4 @@ python /home/wxt/huatong/TRL_FT/train_code/ppo_train.py \
     --query_dataset="trl-internal-testing/hh-rlhf-trl-style" \
     --model_name="/home/wxt/huggingface/hub/llama2_sft_mirror/"  2>&1 | tee /home/wxt/huatong/TRL_FT/train_code/ppov1_logs_sft.txt 
 
+# --output_dir "/home/wxt/huatong/huggingface/hub/llama2_ppo_online_v1" \
