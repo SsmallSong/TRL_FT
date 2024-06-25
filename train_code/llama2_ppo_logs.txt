@@ -1,1 +1,181 @@
-train_ppo_trl.sh: line 4: --output_dir: command not found
+[2024-06-25 04:36:32,912] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-06-25 04:36:33,527] torch.distributed.run: [WARNING] 
+[2024-06-25 04:36:33,527] torch.distributed.run: [WARNING] *****************************************
+[2024-06-25 04:36:33,527] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-06-25 04:36:33,527] torch.distributed.run: [WARNING] *****************************************
+hello, reward model
+hello, reward model
+hello, reward model
+hello, reward model
+[2024-06-25 04:36:36,843] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-06-25 04:36:36,843] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-06-25 04:36:36,862] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-06-25 04:36:36,870] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+++++++++++++++++++++
+come on!
+++++++++++++++++++++
+/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+++++++++++++++++++++
+come on!
+++++++++++++++++++++
+/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+++++++++++++++++++++
+come on!
+++++++++++++++++++++
+/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+++++++++++++++++++++
+come on!
+++++++++++++++++++++
+/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.73s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.78s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.88s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.86s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.07s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.47s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.21s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.60s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.29s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.68s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.27s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.66s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.18s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.54s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.55s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.58s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.02s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.20s/it]
+begin loading pre-trained weights
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.30s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.49s/it]
+begin loading pre-trained weights
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.32s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.50s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.33s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.51s/it]
+begin loading pre-trained weights
+begin loading pre-trained weights
+loaded pre-trained weights
+[2024-06-25 04:36:56,044] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-06-25 04:36:56,045] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/ppov2_train.py", line 69, in <module>
+    config, model_config = parser.parse_args_into_dataclasses()
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/hf_argparser.py", line 348, in parse_args_into_dataclasses
+    raise ValueError(f"Some specified arguments are not used by the HfArgumentParser: {remaining_args}")
+ValueError: Some specified arguments are not used by the HfArgumentParser: ['--deepspeed3']
+loaded pre-trained weights
+[2024-06-25 04:36:56,635] [INFO] [comm.py:637:init_distributed] cdb=None
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/ppov2_train.py", line 69, in <module>
+    config, model_config = parser.parse_args_into_dataclasses()
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/hf_argparser.py", line 339, in parse_args_into_dataclasses
+    obj = dtype(**inputs)
+  File "<string>", line 158, in __init__
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/training_args.py", line 1641, in __post_init__
+    and (self.device.type == "cpu" and not is_torch_greater_or_equal_than_2_3)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/training_args.py", line 2149, in device
+    return self._setup_devices
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/utils/generic.py", line 59, in __get__
+    cached = self.fget(obj)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/training_args.py", line 2081, in _setup_devices
+    self.distributed_state = PartialState(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/state.py", line 280, in __init__
+    self.set_device()
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/state.py", line 790, in set_device
+    torch.cuda.set_device(self.device)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/cuda/__init__.py", line 408, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: CUDA error: invalid device ordinal
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[2024-06-25 04:36:57,147] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 1937301 closing signal SIGTERM
+[2024-06-25 04:36:57,148] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 1937302 closing signal SIGTERM
+[2024-06-25 04:36:57,148] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 1937303 closing signal SIGTERM
+[2024-06-25 04:36:57,414] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 1937300) of binary: /home/wxt/.conda/envs/rl/bin/python
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+Traceback (most recent call last):
+  File "/home/wxt/.conda/envs/rl/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1082, in launch_command
+    deepspeed_launcher(args)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/commands/launch.py", line 786, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/run.py", line 803, in run
+    elastic_launch(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 135, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/wxt/huatong/TRL_FT/train_code/ppov2_train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-06-25_04:36:57
+  host      : design-agent-09.internal.cloudapp.net
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1937300)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
