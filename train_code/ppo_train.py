@@ -47,7 +47,7 @@ model_name_or_path ='/home/wxt/huggingface/hub/llama2_sft_mirror/'
 # Below is an example function to build the dataset. In our case, we use the IMDB dataset
 # from the `datasets` library. One should customize this function to train the model on
 # its own dataset.
-def build_dataset(config, query_dataset, input_min_text_length=2, input_max_text_length=8):
+def build_dataset(config, query_dataset):
     
     tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
     tokenizer.pad_token = tokenizer.eos_token
@@ -56,7 +56,7 @@ def build_dataset(config, query_dataset, input_min_text_length=2, input_max_text
 
     def tokenize(sample):
         element_temp="\n<|user|>\n"+sample['prompt']+"\n<|assistant|>\n" 
-        sample["input_ids"] = tokenizer.encode(element_temp)
+        sample["input_ids"] = tokenizer.encode(element_temp, padding=True, truncation=True,max_length=512)
         sample["query"] = element_temp
         return sample
 
@@ -65,9 +65,11 @@ def build_dataset(config, query_dataset, input_min_text_length=2, input_max_text
     return ds
 
 
+print("00000000000")
+
 # We retrieve the dataloader by calling the `build_dataset` function.
 dataset = build_dataset(ppo_config, "trl-internal-testing/hh-rlhf-trl-style")
-
+print('111111111111')
 
 def collator(data):
     return {key: [d[key] for d in data] for key in data[0]}
@@ -107,7 +109,7 @@ tokenizer.pad_token_id = tokenizer.eos_token_id
 
 # We then build the PPOTrainer, passing the model, the reference model, the tokenizer
 ppo_trainer = PPOTrainer(ppo_config, model, ref_model, tokenizer, dataset=dataset, data_collator=collator)
-
+print("22222222222")
 # We then build the sentiment analysis pipeline, passing the model name and the
 # sentiment analysis pipeline arguments. Let's also make sure to set the device
 # to the same device as the PPOTrainer.
@@ -135,7 +137,7 @@ generation_kwargs = {
     "pad_token_id": tokenizer.eos_token_id,
     "max_new_tokens": 32,
 }
-
+print("333333333333")
 for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     query_tensors = batch["input_ids"]
 
@@ -156,11 +158,11 @@ for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     # batch["ref_rewards"] = ref_rewards
     
     texts = [q.replace("\n<|user|>\n","<|prompter|>").replace("\n<|assistant|>\n","<|endoftext|><|assistant|>") + r + "<|endoftext|>" for q, r in zip(batch["query"], batch["response"])]
-    inputs = tokenizer(texts, return_tensors="pt")
+    inputs = tokenizer(texts, return_tensors="pt", padding=True, truncation=True,max_length=1024)
     rewards = rm(**inputs).logits#.cpu().detach()
     
     ref_texts = [q.replace("\n<|user|>\n","<|prompter|>").replace("\n<|assistant|>\n","<|endoftext|><|assistant|>") + r + "<|endoftext|>" for q, r in zip(batch["query"], batch["ref_response"])]
-    ref_inputs = tokenizer(ref_texts, return_tensors="pt")
+    ref_inputs = tokenizer(ref_texts, return_tensors="pt", padding=True, truncation=True,max_length=1024)
     ref_rewards = rm(**ref_inputs).logits#.cpu().detach()
 
     # Run PPO step
