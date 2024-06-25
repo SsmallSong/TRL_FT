@@ -137,7 +137,7 @@ generation_kwargs = {
     "top_p": 1.0,
     "do_sample": True,
     "pad_token_id": tokenizer.eos_token_id,
-    "max_new_tokens": 512,
+    "max_new_tokens": 128,
 }
 print("333333333333")
 for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
