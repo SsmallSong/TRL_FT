@@ -46,7 +46,7 @@
 
 accelerate launch --config_file=/home/wxt/huatong/TRL_FT/config_file/deepspeed_zero3.yaml  --main_process_port 8888 \
     /home/wxt/huatong/TRL_FT/train_code/ppo_train.py \
-    --output_dir  /home/wxt/huatong/huggingface/hub/llama2_ppo_online_v1 \
+    --output_dir "/home/wxt/huatong/huggingface/hub/llama2_ppo_online_v1" \
     --num_mini_batches 32 \
     --learning_rate 3e-6 \
     --num_ppo_epochs 3 \
