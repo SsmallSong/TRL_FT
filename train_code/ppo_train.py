@@ -150,7 +150,7 @@ total_batches = len(ppo_trainer.dataloader)
 print("total_batches: ",total_batches)
 for _epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     print("The epoch is: ",_epoch)
-    print(batch)
+    # print(batch)
     query_tensors = batch["input_ids"]
 
     # Get response from gpt2
