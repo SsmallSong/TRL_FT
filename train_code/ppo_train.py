@@ -21,6 +21,7 @@ from trl.import_utils import is_npu_available, is_xpu_available
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
 tqdm.pandas()
+print("okokok")
 
 
 @dataclass
