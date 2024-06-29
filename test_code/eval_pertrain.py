@@ -19,7 +19,7 @@ sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
 #load_dict_path_list=["llama2_7b_sft_halos_2_3/LATEST/policy.pt","llama2_7b_dpo_halos_beta01/LATEST/policy.pt","llama2_7b_kto_halos_beta01/LATEST/policy.pt","llama2_7b_ppo_halos_2/LATEST/policy.pt"]
 # load_dict_path_list=["llama2_7b_ppo_halos_2/LATEST/policy.pt"]
 cache_path="/home/wxt/.cache/huggingface/hub"
-model_id="/home/wxt/huggingface/hub/7b_llama_ppo_openrlhf/"
+model_id="/home/wxt/huatong/huggingface/hub/7b_llama_ppo_openrlhf/"
 
 # for load_dict_path in load_dict_path_list:
     # now_dict=load_dict_path.split("/")[0]
