@@ -1,19 +1,19 @@
 export PYTHONIOENCODING=utf-8
 export OMP_NUM_THREADS=16
 
-index="llama2_7b_ppo_online_new"
+index="7b_llama_ppo_openrlhf"
 log_file="/home/wxt/huatong/TRL_FT/test_code/PRO/eval_hh/logs_new/generate_infer_main_$index.log"
 model_ckpt="non"
 
-# accelerate launch --config_file dp_config.yaml infer_and_eval_main_generate.py \
-#     --index $index \
-#     --model_ckpt $model_ckpt \
-#     --stage 1 > $log_file 2>&1 
+accelerate launch --config_file dp_config.yaml infer_and_eval_main_generate.py \
+    --index $index \
+    --model_ckpt $model_ckpt \
+    --stage 1 > $log_file 2>&1 
      
     
-# accelerate launch --config_file dp_config.yaml infer_and_eval_main_reward.py \
-#     --index $index \
-#     --stage 1 > $log_file 2>&1
+accelerate launch --config_file dp_config.yaml infer_and_eval_main_reward.py \
+    --index $index \
+    --stage 1 > $log_file 2>&1
 
 python -u infer_and_eval_main_score.py \
     --index $index \
