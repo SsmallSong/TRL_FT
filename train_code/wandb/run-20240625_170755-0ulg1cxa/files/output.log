@@ -1,0 +1,59 @@
+22222222222
+333333333333
+<accelerate.data_loader.DataLoaderShard object at 0x7fc080573670>
+total_batches:  1256
+The epoch is:  0
+444444444444
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+0it [00:00, ?it/s]You're using a LlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+55555555555555
+6666666666666
+0it [02:56, ?it/s]
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/ppo_train.py", line 187, in <module>
+    stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/ppo_trainer.py", line 817, in step
+    logprobs, logits, vpreds, _ = self.batched_forward_pass(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/ppo_trainer.py", line 1013, in batched_forward_pass
+    logits, _, values = model(**input_kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/models/modeling_value_head.py", line 171, in forward
+    base_model_output = self.pretrained_model(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 1164, in forward
+    outputs = self.model(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 968, in forward
+    layer_outputs = decoder_layer(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 727, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 216, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 0 has a total capacity of 79.15 GiB of which 50.12 MiB is free. Including non-PyTorch memory, this process has 79.08 GiB memory in use. Of the allocated memory 76.95 GiB is allocated by PyTorch, and 1.64 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

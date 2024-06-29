@@ -1,0 +1,33 @@
+22222222222
+333333333333
+<accelerate.data_loader.DataLoaderShard object at 0x7f4722a23610>
+total_batches:  1256
+The epoch is:  0
+444444444444
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+0it [00:00, ?it/s]You're using a LlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+55555555555555
+6666666666666
+0it [02:55, ?it/s]
+Traceback (most recent call last):
+  File "/home/wxt/huatong/TRL_FT/train_code/ppo_train.py", line 187, in <module>
+    stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/ppo_trainer.py", line 824, in step
+    train_stats = self.train_minibatch(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/trl/trainer/ppo_trainer.py", line 1101, in train_minibatch
+    self.optimizer.step()
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/accelerate/optimizer.py", line 170, in step
+    self.optimizer.step(closure)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/optim/optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/optim/adam.py", line 157, in step
+    has_complex = self._init_group(
+  File "/home/wxt/.conda/envs/rl/lib/python3.10/site-packages/torch/optim/adam.py", line 111, in _init_group
+    state['exp_avg'] = torch.zeros_like(p, memory_format=torch.preserve_format)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 64.00 MiB. GPU 0 has a total capacity of 79.15 GiB of which 20.12 MiB is free. Including non-PyTorch memory, this process has 79.11 GiB memory in use. Of the allocated memory 78.34 GiB is allocated by PyTorch, and 279.71 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
