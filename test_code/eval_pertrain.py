@@ -11,15 +11,15 @@ from vllm import LLM, SamplingParams
 import pickle as pkl
 from transformers import AutoModelForCausalLM
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
-f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
-x = open(f).readlines()
+# f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
+# x = open(f).readlines()
 
 sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
 
 #load_dict_path_list=["llama2_7b_sft_halos_2_3/LATEST/policy.pt","llama2_7b_dpo_halos_beta01/LATEST/policy.pt","llama2_7b_kto_halos_beta01/LATEST/policy.pt","llama2_7b_ppo_halos_2/LATEST/policy.pt"]
 # load_dict_path_list=["llama2_7b_ppo_halos_2/LATEST/policy.pt"]
-cache_path="/home/wxt/.cache/huggingface/hub"
-model_id="/home/wxt/huatong/huggingface/hub/7b_llama_ppo_openrlhf/"
+cache_path="/root/.cache/huggingface/hub"
+model_id="/root/.cache/huggingface/hub/7b_llama3_inst_ppo_openrlhf"
 
 # for load_dict_path in load_dict_path_list:
     # now_dict=load_dict_path.split("/")[0]
@@ -52,21 +52,32 @@ print('1111111111111')
 
 # if not os.path.exists('alpaca_{}.json'.format(now_dict.replace('/', ''))):
 
-if not os.path.exists('alpaca_{}.json'.format('7b_llama_ppo_openrlhf')):
-    llm = LLM(model=model_id, tensor_parallel_size=1,trust_remote_code=True)
+if not os.path.exists('alpaca_{}.json'.format('8b_llama3_ppo_openrlhf')):
+    # llm = LLM(model=model_id, tensor_parallel_size=1,trust_remote_code=True)
     
     import datasets
     eval_set = datasets.load_dataset("tatsu-lab/alpaca_eval", "alpaca_eval",trust_remote_code=True)["eval"]
     alpaca_prompts = []
+
+    
     for example in eval_set:
-        alpaca_prompts.append('\n<|user|>\n{}\n<|assistant|>\n'.format(example["instruction"]))
+        # alpaca_prompts.append('\n<|user|>\n{}\n<|assistant|>\n'.format(example["instruction"]))
+        messages = [
+            {"role": "user", "content": example["instruction"]},
+        ]
+        print(messanges)
+        
+        input_ids = tokenizer.apply_chat_template(messages,add_generation_prompt=False,return_tensors="pt")
+        print(messages)
+        kill
+        
     res = []
     alpaca_predicts = llm.generate(alpaca_prompts, sampling_params)
     for i, example in enumerate(eval_set):
         example["output"] = alpaca_predicts[i].outputs[0].text.strip()
         example['output'] = example['output'].replace('<|im_start|>','')
         res.append(example)
-    alpaca_out = open('alpaca_{}.json'.format('7b_llama_ppo_openrlhf'), 'w')
+    alpaca_out = open('alpaca_{}.json'.format('8b_llama3_ppo_openrlhf'), 'w')
     json.dump(res, alpaca_out, ensure_ascii=False, indent=4)
     del llm
     torch.cuda.empty_cache()
