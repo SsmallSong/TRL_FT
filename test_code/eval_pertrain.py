@@ -18,8 +18,8 @@ sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
 
 #load_dict_path_list=["llama2_7b_sft_halos_2_3/LATEST/policy.pt","llama2_7b_dpo_halos_beta01/LATEST/policy.pt","llama2_7b_kto_halos_beta01/LATEST/policy.pt","llama2_7b_ppo_halos_2/LATEST/policy.pt"]
 # load_dict_path_list=["llama2_7b_ppo_halos_2/LATEST/policy.pt"]
-cache_path="/root/.cache/huggingface/hub"
-model_id="/root/.cache/huggingface/hub/7b_llama3_inst_ppo_openrlhf"
+cache_path="/home/wxt/.cache/huggingface/hub"
+model_id="/home/wxt/.cache/huggingface/hub/7b_llama3_inst_ppo_openrlhf"
 
 # for load_dict_path in load_dict_path_list:
     # now_dict=load_dict_path.split("/")[0]
@@ -53,7 +53,7 @@ print('1111111111111')
 # if not os.path.exists('alpaca_{}.json'.format(now_dict.replace('/', ''))):
 
 if not os.path.exists('alpaca_{}.json'.format('8b_llama3_ppo_openrlhf')):
-    # llm = LLM(model=model_id, tensor_parallel_size=1,trust_remote_code=True)
+    llm = LLM(model=model_id, tensor_parallel_size=1,trust_remote_code=True)
     
     import datasets
     eval_set = datasets.load_dataset("tatsu-lab/alpaca_eval", "alpaca_eval",trust_remote_code=True)["eval"]
@@ -65,13 +65,15 @@ if not os.path.exists('alpaca_{}.json'.format('8b_llama3_ppo_openrlhf')):
         messages = [
             {"role": "user", "content": example["instruction"]},
         ]
-        print(messanges)
+      #  print(messages)
         
-        mes = tokenizer.apply_chat_template(messages,add_generation_prompt=False,return_tensors="pt")
-        print(mes)
+        mes = tokenizer.apply_chat_template(messages,add_generation_prompt=True,tokenize=False,return_tensors="pt")
+      #  print(mes)
+        #q_mes = tokenizer.apply_chat_template(messages,add_generation_prompt=False,tokenize=False,return_tensors="pt")
+       # print(q_mes)
         alpaca_prompts.append(mes)
-        print(alpaca_prompts)
-        kill
+       # print(alpaca_prompts)
+       # kill
         
         
     res = []
