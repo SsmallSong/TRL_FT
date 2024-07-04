@@ -67,9 +67,12 @@ if not os.path.exists('alpaca_{}.json'.format('8b_llama3_ppo_openrlhf')):
         ]
         print(messanges)
         
-        input_ids = tokenizer.apply_chat_template(messages,add_generation_prompt=False,return_tensors="pt")
-        print(messages)
+        mes = tokenizer.apply_chat_template(messages,add_generation_prompt=False,return_tensors="pt")
+        print(mes)
+        alpaca_prompts.append(mes)
+        print(alpaca_prompts)
         kill
+        
         
     res = []
     alpaca_predicts = llm.generate(alpaca_prompts, sampling_params)
