@@ -87,4 +87,177 @@ if not os.path.exists('alpaca_{}.json'.format('8b_llama3_ppo_openrlhf')):
     json.dump(res, alpaca_out, ensure_ascii=False, indent=4)
     del llm
     torch.cuda.empty_cache()
-    
+
+messes = []
+with open('alpaca_{}.json'.format('8b_llama3_ppo_openrlhf'), 'r', encoding='utf-8') as file:
+    res = json.load(file)
+
+for e in res:
+    messes.append([{'role': 'user', 'content': e['instruction']}, {'role': 'assistant', 'content': e['output']}])
+
+print(len(messes))
+# print(messes[0])
+print('333333333333')
+
+ray_reward_model = transformers.AutoModelForSequenceClassification.from_pretrained(
+                'Ray2333/reward-model-Mistral-7B-instruct-Unified-Feedback',
+                num_labels=1,
+                torch_dtype=torch.bfloat16,
+                # load_in_4bit=True,
+                # bnb_4bit_compute_dtype=torch.bfloat16
+            )
+ray_reward_model.cuda()
+ray_reward_model.eval()
+ray_tokenizer = transformers.AutoTokenizer.from_pretrained('Ray2333/reward-model-Mistral-7B-instruct-Unified-Feedback')
+ray_tokenizer.truncation_side = "left"
+#ray_tokenizer = transformers.AutoTokenizer.from_pretrained(
+ #   'Ray2333/reward-model-Mistral-7B-instruct-Unified-Feedback')
+
+batch_size=4
+scores = []
+for i in range(0, len(messes), batch_size):
+    batch_mess = messes[i:i+batch_size]
+    # batch_tgt = predicts[i:i + batch_size]
+    def get_mess(mess):
+        mess = [ray_tokenizer.apply_chat_template(e, tokenize=False) for e in mess]
+        # mess = self.ray_tokenizer.encode_plus(mess, padding=True, max_length=4096, truncation=True, return_tensors="pt")
+        mess = ray_tokenizer(mess, padding=True, max_length=4096, truncation=True,
+                                  return_tensors="pt")
+        mess = {k: v.to(ray_reward_model.device) for k, v in mess.items()}
+
+        return mess
+
+    inputs = get_mess(batch_mess)
+    with torch.no_grad():
+        output = ray_reward_model(**inputs)
+
+        # batch_score = torch.sigmoid(output.logits.float().view(-1)).detach().cpu().numpy()
+        batch_score = output.logits.float().view(-1).detach().cpu().numpy()
+    scores.extend(batch_score)
+
+print('4444444444444444')
+
+
+f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
+x = open(f).readlines()
+scores_dict = {}
+for i, e in enumerate(x[:]):
+    e = json.loads(e)
+    cate = e['category']
+    if cate not in scores_dict:
+        scores_dict[cate] = []
+    scores_dict[cate].append(scores[i])
+
+for k, v in scores_dict.items():
+    scores_dict[k] = np.mean(scores_dict[k])
+
+print(scores_dict)
+print(np.mean(scores))
+
+del ray_reward_model
+torch.cuda.empty_cache()
+
+print('5555555555555')
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import model_training.models.reward_model
+
+model_name = 'OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5'
+hh_tokenizer = AutoTokenizer.from_pretrained(model_name)
+#self.hh_reward_model = AutoModelForSequenceClassification.from_pretrained(model_name, load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16)
+hh_reward_model = AutoModelForSequenceClassification.from_pretrained(model_name, torch_dtype=torch.bfloat16,)
+hh_reward_model.cuda()
+hh_reward_model.eval()
+hh_tokenizer.truncation_side = "left"
+
+
+
+batch_size=4
+scores = []
+for i in range(0, len(messes), batch_size):
+    batch_mess = messes[i:i+batch_size]
+    # batch_tgt = predicts[i:i + batch_size]
+    def get_mess(messes):
+        str_res = []
+        for mess in messes:
+            res = ""
+            for e in mess:
+                if e['role'] == 'assistant':
+                    res += '<|assistant|>{}{}'.format(e['content'], hh_tokenizer.eos_token)
+                else:
+                    res += '<|prompter|>{}{}'.format(e['content'], hh_tokenizer.eos_token)
+            str_res.append(res)
+        mess = hh_tokenizer(str_res, padding=True, max_length=2048, truncation=True,
+                                 return_tensors="pt")
+        mess = {k: v.to(hh_reward_model.device) for k, v in mess.items()}
+        return mess
+
+    inputs = get_mess(batch_mess)
+    with torch.no_grad():
+        output = hh_reward_model(**inputs)
+        # batch_score = torch.sigmoid(output.logits.float().view(-1)).detach().cpu().numpy()
+        batch_score = output.logits.float().view(-1).detach().cpu().numpy()
+    scores.extend(batch_score)
+print('666666666666')
+f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
+x = open(f).readlines()
+scores_dict = {}
+for i, e in enumerate(x[:]):
+    e = json.loads(e)
+    cate = e['category']
+    if cate not in scores_dict:
+        scores_dict[cate] = []
+    scores_dict[cate].append(scores[i])
+
+for k, v in scores_dict.items():
+    scores_dict[k] = np.mean(scores_dict[k])
+
+print(scores_dict)
+print(np.mean(scores))
+del hh_reward_model
+torch.cuda.empty_cache()
+print('777777777777')
+
+eu_reward_model = transformers.AutoModel.from_pretrained(
+                'openbmb/Eurus-RM-7b',
+                torch_dtype=torch.bfloat16,
+                trust_remote_code=True
+            )
+eu_reward_model.cuda()
+eu_reward_model.eval()
+eu_tokenizer = transformers.AutoTokenizer.from_pretrained(
+                'openbmb/Eurus-RM-7b')
+eu_tokenizer.truncation_side = "left"
+
+batch_size=1
+scores = []
+for i in range(0, len(messes), batch_size):
+    batch_mess = messes[i:i+batch_size]
+    # batch_tgt = predicts[i:i + batch_size]
+    def get_mess(messes):
+        final_mess = []
+        for m in messes:
+            str_res = ""
+            for e in m:
+                if e['role'] == 'system':
+                    str_res += '[INST] ' + e['content']
+                if e['role'] == 'user':
+                    str_res += '[INST] ' + e['content']
+                else:
+                    str_res += ' [\INST] ' + e['content']
+            final_mess.append(str_res)
+        mess = eu_tokenizer(final_mess, max_length=4096, truncation=True,
+                                 return_tensors="pt")
+        mess = {k: v.to(eu_reward_model.device) for k, v in mess.items()}
+        return mess
+
+    inputs = get_mess(batch_mess)
+    with torch.no_grad():
+        output = eu_reward_model(**inputs)
+        # batch_score = torch.sigmoid(output.float().view(-1)).detach().cpu().numpy()
+        batch_score = output.float().view(-1).detach().cpu().numpy()
+    scores.extend(batch_score)
+print(np.mean(scores))
+print('888888888888')
+del eu_reward_model
+torch.cuda.empty_cache()
+
