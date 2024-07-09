@@ -66,9 +66,10 @@ if not os.path.exists('alpaca_{}.json'.format('8b_llama3_ppo_openrlhf')):
             {"role": "user", "content": example["instruction"]},
         ]
       #  print(messages)
-        
+        #print(messages)
         mes = tokenizer.apply_chat_template(messages,add_generation_prompt=True,tokenize=False,return_tensors="pt")
-      #  print(mes)
+        #print(mes)
+        #kill
         #q_mes = tokenizer.apply_chat_template(messages,add_generation_prompt=False,tokenize=False,return_tensors="pt")
        # print(q_mes)
         alpaca_prompts.append(mes)
