@@ -139,7 +139,8 @@ if not os.path.exists('alpaca_{}.json'.format(model_id.replace('/', ''))):
     llm = LLM(model=model_id, tensor_parallel_size=1,
                       trust_remote_code=True)
     import datasets
-    eval_set = datasets.load_dataset("mt-bench/alpaca_eval", "alpaca_eval")["eval"]
+    # eval_set = datasets.load_dataset("mt-bench/alpaca_eval", "alpaca_eval")["eval"]
+    eval_set = datasets.load_dataset("tatsu-lab/alpaca_eval", "alpaca_eval",trust_remote_code=True)["eval"]
     alpaca_prompts = []
     for example in eval_set:
         if hh_temp:
