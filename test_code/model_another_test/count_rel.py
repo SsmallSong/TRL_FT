@@ -60,8 +60,8 @@ fs = []
 # 
 # 3391.6226
 # 0.16634998
-f = '/mnt/data_local/tmp/llama/alpaca_mntdata_largeccyllama3_5e-7_64_mbeta0.15_hh_len2048_tgt1024_win256checkpoint-700.json'
-f = '/mnt/data_large/ccy/alpaca_mntdata_largeccyLlama-3-Instruct-8B-DPO.json'
+# f = '/mnt/data_local/tmp/llama/alpaca_mntdata_largeccyllama3_5e-7_64_mbeta0.15_hh_len2048_tgt1024_win256checkpoint-700.json'
+# f = '/mnt/data_large/ccy/alpaca_mntdata_largeccyLlama-3-Instruct-8B-DPO.json'
 
 import argparse
 def get_args():
@@ -73,7 +73,7 @@ def get_args():
 
 args = get_args()
 
-f = '/mnt/data_local/tmp/llama/alpaca_{}.json'.format(args.model_id.replace('/',''))
+f = '/home/wxt/huatong/TRL_FT/test_code/model_another_test/alpaca_{}.json'.format(args.model_id.replace('/',''))
 
 
 fs.append(f)
@@ -93,13 +93,13 @@ fs.append(f)
 
 def count_eurus_reward(messes):
     eu_reward_model = transformers.AutoModel.from_pretrained(
-                '/mnt/data_large/ccy/Eurus-RM-7b',
+                'openbmb/Eurus-RM-7b',
                 trust_remote_code=True
             )
     eu_reward_model.cuda()
     eu_reward_model.eval()
     eu_tokenizer = transformers.AutoTokenizer.from_pretrained(
-                    '/mnt/data_large/ccy/Eurus-RM-7b')
+                    'openbmb/Eurus-RM-7b')
     eu_tokenizer.truncation_side = "left"
     batch_size=1
     scores = []
@@ -136,7 +136,7 @@ def count_eurus_reward(messes):
 
 def count_llama3_reward(messes):
 
-    path = "/mnt/data_large/ccy/ArmoRM-Llama3-8B-v0.1"
+    path = "RLHFlow/ArmoRM-Llama3-8B-v0.1"
             
     model = transformers.AutoModelForSequenceClassification.from_pretrained(path, device_map='cuda', 
                         trust_remote_code=True)
@@ -189,9 +189,9 @@ def count_hh_reward(messes):
     import model_training.models.reward_model
     from transformers import AutoTokenizer, AutoModelForSequenceClassification
     model_name = 'OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5'
-    model_name = '/mnt/data_large/ccy/oasst-rm-2.1-pythia-1.4b-epoch-2.5'
+    # model_name = '/mnt/data_large/ccy/oasst-rm-2.1-pythia-1.4b-epoch-2.5'
 
-    #path = "/mnt/data_large/ccy/ArmoRM-Llama3-8B-v0.1"
+
     model = transformers.AutoModelForSequenceClassification.from_pretrained(model_name, device_map='cuda', 
                         trust_remote_code=True)
 
