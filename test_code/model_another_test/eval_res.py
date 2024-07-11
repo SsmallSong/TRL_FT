@@ -9,7 +9,7 @@ import transformers
 from vllm import LLM, SamplingParams
 import pickle as pkl
 
-f = '../llama/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
+f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
 sampling_params = SamplingParams(temperature=0, max_tokens=2048, n=1)
 
@@ -183,7 +183,7 @@ print(messes[0])
 
 
 ray_reward_model = transformers.AutoModelForSequenceClassification.from_pretrained(
-                '/mnt/data_large/ccy/reward-model-Mistral-7B-instruct-Unified-Feedback',
+                'Ray2333/reward-model-Mistral-7B-instruct-Unified-Feedback',
                 num_labels=1,
                 torch_dtype=torch.bfloat16,
                 # load_in_4bit=True,
@@ -191,10 +191,10 @@ ray_reward_model = transformers.AutoModelForSequenceClassification.from_pretrain
             )
 ray_reward_model.cuda()
 ray_reward_model.eval()
-ray_tokenizer = transformers.AutoTokenizer.from_pretrained('/mnt/data_large/ccy/reward-model-Mistral-7B-instruct-Unified-Feedback')
+ray_tokenizer = transformers.AutoTokenizer.from_pretrained('Ray2333/reward-model-Mistral-7B-instruct-Unified-Feedback')
 ray_tokenizer.truncation_side = "left"
 ray_tokenizer = transformers.AutoTokenizer.from_pretrained(
-    '/mnt/data_large/ccy/reward-model-Mistral-7B-instruct-Unified-Feedback')
+    'Ray2333/reward-model-Mistral-7B-instruct-Unified-Feedback')
 
 batch_size=4
 scores = []
@@ -221,7 +221,7 @@ for i in range(0, len(messes), batch_size):
 
 
 
-f = '../llama/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
+f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
 scores_dict = {}
 for i, e in enumerate(x[:]):
@@ -244,7 +244,7 @@ torch.cuda.empty_cache()
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import model_training.models.reward_model
 
-model_name = '/mnt/data_large/ccy/oasst-rm-2.1-pythia-1.4b-epoch-2.5'
+model_name = 'OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5'
 hh_tokenizer = AutoTokenizer.from_pretrained(model_name)
 #self.hh_reward_model = AutoModelForSequenceClassification.from_pretrained(model_name, load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16)
 hh_reward_model = AutoModelForSequenceClassification.from_pretrained(model_name, torch_dtype=torch.bfloat16,)
@@ -281,7 +281,7 @@ for i in range(0, len(messes), batch_size):
         batch_score = output.logits.float().view(-1).detach().cpu().numpy()
     scores.extend(batch_score)
 
-f = '../llama/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
+f = '/home/wxt/huatong/FastChat/fastchat/llm_judge/data/mt_bench/question.jsonl'
 x = open(f).readlines()
 scores_dict = {}
 for i, e in enumerate(x[:]):
@@ -303,14 +303,14 @@ torch.cuda.empty_cache()
 '''
 '''
 eu_reward_model = transformers.AutoModel.from_pretrained(
-                '/mnt/data_large/ccy/Eurus-RM-7b',
+                'openbmb/Eurus-RM-7b',
                 torch_dtype=torch.bfloat16,
                 trust_remote_code=True
             )
 eu_reward_model.cuda()
 eu_reward_model.eval()
 eu_tokenizer = transformers.AutoTokenizer.from_pretrained(
-                '/mnt/data_large/ccy/Eurus-RM-7b')
+                'openbmb/Eurus-RM-7b')
 eu_tokenizer.truncation_side = "left"
 
 batch_size=1
