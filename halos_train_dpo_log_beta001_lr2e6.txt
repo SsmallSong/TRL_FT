@@ -1,0 +1,1120 @@
+4
+Making experiment directory /home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_beta001_lr2e6
+no FSDP port specified; using open port for FSDP: 59699
+seed: 1
+exp_name: llama2_7b_dpo_halos_beta001_lr2e6
+datasets:
+- hh
+mode: train
+debug: false
+use_fsdp: true
+fsdp_port: 59699
+wandb:
+  enabled: true
+  entity: null
+  project: archangel
+cache_dir: /home/wxt/.cache/huggingface/hub
+local_run_dir: /home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_beta001_lr2e6
+do_first_eval: true
+minimum_log_interval_secs: 1.0
+intermediate_checkpoints: false
+trainer: DPOTrainer
+lr: 2.0e-06
+n_epochs: 1
+n_examples: null
+optimizer: RMSprop
+warmup_steps: 150
+eval_every: 4000
+n_samples: 128
+samples_dir: samples/
+n_eval_examples: 512
+saved_policy: /home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_beta001_lr2e6/LATEST/policy.pt
+top_p: 0.95
+human_prefix: '
+
+  <|user|>
+
+  '
+assistant_prefix: '
+
+  <|assistant|>
+
+  '
+human_suffix: ''
+assistant_suffix: ''
+frac_unique_desirable: 1.0
+frac_unique_undesirable: 1.0
+model:
+  name_or_path: /home/wxt/huatong/huggingface/hub/7b_llama_ppo_openrlhf
+  tokenizer_name_or_path: null
+  load_from: /home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt
+  block_name: LlamaDecoderLayer
+  policy_dtype: bfloat16
+  fsdp_policy_mp: null
+  reference_dtype: bfloat16
+  max_grad_norm: 10.0
+  v_head_max_grad_norm: 0.1
+  max_length: 1024
+  max_prompt_length: 512
+  activation_checkpointing: true
+  batch_size: 16
+  gradient_accumulation_steps: 4
+  eval_batch_size: 16
+  use_flash_attention: false
+loss:
+  name: dpo
+  beta: 0.01
+  trainer: DPOTrainer
+  dataloader: PairedPreferenceDataLoader
+  use_reference_model: true
+
+================================================================================
+Writing to design-agent-09:/home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_beta001_lr2e6
+================================================================================
+building policy
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  6.89it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  7.84it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  8.30it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  8.05it/s]
+building reference model
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  9.15it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  9.62it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  9.80it/s]
+loading pre-trained weights at step 159968 from /home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt with metrics {}
+loaded pre-trained weights
+Loading tokenizer /home/wxt/huatong/huggingface/hub/7b_llama_ppo_openrlhf
+0 special tokens added
+Loading HH dataset (train split) from Huggingface...
+Processing HH:   0%|          | 0/160800 [00:00<?, ?it/s]Processing HH:   1%|          | 1470/160800 [00:00<00:10, 14688.95it/s]Processing HH:   2%|▏         | 2939/160800 [00:00<00:10, 14373.10it/s]Processing HH:   3%|▎         | 4377/160800 [00:00<00:10, 14351.38it/s]Processing HH:   4%|▎         | 5813/160800 [00:00<00:10, 14324.53it/s]Processing HH:   5%|▍         | 7284/160800 [00:00<00:10, 14461.71it/s]Processing HH:   5%|▌         | 8731/160800 [00:00<00:10, 14266.14it/s]Processing HH:   6%|▋         | 10159/160800 [00:00<00:10, 14211.88it/s]Processing HH:   7%|▋         | 11613/160800 [00:00<00:10, 14203.29it/s]Processing HH:   8%|▊         | 13091/160800 [00:00<00:10, 14376.76it/s]Processing HH:   9%|▉         | 14577/160800 [00:01<00:10, 14519.74it/s]Processing HH:  10%|▉         | 16030/160800 [00:01<00:13, 10484.99it/s]Processing HH:  11%|█         | 17388/160800 [00:01<00:12, 11222.79it/s]Processing HH:  12%|█▏        | 18781/160800 [00:01<00:11, 11910.86it/s]Processing HH:  13%|█▎        | 20142/160800 [00:01<00:11, 12361.70it/s]Processing HH:  13%|█▎        | 21476/160800 [00:01<00:11, 12631.27it/s]Processing HH:  14%|█▍        | 22927/160800 [00:01<00:10, 13161.48it/s]Processing HH:  15%|█▌        | 24300/160800 [00:01<00:10, 13322.94it/s]Processing HH:  16%|█▌        | 25704/160800 [00:01<00:09, 13528.55it/s]Processing HH:  17%|█▋        | 27132/160800 [00:02<00:09, 13747.46it/s]Processing HH:  18%|█▊        | 28561/160800 [00:02<00:09, 13906.07it/s]Processing HH:  19%|█▊        | 29964/160800 [00:02<00:09, 13802.09it/s]Processing HH:  19%|█▉        | 31353/160800 [00:02<00:09, 13813.54it/s]Processing HH:  20%|██        | 32791/160800 [00:02<00:09, 13981.08it/s]Processing HH:  21%|██▏       | 34194/160800 [00:02<00:12, 10055.90it/s]Processing HH:  22%|██▏       | 35574/160800 [00:02<00:11, 10930.21it/s]Processing HH:  23%|██▎       | 37017/160800 [00:02<00:10, 11806.75it/s]Processing HH:  24%|██▍       | 38422/160800 [00:02<00:09, 12396.23it/s]Processing HH:  25%|██▍       | 39904/160800 [00:03<00:09, 13058.73it/s]Processing HH:  26%|██▌       | 41298/160800 [00:03<00:08, 13304.25it/s]Processing HH:  27%|██▋       | 42705/160800 [00:03<00:08, 13521.11it/s]Processing HH:  27%|██▋       | 44093/160800 [00:03<00:08, 13121.20it/s]Processing HH:  28%|██▊       | 45441/160800 [00:03<00:08, 13220.37it/s]Processing HH:  29%|██▉       | 46783/160800 [00:03<00:08, 13277.62it/s]Processing HH:  30%|██▉       | 48125/160800 [00:03<00:08, 13295.99it/s]Processing HH:  31%|███       | 49561/160800 [00:03<00:08, 13608.63it/s]Processing HH:  32%|███▏      | 50930/160800 [00:03<00:08, 13579.03it/s]Processing HH:  33%|███▎      | 52328/160800 [00:03<00:07, 13696.63it/s]Processing HH:  33%|███▎      | 53717/160800 [00:04<00:07, 13670.97it/s]Processing HH:  34%|███▍      | 55114/160800 [00:04<00:07, 13759.67it/s]Processing HH:  35%|███▌      | 56492/160800 [00:04<00:07, 13547.64it/s]Processing HH:  36%|███▌      | 57849/160800 [00:04<00:11, 9343.82it/s] Processing HH:  37%|███▋      | 59186/160800 [00:04<00:09, 10248.68it/s]Processing HH:  38%|███▊      | 60572/160800 [00:04<00:09, 11126.90it/s]Processing HH:  38%|███▊      | 61901/160800 [00:04<00:08, 11684.59it/s]Processing HH:  39%|███▉      | 63321/160800 [00:04<00:07, 12359.39it/s]Processing HH:  40%|████      | 64656/160800 [00:05<00:07, 12634.47it/s]Processing HH:  41%|████      | 66071/160800 [00:05<00:07, 13063.82it/s]Processing HH:  42%|████▏     | 67448/160800 [00:05<00:07, 13266.98it/s]Processing HH:  43%|████▎     | 68805/160800 [00:05<00:07, 13126.56it/s]Processing HH:  44%|████▎     | 70175/160800 [00:05<00:06, 13291.80it/s]Processing HH:  44%|████▍     | 71520/160800 [00:05<00:06, 13101.73it/s]Processing HH:  45%|████▌     | 72937/160800 [00:05<00:06, 13412.50it/s]Processing HH:  46%|████▌     | 74287/160800 [00:05<00:06, 13414.37it/s]Processing HH:  47%|████▋     | 75681/160800 [00:05<00:06, 13568.47it/s]Processing HH:  48%|████▊     | 77069/160800 [00:05<00:06, 13658.58it/s]Processing HH:  49%|████▉     | 78439/160800 [00:06<00:06, 13450.62it/s]Processing HH:  50%|████▉     | 79829/160800 [00:06<00:05, 13582.49it/s]Processing HH:  50%|█████     | 81190/160800 [00:06<00:06, 13202.55it/s]Processing HH:  51%|█████▏    | 82514/160800 [00:06<00:05, 13183.84it/s]Processing HH:  52%|█████▏    | 83853/160800 [00:06<00:05, 13241.16it/s]Processing HH:  53%|█████▎    | 85197/160800 [00:06<00:05, 13294.76it/s]Processing HH:  54%|█████▍    | 86528/160800 [00:06<00:08, 8614.85it/s] Processing HH:  54%|█████▍    | 87601/160800 [00:06<00:08, 8457.96it/s]Processing HH:  55%|█████▌    | 88593/160800 [00:07<00:08, 8414.35it/s]Processing HH:  56%|█████▌    | 89536/160800 [00:07<00:08, 8206.21it/s]Processing HH:  56%|█████▌    | 90426/160800 [00:07<00:08, 8186.40it/s]Processing HH:  57%|█████▋    | 91293/160800 [00:07<00:08, 8125.01it/s]Processing HH:  57%|█████▋    | 92142/160800 [00:07<00:08, 8214.45it/s]Processing HH:  58%|█████▊    | 92988/160800 [00:07<00:08, 8062.10it/s]Processing HH:  58%|█████▊    | 93842/160800 [00:07<00:08, 8190.52it/s]Processing HH:  59%|█████▉    | 94674/160800 [00:07<00:08, 8042.95it/s]Processing HH:  59%|█████▉    | 95488/160800 [00:07<00:08, 8047.32it/s]Processing HH:  60%|█████▉    | 96299/160800 [00:08<00:08, 7910.42it/s]Processing HH:  60%|██████    | 97095/160800 [00:08<00:08, 7701.95it/s]Processing HH:  61%|██████    | 97882/160800 [00:08<00:08, 7748.64it/s]Processing HH:  61%|██████▏   | 98660/160800 [00:08<00:08, 7721.47it/s]Processing HH:  62%|██████▏   | 99435/160800 [00:08<00:07, 7726.83it/s]Processing HH:  62%|██████▏   | 100209/160800 [00:08<00:07, 7687.61it/s]Processing HH:  63%|██████▎   | 101017/160800 [00:08<00:07, 7802.53it/s]Processing HH:  63%|██████▎   | 101842/160800 [00:08<00:07, 7934.55it/s]Processing HH:  64%|██████▍   | 102676/160800 [00:08<00:07, 8052.32it/s]Processing HH:  64%|██████▍   | 103524/160800 [00:08<00:07, 8179.22it/s]Processing HH:  65%|██████▍   | 104343/160800 [00:09<00:06, 8162.95it/s]Processing HH:  65%|██████▌   | 105169/160800 [00:09<00:06, 8187.89it/s]Processing HH:  66%|██████▌   | 105989/160800 [00:09<00:06, 8110.17it/s]Processing HH:  66%|██████▋   | 106812/160800 [00:09<00:06, 8144.01it/s]Processing HH:  67%|██████▋   | 107627/160800 [00:09<00:06, 8118.45it/s]Processing HH:  67%|██████▋   | 108440/160800 [00:09<00:06, 8044.09it/s]Processing HH:  68%|██████▊   | 109653/160800 [00:09<00:05, 9253.92it/s]Processing HH:  69%|██████▉   | 110830/160800 [00:09<00:04, 10001.47it/s]Processing HH:  70%|██████▉   | 112054/160800 [00:09<00:04, 10668.65it/s]Processing HH:  70%|███████   | 113213/160800 [00:10<00:04, 10943.64it/s]Processing HH:  71%|███████   | 114437/160800 [00:10<00:04, 11330.35it/s]Processing HH:  72%|███████▏  | 115684/160800 [00:10<00:03, 11670.79it/s]Processing HH:  73%|███████▎  | 116852/160800 [00:10<00:03, 11499.06it/s]Processing HH:  73%|███████▎  | 118083/160800 [00:10<00:03, 11738.89it/s]Processing HH:  74%|███████▍  | 119258/160800 [00:10<00:03, 11707.75it/s]Processing HH:  75%|███████▍  | 120464/160800 [00:10<00:03, 11811.20it/s]Processing HH:  76%|███████▌  | 121646/160800 [00:10<00:03, 11801.08it/s]Processing HH:  76%|███████▋  | 122827/160800 [00:11<00:05, 7354.10it/s] Processing HH:  77%|███████▋  | 124034/160800 [00:11<00:04, 8343.43it/s]Processing HH:  78%|███████▊  | 125205/160800 [00:11<00:03, 9119.07it/s]Processing HH:  79%|███████▊  | 126342/160800 [00:11<00:03, 9676.78it/s]Processing HH:  79%|███████▉  | 127518/160800 [00:11<00:03, 10220.78it/s]Processing HH:  80%|████████  | 128747/160800 [00:11<00:02, 10782.81it/s]Processing HH:  81%|████████  | 129941/160800 [00:11<00:02, 11104.82it/s]Processing HH:  82%|████████▏ | 131103/160800 [00:11<00:02, 11225.47it/s]Processing HH:  82%|████████▏ | 132309/160800 [00:11<00:02, 11463.40it/s]Processing HH:  83%|████████▎ | 133490/160800 [00:11<00:02, 11563.95it/s]Processing HH:  84%|████████▍ | 134719/160800 [00:12<00:02, 11776.80it/s]Processing HH:  85%|████████▍ | 135911/160800 [00:12<00:02, 11771.68it/s]Processing HH:  85%|████████▌ | 137128/160800 [00:12<00:01, 11888.87it/s]Processing HH:  86%|████████▌ | 138324/160800 [00:12<00:01, 11724.26it/s]Processing HH:  87%|████████▋ | 139502/160800 [00:12<00:01, 11626.91it/s]Processing HH:  88%|████████▊ | 140703/160800 [00:12<00:01, 11737.99it/s]Processing HH:  88%|████████▊ | 141880/160800 [00:12<00:01, 11396.16it/s]Processing HH:  89%|████████▉ | 143064/160800 [00:12<00:01, 11524.78it/s]Processing HH:  90%|████████▉ | 144247/160800 [00:12<00:01, 11611.42it/s]Processing HH:  90%|█████████ | 145473/160800 [00:12<00:01, 11801.24it/s]Processing HH:  91%|█████████ | 146671/160800 [00:13<00:01, 11851.66it/s]Processing HH:  92%|█████████▏| 147858/160800 [00:13<00:01, 11817.22it/s]Processing HH:  93%|█████████▎| 149041/160800 [00:13<00:00, 11817.19it/s]Processing HH:  93%|█████████▎| 150224/160800 [00:13<00:00, 11621.45it/s]Processing HH:  94%|█████████▍| 151446/160800 [00:13<00:00, 11795.61it/s]Processing HH:  95%|█████████▍| 152627/160800 [00:13<00:00, 11732.99it/s]Processing HH:  96%|█████████▌| 153812/160800 [00:13<00:00, 11766.40it/s]Processing HH:  96%|█████████▋| 155032/160800 [00:13<00:00, 11893.78it/s]Processing HH:  97%|█████████▋| 156222/160800 [00:13<00:00, 11848.72it/s]Processing HH:  98%|█████████▊| 157449/160800 [00:13<00:00, 11970.60it/s]Processing HH:  99%|█████████▊| 158647/160800 [00:14<00:00, 11786.94it/s]Processing HH:  99%|█████████▉| 159871/160800 [00:14<00:00, 11918.96it/s]Processing HH: 100%|██████████| 160800/160800 [00:14<00:00, 11295.82it/s]
+Loading HH dataset (test split) from Huggingface...
+Processing HH:   0%|          | 0/8552 [00:00<?, ?it/s]Processing HH:  16%|█▌        | 1369/8552 [00:00<00:00, 13680.62it/s]Processing HH:  32%|███▏      | 2738/8552 [00:00<00:00, 13525.03it/s]Processing HH:  48%|████▊     | 4112/8552 [00:00<00:00, 13621.23it/s]Processing HH:  64%|██████▍   | 5475/8552 [00:00<00:00, 11778.16it/s]Processing HH:  78%|███████▊  | 6685/8552 [00:00<00:00, 11344.56it/s]Processing HH:  92%|█████████▏| 7840/8552 [00:01<00:00, 5427.91it/s] Processing HH: 100%|██████████| 8552/8552 [00:01<00:00, 7949.39it/s]
+starting 4 processes for FSDP training
+setting RLIMIT_NOFILE soft limit to 1048576 from 1024
+4
+0 initializing distributed
+Creating trainer on process 0 with world size 4
+Finished 512 examples on test split
+Loaded 32 eval batches of size 16
+Sharding models...
+Attempting to enable activation checkpointing...
+Applying activation checkpointing wrapper to policy...
+FSDP activation checkpointing enabled!
+Loaded model on rank 0
+Using RMSprop optimizer with learning rate 2e-06
+Running evaluation after 0 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+Computing eval metrics:   3%|▎         | 1/32 [00:02<01:16,  2.46s/it]Computing eval metrics:   6%|▋         | 2/32 [00:04<01:04,  2.14s/it]Computing eval metrics:   9%|▉         | 3/32 [00:06<00:56,  1.95s/it]Computing eval metrics:  12%|█▎        | 4/32 [00:07<00:52,  1.87s/it]Computing eval metrics:  16%|█▌        | 5/32 [00:08<00:41,  1.53s/it]Computing eval metrics:  19%|█▉        | 6/32 [00:10<00:41,  1.60s/it]Computing eval metrics:  22%|██▏       | 7/32 [00:11<00:36,  1.45s/it]Computing eval metrics:  25%|██▌       | 8/32 [00:13<00:36,  1.50s/it]Computing eval metrics:  28%|██▊       | 9/32 [00:14<00:35,  1.53s/it]Computing eval metrics:  31%|███▏      | 10/32 [00:16<00:32,  1.47s/it]Computing eval metrics:  34%|███▍      | 11/32 [00:17<00:31,  1.51s/it]Computing eval metrics:  38%|███▊      | 12/32 [00:19<00:28,  1.44s/it]Computing eval metrics:  41%|████      | 13/32 [00:20<00:26,  1.39s/it]Computing eval metrics:  44%|████▍     | 14/32 [00:21<00:24,  1.37s/it]Computing eval metrics:  47%|████▋     | 15/32 [00:22<00:21,  1.24s/it]Computing eval metrics:  50%|█████     | 16/32 [00:23<00:19,  1.19s/it]Computing eval metrics:  53%|█████▎    | 17/32 [00:25<00:19,  1.30s/it]Computing eval metrics:  56%|█████▋    | 18/32 [00:26<00:18,  1.30s/it]Computing eval metrics:  59%|█████▉    | 19/32 [00:27<00:16,  1.26s/it]Computing eval metrics:  62%|██████▎   | 20/32 [00:28<00:14,  1.21s/it]Computing eval metrics:  66%|██████▌   | 21/32 [00:30<00:13,  1.26s/it]Computing eval metrics:  69%|██████▉   | 22/32 [00:31<00:11,  1.13s/it]Computing eval metrics:  72%|███████▏  | 23/32 [00:32<00:10,  1.21s/it]Computing eval metrics:  75%|███████▌  | 24/32 [00:33<00:10,  1.30s/it]Computing eval metrics:  78%|███████▊  | 25/32 [00:35<00:08,  1.25s/it]Computing eval metrics:  81%|████████▏ | 26/32 [00:36<00:07,  1.31s/it]Computing eval metrics:  84%|████████▍ | 27/32 [00:38<00:07,  1.43s/it]Computing eval metrics:  88%|████████▊ | 28/32 [00:39<00:05,  1.36s/it]Computing eval metrics:  91%|█████████ | 29/32 [00:41<00:04,  1.60s/it]Computing eval metrics:  94%|█████████▍| 30/32 [00:42<00:02,  1.40s/it]Computing eval metrics:  97%|█████████▋| 31/32 [00:43<00:01,  1.38s/it]Computing eval metrics: 100%|██████████| 32/32 [00:45<00:00,  1.36s/it]Computing eval metrics: 100%|██████████| 32/32 [00:45<00:00,  1.41s/it]
+eval after 0: {'rewards_eval/chosen': '0', 'rewards_eval/rejected': '0', 'rewards_eval/accuracies': '0', 'rewards_eval/margins': '0', 'logps_eval/rejected': '-166.82', 'logps_eval/chosen': '-163.85', 'loss/eval': '0.69141'}
+skipping logging after 16 examples to avoid logging too frequently
+skipping logging after 32 examples to avoid logging too frequently
+skipping logging after 48 examples to avoid logging too frequently
+train stats after 64 examples: {'rewards_train/chosen': '0', 'rewards_train/rejected': '0', 'rewards_train/accuracies': '0', 'rewards_train/margins': '0', 'logps_train/rejected': '-158.42', 'logps_train/chosen': '-64.078', 'loss/train': '0.69141', 'examples_per_second': '5.97', 'grad_norm': '3.0156', 'counters/examples': 64, 'counters/updates': 4}
+skipping logging after 80 examples to avoid logging too frequently
+skipping logging after 96 examples to avoid logging too frequently
+skipping logging after 112 examples to avoid logging too frequently
+train stats after 128 examples: {'rewards_train/chosen': '0.0001173', 'rewards_train/rejected': '-0.00066471', 'rewards_train/accuracies': '0.3125', 'rewards_train/margins': '0.00078201', 'logps_train/rejected': '-146.34', 'logps_train/chosen': '-65.35', 'loss/train': '0.69196', 'examples_per_second': '4.6403', 'grad_norm': '3.0781', 'counters/examples': 128, 'counters/updates': 8}
+skipping logging after 144 examples to avoid logging too frequently
+skipping logging after 160 examples to avoid logging too frequently
+skipping logging after 176 examples to avoid logging too frequently
+train stats after 192 examples: {'rewards_train/chosen': '0.0001173', 'rewards_train/rejected': '-1.955e-05', 'rewards_train/accuracies': '0.40625', 'rewards_train/margins': '0.00013542', 'logps_train/rejected': '-175.04', 'logps_train/chosen': '-63.115', 'loss/train': '0.69189', 'examples_per_second': '3.6267', 'grad_norm': '3.4062', 'counters/examples': 192, 'counters/updates': 12}
+skipping logging after 208 examples to avoid logging too frequently
+skipping logging after 224 examples to avoid logging too frequently
+skipping logging after 240 examples to avoid logging too frequently
+train stats after 256 examples: {'rewards_train/chosen': '-9.7752e-05', 'rewards_train/rejected': '-0.00035191', 'rewards_train/accuracies': '0.3125', 'rewards_train/margins': '0.0002532', 'logps_train/rejected': '-151.21', 'logps_train/chosen': '-59.598', 'loss/train': '0.69214', 'examples_per_second': '5.8605', 'grad_norm': '3.0938', 'counters/examples': 256, 'counters/updates': 16}
+skipping logging after 272 examples to avoid logging too frequently
+skipping logging after 288 examples to avoid logging too frequently
+skipping logging after 304 examples to avoid logging too frequently
+train stats after 320 examples: {'rewards_train/chosen': '-0.0001173', 'rewards_train/rejected': '0.0013881', 'rewards_train/accuracies': '0.25', 'rewards_train/margins': '-0.0015054', 'logps_train/rejected': '-168.82', 'logps_train/chosen': '-54.877', 'loss/train': '0.69318', 'examples_per_second': '5.3415', 'grad_norm': '3.1875', 'counters/examples': 320, 'counters/updates': 20}
+skipping logging after 336 examples to avoid logging too frequently
+skipping logging after 352 examples to avoid logging too frequently
+skipping logging after 368 examples to avoid logging too frequently
+train stats after 384 examples: {'rewards_train/chosen': '0.0001955', 'rewards_train/rejected': '0.00060606', 'rewards_train/accuracies': '0.29688', 'rewards_train/margins': '-0.00041056', 'logps_train/rejected': '-165.51', 'logps_train/chosen': '-55.146', 'loss/train': '0.6925', 'examples_per_second': '6.2533', 'grad_norm': '3.25', 'counters/examples': 384, 'counters/updates': 24}
+skipping logging after 400 examples to avoid logging too frequently
+skipping logging after 416 examples to avoid logging too frequently
+skipping logging after 432 examples to avoid logging too frequently
+train stats after 448 examples: {'rewards_train/chosen': '0.00044966', 'rewards_train/rejected': '-0.0010753', 'rewards_train/accuracies': '0.35938', 'rewards_train/margins': '0.0015254', 'logps_train/rejected': '-133.56', 'logps_train/chosen': '-46.992', 'loss/train': '0.69147', 'examples_per_second': '5.3451', 'grad_norm': '2.5938', 'counters/examples': 448, 'counters/updates': 28}
+skipping logging after 464 examples to avoid logging too frequently
+skipping logging after 480 examples to avoid logging too frequently
+skipping logging after 496 examples to avoid logging too frequently
+train stats after 512 examples: {'rewards_train/chosen': '0.00041056', 'rewards_train/rejected': '0.0002346', 'rewards_train/accuracies': '0.375', 'rewards_train/margins': '0.00017595', 'logps_train/rejected': '-128.78', 'logps_train/chosen': '-55.629', 'loss/train': '0.69238', 'examples_per_second': '5.7939', 'grad_norm': '2.5469', 'counters/examples': 512, 'counters/updates': 32}
+skipping logging after 528 examples to avoid logging too frequently
+skipping logging after 544 examples to avoid logging too frequently
+skipping logging after 560 examples to avoid logging too frequently
+train stats after 576 examples: {'rewards_train/chosen': '0.00017595', 'rewards_train/rejected': '0.00013685', 'rewards_train/accuracies': '0.45312', 'rewards_train/margins': '3.9101e-05', 'logps_train/rejected': '-138.88', 'logps_train/chosen': '-60.625', 'loss/train': '0.69275', 'examples_per_second': '4.8662', 'grad_norm': '2.875', 'counters/examples': 576, 'counters/updates': 36}
+skipping logging after 592 examples to avoid logging too frequently
+skipping logging after 608 examples to avoid logging too frequently
+skipping logging after 624 examples to avoid logging too frequently
+train stats after 640 examples: {'rewards_train/chosen': '0.00017595', 'rewards_train/rejected': '0.00033236', 'rewards_train/accuracies': '0.375', 'rewards_train/margins': '-0.00015831', 'logps_train/rejected': '-159.37', 'logps_train/chosen': '-58.193', 'loss/train': '0.69324', 'examples_per_second': '4.535', 'grad_norm': '2.9219', 'counters/examples': 640, 'counters/updates': 40}
+skipping logging after 656 examples to avoid logging too frequently
+skipping logging after 672 examples to avoid logging too frequently
+skipping logging after 688 examples to avoid logging too frequently
+train stats after 704 examples: {'rewards_train/chosen': '0.00017595', 'rewards_train/rejected': '-0.0001564', 'rewards_train/accuracies': '0.35938', 'rewards_train/margins': '0.00033236', 'logps_train/rejected': '-165.97', 'logps_train/chosen': '-69.232', 'loss/train': '0.6922', 'examples_per_second': '4.8078', 'grad_norm': '3.2812', 'counters/examples': 704, 'counters/updates': 44}
+skipping logging after 720 examples to avoid logging too frequently
+skipping logging after 736 examples to avoid logging too frequently
+skipping logging after 752 examples to avoid logging too frequently
+train stats after 768 examples: {'rewards_train/chosen': '-0.00050831', 'rewards_train/rejected': '-0.00041056', 'rewards_train/accuracies': '0.40625', 'rewards_train/margins': '-9.7752e-05', 'logps_train/rejected': '-139.87', 'logps_train/chosen': '-63.781', 'loss/train': '0.69263', 'examples_per_second': '5.3933', 'grad_norm': '2.9062', 'counters/examples': 768, 'counters/updates': 48}
+skipping logging after 784 examples to avoid logging too frequently
+skipping logging after 800 examples to avoid logging too frequently
+skipping logging after 816 examples to avoid logging too frequently
+train stats after 832 examples: {'rewards_train/chosen': '-3.9101e-05', 'rewards_train/rejected': '-0.0014467', 'rewards_train/accuracies': '0.39062', 'rewards_train/margins': '0.0014081', 'logps_train/rejected': '-132.55', 'logps_train/chosen': '-62.789', 'loss/train': '0.69226', 'examples_per_second': '6.4126', 'grad_norm': '2.7812', 'counters/examples': 832, 'counters/updates': 52}
+skipping logging after 848 examples to avoid logging too frequently
+skipping logging after 864 examples to avoid logging too frequently
+skipping logging after 880 examples to avoid logging too frequently
+train stats after 896 examples: {'rewards_train/chosen': '0.00021505', 'rewards_train/rejected': '-0.0024633', 'rewards_train/accuracies': '0.45312', 'rewards_train/margins': '0.0026784', 'logps_train/rejected': '-155.42', 'logps_train/chosen': '-53.818', 'loss/train': '0.69153', 'examples_per_second': '3.5845', 'grad_norm': '3', 'counters/examples': 896, 'counters/updates': 56}
+skipping logging after 912 examples to avoid logging too frequently
+skipping logging after 928 examples to avoid logging too frequently
+skipping logging after 944 examples to avoid logging too frequently
+train stats after 960 examples: {'rewards_train/chosen': '0.00072336', 'rewards_train/rejected': '-0.00043011', 'rewards_train/accuracies': '0.5', 'rewards_train/margins': '0.0011535', 'logps_train/rejected': '-169.26', 'logps_train/chosen': '-59.396', 'loss/train': '0.69183', 'examples_per_second': '5.5616', 'grad_norm': '3.125', 'counters/examples': 960, 'counters/updates': 60}
+skipping logging after 976 examples to avoid logging too frequently
+skipping logging after 992 examples to avoid logging too frequently
+skipping logging after 1008 examples to avoid logging too frequently
+train stats after 1024 examples: {'rewards_train/chosen': '-0.0001564', 'rewards_train/rejected': '0.00058651', 'rewards_train/accuracies': '0.32812', 'rewards_train/margins': '-0.00074387', 'logps_train/rejected': '-140.11', 'logps_train/chosen': '-65.033', 'loss/train': '0.69293', 'examples_per_second': '4.9486', 'grad_norm': '2.75', 'counters/examples': 1024, 'counters/updates': 64}
+skipping logging after 1040 examples to avoid logging too frequently
+skipping logging after 1056 examples to avoid logging too frequently
+skipping logging after 1072 examples to avoid logging too frequently
+train stats after 1088 examples: {'rewards_train/chosen': '0.00043011', 'rewards_train/rejected': '-0.0018377', 'rewards_train/accuracies': '0.42188', 'rewards_train/margins': '0.0022669', 'logps_train/rejected': '-132.14', 'logps_train/chosen': '-58.207', 'loss/train': '0.69153', 'examples_per_second': '5.8046', 'grad_norm': '2.5', 'counters/examples': 1088, 'counters/updates': 68}
+skipping logging after 1104 examples to avoid logging too frequently
+skipping logging after 1120 examples to avoid logging too frequently
+skipping logging after 1136 examples to avoid logging too frequently
+train stats after 1152 examples: {'rewards_train/chosen': '0.00066471', 'rewards_train/rejected': '-7.8201e-05', 'rewards_train/accuracies': '0.45312', 'rewards_train/margins': '0.00074244', 'logps_train/rejected': '-139', 'logps_train/chosen': '-61.287', 'loss/train': '0.69257', 'examples_per_second': '5.7838', 'grad_norm': '2.7656', 'counters/examples': 1152, 'counters/updates': 72}
+skipping logging after 1168 examples to avoid logging too frequently
+skipping logging after 1184 examples to avoid logging too frequently
+skipping logging after 1200 examples to avoid logging too frequently
+train stats after 1216 examples: {'rewards_train/chosen': '0.00070381', 'rewards_train/rejected': '-0.0012317', 'rewards_train/accuracies': '0.4375', 'rewards_train/margins': '0.001935', 'logps_train/rejected': '-160.44', 'logps_train/chosen': '-58.789', 'loss/train': '0.69147', 'examples_per_second': '4.382', 'grad_norm': '2.9375', 'counters/examples': 1216, 'counters/updates': 76}
+skipping logging after 1232 examples to avoid logging too frequently
+skipping logging after 1248 examples to avoid logging too frequently
+skipping logging after 1264 examples to avoid logging too frequently
+train stats after 1280 examples: {'rewards_train/chosen': '0.00097752', 'rewards_train/rejected': '-0.0024633', 'rewards_train/accuracies': '0.46875', 'rewards_train/margins': '0.0034389', 'logps_train/rejected': '-168.01', 'logps_train/chosen': '-61.902', 'loss/train': '0.69061', 'examples_per_second': '4.4019', 'grad_norm': '3.0938', 'counters/examples': 1280, 'counters/updates': 80}
+skipping logging after 1296 examples to avoid logging too frequently
+skipping logging after 1312 examples to avoid logging too frequently
+skipping logging after 1328 examples to avoid logging too frequently
+train stats after 1344 examples: {'rewards_train/chosen': '0.0012903', 'rewards_train/rejected': '-0.0022678', 'rewards_train/accuracies': '0.54688', 'rewards_train/margins': '0.0035586', 'logps_train/rejected': '-160.28', 'logps_train/chosen': '-58.379', 'loss/train': '0.69086', 'examples_per_second': '5.9379', 'grad_norm': '3.0312', 'counters/examples': 1344, 'counters/updates': 84}
+skipping logging after 1360 examples to avoid logging too frequently
+skipping logging after 1376 examples to avoid logging too frequently
+skipping logging after 1392 examples to avoid logging too frequently
+train stats after 1408 examples: {'rewards_train/chosen': '0.0014467', 'rewards_train/rejected': '-0.0017009', 'rewards_train/accuracies': '0.5625', 'rewards_train/margins': '0.0031471', 'logps_train/rejected': '-182.54', 'logps_train/chosen': '-59.594', 'loss/train': '0.69128', 'examples_per_second': '4.552', 'grad_norm': '3.2969', 'counters/examples': 1408, 'counters/updates': 88}
+skipping logging after 1424 examples to avoid logging too frequently
+skipping logging after 1440 examples to avoid logging too frequently
+skipping logging after 1456 examples to avoid logging too frequently
+train stats after 1472 examples: {'rewards_train/chosen': '0.00089931', 'rewards_train/rejected': '-0.0019159', 'rewards_train/accuracies': '0.5625', 'rewards_train/margins': '0.0028152', 'logps_train/rejected': '-156.11', 'logps_train/chosen': '-57.604', 'loss/train': '0.69147', 'examples_per_second': '3.9747', 'grad_norm': '3.0781', 'counters/examples': 1472, 'counters/updates': 92}
+skipping logging after 1488 examples to avoid logging too frequently
+skipping logging after 1504 examples to avoid logging too frequently
+skipping logging after 1520 examples to avoid logging too frequently
+train stats after 1536 examples: {'rewards_train/chosen': '0.0016422', 'rewards_train/rejected': '-0.0020723', 'rewards_train/accuracies': '0.57812', 'rewards_train/margins': '0.0037141', 'logps_train/rejected': '-173.04', 'logps_train/chosen': '-57.221', 'loss/train': '0.69019', 'examples_per_second': '4.7408', 'grad_norm': '3.2656', 'counters/examples': 1536, 'counters/updates': 96}
+skipping logging after 1552 examples to avoid logging too frequently
+skipping logging after 1568 examples to avoid logging too frequently
+skipping logging after 1584 examples to avoid logging too frequently
+train stats after 1600 examples: {'rewards_train/chosen': '0.00174', 'rewards_train/rejected': '-0.0040078', 'rewards_train/accuracies': '0.6875', 'rewards_train/margins': '0.005743', 'logps_train/rejected': '-152.65', 'logps_train/chosen': '-54.125', 'loss/train': '0.68958', 'examples_per_second': '5.3768', 'grad_norm': '2.9062', 'counters/examples': 1600, 'counters/updates': 100}
+skipping logging after 1616 examples to avoid logging too frequently
+skipping logging after 1632 examples to avoid logging too frequently
+skipping logging after 1648 examples to avoid logging too frequently
+train stats after 1664 examples: {'rewards_train/chosen': '0.0018573', 'rewards_train/rejected': '-0.0039296', 'rewards_train/accuracies': '0.64062', 'rewards_train/margins': '0.0057845', 'logps_train/rejected': '-177.95', 'logps_train/chosen': '-62.174', 'loss/train': '0.68958', 'examples_per_second': '5.6919', 'grad_norm': '3.4375', 'counters/examples': 1664, 'counters/updates': 104}
+skipping logging after 1680 examples to avoid logging too frequently
+skipping logging after 1696 examples to avoid logging too frequently
+skipping logging after 1712 examples to avoid logging too frequently
+train stats after 1728 examples: {'rewards_train/chosen': '0.0017204', 'rewards_train/rejected': '-0.0032845', 'rewards_train/accuracies': '0.65625', 'rewards_train/margins': '0.0050049', 'logps_train/rejected': '-188.28', 'logps_train/chosen': '-59.754', 'loss/train': '0.69006', 'examples_per_second': '6.4177', 'grad_norm': '3.4688', 'counters/examples': 1728, 'counters/updates': 108}
+skipping logging after 1744 examples to avoid logging too frequently
+skipping logging after 1760 examples to avoid logging too frequently
+skipping logging after 1776 examples to avoid logging too frequently
+train stats after 1792 examples: {'rewards_train/chosen': '0.00174', 'rewards_train/rejected': '-0.0024047', 'rewards_train/accuracies': '0.625', 'rewards_train/margins': '0.0041451', 'logps_train/rejected': '-151.59', 'logps_train/chosen': '-55.361', 'loss/train': '0.6908', 'examples_per_second': '4.2853', 'grad_norm': '2.7812', 'counters/examples': 1792, 'counters/updates': 112}
+skipping logging after 1808 examples to avoid logging too frequently
+skipping logging after 1824 examples to avoid logging too frequently
+skipping logging after 1840 examples to avoid logging too frequently
+train stats after 1856 examples: {'rewards_train/chosen': '0.0024829', 'rewards_train/rejected': '-0.0021701', 'rewards_train/accuracies': '0.71875', 'rewards_train/margins': '0.0046506', 'logps_train/rejected': '-127.15', 'logps_train/chosen': '-59.029', 'loss/train': '0.69037', 'examples_per_second': '4.655', 'grad_norm': '2.8906', 'counters/examples': 1856, 'counters/updates': 116}
+skipping logging after 1872 examples to avoid logging too frequently
+skipping logging after 1888 examples to avoid logging too frequently
+skipping logging after 1904 examples to avoid logging too frequently
+train stats after 1920 examples: {'rewards_train/chosen': '0.0013099', 'rewards_train/rejected': '-0.0031476', 'rewards_train/accuracies': '0.60938', 'rewards_train/margins': '0.0044556', 'logps_train/rejected': '-129.68', 'logps_train/chosen': '-52.457', 'loss/train': '0.69025', 'examples_per_second': '5.0212', 'grad_norm': '2.5938', 'counters/examples': 1920, 'counters/updates': 120}
+skipping logging after 1936 examples to avoid logging too frequently
+skipping logging after 1952 examples to avoid logging too frequently
+skipping logging after 1968 examples to avoid logging too frequently
+train stats after 1984 examples: {'rewards_train/chosen': '0.0017595', 'rewards_train/rejected': '-0.0029912', 'rewards_train/accuracies': '0.6875', 'rewards_train/margins': '0.0047507', 'logps_train/rejected': '-177.86', 'logps_train/chosen': '-58.301', 'loss/train': '0.69025', 'examples_per_second': '4.8385', 'grad_norm': '3.4375', 'counters/examples': 1984, 'counters/updates': 124}
+skipping logging after 2000 examples to avoid logging too frequently
+skipping logging after 2016 examples to avoid logging too frequently
+skipping logging after 2032 examples to avoid logging too frequently
+train stats after 2048 examples: {'rewards_train/chosen': '0.001955', 'rewards_train/rejected': '-0.0037928', 'rewards_train/accuracies': '0.6875', 'rewards_train/margins': '0.005744', 'logps_train/rejected': '-147.6', 'logps_train/chosen': '-57.682', 'loss/train': '0.68951', 'examples_per_second': '4.9109', 'grad_norm': '2.9062', 'counters/examples': 2048, 'counters/updates': 128}
+skipping logging after 2064 examples to avoid logging too frequently
+skipping logging after 2080 examples to avoid logging too frequently
+skipping logging after 2096 examples to avoid logging too frequently
+train stats after 2112 examples: {'rewards_train/chosen': '0.0024438', 'rewards_train/rejected': '-0.0028348', 'rewards_train/accuracies': '0.65625', 'rewards_train/margins': '0.0052786', 'logps_train/rejected': '-152.56', 'logps_train/chosen': '-66.789', 'loss/train': '0.69019', 'examples_per_second': '4.9458', 'grad_norm': '3.2344', 'counters/examples': 2112, 'counters/updates': 132}
+skipping logging after 2128 examples to avoid logging too frequently
+skipping logging after 2144 examples to avoid logging too frequently
+skipping logging after 2160 examples to avoid logging too frequently
+train stats after 2176 examples: {'rewards_train/chosen': '0.002346', 'rewards_train/rejected': '-0.0043597', 'rewards_train/accuracies': '0.6875', 'rewards_train/margins': '0.0067039', 'logps_train/rejected': '-139.59', 'logps_train/chosen': '-51.283', 'loss/train': '0.68958', 'examples_per_second': '5.7345', 'grad_norm': '2.7969', 'counters/examples': 2176, 'counters/updates': 136}
+skipping logging after 2192 examples to avoid logging too frequently
+skipping logging after 2208 examples to avoid logging too frequently
+skipping logging after 2224 examples to avoid logging too frequently
+train stats after 2240 examples: {'rewards_train/chosen': '0.0031085', 'rewards_train/rejected': '-0.0043597', 'rewards_train/accuracies': '0.75', 'rewards_train/margins': '0.007473', 'logps_train/rejected': '-152.56', 'logps_train/chosen': '-56.264', 'loss/train': '0.68915', 'examples_per_second': '5.7993', 'grad_norm': '3.0312', 'counters/examples': 2240, 'counters/updates': 140}
+skipping logging after 2256 examples to avoid logging too frequently
+skipping logging after 2272 examples to avoid logging too frequently
+skipping logging after 2288 examples to avoid logging too frequently
+train stats after 2304 examples: {'rewards_train/chosen': '0.0033817', 'rewards_train/rejected': '-0.0071945', 'rewards_train/accuracies': '0.82812', 'rewards_train/margins': '0.010581', 'logps_train/rejected': '-176.3', 'logps_train/chosen': '-54.67', 'loss/train': '0.68799', 'examples_per_second': '4.3601', 'grad_norm': '3.3281', 'counters/examples': 2304, 'counters/updates': 144}
+skipping logging after 2320 examples to avoid logging too frequently
+skipping logging after 2336 examples to avoid logging too frequently
+skipping logging after 2352 examples to avoid logging too frequently
+train stats after 2368 examples: {'rewards_train/chosen': '0.0027761', 'rewards_train/rejected': '-0.0031672', 'rewards_train/accuracies': '0.75', 'rewards_train/margins': '0.0059443', 'logps_train/rejected': '-133.04', 'logps_train/chosen': '-55.939', 'loss/train': '0.6897', 'examples_per_second': '5.7965', 'grad_norm': '2.6875', 'counters/examples': 2368, 'counters/updates': 148}
+skipping logging after 2384 examples to avoid logging too frequently
+skipping logging after 2400 examples to avoid logging too frequently
+skipping logging after 2416 examples to avoid logging too frequently
+train stats after 2432 examples: {'rewards_train/chosen': '0.0033822', 'rewards_train/rejected': '-0.0057087', 'rewards_train/accuracies': '0.8125', 'rewards_train/margins': '0.0090947', 'logps_train/rejected': '-151.88', 'logps_train/chosen': '-58.549', 'loss/train': '0.68799', 'examples_per_second': '5.157', 'grad_norm': '3.0312', 'counters/examples': 2432, 'counters/updates': 152}
+skipping logging after 2448 examples to avoid logging too frequently
+skipping logging after 2464 examples to avoid logging too frequently
+skipping logging after 2480 examples to avoid logging too frequently
+train stats after 2496 examples: {'rewards_train/chosen': '0.0035973', 'rewards_train/rejected': '-0.0057282', 'rewards_train/accuracies': '0.79688', 'rewards_train/margins': '0.0093255', 'logps_train/rejected': '-161.02', 'logps_train/chosen': '-60.008', 'loss/train': '0.68793', 'examples_per_second': '6.547', 'grad_norm': '3.2344', 'counters/examples': 2496, 'counters/updates': 156}
+skipping logging after 2512 examples to avoid logging too frequently
+skipping logging after 2528 examples to avoid logging too frequently
+skipping logging after 2544 examples to avoid logging too frequently
+train stats after 2560 examples: {'rewards_train/chosen': '0.0040665', 'rewards_train/rejected': '-0.0068231', 'rewards_train/accuracies': '0.79688', 'rewards_train/margins': '0.010896', 'logps_train/rejected': '-173.15', 'logps_train/chosen': '-55.07', 'loss/train': '0.68762', 'examples_per_second': '4.7742', 'grad_norm': '3.3281', 'counters/examples': 2560, 'counters/updates': 160}
+skipping logging after 2576 examples to avoid logging too frequently
+skipping logging after 2592 examples to avoid logging too frequently
+skipping logging after 2608 examples to avoid logging too frequently
+train stats after 2624 examples: {'rewards_train/chosen': '0.0047703', 'rewards_train/rejected': '-0.0065298', 'rewards_train/accuracies': '0.84375', 'rewards_train/margins': '0.0113', 'logps_train/rejected': '-163.24', 'logps_train/chosen': '-65.279', 'loss/train': '0.68707', 'examples_per_second': '4.4544', 'grad_norm': '3.2188', 'counters/examples': 2624, 'counters/updates': 164}
+skipping logging after 2640 examples to avoid logging too frequently
+skipping logging after 2656 examples to avoid logging too frequently
+skipping logging after 2672 examples to avoid logging too frequently
+train stats after 2688 examples: {'rewards_train/chosen': '0.0041251', 'rewards_train/rejected': '-0.004477', 'rewards_train/accuracies': '0.79688', 'rewards_train/margins': '0.0086026', 'logps_train/rejected': '-135.87', 'logps_train/chosen': '-60.639', 'loss/train': '0.68878', 'examples_per_second': '5.6235', 'grad_norm': '2.7656', 'counters/examples': 2688, 'counters/updates': 168}
+skipping logging after 2704 examples to avoid logging too frequently
+skipping logging after 2720 examples to avoid logging too frequently
+skipping logging after 2736 examples to avoid logging too frequently
+train stats after 2752 examples: {'rewards_train/chosen': '0.0026588', 'rewards_train/rejected': '-0.0047898', 'rewards_train/accuracies': '0.78125', 'rewards_train/margins': '0.0074482', 'logps_train/rejected': '-123.95', 'logps_train/chosen': '-52.029', 'loss/train': '0.68915', 'examples_per_second': '5.4973', 'grad_norm': '2.4375', 'counters/examples': 2752, 'counters/updates': 172}
+skipping logging after 2768 examples to avoid logging too frequently
+skipping logging after 2784 examples to avoid logging too frequently
+skipping logging after 2800 examples to avoid logging too frequently
+train stats after 2816 examples: {'rewards_train/chosen': '0.0034213', 'rewards_train/rejected': '-0.0074096', 'rewards_train/accuracies': '0.82812', 'rewards_train/margins': '0.010831', 'logps_train/rejected': '-147.77', 'logps_train/chosen': '-50.795', 'loss/train': '0.68762', 'examples_per_second': '5.3729', 'grad_norm': '2.8594', 'counters/examples': 2816, 'counters/updates': 176}
+skipping logging after 2832 examples to avoid logging too frequently
+skipping logging after 2848 examples to avoid logging too frequently
+skipping logging after 2864 examples to avoid logging too frequently
+train stats after 2880 examples: {'rewards_train/chosen': '0.0048289', 'rewards_train/rejected': '-0.0044379', 'rewards_train/accuracies': '0.82812', 'rewards_train/margins': '0.0092664', 'logps_train/rejected': '-139.92', 'logps_train/chosen': '-59.572', 'loss/train': '0.68811', 'examples_per_second': '4.9984', 'grad_norm': '2.8594', 'counters/examples': 2880, 'counters/updates': 180}
+skipping logging after 2896 examples to avoid logging too frequently
+skipping logging after 2912 examples to avoid logging too frequently
+skipping logging after 2928 examples to avoid logging too frequently
+train stats after 2944 examples: {'rewards_train/chosen': '0.0039296', 'rewards_train/rejected': '-0.0064516', 'rewards_train/accuracies': '0.8125', 'rewards_train/margins': '0.010382', 'logps_train/rejected': '-147.32', 'logps_train/chosen': '-56.727', 'loss/train': '0.68787', 'examples_per_second': '5.6107', 'grad_norm': '2.7031', 'counters/examples': 2944, 'counters/updates': 184}
+skipping logging after 2960 examples to avoid logging too frequently
+skipping logging after 2976 examples to avoid logging too frequently
+skipping logging after 2992 examples to avoid logging too frequently
+train stats after 3008 examples: {'rewards_train/chosen': '0.0048289', 'rewards_train/rejected': '-0.0068231', 'rewards_train/accuracies': '0.89062', 'rewards_train/margins': '0.011654', 'logps_train/rejected': '-130.28', 'logps_train/chosen': '-52.639', 'loss/train': '0.68707', 'examples_per_second': '4.7151', 'grad_norm': '2.6094', 'counters/examples': 3008, 'counters/updates': 188}
+skipping logging after 3024 examples to avoid logging too frequently
+skipping logging after 3040 examples to avoid logging too frequently
+skipping logging after 3056 examples to avoid logging too frequently
+train stats after 3072 examples: {'rewards_train/chosen': '0.0053372', 'rewards_train/rejected': '-0.010049', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.015383', 'logps_train/rejected': '-192.15', 'logps_train/chosen': '-65.391', 'loss/train': '0.68573', 'examples_per_second': '5.0079', 'grad_norm': '3.7188', 'counters/examples': 3072, 'counters/updates': 192}
+skipping logging after 3088 examples to avoid logging too frequently
+skipping logging after 3104 examples to avoid logging too frequently
+skipping logging after 3120 examples to avoid logging too frequently
+train stats after 3136 examples: {'rewards_train/chosen': '0.0061193', 'rewards_train/rejected': '-0.010108', 'rewards_train/accuracies': '0.90625', 'rewards_train/margins': '0.016233', 'logps_train/rejected': '-173.77', 'logps_train/chosen': '-63.43', 'loss/train': '0.68518', 'examples_per_second': '5.2514', 'grad_norm': '3.3594', 'counters/examples': 3136, 'counters/updates': 196}
+skipping logging after 3152 examples to avoid logging too frequently
+skipping logging after 3168 examples to avoid logging too frequently
+skipping logging after 3184 examples to avoid logging too frequently
+train stats after 3200 examples: {'rewards_train/chosen': '0.0064321', 'rewards_train/rejected': '-0.012649', 'rewards_train/accuracies': '0.89062', 'rewards_train/margins': '0.019079', 'logps_train/rejected': '-200.48', 'logps_train/chosen': '-62.863', 'loss/train': '0.68433', 'examples_per_second': '4.7388', 'grad_norm': '3.625', 'counters/examples': 3200, 'counters/updates': 200}
+skipping logging after 3216 examples to avoid logging too frequently
+skipping logging after 3232 examples to avoid logging too frequently
+skipping logging after 3248 examples to avoid logging too frequently
+train stats after 3264 examples: {'rewards_train/chosen': '0.0068617', 'rewards_train/rejected': '-0.0082307', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.015098', 'logps_train/rejected': '-144.46', 'logps_train/chosen': '-62.752', 'loss/train': '0.68549', 'examples_per_second': '5.3528', 'grad_norm': '2.8438', 'counters/examples': 3264, 'counters/updates': 204}
+skipping logging after 3280 examples to avoid logging too frequently
+skipping logging after 3296 examples to avoid logging too frequently
+skipping logging after 3312 examples to avoid logging too frequently
+train stats after 3328 examples: {'rewards_train/chosen': '0.005435', 'rewards_train/rejected': '-0.012414', 'rewards_train/accuracies': '0.82812', 'rewards_train/margins': '0.017853', 'logps_train/rejected': '-194.71', 'logps_train/chosen': '-58.553', 'loss/train': '0.68433', 'examples_per_second': '5.0951', 'grad_norm': '3.3906', 'counters/examples': 3328, 'counters/updates': 208}
+skipping logging after 3344 examples to avoid logging too frequently
+skipping logging after 3360 examples to avoid logging too frequently
+skipping logging after 3376 examples to avoid logging too frequently
+train stats after 3392 examples: {'rewards_train/chosen': '0.0069189', 'rewards_train/rejected': '-0.008739', 'rewards_train/accuracies': '0.875', 'rewards_train/margins': '0.015665', 'logps_train/rejected': '-144.65', 'logps_train/chosen': '-66.322', 'loss/train': '0.68524', 'examples_per_second': '5.0009', 'grad_norm': '2.8438', 'counters/examples': 3392, 'counters/updates': 212}
+skipping logging after 3408 examples to avoid logging too frequently
+skipping logging after 3424 examples to avoid logging too frequently
+skipping logging after 3440 examples to avoid logging too frequently
+train stats after 3456 examples: {'rewards_train/chosen': '0.0051107', 'rewards_train/rejected': '-0.011476', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.016582', 'logps_train/rejected': '-146.54', 'logps_train/chosen': '-53.651', 'loss/train': '0.68463', 'examples_per_second': '4.8648', 'grad_norm': '2.7656', 'counters/examples': 3456, 'counters/updates': 216}
+skipping logging after 3472 examples to avoid logging too frequently
+skipping logging after 3488 examples to avoid logging too frequently
+skipping logging after 3504 examples to avoid logging too frequently
+train stats after 3520 examples: {'rewards_train/chosen': '0.004477', 'rewards_train/rejected': '-0.013568', 'rewards_train/accuracies': '0.89062', 'rewards_train/margins': '0.018047', 'logps_train/rejected': '-168.02', 'logps_train/chosen': '-62.992', 'loss/train': '0.68469', 'examples_per_second': '5.4441', 'grad_norm': '3.0156', 'counters/examples': 3520, 'counters/updates': 220}
+skipping logging after 3536 examples to avoid logging too frequently
+skipping logging after 3552 examples to avoid logging too frequently
+skipping logging after 3568 examples to avoid logging too frequently
+train stats after 3584 examples: {'rewards_train/chosen': '0.0078592', 'rewards_train/rejected': '-0.014585', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.022445', 'logps_train/rejected': '-183.77', 'logps_train/chosen': '-59.332', 'loss/train': '0.68201', 'examples_per_second': '4.7845', 'grad_norm': '3.5312', 'counters/examples': 3584, 'counters/updates': 224}
+skipping logging after 3600 examples to avoid logging too frequently
+skipping logging after 3616 examples to avoid logging too frequently
+skipping logging after 3632 examples to avoid logging too frequently
+train stats after 3648 examples: {'rewards_train/chosen': '0.008347', 'rewards_train/rejected': '-0.011241', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.019592', 'logps_train/rejected': '-143.86', 'logps_train/chosen': '-65.381', 'loss/train': '0.68311', 'examples_per_second': '6.3674', 'grad_norm': '3.1094', 'counters/examples': 3648, 'counters/updates': 228}
+skipping logging after 3664 examples to avoid logging too frequently
+skipping logging after 3680 examples to avoid logging too frequently
+skipping logging after 3696 examples to avoid logging too frequently
+train stats after 3712 examples: {'rewards_train/chosen': '0.0082893', 'rewards_train/rejected': '-0.014272', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.022564', 'logps_train/rejected': '-147.75', 'logps_train/chosen': '-57.938', 'loss/train': '0.68231', 'examples_per_second': '5.3385', 'grad_norm': '3.0469', 'counters/examples': 3712, 'counters/updates': 232}
+skipping logging after 3728 examples to avoid logging too frequently
+skipping logging after 3744 examples to avoid logging too frequently
+skipping logging after 3760 examples to avoid logging too frequently
+train stats after 3776 examples: {'rewards_train/chosen': '0.0070968', 'rewards_train/rejected': '-0.014291', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.02139', 'logps_train/rejected': '-162.95', 'logps_train/chosen': '-57.756', 'loss/train': '0.68213', 'examples_per_second': '4.7763', 'grad_norm': '3.1875', 'counters/examples': 3776, 'counters/updates': 236}
+skipping logging after 3792 examples to avoid logging too frequently
+skipping logging after 3808 examples to avoid logging too frequently
+skipping logging after 3824 examples to avoid logging too frequently
+train stats after 3840 examples: {'rewards_train/chosen': '0.0076423', 'rewards_train/rejected': '-0.01263', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.020278', 'logps_train/rejected': '-144.72', 'logps_train/chosen': '-61.941', 'loss/train': '0.68317', 'examples_per_second': '5.4133', 'grad_norm': '2.875', 'counters/examples': 3840, 'counters/updates': 240}
+skipping logging after 3856 examples to avoid logging too frequently
+skipping logging after 3872 examples to avoid logging too frequently
+skipping logging after 3888 examples to avoid logging too frequently
+train stats after 3904 examples: {'rewards_train/chosen': '0.0089417', 'rewards_train/rejected': '-0.014419', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.023364', 'logps_train/rejected': '-153.51', 'logps_train/chosen': '-62.817', 'loss/train': '0.68188', 'examples_per_second': '5.8348', 'grad_norm': '3.1406', 'counters/examples': 3904, 'counters/updates': 244}
+skipping logging after 3920 examples to avoid logging too frequently
+skipping logging after 3936 examples to avoid logging too frequently
+skipping logging after 3952 examples to avoid logging too frequently
+train stats after 3968 examples: {'rewards_train/chosen': '0.008307', 'rewards_train/rejected': '-0.018182', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.026491', 'logps_train/rejected': '-153.77', 'logps_train/chosen': '-56.432', 'loss/train': '0.68048', 'examples_per_second': '4.4505', 'grad_norm': '3.0469', 'counters/examples': 3968, 'counters/updates': 248}
+skipping logging after 3984 examples to avoid logging too frequently
+skipping logging after 4000 examples to avoid logging too frequently
+Running evaluation after 4000 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:02<01:12,  2.35s/it]Computing eval metrics:   6%|▋         | 2/32 [00:04<01:03,  2.12s/it]Computing eval metrics:   9%|▉         | 3/32 [00:06<00:57,  1.97s/it]Computing eval metrics:  12%|█▎        | 4/32 [00:07<00:53,  1.90s/it]Computing eval metrics:  16%|█▌        | 5/32 [00:08<00:41,  1.55s/it]Computing eval metrics:  19%|█▉        | 6/32 [00:10<00:42,  1.63s/it]Computing eval metrics:  22%|██▏       | 7/32 [00:11<00:37,  1.48s/it]Computing eval metrics:  25%|██▌       | 8/32 [00:13<00:36,  1.54s/it]Computing eval metrics:  28%|██▊       | 9/32 [00:15<00:36,  1.57s/it]Computing eval metrics:  31%|███▏      | 10/32 [00:16<00:33,  1.51s/it]Computing eval metrics:  34%|███▍      | 11/32 [00:18<00:32,  1.55s/it]Computing eval metrics:  38%|███▊      | 12/32 [00:19<00:29,  1.47s/it]Computing eval metrics:  41%|████      | 13/32 [00:20<00:26,  1.42s/it]Computing eval metrics:  44%|████▍     | 14/32 [00:22<00:25,  1.40s/it]Computing eval metrics:  47%|████▋     | 15/32 [00:23<00:21,  1.27s/it]Computing eval metrics:  50%|█████     | 16/32 [00:24<00:19,  1.21s/it]Computing eval metrics:  53%|█████▎    | 17/32 [00:25<00:19,  1.33s/it]Computing eval metrics:  56%|█████▋    | 18/32 [00:27<00:18,  1.33s/it]Computing eval metrics:  59%|█████▉    | 19/32 [00:28<00:16,  1.28s/it]Computing eval metrics:  62%|██████▎   | 20/32 [00:29<00:14,  1.23s/it]Computing eval metrics:  66%|██████▌   | 21/32 [00:30<00:14,  1.28s/it]Computing eval metrics:  69%|██████▉   | 22/32 [00:31<00:11,  1.15s/it]Computing eval metrics:  72%|███████▏  | 23/32 [00:32<00:11,  1.23s/it]Computing eval metrics:  75%|███████▌  | 24/32 [00:34<00:10,  1.32s/it]Computing eval metrics:  78%|███████▊  | 25/32 [00:35<00:08,  1.27s/it]Computing eval metrics:  81%|████████▏ | 26/32 [00:37<00:07,  1.33s/it]Computing eval metrics:  84%|████████▍ | 27/32 [00:38<00:07,  1.46s/it]Computing eval metrics:  88%|████████▊ | 28/32 [00:40<00:05,  1.38s/it]Computing eval metrics:  91%|█████████ | 29/32 [00:42<00:04,  1.62s/it]Computing eval metrics:  94%|█████████▍| 30/32 [00:43<00:02,  1.42s/it]Computing eval metrics:  97%|█████████▋| 31/32 [00:44<00:01,  1.40s/it]Computing eval metrics: 100%|██████████| 32/32 [00:45<00:00,  1.38s/it]Computing eval metrics: 100%|██████████| 32/32 [00:45<00:00,  1.43s/it]
+eval after 4000: {'rewards_eval/chosen': '-0.017632', 'rewards_eval/rejected': '-0.018192', 'rewards_eval/accuracies': '0.4668', 'rewards_eval/margins': '0.00055999', 'logps_eval/rejected': '-168.63', 'logps_eval/chosen': '-165.61', 'loss/eval': '0.69272'}
+skipping logging after 4016 examples to avoid logging too frequently
+train stats after 4032 examples: {'rewards_train/chosen': '0.0099268', 'rewards_train/rejected': '-0.015191', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.02512', 'logps_train/rejected': '-156.07', 'logps_train/chosen': '-65.154', 'loss/train': '0.68073', 'examples_per_second': '4.6116', 'grad_norm': '3.1406', 'counters/examples': 4032, 'counters/updates': 252}
+skipping logging after 4048 examples to avoid logging too frequently
+skipping logging after 4064 examples to avoid logging too frequently
+skipping logging after 4080 examples to avoid logging too frequently
+train stats after 4096 examples: {'rewards_train/chosen': '0.009264', 'rewards_train/rejected': '-0.016696', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.025955', 'logps_train/rejected': '-157.26', 'logps_train/chosen': '-56.125', 'loss/train': '0.68024', 'examples_per_second': '4.4244', 'grad_norm': '3.1094', 'counters/examples': 4096, 'counters/updates': 256}
+skipping logging after 4112 examples to avoid logging too frequently
+skipping logging after 4128 examples to avoid logging too frequently
+skipping logging after 4144 examples to avoid logging too frequently
+train stats after 4160 examples: {'rewards_train/chosen': '0.010126', 'rewards_train/rejected': '-0.018065', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.028201', 'logps_train/rejected': '-152.28', 'logps_train/chosen': '-58.088', 'loss/train': '0.67938', 'examples_per_second': '5.1067', 'grad_norm': '2.9844', 'counters/examples': 4160, 'counters/updates': 260}
+skipping logging after 4176 examples to avoid logging too frequently
+skipping logging after 4192 examples to avoid logging too frequently
+skipping logging after 4208 examples to avoid logging too frequently
+train stats after 4224 examples: {'rewards_train/chosen': '0.0091848', 'rewards_train/rejected': '-0.019179', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.028351', 'logps_train/rejected': '-150.34', 'logps_train/chosen': '-60.961', 'loss/train': '0.67877', 'examples_per_second': '4.7836', 'grad_norm': '2.9688', 'counters/examples': 4224, 'counters/updates': 264}
+skipping logging after 4240 examples to avoid logging too frequently
+skipping logging after 4256 examples to avoid logging too frequently
+skipping logging after 4272 examples to avoid logging too frequently
+train stats after 4288 examples: {'rewards_train/chosen': '0.012706', 'rewards_train/rejected': '-0.021017', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.033738', 'logps_train/rejected': '-177.08', 'logps_train/chosen': '-69.145', 'loss/train': '0.67645', 'examples_per_second': '5.4566', 'grad_norm': '3.4062', 'counters/examples': 4288, 'counters/updates': 268}
+skipping logging after 4304 examples to avoid logging too frequently
+skipping logging after 4320 examples to avoid logging too frequently
+skipping logging after 4336 examples to avoid logging too frequently
+train stats after 4352 examples: {'rewards_train/chosen': '0.010203', 'rewards_train/rejected': '-0.015249', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.025472', 'logps_train/rejected': '-139.68', 'logps_train/chosen': '-56.486', 'loss/train': '0.68054', 'examples_per_second': '5.6248', 'grad_norm': '2.75', 'counters/examples': 4352, 'counters/updates': 272}
+skipping logging after 4368 examples to avoid logging too frequently
+skipping logging after 4384 examples to avoid logging too frequently
+skipping logging after 4400 examples to avoid logging too frequently
+train stats after 4416 examples: {'rewards_train/chosen': '0.012529', 'rewards_train/rejected': '-0.017869', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.030413', 'logps_train/rejected': '-163.08', 'logps_train/chosen': '-61.963', 'loss/train': '0.67792', 'examples_per_second': '4.796', 'grad_norm': '3.1562', 'counters/examples': 4416, 'counters/updates': 276}
+skipping logging after 4432 examples to avoid logging too frequently
+skipping logging after 4448 examples to avoid logging too frequently
+skipping logging after 4464 examples to avoid logging too frequently
+train stats after 4480 examples: {'rewards_train/chosen': '0.012918', 'rewards_train/rejected': '-0.021564', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.034491', 'logps_train/rejected': '-154.27', 'logps_train/chosen': '-64.801', 'loss/train': '0.67651', 'examples_per_second': '5.7017', 'grad_norm': '3.2031', 'counters/examples': 4480, 'counters/updates': 280}
+skipping logging after 4496 examples to avoid logging too frequently
+skipping logging after 4512 examples to avoid logging too frequently
+skipping logging after 4528 examples to avoid logging too frequently
+train stats after 4544 examples: {'rewards_train/chosen': '0.012127', 'rewards_train/rejected': '-0.019844', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.031958', 'logps_train/rejected': '-147.41', 'logps_train/chosen': '-56.628', 'loss/train': '0.67731', 'examples_per_second': '5.5106', 'grad_norm': '2.9531', 'counters/examples': 4544, 'counters/updates': 284}
+skipping logging after 4560 examples to avoid logging too frequently
+skipping logging after 4576 examples to avoid logging too frequently
+skipping logging after 4592 examples to avoid logging too frequently
+train stats after 4608 examples: {'rewards_train/chosen': '0.011626', 'rewards_train/rejected': '-0.021015', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.03264', 'logps_train/rejected': '-149.82', 'logps_train/chosen': '-52.541', 'loss/train': '0.67719', 'examples_per_second': '5.868', 'grad_norm': '2.9688', 'counters/examples': 4608, 'counters/updates': 288}
+skipping logging after 4624 examples to avoid logging too frequently
+skipping logging after 4640 examples to avoid logging too frequently
+skipping logging after 4656 examples to avoid logging too frequently
+train stats after 4672 examples: {'rewards_train/chosen': '0.014907', 'rewards_train/rejected': '-0.020567', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.035495', 'logps_train/rejected': '-147.05', 'logps_train/chosen': '-63.844', 'loss/train': '0.67542', 'examples_per_second': '3.8553', 'grad_norm': '3.0625', 'counters/examples': 4672, 'counters/updates': 292}
+skipping logging after 4688 examples to avoid logging too frequently
+skipping logging after 4704 examples to avoid logging too frequently
+skipping logging after 4720 examples to avoid logging too frequently
+train stats after 4736 examples: {'rewards_train/chosen': '0.013992', 'rewards_train/rejected': '-0.02262', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.036654', 'logps_train/rejected': '-170.19', 'logps_train/chosen': '-62.896', 'loss/train': '0.6748', 'examples_per_second': '4.8831', 'grad_norm': '3.25', 'counters/examples': 4736, 'counters/updates': 296}
+skipping logging after 4752 examples to avoid logging too frequently
+skipping logging after 4768 examples to avoid logging too frequently
+skipping logging after 4784 examples to avoid logging too frequently
+train stats after 4800 examples: {'rewards_train/chosen': '0.015603', 'rewards_train/rejected': '-0.021975', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.037578', 'logps_train/rejected': '-148.53', 'logps_train/chosen': '-58.998', 'loss/train': '0.67462', 'examples_per_second': '4.6954', 'grad_norm': '2.9219', 'counters/examples': 4800, 'counters/updates': 300}
+skipping logging after 4816 examples to avoid logging too frequently
+skipping logging after 4832 examples to avoid logging too frequently
+skipping logging after 4848 examples to avoid logging too frequently
+train stats after 4864 examples: {'rewards_train/chosen': '0.015435', 'rewards_train/rejected': '-0.026863', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.042315', 'logps_train/rejected': '-164', 'logps_train/chosen': '-63.939', 'loss/train': '0.67316', 'examples_per_second': '5.3179', 'grad_norm': '3.3125', 'counters/examples': 4864, 'counters/updates': 304}
+skipping logging after 4880 examples to avoid logging too frequently
+skipping logging after 4896 examples to avoid logging too frequently
+skipping logging after 4912 examples to avoid logging too frequently
+train stats after 4928 examples: {'rewards_train/chosen': '0.0135', 'rewards_train/rejected': '-0.02563', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.039112', 'logps_train/rejected': '-158.93', 'logps_train/chosen': '-59.67', 'loss/train': '0.67389', 'examples_per_second': '5.2867', 'grad_norm': '3.0469', 'counters/examples': 4928, 'counters/updates': 308}
+skipping logging after 4944 examples to avoid logging too frequently
+skipping logging after 4960 examples to avoid logging too frequently
+skipping logging after 4976 examples to avoid logging too frequently
+train stats after 4992 examples: {'rewards_train/chosen': '0.014764', 'rewards_train/rejected': '-0.025277', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.040042', 'logps_train/rejected': '-153.41', 'logps_train/chosen': '-58.889', 'loss/train': '0.67352', 'examples_per_second': '4.9237', 'grad_norm': '3.1562', 'counters/examples': 4992, 'counters/updates': 312}
+skipping logging after 5008 examples to avoid logging too frequently
+skipping logging after 5024 examples to avoid logging too frequently
+skipping logging after 5040 examples to avoid logging too frequently
+train stats after 5056 examples: {'rewards_train/chosen': '0.013734', 'rewards_train/rejected': '-0.028047', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.041767', 'logps_train/rejected': '-157.18', 'logps_train/chosen': '-53.6', 'loss/train': '0.67285', 'examples_per_second': '5.0362', 'grad_norm': '3.0781', 'counters/examples': 5056, 'counters/updates': 316}
+skipping logging after 5072 examples to avoid logging too frequently
+skipping logging after 5088 examples to avoid logging too frequently
+skipping logging after 5104 examples to avoid logging too frequently
+train stats after 5120 examples: {'rewards_train/chosen': '0.017892', 'rewards_train/rejected': '-0.029576', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.047467', 'logps_train/rejected': '-170.01', 'logps_train/chosen': '-63.914', 'loss/train': '0.67017', 'examples_per_second': '4.9438', 'grad_norm': '3.375', 'counters/examples': 5120, 'counters/updates': 320}
+skipping logging after 5136 examples to avoid logging too frequently
+skipping logging after 5152 examples to avoid logging too frequently
+skipping logging after 5168 examples to avoid logging too frequently
+train stats after 5184 examples: {'rewards_train/chosen': '0.014068', 'rewards_train/rejected': '-0.02811', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.042192', 'logps_train/rejected': '-157.95', 'logps_train/chosen': '-63.234', 'loss/train': '0.67255', 'examples_per_second': '5.3414', 'grad_norm': '3.0312', 'counters/examples': 5184, 'counters/updates': 324}
+skipping logging after 5200 examples to avoid logging too frequently
+skipping logging after 5216 examples to avoid logging too frequently
+skipping logging after 5232 examples to avoid logging too frequently
+train stats after 5248 examples: {'rewards_train/chosen': '0.015641', 'rewards_train/rejected': '-0.026013', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.041662', 'logps_train/rejected': '-130.14', 'logps_train/chosen': '-61.406', 'loss/train': '0.67261', 'examples_per_second': '6.6663', 'grad_norm': '2.8906', 'counters/examples': 5248, 'counters/updates': 328}
+skipping logging after 5264 examples to avoid logging too frequently
+skipping logging after 5280 examples to avoid logging too frequently
+skipping logging after 5296 examples to avoid logging too frequently
+train stats after 5312 examples: {'rewards_train/chosen': '0.017206', 'rewards_train/rejected': '-0.022014', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.039213', 'logps_train/rejected': '-130.76', 'logps_train/chosen': '-63.904', 'loss/train': '0.67389', 'examples_per_second': '5.4316', 'grad_norm': '2.7031', 'counters/examples': 5312, 'counters/updates': 332}
+skipping logging after 5328 examples to avoid logging too frequently
+skipping logging after 5344 examples to avoid logging too frequently
+skipping logging after 5360 examples to avoid logging too frequently
+train stats after 5376 examples: {'rewards_train/chosen': '0.020098', 'rewards_train/rejected': '-0.033862', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.053976', 'logps_train/rejected': '-172.65', 'logps_train/chosen': '-64.057', 'loss/train': '0.66687', 'examples_per_second': '5.3469', 'grad_norm': '3.3594', 'counters/examples': 5376, 'counters/updates': 336}
+skipping logging after 5392 examples to avoid logging too frequently
+skipping logging after 5408 examples to avoid logging too frequently
+skipping logging after 5424 examples to avoid logging too frequently
+train stats after 5440 examples: {'rewards_train/chosen': '0.01727', 'rewards_train/rejected': '-0.033597', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.050877', 'logps_train/rejected': '-150.69', 'logps_train/chosen': '-57.467', 'loss/train': '0.66815', 'examples_per_second': '4.3604', 'grad_norm': '3', 'counters/examples': 5440, 'counters/updates': 340}
+skipping logging after 5456 examples to avoid logging too frequently
+skipping logging after 5472 examples to avoid logging too frequently
+skipping logging after 5488 examples to avoid logging too frequently
+train stats after 5504 examples: {'rewards_train/chosen': '0.015296', 'rewards_train/rejected': '-0.031141', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.046441', 'logps_train/rejected': '-139.6', 'logps_train/chosen': '-56.529', 'loss/train': '0.67059', 'examples_per_second': '5.1549', 'grad_norm': '2.9062', 'counters/examples': 5504, 'counters/updates': 344}
+skipping logging after 5520 examples to avoid logging too frequently
+skipping logging after 5536 examples to avoid logging too frequently
+skipping logging after 5552 examples to avoid logging too frequently
+train stats after 5568 examples: {'rewards_train/chosen': '0.020898', 'rewards_train/rejected': '-0.02922', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.050139', 'logps_train/rejected': '-133.27', 'logps_train/chosen': '-63.01', 'loss/train': '0.66882', 'examples_per_second': '4.5958', 'grad_norm': '2.8594', 'counters/examples': 5568, 'counters/updates': 348}
+skipping logging after 5584 examples to avoid logging too frequently
+skipping logging after 5600 examples to avoid logging too frequently
+skipping logging after 5616 examples to avoid logging too frequently
+train stats after 5632 examples: {'rewards_train/chosen': '0.019088', 'rewards_train/rejected': '-0.035891', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.054982', 'logps_train/rejected': '-156.61', 'logps_train/chosen': '-55.188', 'loss/train': '0.66663', 'examples_per_second': '5.579', 'grad_norm': '3.1094', 'counters/examples': 5632, 'counters/updates': 352}
+skipping logging after 5648 examples to avoid logging too frequently
+skipping logging after 5664 examples to avoid logging too frequently
+skipping logging after 5680 examples to avoid logging too frequently
+train stats after 5696 examples: {'rewards_train/chosen': '0.020743', 'rewards_train/rejected': '-0.039159', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.059929', 'logps_train/rejected': '-166.53', 'logps_train/chosen': '-63.219', 'loss/train': '0.66418', 'examples_per_second': '5.2869', 'grad_norm': '3.4375', 'counters/examples': 5696, 'counters/updates': 356}
+skipping logging after 5712 examples to avoid logging too frequently
+skipping logging after 5728 examples to avoid logging too frequently
+skipping logging after 5744 examples to avoid logging too frequently
+train stats after 5760 examples: {'rewards_train/chosen': '0.020945', 'rewards_train/rejected': '-0.047156', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.068139', 'logps_train/rejected': '-191.2', 'logps_train/chosen': '-59.891', 'loss/train': '0.66089', 'examples_per_second': '5.1246', 'grad_norm': '3.5', 'counters/examples': 5760, 'counters/updates': 360}
+skipping logging after 5776 examples to avoid logging too frequently
+skipping logging after 5792 examples to avoid logging too frequently
+skipping logging after 5808 examples to avoid logging too frequently
+train stats after 5824 examples: {'rewards_train/chosen': '0.019474', 'rewards_train/rejected': '-0.040546', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.060002', 'logps_train/rejected': '-158.53', 'logps_train/chosen': '-53.598', 'loss/train': '0.66486', 'examples_per_second': '4.9636', 'grad_norm': '3.1094', 'counters/examples': 5824, 'counters/updates': 364}
+skipping logging after 5840 examples to avoid logging too frequently
+skipping logging after 5856 examples to avoid logging too frequently
+skipping logging after 5872 examples to avoid logging too frequently
+train stats after 5888 examples: {'rewards_train/chosen': '0.018357', 'rewards_train/rejected': '-0.03847', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.056833', 'logps_train/rejected': '-158.82', 'logps_train/chosen': '-51.443', 'loss/train': '0.66544', 'examples_per_second': '5.6691', 'grad_norm': '3', 'counters/examples': 5888, 'counters/updates': 368}
+skipping logging after 5904 examples to avoid logging too frequently
+skipping logging after 5920 examples to avoid logging too frequently
+skipping logging after 5936 examples to avoid logging too frequently
+train stats after 5952 examples: {'rewards_train/chosen': '0.029447', 'rewards_train/rejected': '-0.047455', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.076935', 'logps_train/rejected': '-173.22', 'logps_train/chosen': '-63.08', 'loss/train': '0.65582', 'examples_per_second': '4.9097', 'grad_norm': '3.5156', 'counters/examples': 5952, 'counters/updates': 372}
+skipping logging after 5968 examples to avoid logging too frequently
+skipping logging after 5984 examples to avoid logging too frequently
+skipping logging after 6000 examples to avoid logging too frequently
+train stats after 6016 examples: {'rewards_train/chosen': '0.025003', 'rewards_train/rejected': '-0.050128', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.075149', 'logps_train/rejected': '-180.79', 'logps_train/chosen': '-61.232', 'loss/train': '0.65729', 'examples_per_second': '4.9022', 'grad_norm': '3.3594', 'counters/examples': 6016, 'counters/updates': 376}
+skipping logging after 6032 examples to avoid logging too frequently
+skipping logging after 6048 examples to avoid logging too frequently
+skipping logging after 6064 examples to avoid logging too frequently
+train stats after 6080 examples: {'rewards_train/chosen': '0.017939', 'rewards_train/rejected': '-0.031443', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.049384', 'logps_train/rejected': '-126.95', 'logps_train/chosen': '-54.971', 'loss/train': '0.66913', 'examples_per_second': '6.6866', 'grad_norm': '2.5312', 'counters/examples': 6080, 'counters/updates': 380}
+skipping logging after 6096 examples to avoid logging too frequently
+skipping logging after 6112 examples to avoid logging too frequently
+skipping logging after 6128 examples to avoid logging too frequently
+train stats after 6144 examples: {'rewards_train/chosen': '0.023615', 'rewards_train/rejected': '-0.045644', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.069243', 'logps_train/rejected': '-171.54', 'logps_train/chosen': '-61.428', 'loss/train': '0.65918', 'examples_per_second': '4.51', 'grad_norm': '3.25', 'counters/examples': 6144, 'counters/updates': 384}
+skipping logging after 6160 examples to avoid logging too frequently
+skipping logging after 6176 examples to avoid logging too frequently
+skipping logging after 6192 examples to avoid logging too frequently
+train stats after 6208 examples: {'rewards_train/chosen': '0.027922', 'rewards_train/rejected': '-0.046035', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.074015', 'logps_train/rejected': '-162.28', 'logps_train/chosen': '-63.238', 'loss/train': '0.65778', 'examples_per_second': '5.3482', 'grad_norm': '3.2188', 'counters/examples': 6208, 'counters/updates': 388}
+skipping logging after 6224 examples to avoid logging too frequently
+skipping logging after 6240 examples to avoid logging too frequently
+skipping logging after 6256 examples to avoid logging too frequently
+train stats after 6272 examples: {'rewards_train/chosen': '0.03007', 'rewards_train/rejected': '-0.033976', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.064071', 'logps_train/rejected': '-131.07', 'logps_train/chosen': '-65.164', 'loss/train': '0.66229', 'examples_per_second': '5.0357', 'grad_norm': '2.875', 'counters/examples': 6272, 'counters/updates': 392}
+skipping logging after 6288 examples to avoid logging too frequently
+skipping logging after 6304 examples to avoid logging too frequently
+skipping logging after 6320 examples to avoid logging too frequently
+train stats after 6336 examples: {'rewards_train/chosen': '0.026572', 'rewards_train/rejected': '-0.047626', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.074199', 'logps_train/rejected': '-162.31', 'logps_train/chosen': '-54.963', 'loss/train': '0.65698', 'examples_per_second': '4.5886', 'grad_norm': '3.1094', 'counters/examples': 6336, 'counters/updates': 396}
+skipping logging after 6352 examples to avoid logging too frequently
+skipping logging after 6368 examples to avoid logging too frequently
+skipping logging after 6384 examples to avoid logging too frequently
+train stats after 6400 examples: {'rewards_train/chosen': '0.023685', 'rewards_train/rejected': '-0.050262', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.073926', 'logps_train/rejected': '-150.41', 'logps_train/chosen': '-53.358', 'loss/train': '0.65808', 'examples_per_second': '5.1784', 'grad_norm': '3', 'counters/examples': 6400, 'counters/updates': 400}
+skipping logging after 6416 examples to avoid logging too frequently
+skipping logging after 6432 examples to avoid logging too frequently
+skipping logging after 6448 examples to avoid logging too frequently
+train stats after 6464 examples: {'rewards_train/chosen': '0.024499', 'rewards_train/rejected': '-0.037818', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.062342', 'logps_train/rejected': '-131.35', 'logps_train/chosen': '-51.486', 'loss/train': '0.66284', 'examples_per_second': '5.3202', 'grad_norm': '2.7656', 'counters/examples': 6464, 'counters/updates': 404}
+skipping logging after 6480 examples to avoid logging too frequently
+skipping logging after 6496 examples to avoid logging too frequently
+skipping logging after 6512 examples to avoid logging too frequently
+train stats after 6528 examples: {'rewards_train/chosen': '0.028957', 'rewards_train/rejected': '-0.064508', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.093453', 'logps_train/rejected': '-182.59', 'logps_train/chosen': '-61.908', 'loss/train': '0.64819', 'examples_per_second': '4.8111', 'grad_norm': '3.5625', 'counters/examples': 6528, 'counters/updates': 408}
+skipping logging after 6544 examples to avoid logging too frequently
+skipping logging after 6560 examples to avoid logging too frequently
+skipping logging after 6576 examples to avoid logging too frequently
+train stats after 6592 examples: {'rewards_train/chosen': '0.029096', 'rewards_train/rejected': '-0.045587', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.074711', 'logps_train/rejected': '-151.38', 'logps_train/chosen': '-53.479', 'loss/train': '0.65692', 'examples_per_second': '4.9726', 'grad_norm': '2.9531', 'counters/examples': 6592, 'counters/updates': 412}
+skipping logging after 6608 examples to avoid logging too frequently
+skipping logging after 6624 examples to avoid logging too frequently
+skipping logging after 6640 examples to avoid logging too frequently
+train stats after 6656 examples: {'rewards_train/chosen': '0.034117', 'rewards_train/rejected': '-0.055034', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.08919', 'logps_train/rejected': '-168.57', 'logps_train/chosen': '-73.365', 'loss/train': '0.65051', 'examples_per_second': '5.3613', 'grad_norm': '3.375', 'counters/examples': 6656, 'counters/updates': 416}
+skipping logging after 6672 examples to avoid logging too frequently
+skipping logging after 6688 examples to avoid logging too frequently
+skipping logging after 6704 examples to avoid logging too frequently
+train stats after 6720 examples: {'rewards_train/chosen': '0.035342', 'rewards_train/rejected': '-0.054955', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.090277', 'logps_train/rejected': '-156.69', 'logps_train/chosen': '-63.352', 'loss/train': '0.64984', 'examples_per_second': '5.3458', 'grad_norm': '3.2656', 'counters/examples': 6720, 'counters/updates': 420}
+skipping logging after 6736 examples to avoid logging too frequently
+skipping logging after 6752 examples to avoid logging too frequently
+skipping logging after 6768 examples to avoid logging too frequently
+train stats after 6784 examples: {'rewards_train/chosen': '0.038693', 'rewards_train/rejected': '-0.074766', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.11345', 'logps_train/rejected': '-202.31', 'logps_train/chosen': '-63.479', 'loss/train': '0.63943', 'examples_per_second': '3.4017', 'grad_norm': '3.8125', 'counters/examples': 6784, 'counters/updates': 424}
+skipping logging after 6800 examples to avoid logging too frequently
+skipping logging after 6816 examples to avoid logging too frequently
+skipping logging after 6832 examples to avoid logging too frequently
+train stats after 6848 examples: {'rewards_train/chosen': '0.035653', 'rewards_train/rejected': '-0.063696', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.099349', 'logps_train/rejected': '-174.64', 'logps_train/chosen': '-57.312', 'loss/train': '0.64557', 'examples_per_second': '5.8375', 'grad_norm': '3.4375', 'counters/examples': 6848, 'counters/updates': 428}
+skipping logging after 6864 examples to avoid logging too frequently
+skipping logging after 6880 examples to avoid logging too frequently
+skipping logging after 6896 examples to avoid logging too frequently
+train stats after 6912 examples: {'rewards_train/chosen': '0.029147', 'rewards_train/rejected': '-0.07064', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.099813', 'logps_train/rejected': '-173.3', 'logps_train/chosen': '-54.34', 'loss/train': '0.6463', 'examples_per_second': '4.4336', 'grad_norm': '3.3125', 'counters/examples': 6912, 'counters/updates': 432}
+skipping logging after 6928 examples to avoid logging too frequently
+skipping logging after 6944 examples to avoid logging too frequently
+skipping logging after 6960 examples to avoid logging too frequently
+train stats after 6976 examples: {'rewards_train/chosen': '0.035014', 'rewards_train/rejected': '-0.058783', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.093779', 'logps_train/rejected': '-163.96', 'logps_train/chosen': '-54.33', 'loss/train': '0.64844', 'examples_per_second': '5.4962', 'grad_norm': '3.1562', 'counters/examples': 6976, 'counters/updates': 436}
+skipping logging after 6992 examples to avoid logging too frequently
+skipping logging after 7008 examples to avoid logging too frequently
+skipping logging after 7024 examples to avoid logging too frequently
+train stats after 7040 examples: {'rewards_train/chosen': '0.030543', 'rewards_train/rejected': '-0.054322', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.08486', 'logps_train/rejected': '-132.25', 'logps_train/chosen': '-54.086', 'loss/train': '0.65192', 'examples_per_second': '4.5601', 'grad_norm': '3.0156', 'counters/examples': 7040, 'counters/updates': 440}
+skipping logging after 7056 examples to avoid logging too frequently
+skipping logging after 7072 examples to avoid logging too frequently
+skipping logging after 7088 examples to avoid logging too frequently
+train stats after 7104 examples: {'rewards_train/chosen': '0.02975', 'rewards_train/rejected': '-0.05625', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.085993', 'logps_train/rejected': '-143.4', 'logps_train/chosen': '-47.65', 'loss/train': '0.65259', 'examples_per_second': '5.4779', 'grad_norm': '2.8438', 'counters/examples': 7104, 'counters/updates': 444}
+skipping logging after 7120 examples to avoid logging too frequently
+skipping logging after 7136 examples to avoid logging too frequently
+skipping logging after 7152 examples to avoid logging too frequently
+train stats after 7168 examples: {'rewards_train/chosen': '0.036113', 'rewards_train/rejected': '-0.056698', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.092831', 'logps_train/rejected': '-142.57', 'logps_train/chosen': '-56.24', 'loss/train': '0.64874', 'examples_per_second': '5.26', 'grad_norm': '2.9688', 'counters/examples': 7168, 'counters/updates': 448}
+skipping logging after 7184 examples to avoid logging too frequently
+skipping logging after 7200 examples to avoid logging too frequently
+skipping logging after 7216 examples to avoid logging too frequently
+train stats after 7232 examples: {'rewards_train/chosen': '0.034743', 'rewards_train/rejected': '-0.062428', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.097155', 'logps_train/rejected': '-169.09', 'logps_train/chosen': '-62.568', 'loss/train': '0.64706', 'examples_per_second': '5.2736', 'grad_norm': '3.1875', 'counters/examples': 7232, 'counters/updates': 452}
+skipping logging after 7248 examples to avoid logging too frequently
+skipping logging after 7264 examples to avoid logging too frequently
+skipping logging after 7280 examples to avoid logging too frequently
+train stats after 7296 examples: {'rewards_train/chosen': '0.043596', 'rewards_train/rejected': '-0.087218', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.13085', 'logps_train/rejected': '-210.03', 'logps_train/chosen': '-65.059', 'loss/train': '0.63171', 'examples_per_second': '4.737', 'grad_norm': '3.7812', 'counters/examples': 7296, 'counters/updates': 456}
+skipping logging after 7312 examples to avoid logging too frequently
+skipping logging after 7328 examples to avoid logging too frequently
+skipping logging after 7344 examples to avoid logging too frequently
+train stats after 7360 examples: {'rewards_train/chosen': '0.04329', 'rewards_train/rejected': '-0.070295', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.11358', 'logps_train/rejected': '-162.8', 'logps_train/chosen': '-53.393', 'loss/train': '0.63922', 'examples_per_second': '5.3513', 'grad_norm': '3.2969', 'counters/examples': 7360, 'counters/updates': 460}
+skipping logging after 7376 examples to avoid logging too frequently
+skipping logging after 7392 examples to avoid logging too frequently
+skipping logging after 7408 examples to avoid logging too frequently
+train stats after 7424 examples: {'rewards_train/chosen': '0.032376', 'rewards_train/rejected': '-0.078784', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.11113', 'logps_train/rejected': '-160.38', 'logps_train/chosen': '-57.844', 'loss/train': '0.64014', 'examples_per_second': '5.1681', 'grad_norm': '3.2344', 'counters/examples': 7424, 'counters/updates': 464}
+skipping logging after 7440 examples to avoid logging too frequently
+skipping logging after 7456 examples to avoid logging too frequently
+skipping logging after 7472 examples to avoid logging too frequently
+train stats after 7488 examples: {'rewards_train/chosen': '0.047979', 'rewards_train/rejected': '-0.065935', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.11389', 'logps_train/rejected': '-155.98', 'logps_train/chosen': '-59.816', 'loss/train': '0.63885', 'examples_per_second': '4.5664', 'grad_norm': '3.2031', 'counters/examples': 7488, 'counters/updates': 468}
+skipping logging after 7504 examples to avoid logging too frequently
+skipping logging after 7520 examples to avoid logging too frequently
+skipping logging after 7536 examples to avoid logging too frequently
+train stats after 7552 examples: {'rewards_train/chosen': '0.036717', 'rewards_train/rejected': '-0.055626', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.0923', 'logps_train/rejected': '-141.25', 'logps_train/chosen': '-55.313', 'loss/train': '0.6492', 'examples_per_second': '5.8041', 'grad_norm': '2.7656', 'counters/examples': 7552, 'counters/updates': 472}
+skipping logging after 7568 examples to avoid logging too frequently
+skipping logging after 7584 examples to avoid logging too frequently
+skipping logging after 7600 examples to avoid logging too frequently
+train stats after 7616 examples: {'rewards_train/chosen': '0.047079', 'rewards_train/rejected': '-0.072845', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.11995', 'logps_train/rejected': '-169.58', 'logps_train/chosen': '-57.27', 'loss/train': '0.63702', 'examples_per_second': '4.3629', 'grad_norm': '3.3594', 'counters/examples': 7616, 'counters/updates': 476}
+skipping logging after 7632 examples to avoid logging too frequently
+skipping logging after 7648 examples to avoid logging too frequently
+skipping logging after 7664 examples to avoid logging too frequently
+train stats after 7680 examples: {'rewards_train/chosen': '0.048244', 'rewards_train/rejected': '-0.08639', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.1346', 'logps_train/rejected': '-184.27', 'logps_train/chosen': '-57.553', 'loss/train': '0.63013', 'examples_per_second': '4.197', 'grad_norm': '3.4531', 'counters/examples': 7680, 'counters/updates': 480}
+skipping logging after 7696 examples to avoid logging too frequently
+skipping logging after 7712 examples to avoid logging too frequently
+skipping logging after 7728 examples to avoid logging too frequently
+train stats after 7744 examples: {'rewards_train/chosen': '0.043597', 'rewards_train/rejected': '-0.084074', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.12769', 'logps_train/rejected': '-168.75', 'logps_train/chosen': '-55.176', 'loss/train': '0.63287', 'examples_per_second': '4.913', 'grad_norm': '3.3438', 'counters/examples': 7744, 'counters/updates': 484}
+skipping logging after 7760 examples to avoid logging too frequently
+skipping logging after 7776 examples to avoid logging too frequently
+skipping logging after 7792 examples to avoid logging too frequently
+train stats after 7808 examples: {'rewards_train/chosen': '0.04748', 'rewards_train/rejected': '-0.084755', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.13227', 'logps_train/rejected': '-163.4', 'logps_train/chosen': '-50.623', 'loss/train': '0.63101', 'examples_per_second': '4.7637', 'grad_norm': '3.2812', 'counters/examples': 7808, 'counters/updates': 488}
+skipping logging after 7824 examples to avoid logging too frequently
+skipping logging after 7840 examples to avoid logging too frequently
+skipping logging after 7856 examples to avoid logging too frequently
+train stats after 7872 examples: {'rewards_train/chosen': '0.051189', 'rewards_train/rejected': '-0.098987', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.1501', 'logps_train/rejected': '-179.52', 'logps_train/chosen': '-64.262', 'loss/train': '0.6232', 'examples_per_second': '5.3491', 'grad_norm': '3.5312', 'counters/examples': 7872, 'counters/updates': 492}
+skipping logging after 7888 examples to avoid logging too frequently
+skipping logging after 7904 examples to avoid logging too frequently
+skipping logging after 7920 examples to avoid logging too frequently
+train stats after 7936 examples: {'rewards_train/chosen': '0.047895', 'rewards_train/rejected': '-0.069868', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.11782', 'logps_train/rejected': '-142.51', 'logps_train/chosen': '-50.34', 'loss/train': '0.63757', 'examples_per_second': '5.074', 'grad_norm': '2.9219', 'counters/examples': 7936, 'counters/updates': 496}
+skipping logging after 7952 examples to avoid logging too frequently
+skipping logging after 7968 examples to avoid logging too frequently
+skipping logging after 7984 examples to avoid logging too frequently
+train stats after 8000 examples: {'rewards_train/chosen': '0.045835', 'rewards_train/rejected': '-0.078359', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.1242', 'logps_train/rejected': '-157.47', 'logps_train/chosen': '-61.797', 'loss/train': '0.63452', 'examples_per_second': '4.2343', 'grad_norm': '3.1562', 'counters/examples': 8000, 'counters/updates': 500}
+Running evaluation after 8000 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:02<01:03,  2.06s/it]Computing eval metrics:   6%|▋         | 2/32 [00:04<01:00,  2.00s/it]Computing eval metrics:   9%|▉         | 3/32 [00:05<00:55,  1.90s/it]Computing eval metrics:  12%|█▎        | 4/32 [00:07<00:52,  1.86s/it]Computing eval metrics:  16%|█▌        | 5/32 [00:08<00:41,  1.52s/it]Computing eval metrics:  19%|█▉        | 6/32 [00:10<00:41,  1.61s/it]Computing eval metrics:  22%|██▏       | 7/32 [00:11<00:36,  1.47s/it]Computing eval metrics:  25%|██▌       | 8/32 [00:13<00:36,  1.53s/it]Computing eval metrics:  28%|██▊       | 9/32 [00:14<00:35,  1.56s/it]Computing eval metrics:  31%|███▏      | 10/32 [00:16<00:33,  1.50s/it]Computing eval metrics:  34%|███▍      | 11/32 [00:17<00:32,  1.55s/it]Computing eval metrics:  38%|███▊      | 12/32 [00:19<00:29,  1.47s/it]Computing eval metrics:  41%|████      | 13/32 [00:20<00:26,  1.42s/it]Computing eval metrics:  44%|████▍     | 14/32 [00:21<00:25,  1.40s/it]Computing eval metrics:  47%|████▋     | 15/32 [00:22<00:21,  1.27s/it]Computing eval metrics:  50%|█████     | 16/32 [00:23<00:19,  1.22s/it]Computing eval metrics:  53%|█████▎    | 17/32 [00:25<00:19,  1.33s/it]Computing eval metrics:  56%|█████▋    | 18/32 [00:26<00:18,  1.33s/it]Computing eval metrics:  59%|█████▉    | 19/32 [00:27<00:16,  1.29s/it]Computing eval metrics:  62%|██████▎   | 20/32 [00:28<00:14,  1.23s/it]Computing eval metrics:  66%|██████▌   | 21/32 [00:30<00:14,  1.28s/it]Computing eval metrics:  69%|██████▉   | 22/32 [00:31<00:11,  1.15s/it]Computing eval metrics:  72%|███████▏  | 23/32 [00:32<00:11,  1.23s/it]Computing eval metrics:  75%|███████▌  | 24/32 [00:34<00:10,  1.32s/it]Computing eval metrics:  78%|███████▊  | 25/32 [00:35<00:08,  1.28s/it]Computing eval metrics:  81%|████████▏ | 26/32 [00:36<00:07,  1.33s/it]Computing eval metrics:  84%|████████▍ | 27/32 [00:38<00:07,  1.46s/it]Computing eval metrics:  88%|████████▊ | 28/32 [00:39<00:05,  1.39s/it]Computing eval metrics:  91%|█████████ | 29/32 [00:41<00:04,  1.63s/it]Computing eval metrics:  94%|█████████▍| 30/32 [00:42<00:02,  1.42s/it]Computing eval metrics:  97%|█████████▋| 31/32 [00:44<00:01,  1.40s/it]Computing eval metrics: 100%|██████████| 32/32 [00:45<00:00,  1.38s/it]Computing eval metrics: 100%|██████████| 32/32 [00:45<00:00,  1.43s/it]
+eval after 8000: {'rewards_eval/chosen': '-0.091527', 'rewards_eval/rejected': '-0.095482', 'rewards_eval/accuracies': '0.52344', 'rewards_eval/margins': '0.0039502', 'logps_eval/rejected': '-176.37', 'logps_eval/chosen': '-173.01', 'loss/eval': '0.69337'}
+skipping logging after 8016 examples to avoid logging too frequently
+skipping logging after 8032 examples to avoid logging too frequently
+skipping logging after 8048 examples to avoid logging too frequently
+train stats after 8064 examples: {'rewards_train/chosen': '0.055634', 'rewards_train/rejected': '-0.09626', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.15187', 'logps_train/rejected': '-175.29', 'logps_train/chosen': '-51.861', 'loss/train': '0.62244', 'examples_per_second': '4.8811', 'grad_norm': '3.5312', 'counters/examples': 8064, 'counters/updates': 504}
+skipping logging after 8080 examples to avoid logging too frequently
+skipping logging after 8096 examples to avoid logging too frequently
+skipping logging after 8112 examples to avoid logging too frequently
+train stats after 8128 examples: {'rewards_train/chosen': '0.061686', 'rewards_train/rejected': '-0.077455', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.13912', 'logps_train/rejected': '-149.24', 'logps_train/chosen': '-55.904', 'loss/train': '0.62817', 'examples_per_second': '5.4032', 'grad_norm': '3.2031', 'counters/examples': 8128, 'counters/updates': 508}
+skipping logging after 8144 examples to avoid logging too frequently
+skipping logging after 8160 examples to avoid logging too frequently
+skipping logging after 8176 examples to avoid logging too frequently
+train stats after 8192 examples: {'rewards_train/chosen': '0.050988', 'rewards_train/rejected': '-0.1134', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.16445', 'logps_train/rejected': '-189.34', 'logps_train/chosen': '-52.851', 'loss/train': '0.61746', 'examples_per_second': '5.1437', 'grad_norm': '3.6094', 'counters/examples': 8192, 'counters/updates': 512}
+skipping logging after 8208 examples to avoid logging too frequently
+skipping logging after 8224 examples to avoid logging too frequently
+skipping logging after 8240 examples to avoid logging too frequently
+train stats after 8256 examples: {'rewards_train/chosen': '0.054266', 'rewards_train/rejected': '-0.084188', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.13837', 'logps_train/rejected': '-154.23', 'logps_train/chosen': '-57.207', 'loss/train': '0.62836', 'examples_per_second': '5.7351', 'grad_norm': '3.1562', 'counters/examples': 8256, 'counters/updates': 516}
+skipping logging after 8272 examples to avoid logging too frequently
+skipping logging after 8288 examples to avoid logging too frequently
+skipping logging after 8304 examples to avoid logging too frequently
+train stats after 8320 examples: {'rewards_train/chosen': '0.068285', 'rewards_train/rejected': '-0.11368', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.18196', 'logps_train/rejected': '-188.18', 'logps_train/chosen': '-60.869', 'loss/train': '0.60944', 'examples_per_second': '4.3862', 'grad_norm': '3.6875', 'counters/examples': 8320, 'counters/updates': 520}
+skipping logging after 8336 examples to avoid logging too frequently
+skipping logging after 8352 examples to avoid logging too frequently
+skipping logging after 8368 examples to avoid logging too frequently
+train stats after 8384 examples: {'rewards_train/chosen': '0.061627', 'rewards_train/rejected': '-0.11147', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.17305', 'logps_train/rejected': '-169.71', 'logps_train/chosen': '-53.073', 'loss/train': '0.61343', 'examples_per_second': '5.6695', 'grad_norm': '3.4219', 'counters/examples': 8384, 'counters/updates': 524}
+skipping logging after 8400 examples to avoid logging too frequently
+skipping logging after 8416 examples to avoid logging too frequently
+skipping logging after 8432 examples to avoid logging too frequently
+train stats after 8448 examples: {'rewards_train/chosen': '0.063005', 'rewards_train/rejected': '-0.099319', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.16233', 'logps_train/rejected': '-169.22', 'logps_train/chosen': '-56.051', 'loss/train': '0.61789', 'examples_per_second': '4.3441', 'grad_norm': '3.3281', 'counters/examples': 8448, 'counters/updates': 528}
+skipping logging after 8464 examples to avoid logging too frequently
+skipping logging after 8480 examples to avoid logging too frequently
+skipping logging after 8496 examples to avoid logging too frequently
+train stats after 8512 examples: {'rewards_train/chosen': '0.060274', 'rewards_train/rejected': '-0.11297', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.1733', 'logps_train/rejected': '-170.68', 'logps_train/chosen': '-53.909', 'loss/train': '0.6123', 'examples_per_second': '5.0681', 'grad_norm': '3.4844', 'counters/examples': 8512, 'counters/updates': 532}
+skipping logging after 8528 examples to avoid logging too frequently
+skipping logging after 8544 examples to avoid logging too frequently
+skipping logging after 8560 examples to avoid logging too frequently
+train stats after 8576 examples: {'rewards_train/chosen': '0.057801', 'rewards_train/rejected': '-0.1215', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.17936', 'logps_train/rejected': '-186.04', 'logps_train/chosen': '-55.971', 'loss/train': '0.6109', 'examples_per_second': '5.1835', 'grad_norm': '3.5469', 'counters/examples': 8576, 'counters/updates': 536}
+skipping logging after 8592 examples to avoid logging too frequently
+skipping logging after 8608 examples to avoid logging too frequently
+skipping logging after 8624 examples to avoid logging too frequently
+train stats after 8640 examples: {'rewards_train/chosen': '0.061351', 'rewards_train/rejected': '-0.080331', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.14163', 'logps_train/rejected': '-133.26', 'logps_train/chosen': '-55.824', 'loss/train': '0.62668', 'examples_per_second': '4.8001', 'grad_norm': '3', 'counters/examples': 8640, 'counters/updates': 540}
+skipping logging after 8656 examples to avoid logging too frequently
+skipping logging after 8672 examples to avoid logging too frequently
+skipping logging after 8688 examples to avoid logging too frequently
+train stats after 8704 examples: {'rewards_train/chosen': '0.064614', 'rewards_train/rejected': '-0.13873', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.2033', 'logps_train/rejected': '-182.25', 'logps_train/chosen': '-52.666', 'loss/train': '0.59976', 'examples_per_second': '5.6654', 'grad_norm': '3.7188', 'counters/examples': 8704, 'counters/updates': 544}
+skipping logging after 8720 examples to avoid logging too frequently
+skipping logging after 8736 examples to avoid logging too frequently
+skipping logging after 8752 examples to avoid logging too frequently
+train stats after 8768 examples: {'rewards_train/chosen': '0.074381', 'rewards_train/rejected': '-0.16556', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.24002', 'logps_train/rejected': '-224.75', 'logps_train/chosen': '-55.655', 'loss/train': '0.58511', 'examples_per_second': '4.408', 'grad_norm': '4.1562', 'counters/examples': 8768, 'counters/updates': 548}
+skipping logging after 8784 examples to avoid logging too frequently
+skipping logging after 8800 examples to avoid logging too frequently
+skipping logging after 8816 examples to avoid logging too frequently
+train stats after 8832 examples: {'rewards_train/chosen': '0.071309', 'rewards_train/rejected': '-0.12908', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.20031', 'logps_train/rejected': '-170.46', 'logps_train/chosen': '-55.73', 'loss/train': '0.60153', 'examples_per_second': '4.8791', 'grad_norm': '3.4375', 'counters/examples': 8832, 'counters/updates': 552}
+skipping logging after 8848 examples to avoid logging too frequently
+skipping logging after 8864 examples to avoid logging too frequently
+skipping logging after 8880 examples to avoid logging too frequently
+train stats after 8896 examples: {'rewards_train/chosen': '0.063073', 'rewards_train/rejected': '-0.10031', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.16333', 'logps_train/rejected': '-144.9', 'logps_train/chosen': '-49.263', 'loss/train': '0.6181', 'examples_per_second': '4.4647', 'grad_norm': '3.1406', 'counters/examples': 8896, 'counters/updates': 556}
+skipping logging after 8912 examples to avoid logging too frequently
+skipping logging after 8928 examples to avoid logging too frequently
+skipping logging after 8944 examples to avoid logging too frequently
+train stats after 8960 examples: {'rewards_train/chosen': '0.070221', 'rewards_train/rejected': '-0.15256', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.22275', 'logps_train/rejected': '-185.54', 'logps_train/chosen': '-50.274', 'loss/train': '0.59442', 'examples_per_second': '5.1114', 'grad_norm': '3.5938', 'counters/examples': 8960, 'counters/updates': 560}
+skipping logging after 8976 examples to avoid logging too frequently
+skipping logging after 8992 examples to avoid logging too frequently
+skipping logging after 9008 examples to avoid logging too frequently
+train stats after 9024 examples: {'rewards_train/chosen': '0.08441', 'rewards_train/rejected': '-0.12769', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.21207', 'logps_train/rejected': '-162.32', 'logps_train/chosen': '-60.312', 'loss/train': '0.59586', 'examples_per_second': '5.7206', 'grad_norm': '3.5781', 'counters/examples': 9024, 'counters/updates': 564}
+skipping logging after 9040 examples to avoid logging too frequently
+skipping logging after 9056 examples to avoid logging too frequently
+skipping logging after 9072 examples to avoid logging too frequently
+train stats after 9088 examples: {'rewards_train/chosen': '0.069731', 'rewards_train/rejected': '-0.11466', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.18429', 'logps_train/rejected': '-147.23', 'logps_train/chosen': '-44.729', 'loss/train': '0.60815', 'examples_per_second': '4.8868', 'grad_norm': '3.2812', 'counters/examples': 9088, 'counters/updates': 568}
+skipping logging after 9104 examples to avoid logging too frequently
+skipping logging after 9120 examples to avoid logging too frequently
+skipping logging after 9136 examples to avoid logging too frequently
+train stats after 9152 examples: {'rewards_train/chosen': '0.075323', 'rewards_train/rejected': '-0.15156', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.2268', 'logps_train/rejected': '-191.45', 'logps_train/chosen': '-59.762', 'loss/train': '0.58997', 'examples_per_second': '5.1959', 'grad_norm': '3.8125', 'counters/examples': 9152, 'counters/updates': 572}
+skipping logging after 9168 examples to avoid logging too frequently
+skipping logging after 9184 examples to avoid logging too frequently
+skipping logging after 9200 examples to avoid logging too frequently
+train stats after 9216 examples: {'rewards_train/chosen': '0.076508', 'rewards_train/rejected': '-0.13956', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.2162', 'logps_train/rejected': '-175.16', 'logps_train/chosen': '-50.502', 'loss/train': '0.59689', 'examples_per_second': '5.0145', 'grad_norm': '3.3906', 'counters/examples': 9216, 'counters/updates': 576}
+skipping logging after 9232 examples to avoid logging too frequently
+skipping logging after 9248 examples to avoid logging too frequently
+skipping logging after 9264 examples to avoid logging too frequently
+train stats after 9280 examples: {'rewards_train/chosen': '0.077641', 'rewards_train/rejected': '-0.11173', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.18935', 'logps_train/rejected': '-157.68', 'logps_train/chosen': '-55.908', 'loss/train': '0.60681', 'examples_per_second': '6.16', 'grad_norm': '3.2656', 'counters/examples': 9280, 'counters/updates': 580}
+skipping logging after 9296 examples to avoid logging too frequently
+skipping logging after 9312 examples to avoid logging too frequently
+skipping logging after 9328 examples to avoid logging too frequently
+train stats after 9344 examples: {'rewards_train/chosen': '0.083781', 'rewards_train/rejected': '-0.1578', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.24175', 'logps_train/rejected': '-187.89', 'logps_train/chosen': '-46.178', 'loss/train': '0.58627', 'examples_per_second': '4.2748', 'grad_norm': '3.6562', 'counters/examples': 9344, 'counters/updates': 584}
+skipping logging after 9360 examples to avoid logging too frequently
+skipping logging after 9376 examples to avoid logging too frequently
+skipping logging after 9392 examples to avoid logging too frequently
+train stats after 9408 examples: {'rewards_train/chosen': '0.083267', 'rewards_train/rejected': '-0.10237', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.18557', 'logps_train/rejected': '-134.49', 'logps_train/chosen': '-41.816', 'loss/train': '0.6077', 'examples_per_second': '5.9118', 'grad_norm': '3.0781', 'counters/examples': 9408, 'counters/updates': 588}
+skipping logging after 9424 examples to avoid logging too frequently
+skipping logging after 9440 examples to avoid logging too frequently
+skipping logging after 9456 examples to avoid logging too frequently
+train stats after 9472 examples: {'rewards_train/chosen': '0.093285', 'rewards_train/rejected': '-0.15314', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.24644', 'logps_train/rejected': '-184.24', 'logps_train/chosen': '-50.646', 'loss/train': '0.58328', 'examples_per_second': '4.3087', 'grad_norm': '3.7031', 'counters/examples': 9472, 'counters/updates': 592}
+skipping logging after 9488 examples to avoid logging too frequently
+skipping logging after 9504 examples to avoid logging too frequently
+skipping logging after 9520 examples to avoid logging too frequently
+train stats after 9536 examples: {'rewards_train/chosen': '0.10332', 'rewards_train/rejected': '-0.16754', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.27098', 'logps_train/rejected': '-188.88', 'logps_train/chosen': '-57.133', 'loss/train': '0.5755', 'examples_per_second': '4.6459', 'grad_norm': '3.625', 'counters/examples': 9536, 'counters/updates': 596}
+skipping logging after 9552 examples to avoid logging too frequently
+skipping logging after 9568 examples to avoid logging too frequently
+skipping logging after 9584 examples to avoid logging too frequently
+train stats after 9600 examples: {'rewards_train/chosen': '0.090636', 'rewards_train/rejected': '-0.14598', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.23673', 'logps_train/rejected': '-169.68', 'logps_train/chosen': '-51.931', 'loss/train': '0.58861', 'examples_per_second': '4.9714', 'grad_norm': '3.4062', 'counters/examples': 9600, 'counters/updates': 600}
+skipping logging after 9616 examples to avoid logging too frequently
+skipping logging after 9632 examples to avoid logging too frequently
+skipping logging after 9648 examples to avoid logging too frequently
+train stats after 9664 examples: {'rewards_train/chosen': '0.079964', 'rewards_train/rejected': '-0.14755', 'rewards_train/accuracies': '0.89062', 'rewards_train/margins': '0.22758', 'logps_train/rejected': '-170.7', 'logps_train/chosen': '-47.011', 'loss/train': '0.5921', 'examples_per_second': '5.7935', 'grad_norm': '3.7031', 'counters/examples': 9664, 'counters/updates': 604}
+skipping logging after 9680 examples to avoid logging too frequently
+skipping logging after 9696 examples to avoid logging too frequently
+skipping logging after 9712 examples to avoid logging too frequently
+train stats after 9728 examples: {'rewards_train/chosen': '0.095466', 'rewards_train/rejected': '-0.18087', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.27642', 'logps_train/rejected': '-193.93', 'logps_train/chosen': '-56.057', 'loss/train': '0.57132', 'examples_per_second': '4.8571', 'grad_norm': '3.75', 'counters/examples': 9728, 'counters/updates': 608}
+skipping logging after 9744 examples to avoid logging too frequently
+skipping logging after 9760 examples to avoid logging too frequently
+skipping logging after 9776 examples to avoid logging too frequently
+train stats after 9792 examples: {'rewards_train/chosen': '0.10627', 'rewards_train/rejected': '-0.1578', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.26415', 'logps_train/rejected': '-170.78', 'logps_train/chosen': '-59.032', 'loss/train': '0.57806', 'examples_per_second': '5.0815', 'grad_norm': '3.5', 'counters/examples': 9792, 'counters/updates': 612}
+skipping logging after 9808 examples to avoid logging too frequently
+skipping logging after 9824 examples to avoid logging too frequently
+skipping logging after 9840 examples to avoid logging too frequently
+train stats after 9856 examples: {'rewards_train/chosen': '0.097459', 'rewards_train/rejected': '-0.16829', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.26576', 'logps_train/rejected': '-161.98', 'logps_train/chosen': '-48.13', 'loss/train': '0.57706', 'examples_per_second': '4.3807', 'grad_norm': '3.4062', 'counters/examples': 9856, 'counters/updates': 616}
+skipping logging after 9872 examples to avoid logging too frequently
+skipping logging after 9888 examples to avoid logging too frequently
+skipping logging after 9904 examples to avoid logging too frequently
+train stats after 9920 examples: {'rewards_train/chosen': '0.096176', 'rewards_train/rejected': '-0.15261', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.24863', 'logps_train/rejected': '-160.72', 'logps_train/chosen': '-59.781', 'loss/train': '0.58264', 'examples_per_second': '5.4371', 'grad_norm': '3.2656', 'counters/examples': 9920, 'counters/updates': 620}
+skipping logging after 9936 examples to avoid logging too frequently
+skipping logging after 9952 examples to avoid logging too frequently
+skipping logging after 9968 examples to avoid logging too frequently
+train stats after 9984 examples: {'rewards_train/chosen': '0.083531', 'rewards_train/rejected': '-0.15557', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.23917', 'logps_train/rejected': '-172.94', 'logps_train/chosen': '-50.451', 'loss/train': '0.58835', 'examples_per_second': '6.0903', 'grad_norm': '3.4375', 'counters/examples': 9984, 'counters/updates': 624}
+skipping logging after 10000 examples to avoid logging too frequently
+skipping logging after 10016 examples to avoid logging too frequently
+skipping logging after 10032 examples to avoid logging too frequently
+train stats after 10048 examples: {'rewards_train/chosen': '0.092569', 'rewards_train/rejected': '-0.17772', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.2704', 'logps_train/rejected': '-161.97', 'logps_train/chosen': '-46.017', 'loss/train': '0.57266', 'examples_per_second': '5.0843', 'grad_norm': '3.4688', 'counters/examples': 10048, 'counters/updates': 628}
+skipping logging after 10064 examples to avoid logging too frequently
+skipping logging after 10080 examples to avoid logging too frequently
+skipping logging after 10096 examples to avoid logging too frequently
+train stats after 10112 examples: {'rewards_train/chosen': '0.088916', 'rewards_train/rejected': '-0.19968', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.28869', 'logps_train/rejected': '-179.76', 'logps_train/chosen': '-53.462', 'loss/train': '0.56667', 'examples_per_second': '4.9854', 'grad_norm': '3.875', 'counters/examples': 10112, 'counters/updates': 632}
+skipping logging after 10128 examples to avoid logging too frequently
+skipping logging after 10144 examples to avoid logging too frequently
+skipping logging after 10160 examples to avoid logging too frequently
+train stats after 10176 examples: {'rewards_train/chosen': '0.11041', 'rewards_train/rejected': '-0.19052', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.30105', 'logps_train/rejected': '-171.5', 'logps_train/chosen': '-54.391', 'loss/train': '0.56082', 'examples_per_second': '5.3324', 'grad_norm': '3.6562', 'counters/examples': 10176, 'counters/updates': 636}
+skipping logging after 10192 examples to avoid logging too frequently
+skipping logging after 10208 examples to avoid logging too frequently
+skipping logging after 10224 examples to avoid logging too frequently
+train stats after 10240 examples: {'rewards_train/chosen': '0.10599', 'rewards_train/rejected': '-0.18545', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.2912', 'logps_train/rejected': '-176.52', 'logps_train/chosen': '-57.076', 'loss/train': '0.56693', 'examples_per_second': '5.8936', 'grad_norm': '3.6094', 'counters/examples': 10240, 'counters/updates': 640}
+skipping logging after 10256 examples to avoid logging too frequently
+skipping logging after 10272 examples to avoid logging too frequently
+skipping logging after 10288 examples to avoid logging too frequently
+train stats after 10304 examples: {'rewards_train/chosen': '0.0913', 'rewards_train/rejected': '-0.18517', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.27648', 'logps_train/rejected': '-170.15', 'logps_train/chosen': '-53.701', 'loss/train': '0.57233', 'examples_per_second': '4.7403', 'grad_norm': '3.4844', 'counters/examples': 10304, 'counters/updates': 644}
+skipping logging after 10320 examples to avoid logging too frequently
+skipping logging after 10336 examples to avoid logging too frequently
+skipping logging after 10352 examples to avoid logging too frequently
+train stats after 10368 examples: {'rewards_train/chosen': '0.10324', 'rewards_train/rejected': '-0.17694', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.28015', 'logps_train/rejected': '-167.16', 'logps_train/chosen': '-47.101', 'loss/train': '0.56985', 'examples_per_second': '5.324', 'grad_norm': '3.5469', 'counters/examples': 10368, 'counters/updates': 648}
+skipping logging after 10384 examples to avoid logging too frequently
+skipping logging after 10400 examples to avoid logging too frequently
+skipping logging after 10416 examples to avoid logging too frequently
+train stats after 10432 examples: {'rewards_train/chosen': '0.10541', 'rewards_train/rejected': '-0.21238', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.31773', 'logps_train/rejected': '-179.92', 'logps_train/chosen': '-50.987', 'loss/train': '0.55855', 'examples_per_second': '5.0795', 'grad_norm': '3.6094', 'counters/examples': 10432, 'counters/updates': 652}
+skipping logging after 10448 examples to avoid logging too frequently
+skipping logging after 10464 examples to avoid logging too frequently
+skipping logging after 10480 examples to avoid logging too frequently
+train stats after 10496 examples: {'rewards_train/chosen': '0.10995', 'rewards_train/rejected': '-0.24806', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.35786', 'logps_train/rejected': '-191.95', 'logps_train/chosen': '-57.489', 'loss/train': '0.54257', 'examples_per_second': '4.5142', 'grad_norm': '3.7812', 'counters/examples': 10496, 'counters/updates': 656}
+skipping logging after 10512 examples to avoid logging too frequently
+skipping logging after 10528 examples to avoid logging too frequently
+skipping logging after 10544 examples to avoid logging too frequently
+train stats after 10560 examples: {'rewards_train/chosen': '0.1019', 'rewards_train/rejected': '-0.21381', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.31576', 'logps_train/rejected': '-168.97', 'logps_train/chosen': '-51.137', 'loss/train': '0.55804', 'examples_per_second': '5.5721', 'grad_norm': '3.4531', 'counters/examples': 10560, 'counters/updates': 660}
+skipping logging after 10576 examples to avoid logging too frequently
+skipping logging after 10592 examples to avoid logging too frequently
+skipping logging after 10608 examples to avoid logging too frequently
+train stats after 10624 examples: {'rewards_train/chosen': '0.10571', 'rewards_train/rejected': '-0.19247', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.29822', 'logps_train/rejected': '-160.2', 'logps_train/chosen': '-49.769', 'loss/train': '0.5659', 'examples_per_second': '4.845', 'grad_norm': '3.4844', 'counters/examples': 10624, 'counters/updates': 664}
+skipping logging after 10640 examples to avoid logging too frequently
+skipping logging after 10656 examples to avoid logging too frequently
+skipping logging after 10672 examples to avoid logging too frequently
+train stats after 10688 examples: {'rewards_train/chosen': '0.10447', 'rewards_train/rejected': '-0.26733', 'rewards_train/accuracies': '1', 'rewards_train/margins': '0.37175', 'logps_train/rejected': '-195.66', 'logps_train/chosen': '-50.153', 'loss/train': '0.5332', 'examples_per_second': '5.1369', 'grad_norm': '4.0312', 'counters/examples': 10688, 'counters/updates': 668}
+skipping logging after 10704 examples to avoid logging too frequently
+skipping logging after 10720 examples to avoid logging too frequently
+skipping logging after 10736 examples to avoid logging too frequently
+train stats after 10752 examples: {'rewards_train/chosen': '0.090206', 'rewards_train/rejected': '-0.23792', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.32797', 'logps_train/rejected': '-182.97', 'logps_train/chosen': '-54.311', 'loss/train': '0.55595', 'examples_per_second': '4.5822', 'grad_norm': '3.5312', 'counters/examples': 10752, 'counters/updates': 672}
+skipping logging after 10768 examples to avoid logging too frequently
+skipping logging after 10784 examples to avoid logging too frequently
+skipping logging after 10800 examples to avoid logging too frequently
+train stats after 10816 examples: {'rewards_train/chosen': '0.11018', 'rewards_train/rejected': '-0.26245', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.37267', 'logps_train/rejected': '-180.65', 'logps_train/chosen': '-52.341', 'loss/train': '0.53445', 'examples_per_second': '4.7358', 'grad_norm': '3.8594', 'counters/examples': 10816, 'counters/updates': 676}
+skipping logging after 10832 examples to avoid logging too frequently
+skipping logging after 10848 examples to avoid logging too frequently
+skipping logging after 10864 examples to avoid logging too frequently
+train stats after 10880 examples: {'rewards_train/chosen': '0.099708', 'rewards_train/rejected': '-0.26167', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.36116', 'logps_train/rejected': '-189.52', 'logps_train/chosen': '-53.033', 'loss/train': '0.54176', 'examples_per_second': '4.3293', 'grad_norm': '3.7031', 'counters/examples': 10880, 'counters/updates': 680}
+skipping logging after 10896 examples to avoid logging too frequently
+skipping logging after 10912 examples to avoid logging too frequently
+skipping logging after 10928 examples to avoid logging too frequently
+train stats after 10944 examples: {'rewards_train/chosen': '0.10866', 'rewards_train/rejected': '-0.21033', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.31899', 'logps_train/rejected': '-161.18', 'logps_train/chosen': '-50.09', 'loss/train': '0.55743', 'examples_per_second': '4.2876', 'grad_norm': '3.3594', 'counters/examples': 10944, 'counters/updates': 684}
+skipping logging after 10960 examples to avoid logging too frequently
+skipping logging after 10976 examples to avoid logging too frequently
+skipping logging after 10992 examples to avoid logging too frequently
+train stats after 11008 examples: {'rewards_train/chosen': '0.11201', 'rewards_train/rejected': '-0.35006', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.46199', 'logps_train/rejected': '-238.27', 'logps_train/chosen': '-57.332', 'loss/train': '0.50552', 'examples_per_second': '4.4073', 'grad_norm': '4.0938', 'counters/examples': 11008, 'counters/updates': 688}
+skipping logging after 11024 examples to avoid logging too frequently
+skipping logging after 11040 examples to avoid logging too frequently
+skipping logging after 11056 examples to avoid logging too frequently
+train stats after 11072 examples: {'rewards_train/chosen': '0.095116', 'rewards_train/rejected': '-0.3155', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.41037', 'logps_train/rejected': '-207.05', 'logps_train/chosen': '-51.978', 'loss/train': '0.52422', 'examples_per_second': '4.7302', 'grad_norm': '3.8281', 'counters/examples': 11072, 'counters/updates': 692}
+skipping logging after 11088 examples to avoid logging too frequently
+skipping logging after 11104 examples to avoid logging too frequently
+skipping logging after 11120 examples to avoid logging too frequently
+train stats after 11136 examples: {'rewards_train/chosen': '0.10068', 'rewards_train/rejected': '-0.27491', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.37556', 'logps_train/rejected': '-181.47', 'logps_train/chosen': '-51.21', 'loss/train': '0.53885', 'examples_per_second': '4.544', 'grad_norm': '3.4062', 'counters/examples': 11136, 'counters/updates': 696}
+skipping logging after 11152 examples to avoid logging too frequently
+skipping logging after 11168 examples to avoid logging too frequently
+skipping logging after 11184 examples to avoid logging too frequently
+train stats after 11200 examples: {'rewards_train/chosen': '0.078756', 'rewards_train/rejected': '-0.22931', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.30813', 'logps_train/rejected': '-154.52', 'logps_train/chosen': '-41.639', 'loss/train': '0.55774', 'examples_per_second': '5.7279', 'grad_norm': '3.5312', 'counters/examples': 11200, 'counters/updates': 700}
+skipping logging after 11216 examples to avoid logging too frequently
+skipping logging after 11232 examples to avoid logging too frequently
+skipping logging after 11248 examples to avoid logging too frequently
+train stats after 11264 examples: {'rewards_train/chosen': '0.083953', 'rewards_train/rejected': '-0.28994', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.37379', 'logps_train/rejected': '-179.19', 'logps_train/chosen': '-46.522', 'loss/train': '0.53578', 'examples_per_second': '5.2216', 'grad_norm': '3.8125', 'counters/examples': 11264, 'counters/updates': 704}
+skipping logging after 11280 examples to avoid logging too frequently
+skipping logging after 11296 examples to avoid logging too frequently
+skipping logging after 11312 examples to avoid logging too frequently
+train stats after 11328 examples: {'rewards_train/chosen': '0.0934', 'rewards_train/rejected': '-0.37238', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.46569', 'logps_train/rejected': '-229.8', 'logps_train/chosen': '-61.508', 'loss/train': '0.50418', 'examples_per_second': '4.5556', 'grad_norm': '4.125', 'counters/examples': 11328, 'counters/updates': 708}
+skipping logging after 11344 examples to avoid logging too frequently
+skipping logging after 11360 examples to avoid logging too frequently
+skipping logging after 11376 examples to avoid logging too frequently
+train stats after 11392 examples: {'rewards_train/chosen': '0.10588', 'rewards_train/rejected': '-0.31281', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.41878', 'logps_train/rejected': '-186.13', 'logps_train/chosen': '-51.287', 'loss/train': '0.51869', 'examples_per_second': '5.7678', 'grad_norm': '3.9688', 'counters/examples': 11392, 'counters/updates': 712}
+skipping logging after 11408 examples to avoid logging too frequently
+skipping logging after 11424 examples to avoid logging too frequently
+skipping logging after 11440 examples to avoid logging too frequently
+train stats after 11456 examples: {'rewards_train/chosen': '0.093724', 'rewards_train/rejected': '-0.36381', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.45747', 'logps_train/rejected': '-204.19', 'logps_train/chosen': '-50.163', 'loss/train': '0.51108', 'examples_per_second': '4.3513', 'grad_norm': '3.8594', 'counters/examples': 11456, 'counters/updates': 716}
+skipping logging after 11472 examples to avoid logging too frequently
+skipping logging after 11488 examples to avoid logging too frequently
+skipping logging after 11504 examples to avoid logging too frequently
+train stats after 11520 examples: {'rewards_train/chosen': '0.081244', 'rewards_train/rejected': '-0.30084', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.38201', 'logps_train/rejected': '-172.57', 'logps_train/chosen': '-46.206', 'loss/train': '0.53333', 'examples_per_second': '6.19', 'grad_norm': '3.7969', 'counters/examples': 11520, 'counters/updates': 720}
+skipping logging after 11536 examples to avoid logging too frequently
+skipping logging after 11552 examples to avoid logging too frequently
+skipping logging after 11568 examples to avoid logging too frequently
+train stats after 11584 examples: {'rewards_train/chosen': '0.099904', 'rewards_train/rejected': '-0.34932', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.44917', 'logps_train/rejected': '-196.44', 'logps_train/chosen': '-51.74', 'loss/train': '0.504', 'examples_per_second': '4.6358', 'grad_norm': '4.1562', 'counters/examples': 11584, 'counters/updates': 724}
+skipping logging after 11600 examples to avoid logging too frequently
+skipping logging after 11616 examples to avoid logging too frequently
+skipping logging after 11632 examples to avoid logging too frequently
+train stats after 11648 examples: {'rewards_train/chosen': '0.071031', 'rewards_train/rejected': '-0.34621', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.41741', 'logps_train/rejected': '-192.72', 'logps_train/chosen': '-51.044', 'loss/train': '0.52013', 'examples_per_second': '4.7122', 'grad_norm': '3.9531', 'counters/examples': 11648, 'counters/updates': 728}
+skipping logging after 11664 examples to avoid logging too frequently
+skipping logging after 11680 examples to avoid logging too frequently
+skipping logging after 11696 examples to avoid logging too frequently
+train stats after 11712 examples: {'rewards_train/chosen': '0.097686', 'rewards_train/rejected': '-0.38134', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.47904', 'logps_train/rejected': '-221.77', 'logps_train/chosen': '-54.735', 'loss/train': '0.50523', 'examples_per_second': '5.3323', 'grad_norm': '3.9531', 'counters/examples': 11712, 'counters/updates': 732}
+skipping logging after 11728 examples to avoid logging too frequently
+skipping logging after 11744 examples to avoid logging too frequently
+skipping logging after 11760 examples to avoid logging too frequently
+train stats after 11776 examples: {'rewards_train/chosen': '0.082778', 'rewards_train/rejected': '-0.30408', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.38659', 'logps_train/rejected': '-171.94', 'logps_train/chosen': '-46.139', 'loss/train': '0.53218', 'examples_per_second': '5.433', 'grad_norm': '3.6406', 'counters/examples': 11776, 'counters/updates': 736}
+skipping logging after 11792 examples to avoid logging too frequently
+skipping logging after 11808 examples to avoid logging too frequently
+skipping logging after 11824 examples to avoid logging too frequently
+train stats after 11840 examples: {'rewards_train/chosen': '0.10211', 'rewards_train/rejected': '-0.43213', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.53426', 'logps_train/rejected': '-226.74', 'logps_train/chosen': '-50.919', 'loss/train': '0.48183', 'examples_per_second': '4.8064', 'grad_norm': '4.1875', 'counters/examples': 11840, 'counters/updates': 740}
+skipping logging after 11856 examples to avoid logging too frequently
+skipping logging after 11872 examples to avoid logging too frequently
+skipping logging after 11888 examples to avoid logging too frequently
+train stats after 11904 examples: {'rewards_train/chosen': '0.086786', 'rewards_train/rejected': '-0.40203', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.4888', 'logps_train/rejected': '-212.13', 'logps_train/chosen': '-57.751', 'loss/train': '0.50145', 'examples_per_second': '4.7175', 'grad_norm': '4.0625', 'counters/examples': 11904, 'counters/updates': 744}
+skipping logging after 11920 examples to avoid logging too frequently
+skipping logging after 11936 examples to avoid logging too frequently
+skipping logging after 11952 examples to avoid logging too frequently
+train stats after 11968 examples: {'rewards_train/chosen': '0.096414', 'rewards_train/rejected': '-0.34369', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.44014', 'logps_train/rejected': '-183.62', 'logps_train/chosen': '-58.157', 'loss/train': '0.51601', 'examples_per_second': '4.8734', 'grad_norm': '3.6562', 'counters/examples': 11968, 'counters/updates': 748}
+skipping logging after 11984 examples to avoid logging too frequently
+skipping logging after 12000 examples to avoid logging too frequently
+Running evaluation after 12000 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:02<01:18,  2.52s/it]Computing eval metrics:   6%|▋         | 2/32 [00:04<01:05,  2.19s/it]Computing eval metrics:   9%|▉         | 3/32 [00:06<00:58,  2.01s/it]Computing eval metrics:  12%|█▎        | 4/32 [00:08<00:53,  1.92s/it]Computing eval metrics:  16%|█▌        | 5/32 [00:08<00:42,  1.56s/it]Computing eval metrics:  19%|█▉        | 6/32 [00:10<00:42,  1.64s/it]Computing eval metrics:  22%|██▏       | 7/32 [00:11<00:37,  1.48s/it]Computing eval metrics:  25%|██▌       | 8/32 [00:13<00:36,  1.54s/it]Computing eval metrics:  28%|██▊       | 9/32 [00:15<00:36,  1.57s/it]Computing eval metrics:  31%|███▏      | 10/32 [00:16<00:33,  1.51s/it]Computing eval metrics:  34%|███▍      | 11/32 [00:18<00:32,  1.55s/it]Computing eval metrics:  38%|███▊      | 12/32 [00:19<00:29,  1.47s/it]Computing eval metrics:  41%|████      | 13/32 [00:20<00:26,  1.42s/it]Computing eval metrics:  44%|████▍     | 14/32 [00:22<00:25,  1.40s/it]Computing eval metrics:  47%|████▋     | 15/32 [00:23<00:21,  1.27s/it]Computing eval metrics:  50%|█████     | 16/32 [00:24<00:19,  1.21s/it]Computing eval metrics:  53%|█████▎    | 17/32 [00:25<00:19,  1.33s/it]Computing eval metrics:  56%|█████▋    | 18/32 [00:27<00:18,  1.33s/it]Computing eval metrics:  59%|█████▉    | 19/32 [00:28<00:16,  1.29s/it]Computing eval metrics:  62%|██████▎   | 20/32 [00:29<00:14,  1.23s/it]Computing eval metrics:  66%|██████▌   | 21/32 [00:30<00:14,  1.28s/it]Computing eval metrics:  69%|██████▉   | 22/32 [00:31<00:11,  1.15s/it]Computing eval metrics:  72%|███████▏  | 23/32 [00:33<00:11,  1.23s/it]Computing eval metrics:  75%|███████▌  | 24/32 [00:34<00:10,  1.32s/it]Computing eval metrics:  78%|███████▊  | 25/32 [00:35<00:08,  1.27s/it]Computing eval metrics:  81%|████████▏ | 26/32 [00:37<00:07,  1.33s/it]Computing eval metrics:  84%|████████▍ | 27/32 [00:39<00:07,  1.46s/it]Computing eval metrics:  88%|████████▊ | 28/32 [00:40<00:05,  1.38s/it]Computing eval metrics:  91%|█████████ | 29/32 [00:42<00:04,  1.62s/it]Computing eval metrics:  94%|█████████▍| 30/32 [00:43<00:02,  1.42s/it]Computing eval metrics:  97%|█████████▋| 31/32 [00:44<00:01,  1.40s/it]Computing eval metrics: 100%|██████████| 32/32 [00:46<00:00,  1.38s/it]Computing eval metrics: 100%|██████████| 32/32 [00:46<00:00,  1.44s/it]
+eval after 12000: {'rewards_eval/chosen': '-0.40955', 'rewards_eval/rejected': '-0.42778', 'rewards_eval/accuracies': '0.52734', 'rewards_eval/margins': '0.018197', 'logps_eval/rejected': '-209.59', 'logps_eval/chosen': '-204.8', 'loss/eval': '0.7152'}
+skipping logging after 12016 examples to avoid logging too frequently
+train stats after 12032 examples: {'rewards_train/chosen': '0.080931', 'rewards_train/rejected': '-0.47266', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.55344', 'logps_train/rejected': '-226.49', 'logps_train/chosen': '-67.303', 'loss/train': '0.48185', 'examples_per_second': '5.3771', 'grad_norm': '4.0625', 'counters/examples': 12032, 'counters/updates': 752}
+skipping logging after 12048 examples to avoid logging too frequently
+skipping logging after 12064 examples to avoid logging too frequently
+skipping logging after 12080 examples to avoid logging too frequently
+train stats after 12096 examples: {'rewards_train/chosen': '0.080756', 'rewards_train/rejected': '-0.39065', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.47108', 'logps_train/rejected': '-196.12', 'logps_train/chosen': '-50.641', 'loss/train': '0.50806', 'examples_per_second': '5.4754', 'grad_norm': '3.75', 'counters/examples': 12096, 'counters/updates': 756}
+skipping logging after 12112 examples to avoid logging too frequently
+skipping logging after 12128 examples to avoid logging too frequently
+skipping logging after 12144 examples to avoid logging too frequently
+train stats after 12160 examples: {'rewards_train/chosen': '0.089483', 'rewards_train/rejected': '-0.37747', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.46706', 'logps_train/rejected': '-193.63', 'logps_train/chosen': '-57.582', 'loss/train': '0.51206', 'examples_per_second': '4.9525', 'grad_norm': '3.8125', 'counters/examples': 12160, 'counters/updates': 760}
+skipping logging after 12176 examples to avoid logging too frequently
+skipping logging after 12192 examples to avoid logging too frequently
+skipping logging after 12208 examples to avoid logging too frequently
+train stats after 12224 examples: {'rewards_train/chosen': '0.088177', 'rewards_train/rejected': '-0.44535', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.53343', 'logps_train/rejected': '-206.21', 'logps_train/chosen': '-44.421', 'loss/train': '0.48436', 'examples_per_second': '5.3368', 'grad_norm': '4.3125', 'counters/examples': 12224, 'counters/updates': 764}
+skipping logging after 12240 examples to avoid logging too frequently
+skipping logging after 12256 examples to avoid logging too frequently
+skipping logging after 12272 examples to avoid logging too frequently
+train stats after 12288 examples: {'rewards_train/chosen': '0.10188', 'rewards_train/rejected': '-0.44576', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.54772', 'logps_train/rejected': '-201.23', 'logps_train/chosen': '-49.991', 'loss/train': '0.48708', 'examples_per_second': '5.0686', 'grad_norm': '3.8125', 'counters/examples': 12288, 'counters/updates': 768}
+skipping logging after 12304 examples to avoid logging too frequently
+skipping logging after 12320 examples to avoid logging too frequently
+skipping logging after 12336 examples to avoid logging too frequently
+train stats after 12352 examples: {'rewards_train/chosen': '0.082145', 'rewards_train/rejected': '-0.4972', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.5796', 'logps_train/rejected': '-251.52', 'logps_train/chosen': '-60.894', 'loss/train': '0.48248', 'examples_per_second': '4.3677', 'grad_norm': '3.8438', 'counters/examples': 12352, 'counters/updates': 772}
+skipping logging after 12368 examples to avoid logging too frequently
+skipping logging after 12384 examples to avoid logging too frequently
+skipping logging after 12400 examples to avoid logging too frequently
+train stats after 12416 examples: {'rewards_train/chosen': '0.081589', 'rewards_train/rejected': '-0.44231', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.52393', 'logps_train/rejected': '-205.6', 'logps_train/chosen': '-59.548', 'loss/train': '0.49749', 'examples_per_second': '4.2111', 'grad_norm': '3.7812', 'counters/examples': 12416, 'counters/updates': 776}
+skipping logging after 12432 examples to avoid logging too frequently
+skipping logging after 12448 examples to avoid logging too frequently
+skipping logging after 12464 examples to avoid logging too frequently
+train stats after 12480 examples: {'rewards_train/chosen': '0.089164', 'rewards_train/rejected': '-0.45987', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.54936', 'logps_train/rejected': '-212.37', 'logps_train/chosen': '-53.114', 'loss/train': '0.49637', 'examples_per_second': '4.1688', 'grad_norm': '3.8125', 'counters/examples': 12480, 'counters/updates': 780}
+skipping logging after 12496 examples to avoid logging too frequently
+skipping logging after 12512 examples to avoid logging too frequently
+skipping logging after 12528 examples to avoid logging too frequently
+train stats after 12544 examples: {'rewards_train/chosen': '0.082406', 'rewards_train/rejected': '-0.54453', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.62709', 'logps_train/rejected': '-239.37', 'logps_train/chosen': '-48.243', 'loss/train': '0.45922', 'examples_per_second': '4.5683', 'grad_norm': '4.4375', 'counters/examples': 12544, 'counters/updates': 784}
+skipping logging after 12560 examples to avoid logging too frequently
+skipping logging after 12576 examples to avoid logging too frequently
+skipping logging after 12592 examples to avoid logging too frequently
+train stats after 12608 examples: {'rewards_train/chosen': '0.080633', 'rewards_train/rejected': '-0.51943', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.60003', 'logps_train/rejected': '-227.52', 'logps_train/chosen': '-49.512', 'loss/train': '0.46698', 'examples_per_second': '4.6877', 'grad_norm': '4.375', 'counters/examples': 12608, 'counters/updates': 788}
+skipping logging after 12624 examples to avoid logging too frequently
+skipping logging after 12640 examples to avoid logging too frequently
+skipping logging after 12656 examples to avoid logging too frequently
+train stats after 12672 examples: {'rewards_train/chosen': '0.085822', 'rewards_train/rejected': '-0.53224', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.61809', 'logps_train/rejected': '-227.64', 'logps_train/chosen': '-54.265', 'loss/train': '0.45193', 'examples_per_second': '4.3941', 'grad_norm': '4.6562', 'counters/examples': 12672, 'counters/updates': 792}
+skipping logging after 12688 examples to avoid logging too frequently
+skipping logging after 12704 examples to avoid logging too frequently
+skipping logging after 12720 examples to avoid logging too frequently
+train stats after 12736 examples: {'rewards_train/chosen': '0.061722', 'rewards_train/rejected': '-0.43606', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.49767', 'logps_train/rejected': '-194.52', 'logps_train/chosen': '-59.462', 'loss/train': '0.50471', 'examples_per_second': '4.5673', 'grad_norm': '3.6719', 'counters/examples': 12736, 'counters/updates': 796}
+skipping logging after 12752 examples to avoid logging too frequently
+skipping logging after 12768 examples to avoid logging too frequently
+skipping logging after 12784 examples to avoid logging too frequently
+train stats after 12800 examples: {'rewards_train/chosen': '0.080023', 'rewards_train/rejected': '-0.51929', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.5995', 'logps_train/rejected': '-214.03', 'logps_train/chosen': '-55.46', 'loss/train': '0.46951', 'examples_per_second': '5.464', 'grad_norm': '3.9219', 'counters/examples': 12800, 'counters/updates': 800}
+skipping logging after 12816 examples to avoid logging too frequently
+skipping logging after 12832 examples to avoid logging too frequently
+skipping logging after 12848 examples to avoid logging too frequently
+train stats after 12864 examples: {'rewards_train/chosen': '0.069121', 'rewards_train/rejected': '-0.53878', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.60804', 'logps_train/rejected': '-208.49', 'logps_train/chosen': '-57.097', 'loss/train': '0.46451', 'examples_per_second': '4.5906', 'grad_norm': '3.9375', 'counters/examples': 12864, 'counters/updates': 804}
+skipping logging after 12880 examples to avoid logging too frequently
+skipping logging after 12896 examples to avoid logging too frequently
+skipping logging after 12912 examples to avoid logging too frequently
+train stats after 12928 examples: {'rewards_train/chosen': '0.054771', 'rewards_train/rejected': '-0.46369', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.51844', 'logps_train/rejected': '-200.02', 'logps_train/chosen': '-56.748', 'loss/train': '0.4866', 'examples_per_second': '5.2043', 'grad_norm': '4.125', 'counters/examples': 12928, 'counters/updates': 808}
+skipping logging after 12944 examples to avoid logging too frequently
+skipping logging after 12960 examples to avoid logging too frequently
+skipping logging after 12976 examples to avoid logging too frequently
+train stats after 12992 examples: {'rewards_train/chosen': '0.046748', 'rewards_train/rejected': '-0.43532', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.48193', 'logps_train/rejected': '-185.69', 'logps_train/chosen': '-56.962', 'loss/train': '0.49977', 'examples_per_second': '4.9025', 'grad_norm': '3.9062', 'counters/examples': 12992, 'counters/updates': 812}
+skipping logging after 13008 examples to avoid logging too frequently
+skipping logging after 13024 examples to avoid logging too frequently
+skipping logging after 13040 examples to avoid logging too frequently
+train stats after 13056 examples: {'rewards_train/chosen': '0.052821', 'rewards_train/rejected': '-0.43868', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.49158', 'logps_train/rejected': '-182.5', 'logps_train/chosen': '-52.872', 'loss/train': '0.50962', 'examples_per_second': '5.4366', 'grad_norm': '3.4062', 'counters/examples': 13056, 'counters/updates': 816}
+skipping logging after 13072 examples to avoid logging too frequently
+skipping logging after 13088 examples to avoid logging too frequently
+skipping logging after 13104 examples to avoid logging too frequently
+train stats after 13120 examples: {'rewards_train/chosen': '0.054891', 'rewards_train/rejected': '-0.5193', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.57418', 'logps_train/rejected': '-201.54', 'logps_train/chosen': '-52.562', 'loss/train': '0.47591', 'examples_per_second': '4.6589', 'grad_norm': '4.3125', 'counters/examples': 13120, 'counters/updates': 820}
+skipping logging after 13136 examples to avoid logging too frequently
+skipping logging after 13152 examples to avoid logging too frequently
+skipping logging after 13168 examples to avoid logging too frequently
+train stats after 13184 examples: {'rewards_train/chosen': '0.076831', 'rewards_train/rejected': '-0.60039', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.67723', 'logps_train/rejected': '-228.77', 'logps_train/chosen': '-47.691', 'loss/train': '0.45541', 'examples_per_second': '4.3624', 'grad_norm': '4.125', 'counters/examples': 13184, 'counters/updates': 824}
+skipping logging after 13200 examples to avoid logging too frequently
+skipping logging after 13216 examples to avoid logging too frequently
+skipping logging after 13232 examples to avoid logging too frequently
+train stats after 13248 examples: {'rewards_train/chosen': '0.034384', 'rewards_train/rejected': '-0.57111', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.60551', 'logps_train/rejected': '-210.71', 'logps_train/chosen': '-56.567', 'loss/train': '0.46152', 'examples_per_second': '4.9118', 'grad_norm': '4.375', 'counters/examples': 13248, 'counters/updates': 828}
+skipping logging after 13264 examples to avoid logging too frequently
+skipping logging after 13280 examples to avoid logging too frequently
+skipping logging after 13296 examples to avoid logging too frequently
+train stats after 13312 examples: {'rewards_train/chosen': '0.065456', 'rewards_train/rejected': '-0.63011', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.69533', 'logps_train/rejected': '-229.53', 'logps_train/chosen': '-50.686', 'loss/train': '0.4437', 'examples_per_second': '5.9153', 'grad_norm': '4.375', 'counters/examples': 13312, 'counters/updates': 832}
+skipping logging after 13328 examples to avoid logging too frequently
+skipping logging after 13344 examples to avoid logging too frequently
+skipping logging after 13360 examples to avoid logging too frequently
+train stats after 13376 examples: {'rewards_train/chosen': '0.057332', 'rewards_train/rejected': '-0.5173', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.57425', 'logps_train/rejected': '-191.34', 'logps_train/chosen': '-52.981', 'loss/train': '0.48571', 'examples_per_second': '5.7009', 'grad_norm': '3.7344', 'counters/examples': 13376, 'counters/updates': 836}
+skipping logging after 13392 examples to avoid logging too frequently
+skipping logging after 13408 examples to avoid logging too frequently
+skipping logging after 13424 examples to avoid logging too frequently
+train stats after 13440 examples: {'rewards_train/chosen': '0.051278', 'rewards_train/rejected': '-0.72563', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.77671', 'logps_train/rejected': '-265.2', 'logps_train/chosen': '-61.204', 'loss/train': '0.43014', 'examples_per_second': '4.2367', 'grad_norm': '4.1875', 'counters/examples': 13440, 'counters/updates': 840}
+skipping logging after 13456 examples to avoid logging too frequently
+skipping logging after 13472 examples to avoid logging too frequently
+skipping logging after 13488 examples to avoid logging too frequently
+train stats after 13504 examples: {'rewards_train/chosen': '0.056864', 'rewards_train/rejected': '-0.55161', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.60882', 'logps_train/rejected': '-212.94', 'logps_train/chosen': '-59.956', 'loss/train': '0.46098', 'examples_per_second': '4.3436', 'grad_norm': '4.3438', 'counters/examples': 13504, 'counters/updates': 844}
+skipping logging after 13520 examples to avoid logging too frequently
+skipping logging after 13536 examples to avoid logging too frequently
+skipping logging after 13552 examples to avoid logging too frequently
+train stats after 13568 examples: {'rewards_train/chosen': '0.019852', 'rewards_train/rejected': '-0.72478', 'rewards_train/accuracies': '0.98438', 'rewards_train/margins': '0.7446', 'logps_train/rejected': '-264.14', 'logps_train/chosen': '-59.873', 'loss/train': '0.43084', 'examples_per_second': '5.491', 'grad_norm': '4.375', 'counters/examples': 13568, 'counters/updates': 848}
+skipping logging after 13584 examples to avoid logging too frequently
+skipping logging after 13600 examples to avoid logging too frequently
+skipping logging after 13616 examples to avoid logging too frequently
+train stats after 13632 examples: {'rewards_train/chosen': '0.01592', 'rewards_train/rejected': '-0.62372', 'rewards_train/accuracies': '0.90625', 'rewards_train/margins': '0.63937', 'logps_train/rejected': '-214.25', 'logps_train/chosen': '-52.216', 'loss/train': '0.47126', 'examples_per_second': '4.8356', 'grad_norm': '3.9219', 'counters/examples': 13632, 'counters/updates': 852}
+skipping logging after 13648 examples to avoid logging too frequently
+skipping logging after 13664 examples to avoid logging too frequently
+skipping logging after 13680 examples to avoid logging too frequently
+train stats after 13696 examples: {'rewards_train/chosen': '0.019069', 'rewards_train/rejected': '-0.79197', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.81072', 'logps_train/rejected': '-270.51', 'logps_train/chosen': '-66.822', 'loss/train': '0.42531', 'examples_per_second': '4.4106', 'grad_norm': '4.0625', 'counters/examples': 13696, 'counters/updates': 856}
+skipping logging after 13712 examples to avoid logging too frequently
+skipping logging after 13728 examples to avoid logging too frequently
+skipping logging after 13744 examples to avoid logging too frequently
+train stats after 13760 examples: {'rewards_train/chosen': '0.015535', 'rewards_train/rejected': '-0.67327', 'rewards_train/accuracies': '0.89062', 'rewards_train/margins': '0.68906', 'logps_train/rejected': '-229.28', 'logps_train/chosen': '-71.288', 'loss/train': '0.44965', 'examples_per_second': '4.9986', 'grad_norm': '4.0938', 'counters/examples': 13760, 'counters/updates': 860}
+skipping logging after 13776 examples to avoid logging too frequently
+skipping logging after 13792 examples to avoid logging too frequently
+skipping logging after 13808 examples to avoid logging too frequently
+train stats after 13824 examples: {'rewards_train/chosen': '-0.0051069', 'rewards_train/rejected': '-0.59502', 'rewards_train/accuracies': '0.875', 'rewards_train/margins': '0.59014', 'logps_train/rejected': '-208.34', 'logps_train/chosen': '-62.44', 'loss/train': '0.48565', 'examples_per_second': '5.4376', 'grad_norm': '3.7969', 'counters/examples': 13824, 'counters/updates': 864}
+skipping logging after 13840 examples to avoid logging too frequently
+skipping logging after 13856 examples to avoid logging too frequently
+skipping logging after 13872 examples to avoid logging too frequently
+train stats after 13888 examples: {'rewards_train/chosen': '0.035371', 'rewards_train/rejected': '-0.78177', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.8172', 'logps_train/rejected': '-257.66', 'logps_train/chosen': '-60.255', 'loss/train': '0.41171', 'examples_per_second': '5.6935', 'grad_norm': '4.4688', 'counters/examples': 13888, 'counters/updates': 868}
+skipping logging after 13904 examples to avoid logging too frequently
+skipping logging after 13920 examples to avoid logging too frequently
+skipping logging after 13936 examples to avoid logging too frequently
+train stats after 13952 examples: {'rewards_train/chosen': '0.028387', 'rewards_train/rejected': '-0.68489', 'rewards_train/accuracies': '0.875', 'rewards_train/margins': '0.71338', 'logps_train/rejected': '-214.56', 'logps_train/chosen': '-52.707', 'loss/train': '0.44563', 'examples_per_second': '4.8059', 'grad_norm': '4.2188', 'counters/examples': 13952, 'counters/updates': 872}
+skipping logging after 13968 examples to avoid logging too frequently
+skipping logging after 13984 examples to avoid logging too frequently
+skipping logging after 14000 examples to avoid logging too frequently
+train stats after 14016 examples: {'rewards_train/chosen': '0.0071907', 'rewards_train/rejected': '-0.78853', 'rewards_train/accuracies': '0.85938', 'rewards_train/margins': '0.7962', 'logps_train/rejected': '-265.5', 'logps_train/chosen': '-69.059', 'loss/train': '0.42599', 'examples_per_second': '4.5895', 'grad_norm': '4.0312', 'counters/examples': 14016, 'counters/updates': 876}
+skipping logging after 14032 examples to avoid logging too frequently
+skipping logging after 14048 examples to avoid logging too frequently
+skipping logging after 14064 examples to avoid logging too frequently
+train stats after 14080 examples: {'rewards_train/chosen': '-0.0076618', 'rewards_train/rejected': '-0.65623', 'rewards_train/accuracies': '0.875', 'rewards_train/margins': '0.64886', 'logps_train/rejected': '-213.46', 'logps_train/chosen': '-62.241', 'loss/train': '0.48254', 'examples_per_second': '4.7081', 'grad_norm': '3.8281', 'counters/examples': 14080, 'counters/updates': 880}
+skipping logging after 14096 examples to avoid logging too frequently
+skipping logging after 14112 examples to avoid logging too frequently
+skipping logging after 14128 examples to avoid logging too frequently
+train stats after 14144 examples: {'rewards_train/chosen': '0.037747', 'rewards_train/rejected': '-0.69546', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.73332', 'logps_train/rejected': '-217.84', 'logps_train/chosen': '-56.951', 'loss/train': '0.42736', 'examples_per_second': '4.747', 'grad_norm': '4.3125', 'counters/examples': 14144, 'counters/updates': 884}
+skipping logging after 14160 examples to avoid logging too frequently
+skipping logging after 14176 examples to avoid logging too frequently
+skipping logging after 14192 examples to avoid logging too frequently
+train stats after 14208 examples: {'rewards_train/chosen': '0.023832', 'rewards_train/rejected': '-0.6924', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '0.71657', 'logps_train/rejected': '-215.33', 'logps_train/chosen': '-55.454', 'loss/train': '0.43761', 'examples_per_second': '4.74', 'grad_norm': '4.1875', 'counters/examples': 14208, 'counters/updates': 888}
+skipping logging after 14224 examples to avoid logging too frequently
+skipping logging after 14240 examples to avoid logging too frequently
+skipping logging after 14256 examples to avoid logging too frequently
+train stats after 14272 examples: {'rewards_train/chosen': '0.016346', 'rewards_train/rejected': '-0.69814', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.71458', 'logps_train/rejected': '-230.24', 'logps_train/chosen': '-55.406', 'loss/train': '0.44096', 'examples_per_second': '4.924', 'grad_norm': '4.25', 'counters/examples': 14272, 'counters/updates': 892}
+skipping logging after 14288 examples to avoid logging too frequently
+skipping logging after 14304 examples to avoid logging too frequently
+skipping logging after 14320 examples to avoid logging too frequently
+train stats after 14336 examples: {'rewards_train/chosen': '-0.0030723', 'rewards_train/rejected': '-0.64096', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.63768', 'logps_train/rejected': '-198.14', 'logps_train/chosen': '-53.627', 'loss/train': '0.46986', 'examples_per_second': '5.1867', 'grad_norm': '4.1875', 'counters/examples': 14336, 'counters/updates': 896}
+skipping logging after 14352 examples to avoid logging too frequently
+skipping logging after 14368 examples to avoid logging too frequently
+skipping logging after 14384 examples to avoid logging too frequently
+train stats after 14400 examples: {'rewards_train/chosen': '0.017462', 'rewards_train/rejected': '-0.75317', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.77065', 'logps_train/rejected': '-231.96', 'logps_train/chosen': '-54.945', 'loss/train': '0.42545', 'examples_per_second': '4.5103', 'grad_norm': '4.4375', 'counters/examples': 14400, 'counters/updates': 900}
+skipping logging after 14416 examples to avoid logging too frequently
+skipping logging after 14432 examples to avoid logging too frequently
+skipping logging after 14448 examples to avoid logging too frequently
+train stats after 14464 examples: {'rewards_train/chosen': '-0.013702', 'rewards_train/rejected': '-0.69621', 'rewards_train/accuracies': '0.85938', 'rewards_train/margins': '0.68219', 'logps_train/rejected': '-208.12', 'logps_train/chosen': '-63.544', 'loss/train': '0.45505', 'examples_per_second': '4.9838', 'grad_norm': '3.9844', 'counters/examples': 14464, 'counters/updates': 904}
+skipping logging after 14480 examples to avoid logging too frequently
+skipping logging after 14496 examples to avoid logging too frequently
+skipping logging after 14512 examples to avoid logging too frequently
+train stats after 14528 examples: {'rewards_train/chosen': '-0.033874', 'rewards_train/rejected': '-0.93239', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.89821', 'logps_train/rejected': '-281.04', 'logps_train/chosen': '-72.21', 'loss/train': '0.40182', 'examples_per_second': '5.3188', 'grad_norm': '3.9531', 'counters/examples': 14528, 'counters/updates': 908}
+skipping logging after 14544 examples to avoid logging too frequently
+skipping logging after 14560 examples to avoid logging too frequently
+skipping logging after 14576 examples to avoid logging too frequently
+train stats after 14592 examples: {'rewards_train/chosen': '-0.027969', 'rewards_train/rejected': '-0.83475', 'rewards_train/accuracies': '0.89062', 'rewards_train/margins': '0.80679', 'logps_train/rejected': '-251.84', 'logps_train/chosen': '-62.902', 'loss/train': '0.42212', 'examples_per_second': '5.1267', 'grad_norm': '4.375', 'counters/examples': 14592, 'counters/updates': 912}
+skipping logging after 14608 examples to avoid logging too frequently
+skipping logging after 14624 examples to avoid logging too frequently
+skipping logging after 14640 examples to avoid logging too frequently
+train stats after 14656 examples: {'rewards_train/chosen': '-0.04306', 'rewards_train/rejected': '-0.88385', 'rewards_train/accuracies': '0.85938', 'rewards_train/margins': '0.84113', 'logps_train/rejected': '-250.04', 'logps_train/chosen': '-71.109', 'loss/train': '0.42922', 'examples_per_second': '4.7242', 'grad_norm': '3.9062', 'counters/examples': 14656, 'counters/updates': 916}
+skipping logging after 14672 examples to avoid logging too frequently
+skipping logging after 14688 examples to avoid logging too frequently
+skipping logging after 14704 examples to avoid logging too frequently
+train stats after 14720 examples: {'rewards_train/chosen': '-0.0032568', 'rewards_train/rejected': '-0.8391', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.83607', 'logps_train/rejected': '-242.76', 'logps_train/chosen': '-63.129', 'loss/train': '0.42044', 'examples_per_second': '5.2317', 'grad_norm': '3.8906', 'counters/examples': 14720, 'counters/updates': 920}
+skipping logging after 14736 examples to avoid logging too frequently
+skipping logging after 14752 examples to avoid logging too frequently
+skipping logging after 14768 examples to avoid logging too frequently
+train stats after 14784 examples: {'rewards_train/chosen': '-0.074028', 'rewards_train/rejected': '-0.78669', 'rewards_train/accuracies': '0.875', 'rewards_train/margins': '0.71265', 'logps_train/rejected': '-232.47', 'logps_train/chosen': '-75.149', 'loss/train': '0.46067', 'examples_per_second': '5.226', 'grad_norm': '4.0938', 'counters/examples': 14784, 'counters/updates': 924}
+skipping logging after 14800 examples to avoid logging too frequently
+skipping logging after 14816 examples to avoid logging too frequently
+skipping logging after 14832 examples to avoid logging too frequently
+train stats after 14848 examples: {'rewards_train/chosen': '-0.042667', 'rewards_train/rejected': '-0.7697', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '0.7269', 'logps_train/rejected': '-221.58', 'logps_train/chosen': '-66.811', 'loss/train': '0.44613', 'examples_per_second': '4.6806', 'grad_norm': '4.125', 'counters/examples': 14848, 'counters/updates': 928}
+skipping logging after 14864 examples to avoid logging too frequently
+skipping logging after 14880 examples to avoid logging too frequently
+skipping logging after 14896 examples to avoid logging too frequently
+train stats after 14912 examples: {'rewards_train/chosen': '-0.061914', 'rewards_train/rejected': '-0.90073', 'rewards_train/accuracies': '0.84375', 'rewards_train/margins': '0.83899', 'logps_train/rejected': '-259.58', 'logps_train/chosen': '-67.671', 'loss/train': '0.43926', 'examples_per_second': '4.9767', 'grad_norm': '4.1875', 'counters/examples': 14912, 'counters/updates': 932}
+skipping logging after 14928 examples to avoid logging too frequently
+skipping logging after 14944 examples to avoid logging too frequently
+skipping logging after 14960 examples to avoid logging too frequently
+train stats after 14976 examples: {'rewards_train/chosen': '-0.067111', 'rewards_train/rejected': '-0.90647', 'rewards_train/accuracies': '0.85938', 'rewards_train/margins': '0.83939', 'logps_train/rejected': '-256.91', 'logps_train/chosen': '-69.776', 'loss/train': '0.42286', 'examples_per_second': '4.4124', 'grad_norm': '3.8906', 'counters/examples': 14976, 'counters/updates': 936}
+skipping logging after 14992 examples to avoid logging too frequently
+skipping logging after 15008 examples to avoid logging too frequently
+skipping logging after 15024 examples to avoid logging too frequently
+train stats after 15040 examples: {'rewards_train/chosen': '-0.072835', 'rewards_train/rejected': '-0.88594', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.81334', 'logps_train/rejected': '-245.5', 'logps_train/chosen': '-73.897', 'loss/train': '0.42435', 'examples_per_second': '5.8459', 'grad_norm': '4.125', 'counters/examples': 15040, 'counters/updates': 940}
+skipping logging after 15056 examples to avoid logging too frequently
+skipping logging after 15072 examples to avoid logging too frequently
+skipping logging after 15088 examples to avoid logging too frequently
+train stats after 15104 examples: {'rewards_train/chosen': '-0.069547', 'rewards_train/rejected': '-0.8374', 'rewards_train/accuracies': '0.90625', 'rewards_train/margins': '0.76801', 'logps_train/rejected': '-234.48', 'logps_train/chosen': '-65.459', 'loss/train': '0.44212', 'examples_per_second': '6.005', 'grad_norm': '4.5625', 'counters/examples': 15104, 'counters/updates': 944}
+skipping logging after 15120 examples to avoid logging too frequently
+skipping logging after 15136 examples to avoid logging too frequently
+skipping logging after 15152 examples to avoid logging too frequently
+train stats after 15168 examples: {'rewards_train/chosen': '-0.075543', 'rewards_train/rejected': '-0.80297', 'rewards_train/accuracies': '0.90625', 'rewards_train/margins': '0.72762', 'logps_train/rejected': '-216.91', 'logps_train/chosen': '-69.78', 'loss/train': '0.43941', 'examples_per_second': '4.8455', 'grad_norm': '4.0938', 'counters/examples': 15168, 'counters/updates': 948}
+skipping logging after 15184 examples to avoid logging too frequently
+skipping logging after 15200 examples to avoid logging too frequently
+skipping logging after 15216 examples to avoid logging too frequently
+train stats after 15232 examples: {'rewards_train/chosen': '-0.04476', 'rewards_train/rejected': '-0.97855', 'rewards_train/accuracies': '0.95312', 'rewards_train/margins': '0.93367', 'logps_train/rejected': '-283.41', 'logps_train/chosen': '-65.266', 'loss/train': '0.38729', 'examples_per_second': '4.7611', 'grad_norm': '4.4375', 'counters/examples': 15232, 'counters/updates': 952}
+skipping logging after 15248 examples to avoid logging too frequently
+skipping logging after 15264 examples to avoid logging too frequently
+skipping logging after 15280 examples to avoid logging too frequently
+train stats after 15296 examples: {'rewards_train/chosen': '-0.049936', 'rewards_train/rejected': '-0.80978', 'rewards_train/accuracies': '0.89062', 'rewards_train/margins': '0.75986', 'logps_train/rejected': '-217.21', 'logps_train/chosen': '-64.979', 'loss/train': '0.43822', 'examples_per_second': '4.8035', 'grad_norm': '3.9531', 'counters/examples': 15296, 'counters/updates': 956}
+skipping logging after 15312 examples to avoid logging too frequently
+skipping logging after 15328 examples to avoid logging too frequently
+skipping logging after 15344 examples to avoid logging too frequently
+train stats after 15360 examples: {'rewards_train/chosen': '-0.072509', 'rewards_train/rejected': '-0.9152', 'rewards_train/accuracies': '0.89062', 'rewards_train/margins': '0.84262', 'logps_train/rejected': '-244.07', 'logps_train/chosen': '-69.495', 'loss/train': '0.44367', 'examples_per_second': '5.0499', 'grad_norm': '4.1562', 'counters/examples': 15360, 'counters/updates': 960}
+skipping logging after 15376 examples to avoid logging too frequently
+skipping logging after 15392 examples to avoid logging too frequently
+skipping logging after 15408 examples to avoid logging too frequently
+train stats after 15424 examples: {'rewards_train/chosen': '-0.016648', 'rewards_train/rejected': '-0.85525', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.8385', 'logps_train/rejected': '-228.84', 'logps_train/chosen': '-60.244', 'loss/train': '0.42429', 'examples_per_second': '4.3412', 'grad_norm': '3.8594', 'counters/examples': 15424, 'counters/updates': 964}
+skipping logging after 15440 examples to avoid logging too frequently
+skipping logging after 15456 examples to avoid logging too frequently
+skipping logging after 15472 examples to avoid logging too frequently
+train stats after 15488 examples: {'rewards_train/chosen': '-0.13946', 'rewards_train/rejected': '-1.1359', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.9964', 'logps_train/rejected': '-282.61', 'logps_train/chosen': '-80.162', 'loss/train': '0.42944', 'examples_per_second': '4.367', 'grad_norm': '4.6562', 'counters/examples': 15488, 'counters/updates': 968}
+skipping logging after 15504 examples to avoid logging too frequently
+skipping logging after 15520 examples to avoid logging too frequently
+skipping logging after 15536 examples to avoid logging too frequently
+train stats after 15552 examples: {'rewards_train/chosen': '-0.061023', 'rewards_train/rejected': '-1.2074', 'rewards_train/accuracies': '0.96875', 'rewards_train/margins': '1.1461', 'logps_train/rejected': '-308.56', 'logps_train/chosen': '-67.611', 'loss/train': '0.35095', 'examples_per_second': '5.9528', 'grad_norm': '4.4688', 'counters/examples': 15552, 'counters/updates': 972}
+skipping logging after 15568 examples to avoid logging too frequently
+skipping logging after 15584 examples to avoid logging too frequently
+skipping logging after 15600 examples to avoid logging too frequently
+train stats after 15616 examples: {'rewards_train/chosen': '-0.10291', 'rewards_train/rejected': '-0.9697', 'rewards_train/accuracies': '0.89062', 'rewards_train/margins': '0.86658', 'logps_train/rejected': '-257.02', 'logps_train/chosen': '-67.145', 'loss/train': '0.40929', 'examples_per_second': '5.0924', 'grad_norm': '4.0938', 'counters/examples': 15616, 'counters/updates': 976}
+skipping logging after 15632 examples to avoid logging too frequently
+skipping logging after 15648 examples to avoid logging too frequently
+skipping logging after 15664 examples to avoid logging too frequently
+train stats after 15680 examples: {'rewards_train/chosen': '-0.071438', 'rewards_train/rejected': '-0.97827', 'rewards_train/accuracies': '0.92188', 'rewards_train/margins': '0.90665', 'logps_train/rejected': '-258.5', 'logps_train/chosen': '-62.533', 'loss/train': '0.40915', 'examples_per_second': '5.1632', 'grad_norm': '4.4375', 'counters/examples': 15680, 'counters/updates': 980}
+skipping logging after 15696 examples to avoid logging too frequently
+skipping logging after 15712 examples to avoid logging too frequently
+skipping logging after 15728 examples to avoid logging too frequently
+train stats after 15744 examples: {'rewards_train/chosen': '-0.1347', 'rewards_train/rejected': '-0.94906', 'rewards_train/accuracies': '0.85938', 'rewards_train/margins': '0.81487', 'logps_train/rejected': '-245.69', 'logps_train/chosen': '-86.224', 'loss/train': '0.44583', 'examples_per_second': '5.015', 'grad_norm': '4.8438', 'counters/examples': 15744, 'counters/updates': 984}
+skipping logging after 15760 examples to avoid logging too frequently
+skipping logging after 15776 examples to avoid logging too frequently
+skipping logging after 15792 examples to avoid logging too frequently
+train stats after 15808 examples: {'rewards_train/chosen': '-0.08143', 'rewards_train/rejected': '-0.85649', 'rewards_train/accuracies': '0.875', 'rewards_train/margins': '0.77546', 'logps_train/rejected': '-221.81', 'logps_train/chosen': '-60.667', 'loss/train': '0.43495', 'examples_per_second': '6.3215', 'grad_norm': '4.4375', 'counters/examples': 15808, 'counters/updates': 988}
+skipping logging after 15824 examples to avoid logging too frequently
+skipping logging after 15840 examples to avoid logging too frequently
+skipping logging after 15856 examples to avoid logging too frequently
+train stats after 15872 examples: {'rewards_train/chosen': '-0.12474', 'rewards_train/rejected': '-1.2365', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '1.1123', 'logps_train/rejected': '-321.55', 'logps_train/chosen': '-72.466', 'loss/train': '0.37493', 'examples_per_second': '4.679', 'grad_norm': '4.5', 'counters/examples': 15872, 'counters/updates': 992}
+skipping logging after 15888 examples to avoid logging too frequently
+skipping logging after 15904 examples to avoid logging too frequently
+skipping logging after 15920 examples to avoid logging too frequently
+train stats after 15936 examples: {'rewards_train/chosen': '-0.11053', 'rewards_train/rejected': '-1.4416', 'rewards_train/accuracies': '0.9375', 'rewards_train/margins': '1.3316', 'logps_train/rejected': '-345.27', 'logps_train/chosen': '-72.507', 'loss/train': '0.34363', 'examples_per_second': '3.8361', 'grad_norm': '3.9844', 'counters/examples': 15936, 'counters/updates': 996}
+skipping logging after 15952 examples to avoid logging too frequently
+skipping logging after 15968 examples to avoid logging too frequently
+skipping logging after 15984 examples to avoid logging too frequently
+train stats after 16000 examples: {'rewards_train/chosen': '-0.11845', 'rewards_train/rejected': '-0.96522', 'rewards_train/accuracies': '0.82812', 'rewards_train/margins': '0.84707', 'logps_train/rejected': '-249.94', 'logps_train/chosen': '-81.036', 'loss/train': '0.42669', 'examples_per_second': '5.3542', 'grad_norm': '4.4062', 'counters/examples': 16000, 'counters/updates': 1000}
+Running evaluation after 16000 train examples
+Computing eval metrics:   0%|          | 0/32 [00:00<?, ?it/s]Computing eval metrics:   3%|▎         | 1/32 [00:02<01:03,  2.05s/it]Computing eval metrics:   6%|▋         | 2/32 [00:04<01:00,  2.00s/it]Computing eval metrics:   9%|▉         | 3/32 [00:05<00:55,  1.90s/it]Computing eval metrics:  12%|█▎        | 4/32 [00:07<00:52,  1.86s/it]Computing eval metrics:  16%|█▌        | 5/32 [00:08<00:41,  1.52s/it]Computing eval metrics:  19%|█▉        | 6/32 [00:10<00:41,  1.61s/it]Computing eval metrics:  22%|██▏       | 7/32 [00:11<00:36,  1.47s/it]Computing eval metrics:  25%|██▌       | 8/32 [00:13<00:36,  1.53s/it]Computing eval metrics:  28%|██▊       | 9/32 [00:14<00:35,  1.56s/it]Computing eval metrics:  31%|███▏      | 10/32 [00:16<00:33,  1.50s/it]Computing eval metrics:  34%|███▍      | 11/32 [00:17<00:32,  1.55s/it]Computing eval metrics:  38%|███▊      | 12/32 [00:19<00:29,  1.47s/it]Computing eval metrics:  41%|████      | 13/32 [00:20<00:26,  1.42s/it]Computing eval metrics:  44%|████▍     | 14/32 [00:21<00:25,  1.40s/it]Computing eval metrics:  47%|████▋     | 15/32 [00:22<00:21,  1.27s/it]Computing eval metrics:  50%|█████     | 16/32 [00:23<00:19,  1.22s/it]Computing eval metrics:  53%|█████▎    | 17/32 [00:25<00:19,  1.33s/it]Computing eval metrics:  56%|█████▋    | 18/32 [00:26<00:18,  1.33s/it]Computing eval metrics:  59%|█████▉    | 19/32 [00:27<00:16,  1.29s/it]Computing eval metrics:  62%|██████▎   | 20/32 [00:28<00:14,  1.23s/it]Computing eval metrics:  66%|██████▌   | 21/32 [00:30<00:14,  1.28s/it]Computing eval metrics:  69%|██████▉   | 22/32 [00:31<00:11,  1.15s/it]Computing eval metrics:  72%|███████▏  | 23/32 [00:32<00:11,  1.23s/it]Computing eval metrics:  75%|███████▌  | 24/32 [00:34<00:10,  1.32s/it]Computing eval metrics:  78%|███████▊  | 25/32 [00:35<00:08,  1.27s/it]Computing eval metrics:  81%|████████▏ | 26/32 [00:36<00:07,  1.33s/it]Computing eval metrics:  84%|████████▍ | 27/32 [00:38<00:07,  1.46s/it]Computing eval metrics:  88%|████████▊ | 28/32 [00:39<00:05,  1.39s/it]Computing eval metrics:  91%|█████████ | 29/32 [00:41<00:04,  1.62s/it]Computing eval metrics:  94%|█████████▍| 30/32 [00:42<00:02,  1.42s/it]Computing eval metrics:  97%|█████████▋| 31/32 [00:44<00:01,  1.40s/it]Computing eval metrics: 100%|██████████| 32/32 [00:45<00:00,  1.38s/it]Computing eval metrics: 100%|██████████| 32/32 [00:45<00:00,  1.43s/it]
