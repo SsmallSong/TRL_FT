@@ -1,0 +1,85 @@
+4
+/home/wxt/.conda/envs/halos3/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Making experiment directory /home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_beta001_lr2e7
+no FSDP port specified; using open port for FSDP: 42249
+seed: 1
+exp_name: llama2_7b_dpo_halos_beta001_lr2e7
+datasets:
+- hh
+mode: train
+debug: false
+use_fsdp: true
+fsdp_port: 42249
+wandb:
+  enabled: true
+  entity: null
+  project: archangel
+cache_dir: /home/wxt/.cache/huggingface/hub
+local_run_dir: /home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_beta001_lr2e7
+do_first_eval: true
+minimum_log_interval_secs: 1.0
+intermediate_checkpoints: false
+trainer: DPOTrainer
+lr: 2.0e-07
+n_epochs: 1
+n_examples: null
+optimizer: RMSprop
+warmup_steps: 150
+eval_every: 4000
+n_samples: 128
+samples_dir: samples/
+n_eval_examples: 512
+saved_policy: /home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_beta001_lr2e7/LATEST/policy.pt
+top_p: 0.95
+human_prefix: '
+
+  <|user|>
+
+  '
+assistant_prefix: '
+
+  <|assistant|>
+
+  '
+human_suffix: ''
+assistant_suffix: ''
+frac_unique_desirable: 1.0
+frac_unique_undesirable: 1.0
+model:
+  name_or_path: daryl149/llama-2-7b-hf
+  tokenizer_name_or_path: null
+  load_from: /home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt
+  block_name: LlamaDecoderLayer
+  policy_dtype: bfloat16
+  fsdp_policy_mp: null
+  reference_dtype: bfloat16
+  max_grad_norm: 10.0
+  v_head_max_grad_norm: 0.1
+  max_length: 1024
+  max_prompt_length: 512
+  activation_checkpointing: true
+  batch_size: 16
+  gradient_accumulation_steps: 4
+  eval_batch_size: 16
+  use_flash_attention: false
+loss:
+  name: dpo
+  beta: 0.01
+  trainer: DPOTrainer
+  dataloader: PairedPreferenceDataLoader
+  use_reference_model: true
+
+================================================================================
+Writing to design-agent-09:/home/wxt/.cache/huggingface/hub/llama2_7b_dpo_halos_beta001_lr2e7
+================================================================================
+building policy
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.39s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.27s/it]
+building reference model
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.33s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.05s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.24s/it]
+loading pre-trained weights at step 159968 from /home/wxt/.cache/huggingface/hub/llama2_7b_sft_halos_2_3/LATEST/policy.pt with metrics {}
+loaded pre-trained weights
+Loading tokenizer daryl149/llama-2-7b-hf
+0 special tokens added
+Loading HH dataset (train split) from Huggingface...
+Processing HH:   0%|          | 0/160800 [00:00<?, ?it/s]Processing HH:   1%|          | 1335/160800 [00:00<00:11, 13348.45it/s]Processing HH:   2%|▏         | 2700/160800 [00:00<00:11, 13513.76it/s]Processing HH:   3%|▎         | 4109/160800 [00:00<00:11, 13775.35it/s]Processing HH:   3%|▎         | 5508/160800 [00:00<00:11, 13854.68it/s]Processing HH:   4%|▍         | 6914/160800 [00:00<00:11, 13923.06it/s]Processing HH:   5%|▌         | 8362/160800 [00:00<00:10, 14111.15it/s]Processing HH:   6%|▌         | 9774/160800 [00:00<00:10, 13971.19it/s]Processing HH:   7%|▋         | 11172/160800 [00:00<00:10, 13939.24it/s]Processing HH:   8%|▊         | 12567/160800 [00:00<00:10, 13884.13it/s]Processing HH:   9%|▊         | 13956/160800 [00:01<00:10, 13749.62it/s]Processing HH:  10%|▉         | 15332/160800 [00:01<00:13, 10520.26it/s]Processing HH:  10%|█         | 16775/160800 [00:01<00:12, 11491.20it/s]Processing HH:  11%|█▏        | 18200/160800 [00:01<00:11, 12212.35it/s]Processing HH:  12%|█▏        | 19649/160800 [00:01<00:11, 12831.46it/s]Processing HH:  13%|█▎        | 21089/160800 [00:01<00:10, 13268.20it/s]Processing HH:  14%|█▍        | 22580/160800 [00:01<00:10, 13736.83it/s]Processing HH:  15%|█▍        | 23990/160800 [00:01<00:09, 13725.76it/s]Processing HH:  16%|█▌        | 25388/160800 [00:01<00:10, 13452.35it/s]Processing HH:  17%|█▋        | 26752/160800 [00:02<00:09, 13414.32it/s]Processing HH:  17%|█▋        | 28107/160800 [00:02<00:10, 13266.22it/s]Processing HH:  18%|█▊        | 29443/160800 [00:02<00:09, 13240.76it/s]Processing HH:  19%|█▉        | 30774/160800 [00:02<00:09, 13203.91it/s]Processing HH:  20%|█▉        | 32154/160800 [00:02<00:09, 13375.14it/s]Processing HH:  21%|██        | 33621/160800 [00:02<00:12, 10219.09it/s]Processing HH:  22%|██▏       | 34961/160800 [00:02<00:11, 10977.19it/s]Processing HH:  23%|██▎       | 36382/160800 [00:02<00:10, 11798.87it/s]Processing HH:  24%|██▎       | 37802/160800 [00:02<00:09, 12437.88it/s]Processing HH:  24%|██▍       | 39260/160800 [00:03<00:09, 13026.44it/s]Processing HH:  25%|██▌       | 40740/160800 [00:03<00:08, 13525.86it/s]Processing HH:  26%|██▋       | 42232/160800 [00:03<00:08, 13924.56it/s]Processing HH:  27%|██▋       | 43662/160800 [00:03<00:08, 14030.61it/s]Processing HH:  28%|██▊       | 45087/160800 [00:03<00:08, 13917.27it/s]Processing HH:  29%|██▉       | 46494/160800 [00:03<00:08, 13822.78it/s]Processing HH:  30%|██▉       | 47887/160800 [00:03<00:08, 13780.49it/s]Processing HH:  31%|███       | 49273/160800 [00:03<00:08, 13635.50it/s]Processing HH:  31%|███▏      | 50642/160800 [00:03<00:08, 13642.86it/s]Processing HH:  32%|███▏      | 52010/160800 [00:03<00:08, 13403.61it/s]Processing HH:  33%|███▎      | 53397/160800 [00:04<00:07, 13538.76it/s]Processing HH:  34%|███▍      | 54780/160800 [00:04<00:07, 13620.60it/s]Processing HH:  35%|███▍      | 56144/160800 [00:04<00:07, 13466.57it/s]
