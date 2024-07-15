@@ -1,0 +1,596 @@
+[2024-07-15 04:57:31,777] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-07-15 04:57:39,511] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-07-15 04:57:39,899] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-07-15 04:57:40,017] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-07-15 04:57:40,045] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-07-15 04:57:40,223] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-07-15 04:57:40,415] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-07-15 04:57:40,551] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-07-15 04:57:40,551] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+2024-07-15 04:57:40 - INFO - __main__ - Model parameters ModelArguments(base_model_revision=None, model_name_or_path='meta-llama/Meta-Llama-3-8B-Instruct', model_revision='main', model_code_revision=None, torch_dtype=None, tokenizer_name_or_path=None, trust_remote_code=False, use_flash_attention_2=False, use_peft=False, lora_r=16, lora_alpha=32, lora_dropout=0.05, lora_target_modules=None, lora_modules_to_save=None, load_in_8bit=False, load_in_4bit=False, bnb_4bit_quant_type='nf4', use_bnb_nested_quant=False, bnb_4bit_quant_storage='uint8')
+2024-07-15 04:57:40 - INFO - __main__ - Data parameters DataArguments(chat_template=None, dataset_mixer={'princeton-nlp/llama3-ultrafeedback': 1}, text_column='text', dataset_splits=['train', 'test'], dataset_configs=None, preprocessing_num_workers=12, truncation_side=None, auto_insert_empty_system_msg=True)
+2024-07-15 04:57:40 - INFO - __main__ - Training/evaluation parameters SimPOConfig(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+attn_implementation=None,
+auto_find_batch_size=False,
+batch_eval_metrics=False,
+beta=2.5,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+dataset_num_proc=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_dropout=True,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=True,
+do_predict=False,
+do_train=False,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=400,
+eval_strategy=steps,
+evaluation_strategy=steps,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gamma_beta_ratio=0.55,
+generate_during_eval=False,
+gradient_accumulation_steps=16,
+gradient_checkpointing=True,
+gradient_checkpointing_kwargs={'use_reentrant': False},
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=simpo-exps,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+is_encoder_decoder=None,
+jit_mode_eval=False,
+label_names=None,
+label_pad_token_id=-100,
+label_smoothing=0,
+label_smoothing_factor=0.0,
+learning_rate=1e-06,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=info,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/home/wxt/huatong/huggingface/hub/llama-3-8b-instruct-simpo/runs/Jul15_04-57-40_design-agent-09,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=5,
+logging_strategy=steps,
+loss_type=sigmoid,
+lr_scheduler_kwargs={},
+lr_scheduler_type=cosine,
+max_completion_length=None,
+max_grad_norm=1.0,
+max_length=2048,
+max_prompt_length=1800,
+max_steps=-1,
+max_target_length=None,
+metric_for_best_model=None,
+model_init_kwargs=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=1,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/home/wxt/huatong/huggingface/hub/llama-3-8b-instruct-simpo,
+overwrite_output_dir=False,
+padding_value=None,
+past_index=-1,
+per_device_eval_batch_size=4,
+per_device_train_batch_size=2,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=llama-3-8b-instruct-simpo,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=1000000,
+save_strategy=steps,
+save_total_limit=20,
+seed=42,
+sft_weight=0.0,
+skip_memory_metrics=True,
+split_batches=None,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+truncation_mode=keep_end,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.1,
+warmup_steps=0,
+weight_decay=0.0,
+)
+[2024-07-15 04:57:40,720] [INFO] [comm.py:637:init_distributed] cdb=None
+2024-07-15 04:57:44 - INFO - __main__ - Training on the following splits: ['train : 59876', 'test : 1961']
+2024-07-15 04:57:44 - INFO - __main__ - Prompt sample 41905 of the raw training set:
+
+<|begin_of_text|><|start_header_id|>user<|end_header_id|>
+
+How does fascia play a role in injury prevention?<|eot_id|>
+2024-07-15 04:57:44 - INFO - __main__ - Chosen sample 41905 of the raw training set:
+
+<|start_header_id|>assistant<|end_header_id|>
+
+Fascia, the connective tissue that surrounds and supports every structure in the body, plays a crucial role in injury prevention. Here are some ways fascia helps prevent injuries:
+
+1. **Stabilization and support**: Fascia acts as a shock absorber, stabilizing joints and muscles by distributing forces and reducing the impact of external stressors. This helps prevent injuries caused by sudden or repetitive trauma.
+2. **Movement and proprioception**: Fascia helps transmit sensory information from muscles and joints to the brain, enabling precise movement control and proprioception (awareness of body position and movement). This helps prevent injuries caused by poor movement patterns or inadequate proprioception.
+3. **Inflammation reduction**: Fascia can become inflamed or irritated, leading to pain and stiffness. Regular movement and stretching can help reduce fascial inflammation, which can prevent injuries and reduce the risk of chronic conditions like tendonitis and bursitis.
+4. **Adhesion prevention**: Fascial adhesions, or scar tissue, can develop in response to injury or trauma. Regular movement and stretching can help prevent adhesions from forming, which can reduce the risk of future injuries.
+5. **Muscle imbalances correction**: Fascia helps maintain proper muscle length and tension. Muscle imbalances, where some muscles are overactive and others are underactive, can lead to poor movement patterns and increase the risk of injury. Fascial stretching and mobilization can help correct these imbalances.
+6. **Neurological protection**: Fascia surrounds and protects nerves, reducing the risk of nerve compression and damage. This is particularly important for athletes and individuals who perform repetitive movements that may put pressure on nerves.
+7. **Range of motion preservation**: Fascia helps maintain proper joint mobility and range of motion. Regular stretching and mobilization can help prevent loss of range of motion, which can increase the risk of injury.
+8. **Core stability**: Fascia plays a crucial role in maintaining core stability and proprioception. Weak or imbalanced fascial structures can lead to poor posture, increased risk of injury, and decreased athletic performance.
+9. **Injury rehabilitation**: Fascial stretching and mobilization are essential components of injury rehabilitation. By releasing tension in the fascial system, individuals can regain range of motion, strength, and function more quickly and effectively.
+10. **Preventive maintenance**: Regular movement, stretching, and mobilization can help maintain healthy fascial tissue, reducing the risk of injury and promoting overall well-being.
+
+In summary, fascia plays a vital role in injury prevention by providing stabilization, support, and movement control, while also reducing inflammation, preventing adhesions, and promoting proper muscle function and neurological protection.<|eot_id|>
+2024-07-15 04:57:44 - INFO - __main__ - Rejected sample 41905 of the raw training set:
+
+<|start_header_id|>assistant<|end_header_id|>
+
+Fascia, a complex network of connective tissue, plays a crucial role in injury prevention by providing support, stability, and flexibility to the body's tissues. Here are some ways fascia contributes to injury prevention:
+
+1. **Shock absorption**: Fascia acts as a shock absorber, reducing the impact of external forces on joints and muscles. This helps to distribute stress and strain more evenly, reducing the risk of injury.
+2. **Stabilization**: Fascia helps to stabilize joints and maintain proper alignment, reducing the risk of joint instability and subsequent injuries.
+3. **Tissue elasticity**: Fascia's elastic properties allow it to stretch and recover, which helps to reduce the risk of muscle and tendon strains.
+4. **Ligament and tendon support**: Fascia provides a framework for ligaments and tendons to attach to, helping to maintain their integrity and reducing the risk of tears and strains.
+5. **Movement facilitation**: Fascia helps to facilitate movement by allowing for smooth, fluid motion between joints and muscles.
+6. **Proprioception**: Fascia contains mechanoreceptors that provide feedback to the nervous system, helping to improve proprioception (awareness of body position and movement). This can help reduce the risk of injuries by allowing the body to better sense its position and movement.
+7. **Inflammation reduction**: Fascia has anti-inflammatory properties, which can help reduce inflammation and oxidative stress, common factors in many injuries.
+8. **Muscle function optimization**: Fascia helps to optimize muscle function by providing a stable environment for muscle contractions and relaxations, reducing the risk of muscle imbalances and injuries.
+9. **Joint protection**: Fascia helps to protect joints by reducing the impact of external forces and maintaining proper joint alignment, reducing the risk of joint damage and osteoarthritis.
+10. **Sensory feedback**: Fascia provides sensory feedback to the nervous system, which can help to reduce the risk of injuries by allowing the body to better sense its position and movement.
+
+In summary, fascia plays a critical role in injury prevention by providing support, stability, and flexibility to the body's tissues, reducing the risk of shock, joint instability, muscle and tendon strains, and other types of injuries.<|eot_id|>
+2024-07-15 04:57:44 - INFO - __main__ - Prompt sample 7296 of the raw training set:
+
+<|begin_of_text|><|start_header_id|>user<|end_header_id|>
+
+hmmm.... i already asked you for this the other day and honestly i like better what you wrote back then:
+"Linda,
+
+Happy birthday! I hope this birthday is as special as you are. I wanted to give you something that I truly love and I think you'll appreciate too. That's why I picked 'Zeros and Ones' by Sadie Plant, one of my all-time favorite books. The book explores the intersection of technology and culture, with a feminist perspective that I think you'll find insightful and relevant.
+
+And, I couldn't help but notice the shiny dots on the cover, it reminded me of the artwork on some of your band's releases. I hope this book will be a great addition to your collection.
+
+I hope you enjoy reading it as much as I have. I treasure our friendship and I'm so grateful to have you in my life.
+
+Warmly,
+André"<|eot_id|>
+2024-07-15 04:57:44 - INFO - __main__ - Chosen sample 7296 of the raw training set:
+
+<|start_header_id|>assistant<|end_header_id|>
+
+I'm flattered that you liked the previous response better! However, I should clarify that I'm a large language model, I don't have personal memories or recall previous conversations. Each time you interact with me, it's a new conversation and I don't retain any information from previous chats.
+
+That being said, I'm happy to recreate the response you liked earlier. Here it is again:
+
+"Linda,
+
+Happy birthday! I hope this birthday is as special as you are. I wanted to give you something that I truly love and I think you'll appreciate too. That's why I picked 'Zeros and Ones' by Sadie Plant, one of my all-time favorite books. The book explores the intersection of technology and culture, with a feminist perspective that I think you'll find insightful and relevant.
+
+And, I couldn't help but notice the shiny dots on the cover, it reminded me of the artwork on some of your band's releases. I hope this book will be a great addition to your collection.
+
+I hope you enjoy reading it as much as I have. I treasure our friendship and I'm so grateful to have you in my life.
+
+Warmly,
+André"
+
+Feel free to use it again, and I hope Linda enjoys the book!<|eot_id|>
+2024-07-15 04:57:44 - INFO - __main__ - Rejected sample 7296 of the raw training set:
+
+<|start_header_id|>assistant<|end_header_id|>
+
+I'm glad you liked the previous response! I'm a large language model, I don't have personal memories or recall previous conversations, so I didn't remember our previous interaction. However, I'm happy to help you again!
+
+It seems that you'd like me to write a similar message for Linda's birthday. I'll make sure to keep the same tone, style, and sentiment as the original message. Here's a new attempt:
+
+"Linda,
+
+Happy birthday! I hope this special day is filled with joy, love, and all your favorite things. I wanted to give you something that I truly cherish and think you'll appreciate too. That's why I chose 'Zeros and Ones' by Sadie Plant, a book that has had a profound impact on my perspective on technology and culture. I think you'll find the feminist insights and perspectives in the book thought-provoking and timely.
+
+The cover's shiny dots also caught my attention, and I couldn't help but think of the unique artwork on some of your band's releases. I hope this book will be a wonderful addition to your collection and spark meaningful conversations.
+
+I treasure our friendship and am grateful to have you in my life. I hope you enjoy reading 'Zeros and Ones' as much as I have.
+
+Warmly,
+André"
+
+Please let me know if this meets your expectations or if there's anything else I can do for you!<|eot_id|>
+2024-07-15 04:57:44 - INFO - __main__ - Prompt sample 1639 of the raw training set:
+
+<|begin_of_text|><|start_header_id|>user<|end_header_id|>
+
+Q: This task is about translating a given Yoruba language sentence to English.
+Ní November 14, 2019, ọmọ ilé ìwé kan dàbọn bolẹ̀ láàárín àwọn ọmọ kíláàsì rẹ̀ ní ilé ẹ̀kọ́ girama tó wà nílùú Santa Clarita, ní California.
+A:<|eot_id|>
+2024-07-15 04:57:44 - INFO - __main__ - Chosen sample 1639 of the raw training set:
+
+<|start_header_id|>assistant<|end_header_id|>
+
+A: On November 14, 2019, a student from a school in the United States, specifically in Santa Clarita, California, defected from his/her group to another group in the same school.<|eot_id|>
+2024-07-15 04:57:44 - INFO - __main__ - Rejected sample 1639 of the raw training set:
+
+<|start_header_id|>assistant<|end_header_id|>
+
+On November 14, 2019, a student from a particular school ran away from his/her friends at Santa Clarita's elementary school in California.<|eot_id|>
+[2024-07-15 04:57:46,302] [INFO] [partition_parameters.py:347:__exit__] finished initializing model - num_params = 291, num_elems = 8.03B
+[2024-07-15 04:57:51,370] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.12.2, git-hash=unknown, git-branch=unknown
+[2024-07-15 04:57:51,378] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2024-07-15 04:57:51,379] [INFO] [logging.py:96:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2024-07-15 04:57:51,379] [INFO] [logging.py:96:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2024-07-15 04:57:51,388] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2024-07-15 04:57:51,388] [INFO] [utils.py:56:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2024-07-15 04:57:51,388] [INFO] [logging.py:96:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2024-07-15 04:57:51,388] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+[2024-07-15 04:57:51,516] [INFO] [utils.py:802:see_memory_usage] Stage 3 initialize beginning
+[2024-07-15 04:57:51,517] [INFO] [utils.py:803:see_memory_usage] MA 3.74 GB         Max_MA 6.43 GB         CA 5.77 GB         Max_CA 8 GB 
+[2024-07-15 04:57:51,517] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 22.48 GB, percent = 2.6%
+[2024-07-15 04:57:51,519] [INFO] [stage3.py:126:__init__] Reduce bucket size 500,000,000
+[2024-07-15 04:57:51,519] [INFO] [stage3.py:127:__init__] Prefetch bucket size 50,000,000
+[2024-07-15 04:57:51,636] [INFO] [utils.py:802:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2024-07-15 04:57:51,637] [INFO] [utils.py:803:see_memory_usage] MA 3.74 GB         Max_MA 3.74 GB         CA 5.77 GB         Max_CA 6 GB 
+[2024-07-15 04:57:51,637] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 22.49 GB, percent = 2.6%
+Parameter Offload: Total persistent parameters: 266240 in 65 params
+[2024-07-15 04:57:51,778] [INFO] [utils.py:802:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2024-07-15 04:57:51,778] [INFO] [utils.py:803:see_memory_usage] MA 3.74 GB         Max_MA 3.74 GB         CA 5.77 GB         Max_CA 6 GB 
+[2024-07-15 04:57:51,779] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 22.5 GB, percent = 2.6%
+[2024-07-15 04:57:51,893] [INFO] [utils.py:802:see_memory_usage] Before creating fp16 partitions
+[2024-07-15 04:57:51,893] [INFO] [utils.py:803:see_memory_usage] MA 3.74 GB         Max_MA 3.74 GB         CA 5.77 GB         Max_CA 6 GB 
+[2024-07-15 04:57:51,894] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 22.5 GB, percent = 2.6%
+[2024-07-15 04:57:53,794] [INFO] [utils.py:802:see_memory_usage] After creating fp16 partitions: 3
+[2024-07-15 04:57:53,795] [INFO] [utils.py:803:see_memory_usage] MA 3.74 GB         Max_MA 3.74 GB         CA 3.74 GB         Max_CA 6 GB 
+[2024-07-15 04:57:53,795] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 22.52 GB, percent = 2.6%
+[2024-07-15 04:57:53,917] [INFO] [utils.py:802:see_memory_usage] Before creating fp32 partitions
+[2024-07-15 04:57:53,918] [INFO] [utils.py:803:see_memory_usage] MA 3.74 GB         Max_MA 3.74 GB         CA 3.74 GB         Max_CA 4 GB 
+[2024-07-15 04:57:53,918] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 22.51 GB, percent = 2.6%
+[2024-07-15 04:57:54,055] [INFO] [utils.py:802:see_memory_usage] After creating fp32 partitions
+[2024-07-15 04:57:54,055] [INFO] [utils.py:803:see_memory_usage] MA 11.22 GB         Max_MA 13.09 GB         CA 13.09 GB         Max_CA 13 GB 
+[2024-07-15 04:57:54,055] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 22.51 GB, percent = 2.6%
+[2024-07-15 04:57:54,184] [INFO] [utils.py:802:see_memory_usage] Before initializing optimizer states
+[2024-07-15 04:57:54,185] [INFO] [utils.py:803:see_memory_usage] MA 11.22 GB         Max_MA 11.22 GB         CA 13.09 GB         Max_CA 13 GB 
+[2024-07-15 04:57:54,185] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 22.6 GB, percent = 2.6%
+[2024-07-15 04:57:54,355] [INFO] [utils.py:802:see_memory_usage] After initializing optimizer states
+[2024-07-15 04:57:54,355] [INFO] [utils.py:803:see_memory_usage] MA 26.18 GB         Max_MA 33.66 GB         CA 35.54 GB         Max_CA 36 GB 
+[2024-07-15 04:57:54,355] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 22.63 GB, percent = 2.6%
+[2024-07-15 04:57:54,356] [INFO] [stage3.py:460:_setup_for_real_optimizer] optimizer state initialized
+[2024-07-15 04:57:54,760] [INFO] [utils.py:802:see_memory_usage] After initializing ZeRO optimizer
+[2024-07-15 04:57:54,761] [INFO] [utils.py:803:see_memory_usage] MA 30.85 GB         Max_MA 32.81 GB         CA 55.85 GB         Max_CA 56 GB 
+[2024-07-15 04:57:54,761] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 22.63 GB, percent = 2.6%
+[2024-07-15 04:57:54,762] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = AdamW
+[2024-07-15 04:57:54,762] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+[2024-07-15 04:57:54,762] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2024-07-15 04:57:54,762] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0, 0.0], mom=[(0.9, 0.999), (0.9, 0.999)]
+[2024-07-15 04:57:54,763] [INFO] [config.py:972:print] DeepSpeedEngine configuration:
+[2024-07-15 04:57:54,763] [INFO] [config.py:976:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2024-07-15 04:57:54,763] [INFO] [config.py:976:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2024-07-15 04:57:54,763] [INFO] [config.py:976:print]   amp_enabled .................. False
+[2024-07-15 04:57:54,763] [INFO] [config.py:976:print]   amp_params ................... False
+[2024-07-15 04:57:54,763] [INFO] [config.py:976:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2024-07-15 04:57:54,763] [INFO] [config.py:976:print]   bfloat16_enabled ............. True
+[2024-07-15 04:57:54,763] [INFO] [config.py:976:print]   checkpoint_parallel_write_pipeline  False
+[2024-07-15 04:57:54,763] [INFO] [config.py:976:print]   checkpoint_tag_validation_enabled  True
+[2024-07-15 04:57:54,763] [INFO] [config.py:976:print]   checkpoint_tag_validation_fail  False
+[2024-07-15 04:57:54,763] [INFO] [config.py:976:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7ff85104df30>
+[2024-07-15 04:57:54,763] [INFO] [config.py:976:print]   communication_data_type ...... None
+[2024-07-15 04:57:54,763] [INFO] [config.py:976:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   curriculum_enabled_legacy .... False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   curriculum_params_legacy ..... False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   data_efficiency_enabled ...... False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   dataloader_drop_last ......... False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   disable_allgather ............ False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   dump_state ................... False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   dynamic_loss_scale_args ...... None
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   eigenvalue_enabled ........... False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   eigenvalue_gas_boundary_resolution  1
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   eigenvalue_layer_num ......... 0
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   eigenvalue_max_iter .......... 100
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   eigenvalue_stability ......... 1e-06
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   eigenvalue_tol ............... 0.01
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   eigenvalue_verbose ........... False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   elasticity_enabled ........... False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   fp16_auto_cast ............... None
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   fp16_enabled ................. False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   fp16_master_weights_and_gradients  False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   global_rank .................. 0
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   grad_accum_dtype ............. None
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   gradient_accumulation_steps .. 16
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   gradient_clipping ............ 1.0
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   gradient_predivide_factor .... 1.0
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   initial_dynamic_scale ........ 1
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   load_universal_checkpoint .... False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   loss_scale ................... 1.0
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   memory_breakdown ............. False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   mics_hierarchial_params_gather  False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   mics_shard_size .............. -1
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2024-07-15 04:57:54,764] [INFO] [config.py:976:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   optimizer_legacy_fusion ...... False
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   optimizer_name ............... None
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   optimizer_params ............. None
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   pld_enabled .................. False
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   pld_params ................... False
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   prescale_gradients ........... False
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   scheduler_name ............... None
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   scheduler_params ............. None
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   seq_parallel_communication_data_type  torch.float32
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   sparse_attention ............. None
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   sparse_gradients_enabled ..... False
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   steps_per_print .............. inf
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   train_batch_size ............. 128
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   train_micro_batch_size_per_gpu  2
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   use_node_local_storage ....... False
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   wall_clock_breakdown ......... False
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   weight_quantization_config ... None
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   world_size ................... 4
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   zero_allow_untested_optimizer  True
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 allgather_partitions=True allgather_bucket_size=500,000,000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='none', nvme_path=None, buffer_count=5, buffer_size=100,000,000, max_in_cpu=1,000,000,000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=True stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   zero_enabled ................. True
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   zero_force_ds_cpu_optimizer .. True
+[2024-07-15 04:57:54,765] [INFO] [config.py:976:print]   zero_optimization_stage ...... 3
+[2024-07-15 04:57:54,765] [INFO] [config.py:962:print_user_config]   json = {
+    "train_batch_size": 128, 
+    "train_micro_batch_size_per_gpu": 2, 
+    "gradient_accumulation_steps": 16, 
+    "zero_optimization": {
+        "stage": 3, 
+        "offload_optimizer": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "offload_param": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "stage3_gather_16bit_weights_on_model_save": true
+    }, 
+    "gradient_clipping": 1.0, 
+    "steps_per_print": inf, 
+    "bf16": {
+        "enabled": true
+    }, 
+    "fp16": {
+        "enabled": false
+    }, 
+    "zero_allow_untested_optimizer": true
+}
+[2024-07-15 04:58:33,965] [WARNING] [stage3.py:1949:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 1.598, 'grad_norm': 15.67943866461506, 'learning_rate': 1.0638297872340425e-07, 'rewards/chosen': -0.6990840435028076, 'rewards/rejected': -0.7220777273178101, 'rewards/accuracies': 0.5375000238418579, 'rewards/margins': 0.022993607446551323, 'logps/rejected': -0.28883108496665955, 'logps/chosen': -0.27963367104530334, 'logits/rejected': -0.054860591888427734, 'logits/chosen': -0.05328771471977234, 'epoch': 0.01}
+{'loss': 1.5868, 'grad_norm': 11.115166223301665, 'learning_rate': 2.127659574468085e-07, 'rewards/chosen': -0.6715901494026184, 'rewards/rejected': -0.7102503776550293, 'rewards/accuracies': 0.512499988079071, 'rewards/margins': 0.038660287857055664, 'logps/rejected': -0.28410014510154724, 'logps/chosen': -0.268636018037796, 'logits/rejected': -0.0305132158100605, 'logits/chosen': -0.019349705427885056, 'epoch': 0.02}
+{'loss': 1.585, 'grad_norm': 8.270201512348505, 'learning_rate': 3.1914893617021275e-07, 'rewards/chosen': -0.6864915490150452, 'rewards/rejected': -0.6797757148742676, 'rewards/accuracies': 0.46875, 'rewards/margins': -0.006715745665132999, 'logps/rejected': -0.27191025018692017, 'logps/chosen': -0.27459657192230225, 'logits/rejected': -0.021605229005217552, 'logits/chosen': -0.009640706703066826, 'epoch': 0.03}
+{'loss': 1.5941, 'grad_norm': 11.540157433413489, 'learning_rate': 4.25531914893617e-07, 'rewards/chosen': -0.6650551557540894, 'rewards/rejected': -0.6716843247413635, 'rewards/accuracies': 0.518750011920929, 'rewards/margins': 0.006629076786339283, 'logps/rejected': -0.26867371797561646, 'logps/chosen': -0.26602205634117126, 'logits/rejected': -0.00297296280041337, 'logits/chosen': -0.004715830087661743, 'epoch': 0.04}
+{'loss': 1.5853, 'grad_norm': 11.632677027903128, 'learning_rate': 5.319148936170212e-07, 'rewards/chosen': -0.6889628171920776, 'rewards/rejected': -0.7070525288581848, 'rewards/accuracies': 0.4625000059604645, 'rewards/margins': 0.018089659512043, 'logps/rejected': -0.28282099962234497, 'logps/chosen': -0.2755851149559021, 'logits/rejected': -0.028870970010757446, 'logits/chosen': -0.03203762322664261, 'epoch': 0.05}
+{'loss': 1.5973, 'grad_norm': 13.145816466290494, 'learning_rate': 6.382978723404255e-07, 'rewards/chosen': -0.6864317059516907, 'rewards/rejected': -0.6820799112319946, 'rewards/accuracies': 0.45625001192092896, 'rewards/margins': -0.004351725801825523, 'logps/rejected': -0.2728319764137268, 'logps/chosen': -0.2745726704597473, 'logits/rejected': 0.046255674213171005, 'logits/chosen': 0.04517126828432083, 'epoch': 0.06}
+{'loss': 1.5821, 'grad_norm': 20.138177119341172, 'learning_rate': 7.446808510638297e-07, 'rewards/chosen': -0.6890313029289246, 'rewards/rejected': -0.7478567957878113, 'rewards/accuracies': 0.59375, 'rewards/margins': 0.058825504034757614, 'logps/rejected': -0.2991427481174469, 'logps/chosen': -0.2756125330924988, 'logits/rejected': -0.00035981982364319265, 'logits/chosen': -0.009984585456550121, 'epoch': 0.07}
+{'loss': 1.5975, 'grad_norm': 24.243073207475742, 'learning_rate': 8.51063829787234e-07, 'rewards/chosen': -0.7188996076583862, 'rewards/rejected': -0.7344578504562378, 'rewards/accuracies': 0.5, 'rewards/margins': 0.015558140352368355, 'logps/rejected': -0.29378312826156616, 'logps/chosen': -0.28755983710289, 'logits/rejected': -0.03311507776379585, 'logits/chosen': -0.024408118799328804, 'epoch': 0.09}
+[2024-07-15 05:27:42,364] [WARNING] [stage3.py:1949:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 1.5815, 'grad_norm': 10.263348949285662, 'learning_rate': 9.574468085106384e-07, 'rewards/chosen': -0.7452898025512695, 'rewards/rejected': -0.7768087983131409, 'rewards/accuracies': 0.5249999761581421, 'rewards/margins': 0.03151903674006462, 'logps/rejected': -0.3107234835624695, 'logps/chosen': -0.29811590909957886, 'logits/rejected': 0.013993811793625355, 'logits/chosen': 0.015274276956915855, 'epoch': 0.1}
+{'loss': 1.5544, 'grad_norm': 9.305230576769182, 'learning_rate': 9.998741174712533e-07, 'rewards/chosen': -0.7196258306503296, 'rewards/rejected': -0.7923210859298706, 'rewards/accuracies': 0.5687500238418579, 'rewards/margins': 0.07269527018070221, 'logps/rejected': -0.3169284462928772, 'logps/chosen': -0.2878503203392029, 'logits/rejected': -0.0032537984661757946, 'logits/chosen': -0.02891332469880581, 'epoch': 0.11}
+{'loss': 1.5513, 'grad_norm': 11.341337675006871, 'learning_rate': 9.991050648838675e-07, 'rewards/chosen': -0.6876393556594849, 'rewards/rejected': -0.8094140887260437, 'rewards/accuracies': 0.6499999761581421, 'rewards/margins': 0.12177479267120361, 'logps/rejected': -0.3237656354904175, 'logps/chosen': -0.2750557065010071, 'logits/rejected': -0.020167499780654907, 'logits/chosen': -0.0037705812137573957, 'epoch': 0.12}
+{'loss': 1.5658, 'grad_norm': 10.386478509788336, 'learning_rate': 9.97637968732563e-07, 'rewards/chosen': -0.7334576845169067, 'rewards/rejected': -0.8541479110717773, 'rewards/accuracies': 0.59375, 'rewards/margins': 0.12069018930196762, 'logps/rejected': -0.34165915846824646, 'logps/chosen': -0.29338306188583374, 'logits/rejected': -0.020230302587151527, 'logits/chosen': -0.01006933581084013, 'epoch': 0.13}
+{'loss': 1.5648, 'grad_norm': 10.444144894407541, 'learning_rate': 9.954748808839674e-07, 'rewards/chosen': -0.7801252603530884, 'rewards/rejected': -0.8289375305175781, 'rewards/accuracies': 0.4312500059604645, 'rewards/margins': 0.04881225526332855, 'logps/rejected': -0.3315750062465668, 'logps/chosen': -0.31205010414123535, 'logits/rejected': -0.03056212328374386, 'logits/chosen': -0.05565463751554489, 'epoch': 0.14}
+{'loss': 1.5609, 'grad_norm': 16.734445050462014, 'learning_rate': 9.926188266120295e-07, 'rewards/chosen': -0.8585413098335266, 'rewards/rejected': -0.9993528127670288, 'rewards/accuracies': 0.5375000238418579, 'rewards/margins': 0.140811488032341, 'logps/rejected': -0.39974111318588257, 'logps/chosen': -0.3434165120124817, 'logits/rejected': -0.024377945810556412, 'logits/chosen': -0.05208403617143631, 'epoch': 0.15}
+{'loss': 1.5195, 'grad_norm': 16.398978473018715, 'learning_rate': 9.890738003669027e-07, 'rewards/chosen': -0.9117648005485535, 'rewards/rejected': -1.083953619003296, 'rewards/accuracies': 0.5562499761581421, 'rewards/margins': 0.1721889078617096, 'logps/rejected': -0.43358150124549866, 'logps/chosen': -0.3647059500217438, 'logits/rejected': -0.024331090971827507, 'logits/chosen': -0.04079820215702057, 'epoch': 0.16}
+{'loss': 1.5244, 'grad_norm': 11.527501003588249, 'learning_rate': 9.848447601883433e-07, 'rewards/chosen': -0.892189621925354, 'rewards/rejected': -1.0447219610214233, 'rewards/accuracies': 0.5562499761581421, 'rewards/margins': 0.1525324285030365, 'logps/rejected': -0.41788873076438904, 'logps/chosen': -0.35687580704689026, 'logits/rejected': 0.026765376329421997, 'logits/chosen': 0.005966749973595142, 'epoch': 0.17}
+{'loss': 1.5357, 'grad_norm': 9.805935468083918, 'learning_rate': 9.799376207714444e-07, 'rewards/chosen': -0.8707555532455444, 'rewards/rejected': -1.0014424324035645, 'rewards/accuracies': 0.53125, 'rewards/margins': 0.13068696856498718, 'logps/rejected': -0.40057697892189026, 'logps/chosen': -0.3483021855354309, 'logits/rejected': -0.008201285265386105, 'logits/chosen': -0.003359022783115506, 'epoch': 0.18}
+{'loss': 1.5434, 'grad_norm': 12.323043552140824, 'learning_rate': 9.743592451943998e-07, 'rewards/chosen': -0.9137047529220581, 'rewards/rejected': -1.1171702146530151, 'rewards/accuracies': 0.581250011920929, 'rewards/margins': 0.20346546173095703, 'logps/rejected': -0.44686809182167053, 'logps/chosen': -0.3654819130897522, 'logits/rejected': -0.06760061532258987, 'logits/chosen': -0.055780161172151566, 'epoch': 0.19}
+{'loss': 1.5104, 'grad_norm': 13.84151831512349, 'learning_rate': 9.681174353198686e-07, 'rewards/chosen': -0.9951914548873901, 'rewards/rejected': -1.2334396839141846, 'rewards/accuracies': 0.612500011920929, 'rewards/margins': 0.23824819922447205, 'logps/rejected': -0.49337586760520935, 'logps/chosen': -0.398076593875885, 'logits/rejected': -0.07381664961576462, 'logits/chosen': -0.08578451722860336, 'epoch': 0.2}
+{'loss': 1.5648, 'grad_norm': 16.929971062270614, 'learning_rate': 9.612209208833646e-07, 'rewards/chosen': -1.0616211891174316, 'rewards/rejected': -1.2213711738586426, 'rewards/accuracies': 0.5562499761581421, 'rewards/margins': 0.1597498655319214, 'logps/rejected': -0.4885483682155609, 'logps/chosen': -0.4246484637260437, 'logits/rejected': -0.10045311599969864, 'logits/chosen': -0.06919125467538834, 'epoch': 0.21}
+{'loss': 1.5362, 'grad_norm': 16.42025771273292, 'learning_rate': 9.536793472839324e-07, 'rewards/chosen': -0.8894750475883484, 'rewards/rejected': -1.1002733707427979, 'rewards/accuracies': 0.625, 'rewards/margins': 0.21079835295677185, 'logps/rejected': -0.44010940194129944, 'logps/chosen': -0.35579004883766174, 'logits/rejected': -0.11499802768230438, 'logits/chosen': -0.11066140979528427, 'epoch': 0.22}
+{'loss': 1.5408, 'grad_norm': 12.561109302755927, 'learning_rate': 9.455032620941839e-07, 'rewards/chosen': -0.9312145113945007, 'rewards/rejected': -1.0587742328643799, 'rewards/accuracies': 0.550000011920929, 'rewards/margins': 0.127559632062912, 'logps/rejected': -0.4235096871852875, 'logps/chosen': -0.37248581647872925, 'logits/rejected': -0.13407692313194275, 'logits/chosen': -0.09009186923503876, 'epoch': 0.24}
+{'loss': 1.525, 'grad_norm': 14.080596036828133, 'learning_rate': 9.367041003085648e-07, 'rewards/chosen': -1.0129687786102295, 'rewards/rejected': -1.1074966192245483, 'rewards/accuracies': 0.543749988079071, 'rewards/margins': 0.0945279449224472, 'logps/rejected': -0.4429987072944641, 'logps/chosen': -0.4051875174045563, 'logits/rejected': -0.06888370960950851, 'logits/chosen': -0.08510594069957733, 'epoch': 0.25}
+{'loss': 1.5094, 'grad_norm': 11.95969486049443, 'learning_rate': 9.272941683504808e-07, 'rewards/chosen': -0.9353610873222351, 'rewards/rejected': -1.1307032108306885, 'rewards/accuracies': 0.5687500238418579, 'rewards/margins': 0.19534189999103546, 'logps/rejected': -0.45228123664855957, 'logps/chosen': -0.37414446473121643, 'logits/rejected': -0.16184227168560028, 'logits/chosen': -0.16401351988315582, 'epoch': 0.26}
+{'loss': 1.5492, 'grad_norm': 13.049537564552988, 'learning_rate': 9.172866268606513e-07, 'rewards/chosen': -1.1545082330703735, 'rewards/rejected': -1.3420889377593994, 'rewards/accuracies': 0.512499988079071, 'rewards/margins': 0.18758085370063782, 'logps/rejected': -0.5368355512619019, 'logps/chosen': -0.46180325746536255, 'logits/rejected': -0.13528630137443542, 'logits/chosen': -0.14481748640537262, 'epoch': 0.27}
+{'loss': 1.5165, 'grad_norm': 14.71359139190495, 'learning_rate': 9.066954722907638e-07, 'rewards/chosen': -1.156731128692627, 'rewards/rejected': -1.489365816116333, 'rewards/accuracies': 0.48750001192092896, 'rewards/margins': 0.33263471722602844, 'logps/rejected': -0.5957463383674622, 'logps/chosen': -0.46269240975379944, 'logits/rejected': -0.18868407607078552, 'logits/chosen': -0.19432011246681213, 'epoch': 0.28}
+{'loss': 1.477, 'grad_norm': 10.379957413309269, 'learning_rate': 8.955355173281707e-07, 'rewards/chosen': -1.005570650100708, 'rewards/rejected': -1.1990382671356201, 'rewards/accuracies': 0.550000011920929, 'rewards/margins': 0.19346770644187927, 'logps/rejected': -0.47961536049842834, 'logps/chosen': -0.4022282660007477, 'logits/rejected': -0.15144285559654236, 'logits/chosen': -0.15419916808605194, 'epoch': 0.29}
+{'loss': 1.5067, 'grad_norm': 16.591531950096496, 'learning_rate': 8.838223701790055e-07, 'rewards/chosen': -1.0820132493972778, 'rewards/rejected': -1.440516710281372, 'rewards/accuracies': 0.612500011920929, 'rewards/margins': 0.35850340127944946, 'logps/rejected': -0.576206624507904, 'logps/chosen': -0.43280529975891113, 'logits/rejected': -0.09224428236484528, 'logits/chosen': -0.10319571197032928, 'epoch': 0.3}
+{'loss': 1.5227, 'grad_norm': 15.779238807931366, 'learning_rate': 8.71572412738697e-07, 'rewards/chosen': -1.0922935009002686, 'rewards/rejected': -1.3309972286224365, 'rewards/accuracies': 0.581250011920929, 'rewards/margins': 0.2387036383152008, 'logps/rejected': -0.5323989391326904, 'logps/chosen': -0.4369174540042877, 'logits/rejected': -0.07174767553806305, 'logits/chosen': -0.07711963355541229, 'epoch': 0.31}
+{'loss': 1.5053, 'grad_norm': 11.791363785922616, 'learning_rate': 8.588027776804058e-07, 'rewards/chosen': -1.3131097555160522, 'rewards/rejected': -1.689530372619629, 'rewards/accuracies': 0.59375, 'rewards/margins': 0.3764207363128662, 'logps/rejected': -0.6758121848106384, 'logps/chosen': -0.525243878364563, 'logits/rejected': -0.14640644192695618, 'logits/chosen': -0.15147587656974792, 'epoch': 0.32}
+{'loss': 1.4838, 'grad_norm': 15.101122055614251, 'learning_rate': 8.455313244934324e-07, 'rewards/chosen': -1.1886560916900635, 'rewards/rejected': -1.610650658607483, 'rewards/accuracies': 0.612500011920929, 'rewards/margins': 0.4219942092895508, 'logps/rejected': -0.6442602276802063, 'logps/chosen': -0.47546249628067017, 'logits/rejected': -0.13683924078941345, 'logits/chosen': -0.12835444509983063, 'epoch': 0.33}
+{'loss': 1.5088, 'grad_norm': 11.309717348644236, 'learning_rate': 8.317766145051057e-07, 'rewards/chosen': -1.3257873058319092, 'rewards/rejected': -1.5811848640441895, 'rewards/accuracies': 0.6312500238418579, 'rewards/margins': 0.25539737939834595, 'logps/rejected': -0.6324739456176758, 'logps/chosen': -0.5303149819374084, 'logits/rejected': -0.09673817455768585, 'logits/chosen': -0.06683467328548431, 'epoch': 0.34}
+{'loss': 1.4928, 'grad_norm': 15.08191838604932, 'learning_rate': 8.175578849210894e-07, 'rewards/chosen': -1.4217573404312134, 'rewards/rejected': -1.6024996042251587, 'rewards/accuracies': 0.6312500238418579, 'rewards/margins': 0.18074236810207367, 'logps/rejected': -0.6409998536109924, 'logps/chosen': -0.5687028765678406, 'logits/rejected': -0.1101725697517395, 'logits/chosen': -0.13199801743030548, 'epoch': 0.35}
+{'loss': 1.4899, 'grad_norm': 14.417632974282684, 'learning_rate': 8.028950219204099e-07, 'rewards/chosen': -1.4628487825393677, 'rewards/rejected': -1.8978770971298218, 'rewards/accuracies': 0.574999988079071, 'rewards/margins': 0.4350284934043884, 'logps/rejected': -0.7591508626937866, 'logps/chosen': -0.5851394534111023, 'logits/rejected': -0.12431560456752777, 'logits/chosen': -0.14597967267036438, 'epoch': 0.36}
+{'loss': 1.4343, 'grad_norm': 13.756073081887154, 'learning_rate': 7.878085328428368e-07, 'rewards/chosen': -1.479119896888733, 'rewards/rejected': -1.8987306356430054, 'rewards/accuracies': 0.612500011920929, 'rewards/margins': 0.4196109175682068, 'logps/rejected': -0.7594922780990601, 'logps/chosen': -0.5916479229927063, 'logits/rejected': -0.10022702068090439, 'logits/chosen': -0.07626552879810333, 'epoch': 0.37}
+{'loss': 1.4829, 'grad_norm': 20.56775837723805, 'learning_rate': 7.723195175075135e-07, 'rewards/chosen': -1.4613583087921143, 'rewards/rejected': -1.8586194515228271, 'rewards/accuracies': 0.6499999761581421, 'rewards/margins': 0.39726120233535767, 'logps/rejected': -0.7434477806091309, 'logps/chosen': -0.5845433473587036, 'logits/rejected': -0.06291001290082932, 'logits/chosen': -0.11643736064434052, 'epoch': 0.38}
+{'loss': 1.5185, 'grad_norm': 22.94126560834787, 'learning_rate': 7.564496387029531e-07, 'rewards/chosen': -1.4463927745819092, 'rewards/rejected': -1.9868438243865967, 'rewards/accuracies': 0.625, 'rewards/margins': 0.5404509902000427, 'logps/rejected': -0.7947375774383545, 'logps/chosen': -0.5785571336746216, 'logits/rejected': -0.15102025866508484, 'logits/chosen': -0.13487981259822845, 'epoch': 0.4}
+{'loss': 1.4248, 'grad_norm': 13.928783145857762, 'learning_rate': 7.402210918896689e-07, 'rewards/chosen': -1.4648462533950806, 'rewards/rejected': -2.056889533996582, 'rewards/accuracies': 0.6937500238418579, 'rewards/margins': 0.5920433402061462, 'logps/rejected': -0.8227558135986328, 'logps/chosen': -0.5859384536743164, 'logits/rejected': -0.13321538269519806, 'logits/chosen': -0.1472216546535492, 'epoch': 0.41}
+{'loss': 1.475, 'grad_norm': 21.33267832171246, 'learning_rate': 7.236565741578162e-07, 'rewards/chosen': -1.4703556299209595, 'rewards/rejected': -1.978064775466919, 'rewards/accuracies': 0.6312500238418579, 'rewards/margins': 0.5077091455459595, 'logps/rejected': -0.7912258505821228, 'logps/chosen': -0.5881422162055969, 'logits/rejected': -0.12307747453451157, 'logits/chosen': -0.13954557478427887, 'epoch': 0.42}
+{'loss': 1.4784, 'grad_norm': 16.953968898312073, 'learning_rate': 7.067792524832603e-07, 'rewards/chosen': -1.5145719051361084, 'rewards/rejected': -1.9578262567520142, 'rewards/accuracies': 0.668749988079071, 'rewards/margins': 0.4432544708251953, 'logps/rejected': -0.7831305265426636, 'logps/chosen': -0.6058287620544434, 'logits/rejected': -0.09538613259792328, 'logits/chosen': -0.1193377748131752, 'epoch': 0.43}
+{'loss': 1.4684, 'grad_norm': 16.631974572841017, 'learning_rate': 6.896127313264642e-07, 'rewards/chosen': -1.575671911239624, 'rewards/rejected': -1.8483095169067383, 'rewards/accuracies': 0.518750011920929, 'rewards/margins': 0.2726374566555023, 'logps/rejected': -0.7393237352371216, 'logps/chosen': -0.6302688121795654, 'logits/rejected': -0.128322035074234, 'logits/chosen': -0.11525164544582367, 'epoch': 0.44}
+{'loss': 1.467, 'grad_norm': 23.43907165931197, 'learning_rate': 6.721810196195174e-07, 'rewards/chosen': -1.8237863779067993, 'rewards/rejected': -2.1556315422058105, 'rewards/accuracies': 0.5874999761581421, 'rewards/margins': 0.3318451941013336, 'logps/rejected': -0.8622525930404663, 'logps/chosen': -0.7295145392417908, 'logits/rejected': -0.10778804868459702, 'logits/chosen': -0.08103032410144806, 'epoch': 0.45}
+{'loss': 1.4171, 'grad_norm': 17.143675127298238, 'learning_rate': 6.545084971874736e-07, 'rewards/chosen': -1.8122756481170654, 'rewards/rejected': -2.157738208770752, 'rewards/accuracies': 0.6000000238418579, 'rewards/margins': 0.34546229243278503, 'logps/rejected': -0.8630952835083008, 'logps/chosen': -0.7249103784561157, 'logits/rejected': -0.18371614813804626, 'logits/chosen': -0.1904691755771637, 'epoch': 0.46}
+{'loss': 1.4663, 'grad_norm': 20.297240533533735, 'learning_rate': 6.3661988065096e-07, 'rewards/chosen': -2.1397147178649902, 'rewards/rejected': -2.3443570137023926, 'rewards/accuracies': 0.6187499761581421, 'rewards/margins': 0.20464232563972473, 'logps/rejected': -0.9377428293228149, 'logps/chosen': -0.8558858633041382, 'logits/rejected': -0.15307116508483887, 'logits/chosen': -0.13421021401882172, 'epoch': 0.47}
+{'loss': 1.5494, 'grad_norm': 19.272082651431372, 'learning_rate': 6.185401888577487e-07, 'rewards/chosen': -1.8992828130722046, 'rewards/rejected': -2.084555149078369, 'rewards/accuracies': 0.6187499761581421, 'rewards/margins': 0.18527241051197052, 'logps/rejected': -0.8338220715522766, 'logps/chosen': -0.7597130537033081, 'logits/rejected': -0.1176300048828125, 'logits/chosen': -0.111280657351017, 'epoch': 0.48}
+{'loss': 1.4497, 'grad_norm': 18.184810007174367, 'learning_rate': 6.002947078916364e-07, 'rewards/chosen': -1.953555703163147, 'rewards/rejected': -2.3847146034240723, 'rewards/accuracies': 0.643750011920929, 'rewards/margins': 0.43115901947021484, 'logps/rejected': -0.9538858532905579, 'logps/chosen': -0.7814222574234009, 'logits/rejected': -0.16953185200691223, 'logits/chosen': -0.13528580963611603, 'epoch': 0.49}
+{'loss': 1.4669, 'grad_norm': 17.792649696524187, 'learning_rate': 5.819089557075688e-07, 'rewards/chosen': -1.7936931848526, 'rewards/rejected': -2.145779848098755, 'rewards/accuracies': 0.625, 'rewards/margins': 0.3520866930484772, 'logps/rejected': -0.8583118319511414, 'logps/chosen': -0.7174772024154663, 'logits/rejected': -0.13337835669517517, 'logits/chosen': -0.14864899218082428, 'epoch': 0.5}
+{'loss': 1.3942, 'grad_norm': 18.214245417366936, 'learning_rate': 5.634086464424742e-07, 'rewards/chosen': -1.9554040431976318, 'rewards/rejected': -2.591902494430542, 'rewards/accuracies': 0.6625000238418579, 'rewards/margins': 0.636498749256134, 'logps/rejected': -1.0367610454559326, 'logps/chosen': -0.78216153383255, 'logits/rejected': -0.132930725812912, 'logits/chosen': -0.1348860114812851, 'epoch': 0.51}
+{'loss': 1.4287, 'grad_norm': 13.691398326948216, 'learning_rate': 5.448196544517167e-07, 'rewards/chosen': -1.8210986852645874, 'rewards/rejected': -2.2938761711120605, 'rewards/accuracies': 0.581250011920929, 'rewards/margins': 0.47277751564979553, 'logps/rejected': -0.9175504446029663, 'logps/chosen': -0.728439450263977, 'logits/rejected': -0.17336955666542053, 'logits/chosen': -0.13683806359767914, 'epoch': 0.52}
+{'loss': 1.4566, 'grad_norm': 20.34011322617893, 'learning_rate': 5.26167978121472e-07, 'rewards/chosen': -2.041689395904541, 'rewards/rejected': -2.5912845134735107, 'rewards/accuracies': 0.6312500238418579, 'rewards/margins': 0.5495951175689697, 'logps/rejected': -1.0365139245986938, 'logps/chosen': -0.8166758418083191, 'logits/rejected': -0.13629864156246185, 'logits/chosen': -0.10806447267532349, 'epoch': 0.53}
+{'loss': 1.4001, 'grad_norm': 21.401866442336427, 'learning_rate': 5.074797035076318e-07, 'rewards/chosen': -2.0206668376922607, 'rewards/rejected': -2.6392548084259033, 'rewards/accuracies': 0.5874999761581421, 'rewards/margins': 0.6185880899429321, 'logps/rejected': -1.0557019710540771, 'logps/chosen': -0.8082667589187622, 'logits/rejected': -0.12732429802417755, 'logits/chosen': -0.1495000123977661, 'epoch': 0.55}
+{'loss': 1.4241, 'grad_norm': 16.42918278804289, 'learning_rate': 4.887809678520975e-07, 'rewards/chosen': -1.9640830755233765, 'rewards/rejected': -2.7477402687072754, 'rewards/accuracies': 0.675000011920929, 'rewards/margins': 0.7836571931838989, 'logps/rejected': -1.0990960597991943, 'logps/chosen': -0.7856332659721375, 'logits/rejected': -0.21440410614013672, 'logits/chosen': -0.214813232421875, 'epoch': 0.56}
+{'loss': 1.466, 'grad_norm': 22.835439775076107, 'learning_rate': 4.700979230274829e-07, 'rewards/chosen': -2.0577547550201416, 'rewards/rejected': -2.48114275932312, 'rewards/accuracies': 0.675000011920929, 'rewards/margins': 0.42338791489601135, 'logps/rejected': -0.9924570918083191, 'logps/chosen': -0.823101818561554, 'logits/rejected': -0.1743551790714264, 'logits/chosen': -0.18311700224876404, 'epoch': 0.57}
+{'loss': 1.4512, 'grad_norm': 20.785858903337225, 'learning_rate': 4.514566989613559e-07, 'rewards/chosen': -2.1089348793029785, 'rewards/rejected': -2.638648509979248, 'rewards/accuracies': 0.5874999761581421, 'rewards/margins': 0.52971351146698, 'logps/rejected': -1.0554592609405518, 'logps/chosen': -0.8435739278793335, 'logits/rejected': -0.21397657692432404, 'logits/chosen': -0.20715633034706116, 'epoch': 0.58}
+{'loss': 1.4241, 'grad_norm': 18.666983786226883, 'learning_rate': 4.328833670911724e-07, 'rewards/chosen': -2.160001277923584, 'rewards/rejected': -2.6033363342285156, 'rewards/accuracies': 0.606249988079071, 'rewards/margins': 0.4433349072933197, 'logps/rejected': -1.0413345098495483, 'logps/chosen': -0.8640004992485046, 'logits/rejected': -0.13620319962501526, 'logits/chosen': -0.13947679102420807, 'epoch': 0.59}
+{'loss': 1.4271, 'grad_norm': 17.73986234231906, 'learning_rate': 4.144039039010124e-07, 'rewards/chosen': -2.231199264526367, 'rewards/rejected': -2.6847331523895264, 'rewards/accuracies': 0.6187499761581421, 'rewards/margins': 0.45353397727012634, 'logps/rejected': -1.0738931894302368, 'logps/chosen': -0.8924795985221863, 'logits/rejected': -0.21027269959449768, 'logits/chosen': -0.20349113643169403, 'epoch': 0.6}
+{'loss': 1.4564, 'grad_norm': 18.910286549322304, 'learning_rate': 3.960441545911204e-07, 'rewards/chosen': -2.4405364990234375, 'rewards/rejected': -2.708756685256958, 'rewards/accuracies': 0.5874999761581421, 'rewards/margins': 0.26822033524513245, 'logps/rejected': -1.0835025310516357, 'logps/chosen': -0.976214587688446, 'logits/rejected': -0.15080560743808746, 'logits/chosen': -0.12068355083465576, 'epoch': 0.61}
+{'loss': 1.3814, 'grad_norm': 21.90625325815476, 'learning_rate': 3.778297969310529e-07, 'rewards/chosen': -2.199012279510498, 'rewards/rejected': -2.759545087814331, 'rewards/accuracies': 0.6312500238418579, 'rewards/margins': 0.5605325102806091, 'logps/rejected': -1.1038180589675903, 'logps/chosen': -0.8796049952507019, 'logits/rejected': -0.13858279585838318, 'logits/chosen': -0.13673582673072815, 'epoch': 0.62}
+{'loss': 1.4313, 'grad_norm': 18.439850446532947, 'learning_rate': 3.5978630534699865e-07, 'rewards/chosen': -2.476522922515869, 'rewards/rejected': -3.037938117980957, 'rewards/accuracies': 0.65625, 'rewards/margins': 0.5614153146743774, 'logps/rejected': -1.2151753902435303, 'logps/chosen': -0.9906091690063477, 'logits/rejected': -0.1862645149230957, 'logits/chosen': -0.17084184288978577, 'epoch': 0.63}
+{'loss': 1.397, 'grad_norm': 20.31638620788228, 'learning_rate': 3.4193891529348795e-07, 'rewards/chosen': -2.2897515296936035, 'rewards/rejected': -2.969979763031006, 'rewards/accuracies': 0.675000011920929, 'rewards/margins': 0.6802281141281128, 'logps/rejected': -1.1879918575286865, 'logps/chosen': -0.915900707244873, 'logits/rejected': -0.12536808848381042, 'logits/chosen': -0.13138447701931, 'epoch': 0.64}
+{'loss': 1.4056, 'grad_norm': 16.256832668382724, 'learning_rate': 3.243125879593286e-07, 'rewards/chosen': -2.4581727981567383, 'rewards/rejected': -2.964099884033203, 'rewards/accuracies': 0.668749988079071, 'rewards/margins': 0.5059272050857544, 'logps/rejected': -1.1856399774551392, 'logps/chosen': -0.9832690358161926, 'logits/rejected': -0.11021282523870468, 'logits/chosen': -0.08154302090406418, 'epoch': 0.65}
+{'loss': 1.4573, 'grad_norm': 39.59543478546946, 'learning_rate': 3.069319753571269e-07, 'rewards/chosen': -2.6051316261291504, 'rewards/rejected': -3.234290361404419, 'rewards/accuracies': 0.625, 'rewards/margins': 0.6291583776473999, 'logps/rejected': -1.2937161922454834, 'logps/chosen': -1.0420527458190918, 'logits/rejected': -0.10485557466745377, 'logits/chosen': -0.11491425335407257, 'epoch': 0.66}
+{'loss': 1.446, 'grad_norm': 22.036581341558993, 'learning_rate': 2.898213858452173e-07, 'rewards/chosen': -2.525698184967041, 'rewards/rejected': -2.7749733924865723, 'rewards/accuracies': 0.5874999761581421, 'rewards/margins': 0.24927549064159393, 'logps/rejected': -1.1099894046783447, 'logps/chosen': -1.0102792978286743, 'logits/rejected': -0.08753786981105804, 'logits/chosen': -0.07738517224788666, 'epoch': 0.67}
+{'loss': 1.4147, 'grad_norm': 24.490935111313615, 'learning_rate': 2.730047501302266e-07, 'rewards/chosen': -2.4659218788146973, 'rewards/rejected': -3.0833258628845215, 'rewards/accuracies': 0.643750011920929, 'rewards/margins': 0.6174041032791138, 'logps/rejected': -1.2333303689956665, 'logps/chosen': -0.9863686561584473, 'logits/rejected': -0.09611868858337402, 'logits/chosen': -0.07848533242940903, 'epoch': 0.68}
+{'loss': 1.3834, 'grad_norm': 20.834620481330546, 'learning_rate': 2.5650558779781635e-07, 'rewards/chosen': -2.5437912940979004, 'rewards/rejected': -2.8158555030822754, 'rewards/accuracies': 0.574999988079071, 'rewards/margins': 0.2720642685890198, 'logps/rejected': -1.1263421773910522, 'logps/chosen': -1.0175164937973022, 'logits/rejected': -0.11418657004833221, 'logits/chosen': -0.11424975097179413, 'epoch': 0.69}
+{'loss': 1.399, 'grad_norm': 23.19039798848098, 'learning_rate': 2.403469744184154e-07, 'rewards/chosen': -2.6300830841064453, 'rewards/rejected': -3.3207364082336426, 'rewards/accuracies': 0.606249988079071, 'rewards/margins': 0.6906529664993286, 'logps/rejected': -1.3282945156097412, 'logps/chosen': -1.0520331859588623, 'logits/rejected': -0.131773442029953, 'logits/chosen': -0.13872167468070984, 'epoch': 0.71}
+{'loss': 1.3942, 'grad_norm': 18.524576497262217, 'learning_rate': 2.2455150927394878e-07, 'rewards/chosen': -2.795260429382324, 'rewards/rejected': -3.4248363971710205, 'rewards/accuracies': 0.625, 'rewards/margins': 0.6295755505561829, 'logps/rejected': -1.3699344396591187, 'logps/chosen': -1.1181042194366455, 'logits/rejected': -0.024029981344938278, 'logits/chosen': -0.059940654784440994, 'epoch': 0.72}
+{'loss': 1.424, 'grad_norm': 24.052315044665725, 'learning_rate': 2.0914128375069722e-07, 'rewards/chosen': -2.5903689861297607, 'rewards/rejected': -3.3179678916931152, 'rewards/accuracies': 0.6875, 'rewards/margins': 0.7275987863540649, 'logps/rejected': -1.3271870613098145, 'logps/chosen': -1.0361474752426147, 'logits/rejected': -0.11248072236776352, 'logits/chosen': -0.10013268142938614, 'epoch': 0.73}
+{'loss': 1.3299, 'grad_norm': 24.148071139161477, 'learning_rate': 1.9413785044249676e-07, 'rewards/chosen': -2.7090814113616943, 'rewards/rejected': -3.464606523513794, 'rewards/accuracies': 0.6625000238418579, 'rewards/margins': 0.7555248141288757, 'logps/rejected': -1.3858425617218018, 'logps/chosen': -1.0836325883865356, 'logits/rejected': -0.09435709565877914, 'logits/chosen': -0.07957692444324493, 'epoch': 0.74}
+{'loss': 1.377, 'grad_norm': 23.619319880630954, 'learning_rate': 1.7956219300748792e-07, 'rewards/chosen': -2.5377140045166016, 'rewards/rejected': -3.2640743255615234, 'rewards/accuracies': 0.6812499761581421, 'rewards/margins': 0.7263601422309875, 'logps/rejected': -1.3056297302246094, 'logps/chosen': -1.0150856971740723, 'logits/rejected': -0.10661258548498154, 'logits/chosen': -0.08918251842260361, 'epoch': 0.75}
+{'loss': 1.3837, 'grad_norm': 26.754703412357696, 'learning_rate': 1.6543469682057104e-07, 'rewards/chosen': -2.797388792037964, 'rewards/rejected': -3.306135892868042, 'rewards/accuracies': 0.574999988079071, 'rewards/margins': 0.5087469220161438, 'logps/rejected': -1.3224543333053589, 'logps/chosen': -1.1189556121826172, 'logits/rejected': -0.10589835792779922, 'logits/chosen': -0.0741351991891861, 'epoch': 0.76}
+{'loss': 1.3719, 'grad_norm': 22.87168878151826, 'learning_rate': 1.5177512046261666e-07, 'rewards/chosen': -2.9868264198303223, 'rewards/rejected': -3.7057995796203613, 'rewards/accuracies': 0.65625, 'rewards/margins': 0.7189731597900391, 'logps/rejected': -1.4823195934295654, 'logps/chosen': -1.194730520248413, 'logits/rejected': -0.07067856937646866, 'logits/chosen': -0.08747396618127823, 'epoch': 0.77}
+{'loss': 1.3713, 'grad_norm': 19.920021373938503, 'learning_rate': 1.3860256808630427e-07, 'rewards/chosen': -2.9023971557617188, 'rewards/rejected': -3.4982457160949707, 'rewards/accuracies': 0.675000011920929, 'rewards/margins': 0.5958486795425415, 'logps/rejected': -1.3992983102798462, 'logps/chosen': -1.1609588861465454, 'logits/rejected': -0.08623528480529785, 'logits/chosen': -0.01417482364922762, 'epoch': 0.78}
+{'loss': 1.3587, 'grad_norm': 25.73393670614385, 'learning_rate': 1.2593546269723647e-07, 'rewards/chosen': -2.8974571228027344, 'rewards/rejected': -3.4775314331054688, 'rewards/accuracies': 0.6812499761581421, 'rewards/margins': 0.5800743103027344, 'logps/rejected': -1.3910125494003296, 'logps/chosen': -1.1589828729629517, 'logits/rejected': -0.09308300912380219, 'logits/chosen': -0.04759328439831734, 'epoch': 0.79}
+{'loss': 1.4466, 'grad_norm': 24.10497904063605, 'learning_rate': 1.1379152038770029e-07, 'rewards/chosen': -2.839385509490967, 'rewards/rejected': -3.317657947540283, 'rewards/accuracies': 0.59375, 'rewards/margins': 0.4782722592353821, 'logps/rejected': -1.3270632028579712, 'logps/chosen': -1.1357542276382446, 'logits/rejected': -0.04109679535031319, 'logits/chosen': -0.04188450053334236, 'epoch': 0.8}
+{'loss': 1.3635, 'grad_norm': 19.859481542998637, 'learning_rate': 1.0218772555910954e-07, 'rewards/chosen': -2.955994129180908, 'rewards/rejected': -3.8932888507843018, 'rewards/accuracies': 0.699999988079071, 'rewards/margins': 0.9372950792312622, 'logps/rejected': -1.5573155879974365, 'logps/chosen': -1.182397484779358, 'logits/rejected': -0.06978461891412735, 'logits/chosen': -0.08748567849397659, 'epoch': 0.81}
+{'loss': 1.3177, 'grad_norm': 21.649441736266468, 'learning_rate': 9.114030716778432e-08, 'rewards/chosen': -2.8400495052337646, 'rewards/rejected': -3.7372665405273438, 'rewards/accuracies': 0.6875, 'rewards/margins': 0.8972171545028687, 'logps/rejected': -1.4949066638946533, 'logps/chosen': -1.1360198259353638, 'logits/rejected': -0.07741574943065643, 'logits/chosen': -0.05606979876756668, 'epoch': 0.82}
+{'loss': 1.3554, 'grad_norm': 36.84800176174405, 'learning_rate': 8.066471602728803e-08, 'rewards/chosen': -2.8236780166625977, 'rewards/rejected': -3.592315673828125, 'rewards/accuracies': 0.6625000238418579, 'rewards/margins': 0.7686380743980408, 'logps/rejected': -1.4369263648986816, 'logps/chosen': -1.1294710636138916, 'logits/rejected': -0.04138735681772232, 'logits/chosen': -0.01235016155987978, 'epoch': 0.83}
+{'loss': 1.3815, 'grad_norm': 21.296434476108363, 'learning_rate': 7.077560319906694e-08, 'rewards/chosen': -2.7724194526672363, 'rewards/rejected': -3.273483991622925, 'rewards/accuracies': 0.606249988079071, 'rewards/margins': 0.501064121723175, 'logps/rejected': -1.3093935251235962, 'logps/chosen': -1.108967900276184, 'logits/rejected': -0.11817463487386703, 'logits/chosen': -0.11084070056676865, 'epoch': 0.84}
+{'loss': 1.3834, 'grad_norm': 17.995030607199347, 'learning_rate': 6.148679950161672e-08, 'rewards/chosen': -3.0501182079315186, 'rewards/rejected': -3.800001621246338, 'rewards/accuracies': 0.699999988079071, 'rewards/margins': 0.7498833537101746, 'logps/rejected': -1.520000696182251, 'logps/chosen': -1.2200473546981812, 'logits/rejected': -0.07237620651721954, 'logits/chosen': -0.05276554822921753, 'epoch': 0.86}
+{'eval_loss': 1.366162896156311, 'eval_runtime': 156.2719, 'eval_samples_per_second': 12.549, 'eval_steps_per_second': 0.787, 'eval_rewards/chosen': -2.9595301151275635, 'eval_rewards/rejected': -3.5678675174713135, 'eval_rewards/accuracies': 0.6565040946006775, 'eval_rewards/margins': 0.6083375215530396, 'eval_logps/rejected': -1.4271471500396729, 'eval_logps/chosen': -1.183812141418457, 'eval_logits/rejected': 0.08478526026010513, 'eval_logits/chosen': 0.10203544795513153, 'epoch': 0.86}
+[2024-07-15 09:28:53,819] [WARNING] [stage3.py:1949:step] 3 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 1.4063, 'grad_norm': 22.9533009668067, 'learning_rate': 5.2811296166831666e-08, 'rewards/chosen': -2.934774875640869, 'rewards/rejected': -3.4425899982452393, 'rewards/accuracies': 0.6812499761581421, 'rewards/margins': 0.5078149437904358, 'logps/rejected': -1.3770359754562378, 'logps/chosen': -1.1739099025726318, 'logits/rejected': -0.13454921543598175, 'logits/chosen': -0.05642462894320488, 'epoch': 0.87}
+{'loss': 1.3744, 'grad_norm': 36.67123540539404, 'learning_rate': 4.4761226670592066e-08, 'rewards/chosen': -2.9006783962249756, 'rewards/rejected': -3.6653354167938232, 'rewards/accuracies': 0.625, 'rewards/margins': 0.7646570801734924, 'logps/rejected': -1.4661340713500977, 'logps/chosen': -1.160271406173706, 'logits/rejected': -0.07093930244445801, 'logits/chosen': -0.03589828312397003, 'epoch': 0.88}
+{'loss': 1.362, 'grad_norm': 21.513900735578513, 'learning_rate': 3.734784976300165e-08, 'rewards/chosen': -2.789926528930664, 'rewards/rejected': -3.3311591148376465, 'rewards/accuracies': 0.675000011920929, 'rewards/margins': 0.5412325263023376, 'logps/rejected': -1.3324635028839111, 'logps/chosen': -1.1159706115722656, 'logits/rejected': -0.10109014809131622, 'logits/chosen': -0.09099540114402771, 'epoch': 0.89}
+{'loss': 1.3838, 'grad_norm': 23.644163980571058, 'learning_rate': 3.058153372200695e-08, 'rewards/chosen': -2.9547743797302246, 'rewards/rejected': -3.543581485748291, 'rewards/accuracies': 0.6812499761581421, 'rewards/margins': 0.5888068675994873, 'logps/rejected': -1.4174325466156006, 'logps/chosen': -1.1819097995758057, 'logits/rejected': -0.03781776875257492, 'logits/chosen': -0.04583137109875679, 'epoch': 0.9}
+{'loss': 1.3388, 'grad_norm': 24.81248268531953, 'learning_rate': 2.4471741852423233e-08, 'rewards/chosen': -3.020150661468506, 'rewards/rejected': -3.7434592247009277, 'rewards/accuracies': 0.6625000238418579, 'rewards/margins': 0.7233086228370667, 'logps/rejected': -1.4973838329315186, 'logps/chosen': -1.2080602645874023, 'logits/rejected': -0.049383025616407394, 'logits/chosen': -0.04430783540010452, 'epoch': 0.91}
+{'loss': 1.3244, 'grad_norm': 26.13606196228319, 'learning_rate': 1.9027019250647036e-08, 'rewards/chosen': -3.074007749557495, 'rewards/rejected': -3.6735446453094482, 'rewards/accuracies': 0.6187499761581421, 'rewards/margins': 0.5995367765426636, 'logps/rejected': -1.4694178104400635, 'logps/chosen': -1.2296030521392822, 'logits/rejected': -0.09046009182929993, 'logits/chosen': -0.06794851273298264, 'epoch': 0.92}
+{'loss': 1.3863, 'grad_norm': 26.351664141701338, 'learning_rate': 1.4254980853566246e-08, 'rewards/chosen': -3.0388455390930176, 'rewards/rejected': -3.735682725906372, 'rewards/accuracies': 0.643750011920929, 'rewards/margins': 0.6968370079994202, 'logps/rejected': -1.4942729473114014, 'logps/chosen': -1.2155382633209229, 'logits/rejected': -0.07987796515226364, 'logits/chosen': -0.08695968240499496, 'epoch': 0.93}
+{'loss': 1.358, 'grad_norm': 20.028491426117014, 'learning_rate': 1.016230078838226e-08, 'rewards/chosen': -3.039855480194092, 'rewards/rejected': -3.63940691947937, 'rewards/accuracies': 0.668749988079071, 'rewards/margins': 0.599551260471344, 'logps/rejected': -1.4557626247406006, 'logps/chosen': -1.2159422636032104, 'logits/rejected': -0.10185937583446503, 'logits/chosen': -0.11084097623825073, 'epoch': 0.94}
+{'loss': 1.3657, 'grad_norm': 23.67325377400331, 'learning_rate': 6.754703038239329e-09, 'rewards/chosen': -3.0138728618621826, 'rewards/rejected': -3.4510815143585205, 'rewards/accuracies': 0.6875, 'rewards/margins': 0.4372086524963379, 'logps/rejected': -1.3804326057434082, 'logps/chosen': -1.2055491209030151, 'logits/rejected': -0.058549679815769196, 'logits/chosen': -0.05138702318072319, 'epoch': 0.95}
+{'loss': 1.3318, 'grad_norm': 25.91787042038867, 'learning_rate': 4.036953436716895e-09, 'rewards/chosen': -3.1357522010803223, 'rewards/rejected': -3.740124464035034, 'rewards/accuracies': 0.6625000238418579, 'rewards/margins': 0.6043728590011597, 'logps/rejected': -1.4960498809814453, 'logps/chosen': -1.2543007135391235, 'logits/rejected': -0.07027509063482285, 'logits/chosen': -0.07227782905101776, 'epoch': 0.96}
+{'loss': 1.4446, 'grad_norm': 26.107964685040397, 'learning_rate': 2.0128530023804656e-09, 'rewards/chosen': -3.2564940452575684, 'rewards/rejected': -3.5368144512176514, 'rewards/accuracies': 0.5874999761581421, 'rewards/margins': 0.2803196907043457, 'logps/rejected': -1.414725661277771, 'logps/chosen': -1.3025977611541748, 'logits/rejected': 0.006195384077727795, 'logits/chosen': 0.009370187297463417, 'epoch': 0.97}
+{'loss': 1.3606, 'grad_norm': 25.33533715144395, 'learning_rate': 6.852326227130833e-10, 'rewards/chosen': -3.1769278049468994, 'rewards/rejected': -4.017624855041504, 'rewards/accuracies': 0.675000011920929, 'rewards/margins': 0.840697169303894, 'logps/rejected': -1.6070497035980225, 'logps/chosen': -1.2707709074020386, 'logits/rejected': 0.036134857684373856, 'logits/chosen': 0.0027738590724766254, 'epoch': 0.98}
+{'loss': 1.3341, 'grad_norm': 25.236067451971373, 'learning_rate': 5.594909486328348e-11, 'rewards/chosen': -2.7705740928649902, 'rewards/rejected': -3.4380767345428467, 'rewards/accuracies': 0.675000011920929, 'rewards/margins': 0.6675024628639221, 'logps/rejected': -1.3752305507659912, 'logps/chosen': -1.108229637145996, 'logits/rejected': -0.04901931434869766, 'logits/chosen': -0.008526707999408245, 'epoch': 0.99}
+[2024-07-15 10:13:29,621] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step467 is about to be saved!
+[2024-07-15 10:13:29,627] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: /home/wxt/huatong/huggingface/hub/llama-3-8b-instruct-simpo/checkpoint-467/global_step467/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2024-07-15 10:13:29,627] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /home/wxt/huatong/huggingface/hub/llama-3-8b-instruct-simpo/checkpoint-467/global_step467/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2024-07-15 10:13:29,637] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /home/wxt/huatong/huggingface/hub/llama-3-8b-instruct-simpo/checkpoint-467/global_step467/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2024-07-15 10:13:29,639] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /home/wxt/huatong/huggingface/hub/llama-3-8b-instruct-simpo/checkpoint-467/global_step467/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-07-15 10:13:58,228] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /home/wxt/huatong/huggingface/hub/llama-3-8b-instruct-simpo/checkpoint-467/global_step467/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-07-15 10:13:58,228] [INFO] [engine.py:3393:_save_zero_checkpoint] zero checkpoint saved /home/wxt/huatong/huggingface/hub/llama-3-8b-instruct-simpo/checkpoint-467/global_step467/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-07-15 10:13:58,760] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step467 is ready now!
+{'train_runtime': 18964.0016, 'train_samples_per_second': 3.157, 'train_steps_per_second': 0.025, 'train_loss': 1.4585362670253124, 'epoch': 1.0}
+***** train metrics *****
+  epoch                    =     0.9983
+  total_flos               =        0GF
+  train_loss               =     1.4585
+  train_runtime            = 5:16:04.00
+  train_samples            =      59876
+  train_samples_per_second =      3.157
+  train_steps_per_second   =      0.025
+2024-07-15 10:13:58 - INFO - __main__ - *** Training complete ***
+2024-07-15 10:13:58 - INFO - __main__ - *** Save model ***
+2024-07-15 10:14:18 - INFO - __main__ - Model saved to /home/wxt/huatong/huggingface/hub/llama-3-8b-instruct-simpo
+2024-07-15 10:14:18 - INFO - __main__ - *** Evaluate ***
+***** eval metrics *****
+  epoch                   =     0.9983
+  eval_logits/chosen      =     0.1107
+  eval_logits/rejected    =     0.0932
+  eval_logps/chosen       =    -1.2084
+  eval_logps/rejected     =    -1.4561
+  eval_loss               =     1.3641
+  eval_rewards/accuracies =     0.6585
+  eval_rewards/chosen     =    -3.0211
+  eval_rewards/margins    =     0.6193
+  eval_rewards/rejected   =    -3.6404
+  eval_runtime            = 0:02:26.32
+  eval_samples            =       1961
+  eval_samples_per_second =     13.402
+  eval_steps_per_second   =      0.841
+2024-07-15 10:16:45 - INFO - __main__ - *** Training complete! ***
