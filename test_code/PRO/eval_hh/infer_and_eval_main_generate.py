@@ -44,7 +44,7 @@ if __name__ == "__main__":
     rank_sum = accelerator.num_processes
     # model_name_or_path = os.path.join("..", "checkpoints", f"index_{args.index}", f"stage_{args.stage}", f"{args.directory}")
     # model_name_or_path ='/home/wxt/.cache/huggingface/hub/7b_llama_ppo_openrlhf'
-    model_name_or_path="daryl149/llama-2-7b-hf"
+    model_name_or_path="/home/wxt/.cache/huggingface/hub/llama2_dpo_handbook_2048"
     model_device = "cuda:{}".format(rank)
 
     model_config = AutoConfig.from_pretrained(model_name_or_path )
@@ -52,13 +52,14 @@ if __name__ == "__main__":
 
     if args.model_ckpt!='non':
         print("load model")
-        ckpt_path = f"/home/wxt/.cache/huggingface/hub/{args.model_ckpt}/LATEST/policy.pt"
-        state_dict = torch.load(ckpt_path, map_location='cpu')
+        
+       # ckpt_path = f"/home/wxt/.cache/huggingface/hub/{args.model_ckpt}/LATEST/policy.pt"
+       # state_dict = torch.load(ckpt_path, map_location='cpu')
         # step, metrics = state_dict['step_idx'], state_dict['metrics']
-        model.load_state_dict(state_dict['state'])
-        delete_dict(state_dict)
-        gc.collect()
-        torch.cuda.empty_cache()
+       # model.load_state_dict(state_dict['state'])
+       # delete_dict(state_dict)
+       # gc.collect()
+       # torch.cuda.empty_cache()
         print('loaded pre-trained weights')
 
     if accelerator.is_main_process:
